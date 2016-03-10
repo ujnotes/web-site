@@ -4,16 +4,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=8" />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="title" content="WCode" />
-		<meta itemprop="name" content="WCode" />
-		<meta itemprop="image" content="http://wcodes.org/icon-social.png" />
-		<meta property="og:title" content="WCode" />
+		<meta name="title" content="Ujnotes" />
+		<meta itemprop="name" content="Ujnotes" />
+		<meta itemprop="image" content="http://ujnotes.com/icon-social.png" />
+		<meta property="og:title" content="Ujnotes" />
 		<meta property="og:type" content="product" />
-		<meta property="og:url" content="http://wcodes.org" />
-		<meta property="og:image" content="http://wcodes.org/icon-social.png" />
-		<meta property="og:description" content="Convert your mobile number, email-id and address into a bunch of common words like 'cat apple mango tomato'. Encode with words" />
-		<meta property="og:site_name" content="WCodes" />
-		<meta property="fb:app_id" content="387976024626014" />
+		<meta property="og:url" content="http://ujnotes.com" />
+		<meta property="og:image" content="http://ujnotes.com/icon-social.png" />
+		<meta property="og:description" content="My notes on technology and life" />
+		<meta property="og:site_name" content="Ujnotes" />
+		<meta property="fb:app_id" content="487343071466495" />
 		<meta property="fb:admins" content="100000014591845" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -32,6 +32,7 @@
 <?php
 	if($bPublish) {
 		require "JS/Head Scripts - GA.html";
+		require "JS/Body Begin - FB.html";
 ?>
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<script type="text/javascript" src="/script.js" defer></script>
