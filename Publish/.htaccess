@@ -10,3 +10,18 @@ RewriteRule ^os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJ
 RewriteRule ^dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
 RewriteRule ^dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
 RewriteRule ^dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
+
+RewriteCond %{HTTP_HOST} !^ujnotes\.com [NC]
+RewriteRule ^/?(.*)$ http://ujnotes.com/$1 [L,R=301]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+	ExpiresDefault "access plus 2 hours"
+	<IfModule mod_headers.c>
+       Header unset ETag
+       Header unset Pragma
+       Header unset Last-Modified
+       Header append Cache-Control "public, no-transform, must-revalidate"
+       Header set Last-modified "Tue, 1 Oct 2014 10:10:10 GMT"
+    </IfModule>
+</IfModule>
