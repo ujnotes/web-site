@@ -82,6 +82,7 @@ function Init() {
 			activateMainFn();
 			canvas_main.style.maxHeight = "99999px";
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
+			document.getElementById('path').style.visibility = "visible";
 			document.getElementById('updated').style.visibility = "visible";
 
 		}
@@ -94,7 +95,7 @@ function Init() {
 	[].slice.call(menu_items).forEach(function(el,i){
         el.addEventListener( "click", function(){
             //activeNav = "";
-			curTab = this.id;
+			curTab = this.getAttribute('data-target');
 			activateMainFn();
         } );
     });
