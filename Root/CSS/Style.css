@@ -135,7 +135,7 @@ h3 { margin: 0px; padding-bottom: 8px;color: #69B7CF !important;}
     background-image: url('/resource/menu_icon.png');
 }
 
-#menu-button.active {
+#menu-button.active path {
     fill: #56B4D1;
 }
 
@@ -247,6 +247,7 @@ div#path {
     /* border-width: 1px; */
     font-weight: bold;
     font-size: larger;
+	transition: all ease-out 0s;
 }
 
 img#lg_wcode {

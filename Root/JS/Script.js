@@ -49,7 +49,7 @@ function Init() {
 	
 	var canvas_main = document.querySelector( '#canvas-main' ),
 		menu_button = document.querySelector( ".toggle-push-left" ),
-		menu_items = document.querySelectorAll(".sidebar-nav-norm");
+		menu_items = document.querySelectorAll(".XURL");
 
 	if(!!hashID) {
 		curTab = "root";//document.getElementById('root');
@@ -62,6 +62,7 @@ function Init() {
 	
 	if(URLID == "menu") {
 		menuActive = true;
+		classie.add( menu_button, "active" );
 		canvas_main.style.maxHeight = document.querySelector('#nav-menu').scrollHeight+"px";
 	}
 	else
@@ -186,18 +187,23 @@ function LoadCanvasL(m) {
 }
 
 function LoadCanvasH(e) {
-	if(e.id == "root")
+	var target = e.getAttribute('data-target');
+	if(target == "root")
 		URLid = "";
 	else
-		URLid = e.id;
+		URLid = target;
 	LoadCanvas(e);
-	window.history.pushState({"id":e.id}, "", "/"+URLid);
+	window.history.pushState({"id":target}, "", "/"+URLid);
 	if(!(typeof (_gaq) === "undefined"))
 	//if(_gaq)
 		_gaq.push(['_trackPageview'], "/"+URLid);
 }
 
 function LoadCanvas(e) {
+	var target = e.getAttribute('data-target');
+	if(target == "root")
+		document.getElementById('path').style.visibility = "hidden";
+
 	// if(!!curTab)
 		// curTab.classList.remove('sidebar-nav-high');
 	// curTab = e;
@@ -234,13 +240,15 @@ function LoadCanvas(e) {
 				var bASCR = resp.async;
 
 				var titleBar = "Ujnotes";
-				if(e.id != "root")
+				if(target != "root")
 					titleBar += " - " + e.innerText;
+
 				//var lTitle = resp.desc.length;
 				//if(lTitle != 0)
-					titleBar += " : " + resp.desc;
+				titleBar += " : " + resp.desc;
 				document.title = titleBar;
-				document.getElementById('path').innerHTML = resp.title;
+				if(target != "root")
+					document.getElementById('path').innerHTML = resp.title;
 				canvas_main.innerHTML = resp.content;
 				document.getElementById('updated').style.display = 'block';
 				document.getElementById('date').innerHTML = resp.date;
@@ -254,7 +262,7 @@ function LoadCanvas(e) {
 				if(bXURL == "1")
 					SetXHRef(document);
 				if(bASCR == "1")
-					eval(e.id+"()");
+					eval(target+"()");
 			}																							break;
 			case 404: {
 				document.getElementById('updated').style.display = 'none';
@@ -271,7 +279,7 @@ function LoadCanvas(e) {
 			}
 		}
 	}
-	xmlhttp.open("GET", e.id+".json", true);
+	xmlhttp.open("GET", target+".json", true);
 	xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");//application/xhtml+xml
 	xmlhttp.send();
 }

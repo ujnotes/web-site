@@ -14,7 +14,7 @@
 	LoadComponents();
 
 	$id = substr(GetOrigCall(), 0, -5); //No id w/o .html
-	$file = GetComponentPath(GetComponentTitle($id));
+	$file = GetComponentPath($id);
 	
 	if(endsWith($file, ".php")) {
 		$fileContent = file_get_contents($file);
