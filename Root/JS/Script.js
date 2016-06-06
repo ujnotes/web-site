@@ -89,6 +89,12 @@ function Init() {
     } );
 	
 	[].forEach.call(document.getElementsByClassName('coming-soon'), function(el) { el.addEventListener( 'click', function() {
+		if(!(typeof (ga) === "undefined")) {
+			ga('send', 'event', {
+			  'eventCategory': 'download',
+			  'eventAction': 'click'
+			});
+		}
 		alert("Hold your breath! Coming soon..");
 	});});
 	
@@ -128,6 +134,10 @@ var activateMenuFn = function() {
 	canvas_main.style.maxHeight = height+"px";
 	nav_menu.style.maxHeight = "99999px";
 	menuActive = true;
+	if(!(typeof (ga) === "undefined")) {
+		ga('set', 'page', '/'+'menu');
+		ga('send', 'pageview');
+	}
 }
 
 var activateMainFn = function() {
@@ -195,9 +205,10 @@ function LoadCanvasH(e) {
 		URLid = target;
 	LoadCanvas(e);
 	window.history.pushState({"id":target}, "", "/"+URLid);
-	if(!(typeof (_gaq) === "undefined"))
-	//if(_gaq)
-		_gaq.push(['_trackPageview'], "/"+URLid);
+	if(!(typeof (ga) === "undefined")) {
+		ga('set', 'page', '/'+URLid);
+		ga('send', 'pageview');
+	}
 }
 
 function LoadCanvas(e) {

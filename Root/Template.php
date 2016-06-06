@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/">
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=8" />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="title" content="Ujnotes" />
@@ -32,7 +31,6 @@
 <?php
 	if($bPublish) {
 		require "JS/Head Scripts - GA.html";
-		require "JS/Body Begin - FB.html";
 ?>
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<script type="text/javascript" src="/script.js" defer></script>
@@ -54,19 +52,25 @@
 		<title>
 <?php
 			if($id === "root")
-				echo "Ujnotes"." : ".$desc;
+				echo $project_title." : ".$desc;
 			else {
 				if($desc)
-					echo "Ujnotes - ".$title." : ".$desc;
+					echo $project_title." - ".$title." : ".$desc;
 				else
-					echo "Ujnotes - ".$title;
+					echo $project_title." - ".$title;
 			}
 ?>
 		</title>
 	</head>
 	<body>
-		<script async src="https://apis.google.com/js/platform.js" defer></script>
-		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<?php if($bPublish) {
+			require "JS/Body Begin - FB.html";
+		?>
+			<script async src="https://apis.google.com/js/platform.js" defer></script>
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<?php
+			}
+		?>
 		<div id="main-wrapper">
 			<div id="content-wrapper">
 			<?php require "Header.html"; ?>
