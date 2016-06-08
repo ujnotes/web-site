@@ -2,7 +2,7 @@
 	require "API.php";
 	require "ComponentDetails.php";
 
-	$project_tile = "Ujnotes";
+	$project_title = "Ujnotes";
 	
 	if( isset($_GET['Mode']) && ($_GET['Mode'] === "Publish") )
 		$bPublish = TRUE;
