@@ -5,7 +5,7 @@ $oRoot = "Publish\"
 $mRoot = "Interim\"
 
 $eHost = "http://localhost"
-$eMode = "Mode=Publish"
+$eMode = "mode=publish"
 
 $flPath = ".\Files.tsv" 	#File List
 $ilPath = ".\IDs.tsv"   	#ID List

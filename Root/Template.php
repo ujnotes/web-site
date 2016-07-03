@@ -24,13 +24,12 @@
 			  font-family: 'Abel';
 			  font-style: normal;
 			  font-weight: 400;
-			  src: local('Abel'), local('Abel-Regular'), url(http://fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
+			  src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
 			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 			}
 		</style>
 <?php
 	if($bPublish) {
-		require "JS/Head Scripts - GA.html";
 ?>
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<script type="text/javascript" src="/script.js" defer></script>
@@ -61,16 +60,35 @@
 			}
 ?>
 		</title>
+		<?php
+			if($bPublish) {
+				require "JS/Head Scripts - GA.html";
+			}
+		?>
 	</head>
 	<body>
 		<?php if($bPublish) {
 			require "JS/Body Begin - FB.html";
 		?>
-			<script async src="https://apis.google.com/js/platform.js" defer></script>
+			<script async src="//apis.google.com/js/platform.js" defer></script>
 			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<?php
 			}
 		?>
+		<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+	 ga('send', 'event', 'outbound', 'click', url, {
+		 'transport': 'beacon',
+		 'hitCallback': function(){document.location = url;}
+	 });
+}
+</script>
 		<div id="main-wrapper">
 			<div id="content-wrapper">
 			<?php require "Header.html"; ?>

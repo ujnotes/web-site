@@ -28,6 +28,17 @@ else if(document.attachEvent) {
 else*/
 	window.onload = Init;
 
+var trackOutboundLink = function(title, url) {
+   	if(!(typeof (ga) === 'undefined')) {
+			if(!(typeof (title) === 'undefined'))
+				title = url;
+			ga('send', 'event', 'outbound', 'click', title, {
+	     'transport': 'beacon',
+	     'hitCallback': function(){document.location = url;}
+	   });
+	 }
+}
+
 window.onpopstate = function(e) { //window.addEventListener('popstate', function(e)
 	if(!!e.state)
 		if(e.state.id == "menu")
@@ -46,7 +57,7 @@ function Init() {
 	SetXHRef(document);
 	var hashID = GetHashID();
 	var URLID = GetURLID();
-	
+
 	var canvas_main = document.querySelector( '#canvas-main' ),
 		menu_button = document.querySelector( ".toggle-push-left" ),
 		menu_items = document.querySelectorAll(".XURL");
@@ -59,7 +70,7 @@ function Init() {
 		curTab = URLID;//document.getElementById(URLID);
 	else
 		curTab = "root";//document.getElementById('root');
-	
+
 	if(URLID == "menu") {
 		menuActive = true;
 		classie.add( menu_button, "active" );
@@ -67,7 +78,7 @@ function Init() {
 	}
 	else
 		document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
-	
+
 	if (!hashID && !URLID)
 		window.history.replaceState({"id":"root"}, "", "/");
 
@@ -87,7 +98,7 @@ function Init() {
 
 		}
     } );
-	
+
 	[].forEach.call(document.getElementsByClassName('coming-soon'), function(el) { el.addEventListener( 'click', function() {
 		if(!(typeof (ga) === "undefined")) {
 			ga('send', 'event', {
@@ -97,7 +108,7 @@ function Init() {
 		}
 		alert("Hold your breath! Coming soon..");
 	});});
-	
+
 	[].slice.call(menu_items).forEach(function(el,i){
         el.addEventListener( "click", function(){
             //activeNav = "";
@@ -105,7 +116,7 @@ function Init() {
 			activateMainFn();
         } );
     });
-	
+
 	if (!supportsSvg()) {
 		var image_div = document.getElementsByClassName('image');
 		var i;
@@ -115,6 +126,7 @@ function Init() {
 		}
 		// or even .className += " no-svg"; for deeper support
 	}
+
 	return false;
 }
 
@@ -220,7 +232,7 @@ function LoadCanvas(e) {
 		// curTab.classList.remove('sidebar-nav-high');
 	// curTab = e;
 	// e.classList.add('sidebar-nav-high');
-	
+
 	// var sideBar = document.getElementById('sidebar-nav');
 	// sideBar.style.display = 'none';
 	// sideBar.style.display = 'block';
@@ -231,7 +243,7 @@ function LoadCanvas(e) {
 	canvas_main.innerHTML = "";
 	date.style.visibility='hidden';
 	BeginLoading();
-	
+
 	var xmlhttp = new XMLHttpRequest();
 	if(window.XMLHttpRequest) {
 		xmlhttp=new XMLHttpRequest();
@@ -245,7 +257,7 @@ function LoadCanvas(e) {
 			switch (xmlhttp.status) {
 			case 200: {
 				KillLoading();
-				
+
 				var resp = JSON.parse(xmlhttp.responseText);
 
 				var bXURL = resp.xurl;

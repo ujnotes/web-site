@@ -4,7 +4,7 @@
 
 	$project_title = "Ujnotes";
 	
-	if( isset($_GET['Mode']) && ($_GET['Mode'] === "Publish") )
+	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
 		$bPublish = TRUE;
 	else
 		$bPublish = FALSE;
