@@ -3,18 +3,22 @@
 	require "ComponentDetails.php";
 
 	$project_title = "Ujnotes";
-	
-	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
+
+	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") ) {
 		$bPublish = TRUE;
-	else
+		$googleAnalyticsId = "UA-49547226-1";
+	}
+	else {
 		$bPublish = FALSE;
+		$googleAnalyticsId = "UA-12345-12";
+	}
 
 	$component;
-	LoadComponents();
-	
-	$id = GetOrigCall();
+	loadComponents();
+
+	$id = getOrigCall();
 	$menu_active_class = "";
-	
+
 	if(strlen($id) == 0)
 		$id = "root";
 	$menu_active_class;
@@ -22,10 +26,10 @@
 		$menu_active_class = "pml-open";
 		$id = "root";
 	}
-	$title = GetComponentTitle($id);
-	$desc = GetComponentDesc($id);
-	$date = GetFileDate(GetComponentPath($id));
-	
+	$title = getComponentTitle($id);
+	$desc = getComponentDesc($id);
+	$date = getFileDate(getComponentPath($id));
+
 	$dom = new DOMDocument();
 
 	ob_start();

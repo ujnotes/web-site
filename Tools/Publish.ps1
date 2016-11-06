@@ -16,7 +16,7 @@ $cStyle = "style.css"
 $jsDir = "JS\"
 $cssDir = "CSS\"
 
-$oBaseWebFile = "wcode"
+$oBaseWebFile = "root"
 # Could be tested against any other 'Snapped' file
 
 $fList = @()
@@ -29,7 +29,10 @@ foreach ($e in $fListC) {
 
 $iListC = GC $ilPath
 foreach ($e in $iListC) {
-	$iList += ($e.Split("`t"))[0]
+	$id = ($e.Split("`t"))[0]
+	if($id -ne "") {
+		$iList += $id
+	}
 }
 
 $tList = GC $tlPath
@@ -64,37 +67,62 @@ foreach ($element in $fList) {
 
 foreach ($element in $tList) {
 	if (Check $iRoot $element $oRoot $oBaseWebFile) {
-		$a = $TRUE
+		$bTemplateChanged = $TRUE
 		break
 	}
 	else {
-		$a = $FALSE
+		$bTemplateChanged = $FALSE
 	}
 }
 
-foreach ($element in $iList) {
-    $b = $FALSE
-	if((Test-Path $iRoot"Component\$element.php") -eq $TRUE ) {
-		$component = "Component\$element.php"
+foreach ($component in $iList) {
+    $componentC = $component -replace "/","\"
+	if((Test-Path $iRoot"Component\$component.php") -eq $TRUE ) {
+		$componentFile = "Component\$component.php"
 	}
 	else {
-		$component = "Component\$element.html"
+		if((Test-Path $iRoot"Component\$component.html") -eq $TRUE ) {
+			$componentFile = "Component\$component.html"
+		}
+		else {
+			$componentC += "\root"
+			$componentDir = $component -replace "/","\"
+			if ((Test-Path $mRoot$componentDir) -ne $TRUE) {
+				New-Item -ItemType directory -Path $mRoot$componentDir
+			}
+			if ((Test-Path $oRoot$componentDir) -ne $TRUE) {
+				New-Item -ItemType directory -Path $oRoot$componentDir
+			}
+			
+			if((Test-Path $iRoot"Component\$component\root.php") -eq $TRUE ) {
+				$componentFile = "Component\$component\root.php"
+			}
+			else {
+				$componentFile = "Component\$component\root.html"
+			}
+		}
 	}
-    if (Check $iRoot $component $oRoot "$element.json") {
-        $elementC = "$element.json"
-        DownloadH $eHost $eMode $elementC $mRoot $elementC
-		CompressH $mRoot $elementC $oRoot $elementC
-        $b = $TRUE;
+	$componentCJSON = "$componentC.json"
+    if (Check $iRoot $componentFile $oRoot $componentCJSON) {
+        DownloadH $eHost $eMode "$component.json" $mRoot $componentCJSON
+		CompressH $mRoot $componentCJSON $oRoot $componentCJSON
+        $bComponentChanged = $TRUE;
     }
-    if (($a -eq $TRUE) -or ($b -eq $TRUE)) {
-        Write-Host $element
-        DownloadH $eHost $eMode $element $mRoot $element
-        CompressH $mRoot $element $oRoot $element
+	else {
+		$bComponentChanged = $FALSE;
+	}
+    if (($bTemplateChanged -eq $TRUE) -or ($bComponentChanged -eq $TRUE)) {
+        Write-Host $component
+        DownloadH $eHost $eMode $component $mRoot $componentC
+        CompressH $mRoot $componentC $oRoot $componentC
     }
 }
 
-Write-Host "menu"
-DownloadH $eHost $eMode "menu" $mRoot $element
-CompressH $mRoot $element $oRoot "menu"
+$component = "menu"
+if (($bTemplateChanged -eq $TRUE) -or (Check $iRoot "$component.html" $oRoot $component)) {
+	Write-Host $component
+	DownloadH $eHost $eMode $component $mRoot $component
+	CompressH $mRoot $component $oRoot $component
+}
 
 XExit

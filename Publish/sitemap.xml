@@ -9,13 +9,29 @@
   <loc>http://ujnotes.com/</loc>
 </url>
 <url>
-  <loc>http://ujnotes.com/program</loc>
+  <loc>http://ujnotes.com/world</loc>
 </url>
 <url>
-  <loc>http://ujnotes.com/programming</loc>
+  <loc>http://ujnotes.com/world/philosophy</loc>
 </url>
 <url>
-  <loc>http://ujnotes.com/os</loc>
+  <loc>http://ujnotes.com/world/philosophy/life</loc>
+</url>
+<url>
+  <loc>http://ujnotes.com/world/philosophy/death</loc>
+</url>
+<url>
+  <loc>http://ujnotes.com/computer</loc>
+</url>
+
+<url>
+  <loc>http://ujnotes.com/computer/program</loc>
+</url>
+<url>
+  <loc>http://ujnotes.com/computer/programming</loc>
+</url>
+<url>
+  <loc>http://ujnotes.com/computer/os</loc>
 </url>
 <url>
   <loc>http://ujnotes.com/about</loc>

@@ -1,8 +1,29 @@
 API.php
 Component.php
 ComponentDetails.php
-Footer.html
-Header.html
+Footer.php
+Header.php
+Menu.html
 Page.php
+Script.php
+Style.php
 Template.php
+JS\AJAXLoad.js
+JS\API.js
 JS\Body Begin - FB.html
+JS\Classie.js
+JS\ClassList.js
+JS\Head Scripts - GA.html
+JS\History.js
+JS\PageAJAX.js
+JS\Script.js
+CSS\Content.css
+CSS\Menu.css
+CSS\Style.css
+Fragment\Component_bottom.php
+Fragment\Component_cover.php
+Fragment\Component_FB_buttons.php
+Fragment\Component_FB_comments.php
+Fragment\NavList.php
+Fragment\Path.php
+Fragment\SubList.php

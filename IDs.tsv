@@ -1,11 +1,33 @@
-about	About	0	0	More information about WCode
-about_me	About Me	0	1	Web links of the creator of WCode - Ujjwal Singh
+about	About	0	0	More information about the project
+about_me	About Me	0	1	Web links of the creator of this project - Ujjwal Singh
 about_site	About Site	0	0	Details of technology used to build the website
 changelog	ChangeLog	0	0	Log of changes across versions
-faq	FAQ	0	0	Frequently Asked Question about WCode
-feedback	Feedback	0	0	Links to provide feedback regarding WCode
-license	License	1	0	Licenses to various intellectual properties related to the WCode project
-logo	Logo	0	0	Logo of WCode
+faq	FAQ	0	0	Frequently asked questions about this project
+feedback	Feedback	0	0	Links to leave feedback
+license	License	1	0	Copyright licenses for the intellectual properties associated with the project
+logo	Logo	0	0	Logo of Ujnotes
 roadmap	Roadmap	0	0	Future roadmap of features and implementations
-timeline	Timeline	0	0	Markable events in project WCode's lifetime
-root	UjNotes	1	0	Ujjwal Singh's notes
+timeline	Timeline	0	0	Markable events in project's lifetime
+root	Ujnotes	1	1	Ujjwal Singh's notes on life and technology
+	universe	Universe	0	0	Universe
+	universe/reality	Reality	0	0	Reality
+world	World	1	0	The critical aspects of the world we live in
+world/philosophy	Philosophy	1	0	Philosophical analysis of the dimensions of a human life
+world/philosophy/life	Life	1	0	An understanding of our life
+world/philosophy/death	Death	1	0	An elaboration of death's significance
+	world/philosophy/consciousness	Consciousness	1	0	Consciousness
+	world/philosophy/consciousness/freewill	Freewill	1	0	Freewill
+	world/philosophy/compassion	Compassion	1	0	Compassion
+	world/philosophy/possessions	Possessions	1	0	Possessions
+	world/philosophy/possessions/money	Money	1	0	Money
+	world/philosophy/society	Society	1	0	Society
+	world/philosophy/governance	Governance	1	0	Governance
+	world/philosophy/god	God	1	0	God
+	world/philosophy/god/no_god	No God	1	0	No God
+	world/philosophy/religion	Religion	1	0	Religion
+	world/philosophy/violence	Violence	1	0	Violence
+	world/philosophy/violence/war	War	1	0	War
+	world/philosophy/violence/terrorism	Terrorism	1	0	Terrorism
+	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	1	0	Islamic Terrorism
+	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	1	0	ISIS
+computer	Computer	1	0	Computer - the information processor

@@ -1,37 +1,44 @@
-function Loading() {
+function nowLoading() {
 	var e = document.getElementById("loading");
-	if(Loading.count === undefined) {
-		Loading.count = 0;
-		e.innerText = "Loading";
-		e.setAttribute("style", "display: block");
+	if(nowLoading.count === undefined) {
+		nowLoading.count = 0;
+		resetLoadingText(e);
+		e.setAttribute("style", "visibility: visible");
 	}
 	else {
-		if(Loading.count == 3)
-			KillLoading();
+		if(nowLoading.count == 3)
+			resetLoadingText(e);
 		else {
 			e.innerText += ".";
-			Loading.count++;
+			nowLoading.count++;
 		}
 	}
 }
 
-function BeginLoading() {
+function beginLoading() {
 	clearTimeout(intrvl); // ensure single timer
-	intrvl = setInterval(Loading, 1000);
+	intrvl = setInterval(nowLoading, 1000);
 }
 
-function KillLoading() {
+function resetLoadingText(e) {
+	e.innerText = "Loading";
+}
+
+function errorLoading() {
 	var e = document.getElementById("loading");
-	Loading.count = undefined;
-	e.setAttribute("style", "display: none");
+	e.setAttribute("style", "visibility: visible");
+	e.innerText = "Error!";
+}
+
+function killLoading() {
+	var e = document.getElementById("loading");
+	nowLoading.count = undefined;
+	e.setAttribute("style", "visibility: hidden");
 	clearTimeout(intrvl);
 }
 
-function about_me() {
-	gapi.plus.go("me_g-plus");
-	twttr.widgets.load();
-}
-
-function presentation() {
-	BeginLoading();
+function fbReload() {
+	try{
+		FB.XFBML.parse();
+    }catch(ex){}
 }

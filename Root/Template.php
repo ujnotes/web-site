@@ -6,12 +6,12 @@
 		<meta name="title" content="Ujnotes" />
 		<meta itemprop="name" content="Ujnotes" />
 		<meta itemprop="image" content="http://ujnotes.com/icon-social.png" />
-		<meta property="og:title" content="Ujnotes" />
-		<meta property="og:type" content="product" />
-		<meta property="og:url" content="http://ujnotes.com" />
-		<meta property="og:image" content="http://ujnotes.com/icon-social.png" />
-		<meta property="og:description" content="My notes on technology and life" />
-		<meta property="og:site_name" content="Ujnotes" />
+		<meta property="og:url" content="http://ujnotes.com<?php echo getComponentURL($id) ?>" />
+		<meta property="og:title" content="<?php echo getComponentTitle($id) ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="http://ujnotes.com/<?php echo $id ?>.jpg" />
+		<meta property="og:description" content="<?php echo getComponentDesc($id) ?>" />
+		<meta property="og:site_name" content="Ujnotes.com" />
 		<meta property="fb:app_id" content="487343071466495" />
 		<meta property="fb:admins" content="100000014591845" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,18 +91,19 @@ var trackOutboundLink = function(url) {
 </script>
 		<div id="main-wrapper">
 			<div id="content-wrapper">
-			<?php require "Header.html"; ?>
+			<?php require "Header.php"; ?>
 			<div id="wrapper">
 				<div id="main">
 					<div class="container">
 						<div id="content-wrapper-inside">
 							<div class="shadow-scroll-top"></div>
 							<div id="canvas-wrapper" class="<?php echo $menu_active_class ?>">
-									<div id="path"><?php if($id !== "root") echo $title; else echo "&nbsp;"?></div>
+								<div id="path"><?php require "Fragment\Path.php" ?></div>
+								<div id="title"><?php echo ($id === "root"? "" : $title) ?></div>
 								<div id="canvas-wrapper-inner-container">
 									<?php require "Menu.html"; ?>
 									<div id="canvas-main">
-										<?php require (GetComponentPath($id)) ?>
+										<?php require (getComponentPath($id)) ?>
 									</div>
 								</div>
 							</div>
@@ -111,7 +112,7 @@ var trackOutboundLink = function(url) {
 				</div>
 			</div>
 			</div>
-			<?php require "Footer.html"; ?>
+			<?php require "Footer.php"; ?>
 		</div>
 	</body>
 </html>

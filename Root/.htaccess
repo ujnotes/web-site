@@ -1,53 +1,38 @@
 DirectoryIndex Page.php
 
-RewriteEngine On
-
 RewriteBase /
+RewriteEngine On
+DirectorySlash Off
 
-RewriteRule ^os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule ^(.+)/$ $1 [R=301]
 
-RewriteRule ^dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule	^style.css$	Style.php	[L]
+RewriteRule	^script.js$	Script.php	[L]
 
-RewriteRule			^favicon.ico$				Resource/FavIcon.ico			[L]
-RewriteRule			^apple-touch-icon.png$		Resource/Apple-Touch-Icon.png	[L]
+RewriteRule	^favicon.ico$ Resource/FavIcon.ico	[L]
+RewriteRule	^apple-touch-icon.png$  Resource/Apple-Touch-Icon.png	[L]
 
-RewriteRule			^logo.png$					Resource/Logo.png				[L]
-RewriteRule			^logo.svg$					Resource/Logo.svg				[L]
-RewriteRule			^logo_full.png$				Resource/Logo_Full.png			[L]
-RewriteRule			^logo_full.svg$				Resource/Logo_Full.svg			[L]
+RewriteRule	^logo.png$  Resource/Logo.png	[L]
+RewriteRule	^logo.svg$	Resource/Logo.svg	[L]
+RewriteRule	^logo_full.png$	Resource/Logo_Full.png	[L]
+RewriteRule	^logo_full.svg$	Resource/Logo_Full.svg	[L]
 
-RewriteRule			^style.css$ 				Style.php		[L]
-RewriteRule			^script.js$					Script.php		[L]
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
+RewriteRule ^(.*?)\.jpg$ Resource/$1/root.jpg [R=302,L]
 
-RewriteRule			^menu$						Page.php		[L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
 
-RewriteRule			^root$						Page.php		[L]
-RewriteRule			^about$						Page.php		[L]
-RewriteRule			^changelog$					Page.php		[L]
-RewriteRule			^faq$						Page.php		[L]
-RewriteRule			^feedback$					Page.php		[L]
-RewriteRule			^license$					Page.php		[L]
-RewriteRule			^logo$						Page.php		[L]
-RewriteRule			^timeline$					Page.php		[L]
-RewriteRule			^about_me$					Page.php		[L]
-RewriteRule			^about_project$				Page.php		[L]
-RewriteRule			^about_site$				Page.php		[L]
-RewriteRule			^roadmap$					Page.php		[L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?)\.json$ Component.php	[L]
 
-RewriteRule			^root.json$					Component.php	[L]
-RewriteRule			^about_site.json$			Component.php	[L]
-RewriteRule			^about.json$				Component.php	[L]
-RewriteRule			^changelog.json$			Component.php	[L]
-RewriteRule			^faq.json$					Component.php	[L]
-RewriteRule			^feedback.json$				Component.php	[L]
-RewriteRule			^license.json$				Component.php	[L]
-RewriteRule			^logo.json$					Component.php	[L]
-RewriteRule			^timeline.json$				Component.php	[L]
-RewriteRule			^about_me.json$				Component.php	[L]
-RewriteRule			^about_project.json$		Component.php	[L]
-RewriteRule			^about_site.json$			Component.php	[L]
-RewriteRule			^roadmap.json$				Component.php	[L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ Page.php [L]
+
+RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
+RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
+RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+
+RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
+RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
+RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]

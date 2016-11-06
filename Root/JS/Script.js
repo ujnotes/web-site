@@ -1,5 +1,6 @@
 var curTab;
 var intrvl = 0;
+var gTarget;
 /*if (document.readyState == "complete" || document.readySate == "loaded" || document.readyState == "interactive")
 {
 	var x = 0;
@@ -44,7 +45,7 @@ window.onpopstate = function(e) { //window.addEventListener('popstate', function
 		if(e.state.id == "menu")
 			activateMenuFn();
 		else {
-			LoadCanvas(document.getElementById(e.state.id));
+			LoadCanvas(e.state.id, e.state.title);
 			activateMainFn();
 		}
 }
@@ -54,7 +55,6 @@ var menuActive = false;
 function Init() {
 //console.log(Date.now()-tb);
 	SetXURL(document);
-	SetXHRef(document);
 	var hashID = GetHashID();
 	var URLID = GetURLID();
 
@@ -64,7 +64,7 @@ function Init() {
 
 	if(!!hashID) {
 		curTab = "root";//document.getElementById('root');
-		LoadCanvas(document.getElementById(hashID));
+		LoadCanvas(hashID, "");
 	}
 	else if(!!URLID)
 		curTab = URLID;//document.getElementById(URLID);
@@ -94,6 +94,7 @@ function Init() {
 			canvas_main.style.maxHeight = "99999px";
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
 			document.getElementById('path').style.visibility = "visible";
+			document.getElementById('title').style.visibility = "visible";
 			document.getElementById('updated').style.visibility = "visible";
 
 		}
@@ -127,11 +128,19 @@ function Init() {
 		// or even .className += " no-svg"; for deeper support
 	}
 
+	initPageFunction(curTab);
 	return false;
+}
+
+var initPageFunction = function(path) {
+	var pageFunction = path.replace("/", "");
+	if (typeof window[pageFunction] === "function")
+		window[pageFunction]();
 }
 
 var activateMenuFn = function() {
 	document.getElementById('path').style.visibility = "hidden";
+	document.getElementById('title').style.visibility = "hidden";
 	document.getElementById('updated').style.visibility = "hidden";
 	var nav_menu = document.querySelector( '#nav-menu' ),
 		canvas_main = document.querySelector( '#canvas-main' ),
@@ -190,22 +199,8 @@ function SetXURL(node) {
 	}
 }
 
-function SetXHRef(node) {
-	var arClassElement = getElementsByClassName(node, 'XHRef');
-	var n = arClassElement.length;
-	for(i = 0; i < n; i++)
-		arClassElement[i].onclick = LoadCanvasL;
-}
-
 function LoadCanvasI(m) {
 	LoadCanvasH(this);
-	return false;
-}
-
-function LoadCanvasL(m) {
-	var tabId = this.getAttribute("data-xhref");
-	LoadCanvasH(document.getElementById(tabId));
-	//activateMenuFn();
 	return false;
 }
 
@@ -215,19 +210,20 @@ function LoadCanvasH(e) {
 		URLid = "";
 	else
 		URLid = target;
-	LoadCanvas(e);
-	window.history.pushState({"id":target}, "", "/"+URLid);
+	LoadCanvas(target, e.getAttribute('data-title'));
+	window.history.pushState({"id":target, "title":e.getAttribute('data-title')}, "", "/"+URLid);
 	if(!(typeof (ga) === "undefined")) {
 		ga('set', 'page', '/'+URLid);
 		ga('send', 'pageview');
 	}
 }
 
-function LoadCanvas(e) {
-	var target = e.getAttribute('data-target');
-	if(target == "root")
+function LoadCanvas(target, title) {
+	//var target = e.getAttribute('data-target');
+	if(target == "root") {
 		document.getElementById('path').style.visibility = "hidden";
-
+		document.getElementById('title').style.visibility = "hidden";
+  }
 	// if(!!curTab)
 		// curTab.classList.remove('sidebar-nav-high');
 	// curTab = e;
@@ -242,7 +238,7 @@ function LoadCanvas(e) {
 
 	canvas_main.innerHTML = "";
 	date.style.visibility='hidden';
-	BeginLoading();
+	beginLoading();
 
 	var xmlhttp = new XMLHttpRequest();
 	if(window.XMLHttpRequest) {
@@ -253,57 +249,69 @@ function LoadCanvas(e) {
 	}
 	xmlhttp.onreadystatechange=function() {
 		if (xmlhttp.readyState == 4) {
-			var canvas_main = document.getElementById('canvas-main');
-			switch (xmlhttp.status) {
-			case 200: {
-				KillLoading();
+			if(target === gTarget) {
+				var canvas_main = document.getElementById('canvas-main');
+				switch (xmlhttp.status) {
+				case 200: {
+					killLoading();
 
-				var resp = JSON.parse(xmlhttp.responseText);
+					var resp = JSON.parse(xmlhttp.responseText);
 
-				var bXURL = resp.xurl;
-				var bASCR = resp.async;
+					var bXURL = resp.xurl;
+					var bASCR = resp.async;
+					var titleBar = "Ujnotes";
+					if(target != "root")
+						titleBar += " - " + title;
 
-				var titleBar = "Ujnotes";
-				if(target != "root")
-					titleBar += " - " + e.innerText;
-
-				//var lTitle = resp.desc.length;
-				//if(lTitle != 0)
-				titleBar += " : " + resp.desc;
-				document.title = titleBar;
-				if(target != "root")
-					document.getElementById('path').innerHTML = resp.title;
-				canvas_main.innerHTML = resp.content;
-				document.getElementById('updated').style.display = 'block';
-				document.getElementById('date').innerHTML = resp.date;
-				if(!URLid == "")
-					document.getElementById('path').style.visibility = "visible";
-				document.getElementById('updated').style.visibility = "visible";
-				var height = document.getElementById('canvas-main').scrollHeight;
-				document.getElementById('nav-menu').style.maxHeight = height+"px";
-				document.getElementById('canvas-main').style.maxHeight = "99999px";
-				date.style.visibility='visible';
-				if(bXURL == "1")
-					SetXHRef(document);
-				if(bASCR == "1")
-					eval(target+"()");
-			}																							break;
-			case 404: {
-				document.getElementById('updated').style.display = 'none';
-				document.getElementById('date').innerHTML = "";
-				canvas_main.innerHTML = "Error: 404 - Resource not found!";
-			}																							break;
-			case 408:
-			case 501:
-			case 502: {
-				document.getElementById('date').innerHTML = "";
-				document.getElementById('updated').style.display = 'none';
-				canvas_main.innerHTML = "Error!";
-			}
+					//var lTitle = resp.desc.length;
+					//if(lTitle != 0)
+					titleBar += " : " + resp.desc;
+					document.title = titleBar;
+					if(target == "root") {
+						document.getElementById('path').innerHTML = "&nbsp;";
+						document.getElementById('title').innerHTML = "";
+					}
+					else {
+						document.getElementById('path').innerHTML = resp.path;
+						document.getElementById('title').innerHTML = title;
+					}
+					canvas_main.innerHTML = resp.content;
+					document.getElementById('updated').style.display = 'block';
+					document.getElementById('date').innerHTML = resp.date;
+					if(!URLid == "") {
+						document.getElementById('path').style.visibility = "visible";
+						document.getElementById('title').style.visibility = "visible";
+					}
+					document.getElementById('updated').style.visibility = "visible";
+					var height = document.getElementById('canvas-main').scrollHeight;
+					document.getElementById('nav-menu').style.maxHeight = height+"px";
+					document.getElementById('canvas-main').style.maxHeight = "99999px";
+					date.style.visibility='visible';
+					if(bXURL == "1")
+						SetXURL(document);
+					if(bASCR == "1")
+						initPageFunction(resp.path.replace("/","_"));
+					fbReload();
+				} break;
+				case 404: {
+					document.getElementById('updated').style.display = 'none';
+					document.getElementById('date').innerHTML = "";
+					canvas_main.innerHTML = "Error: 404 - Resource not found!";
+				} break;
+				case 408:
+				case 501:
+				case 502: {
+					document.getElementById('date').innerHTML = "";
+					document.getElementById('updated').style.display = 'none';
+					canvas_main.innerHTML = "Error!";
+					errorLoading();
+				}
+				}
 			}
 		}
 	}
-	xmlhttp.open("GET", target+".json", true);
+	gTarget = target;
+	xmlhttp.open("GET", "/"+target+".json", true);
 	xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");//application/xhtml+xml
 	xmlhttp.send();
 }

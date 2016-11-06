@@ -5,17 +5,26 @@
 	require "API.php";
 	require "ComponentDetails.php";
 
-	if( isset($_GET['Mode']) && ($_GET['Mode'] === "Publish") )
+	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
 		$bPublish = TRUE;
 	else
 		$bPublish = FALSE;
 
-	$component;
-	LoadComponents();
+	if( isset($_GET['full']) && ($_GET['full'] === "true") )
+		$bFull = TRUE;
+	else
+		$bFull = FALSE;
 
-	$id = substr(GetOrigCall(), 0, -5); //No id w/o .html
-	$file = GetComponentPath($id);
-	
+	$component;
+	loadComponents();
+
+	$id = substr(getOrigCall(), 0, -5); //No id w/o .html
+	$file = getComponentPath($id);
+
+	ob_start();
+	include("Fragment\Path.php");
+	$path = ob_get_clean();
+
 	if(endsWith($file, ".php")) {
 		$fileContent = file_get_contents($file);
 	}
@@ -24,9 +33,9 @@
 		include($file);
 		$fileContent = ob_get_clean();
 	}
-		
+
 	if( $bPublish ) {
-		$cmd = "java -jar ..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css"; 
+		$cmd = "java -jar ..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css";
 
 		$descriptorspec = array(
 		   0 => array("pipe", "r"),
@@ -47,35 +56,33 @@
 			proc_close($process);
 		}
 	}
-	
+
 	echo "{";
-	echo "\"title\":";
-	echo "\"";
-	echo GetComponentTitle($id);
-	echo "\"";
+	echo "\"path\":";
+	echo json_encode($path);
 	echo ",";
 	echo "\"xurl\":";
 	echo "\"";
-	echo GetComponentModeXURL($id);
+	echo getComponentModeXURL($id);
 	echo "\"";
 	echo ",";
 	echo "\"async\":";
 	echo "\"";
-	echo GetComponentModeASYNC($id);
+	echo getComponentModeASYNC($id);
 	echo "\"";
 	echo ",";
 	echo "\"date\":";
 	echo "\"";
-	echo GetFileDate($file);
+	echo getFileDate($file);
 	echo "\"";
 	echo ",";
 	echo "\"desc\":";
 	echo "\"";
-	echo GetComponentDesc($id);
+	echo getComponentDesc($id);
 	echo "\"";
 	echo ",";
 	echo "\"content\":";
 	echo json_encode($fileContent);
 	echo "}";
-	
+
 ?>
