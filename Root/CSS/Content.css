@@ -6,6 +6,7 @@
 /*.content a { color:#00F; text-decoration:none; }*/
 .content-link { text-decoration:none;color: #69b7cf !important;}
 .content-link-grey { text-decoration:none;color: #ccc !important;}
+.content-link-grey:hover { text-decoration: none; color: #69b7cf !important; }
 .content-high { background:#DDD; padding:0 4px; }
 .content-low { color:#CCC; }
 .content-list ol { font-size:15px; font-family:Arial; background-color:transparent; vertical-align:baseline; }

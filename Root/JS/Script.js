@@ -64,7 +64,7 @@ function Init() {
 
 	if(!!hashID) {
 		curTab = "root";//document.getElementById('root');
-		LoadCanvas(hashID, "");
+		LoadCanvas(document.getElementById(hashID));
 	}
 	else if(!!URLID)
 		curTab = URLID;//document.getElementById(URLID);
@@ -290,7 +290,7 @@ function LoadCanvas(target, title) {
 					if(bXURL == "1")
 						SetXURL(document);
 					if(bASCR == "1")
-						initPageFunction(resp.path.replace("/","_"));
+						initPageFunction(resp.path);
 					fbReload();
 				} break;
 				case 404: {
