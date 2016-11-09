@@ -1,4 +1,4 @@
-DirectoryIndex Page.php
+DirectoryIndex Framework/Page.php
 
 RewriteBase /
 RewriteEngine On
@@ -6,8 +6,8 @@ DirectorySlash Off
 
 RewriteRule ^(.+)/$ $1 [R=301]
 
-RewriteRule	^style.css$	Style.php	[L]
-RewriteRule	^script.js$	Script.php	[L]
+RewriteRule	^style.css$	Framework/Style.php	[L]
+RewriteRule	^script.js$	Framework/Script.php	[L]
 
 RewriteRule	^favicon.ico$ Resource/FavIcon.ico	[L]
 RewriteRule	^apple-touch-icon.png$  Resource/Apple-Touch-Icon.png	[L]
@@ -17,18 +17,6 @@ RewriteRule	^logo.svg$	Resource/Logo.svg	[L]
 RewriteRule	^logo_full.png$	Resource/Logo_Full.png	[L]
 RewriteRule	^logo_full.svg$	Resource/Logo_Full.svg	[L]
 
-RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
-RewriteRule ^(.*?)\.jpg$ Resource/$1/root.jpg [R=302,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*?)\.json$ Component.php	[L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ Page.php [L]
-
 RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
 RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
 RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
@@ -36,3 +24,15 @@ RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxL
 RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
 RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
 RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
+RewriteRule ^(.*?)\.jpg$ Resource/$1/root.jpg [R=302,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?)\.json$ Framework/Component.php	[L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ Framework/Page.php [L]

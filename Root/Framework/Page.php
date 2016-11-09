@@ -1,20 +1,16 @@
 <?php
-	require "API.php";
-	require "ComponentDetails.php";
+	require 'API.php';
+	require 'ComponentDetails.php';
+	require 'Config.php';
 
-	$project_title = "Ujnotes";
+	$config = loadConfig();
 
-	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") ) {
+	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
 		$bPublish = TRUE;
-		$googleAnalyticsId = "UA-49547226-1";
-	}
-	else {
+	else
 		$bPublish = FALSE;
-		$googleAnalyticsId = "UA-12345-12";
-	}
 
-	$component;
-	loadComponents();
+	$component = loadComponents();
 
 	$id = getOrigCall();
 	$menu_active_class = "";
@@ -33,7 +29,7 @@
 	$dom = new DOMDocument();
 
 	ob_start();
-	require 'Template.php';
+	require '..\Template\Base.php';
 	$dom->loadHTML(ob_get_contents());
 	ob_end_clean();
 

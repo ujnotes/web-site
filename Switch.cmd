@@ -1,5 +1,4 @@
 @echo Off
-
 setLocal EnableDelayedExpansion
 
 set tRoot=UjNotes\Website
@@ -27,6 +26,5 @@ mklink /j htdocs "%Project%\%tRoot%\%target%" > nul
 if errorLevel 0	(
 	echo %target%
 	endLocal
-    ping -n 3 localhost > nul
-	exit		)
-pause > nul
+    ping -n 3 localhost > nul	) else (
+	pause > nul	)

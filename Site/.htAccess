@@ -10,6 +10,14 @@ RewriteRule ^/?(.*)$ http://ujnotes.com/$1 [L,R=301]
 
 RewriteRule ^(.+)/$ $1 [R=301]
 
+RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
+RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
+RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+
+RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
+RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
+RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+
 rewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+)$ $1/root
 
@@ -18,14 +26,6 @@ RewriteRule ^(.*?)\.json$ $1/root.json [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.jpg$ $1/root.jpg [L]
-
-RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
-
-RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
 
 ExpiresActive on
 ExpiresDefault "access plus 2 hours"

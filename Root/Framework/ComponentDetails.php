@@ -3,9 +3,8 @@
 function loadComponents() {
 	global $bPublish;
 	global $bFull;
-	global $component;
 
-	$fHandle = fopen("..\IDs.tsv", "r");
+	$fHandle = fopen("..\..\Config\IDs.tsv", "r");
 	$i = 0;
 	while(($tsvLine = fgetcsv($fHandle, 0, "\t")) !== FALSE) {
 		if($tsvLine[0] == null) {
@@ -18,6 +17,8 @@ function loadComponents() {
 			$component[$i][$j] = $tsvLine[$j];
 		$i++;
 	}
+
+	return $component;
 }
 
 function getComponentTitle($id) {
@@ -71,7 +72,7 @@ function getSubComponents($id) {
 }
 
 function getComponentPath($id) {
-	$s = "Component\\".str_replace(' ','_', $id);
+	$s = "..\\Component\\".str_replace(' ','_', $id);
 	if(file_exists($s)) {
 		$s = $s."\Root";
 	}

@@ -1,3 +1,4 @@
+// external PROJECT_TITLE
 var curTab;
 var intrvl = 0;
 var gTarget;
@@ -259,7 +260,7 @@ function LoadCanvas(target, title) {
 
 					var bXURL = resp.xurl;
 					var bASCR = resp.async;
-					var titleBar = "Ujnotes";
+					var titleBar = PROJECT_TITLE;
 					if(target != "root")
 						titleBar += " - " + title;
 

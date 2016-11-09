@@ -4,7 +4,10 @@
 
 	require "API.php";
 	require "ComponentDetails.php";
+	require "Config.php";
 
+	$config = loadConfig();
+	
 	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
 		$bPublish = TRUE;
 	else
@@ -15,10 +18,9 @@
 	else
 		$bFull = FALSE;
 
-	$component;
-	loadComponents();
+	$component = loadComponents();
 
-	$id = substr(getOrigCall(), 0, -5); //No id w/o .html
+	$id = substr(getOrigCall(), 0, -5); //stripping extension part
 	$file = getComponentPath($id);
 
 	ob_start();
@@ -35,7 +37,7 @@
 	}
 
 	if( $bPublish ) {
-		$cmd = "java -jar ..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css";
+		$cmd = "java -jar ..\..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css";
 
 		$descriptorspec = array(
 		   0 => array("pipe", "r"),

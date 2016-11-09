@@ -3,17 +3,11 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="title" content="Ujnotes" />
-		<meta itemprop="name" content="Ujnotes" />
-		<meta itemprop="image" content="http://ujnotes.com/icon-social.png" />
-		<meta property="og:url" content="http://ujnotes.com<?php echo getComponentURL($id) ?>" />
-		<meta property="og:title" content="<?php echo getComponentTitle($id) ?>" />
-		<meta property="og:type" content="article" />
-		<meta property="og:image" content="http://ujnotes.com/<?php echo $id ?>.jpg" />
-		<meta property="og:description" content="<?php echo getComponentDesc($id) ?>" />
-		<meta property="og:site_name" content="Ujnotes.com" />
-		<meta property="fb:app_id" content="487343071466495" />
-		<meta property="fb:admins" content="100000014591845" />
+		<meta name="title" content="<?php echo $config['project_title'] ?>" />
+		<meta itemprop="name" content="<?php echo $config['project_title'] ?>" />
+		<meta itemprop="image" content="<?php echo $config['base_url'] ?>/icon-social.png" />
+		<?php require 'Fragment\OG_Meta.php' ?>
+		<?php require 'Fragment\FB_Meta.php' ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
@@ -37,38 +31,42 @@
 	}
 	else {
 ?>
-		<link rel="stylesheet" type="text/css" href="/CSS/Style.css" />
-		<link rel="stylesheet" type="text/css" href="/CSS/Menu.css" />
-		<link rel="stylesheet" type="text/css" href="/CSS/Content.css" />
-		<script type="text/javascript" src="/JS/script.js"></script>
-		<script type="text/javascript" src="/JS/AJAXLoad.js"></script>
-		<script type="text/javascript" src="/JS/API.js"></script>
-		<script type="text/javascript" src="/JS/ClassList.js"></script>
-		<script type="text/javascript" src="/JS/Classie.js"></script>
+		<script type="text/javascript">
+			var PROJECT_TITLE = '<?php echo $config['project_title']; ?>';
+		</script>
+		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Style.css" />
+		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Menu.css" />
+		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Content.css" />
+		<script type="text/javascript" src="/JS/PageAJAX.js"></script>
+		<script type="text/javascript" src="/Framework/JS/script.js"></script>
+		<script type="text/javascript" src="/Framework/JS/AJAXLoad.js"></script>
+		<script type="text/javascript" src="/Framework/JS/API.js"></script>
+		<script type="text/javascript" src="/Framework/JS/ClassList.js"></script>
+		<script type="text/javascript" src="/Framework/JS/Classie.js"></script>
 <?php
 	}
 ?>
 		<title>
 <?php
 			if($id === "root")
-				echo $project_title." : ".$desc;
+				echo $config['project_title']." : ".$desc;
 			else {
 				if($desc)
-					echo $project_title." - ".$title." : ".$desc;
+					echo $config['project_title']." - ".$title." : ".$desc;
 				else
-					echo $project_title." - ".$title;
+					echo $config['project_title']." - ".$title;
 			}
 ?>
 		</title>
 		<?php
 			if($bPublish) {
-				require "JS/Head Scripts - GA.html";
+				require "../Framework/Fragment/HeadScript_GA.php";
 			}
 		?>
 	</head>
 	<body>
 		<?php if($bPublish) {
-			require "JS/Body Begin - FB.html";
+			require "../Framework/Fragment/BodyBegin_FB.php";
 		?>
 			<script async src="//apis.google.com/js/platform.js" defer></script>
 			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -91,7 +89,7 @@ var trackOutboundLink = function(url) {
 </script>
 		<div id="main-wrapper">
 			<div id="content-wrapper">
-			<?php require "Header.php"; ?>
+			<?php require "../Fragment/Header.php"; ?>
 			<div id="wrapper">
 				<div id="main">
 					<div class="container">
@@ -101,7 +99,7 @@ var trackOutboundLink = function(url) {
 								<div id="path"><?php require "Fragment\Path.php" ?></div>
 								<div id="title"><?php echo ($id === "root"? "" : $title) ?></div>
 								<div id="canvas-wrapper-inner-container">
-									<?php require "Menu.html"; ?>
+									<?php require "../Fragment/Menu.html"; ?>
 									<div id="canvas-main">
 										<?php require (getComponentPath($id)) ?>
 									</div>
@@ -112,7 +110,7 @@ var trackOutboundLink = function(url) {
 				</div>
 			</div>
 			</div>
-			<?php require "Footer.php"; ?>
+			<?php require "../Fragment/Footer.php"; ?>
 		</div>
 	</body>
 </html>

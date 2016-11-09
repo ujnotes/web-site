@@ -1,5 +1,5 @@
 <div class="fb-like"
-  data-href="http://ujnotes.com/<?php echo $id ?>"
+  data-href="<?php echo $config['base_url'].'/'.$id ?>"
   data-layout="button"
   data-action="like"
   data-size="small"

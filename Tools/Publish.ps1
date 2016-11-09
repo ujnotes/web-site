@@ -7,15 +7,14 @@ $mRoot = "Interim\"
 $eHost = "http://localhost"
 $eMode = "mode=publish"
 
-$flPath = ".\Files.tsv" 	#File List
-$ilPath = ".\IDs.tsv"   	#ID List
-$tlPath = ".\Template.tsv"	#Template List
+$flPath = ".\Config\Files.tsv" 	#File List
+$ilPath = ".\Config\IDs.tsv"   	#ID List
+#$tlPath = ".\Config\Template.tsv"	#Template List
 
 $jScript = "script.js"
 $cStyle = "style.css"
-$jsDir = "JS\"
-$cssDir = "CSS\"
 
+$iBaseTemplateFile = "Template\Base.php"
 $oBaseWebFile = "root"
 # Could be tested against any other 'Snapped' file
 
@@ -35,8 +34,6 @@ foreach ($e in $iListC) {
 	}
 }
 
-$tList = GC $tlPath
-
 . ".\Tools\API.ps1"
 
 if ((Test-Path $oRoot) -ne $TRUE) {
@@ -46,11 +43,11 @@ if ((Test-Path $mRoot) -ne $TRUE) {
     New-Item -ItemType directory -Path $mRoot
 }
 
-if (CheckAll $iRoot $jsDir $oRoot $jScript) {
+if ((Test-path "$oRoot\$jScript") -ne $TRUE) {
     DownloadH $eHost $eMode $jScript $mRoot $jScript
     CompressJ $mRoot $jScript $oRoot $jScript
 }
-if (CheckAll $iRoot $cssDir $oRoot $cStyle) {
+if ((Test-path "$oRoot\$cStyle") -ne $TRUE) {
     DownloadH $eHost $eMode $cStyle $mRoot $cStyle
     CompressC $mRoot $cStyle $oRoot $cStyle
 }
@@ -65,15 +62,16 @@ foreach ($element in $fList) {
     }
 }
 
-foreach ($element in $tList) {
-	if (Check $iRoot $element $oRoot $oBaseWebFile) {
+#$tList = GC $tlPath
+#foreach ($element in $tList) {
+	if (Check $iRoot $iBaseTemplateFile $oRoot $oBaseWebFile) {
 		$bTemplateChanged = $TRUE
-		break
+#		break
 	}
 	else {
 		$bTemplateChanged = $FALSE
 	}
-}
+#}
 
 foreach ($component in $iList) {
     $componentC = $component -replace "/","\"
@@ -119,7 +117,7 @@ foreach ($component in $iList) {
 }
 
 $component = "menu"
-if (($bTemplateChanged -eq $TRUE) -or (Check $iRoot "$component.html" $oRoot $component)) {
+if (($bTemplateChanged -eq $TRUE) -or (Check $iRoot "Fragment\$component.html" $oRoot $component)) {
 	Write-Host $component
 	DownloadH $eHost $eMode $component $mRoot $component
 	CompressH $mRoot $component $oRoot $component
