@@ -134,7 +134,7 @@ function Init() {
 }
 
 var initPageFunction = function(path) {
-	var pageFunction = path.replace("/", "");
+	var pageFunction = path.replace("/", "__");
 	if (typeof window[pageFunction] === "function")
 		window[pageFunction]();
 }
@@ -291,7 +291,7 @@ function LoadCanvas(target, title) {
 					if(bXURL == "1")
 						SetXURL(document);
 					if(bASCR == "1")
-						initPageFunction(resp.path);
+						initPageFunction(target);
 					fbReload();
 				} break;
 				case 404: {
