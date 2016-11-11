@@ -1,21 +1,12 @@
 DirectoryIndex Framework/Page.php
 
+ErrorDocument 404 "Error: 404. Page Not Found! :("
+
 RewriteBase /
 RewriteEngine On
 DirectorySlash Off
 
 RewriteRule ^(.+)/$ $1 [R=301]
-
-RewriteRule	^style.css$	Framework/Style.php	[L]
-RewriteRule	^script.js$	Framework/Script.php	[L]
-
-RewriteRule	^favicon.ico$ Resource/FavIcon.ico	[L]
-RewriteRule	^apple-touch-icon.png$  Resource/Apple-Touch-Icon.png	[L]
-
-RewriteRule	^logo.png$  Resource/Logo.png	[L]
-RewriteRule	^logo.svg$	Resource/Logo.svg	[L]
-RewriteRule	^logo_full.png$	Resource/Logo_Full.png	[L]
-RewriteRule	^logo_full.svg$	Resource/Logo_Full.svg	[L]
 
 RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
 RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
@@ -25,6 +16,12 @@ RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ
 RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
 RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
 
+RewriteRule ^style.css$ Framework/Style.php [L]
+RewriteRule ^script.js$ Framework/Script.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.ico$ Resource/$1.ico [L]
+
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
 RewriteRule ^(.*?)\.jpg$ Resource/$1/root.jpg [R=302,L]
 
@@ -32,7 +29,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*?)\.json$ Framework/Component.php	[L]
+RewriteRule ^(.+)\.png$ Resource/$1.png [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.svg$ Resource/$1.svg [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?)\.json$ Framework/Component.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ Framework/Page.php [L]

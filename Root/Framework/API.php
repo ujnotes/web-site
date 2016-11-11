@@ -23,4 +23,12 @@
 		return preg_match('/' . preg_quote($haystack, '/') . '$/', $needle);
 	}
 
+	function loadFiles($dir) {
+		$files = scandir("../".$dir);
+		array_shift($files);
+		array_shift($files);
+
+		return $files;
+	}
+
 ?>

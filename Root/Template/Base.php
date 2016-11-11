@@ -34,15 +34,23 @@
 		<script type="text/javascript">
 			var PROJECT_TITLE = '<?php echo $config['project_title']; ?>';
 		</script>
-		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Style.css" />
-		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Menu.css" />
-		<link rel="stylesheet" type="text/css" href="/Framework/CSS/Content.css" />
+<?php
+		$CSSRoot = "Framework/CSS/";
+		$CSSFiles = loadFiles($CSSRoot);
+		foreach ($CSSFiles as $CSSFile) {
+?>
+		<link rel="stylesheet" type="text/css" href="<?php echo $CSSRoot.$CSSFile ?>" />
+<?php
+		}
+		$JSRoot = "Framework/JS/";
+		$JSFiles = loadFiles($JSRoot);
+		foreach ($JSFiles as $JSFile) {
+?>
+		<script type="text/javascript" src="<?php echo $JSRoot.$JSFile ?>"></script>
+<?php
+		}
+?>
 		<script type="text/javascript" src="/JS/PageAJAX.js"></script>
-		<script type="text/javascript" src="/Framework/JS/script.js"></script>
-		<script type="text/javascript" src="/Framework/JS/AJAXLoad.js"></script>
-		<script type="text/javascript" src="/Framework/JS/API.js"></script>
-		<script type="text/javascript" src="/Framework/JS/ClassList.js"></script>
-		<script type="text/javascript" src="/Framework/JS/Classie.js"></script>
 <?php
 	}
 ?>
@@ -73,20 +81,7 @@
 		<?php
 			}
 		?>
-		<script>
-/**
-* Function that tracks a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var trackOutboundLink = function(url) {
-	 ga('send', 'event', 'outbound', 'click', url, {
-		 'transport': 'beacon',
-		 'hitCallback': function(){document.location = url;}
-	 });
-}
-</script>
+		<?php require "../Framework/Fragment/GA_track.js" ?>
 		<div id="main-wrapper">
 			<div id="content-wrapper">
 			<?php require "../Fragment/Header.php"; ?>
