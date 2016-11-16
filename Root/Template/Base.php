@@ -35,14 +35,14 @@
 			var PROJECT_TITLE = '<?php echo $config['project_title']; ?>';
 		</script>
 <?php
-		$CSSRoot = "Framework/CSS/";
+		$CSSRoot = "/Framework/CSS/";
 		$CSSFiles = loadFiles($CSSRoot);
 		foreach ($CSSFiles as $CSSFile) {
 ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CSSRoot.$CSSFile ?>" />
 <?php
 		}
-		$JSRoot = "Framework/JS/";
+		$JSRoot = "/Framework/JS/";
 		$JSFiles = loadFiles($JSRoot);
 		foreach ($JSFiles as $JSFile) {
 ?>

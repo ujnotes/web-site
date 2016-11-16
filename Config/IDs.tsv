@@ -22,8 +22,9 @@ world/philosophy/death	Death	1	0	An elaboration of death's significance
 	world/philosophy/possessions/money	Money	1	0	Money
 	world/philosophy/society	Society	1	0	Society
 	world/philosophy/governance	Governance	1	0	Governance
-	world/philosophy/god	God	1	0	God
-	world/philosophy/god/no_god	No God	1	0	No God
+world/philosophy/god	God	1	0	Meaning of god
+	world/philosophy/god/no_god	No God	1	0	Inexistence of god
+	world/philosophy/god/manifestations	Manifestations	1	0	Manifestations of god
 	world/philosophy/religion	Religion	1	0	Religion
 	world/philosophy/violence	Violence	1	0	Violence
 	world/philosophy/violence/war	War	1	0	War

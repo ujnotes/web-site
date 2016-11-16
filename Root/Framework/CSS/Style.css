@@ -94,7 +94,7 @@ img {
 	#main-wrapper {padding:0 0px;}
 }
 
-h3 { margin: 0px; padding-bottom: 8px;color: #69B7CF !important;}
+h3 { color: #69B7CF !important; }
 .bullet { padding: 0 5px; color: rgb(200, 200, 200) !important;}
 
 #header-right-list { text-align: center; margin:auto;/* clear:both; */padding: 0 6px 0 0; overflow: hidden; display: inline-block; float: right; }
