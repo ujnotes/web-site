@@ -8,6 +8,7 @@
 		<meta itemprop="image" content="<?php echo $config['base_url'] ?>/icon-social.png" />
 		<?php require 'Fragment\OG_Meta.php' ?>
 		<?php require 'Fragment\FB_Meta.php' ?>
+		<?php require 'Fragment\Twitter_Meta.php' ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
