@@ -3,7 +3,7 @@
   $parentId = getParentId($id);
   $nextId = getNextId($id);
 ?>
-<div class='center'>
+<div id='nav-list' class='center'>
   <a id='nav-menu-prev'
   <?php if($prevId != "") { ?>
     class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$prevId ?>' data-target='<?php echo $prevId ?>' data-title='<?php echo getComponentTitle($prevId) ?>' >
@@ -13,9 +13,6 @@
     class='XURL_disabled sidebar-nav-norm sidebar-nav-l-1' >
     &nbsp;
   <?php } ?>
-  </a>
-  <a id='nav-menu-up' class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$parentId ?>' data-target='<?php echo $parentId ?>' data-title='<?php echo getComponentTitle($parentId) ?>'>
-    <span><?php echo getComponentTitle($parentId) ?></span><span class='arrow'>&#x25B3;</span>
   </a>
   <a id='nav-menu-next'
   <?php if($nextId != "") {?>
@@ -27,4 +24,7 @@
     &nbsp;
   <?php } ?>
   </a>
+	<a id='nav-menu-up' class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$parentId ?>' data-target='<?php echo $parentId ?>' data-title='<?php echo getComponentTitle($parentId) ?>'>
+		<span><?php echo getComponentTitle($parentId) ?></span><span class='arrow'>&#x25B3;</span>
+	</a>
 </div>

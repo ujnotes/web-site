@@ -167,7 +167,7 @@
 .grey { color:#AAA; }
 
 @media (max-width: 540px) {
-	#main-wrapper {padding: 0px }
+	#main-wrapper {padding: 0px !important}
 	#canvas-main {/* padding-bottom: 48px; */width: 50%;}
 	#header-wrapper { margin: 0 4px; }
 	#header-wrapper-divider { margin: 0 15px; /* display: none; */}
@@ -180,11 +180,16 @@
 	#download-apple-bottom { clear:both; display: block;}
 	#download-android-bottom {clear:both;display: block;margin: 10px auto;}
 	.content p {padding-left: 6px;}
+	#nav-menu-prev { float: none !important; }
+	#nav-menu-next { float: none !important; }
 }
 
 @media (max-width: 768px) {
 	#profile-image-container { float:none !important; margin: auto; width: 100%;}
 }
+
+#nav-menu-prev { float: left; }
+#nav-menu-next { float: right; }
 
 #comparision-table > div { display: inline-block; }
 

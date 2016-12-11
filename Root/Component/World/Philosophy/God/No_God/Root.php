@@ -82,7 +82,7 @@
 			My request to the people in Iraq and Syria and around the world is: please know that there is no god, heaven and hell. Every person that you are killing and torturing is in fact your own brother or sister.<br>
 			If only people in Syria had understood that there is no God to divide them, Shia and Sunni are one, that each should treat the other as equal. Perhaps there would be no need for a war and they could have worked out a peaceful solution instead.<br>
 			Imagine if ISIS learnt - like really absorbed this single piece of knowledge: that there is no God, that they have been lied to or they have been lying to themselves; that there is no hell or heaven, would they still kill?<br>
-			At least their "justification" of their discrimination would become invalid. And if not all many of them would cease their 'unholy' war<br>
+			At least their "justification" of their discrimination would become invalid. And if not all many of them would cease their 'unholy' war.<br>
 			Nevertheless, even atheistic regimes have been extremely brutal and violent. Millions have been slaughtered under communist rule that were primarily atheist.<br>
 			Still, by taking any 'personal' god out of the equation, at least there would be one less an excuse to kill.<br>
 			If only we all knew: we are all 'one', that there are no Gods, nothing to divide us, perhaps we could have some sort of a 'heaven' right here.<br>
@@ -93,7 +93,7 @@
 			But let me tell you this whether I or you will be alive to see that day or not, it will happen; unless of course we annihilate ourselves completely before that.<br>
 			Why I am so sure? because it is the natural way of being.<br>
 			If we can - the majority of us avoid violence. And while we have indeed been inventing weapons that can kill on greater and greater scale, we also have been developing the means to avoid it.<br>
-			In a world without personal gods, more of us will connect with the spirit of life more. More will see that they should treat others only as they want themselves to treated. More will try to make more of the very limited time that they will ever have by doing more for more lives<br>
+			In a world without personal gods, more of us will connect with the spirit of life more. More will see that they should treat others only as they want themselves to treated. More will try to make more of the very limited time that they will ever have by doing more for more lives.<br>
 			Humans of the future will look back to this moment in time at us and judge: who stood for 'god', and who stood for 'humanity'?<br>
 			I will not see you in some 'heaven', I wish I see you healthy and happy right here.
 		</p>
