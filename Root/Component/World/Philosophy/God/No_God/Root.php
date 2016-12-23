@@ -10,7 +10,7 @@
 			<br>
 			Well some one told ISIS that they should kill everyone who does not share their belief, referring to the same or a similar book.<br>
 			<br>
-			I hope you remember seeing a face in a random pattern. In reality that face is not a 'face', but you deliberately make it in your mind.<br>
+			I hope you remember seeing a face in a random pattern. In reality that face is not a 'face', but yet you perceive it for you deliberately make it in your mind.<br>
 			Similarly humans themselves generate the idea of god.
 		</p>
 		<h3>Beliefs</h3>

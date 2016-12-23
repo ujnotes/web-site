@@ -2,6 +2,7 @@
 var curTab;
 var intrvl = 0;
 var gTarget;
+var URLid;
 /*if (document.readyState == "complete" || document.readySate == "loaded" || document.readyState == "interactive")
 {
 	var x = 0;
@@ -57,7 +58,7 @@ function Init() {
 //console.log(Date.now()-tb);
 	SetXURL(document);
 	var hashID = GetHashID();
-	var URLID = GetURLID();
+	URLid = GetURLid();
 
 	var canvas_main = document.querySelector( '#canvas-main' ),
 		menu_button = document.querySelector( ".toggle-push-left" ),
@@ -67,12 +68,12 @@ function Init() {
 		curTab = "root";//document.getElementById('root');
 		LoadCanvas(document.getElementById(hashID));
 	}
-	else if(!!URLID)
-		curTab = URLID;//document.getElementById(URLID);
+	else if(!!URLid)
+		curTab = URLid;//document.getElementById(URLid);
 	else
 		curTab = "root";//document.getElementById('root');
 
-	if(URLID == "menu") {
+	if(URLid == "menu") {
 		menuActive = true;
 		classie.add( menu_button, "active" );
 		canvas_main.style.maxHeight = document.querySelector('#nav-menu').scrollHeight+"px";
@@ -80,7 +81,7 @@ function Init() {
 	else
 		document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
 
-	if (!hashID && !URLID)
+	if (!hashID && !URLid)
 		window.history.replaceState({"id":"root"}, "", "/");
 
 	menu_button.addEventListener( "click", function(){
@@ -174,7 +175,7 @@ var activateMainFn = function() {
 	menuActive = false;
 }
 
-function GetURLID() {
+function GetURLid() {
 	var loc = window.location.pathname;
 	if(loc == '/')
 		return "";

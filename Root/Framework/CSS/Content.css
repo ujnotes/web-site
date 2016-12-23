@@ -182,6 +182,7 @@
 	.content p {padding-left: 6px;}
 	#nav-menu-prev { float: none !important; }
 	#nav-menu-next { float: none !important; }
+	#fb_components { margin-left: 4px !important; }
 }
 
 @media (max-width: 768px) {
