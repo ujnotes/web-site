@@ -7,7 +7,7 @@
   <a id='nav-menu-prev'
   <?php if($prevId != "") { ?>
     class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$prevId ?>' data-target='<?php echo $prevId ?>' data-title='<?php echo getComponentTitle($prevId) ?>' >
-    <span class='arrow'>&#x25C1;</span><span><?php echo getComponentTitle($prevId) ?></span>
+    <div class='arrow'>&#x25C1;</div><div><?php echo getComponentTitle($prevId) ?></div>
   <?php }
     else { ?>
     class='XURL_disabled sidebar-nav-norm sidebar-nav-l-1' >
@@ -17,7 +17,7 @@
   <a id='nav-menu-next'
   <?php if($nextId != "") {?>
     class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$nextId ?>' data-target='<?php echo $nextId ?>' data-title='<?php echo getComponentTitle($nextId) ?>' >
-    <span><?php echo getComponentTitle($nextId) ?></span><span class='arrow'>&#x25B7;</span>
+    <div><?php echo getComponentTitle($nextId) ?></div><div class='arrow'>&#x25B7;</div>
   <?php }
     else { ?>
     class='XURL_disabled sidebar-nav-norm sidebar-nav-l-1' >
@@ -25,6 +25,6 @@
   <?php } ?>
   </a>
 	<a id='nav-menu-up' class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$parentId ?>' data-target='<?php echo $parentId ?>' data-title='<?php echo getComponentTitle($parentId) ?>'>
-		<span><?php echo getComponentTitle($parentId) ?></span><span class='arrow'>&#x25B3;</span>
+		<div><?php echo getComponentTitle($parentId) ?></div><div class='arrow'>&#x25B3;</div>
 	</a>
 </div>

@@ -79,6 +79,10 @@ img {
 	max-width: 512px;
 }
 
+#nav-list > a > div {
+	display: inline-block;
+}
+
 #footer-wrapper-divider { border-bottom:1px solid #DDD; margin-left: 25%; margin-right: 25%; }
 #footer-wrapper {/* max-width: 560px; */ /* height: 66px; */ text-align:center; font-size:12px; margin-left: auto;margin-right: auto;margin-top: -205px;position: relative;/* clear: both; *//* transition: all 9.7s; */}
 #footer-wrapper-inside { padding: 6px 0 26px 0; font-size: 12px;color: #444; }
@@ -93,20 +97,22 @@ img {
 
 .XURL { cursor:pointer; text-decoration: none; }
 .XURL_ { cursor:pointer; text-decoration: none; background: #69B7CF; color: white !important; }
-.XURL_ span {
-	margin: 16px 28px;
+.XURL_ div {
+	margin-left: 28px;
 	font-size: 15px;
 	vertical-align: middle;
 	cursor:pointer;
 	color: white !important; }
+
 .XURL_:hover {
 	cursor:pointer;
 	background: white;
-	border-color: #ddd;
-}
-.XURL_:hover span {
+	border-color: #ddd; }
+
+.XURL_:hover div {
 	color: #69B7CF !important;
 }
+
 .twitter-timeline-rendered{ width:652px; padding:0px 10px 0px 0px; }
 /*@media only screen and (max-device-width: 768px) {
 	#main-wrapper {padding:0 0px;}
@@ -438,18 +444,22 @@ div#wcode-remember {
 
 .XURL_disabled {
   border: #efefef 1px solid !important;
+	background-color: #FFFFFF !important;
 }
 
-.XURL_disabled span {
+.XURL_disabled div {
   margin: 16px 28px;
   font-size: 15px;
   color: #dedede !important;
   vertical-align: middle;
 }
 
-#nav-menu-up > span:last-child {
-  margin: 10px;
+.XURL font {
+	transition: none !important;
 }
+/*#nav-menu-up > div:last-child {
+  margin: 10px;
+}*/
 
 #sub-list {
 	margin: 28px 0;

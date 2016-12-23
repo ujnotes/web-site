@@ -4,7 +4,7 @@
   foreach ($memIDs as $key => $value) {
 ?>
     <a class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo '/'.$value[0] ?>' data-target='<?php echo $value[0] ?>' data-title='<?php echo $value[1] ?>'>
-      <span><?php echo $value[1] ?></span>
+      <div><?php echo $value[1] ?></div>
     </a>
 <?php
   }
