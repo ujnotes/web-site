@@ -22,9 +22,9 @@
 			<br>
 			Then some say: as long as they do not enact violence, people should have the freedom in believing what ever they like.<br>
 			But let me give you an example: what if tomorrow some one begins 'believing' that they should kill every one whose names start with a particular alphabet, as some one planted what they now believe is a 'holy book', commanding so, in their backyard?<br>
-			Those people believing that - might not choose to act on it, but they will continue to pass on that belief to other others, write books and songs and plays about it. Any one of their audience may choose to act eventually, or may be incentivized or misguided and exploited to.<br>
-			Which will result in unwarranted and unnecessary senseless violence, as it does, regularly now, creating international news every now and then.<br>
-			And on the global scale, this is exploited by third parties for their own interests even in those dreaded proxy wars.<br>
+			Those people believing that - might not choose to act on it, but they will continue to pass on that belief to others, write books and songs and plays about it. Any one of their audience may choose to act eventually, or may be incentivized or misguided and exploited to.<br>
+			Which will result in unwarranted and unnecessary senseless violence, as it does regularly, creating international news every now and then.<br>
+			And on the global scale, this is exploited by third parties for their own interests even in those dreadful proxy wars.<br>
 		</p>
 		<h3>Religion</h3>
 		<p>
@@ -60,10 +60,10 @@
 			Still if you argue that who created us, then you must also account for an explanation as to who created the creator?<br>
 			What matters is the truth that there is no God like character to be seen around.<br>
 			God is no where. If he was, he would probably be enjoying a 'vacation' somewhere or it would be that he enjoys watching this suffering and killing?<br>
-			Would you let one of your child burn your other child to death? Or is it that he does not exist?<br>
+			Would you let one of your children burn your other child to death? Or is it that he does not exist?<br>
 			If he was there, would he not save the children and women and innocents who have been suffering terribly for no fault of theirs.<br>
-			If you have a theory for that than you can have a garbage self-centered selfish theory for anything!<br>
-			People just like you and me get tortured, raped and murdered almost every single day in Syria and Iraq. And the excuse used is: I am better than you, for my god is holier than yours &ndash; Madness!<br>
+			If you have a theory for that than you can have a garbage self-centric selfish theory for anything!<br>
+			People just like you and me get tortured, raped and murdered almost every single day in Syria and Iraq. And often what lies at its root is: "I am better, more 'special' than you"; and is often justified with this idea: "for my god is holier than yours" &ndash; Madness!<br>
 			You don't need to fear hell and long for heaven like 5 year old kids that are scared of monsters and cry for a candy. You can still be good, for you know what 'good' is.<br>
 			Perhaps with an extremely few exceptions, most of you would indeed help a drowning child if you came across one. Do you need a book to tell you that? Even if you did why does it have to come from a God.<br>
 			Next, death has been another of our great weaknesses. The lack of knowledge as to what happens after death.<br>

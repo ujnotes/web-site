@@ -156,15 +156,45 @@ nav.push-menu-left {
 #nav-menu_container { padding: 18px; }
 .sidebar-sub {/* padding:2px 0px; */text-align: center;}
 #sidebar-nav li {padding-left:0px; list-style:none; list-style-image:none; display:block; white-space:nowrap;}
-.nav-menu_container div.XURL:hover {background: #69B7CF;color: white !important;}
-.sidebar-nav-li div.XURL:hover a{color: #FFF !important;}
+.nav-menu_container div.XURL:hover {
+	background: white;
+	color: 	#69B7CF !important;
+	border-color: #ddd;
+}
+
+.sidebar-nav-li div.XURL:hover a {
+	color: #69B7CF !important;
+}
+
 .menu-container {padding-bottom:4px;}
-.sidebar-nav-l-0 a{padding-left:14px; font-size:14px; line-height:150%; color:rgb(40, 148, 243); text-decoration:none;}
-.sidebar-nav-l-1 a{margin: 16px 28px;/* padding-right:10px; *//* line-height:136%; */font-size: 15px;color: #69B7CF !important; text-decoration:none;vertical-align: middle;}
+.sidebar-nav-l-0 a {padding-left:14px; font-size:14px; line-height:150%; color:rgb(40, 148, 243); text-decoration:none;}
+.sidebar-nav-l-1 a {
+	margin: 16px 28px;
+	/* padding-right:10px; *//* line-height:136%; */
+	font-size: 15px;
+	color: #FFF !important;
+	text-decoration:none;
+	vertical-align: middle;
+}
+
 .sidebar-nav-high {background-color:#68E; }
 .sidebar-nav-high a{color:#FFF; text-decoration:none; font-weight:bold;}
 .sidebar-nav-imp a{font-weight:bold;}
-.sidebar-nav-norm {/* float: left; */width: 158px; height: 64px;margin: 4px;/* background-color: #f2f2f2; *//*background-color: #FFFFFF;*//*align-items: center;*/display: inline-block;text-align: left;line-height: 64px; border: #ddd; border-style: solid; border-width: 1px;}
+.sidebar-nav-norm {
+	/* float: left; */
+	width: 158px;
+	height: 64px;
+	margin: 4px;
+	/* background-color: #f2f2f2; *//*background-color: #FFFFFF;*//*align-items: center;*/
+	display: inline-block;
+	text-align: left;
+	line-height: 64px;
+	border-color: #69B7CF;
+	border-style: solid;
+	border-width: 1px;
+	background: #69B7CF;
+	color: #FFF;
+}
 
 .sidebar-nav-group {
     /* margin: 6px 0; */

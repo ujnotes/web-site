@@ -1,4 +1,4 @@
-<div class='center'>
+<div id='sub-list' class='center'>
 <?php
   $memIDs = getSubComponents($id);
   foreach ($memIDs as $key => $value) {
