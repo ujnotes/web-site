@@ -24,7 +24,7 @@
     &nbsp;
   <?php } ?>
   </a>
-	<a id='nav-menu-up' class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='<?php echo "/".$parentId ?>' data-target='<?php echo $parentId ?>' data-title='<?php echo getComponentTitle($parentId) ?>'>
-		<div><?php echo getComponentTitle($parentId) ?></div><div class='arrow'>&#x25B3;</div>
+	<a id='nav-menu-up' class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1 <?php if($parentId == "root") echo 'center center-arrow'?>' href='<?php echo "/".$parentId ?>' data-target='<?php echo $parentId ?>' data-title='<?php echo getComponentTitle($parentId) ?>'>
+		<div><?php if($parentId != "root") echo getComponentTitle($parentId); ?></div><div class='arrow'>&#x25B3;</div>
 	</a>
 </div>

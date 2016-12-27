@@ -189,6 +189,10 @@
 	#profile-image-container { float:none !important; margin: auto; width: 100%;}
 }
 
+@media (max-width: 1120px) {
+	#menu-button { margin: 10px 0 0 12px !important; }
+}
+
 #nav-menu-prev { float: left; }
 #nav-menu-next { float: right; }
 
@@ -311,7 +315,17 @@ blockquote {
 	padding-left: 28px;
 }
 
-.cover-image img {
+.cover-image {
+	height: 0;
 	border-radius: 8px;
 	-webkit-box-shadow: 0 1px 10px #AFAFAF; -moz-box-shadow: 0 1px 10px #AFAFAF;
+}
+
+.cover-image img {
+	border-radius: 8px;
+}
+
+.message > p:first-of-type:first-letter {
+	font-size: xx-large;
+	margin-left: -2px;
 }

@@ -10,7 +10,7 @@ RewriteRule ^/?(.*)$ http://ujnotes.com/$1 [L,R=301]
 
 RewriteRule ^(.+)/$ $1 [R=301]
 
-RewriteRule ^favebook$ https://facebook.com/ujnotes [R=303,L]
+RewriteRule ^facebook$ https://facebook.com/ujnotes [R=303,L]
 RewriteRule ^twitter$ https://twitter.com/ujnotesx [R=303,L]
 RewriteRule ^gplus$ https://plus.google.com/+ujnotesx [R=303,L]
 RewriteRule ^patreon$ https://patreon.com/ujnotes [R=303,L]

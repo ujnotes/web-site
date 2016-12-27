@@ -152,7 +152,19 @@ nav.push-menu-left {
     left:0
 }
 
-#nav-menu {bottom:0px; /* margin: 8px 0 -920px 0; */ /* left: 980px; */padding-top: 9px; z-index:1; overflow:hidden;width: 50%;transform: translate(-932px, 0);display: inline-block;transition: all 1s;float: left;/* max-height: 100px; *//* height: 10px; */}
+#nav-menu {
+	bottom:0px;
+	/* margin: 8px 0 -920px 0; */ /* left: 980px; padding-top: 9px;*/
+	z-index:1;
+	overflow:hidden;
+	width: 50%;
+	transform: translate(-932px, 0);
+	display: inline-block;
+	transition: all 1s;
+	float: left;
+	/* max-height: 100px; *//* height: 10px; */
+}
+
 #nav-menu_container { padding: 18px; }
 .sidebar-sub {/* padding:2px 0px; */text-align: center;}
 #sidebar-nav li {padding-left:0px; list-style:none; list-style-image:none; display:block; white-space:nowrap;}
