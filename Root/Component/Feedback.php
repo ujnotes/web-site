@@ -3,5 +3,5 @@
 	<p>
 		<a class="content-link" href="mailto:feedback@ujnotes.com?Subject=Feedback">feedback@ujnotes.com</a>
 	</p>
-	<?php require('Fragment\Comments_FB.php') ?>
+	<?php require('..\Framework\Fragment\Component_FB_comments.php') ?>
 </div>

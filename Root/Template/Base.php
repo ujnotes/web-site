@@ -10,7 +10,7 @@
 		<?php require 'Fragment\FB_Meta.php' ?>
 		<?php require 'Fragment\Twitter_Meta.php' ?>
 		<meta name="author" content="<?php echo $config['author'] ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
 		<!--link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'-->
@@ -84,7 +84,7 @@
 			}
 		?>
 		<?php require "../Framework/Fragment/GA_track.js" ?>
-		<div id="main-wrapper">
+		<div id="main-wrapper" class="<?php echo $menu_active_class; echo ($id == 'root'? ' '.'hide_path_title_updated' : ' ') ?>">
 			<div id="content-wrapper">
 			<?php require "../Fragment/Header.php"; ?>
 			<div id="wrapper">
@@ -92,9 +92,9 @@
 					<div class="container">
 						<div id="content-wrapper-inside">
 							<div class="shadow-scroll-top"></div>
-							<div id="canvas-wrapper" class="<?php echo $menu_active_class ?>">
-								<div id="path"><?php require "Fragment\Path.php" ?></div>
-								<div id="title"><?php echo ($id === "root"? "" : $title) ?></div>
+							<div id="canvas-wrapper">
+								<div id="path-container"><div id=path><?php require "Fragment\Path.php" ?></div></div>
+								<div id='title-container'><div id='title'><?php echo ($id == 'root'? '' : $title) ?></div></div>
 								<div id="canvas-wrapper-inner-container">
 									<?php require "../Fragment/Menu.html"; ?>
 									<div id="canvas-main">

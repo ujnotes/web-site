@@ -1,8 +1,12 @@
 <div class='content'>
 	<div class='message'>
 		<?php $alt='Green circuit board with traces but without components'; require('Fragment\Component_cover.php') ?>
-		<p>
+		<p class='first-letter-high'>
 			The information processor
+		</p>
+		<p>
+			( Under construction.. )<br>
+			Following are 'Google drive' containing some loosely organized snippets related to the field.
 		</p>
 	</div>
 	<div id='content-body-separator' class='center'></div>

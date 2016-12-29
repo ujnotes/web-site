@@ -1,8 +1,11 @@
 <div id='footer-wrapper'>
-	<div id='updated'>Updated:
-		<span id='date'>
-			<?php echo $date; ?>
-		</span>
+	<div id='updated-container'>
+		<div id='updated'>
+			Updated:
+			<span id='date'>
+				<?php echo $date; ?>
+			</span>
+		</div>
 	</div>
 	<div class='shadow-scroll-bottom'></div>
 	<div id='footer-wrapper-divider'></div>

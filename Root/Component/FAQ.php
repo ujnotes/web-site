@@ -5,5 +5,5 @@
 			Ans: Negative, this is my personal website. How ever I may quote other people here.
 		</li>
 	</ol>
-	<?php require('Fragment\Comments_FB.php') ?>
+	<?php require('..\Framework\Fragment\Component_FB_comments.php') ?>
 </div>
