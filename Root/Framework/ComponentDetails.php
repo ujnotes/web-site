@@ -128,12 +128,17 @@ function getPrevId($id) {
 
 function getNextId($id) {
 	global $component;
-	for($i = 0; $i < count($component); $i++)
-		if($component[$i][0] == $id)
-			if($i != count($component)-1 && getParentId($id) == getParentId($component[$i+1][0]))
-				return $component[$i+1][0];
-			else
+	$found = false;
+	for($i = 0; $i < count($component); $i++) {
+		if($found == false && $component[$i][0] == $id)
+			$found = true;
+		if($found == true) {
+			if($i == count($component)-1)
 				return "";
+			else if(getParentId($id) == getParentId($component[$i+1][0]))
+					return $component[$i+1][0];
+		}
+	}
 	exit ("Wrong ID"." : ".$id);
 }
 
