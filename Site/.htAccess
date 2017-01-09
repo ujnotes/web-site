@@ -20,6 +20,7 @@ RewriteRule ^life$ http://ujnotes.com/world/philosophy/life [R=303,L]
 RewriteRule ^death$ http://ujnotes.com/world/philosophy/death [R=303,L]
 RewriteRule ^god$ http://ujnotes.com/world/philosophy/god [R=303,L]
 RewriteRule ^nogod$ http://ujnotes.com/world/philosophy/god/no_god [R=303,L]
+RewriteRule ^problem$ http://ujnotes.com/world/philosophy/problem [R=303,L]
 
 RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
 RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
