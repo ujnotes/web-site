@@ -32,7 +32,7 @@
 			Racism and sectarianism rise from the same selfish craving of wanting to stand above the rest and dominate.<br>
 			The structure of our societies and its economy exploit and thus promote this eccentric behavior.<br>
 			While morality is often compromised over personal gains, life is reduced to sell and buy then show and throw and its repetition.<br>
-			At the level of sects, races and then countries this eccentricity continues and periodically results in violent eruptions.<br>
+			At the level of sects, races and then countries this eccentricity continues and periodically result in eruptions of violence.<br>
 			Even to this day, world peace dangles precariously on the prospect of mutually assured destruction.<br>
 			<br>
 			All because man refuses to learn and embrace what has already been learnt.
