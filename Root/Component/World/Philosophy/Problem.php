@@ -1,6 +1,6 @@
 <div class='content'>
 	<div class='message'>
-		<?php $alt='A curved earth in space'; require('Fragment\Component_cover.php') ?>
+		<?php $alt='A broken bridge'; require('Fragment\Component_cover.php') ?>
 		<h3>
 			What is a problem?
 		</h3>
