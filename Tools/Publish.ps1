@@ -73,18 +73,41 @@ foreach ($element in $fList) {
 	}
 #}
 
+function checkResourceDir {
+    if((Test-Path $iRoot"Resource\$componentDir") -eq $TRUE ) {
+	    if ((Test-Path $mRoot$componentDir) -ne $TRUE) {
+		    New-Item -ItemType directory -Path $mRoot$componentDir
+	    }
+	    if ((Test-Path $oRoot$componentDir) -ne $TRUE) {
+		    New-Item -ItemType directory -Path $oRoot$componentDir
+	    }
+        return $TRUE
+    }
+    else {
+        return $FALSE
+    }
+}
+
 foreach ($component in $iList) {
+
     $componentC = $component -replace "/","\"
+	$componentDir = $component -replace "/","\"
+
 	if((Test-Path $iRoot"Component\$component.php") -eq $TRUE ) {
 		$componentFile = "Component\$component.php"
+	    if(checkResourceDir -eq $TRUE ) {
+            $componentC += "\root"
+	    }
 	}
 	else {
 		if((Test-Path $iRoot"Component\$component.html") -eq $TRUE ) {
 			$componentFile = "Component\$component.html"
+	        if(checkResourceDir -eq $TRUE ) {
+		        $componentC += "\root"
+	        }
 		}
 		else {
 			$componentC += "\root"
-			$componentDir = $component -replace "/","\"
 			if ((Test-Path $mRoot$componentDir) -ne $TRUE) {
 				New-Item -ItemType directory -Path $mRoot$componentDir
 			}
@@ -100,7 +123,9 @@ foreach ($component in $iList) {
 			}
 		}
 	}
+
 	$componentCJSON = "$componentC.json"
+
     if (Check $iRoot $componentFile $oRoot $componentCJSON) {
         DownloadH $eHost $eMode "$component.json" $mRoot $componentCJSON
 		CompressH $mRoot $componentCJSON $oRoot $componentCJSON
@@ -109,11 +134,13 @@ foreach ($component in $iList) {
 	else {
 		$bComponentChanged = $FALSE;
 	}
+
     if (($bTemplateChanged -eq $TRUE) -or ($bComponentChanged -eq $TRUE)) {
         Write-Host $component
         DownloadH $eHost $eMode $component $mRoot $componentC
         CompressH $mRoot $componentC $oRoot $componentC
     }
+
 }
 
 $component = "menu"
