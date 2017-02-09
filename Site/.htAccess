@@ -10,25 +10,26 @@ RewriteRule ^/?(.*)$ http://ujnotes.com/$1 [L,R=301]
 
 RewriteRule ^(.+)/$ $1 [R=301]
 
-RewriteRule ^facebook$ https://facebook.com/ujnotes [R=303,L]
-RewriteRule ^twitter$ https://twitter.com/ujnotesx [R=303,L]
-RewriteRule ^gplus$ https://plus.google.com/+ujnotesx [R=303,L]
-RewriteRule ^patreon$ https://patreon.com/ujnotes [R=303,L]
+RewriteRule ^facebook$ https://facebook.com/ujnotes [R=307,L]
+RewriteRule ^twitter$ https://twitter.com/ujnotesx [R=307,L]
+RewriteRule ^gplus$ https://plus.google.com/+ujnotesx [R=307,L]
+RewriteRule ^patreon$ https://patreon.com/ujnotes [R=307,L]
 
-RewriteRule ^philosophy$ http://ujnotes.com/world/philosophy [R=303,L]
-RewriteRule ^life$ http://ujnotes.com/world/philosophy/life [R=303,L]
-RewriteRule ^death$ http://ujnotes.com/world/philosophy/death [R=303,L]
-RewriteRule ^god$ http://ujnotes.com/world/philosophy/god [R=303,L]
-RewriteRule ^nogod$ http://ujnotes.com/world/philosophy/god/no_god [R=303,L]
-RewriteRule ^problem$ http://ujnotes.com/world/philosophy/problem [R=303,L]
+RewriteRule ^philosophy$ http://ujnotes.com/world/philosophy [R=301,L]
+RewriteRule ^life$ http://ujnotes.com/world/philosophy/life [R=301,L]
+RewriteRule ^death$ http://ujnotes.com/world/philosophy/death [R=301,L]
+RewriteRule ^god$ http://ujnotes.com/world/philosophy/god [R=301,L]
+RewriteRule ^no_god$ http://ujnotes.com/world/philosophy/god/no_god [R=301,L]
+RewriteRule ^nogod$ http://ujnotes.com/world/philosophy/god/no_god [R=301,L]
+RewriteRule ^problem$ http://ujnotes.com/world/philosophy/problem [R=301,L]
 
-RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
 
-RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
 
 rewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+)$ $1/root

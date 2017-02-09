@@ -8,13 +8,13 @@ DirectorySlash Off
 
 RewriteRule ^(.+)/$ $1 [R=301]
 
-RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
 
-RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=303,L]
-RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=303,L]
-RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=303,L]
+RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
 
 RewriteRule ^style.css$ Framework/Style.php [L]
 RewriteRule ^script.js$ Framework/Script.php [L]
