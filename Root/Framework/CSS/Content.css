@@ -880,6 +880,10 @@ blockquote {
 	border-radius: 8px;
 }
 
+.content-image {
+	height: 0;
+}
+
 .first-letter-high:first-letter {
 	font-size: xx-large;
 	margin-left: -2px;
