@@ -304,13 +304,28 @@ img {
 	padding: 0px 10px 0px 0px;
 }
 
-h3 {
+h1, h2, h3, h4, h5 {
 	color: #69B7CF !important;
 }
 
 .bullet {
 	padding: 0 5px;
 	color: rgb(200, 200, 200) !important;
+}
+
+ul.list-bullet {
+	list-style: none !important;
+}
+
+ul.list-bullet li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+ul.list-bullet li:before {
+	content: "•";
+	color: rgb(200, 200, 200) !important;
+	padding-right: 7px;
 }
 
 #header-right-list {

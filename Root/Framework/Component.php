@@ -7,7 +7,7 @@
 	require "Config.php";
 
 	$config = loadConfig();
-	
+
 	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
 		$bPublish = TRUE;
 	else
@@ -40,9 +40,9 @@
 		$cmd = "java -jar ..\..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css";
 
 		$descriptorspec = array(
-		   0 => array("pipe", "r"),
-		   1 => array("pipe", "w"),
-		   2 => array("pipe", "w"),
+			0 => array("pipe", "r"),
+			1 => array("pipe", "w"),
+			2 => array("pipe", "w"),
 		);
 
 		$process = proc_open($cmd, $descriptorspec, $pipes);

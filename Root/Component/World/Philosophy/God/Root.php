@@ -160,7 +160,7 @@
 			But of course there is no absolute certainty!<br>
 			<br>
 			Remember - alone we are nothing, together we could be everything. So the best you can do is - do god's WORK, and then do not worry of the results;<br>
-			For god does not need you to succeed but 'it' needs you to try.<br>
+			For god does not need you to succeed but it 'needs' you to try.<br>
 			<br>
 			&mdash; where 'god' is not someone or thing with a personality, but is only an idea!
 		</p>

@@ -22,6 +22,7 @@ RewriteRule ^god$ http://ujnotes.com/world/philosophy/god [R=301,L]
 RewriteRule ^no_god$ http://ujnotes.com/world/philosophy/god/no_god [R=301,L]
 RewriteRule ^nogod$ http://ujnotes.com/world/philosophy/god/no_god [R=301,L]
 RewriteRule ^problem$ http://ujnotes.com/world/philosophy/problem [R=301,L]
+RewriteRule ^solution$ http://ujnotes.com/world/philosophy/solution [R=301,L]
 
 RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
 RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
