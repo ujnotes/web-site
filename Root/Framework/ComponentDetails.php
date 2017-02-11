@@ -74,7 +74,7 @@ function getSubComponents($id) {
 function getComponentPath($id) {
 	$s = "..\\Component\\".str_replace(' ','_', $id);
 	if(file_exists($s)) {
-		$s = $s."\Root";
+		$s = $s."\Index";
 	}
 	if(file_exists($s.".php"))
 		return ($s.".php");

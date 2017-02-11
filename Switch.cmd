@@ -6,7 +6,7 @@ for %%i in (%WEB_PROJECT%) do set "WEB_PROJECT=%%~ni
 
 set tRoot=%WEB_PROJECT%\Website
 set target1=Root
-set target2=Publish
+set target2=public
 set target=""
 
 cd /d %ProgramFiles%\Apache\HTTPD

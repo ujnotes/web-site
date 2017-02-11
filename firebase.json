@@ -1,0 +1,124 @@
+{
+  "hosting": {
+    "public": "public",
+	"redirects": [ {
+      "source" : "/facebook",
+      "destination" : "https://facebook.com/ujnotes",
+      "type" : 302
+    }, {
+      "source" : "/twitter",
+      "destination" : "https://twitter.com/ujnotesx",
+      "type" : 302
+    }, {
+      "source" : "/gplus",
+      "destination" : "https://plus.google.com/+ujnotesx",
+      "type" : 302
+    }, {
+      "source" : "/patreon",
+      "destination" : "https://patreon.com/ujnotes",
+      "type" : 302
+    }, {
+      "source" : "/philosophy",
+      "destination" : "/world/philosophy",
+      "type" : 301
+    }, {
+      "source" : "/life",
+      "destination" : "/world/philosophy/life",
+      "type" : 301
+    }, {
+      "source" : "/death",
+      "destination" : "/world/philosophy/death",
+      "type" : 301
+    }, {
+      "source" : "/god",
+      "destination" : "/world/philosophy/god",
+      "type" : 301
+    }, {
+      "source" : "/no_god",
+      "destination" : "/world/philosophy/god/no_god",
+      "type" : 301
+    }, {
+      "source" : "/nogod",
+      "destination" : "/world/philosophy/god/no_god",
+      "type" : 301
+    }, {
+      "source" : "/problem",
+      "destination" : "/world/philosophy/problem",
+      "type" : 301
+    }, {
+      "source" : "/solution",
+      "destination" : "/world/philosophy/solution",
+      "type" : 301
+    }, {
+      "source" : "/computer/os",
+      "destination" : "https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ",
+      "type" : 302
+    }, {
+      "source" : "/computer/program",
+      "destination" : "https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk",
+      "type" : 302
+    }, {
+      "source" : "/computer/programming",
+      "destination" : "https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM",
+      "type" : 302
+    } ],
+    "rewrites": [ {
+      "source": "/world.json",
+      "destination": "/world/index.json"
+    }, {
+      "source": "/world.jpg",
+      "destination": "/world/index.jpg"
+    }, {
+      "source": "/world/philosophy.json",
+      "destination": "/world/philosophy/index.json"
+    }, {
+      "source": "/world/philosophy.jpg",
+      "destination": "/world/philosophy/index.jpg"
+    }, {
+      "source": "/world/philosophy/god.json",
+      "destination": "/world/philosophy/god/index.json"
+    }, {
+      "source": "/world/philosophy/god.jpg",
+      "destination": "/world/philosophy/god/index.jpg"
+    }, {
+      "source": "/world/philosophy/god/no_god.json",
+      "destination": "/world/philosophy/god/no_god/index.json"
+    }, {
+      "source": "/world/philosophy/god/no_god.jpg",
+      "destination": "/world/philosophy/god/no_god/index.jpg"
+    }, {
+      "source": "/world/philosophy/solution.json",
+      "destination": "/world/philosophy/solution/index.json"
+    }, {
+      "source": "/world/philosophy/solution.jpg",
+      "destination": "/world/philosophy/solution/index.jpg"
+    }, {
+      "source": "/computer.json",
+      "destination": "/computer/index.json"
+    }, {
+      "source": "/computer.jpg",
+      "destination": "/computer/index.jpg"
+    } ],
+    "headers": [ {
+      "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "headers" : [ {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      } ]
+      }, {
+      "source" : "**/*.@(jpg|jpeg|gif|png|svg)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=7200"
+      } ]
+      }, {
+      "source" : "404.html",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=300"
+      } ]
+    } ],
+	"cleanUrls": true,
+    "trailingSlash": false
+  }
+}

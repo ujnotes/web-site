@@ -1,8 +1,8 @@
 $global:Halt = $FALSE
 
 $iRoot = "Root\"
-$oRoot = "Publish\"
-$mRoot = "Interim\"
+$oRoot = "public\"
+$mRoot = "interim\"
 
 $eHost = "http://localhost"
 $eMode = "mode=publish"
@@ -96,18 +96,18 @@ foreach ($component in $iList) {
 	if((Test-Path $iRoot"Component\$component.php") -eq $TRUE ) {
 		$componentFile = "Component\$component.php"
 	    if(checkResourceDir -eq $TRUE ) {
-            $componentC += "\root"
+            $componentC += "\index"
 	    }
 	}
 	else {
 		if((Test-Path $iRoot"Component\$component.html") -eq $TRUE ) {
 			$componentFile = "Component\$component.html"
 	        if(checkResourceDir -eq $TRUE ) {
-		        $componentC += "\root"
+		        $componentC += "\index"
 	        }
 		}
 		else {
-			$componentC += "\root"
+			$componentC += "\index"
 			if ((Test-Path $mRoot$componentDir) -ne $TRUE) {
 				New-Item -ItemType directory -Path $mRoot$componentDir
 			}
@@ -115,11 +115,11 @@ foreach ($component in $iList) {
 				New-Item -ItemType directory -Path $oRoot$componentDir
 			}
 			
-			if((Test-Path $iRoot"Component\$component\root.php") -eq $TRUE ) {
-				$componentFile = "Component\$component\root.php"
+			if((Test-Path $iRoot"Component\$component\index.php") -eq $TRUE ) {
+				$componentFile = "Component\$component\index.php"
 			}
 			else {
-				$componentFile = "Component\$component\root.html"
+				$componentFile = "Component\$component\index.html"
 			}
 		}
 	}
@@ -137,8 +137,8 @@ foreach ($component in $iList) {
 
     if (($bTemplateChanged -eq $TRUE) -or ($bComponentChanged -eq $TRUE)) {
         Write-Host $component
-        DownloadH $eHost $eMode $component $mRoot $componentC
-        CompressH $mRoot $componentC $oRoot $componentC
+        DownloadH $eHost $eMode $component $mRoot "$componentC.html"
+        CompressH $mRoot "$componentC.html" $oRoot "$componentC.html"
     }
 
 }
@@ -146,8 +146,8 @@ foreach ($component in $iList) {
 $component = "menu"
 if (($bTemplateChanged -eq $TRUE) -or (Check $iRoot "Fragment\$component.html" $oRoot $component)) {
 	Write-Host $component
-	DownloadH $eHost $eMode $component $mRoot $component
-	CompressH $mRoot $component $oRoot $component
+	DownloadH $eHost $eMode $component $mRoot "$component.html"
+	CompressH $mRoot "$component.html" $oRoot "$component.html"
 }
 
 XExit

@@ -9,9 +9,9 @@ cd /d %ProgramFiles%\Apache\HTTPD
 @dir htdocs? | find /i "%tRoot%" > nul
 if errorLevel 1						(
 	dir htdocs? | find /i "htdocs"	) else	(
-dir "%ProgramFiles%\Apache\HTTPD\htdocs"? | find /i "Publish" > nul
+dir "%ProgramFiles%\Apache\HTTPD\htdocs"? | find /i "public" > nul
 if errorLevel 1 (
 	echo Root	) else	(
-	echo Publish		)					)
+	echo Public		)					)
 
 ping -n 3 localhost > nul
