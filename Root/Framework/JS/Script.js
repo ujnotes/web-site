@@ -67,7 +67,7 @@ function Init() {
 				curTab = "";
 			window.history.pushState({"id":curTab}, "", "/"+curTab);
 			activateMainFn();
-			canvas_main.style.maxHeight = "99999px";
+			canvas_main.style.maxHeight = null;
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
 		}
     } );
@@ -120,7 +120,7 @@ var activateMenuFn = function() {
 	activeNav = "pml-open";
 	var height = nav_menu.scrollHeight;
 	canvas_main.style.maxHeight = height+"px";
-	nav_menu.style.maxHeight = "99999px";
+	nav_menu.style.maxHeight = null;
 	menuActive = true;
 	if(!(typeof (ga) === "undefined")) {
 		ga('set', 'page', '/'+'menu');
@@ -232,7 +232,7 @@ function LoadCanvas(target, title) {
 					}
 					var height = document.getElementById('canvas-main').scrollHeight;
 					document.getElementById('nav-menu').style.maxHeight = height+"px";
-					document.getElementById('canvas-main').style.maxHeight = "99999px";
+					document.getElementById('canvas-main').style.maxHeight = null;
 					if(bXURL == "1")
 						SetXURL(document);
 					if(bASCR == "1")

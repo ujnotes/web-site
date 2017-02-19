@@ -183,7 +183,6 @@ img {
 	display: inline-block;
 	transform: translate(-100%,0);
 	transition: all 1s;
-	max-height: 9999px;
 	will-change: transform;
 }
 
@@ -497,8 +496,12 @@ div#path {
 
 div#title-container {
 	text-align: center;
-	margin-top: -10px;
+	margin-top: -4px;
 	padding-bottom: 20px;
+}
+
+.hide_path_title_updated div#title-container {
+	display: none;
 }
 
 div#title {

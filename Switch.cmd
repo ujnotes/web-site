@@ -1,33 +1,41 @@
 @echo Off
 setLocal EnableDelayedExpansion
 
-for %%i in ("%~dp0..") do set "WEB_PROJECT=%%~fi"
-for %%i in (%WEB_PROJECT%) do set "WEB_PROJECT=%%~ni
-
-set tRoot=%WEB_PROJECT%\Website
-set target1=Root
-set target2=public
+set PROJECT_PATH=%CD%
+set DEV_DIR=Root
+set PROD_DIR=public
 set target=""
+set HT_FILE=.htaccess
 
 cd /d %ProgramFiles%\Apache\HTTPD
 
-dir htdocs? | find /i "%tRoot%" > nul
+dir htdocs? | find /i "%PROJECT_PATH%" > nul
 @rem negative
-if !ErrorLevel! equ 1	(
-    set target=%target1%) else (
-dir htdocs? | find /i "%target1%" > nul
-@rem positive
-if !ErrorLevel! equ 0   (
-    set target=%target2%)
-@rem Negative
-if !ErrorLevel! equ 1   (
-    set target=%target1%)	)
+if !ErrorLevel! equ 1 (
+	set target=%DEV_DIR%
+) else (
+	dir htdocs? | find /i "%DEV_DIR%" > nul
+	if !ErrorLevel! equ 1 (
+		@rem negative
+		set target=%DEV_DIR%
+	) else if !ErrorLevel! equ 0 (
+		@rem positive
+		set target=%PROD_DIR%
+		dir %PROJECT_PATH%\%PROD_DIR%\%HT_FILE% | find /i "%HT_FILE%" > nul
+		if !ErrorLevel! equ 1 (
+			@rem negative
+			copy %PROJECT_PATH%\%HT_FILE% %PROJECT_PATH%\%PROD_DIR%
+		)
+	)
+)
 
 rd htdocs
-mklink /j htdocs "%PROJECT%\%tRoot%\%target%" > nul
+mklink /j htdocs "%PROJECT_PATH%\%target%" > nul
 
-if errorLevel 0	(
+if errorLevel 0 (
 	echo %target%
 	endLocal
-    ping -n 3 localhost > nul	) else (
-	pause > nul	)
+	ping -n 3 localhost > nul
+) else (
+	pause > nul
+)

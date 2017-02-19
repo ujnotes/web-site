@@ -1,17 +1,19 @@
 @echo Off
 
-for %%i in ("%~dp0..") do set "WEB_PROJECT=%%~fi"
-for %%i in (%WEB_PROJECT%) do set "WEB_PROJECT=%%~ni
-set tRoot=%WEB_PROJECT%\Website
+set PROJECT_PATH=%CD%
 
 cd /d %ProgramFiles%\Apache\HTTPD
 
-@dir htdocs? | find /i "%tRoot%" > nul
-if errorLevel 1						(
-	dir htdocs? | find /i "htdocs"	) else	(
-dir "%ProgramFiles%\Apache\HTTPD\htdocs"? | find /i "public" > nul
+@dir htdocs? | find /i "%PROJECT_PATH%" > nul
 if errorLevel 1 (
-	echo Root	) else	(
-	echo Public		)					)
+	dir htdocs? | find /i "htdocs"
+) else (
+	dir "%ProgramFiles%\Apache\HTTPD\htdocs"? | find /i "%PROJECT_PATH%\public" > nul
+	if errorLevel 1 (
+		echo Root
+	) else (
+		echo public
+	)
+)
 
 ping -n 3 localhost > nul

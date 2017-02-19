@@ -1,53 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" viewBox="0 0 900 713.6" xml:space="preserve">
-<circle id="XMLID_28_" fill="#F1F2F2" cx="450" cy="460.7" r="244"/>
-<circle id="XMLID_14_" fill="#E6E7E8" cx="450" cy="292.6" r="274"/>
-<g id="XMLID_1_">
-	<g id="XMLID_19_">
-		<circle id="XMLID_75_" fill="#FFFFFF" cx="450" cy="143.7" r="79.3"/>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="150 -168 900 736" style="enable-background:new 150 -168 900 736;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F1F2F2;}
+	.st1{opacity:0.7;fill:#E6E7E8;enable-background:new    ;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#6AB7CF;}
+	.st4{font-family:'Abel';}
+	.st5{font-size:14px;}
+</style>
+<g>
+	<circle id="XMLID_28_" class="st0" cx="600" cy="299" r="244"/>
+	<circle id="XMLID_14_" class="st1" cx="600" cy="130.9" r="274"/>
+	<g id="XMLID_1_">
+		<g id="XMLID_19_">
+			<circle id="XMLID_75_" class="st2" cx="600" cy="-17.9" r="79.3"/>
+		</g>
+		<text transform="matrix(1 0 0 1 587.0713 -13.4765)" class="st3 st4 st5">M</text>
+		<text transform="matrix(1 0 0 1 598.4111 -13.4765)" class="st3 st4 st5">a</text>
+		<text transform="matrix(1 0 0 1 605.1592 -13.4765)" class="st3 st4 st5">n</text>
 	</g>
-	<text transform="matrix(1 0 0 1 437.0713 148.1735)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">M</text>
-	<text transform="matrix(1 0 0 1 448.4111 148.1735)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">a</text>
-	<text transform="matrix(1 0 0 1 455.1592 148.1735)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">n</text>
-</g>
-<g id="XMLID_2_">
-	<g id="XMLID_15_">
-		<circle id="XMLID_74_" fill="#FFFFFF" cx="314.3" cy="391.6" r="79.3"/>
+	<g id="XMLID_2_">
+		<g id="XMLID_15_">
+			<circle id="XMLID_74_" class="st2" cx="464.3" cy="230" r="79.3"/>
+		</g>
+		<text transform="matrix(1 0 0 1 444.2297 234.0712)" class="st3 st4 st5">P</text>
+		<text transform="matrix(1 0 0 1 451.3278 234.0712)" class="st3 st4 st5">e</text>
+		<text transform="matrix(1 0 0 1 458.3415 234.0712)" class="st3 st4 st5">o</text>
+		<text transform="matrix(1 0 0 1 466.0275 234.0712)" class="st3 st4 st5">p</text>
+		<text transform="matrix(1 0 0 1 473.9933 234.0712)" class="st3 st4 st5">l</text>
+		<text transform="matrix(1 0 0 1 477.2971 234.0712)" class="st3 st4 st5">e</text>
 	</g>
-	<text transform="matrix(1 0 0 1 294.2297 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">P</text>
-	<text transform="matrix(1 0 0 1 301.3278 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">e</text>
-	<text transform="matrix(1 0 0 1 308.3415 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">o</text>
-	<text transform="matrix(1 0 0 1 316.0275 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">p</text>
-	<text transform="matrix(1 0 0 1 323.9933 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">l</text>
-	<text transform="matrix(1 0 0 1 327.2971 395.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">e</text>
-</g>
-<g id="XMLID_3_">
-	<g id="XMLID_18_">
-		<circle id="XMLID_73_" fill="#FFFFFF" cx="587.3" cy="392.6" r="79.3"/>
+	<g id="XMLID_3_">
+		<g id="XMLID_18_">
+			<circle id="XMLID_73_" class="st2" cx="737.3" cy="231" r="79.3"/>
+		</g>
+		<text transform="matrix(1 0 0 1 716.2288 235.0712)" class="st3 st4 st5">S</text>
+		<text transform="matrix(1 0 0 1 723.0188 235.0712)" class="st3 st4 st5">y</text>
+		<text transform="matrix(1 0 0 1 729.5286 235.0712)" class="st3 st4 st5">s</text>
+		<text transform="matrix(1 0 0 1 735.0725 235.0712)" class="st3 st4 st5">t</text>
+		<text transform="matrix(1 0 0 1 739.6223 235.0712)" class="st3 st4 st5">e</text>
+		<text transform="matrix(1 0 0 1 746.637 235.0712)" class="st3 st4 st5">m</text>
 	</g>
-	<text transform="matrix(1 0 0 1 566.2288 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">S</text>
-	<text transform="matrix(1 0 0 1 573.0188 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">y</text>
-	<text transform="matrix(1 0 0 1 579.5286 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">s</text>
-	<text transform="matrix(1 0 0 1 585.0725 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">t</text>
-	<text transform="matrix(1 0 0 1 589.6223 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">e</text>
-	<text transform="matrix(1 0 0 1 596.637 396.7212)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">m</text>
-</g>
-<text transform="matrix(1 0 0 1 430.3586 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">R</text>
-<text transform="matrix(1 0 0 1 437.9465 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">e</text>
-<text transform="matrix(1 0 0 1 444.9602 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">a</text>
-<text transform="matrix(1 0 0 1 451.7083 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">l</text>
-<text transform="matrix(1 0 0 1 455.0125 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">i</text>
-<text transform="matrix(1 0 0 1 458.2883 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">t</text>
-<text transform="matrix(1 0 0 1 463.0481 296.1338)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">y</text>
-<g id="XMLID_4_">
-	<g id="XMLID_26_">
-		<circle id="XMLID_72_" fill="#FFFFFF" cx="450.9" cy="637.6" r="55.5"/>
+	<text transform="matrix(1 0 0 1 580.3586 134.4838)" class="st3 st4 st5">R</text>
+	<text transform="matrix(1 0 0 1 587.9465 134.4838)" class="st3 st4 st5">e</text>
+	<text transform="matrix(1 0 0 1 594.9602 134.4838)" class="st3 st4 st5">a</text>
+	<text transform="matrix(1 0 0 1 601.7083 134.4838)" class="st3 st4 st5">l</text>
+	<text transform="matrix(1 0 0 1 605.0125 134.4838)" class="st3 st4 st5">i</text>
+	<text transform="matrix(1 0 0 1 608.2883 134.4838)" class="st3 st4 st5">t</text>
+	<text transform="matrix(1 0 0 1 613.0481 134.4838)" class="st3 st4 st5">y</text>
+	<g id="XMLID_4_">
+		<g id="XMLID_26_">
+			<circle id="XMLID_72_" class="st2" cx="600.9" cy="476" r="55.5"/>
+		</g>
+		<text transform="matrix(1 0 0 1 587.6524 480.0712)" class="st3 st4 st5">G</text>
+		<text transform="matrix(1 0 0 1 596.7662 480.0712)" class="st3 st4 st5">o</text>
+		<text transform="matrix(1 0 0 1 604.4522 480.0712)" class="st3 st4 st5">d</text>
 	</g>
-	<text transform="matrix(1 0 0 1 437.6524 641.7211)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">G</text>
-	<text transform="matrix(1 0 0 1 446.7662 641.7211)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">o</text>
-	<text transform="matrix(1 0 0 1 454.4522 641.7211)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">d</text>
+	<text id="XMLID_25_" transform="matrix(1 0 0 1 453.3927 441.3504)" class="st3 st4 st5">Ideas</text>
 </g>
-<text id="XMLID_25_" transform="matrix(1 0 0 1 303.3927 603.0003)" fill="#6AB7CF" font-family="'MyriadPro-Regular'" font-size="14px">Ideas</text>
 </svg>
