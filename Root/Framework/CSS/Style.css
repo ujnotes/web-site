@@ -4,6 +4,7 @@
 
 html {
 	height: 100%;
+	margin-left: calc(100vw - 100%);
 }
 
 body {
@@ -498,10 +499,6 @@ div#title-container {
 	text-align: center;
 	margin-top: -4px;
 	padding-bottom: 20px;
-}
-
-.hide_path_title_updated div#title-container {
-	display: none;
 }
 
 div#title {
