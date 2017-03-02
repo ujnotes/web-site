@@ -60,6 +60,7 @@ function Init() {
 
 	menu_button.addEventListener( "click", function(){
 		if (!menuActive) {
+			window.history.pushState({"id":"menu"}, "", "/"+"menu");
 			activateMenuFn();
 		}
 		else {
@@ -114,7 +115,6 @@ var activateMenuFn = function() {
 		canvas_main = document.querySelector( '#canvas-main' ),
 		main_wrapper = document.querySelector( "#main-wrapper" ),
 		menu_button = document.querySelector( "#menu-button" );
-	window.history.pushState({"id":"menu"}, "", "/"+"menu");
 	classie.add( main_wrapper, "pml-open" );
 	classie.add( menu_button, "active" );
 	activeNav = "pml-open";
@@ -211,11 +211,13 @@ function LoadCanvas(target, title) {
 					var resp = JSON.parse(xmlhttp.responseText);
 					var bXURL = resp.xurl;
 					var bASCR = resp.async;
-					var titleBar = PROJECT_TITLE;
+					var titleBar;
 
-					if(target != "root")
-						titleBar += " - " + title;
-					titleBar += " : " + resp.desc;
+					if(target == "root")
+						titleBar = "";
+					else
+						titleBar = title + " : ";
+					titleBar += resp.desc + " - " + PROJECT_TITLE;
 					document.title = titleBar;
 					if(target == "root") {
 						document.getElementById('path').innerHTML = "&nbsp;";

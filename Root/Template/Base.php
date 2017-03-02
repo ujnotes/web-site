@@ -13,6 +13,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+		<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel="canonical">
 		<!--link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'-->
 		<style>
 			/* latin */
@@ -59,12 +60,12 @@
 		<title>
 <?php
 			if($id === "root")
-				echo $config['project_title']." : ".$desc;
+				echo $desc." : ".$config['project_title'];
 			else {
 				if($desc)
-					echo $config['project_title']." - ".$title." : ".$desc;
+					echo $title." : ".$desc." - ".$config['project_title'];
 				else
-					echo $config['project_title']." - ".$title;
+					echo $title." - ".$config['project_title'];
 			}
 ?>
 		</title>
