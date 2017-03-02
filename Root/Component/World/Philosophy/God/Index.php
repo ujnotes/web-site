@@ -94,17 +94,20 @@
 		<p>
 			The personal god, that many humans are inclined to believe in simply because it is 'simple', especially for an average human being, for it is like him.<br>
 			However following are some of the inconsistencies associated with the existence of a personal god:
+		</p>
 			<div class="indent-20">
 				<ul>
 					<li>
-						If we require a creator then who created the creator?
+						If we and everything else require a creator, then who created the creator?
 					</li>
 					<li>
 						Where is he? Why does he not show up? Say, on one of the television news conferences?
 					</li>
 					<li>
 						If he is so powerful to have created everything, why does he allow so much suffering?<br>
-						And before riding out on the escape goat of an answer for everything - theory of "free will", do go through the "<a class="content-link" href="https://www.youtube.com/watch?v=WiufsmxiUiU" target="_blank">Evil god challenge</a>" &ndash; by Stephen Law
+						Would you let one of your children burn and kill your other child? If a normal human being cannot do that then how could a god who is all so powerful and has all the 'love' of the world "allow" such horrible things to happen?<br>
+						And before riding out on the escape goat of the theory of "free will", do go through the "<a class="content-link" href="https://www.youtube.com/watch?v=WiufsmxiUiU" target="_blank">Evil god challenge</a>" &ndash; by Stephen Law<br>
+						It is simply not justifiable, be it ANY reason; for a all powerful personal god is supposed to be beyond any and all earthly 'reasons' and 'limitations'.
 					</li>
 					<li>
 						Why are 'godly' i.e. holy objects like a book of the religion, an idol not discovered outside this planet?
@@ -118,6 +121,8 @@
 					</li>
 				</ul>
 			</div>
+		<p>
+			Thus, either a personal god simply does not exist and neither ever did or is an 'evil' god.
 		</p>
 		<h3>
 			Inanimate god<br>
@@ -134,11 +139,11 @@
 		</p>
 		<h3>Miracles</h3>
 		<p>
-			 People feel the presence of 'god'. It is true that an everything-god (and not a personal god who has a personality, can think, feel etc.) exists everywhere - for we are alive, and it keeps us alive.<br>
-			  We breathe, our heart beats, I can type this - and you can read it; it is a miracle, every &ndash; thing is a miracle. But a scientific one! Nothing is extra special but everything is &ndash; extra special.<br>
-				Unfortunately humans, generally are limited in their reach and experiences, and are biased. They decide based of how they feel and only later cherry pick the 'reasons' that would justify their decision.<br>
-				For example, in an accident those who die never get an opportunity to assert that the personal god did not save them, but those who survive go on with their tale of the 'special' blessing of their very special &ndash; personal god.<br>
-				When the fact is that it was just a permutation, chosen by the benign incidents that preceded it, say, like a wet seat.
+			People feel the presence of 'god'. It is true that an everything-god (and not a personal god who has a personality, can think, feel etc.) exists everywhere - for we are alive, and it keeps us alive.<br>
+			We breathe, our heart beats, I can type this - and you can read it; it is a miracle, every &ndash; thing is a miracle. But a scientific one! Nothing is extra special but everything is &ndash; extra special.<br>
+			Unfortunately humans, generally are limited in their reach and experiences, and are biased. They decide based of how they feel and only later cherry pick the 'reasons' that would justify their decision.<br>
+			For example, in an accident those who die never get an opportunity to assert that the personal god did not save them, but those who survive go on with their tale of the 'special' blessing of their very special &ndash; personal god.<br>
+			When the fact is that it was just a permutation, chosen by the benign incidents that preceded it, say, like a wet seat.
 		</p>
 		<h3>The great mistake</h3>
 		<p>
