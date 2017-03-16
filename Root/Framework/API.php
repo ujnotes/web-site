@@ -31,4 +31,11 @@
 		return $files;
 	}
 
+	function exit_404($message) {
+		header("HTTP/1.0 404 Not Found");
+		error_log($message);
+		require '404.php';
+		exit;
+	}
+
 ?>

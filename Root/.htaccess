@@ -1,6 +1,6 @@
 DirectoryIndex Framework/Page.php
 
-ErrorDocument 404 "Error: 404. Page Not Found! :("
+ErrorDocument 404 /Framework/404.php
 
 RewriteBase /
 RewriteEngine On
@@ -34,6 +34,8 @@ RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0px
 
 RewriteRule ^style.css$ Framework/Style.php [L]
 RewriteRule ^script.js$ Framework/Script.php [L]
+
+RewriteRule ^404$ /Framework/404.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.ico$ Resource/$1.ico [L]

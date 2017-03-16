@@ -31,7 +31,7 @@ function getComponentTitle($id) {
 		if($component[$i][0] == $id)
 			return $component[$i][1];
 
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 function getComponentDesc($id) {
@@ -40,7 +40,7 @@ function getComponentDesc($id) {
 	for($i = 0; $i < count($component); $i++)
 		if($component[$i][0] == $id)
 			return $component[$i][4];
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 function getComponentModeXURL($id) {
@@ -49,7 +49,7 @@ function getComponentModeXURL($id) {
 	for($i = 0; $i < count($component); $i++)
 		if($component[$i][0] == $id)
 			return $component[$i][2];
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 function getComponentModeASYNC($id) {
@@ -58,7 +58,7 @@ function getComponentModeASYNC($id) {
 	for($i = 0; $i < count($component); $i++)
 		if($component[$i][0] == $id)
 			return $component[$i][3];
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 function getSubComponents($id) {
@@ -123,7 +123,7 @@ function getPrevId($id) {
 				return $component[$i-1][0];
 			else
 				return "";
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 function getNextId($id) {
@@ -139,7 +139,7 @@ function getNextId($id) {
 					return $component[$i+1][0];
 		}
 	}
-	exit ("Wrong ID"." : ".$id);
+	exit_404("Wrong ID"." : ".$id);
 }
 
 ?>
