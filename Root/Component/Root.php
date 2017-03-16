@@ -44,6 +44,8 @@
 				<div>Program</div>
 			</a><a class='XURL_ sidebar-nav-norm sidebar-nav-l-1' href='/computer/programming' target='_blank' onclick="trackOutboundLink('Programming','https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM'); return false;">
 				<div>Programming</div>
+			</a><a class='XURL_ sidebar-nav-norm sidebar-nav-l-1' href='/computer/game' data-target='computer/game' data-title='Game'>
+				<div>Game</div>
 			</a>
 		</div>
 	</div>

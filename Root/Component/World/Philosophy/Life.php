@@ -1,6 +1,7 @@
 <div class='content'>
 	<div class='message'>
 		<?php $alt='A baby looking inquisitively'; require('Fragment\Component_cover.php') ?>
+		<h2><?php echo $desc; ?></h2>
 		<h3>
 			What is life?
 		</h3>

@@ -106,6 +106,27 @@
 			}, {
 				"source": "/computer.jpg",
 				"destination": "/computer/index.jpg"
+			}, {
+				"source": "/computer/game.json",
+				"destination": "/computer/game/index.json"
+			}, {
+				"source": "/computer/game.jpg",
+				"destination": "/computer/game/index.jpg"
+			}, {
+				"source": "/computer/game/doom.json",
+				"destination": "/computer/game/doom/index.json"
+			}, {
+				"source": "/computer/game/doom/2016.json",
+				"destination": "/computer/game/doom/2016/index.json"
+			}, {
+				"source": "/computer/game/doom/2016/demo.json",
+				"destination": "/computer/game/doom/2016/demo/index.json"
+			}, {
+				"source": "/computer/game/doom/2016/demo/issue.json",
+				"destination": "/computer/game/doom/2016/demo/issue/index.json"
+			}, {
+				"source": "/computer/game/doom/2016/demo/issue/vulkan_crash.json",
+				"destination": "/computer/game/doom/2016/demo/issue/vulkan_crash/index.json"
 			}
 		],
 		"headers": [ {

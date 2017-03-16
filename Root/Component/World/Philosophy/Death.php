@@ -1,6 +1,7 @@
 <div class='content'>
 	<div class='message'>
 		<?php $alt='A cemetery with crosses on the graves'; require('Fragment\Component_cover.php') ?>
+		<h2><?php echo $desc; ?></h2>
 		<h3>
 			What is death?
 		</h3>

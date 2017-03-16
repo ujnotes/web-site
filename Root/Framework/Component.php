@@ -22,7 +22,8 @@
 
 	$id = substr(getOrigCall(), 0, -5); //stripping extension part
 	$file = getComponentPath($id);
-
+	$desc = getComponentDesc($id);
+	
 	ob_start();
 	include("Fragment\Path.php");
 	$path = ob_get_clean();

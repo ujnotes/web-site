@@ -897,3 +897,8 @@ blockquote {
 	font-size: xx-large;
 	margin-left: -2px;
 }
+
+#table_version > tbody > tr > td:first-child {
+	color: #808080;
+	padding-right: 12px;
+}

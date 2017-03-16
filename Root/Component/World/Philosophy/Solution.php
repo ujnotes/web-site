@@ -1,6 +1,7 @@
 <div class='content'>
 	<div class='message'>
 		<?php $alt=''; require('Fragment\Component_cover.php') ?>
+		<h2><?php echo $desc; ?></h2>
 		<h3>
 			What is the solution to the problems of the world?
 		</h3>
@@ -94,7 +95,7 @@
 			While people and their system are bound by the unmovable reality, their ideas are not. And 'god' is such an idea that is outside the realm.<br>
 			It must be remarked that even an unreal idea can have real power within the realm. In god's case some constructive but mostly destructive; Primarily because it is misunderstood as a reality instead of an ideology.
 		</p>
-		<h4>System</h4>
+		<h3>System</h3>
 		<p>
 			It is crucially important that access to basic necessities like: 'nutrition', 'shelter', 'security' to all its people is ensured; because without these, all else eventually simply fail.<br>
 			The system needs to be humane and based on morally just principals, basic human rights like freedom of expression must be safeguarded and upheld.
@@ -116,7 +117,7 @@
 			While human beings are the most capable part of the system, paradoxically they also continue to be the weakest link in the chain.<br>
 			Hence while better safety measures need to be put in place to limit the damage men can do, it is important that all be done in order to prevent it from happening in the first place.
 		</p>
-		<h4>Man</h4>
+		<h3>Man</h3>
 		<p>
 			Man is a thinking machine that is conscious and intelligent.<br>
 			Machines are predictable, and hence its behavior can be guided - if 'how it works' is understood.<br>
@@ -134,7 +135,7 @@
 			Also, if how he feels about something changes, his connected decisions are likely to change too. Though his memory and thus the habit can continue to hold it back.<br>
 		</p>
 		<p>
-			<h4>That in turn, requires us to understand 'feelings':</h4>
+			<h3>That in turn, requires us to understand 'feelings':</h3>
 		</p>
 		<ul class="list-bullet">
 
@@ -208,7 +209,7 @@
 
 		</ul>
 
-		<h4>People</h4>
+		<h3>People</h3>
 		<p>
 			The dynamics of a group of people is generally driven by its majority. It differs from that of an individual in many ways.<br>
 			And the majority is driven either by popular ideas or otherwise enforced ideas commanded by the ruling class.<br>
@@ -277,7 +278,7 @@
 			Thus in order to change the ideas of a group of people, the prevailing idea has to be made unpopular and new idea has to be first made popular.<br>
 			In case of enforced ideas, much more robust mechanisms are required to ensure transparency and accountability so as to prevent abuse of power and flexibility in order to allow the right ideas to be incorporated and implemented.<br>
 		</p>
-		<h4>With that, we need to figure out:</h4>
+		<h3>With that, we need to figure out:</h3>
 		<ul class="list-bullet">
 			<li>How to make people aware?
 				<ul class="list-bullet">

@@ -60,10 +60,10 @@
 		<title>
 <?php
 			if($id === "root")
-				echo $desc." : ".$config['project_title'];
+				echo $desc." · ".$config['project_title'];
 			else {
 				if($desc)
-					echo $title." : ".$desc." - ".$config['project_title'];
+					echo $title." - ".$desc." · ".$config['project_title'];
 				else
 					echo $title." - ".$config['project_title'];
 			}
@@ -95,7 +95,7 @@
 							<div class="shadow-scroll-top"></div>
 							<div id="canvas-wrapper">
 								<div id="path-container"><div id=path><?php require "Fragment\Path.php" ?></div></div>
-								<div id='title-container'><div id='title'><?php echo ($id == 'root'? '' : $title) ?></div></div>
+								<div id='title-container'><h1 id='title'><?php echo ($id == 'root'? '' : $title) ?></h1></div>
 								<div id="canvas-wrapper-inner-container">
 									<?php require "../Fragment/Menu.html"; ?>
 									<div id="canvas-main">
