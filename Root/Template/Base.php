@@ -63,9 +63,9 @@
 				echo $desc." · ".$config['project_title'];
 			else {
 				if($desc)
-					echo $title." - ".$desc." · ".$config['project_title'];
+					echo $title." · ".$desc." - ".$config['project_title'];
 				else
-					echo $title." - ".$config['project_title'];
+					echo $title." · ".$config['project_title'];
 			}
 ?>
 		</title>

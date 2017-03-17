@@ -216,8 +216,8 @@ function LoadCanvas(target, title) {
 					if(target == "root")
 						titleBar = "";
 					else
-						titleBar = title + " - ";
-					titleBar += resp.desc + " · " + PROJECT_TITLE;
+						titleBar = title + " · ";
+					titleBar += resp.desc + " - " + PROJECT_TITLE;
 					document.title = titleBar;
 					if(target == "root") {
 						document.getElementById('path').innerHTML = "&nbsp;";
