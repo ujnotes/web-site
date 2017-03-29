@@ -7,7 +7,7 @@
 		</p>
 		<p>
 			( Under construction.. )<br>
-			Following are 'Google drive' containing some loosely organized snippets related to the field.
+			Following are 'Google drive' links containing some loosely organized snippets related to the field.
 		</p>
 	</div>
 	<div id='content-body-separator' class='center'></div>

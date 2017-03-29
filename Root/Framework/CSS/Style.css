@@ -460,27 +460,27 @@ summary::-webkit-details-marker {
 	transition: all ease-out 0.3s
 }
 
-#twitter > span.no-svg {
+#site-twitter > span.no-svg {
 	background-image: url('/resource/twitter_grey.png');
 }
 
-#twitter > span.no-svg:hover {
+#site-twitter > span.no-svg:hover {
 	background-image: url('/resource/twitter.png');
 }
 
-#facebook > span.no-svg {
+#site-facebook > span.no-svg {
 	background-image: url('/resource/facebook_grey.png');
 }
 
-#facebook > span.no-svg:hover {
+#site-facebook > span.no-svg:hover {
 	background-image: url('/resource/facebook.png');
 }
 
-#google > span.no-svg {
+#site-google > span.no-svg {
 	background-image: url('/resource/google+_grey.png');
 }
 
-#google > span.no-svg:hover {
+#site-google > span.no-svg:hover {
 	background-image: url('/resource/google+.png');
 }
 
@@ -621,7 +621,7 @@ span#download_button {
 	display: block;
 }
 
-#download_button:hover path:first-child {
+/*#download_button:hover path:first-child {
 	fill: #56B4D1;
 }
 
@@ -646,7 +646,7 @@ span#download_button_bottom svg {
 
 #download_button_bottom:hover svg > path:last-child {
 	stroke: #56B4D1;
-}
+}*/
 
 .comics-column img {
 	margin: 14px;
@@ -704,4 +704,37 @@ div#wcode-remember {
 
 #nav-menu-up.center-arrow div{
 	margin: auto;
+}
+
+#translate-button {
+	display: inline-block;
+	margin: 11px 5px;
+}
+
+#search-button {
+	display: inline-block;
+	margin: 11px 5px;
+}
+
+#translate-button:hover svg {
+	cursor: pointer;
+	fill: #56B4D1;
+}
+
+#search-button:hover svg {
+	cursor: pointer;
+	fill: #56B4D1;
+}
+
+.header-button-active svg {
+	fill: #56B4D1;
+}
+
+.hide {
+	display: none !important;
+}
+
+#google_translate_element {
+	padding-top: 8px;
+	text-align: center;
 }

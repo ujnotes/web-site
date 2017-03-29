@@ -28,11 +28,11 @@
 
 	$dom = new DOMDocument();
 
-	ob_start();
+	//ob_start();
 	require '..\Template\Base.php';
-	$dom->loadHTML(ob_get_contents());
-	ob_end_clean();
+	//$dom->loadHTML(ob_get_contents());
+	//ob_end_clean();
 
 	//AddAttribute(($dom->getElementById($id)), "class", "sidebar-nav-high");
-	echo $dom->saveHTML();
+	//echo $dom->saveHTML();
 ?>

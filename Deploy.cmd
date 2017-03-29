@@ -1,5 +1,5 @@
 @echo off
 call Publish
 firebase deploy --only hosting
-echo *
+rem echo *
 pause

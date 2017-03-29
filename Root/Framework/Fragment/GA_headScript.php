@@ -5,6 +5,7 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', '<?php echo $config['google_analytics_id'] ?>', 'auto');
+	ga('require', 'linkid');
   ga('send', 'pageview');
 
 </script>

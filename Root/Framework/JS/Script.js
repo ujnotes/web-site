@@ -4,43 +4,39 @@ var intrvl = 0;
 var gTarget;
 var URLid;
 
-window.onload = Init;
-
-var trackOutboundLink = function(title, url) {
-	if(!(typeof (ga) === 'undefined')) {
-			if(!(typeof (title) === 'undefined'))
-				title = url;
-			ga('send', 'event', 'outbound', 'click', title, {
-	     'transport': 'beacon',
-	     'hitCallback': function(){document.location = url;}
-	   });
-	 }
-}
+window.onload = init;
 
 window.onpopstate = function(e) { //window.addEventListener('popstate', function(e)
 	if(!!e.state)
 		if(e.state.id == "menu")
 			activateMenuFn();
 		else {
-			LoadCanvas(e.state.id, e.state.title);
+			loadCanvas(e.state.id, e.state.title);
 			activateMainFn();
 		}
 }
 
 var menuActive = false;
+var isTranslateButtonActive;
+var isSearchButtonActive;
 
-function Init() {
-	SetXURL(document);
-	var hashID = GetHashID();
-	URLid = GetURLid();
+function init() {
+	setXURL(document);
+	var hashID = getHashID();
+	URLid = getURLid();
 
 	var canvas_main = document.querySelector( '#canvas-main' ),
-		menu_button = document.querySelector( ".toggle-push-left" ),
-		menu_items = document.querySelectorAll(".XURL");
+		menu_button = document.querySelector( '.toggle-push-left' ),
+		menu_items = document.querySelectorAll( '.XURL' ),
+		header_button = document.querySelector( '#header_button' ),
+		translate_button = document.querySelector( '#translate-button' ),
+		search_button = document.querySelector( '#search-button' ),
+		translate_box = document.querySelector('#google_translate_element'),
+		search_box = document.querySelector('#search_box');
 
 	if(!!hashID) {
 		curTab = "root";
-		LoadCanvas(document.getElementById(hashID));
+		loadCanvas(document.getElementById(hashID));
 	}
 	else if(!!URLid)
 		curTab = URLid;
@@ -58,7 +54,7 @@ function Init() {
 	if (!hashID && !URLid)
 		window.history.replaceState({"id":"root"}, "", "/");
 
-	menu_button.addEventListener( "click", function(){
+	menu_button.addEventListener( "click", function() {
 		if (!menuActive) {
 			window.history.pushState({"id":"menu"}, "", "/"+"menu");
 			activateMenuFn();
@@ -71,13 +67,51 @@ function Init() {
 			canvas_main.style.maxHeight = null;
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+"px";
 		}
-    } );
+	} );
+
+	translate_button.addEventListener( 'click', function() {
+		if(typeof isTranslateButtonActive === 'undefined') {
+			var scriptTag = document.createElement('script');
+			scriptTag.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+			// scriptTag.onload = implementationCode;
+			// scriptTag.onreadystatechange = implementationCode;
+			translate_button.parentNode.appendChild(scriptTag);
+			isTranslateButtonActive = false;
+		}
+		if(!isTranslateButtonActive) {
+			classie.add(translate_button, 'header-button-active');
+			classie.remove(translate_box, 'hide');
+			isTranslateButtonActive = true;
+		}
+		else {
+			classie.remove(translate_button, 'header-button-active');
+			classie.add(translate_box, 'hide');
+			isTranslateButtonActive = false;
+		}
+	} );
+
+	search_button.addEventListener( 'click', function() {
+		if(isSearchButtonActive === undefined) {
+			gcse_init();
+			isSearchButtonActive = false;
+		}
+		if(!isSearchButtonActive) {
+			classie.add(search_button, 'header-button-active');
+			classie.remove(search_box, 'hide');
+			isSearchButtonActive = true;
+		}
+		else {
+			classie.remove(search_button, 'header-button-active');
+			classie.add(search_box, 'hide');
+			isSearchButtonActive = false;
+		}
+	});
 
 	[].forEach.call(document.getElementsByClassName('coming-soon'), function(el) { el.addEventListener( 'click', function() {
 		if(!(typeof (ga) === "undefined")) {
 			ga('send', 'event', {
-			  'eventCategory': 'download',
-			  'eventAction': 'click'
+				'eventCategory': 'download',
+				'eventAction': 'click'
 			});
 		}
 		alert("Hold your breath! Coming soon..");
@@ -136,7 +170,7 @@ var activateMainFn = function() {
 	menuActive = false;
 }
 
-function GetURLid() {
+function getURLid() {
 	var loc = window.location.pathname;
 	if(loc == '/')
 		return "";
@@ -144,7 +178,7 @@ function GetURLid() {
 		return loc.substring(1);
 }
 
-function GetHashID() {
+function getHashID() {
 	var hash = window.location.hash;
 	if(hash.length == 0)
 		return "";
@@ -152,27 +186,27 @@ function GetHashID() {
 		return hash.substring(2);
 }
 
-function SetXURL(node) {
+function setXURL(node) {
 	var arClassElement = getElementsByClassName(node, 'XURL');
 	var n = arClassElement.length;
 	for(i = 0; i < n; i++) {
 		var a = arClassElement[i].children[0];
-		arClassElement[i].onclick = LoadCanvasI;
+		arClassElement[i].onclick = loadCanvasI;
 	}
 }
 
-function LoadCanvasI(m) {
-	LoadCanvasH(this);
+function loadCanvasI(m) {
+	loadCanvasH(this);
 	return false;
 }
 
-function LoadCanvasH(e) {
+function loadCanvasH(e) {
 	var target = e.getAttribute('data-target');
 	if(target == "root")
 		URLid = "";
 	else
 		URLid = target;
-	LoadCanvas(target, e.getAttribute('data-title'));
+	loadCanvas(target, e.getAttribute('data-title'));
 	window.history.pushState({"id":target, "title":e.getAttribute('data-title')}, "", "/"+URLid);
 	if(!(typeof (ga) === "undefined")) {
 		ga('set', 'page', '/'+URLid);
@@ -180,7 +214,7 @@ function LoadCanvasH(e) {
 	}
 }
 
-function LoadCanvas(target, title) {
+function loadCanvas(target, title) {
 
 	var date = document.getElementById('updated');
 	var canvas_main = document.getElementById('canvas-main');
@@ -189,6 +223,7 @@ function LoadCanvas(target, title) {
 	classie.add(main_wrapper, 'hide_path_title_updated');
 
 	canvas_main.innerHTML = "";
+	window.scrollTo(0, 0);
 	beginLoading();
 
 	var xmlhttp = new XMLHttpRequest();
@@ -213,11 +248,7 @@ function LoadCanvas(target, title) {
 					var bASCR = resp.async;
 					var titleBar;
 
-					if(target == "root")
-						titleBar = "";
-					else
-						titleBar = title + " · ";
-					titleBar += resp.desc + " - " + PROJECT_TITLE;
+					titleBar = resp.desc + " - " + PROJECT_TITLE;
 					document.title = titleBar;
 					if(target == "root") {
 						document.getElementById('path').innerHTML = "&nbsp;";
@@ -236,7 +267,7 @@ function LoadCanvas(target, title) {
 					document.getElementById('nav-menu').style.maxHeight = height+"px";
 					document.getElementById('canvas-main').style.maxHeight = null;
 					if(bXURL == "1")
-						SetXURL(document);
+						setXURL(document);
 					if(bASCR == "1")
 						initPageFunction(target);
 					fbReload();

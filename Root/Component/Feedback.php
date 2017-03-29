@@ -1,7 +1,11 @@
-<div class="content">
-	Write to:<br />
-	<p>
-		<a class="content-link" href="mailto:feedback@ujnotes.com?Subject=Feedback">feedback@ujnotes.com</a>
-	</p>
-	<?php require('..\Framework\Fragment\Component_FB_comments.php') ?>
+<div class='content'>
+	<div class='message'>
+		Write to:<br>
+		<p>
+			<a class='content-link' href='mailto:feedback@ujnotes.com?subject=Feedback'>feedback@ujnotes.com</a>
+		</p>
+	</div>
+	<div id='fb_components'>
+		<?php require('..\Framework\Fragment\Component_FB_comments.php') ?>
+	</div>
 </div>

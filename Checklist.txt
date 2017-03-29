@@ -5,6 +5,7 @@ Sitemap
 Publish
 Diff
 Upload
+Request crawl
 Archive
 Check in
 Sync

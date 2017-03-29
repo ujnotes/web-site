@@ -13,6 +13,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="manifest.json">
 		<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel="canonical">
 		<!--link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'-->
 		<style>
@@ -59,21 +60,16 @@
 ?>
 		<title>
 <?php
-			if($id === "root")
-				echo $desc." · ".$config['project_title'];
-			else {
-				if($desc)
-					echo $title." · ".$desc." - ".$config['project_title'];
-				else
-					echo $title." · ".$config['project_title'];
-			}
+			echo $desc." - ".$config['project_title'];
 ?>
 		</title>
 		<?php
 			if($bPublish) {
-				require "../Framework/Fragment/HeadScript_GA.php";
+				require "../Framework/Fragment/GA_HeadScript.php";
 			}
 		?>
+		<?php require "..\Framework\Fragment\GTranslate.php" ?>
+		<?php require "..\Framework\Fragment\GCSE.php" ?>
 	</head>
 	<body>
 		<?php if($bPublish) {
@@ -93,6 +89,8 @@
 					<div class="container">
 						<div id="content-wrapper-inside">
 							<div class="shadow-scroll-top"></div>
+							<div id='google_translate_element'></div>
+							<div id='search_box'><gcse:search></gcse:search></div>
 							<div id="canvas-wrapper">
 								<div id="path-container"><div id=path><?php require "Fragment\Path.php" ?></div></div>
 								<div id='title-container'><h1 id='title'><?php echo ($id == 'root'? '' : $title) ?></h1></div>

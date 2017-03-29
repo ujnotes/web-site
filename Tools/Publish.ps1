@@ -11,9 +11,6 @@ $flPath = ".\Config\Files.tsv" 	#File List
 $ilPath = ".\Config\IDs.tsv"   	#ID List
 #$tlPath = ".\Config\Template.tsv"	#Template List
 
-$jScript = "script.js"
-$cStyle = "style.css"
-
 $iBaseTemplateFile = "Template\Base.php"
 $oBaseWebFile = "root"
 # Could be tested against any other 'Snapped' file
@@ -34,7 +31,7 @@ foreach ($e in $iListC) {
 	}
 }
 
-$addList = ("menu", "404")
+$addList = ("menu", "404", "manifest.json", "script.js", "style.css")
 
 . ".\Tools\API.ps1"
 
@@ -43,15 +40,6 @@ if ((Test-Path $oRoot) -ne $TRUE) {
 }
 if ((Test-Path $mRoot) -ne $TRUE) {
 	New-Item -ItemType directory -Path $mRoot
-}
-
-if ((Test-path "$oRoot\$jScript") -ne $TRUE) {
-	DownloadH $eHost $eMode $jScript $mRoot $jScript
-	CompressJ $mRoot $jScript $oRoot $jScript
-}
-if ((Test-path "$oRoot\$cStyle") -ne $TRUE) {
-	DownloadH $eHost $eMode $cStyle $mRoot $cStyle
-	CompressC $mRoot $cStyle $oRoot $cStyle
 }
 
 foreach ($element in $fList) {
@@ -116,7 +104,7 @@ foreach ($component in $iList) {
 			if ((Test-Path $oRoot$componentDir) -ne $TRUE) {
 				New-Item -ItemType directory -Path $oRoot$componentDir
 			}
-			
+
 			if((Test-Path $iRoot"Component\$component\index.php") -eq $TRUE ) {
 				$componentFile = "Component\$component\index.php"
 			}
@@ -129,8 +117,8 @@ foreach ($component in $iList) {
 	$componentCJSON = "$componentC.json"
 
 	if (Check $iRoot $componentFile $oRoot $componentCJSON) {
-		DownloadH $eHost $eMode "$component.json" $mRoot $componentCJSON
-		CompressH $mRoot $componentCJSON $oRoot $componentCJSON
+		Download $eHost $eMode "$component.json" $mRoot $componentCJSON
+		CompressHtml $mRoot $componentCJSON $oRoot $componentCJSON
 		$bComponentChanged = $TRUE;
 	}
 	else {
@@ -139,17 +127,45 @@ foreach ($component in $iList) {
 
 	if (($bTemplateChanged -eq $TRUE) -or ($bComponentChanged -eq $TRUE)) {
 		Write-Host $component
-		DownloadH $eHost $eMode $component $mRoot "$componentC.html"
-		CompressH $mRoot "$componentC.html" $oRoot "$componentC.html"
+		Download $eHost $eMode $component $mRoot "$componentC.html"
+		CompressHtml $mRoot "$componentC.html" $oRoot "$componentC.html"
 	}
 
 }
 
 foreach ($component in $addList) {
-	if (($bTemplateChanged -eq $TRUE) -or (Check $iRoot "Fragment\$component.html" $oRoot $component)) {
+	if (($bTemplateChanged -eq $TRUE) -or ((Test-Path $oRoot\$component) -ne $TRUE)) {
+
 		Write-Host $component
-		DownloadH $eHost $eMode $component $mRoot "$component.html"
-		CompressH $mRoot "$component.html" $oRoot "$component.html"
+
+		$componentParts = $component.Split(".");
+		if($componentParts.length -eq 2) {
+			$extn = $componentParts[1];
+		}
+		else {
+			$extn = "html";
+		}
+
+		if($extn -eq "html") {
+			Download $eHost $eMode $component $mRoot "$component.$extn"
+			CompressHtml $mRoot "$component.$extn" $oRoot "$component.$extn"
+		}
+		elseif($extn -eq  "js") {
+			Download $eHost $eMode $component $mRoot $component
+			CompressJs $mRoot $component $oRoot $component
+		}
+		elseif($extn -eq "css") {
+			Download $eHost $eMode $component $mRoot $component
+			CompressCss $mRoot $component $oRoot $component
+		}
+		elseif($extn -eq "json") {
+			Download $eHost $eMode $component $mRoot $component
+			CompressJson $mRoot $component $oRoot $component
+		}
+		else {
+			Download $eHost $eMode $component $oRoot $component
+		}
+
 	}
 }
 

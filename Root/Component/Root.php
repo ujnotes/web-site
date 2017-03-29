@@ -16,7 +16,7 @@
 		</span>
 		<span id='profile-image-container'>
 			<a id='profile-image' href='#'>
-				<img src='/photo.jpg' alt="Author's picture">
+				<img src='/photo.jpg' alt='Author's picture'>
 			</a>
 		</span>
 	</div>

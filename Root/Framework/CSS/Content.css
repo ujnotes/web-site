@@ -165,6 +165,7 @@
 
 #me-table {
 	border-spacing: 6px 8px;
+	padding-bottom: 16px;
 }
 
 #me-table .R1 {
@@ -690,6 +691,14 @@
 
 	#home-message > span {
 		padding-left: 5px;
+	}
+
+	#home-menu {
+		padding-left: 0px !important;
+	}
+
+	#home-menu > div.sidebar-nav-group {
+		padding-left: 12px !important;
 	}
 
 }

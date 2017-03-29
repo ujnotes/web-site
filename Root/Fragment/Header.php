@@ -16,13 +16,10 @@
 	<div id='loading'></div>
 	<div id='header-right-list'>
 		<span id='download_button'>
-			<div id='google_translate_element'></div>
-			<script type='text/javascript'>
-				function googleTranslateElementInit() {
-				  new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false, gaTrack: true <?php if($bPublish) echo ", gaId: '".$config['google_analytics_id']."'"; ?>}, 'google_translate_element');
-				}
-			</script>
-			<script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
+			<span id='header_button'>
+				<span id='search-button'><span class='image'><?php echo file_get_contents('..\resource\search.svg'); ?></span></span>
+				<span id='translate-button'><span class='image'><?php echo file_get_contents('..\resource\translate.svg'); ?></span></span>
+			</span>
 		</span>
 	</div>
 	</div>

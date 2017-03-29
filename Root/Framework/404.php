@@ -1,8 +1,8 @@
 <?php
-	require_once "Config.php";
+	require_once 'Config.php';
 	$config = loadConfig();
 
-	if( isset($_GET['mode']) && ($_GET['mode'] === "publish") )
+	if( isset($_GET['mode']) && ($_GET['mode'] === 'publish') )
 		$bPublish = TRUE;
 	else
 		$bPublish = FALSE;
@@ -10,10 +10,10 @@
 <!doctype html>
 <html>
 <head>
-	<title>Page Not Found<?php echo " · ".$config['project_title'] ?></title>
+	<title>Page Not Found<?php echo ' - '.$config['project_title'] ?></title>
 	<?php
 		if($bPublish) {
-			require "../Framework/Fragment/HeadScript_GA.php";
+			require '../Framework/Fragment/GA_HeadScript.php';
 		}
 	?>
 	<style>
@@ -86,13 +86,13 @@
 	<p>
 		continue to the homepage:
 	</p>
-	<a id="header-logo-href" href="/">
-		<span id="logo">
-			<?php require "../Resource/Logo_Full.svg" ?>
+	<a id='header-logo-href' href='/'>
+		<span id='logo'>
+			<?php require '../Resource/Logo_Full.svg' ?>
 		</span>
 	</a>
-	<a id="mail-link" href="mailto:uj@ujnotes.com?Subject=ujNotes">webmaster@ujnotes.com</a>
-	<script language="JavaScript">
+	<a id='mail-link' href='mailto:uj@ujnotes.com?subject=Ujnotes'>webmaster@ujnotes.com</a>
+	<script language='JavaScript'>
 		document.getElementById('url').innerHTML = window.location.href;
 	</script>
 </body>
