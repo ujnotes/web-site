@@ -693,8 +693,7 @@ div#wcode-remember {
 }
 
 #fb_components .fb-like {
-	padding-left: 10px;
-	padding-top: 10px;
+	padding: 16px 0 10px 10px;
 	vertical-align: top;
 }
 

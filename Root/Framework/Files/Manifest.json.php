@@ -1,6 +1,10 @@
+<?php
+	require '..\Config.php';
+	$config = loadConfig();
+?>
 {
-	"name": "Ujjwal Singh's notes - Ujnotes",
-	"short_name": "Ujnotes",
+	"name": "<?php echo $config['project_description'] ?>",
+	"short_name": "<?php echo $config['project_title'] ?>",
 	"icons": [
 		{
 			"src": "launcher-icon-0-75x.png",

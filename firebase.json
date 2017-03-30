@@ -132,9 +132,10 @@
 		"headers": [ {
 				"source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
 				"headers" : [ {
-				"key" : "Access-Control-Allow-Origin",
-				"value" : "*"
-				} ]
+						"key" : "Access-Control-Allow-Origin",
+						"value" : "*"
+					}
+				]
 			}, {
 				"source" : "**/*.@(jpg|jpeg|gif|png|svg)",
 				"headers" : [ {
@@ -143,10 +144,20 @@
 					}
 				]
 			}, {
-				"source" : "404.html",
+				"source" : "/404.html",
 				"headers" : [ {
 						"key" : "Cache-Control",
 						"value" : "max-age=300"
+					}
+				]
+			}, {
+				"source" : "/manifest.json",
+				"headers" : [ {
+						"key" : "Cache-Control",
+						"value" : "max-age=300"
+					}, {
+						"key" : "Content-Type",
+						"value" : "application/manifest+json"
 					}
 				]
 			}

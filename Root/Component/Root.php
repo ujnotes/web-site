@@ -16,13 +16,13 @@
 		</span>
 		<span id='profile-image-container'>
 			<a id='profile-image' href='#'>
-				<img src='/photo.jpg' alt='Author's picture'>
+				<img src='/photo.jpg' alt="Author's picture">
 			</a>
 		</span>
 	</div>
 	<div class='center' id='content-body-separator'></div>
 	<div id='home-menu'>
-		<div><a class='XURL' href='/world' data-target='world' data-title='World'>World</div>
+		<div><a class='XURL' href='/world' data-target='world' data-title='World'>World</a></div>
 		<div class='sidebar-nav-group'>
 			<a class='XURL XURL_ sidebar-nav-norm sidebar-nav-l-1' href='/world/philosophy' data-target='world/philosophy' data-title='Philosophy'>
 				<div>Philosophy</div>
