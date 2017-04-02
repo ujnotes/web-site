@@ -4,10 +4,11 @@ function loadComponents() {
 	global $bPublish;
 	global $bFull;
 
-	$fHandle = fopen("..\..\Config\IDs.tsv", "r");
+	$fHandle = fopen("..\..\Config\ID.tsv", "r");
+	fgetcsv($fHandle);
 	$i = 0;
 	while(($tsvLine = fgetcsv($fHandle, 0, "\t")) !== FALSE) {
-		if($tsvLine[0] == null) {
+		if($tsvLine[0] == "#") {
 			if($bFull)
 				array_shift($tsvLine);
 			else

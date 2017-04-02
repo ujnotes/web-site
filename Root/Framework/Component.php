@@ -23,7 +23,7 @@
 	$id = substr(getOrigCall(), 0, -5); //stripping extension part
 	$file = getComponentPath($id);
 	$desc = getComponentDesc($id);
-	
+
 	ob_start();
 	include("Fragment\Path.php");
 	$path = ob_get_clean();
@@ -38,7 +38,7 @@
 	}
 
 	if( $bPublish ) {
-		$cmd = "java -jar ..\..\Tools\HTML-Compressor.jar -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css";
+		$cmd = 'java -jar'.' "'.getenv('TIGGU').'\Tools\HTML-Compressor.jar" -t html --compress-js --js-compressor closure --closure-opt-level simple --compress-css';
 
 		$descriptorspec = array(
 			0 => array("pipe", "r"),
