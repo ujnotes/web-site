@@ -11,7 +11,11 @@
 				As I come across new information, these may evolve.
 			</p>
 			<p>
-				Follow 'Ujnotes' for updates via the social links below.
+				I discuss topics ranging from <a class='content-link XURL' href='/world/philosophy/life' data-target='/world/philosophy/life' data-title='Life'>Life</a>, <a class='content-link XURL' href='/world/philosophy/death' data-target='/world/philosophy/death' data-title='Death'>Death</a> and <a class='content-link XURL' href='/world/philosophy/god' data-target='/world/philosophy/god' data-title='God'>God</a> to current affairs;<br>
+				And computers and tech.
+			</p>
+			<p>
+				Follow and subscribe to 'Ujnotes' via the social links down below.
 			</P>
 		</span>
 		<span id='profile-image-container'>

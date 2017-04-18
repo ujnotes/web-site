@@ -475,13 +475,17 @@ summary::-webkit-details-marker {
 #site-facebook > span.no-svg:hover {
 	background-image: url('/resource/facebook.png');
 }
-
+/*
 #site-google > span.no-svg {
 	background-image: url('/resource/google+_grey.png');
 }
 
 #site-google > span.no-svg:hover {
 	background-image: url('/resource/google+.png');
+}*/
+
+#site-youtube > span.no-svg:hover {
+	background-image: url('/resource/youtube.png');
 }
 
 .download > a > span.no-svg {
@@ -591,15 +595,19 @@ span#qr-code {
 	fill: #56B4D1;
 }
 
-#twitter:hover path {
+#site-twitter:hover path {
 	fill: #56B4D1;
 }
 
-#facebook:hover path {
+#site-facebook:hover path {
 	fill: #56B4D1;
 }
+/*
+#site-google:hover span > svg > path {
+	fill: #56B4D1;
+}*/
 
-#google:hover span > svg > path {
+#site-youtube:hover .st_main {
 	fill: #56B4D1;
 }
 

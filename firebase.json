@@ -21,6 +21,10 @@
 				"destination" : "https://plus.google.com/+ujnotesx",
 				"type" : 302
 			}, {
+				"source" : "/youtube",
+				"destination" : "https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ",
+				"type" : 302
+			}, {
 				"source" : "/patreon",
 				"destination" : "https://patreon.com/ujnotes",
 				"type" : 302

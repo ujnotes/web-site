@@ -21,7 +21,7 @@
 				<a href='https://facebook.com/ujnotes' id='site-facebook' onclick="trackOutboundLink('ujnotes-facebook', 'https://facebook.com/ujnotes'); return false;"><span class='image'><?php echo file_get_contents('..\Resource\facebook.svg'); ?></span></a>
 			</span>
 			<span class='social'>
-				<a href='https://plus.google.com/+ujnotesx' id='site-google' onclick="trackOutboundLink('ujnotes-google', 'https://plus.google.com/+ujnotesx'); return false;"><span class='image'><?php echo file_get_contents('..\Resource\google+.svg'); ?></span></a>
+				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><span class='image'><?php echo file_get_contents('..\Resource\youtube.svg'); ?></span></a>
 			</span>
 		</div>
 		<div class='footer-content' id='footer-rights'>
