@@ -1,0 +1,55 @@
+html {
+	height: 100%;
+	margin-left: calc(100vw - 100%)
+}
+
+body {
+	margin: 0 auto;
+	overflow-x: hidden;
+	height: 100%;
+	font-family: Abel,Arial,Verdana,sans-serif
+}
+
+.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center !important;
+}
+
+.no-margin {
+	margin: 0
+}
+
+.bold {
+	font-weight: bolder;
+	color: #808080
+}
+
+.gray {
+	color: #c9c9c9!important
+}
+
+.hide_display {
+  display: none !important;
+}
+
+.XURL {
+	cursor: pointer;
+	text-decoration: none
+}
+
+.content-link {
+	text-decoration: none;
+	color: #69b7cf!important
+}
+
+.content-link-grey {
+	text-decoration: none;
+	color: #bbbbbb!important;
+	transition: all ease-out 0.3s;
+}
+
+.content-link-grey:hover {
+	text-decoration: none;
+	color: #69b7cf!important
+}

@@ -1,0 +1,13 @@
+#translate-button,#search-button {
+	display: inline-block;
+	margin: 11px 5px
+}
+
+#translate-button:hover svg,#search-button:hover svg {
+	cursor: pointer;
+	fill: #56b4d1;
+}
+
+#download_button path {
+	transition: all ease-out 0.3s;
+}

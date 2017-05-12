@@ -1,6 +1,7 @@
 project_title	Ujnotes
 project_description	Ujjwal Singh's notes: Ujnotes
-site_domain	Ujnotes.com
+site_name	Ujnotes.com
+site_domain	ujnotes.com
 base_url	https://ujnotes.com
 author	Ujjwal Singh
 twitter_owner	ujnotes

@@ -1,0 +1,42 @@
+#profile-image-container {
+    display: inline-block;
+    float: right;
+    text-align: center;
+    margin: 0 2px 18px 0
+}
+
+#profile-image {
+    display: inline-block;
+    max-width: 300px;
+    background: url(/photo.jpg);
+    background-position-x: -304px;
+    background-position-y: -116px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px #afafaf;
+    -webkit-box-shadow: 0 1px 10px #afafaf;
+    -moz-box-shadow: 0 1px 10px #afafaf;
+    z-index: 999
+}
+
+#profile-image>img {
+    visibility: hidden;
+    transition-duration: 0s
+}
+
+#profile-image:focus {
+    float: none;
+    margin: auto;
+    max-width: none;
+    background-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none
+}
+
+#profile-image:focus>img {
+    visibility: visible;
+    box-shadow: 0 1px 10px #afafaf;
+    -webkit-box-shadow: 0 1px 10px #afafaf;
+    -moz-box-shadow: 0 1px 10px #afafaf
+}

@@ -1,0 +1,4 @@
+#table_version>tbody>tr>td:first-child {
+	color: #808080;
+	padding-right: 12px
+}

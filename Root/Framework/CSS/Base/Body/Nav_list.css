@@ -1,0 +1,21 @@
+
+#nav-list {
+	padding: 26px 0 36px;
+	max-width: 512px
+}
+
+#nav-list>a>div {
+	display: inline-block
+}
+
+#nav-menu-up.center-arrow div {
+    margin: auto
+}
+
+#nav-menu-prev {
+	float: left
+}
+
+#nav-menu-next {
+	float: right
+}

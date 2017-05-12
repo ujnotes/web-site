@@ -1,5 +1,5 @@
 <?php
-	require '..\Config.php';
+	require '../API/Config.php';
 	$config = loadConfig();
 ?>
 {

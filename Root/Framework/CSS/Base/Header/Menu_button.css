@@ -1,0 +1,25 @@
+#menu-button {
+ 	margin: 8px 0 0 82px;
+ 	display: inline-block;
+ 	float: left;
+ 	background-size: contain;
+ 	width: 36px;
+ 	height: 36px;
+ 	background-repeat: no-repeat;
+}
+
+#menu-button path {
+	transition: all ease-out 0.3s;
+}
+
+#menu-button:hover path {
+ 	fill: #56b4d1
+}
+
+#menu-button:hover {
+ 	cursor: pointer
+}
+
+#menu-button.active path {
+ 	fill: #56b4d1
+}

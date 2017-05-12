@@ -1,6 +1,6 @@
-DirectoryIndex Framework/Page.php
+DirectoryIndex Framework/HTML/Page.php
 
-ErrorDocument 404 /Framework/404.php
+RewriteRule ^404$ /Framework/HTML/404.php [L]
 
 RewriteBase /
 RewriteEngine On
@@ -32,12 +32,13 @@ RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ
 RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
 RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
 
-RewriteRule ^style.css$ Framework/Style.php [L]
-RewriteRule ^script.js$ Framework/Script.php [L]
-
-RewriteRule ^404$ /Framework/404.php [L]
+RewriteRule ^style.css$ Framework/CSS/Style.php [L]
+RewriteRule ^script.js$ Framework/JS/Script.php [L]
 
 RewriteRule ^manifest\.json$ /Framework/Files/Manifest.json.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.js$ Framework/JS/Link/$1.js [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.ico$ Resource/$1.ico [L]
@@ -58,7 +59,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.svg$ Resource/$1.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*?)\.json$ Framework/Component.php [L]
+RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ Framework/Page.php [L]
+RewriteRule ^(.+)$ Framework/HTML/Page.php [L]

@@ -1,0 +1,51 @@
+pre {
+	font-family: monospace
+}
+
+code {
+	font-family: monospace!important;
+	color: #5a5a5a
+}
+
+code.inline {
+	background-color: #f2f2f2;
+	padding: 0 6px
+}
+
+code.block {
+	display: block;
+	padding: 8px 14px;
+	background-image: -webkit-linear-gradient(left,#f2f2f2,transparent)
+}
+
+blockquote {
+	margin: 0;
+	text-align: left
+}
+
+.message {
+	padding: 0 6px 10px;
+	clear: both;
+	overflow: hidden
+}
+
+.content {
+	font-size: 16px
+}
+
+.content ol {
+	padding-left: 20px
+}
+
+.content ul {
+	padding-left: 24px;
+	margin: 6px 0 8px
+}
+
+.content p {
+	padding-left: 20px
+}
+
+.content-low {
+	color: #ccc
+}

@@ -1,0 +1,28 @@
+
+#home-message {
+	float: left;
+	display: inline-block
+}
+
+#home-menu {
+	padding-left: 10px
+}
+
+#home-menu>div {
+	padding-left: 14px
+}
+
+#home-menu>div>a {
+	text-decoration: none;
+	color: #aaa
+}
+
+#home-menu>div>span {
+	font-style: italic;
+	font-size: smaller;
+	color: #aaa
+}
+
+#home-menu>div.sidebar-nav-group {
+	padding-left: 28px
+}

@@ -30,7 +30,7 @@ function errorLoading() {
 	e.innerText = "Error!";
 }
 
-function killLoading() {
+function endLoading() {
 	var e = document.getElementById("loading");
 	nowLoading.count = undefined;
 	e.setAttribute("style", "visibility: hidden");
@@ -40,5 +40,5 @@ function killLoading() {
 function fbReload() {
 	try{
 		FB.XFBML.parse();
-    }catch(ex){}
+	}catch(ex){}
 }

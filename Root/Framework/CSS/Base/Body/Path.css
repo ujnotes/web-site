@@ -1,0 +1,20 @@
+
+.path-separator {
+	color: #cfcfcf!important
+}
+
+#path a {
+	color: #69b7cf
+}
+
+div#path-container {
+	padding-top: 6px;
+	padding-left: 6px
+}
+
+div#path {
+	display: inline-block;
+	color: #69b7cf;
+	transition: all 0.3s;
+	will-change: opacity
+}

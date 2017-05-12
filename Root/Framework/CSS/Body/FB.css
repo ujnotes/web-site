@@ -1,0 +1,9 @@
+
+#fb_components {
+    margin-left: 20px
+}
+
+#fb_components .fb-like {
+    padding: 16px 0 10px 10px;
+    vertical-align: top
+}

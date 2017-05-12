@@ -1,0 +1,19 @@
+#nav-menu {
+	bottom: 0;
+	z-index: 1;
+	overflow: hidden;
+	width: 50%;
+	transform: translateX(-932px);
+	display: inline-block;
+	float: left;
+	transition: all 0.7s;
+	will-change: transform
+}
+
+.sidebar-sub {
+	text-align: center
+}
+
+.sidebar-nav-group {
+	margin-bottom: 20px;
+}
