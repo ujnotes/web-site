@@ -1,63 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="150 -168 900 736" style="enable-background:new 150 -168 900 736;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#F1F2F2;}
-	.st1{opacity:0.7;fill:#E6E7E8;enable-background:new    ;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill:#6AB7CF;}
-	.st4{font-family:'Abel';}
-	.st5{font-size:14px;}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="150 -168 900 736" font-family="Abel" font-size="16px">
 <g>
-	<circle id="XMLID_28_" class="st0" cx="600" cy="299" r="244"/>
-	<circle id="XMLID_14_" class="st1" cx="600" cy="130.9" r="274"/>
-	<g id="XMLID_1_">
-		<g id="XMLID_19_">
-			<circle id="XMLID_75_" class="st2" cx="600" cy="-17.9" r="79.3"/>
+	<circle fill="#F1F2F2" cx="600" cy="299" r="244"/>
+	<circle opacity="0.7" fill="#E6E7E8" cx="600" cy="130.9" r="274"/>
+	<g>
+		<g>
+			<circle fill="#FFFFFF" cx="600" cy="-17.9" r="79.3"/>
 		</g>
-		<text transform="matrix(1 0 0 1 587.0713 -13.4765)" class="st3 st4 st5">M</text>
-		<text transform="matrix(1 0 0 1 598.4111 -13.4765)" class="st3 st4 st5">a</text>
-		<text transform="matrix(1 0 0 1 605.1592 -13.4765)" class="st3 st4 st5">n</text>
+		<text transform="matrix(1 0 0 1 587.0713 -13.4765)" fill="#6AB7CF">Man</text>
 	</g>
-	<g id="XMLID_2_">
-		<g id="XMLID_15_">
-			<circle id="XMLID_74_" class="st2" cx="464.3" cy="230" r="79.3"/>
+	<g>
+		<g>
+			<circle fill="#FFFFFF" cx="464.3" cy="230" r="79.3"/>
 		</g>
-		<text transform="matrix(1 0 0 1 444.2297 234.0712)" class="st3 st4 st5">P</text>
-		<text transform="matrix(1 0 0 1 451.3278 234.0712)" class="st3 st4 st5">e</text>
-		<text transform="matrix(1 0 0 1 458.3415 234.0712)" class="st3 st4 st5">o</text>
-		<text transform="matrix(1 0 0 1 466.0275 234.0712)" class="st3 st4 st5">p</text>
-		<text transform="matrix(1 0 0 1 473.9933 234.0712)" class="st3 st4 st5">l</text>
-		<text transform="matrix(1 0 0 1 477.2971 234.0712)" class="st3 st4 st5">e</text>
+		<text transform="matrix(1 0 0 1 444.2297 234.0712)" fill="#6AB7CF">People</text>
 	</g>
-	<g id="XMLID_3_">
-		<g id="XMLID_18_">
-			<circle id="XMLID_73_" class="st2" cx="737.3" cy="231" r="79.3"/>
+	<g>
+		<g>
+			<circle fill="#FFFFFF" cx="737.3" cy="231" r="79.3"/>
 		</g>
-		<text transform="matrix(1 0 0 1 716.2288 235.0712)" class="st3 st4 st5">S</text>
-		<text transform="matrix(1 0 0 1 723.0188 235.0712)" class="st3 st4 st5">y</text>
-		<text transform="matrix(1 0 0 1 729.5286 235.0712)" class="st3 st4 st5">s</text>
-		<text transform="matrix(1 0 0 1 735.0725 235.0712)" class="st3 st4 st5">t</text>
-		<text transform="matrix(1 0 0 1 739.6223 235.0712)" class="st3 st4 st5">e</text>
-		<text transform="matrix(1 0 0 1 746.637 235.0712)" class="st3 st4 st5">m</text>
+		<text transform="matrix(1 0 0 1 716.2288 235.0712)" fill="#6AB7CF">System</text>
 	</g>
-	<text transform="matrix(1 0 0 1 580.3586 134.4838)" class="st3 st4 st5">R</text>
-	<text transform="matrix(1 0 0 1 587.9465 134.4838)" class="st3 st4 st5">e</text>
-	<text transform="matrix(1 0 0 1 594.9602 134.4838)" class="st3 st4 st5">a</text>
-	<text transform="matrix(1 0 0 1 601.7083 134.4838)" class="st3 st4 st5">l</text>
-	<text transform="matrix(1 0 0 1 605.0125 134.4838)" class="st3 st4 st5">i</text>
-	<text transform="matrix(1 0 0 1 608.2883 134.4838)" class="st3 st4 st5">t</text>
-	<text transform="matrix(1 0 0 1 613.0481 134.4838)" class="st3 st4 st5">y</text>
-	<g id="XMLID_4_">
-		<g id="XMLID_26_">
-			<circle id="XMLID_72_" class="st2" cx="600.9" cy="476" r="55.5"/>
+	<text transform="matrix(1 0 0 1 580.3586 134.4838)" fill="#6AB7CF">Reality</text>
+	<g>
+		<g>
+			<circle fill="#FFFFFF" cx="600.9" cy="476" r="55.5"/>
 		</g>
-		<text transform="matrix(1 0 0 1 587.6524 480.0712)" class="st3 st4 st5">G</text>
-		<text transform="matrix(1 0 0 1 596.7662 480.0712)" class="st3 st4 st5">o</text>
-		<text transform="matrix(1 0 0 1 604.4522 480.0712)" class="st3 st4 st5">d</text>
+		<text transform="matrix(1 0 0 1 587.6524 480.0712)" fill="#6AB7CF">God</text>
 	</g>
-	<text id="XMLID_25_" transform="matrix(1 0 0 1 453.3927 441.3504)" class="st3 st4 st5">Ideas</text>
+	<text transform="matrix(1 0 0 1 453.3927 441.3504)" fill="#6AB7CF">Ideas</text>
 </g>
 </svg>
