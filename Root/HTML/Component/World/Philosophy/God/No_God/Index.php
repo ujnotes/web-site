@@ -1,6 +1,6 @@
 <div class='message'>
 	<?php $alt='A curved earth in space'; require('..\HTML\Fragment\Component_cover.php') ?>
-	<h2><?php echo $desc; ?></h2>
+	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>Why god</h3>
 	<p>
 		Why do people believe in a God?<br>

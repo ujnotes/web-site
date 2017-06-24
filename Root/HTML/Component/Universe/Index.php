@@ -1,6 +1,6 @@
 <div class='message'>
 	<?php $alt='A galaxy with stars glittered around'; require('..\HTML\Fragment\Component_cover.php') ?>
-	<h2>
+	<h2 class='center'>
 		<?php echo $desc; ?>
 	</h2>
 	<p>

@@ -1,6 +1,6 @@
 <div class='message'>
 	<?php $alt='A curved earth in space'; require('..\HTML\Fragment\Component_cover.php') ?>
-	<h2><?php echo $desc; ?></h2>
+	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is god?</h3>
 	<p>
 		This is a question we have asked ourselves and probably others, numerous times; often sub-consciously.<br>

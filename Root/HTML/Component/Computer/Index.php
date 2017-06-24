@@ -1,6 +1,6 @@
 <div class='message'>
 	<?php $alt='Green circuit board with traces but without components'; require('..\HTML\Fragment\Component_cover.php') ?>
-	<h2><?php echo $desc; ?></h2>
+	<h2 class='center'><?php echo $desc; ?></h2>
 	<p class='first-letter-high'>
 		The information processor
 	</p>

@@ -1,5 +1,5 @@
 <div class='message'>
-	<h2><?php echo $desc; ?></h2>
+	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>
 		Issue
 	</h3>

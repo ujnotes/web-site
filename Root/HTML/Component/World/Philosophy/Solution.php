@@ -1,6 +1,6 @@
 <div class='message'>
 	<?php $alt=''; require('..\HTML\Fragment\Component_cover.php') ?>
-	<h2><?php echo $desc; ?></h2>
+	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>
 		What is the solution to the problems of the world?
 	</h3>
