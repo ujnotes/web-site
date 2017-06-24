@@ -15,7 +15,7 @@
 	<div><span class='toggle-push-left image' id='menu-button'><?php echo file_get_contents('..\..\Resource\Menu_icon.svg'); ?></span></div>
 	<div id='loading'></div>
 	<div id='header-right-list'>
-		<span id='download_button'>
+		<span id='header_buttons_right'>
 			<span id='header_button'>
 				<span id='search-button'><span class='image'><?php echo file_get_contents('..\..\Resource\Search.svg'); ?></span></span>
 				<span id='translate-button'><span class='image'><?php echo file_get_contents('..\..\Resource\Translate.svg'); ?></span></span>
