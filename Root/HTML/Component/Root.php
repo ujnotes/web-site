@@ -10,7 +10,7 @@
 			As I come across new information, these may evolve.
 		</p>
 		<p>
-			I discuss topics ranging from <?php link_xurl('life', 'Life') ?>, <?php link_xurl('death', 'Death') ?> and <?php link_xurl('god', 'God') ?> to current affairs;<br>
+			I discuss topics ranging from <?php link_xurl('world/philosophy/life', 'Life') ?>, <?php link_xurl('world/philosophy/death', 'Death') ?> and <?php link_xurl('world/philosophy/god', 'God') ?> to current affairs;<br>
 			And computers &amp; tech.
 		</p>
 		<p>
