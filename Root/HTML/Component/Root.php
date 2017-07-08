@@ -27,7 +27,7 @@
 <div id='home-menu'>
 	<div><?php link_xurl('world', 'World') ?></div>
 	<div class='sidebar-nav-group'>
-		<a class='XURL block' href='/world/philosophy' data-target='world/philosophy' data-title='Philosophy'>
+		<a class='XURL item_block' href='/world/philosophy' data-target='world/philosophy' data-title='Philosophy'>
 			<div>Philosophy</div>
 		</a>
 	</div>
@@ -38,13 +38,13 @@
 	<br>
 	<div><?php link_xurl('computer', 'Computer') ?><span>(directory links)</span></div>
 	<div class='sidebar-nav-group'>
-		<a class='block' href='/computer/os' target='_blank' onclick="trackOutboundLink('OS','https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ'); return false;">
+		<a class='item_block' href='/computer/os' target='_blank' onclick="trackOutboundLink('OS','https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ'); return false;">
 			<div>OS</div>
-		</a><a class='block' href='/computer/program' target='_blank' onclick="trackOutboundLink('Program','https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk'); return false;">
+		</a><a class='item_block' href='/computer/program' target='_blank' onclick="trackOutboundLink('Program','https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk'); return false;">
 			<div>Program</div>
-		</a><a class='block' href='/computer/programming' target='_blank' onclick="trackOutboundLink('Programming','https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM'); return false;">
+		</a><a class='item_block' href='/computer/programming' target='_blank' onclick="trackOutboundLink('Programming','https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM'); return false;">
 			<div>Programming</div>
-		</a><a class='XURL block' href='/computer/game' data-target='computer/game' data-title='Game'>
+		</a><a class='XURL item_block' href='/computer/game' data-target='computer/game' data-title='Game'>
 			<div>Game</div>
 		</a>
 	</div>

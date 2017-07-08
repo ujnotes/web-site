@@ -12,11 +12,11 @@
 <div id='content-body-separator' class='center'></div>
 <div id='sub-list' class='center'>
 	<div class="sidebar-nav-group">
-		<a class="block" id="os" href="/computer/os" target="_blank" onclick='trackOutboundLink("OS","https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ"); return false;'>
+		<a class="item_block" id="os" href="/computer/os" target="_blank" onclick='trackOutboundLink("OS","https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ"); return false;'>
 			<div>OS</div>
-		</a><a class="block" id="program" href="/computer/program" target="_blank" onclick='trackOutboundLink("Program","https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk"); return false;'>
+		</a><a class="item_block" id="program" href="/computer/program" target="_blank" onclick='trackOutboundLink("Program","https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk"); return false;'>
 			<div>Program</div>
-		</a><a class="block" id="programming" href="/computer/programming" target="_blank" onclick='trackOutboundLink("Programming","https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM"); return false;'>
+		</a><a class="item_block" id="programming" href="/computer/programming" target="_blank" onclick='trackOutboundLink("Programming","https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM"); return false;'>
 			<div>Programming</div>
 		</a>
 	</div>
