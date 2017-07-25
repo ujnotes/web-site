@@ -23,9 +23,9 @@ world/philosophy/death	Death	1	0	An elaboration of death's significance
 #	world/philosophy/possessions/money	Money	1	0	Money
 #	world/philosophy/society	Society	1	0	Society
 #	world/philosophy/governance	Governance	1	0	Governance
-world/philosophy/god	God	1	0	Meaning of god
-world/philosophy/god/no_god	No God	1	0	Inexistence of god
-#	world/philosophy/god/manifestations	Manifestations	1	0	Manifestations of god
+world/philosophy/god	God	1	0	Meaning of God
+world/philosophy/god/no_god	No God	1	0	Inexistence of God
+#	world/philosophy/god/manifestations	Manifestations	1	0	Manifestations of God
 world/philosophy/problem	Problem	1	0	What is a 'problem' and what afflicts the present day world
 world/philosophy/solution	Solution	1	0	What is the solution to the present day world's problem
 #	world/philosophy/religion	Religion	1	0	Religion
