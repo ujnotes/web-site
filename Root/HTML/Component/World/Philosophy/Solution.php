@@ -8,16 +8,16 @@
 		In the earlier <a class='content-link XURL' href='/world/philosophy/problem' data-target='/world/philosophy/problem' data-title='Philosophy'>article</a> I concluded that the main problem of the present day world is only: "man's ignorance and stupidity"<br>
 		<br>
 		To begin with, first of all we need to understand the nature of reality.<br>
-		While there have always be very good people like Gandhi and Buddha, willing to even sacrifice their lives for the greater good of others, at the same time there also have been people like Hitler and the terrorists<br>
+		While there have always been very good people like Gandhi and Buddha, willing to even sacrifice their lives for the greater good of others, there also have been people like Hitler and the terrorists. Keen to inflict maximum carnage.<br>
 		Unfortunately, this will continue to happen.<br>
-		That’s just how nature works. Nature loves wars - the living fight and the best who survive, come out<br>
-		Interestingly we have already reached the pinnacle of this - a war now means total annihilation<br>
+		That’s just how nature works. Nature loves wars - the living fight and the best who survive, live on<br>
+		Interestingly we have already reached the pinnacle of this - a war now almost means total annihilation<br>
 		Now nature, needs us to not fight but cooperate.<br>
 		<br>
 		Due to the expanse of knowledge and technology and the consequential equalization of more and more of the population in terms of economy, human rights and education the 'amount of evil' has been and will be forever diminishing.<br>
 		But recalling "Murphy's Law": "Whatever can happen, will", we need to structure our systems such that the wrongs cannot happen.<br>
-		History teaches us the same. Before and during WWII the media was completely controlled by the Nazis and used to mobilize their destructive ideas in mass.<br>
-		Thus now it is widely accepted and thus practiced at least in the modern societies, to never allow a totalitarian control of the media by any one party.<br>
+		History teaches this. Before and during WWII the media was completely controlled by the Nazis and used to mobilize their destructive ideas en masse.<br>
+		Thus now it is widely understood and thus practiced at least in the modern societies, to never allow a totalitarian control of the media by any one party.<br>
 	</p>
 	<p>
 		Darkness does not equal light. Darkness is nothing but just the mere absence of light. And so ‘evil’ and ‘good’ are not equal.<br>
@@ -25,7 +25,7 @@
 		But man is a special kind of fool - even though the knowledge has been found and presented to him he refuses to accept it.<br>
 		This has to do with his 'selfishness'. His reluctance to change his old ways, to put in that 'extra effort'.
 		In fact man is so foolish that he has even been fooled to do both: 'evil and good' against his own personal interests and likings. Like in the exploitations by 'religious leaders' and 'offer peddlers of capitalism'<br>
-		This stupidity of man has in the past and continues to devastate the world.<br>
+		This stupidity of man has in the past and continues to this day - to devastate the world.<br>
 	</p>
 	<p>
 		Since the system itself comprises of people and the people are dependent on the system, the solution boils down to two inter-dependent factors that need to be addressed simultaneously:

@@ -1,8 +1,10 @@
 <div class='message'>
 	<span id='home-message'>
-		<span>Hello,</span>
 		<p>
-			I am <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a><br>
+			Hello,<br>
+			I am <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
+		</p>
+		<p>
 			Here I share my thoughts, findings and recommendations.
 		</p>
 		<p>
