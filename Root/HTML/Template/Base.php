@@ -72,7 +72,7 @@
 	<?php
 		if($bPublish) {
 	?>
-			<script src="https://cdn.ravenjs.com/3.16.1/raven.min.js" crossorigin="anonymous"></script>
+			<script src="https://cdn.ravenjs.com/3.22.2/raven.min.js" crossorigin="anonymous"></script>
 			<script><?php require '../JS/Fragment/Sentry.php' ?></script>
 	<?php
 		}
