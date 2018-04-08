@@ -16,7 +16,7 @@
 			And computers &amp; tech.
 		</p>
 		<p>
-			Follow and subscribe to 'Ujnotes' via the social links down below.
+			Follow 'Ujnotes' by subscribing via the social channels down below.
 		</P>
 	</span>
 	<span id='profile-image-container'>

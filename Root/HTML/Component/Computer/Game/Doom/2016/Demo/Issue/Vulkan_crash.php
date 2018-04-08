@@ -29,9 +29,8 @@
 		You can manually replace <code class='inline'>vulkan.dll</code> file with <code class='inline'>vulkan-1-1-0-21-0.dll</code><br>
 		Or use the following commands in a console with administrative rights.
 	</p>
-	<pre class='indent-20'><code class='block'>cd %Windows%\System32
-copy vulkan-1.dll vulkan-1.dll.bak
-del vulkan-1.dll
+	<pre class='indent-20'><code class='block'>cd %windows%\system32
+move vulkan-1.dll vulkan-1.dll.bak
 copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	<h3>
 		Caution
