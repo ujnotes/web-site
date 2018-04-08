@@ -249,11 +249,15 @@ div#path {
 	margin: 28px 0
 }
 .pml-open #path,.hide_path_title_updated #path,.pml-open #title,.hide_path_title_updated #title,.pml-open #updated,.hide_path_title_updated #updated,.hide {
-	opacity: 0
+	opacity: 0;
 }
 
 .hide {
 	transition: all 0.3s;
+}
+
+.pml-open #canvas-main.hide {
+	transition: 0s !important;
 }
 
 .hide_scale {
@@ -301,14 +305,41 @@ h1#title {
 	padding-bottom: 16px
 }
 
+#me-table div {
+	overflow: hidden;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
 #me-table .R1 {
+	float: left;
 	text-align: right;
 	width: 100px;
-	color: #69b7cf
+	color: #69b7cf;
 }
 
 #me-table .R2 {
-	text-align: left
+	float: left;
+	padding-left: 10px;
+	text-align: left;
+	max-width: 80%;
+}
+@media (max-width: 540px) {
+
+	#me-table div {
+	}
+	
+	#me-table .R1 {
+		text-align: left !important;
+	}
+	
+	#me-table .R2 {
+		padding-left: 45px !important;
+		clear: both;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	
 }
 #content-timeline {
 	padding-top: 8px
@@ -326,7 +357,8 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	height: 100%;
-	font-family: Abel,Arial,Verdana,sans-serif
+	font-family: Abel,Arial,Verdana,sans-serif;
+	color: #5a5a5a;
 }
 
 .center {
@@ -362,17 +394,16 @@ body {
 	color: #69b7cf!important
 }
 
-.content-link-grey {
+.content-link-gray {
 	text-decoration: none;
 	color: #bbbbbb!important;
 	transition: all ease-out 0.3s;
 }
 
-.content-link-grey:hover {
+.content-link-gray:hover {
 	text-decoration: none;
 	color: #69b7cf!important
 }
-
 @font-face {
 	font-family: 'Abel';
 	font-style: normal;
@@ -464,7 +495,7 @@ body {
 	text-decoration: none
 }
 
-#loading {
+#notification {
 	display: inline-block;
 	font-size: 12px;
 	color: #aaa!important;
@@ -511,7 +542,7 @@ span.header-logo {
 	margin-bottom: -4px
 }
 #menu-button {
-	margin: 11px 0 0 82px;
+	margin: 13px 0 0 82px;
 	display: inline-block;
 	float: left;
 	background-size: contain;
@@ -763,6 +794,59 @@ span.header-logo {
 	min-height: 100%;
 	overflow: auto
 }
+#wait_loader {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: -18px;
+	width: 100%;
+	height: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	background: linear-gradient(90deg, #69B7CF, #ddf2f9);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 2s ease infinite;
+	-moz-animation: Gradient 2s ease infinite;
+	animation: Gradient 2s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 #home-message {
 	float: left;
@@ -866,6 +950,7 @@ var trackOutboundLink = function(title, url) {
 }(document, 'script', 'facebook-jssdk'));</script>
 	<script async src='//apis.google.com/js/platform.js' defer></script>
 	<script async src='//platform.twitter.com/widgets.js' charset='utf-8'></script>
+	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class=" ">
 		<div id='content-wrapper'>
 		<div id='header-wrapper' style='overflow: hidden'>
@@ -1057,7 +1142,7 @@ var trackOutboundLink = function(title, url) {
 			</span>
 		</div>
 		<div class='footer-content' id='footer-rights'>
-			<a class='content-link-grey XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
+			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>
 		<div class='footer-content'>
 			by <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me' rel='author'>Ujjwal Singh</a>

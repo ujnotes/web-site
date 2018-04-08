@@ -249,11 +249,15 @@ div#path {
 	margin: 28px 0
 }
 .pml-open #path,.hide_path_title_updated #path,.pml-open #title,.hide_path_title_updated #title,.pml-open #updated,.hide_path_title_updated #updated,.hide {
-	opacity: 0
+	opacity: 0;
 }
 
 .hide {
 	transition: all 0.3s;
+}
+
+.pml-open #canvas-main.hide {
+	transition: 0s !important;
 }
 
 .hide_scale {
@@ -301,14 +305,41 @@ h1#title {
 	padding-bottom: 16px
 }
 
+#me-table div {
+	overflow: hidden;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
 #me-table .R1 {
+	float: left;
 	text-align: right;
 	width: 100px;
-	color: #69b7cf
+	color: #69b7cf;
 }
 
 #me-table .R2 {
-	text-align: left
+	float: left;
+	padding-left: 10px;
+	text-align: left;
+	max-width: 80%;
+}
+@media (max-width: 540px) {
+
+	#me-table div {
+	}
+	
+	#me-table .R1 {
+		text-align: left !important;
+	}
+	
+	#me-table .R2 {
+		padding-left: 45px !important;
+		clear: both;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	
 }
 #content-timeline {
 	padding-top: 8px
@@ -326,7 +357,8 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	height: 100%;
-	font-family: Abel,Arial,Verdana,sans-serif
+	font-family: Abel,Arial,Verdana,sans-serif;
+	color: #5a5a5a;
 }
 
 .center {
@@ -362,17 +394,16 @@ body {
 	color: #69b7cf!important
 }
 
-.content-link-grey {
+.content-link-gray {
 	text-decoration: none;
 	color: #bbbbbb!important;
 	transition: all ease-out 0.3s;
 }
 
-.content-link-grey:hover {
+.content-link-gray:hover {
 	text-decoration: none;
 	color: #69b7cf!important
 }
-
 @font-face {
 	font-family: 'Abel';
 	font-style: normal;
@@ -464,7 +495,7 @@ body {
 	text-decoration: none
 }
 
-#loading {
+#notification {
 	display: inline-block;
 	font-size: 12px;
 	color: #aaa!important;
@@ -511,7 +542,7 @@ span.header-logo {
 	margin-bottom: -4px
 }
 #menu-button {
-	margin: 11px 0 0 82px;
+	margin: 13px 0 0 82px;
 	display: inline-block;
 	float: left;
 	background-size: contain;
@@ -763,6 +794,59 @@ span.header-logo {
 	min-height: 100%;
 	overflow: auto
 }
+#wait_loader {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: -18px;
+	width: 100%;
+	height: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	background: linear-gradient(90deg, #69B7CF, #ddf2f9);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 2s ease infinite;
+	-moz-animation: Gradient 2s ease infinite;
+	animation: Gradient 2s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 #home-message {
 	float: left;
@@ -866,6 +950,7 @@ var trackOutboundLink = function(title, url) {
 }(document, 'script', 'facebook-jssdk'));</script>
 	<script async src='//apis.google.com/js/platform.js' defer></script>
 	<script async src='//platform.twitter.com/widgets.js' charset='utf-8'></script>
+	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class=" ">
 		<div id='content-wrapper'>
 		<div id='header-wrapper' style='overflow: hidden'>
@@ -985,123 +1070,108 @@ var trackOutboundLink = function(title, url) {
 </div>
 								<div id='canvas-main'>
 									<div id='content'>
-										<div class='center'>
-	<table id="me-table">
-		<tr>
-			<td class="R1">intro</td>
-			<td class="R2">
+										<div class="message center">
+	<div id='me-table'>
+		<div>
+			<span class='R1'>intro</span>
+			<span class='R2'>
 				I am Ujjwal Singh from Nepal living in Bangalore, India
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">I believe</td>
-			<td>
-				<blockquote>
-					We all belong to one family.<br>
-					There is no personal God, and no literal 'heaven' and 'hell'.<br>
-					In doing the right thing; Not for the greed of a personal favor like the perks of a 'heaven' but because it is the right thing to do.<br>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>i believe</span>
+			<span class='R2'>We all belong to one family.<br>
+					There is no 'personal' God, and no literal 'heaven' and 'hell'.<br>
+					Do the 'right thing'; Not for the greed of a personal favour like the perks of a 'heaven' but becuase it is the right thing to do.<br>
 
-					Technology is the biggest game-changer. We all will be 'one' - one fine day.<br>
-					Money will cease to exist and there will only be: number of 'likes'
-				</blockquote>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">email</td>
-			<td class="R2">
-				<a class="content-link" href="mailto:ujjwal@ujnotes.com?subject=Ujnotes">ujjwal@ujnotes.com</a><br>
-				<a class="content-link" href="mailto:ujjwalsingh@outlook.com?subject=Ujnotes">ujjwalsingh@outlook.com</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">paypal</td>
-			<td class="R2">
-				<a class="content-link" href="https://paypal.me/ujlion">ujLion</a><br>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">bitcoin</td>
-			<td class="R2">
-				<a class="content-link" href="bitcoin:19jAgQQjbR7CJv49MHmwDctWA5QtwMKkUB">19jAgQQjbR7CJv49MHmwDctWA5QtwMKkUB</a><br>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">blog</td>
-			<td class="R2">
-				<a class="content-link" href="https://ujnotes.com" onclick='trackOutboundLink("ujnotes", "https://ujnotes.com"); return false;'>ujnotes.com</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+					Technology is the biggest game-changer; we all will be 'one' - one fine day. That day &ndash;
+					&nbsp;money would cease to exist and there will only be: number of likes
+			</span>
+		</div>
+		<div>
+			<span class='R1'>email</span>
+			<span class='R2'>
+				<a class='content-link' href="mailto:ujjwal@ujnotes.com?subject=Ujnotes">ujjwal@ujnotes.com</a><br>
+				<a class='content-link' href="mailto:ujjwalsingh@outlook.com?subject=Ujnotes">ujjwalsingh@outlook.com</a>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>paypal</span>
+			<span class='R2'>
+				<a class='content-link' href='https://paypal.me/ujLion'>ujLion</a><br>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>blog</span>
+			<span class='R2'>
+				<a class='content-link' href='https://ujnotes.com' onclick="trackOutboundLink('ujnotes', 'https://ujnotes.com'); return false;">ujnotes.com</a>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				linkedIn
-			</td>
-			<td class="R2">
-				<a href="https://in.linkedin.com/in/ujLion" onclick='trackOutboundLink("uj-linkedin", "https://in.linkedin.com/in/ujlion"); return false;'>
-					<img src="https://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Ujjwal Singh's profile on LinkedIn">
+			</span>
+			<span class='R2'>
+				<a href='https://in.linkedin.com/in/ujLion' onclick="trackOutboundLink('uj-linkedin', 'https://in.linkedin.com/in/ujLion'); return false;">
+					<img src='https://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png' width='160' height='33' border='0' alt="View Ujjwal Singh's profile on LinkedIn">
 				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				résumé
-			</td>
-			<td class="R2">
-				<a class="content-link" href="https://stackoverflow.com/cv/ujjwal" onclick='trackOutboundLink("uj-so-cv", "https://stackoverflow.com/cv/ujjwal"); return false;'>StackOverflow&ndash;Careers</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+			</span>
+			<span class='R2'>
+				<a class='content-link' href='https://stackoverflow.com/cv/ujjwal' onclick="trackOutboundLink('uj-so-cv', 'https://stackoverflow.com/cv/ujjwal'); return false;">StackOverflow &ndash; careers</a>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				stackOverflow
-			</td>
-			<td class="R2">
-				<a href="https://stackoverflow.com/users/483588/ujjwal-singh" onclick='trackOutboundLink("uj-so", "https://stackoverflow.com/users/483588/ujjwal-singh"); return false;'>
-					<img src="https://stackoverflow.com/users/flair/483588.png?theme=dark" width="208" height="58" alt="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+			</span>
+			<span class='R2'>
+				<a href='https://stackoverflow.com/users/483588/ujjwal-singh' onclick="trackOutboundLink('uj-so', 'https://stackoverflow.com/users/483588/ujjwal-singh'); return false;">
+					<img src='https://stackoverflow.com/users/flair/483588.png?theme=dark' width='208' height='58' alt="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				facebook
-			</td>
-			<td class="R2">
-				<a href="https://www.facebook.com/ujjwalSinghX" target="_TOP" title="Ujjwal Singh" onclick='trackOutboundLink("uj-fb", "https://www.facebook.com/ujjwalsinghx"); return false;'>
-					<img src="https://badge.facebook.com/badge/100000014591845.2128.1052548703.png" style="border: 0px;" />
+			</span>
+			<span class='R2'>
+				<a href='https://www.facebook.com/ujjwalSinghX' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalSinghX'); return false;">
+					<img src='https://badge.facebook.com/badge/100000014591845.2128.1052548703.png' style="border: 0px;" />
 				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				instagram
-			</td>
-			<td class="R2">
-				<a class="content-link" href="https://instagram.com/ujLion" target="_TOP" title="Ujjwal Singh" onclick='trackOutboundLink("uj-ig", "https://instagram.com/ujlion"); return false;'>
+			</span>
+			<span class='R2'>
+				<a class='content-link' href='https://instagram.com/UjLion' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink('uj-ig', 'https://instagram.com/UjLion'); return false;">
 					ujLion
 				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">
+			</span>
+		</div>
+		<div>
+			<span class='R1'>
 				google+
-			</td>
-			<td class="R2">
-				<div id="me_g-plus">
-				<div class="g-plus" data-href="https://plus.google.com/102060168325098516665" rel="author"></div>
+			</span>
+			<span class='R2'>
+				<div id='me_g-plus'>
+				<div class='g-plus' data-href='https://plus.google.com/102060168325098516665' rel='author'></div>
 				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">twitter</td>
-			<td class="R2">
-				<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/spacex">@SpaceX</a> You guys did it! - congratulations :). Looking forward to more such morning - where the world has just changed.. Salutes</p>&mdash; Ujjwal Singh (@ujLion) <a href="https://twitter.com/Ujlion/status/679166674910625793">December 22, 2015</a></blockquote>
-			</td>
-		</tr>
-		<tr>
-			<td class="R1">projects</td>
-			<td class="R2">
-				<a class="content-link" href="https://wcodes.org" onclick='trackOutboundLink("wcodes", "https://wcodes.org"); return false;'>wcodes.org</a> &ndash; enCode with Words
-			</td>
-		</tr>
-	</table>
+			</span>
+		</div>
+		<div>
+			<span class='R1'>twitter</span>
+			<span class='R2'>
+				<blockquote class='twitter-tweet' lang='en'><p lang='en' dir='ltr'><a href='https://twitter.com/SpaceX'>@SpaceX</a> You guys did it! - congratulations :). Looking forward to more such morning - where the world has just changed.. Salutes</p>&mdash; Ujjwal Singh (@ujLion) <a href='https://twitter.com/Uj013/status/679166674910625793'>December 22, 2015</a></blockquote>
+			</span>
+		</div>
+	</div>
 </div>
 									</div>
 								</div>
@@ -1117,7 +1187,7 @@ var trackOutboundLink = function(title, url) {
 		<div id='updated'>
 			Updated:
 			<span id='date'>
-				2017 Jul 05			</span>
+				2018 Apr 08			</span>
 		</div>
 	</div>
 	<div class='shadow-scroll-bottom'></div>
@@ -1163,7 +1233,7 @@ var trackOutboundLink = function(title, url) {
 			</span>
 		</div>
 		<div class='footer-content' id='footer-rights'>
-			<a class='content-link-grey XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
+			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>
 		<div class='footer-content'>
 			by <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me' rel='author'>Ujjwal Singh</a>
