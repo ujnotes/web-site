@@ -25,7 +25,7 @@
 			</span>
 		</div>
 		<div class='footer-content' id='footer-rights'>
-			<a class='content-link-grey XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
+			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>
 		<div class='footer-content'>
 			by <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me' rel='author'>Ujjwal Singh</a>

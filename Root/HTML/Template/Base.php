@@ -40,6 +40,7 @@
 <?php
 	}
 ?>
+	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class="<?php echo $menu_active_class; echo ($id == 'root'? ' '.'hide_path_title_updated' : ' ') ?>">
 		<div id='content-wrapper'>
 		<?php require '../../HTML/Fragment/Header.php'; ?>
