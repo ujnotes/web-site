@@ -248,7 +248,7 @@ div#path {
 #sub-list {
 	margin: 28px 0
 }
-.pml-open #path,.hide_path_title_updated #path,.pml-open #title,.hide_path_title_updated #title,.pml-open #updated,.hide_path_title_updated #updated,.hide {
+.pml-open #path, .hide_path_title_updated #path, .pml-open #title, .hide_path_title_updated #title, .pml-open #updated, .hide_path_title_updated #updated, .hide {
 	opacity: 0;
 }
 
@@ -260,17 +260,22 @@ div#path {
 	transition: 0s !important;
 }
 
-.hide_scale {
+.hide_scale#title-container {
   transform: scaleY(0);
+	transition: all 0.3s;
+	max-height: 0px !important;
 }
 div#title-container {
-	text-align: center
+	text-align: center;
+	transition: all 0.3s;
+	will-change: opacity, scaleY;
+	max-height: 58px;
 }
 
 h1#title {
 	display: inline-block;
 	transition: all 0.3s;
-	will-change: opacity
+	will-change: opacity, scaleY;
 }
 
 #google_translate_element {
@@ -743,7 +748,7 @@ span.header-logo {
 	
 }
 #main-wrapper {
-	margin: 0 auto;
+	margin: -8px auto 0;
 	padding: 0 20px;
 	height: 100%;
 	background: #fff;
@@ -1049,7 +1054,7 @@ var trackOutboundLink = function(title, url) {
 							<div id='path-container'><div id=path>	<a class='XURL content-link' href='/' data-target='root' data-title=''>&#8962; </a>
 	<span class='path-separator'>\</span>
 </div></div>
-							<div id='title-container'><h1 id='title'>About</h1></div>
+							<div id='title-container' class=""><h1 id='title'>About</h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<div id='nav-menu'>
 	<div class='nav-menu_container'>

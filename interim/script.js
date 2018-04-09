@@ -104,9 +104,10 @@ function loadCanvas(target, title) {
 	scrollTop();
 	initLoading();
 	if(target == 'root')
-		classie.add(document.getElementById('title'), 'hide_scale');
+		classie.add(document.getElementById('title-container'), 'hide_scale');
 	else
-		classie.remove(document.getElementById('title'), 'hide_scale');
+		classie.remove(document.getElementById('title-container'), 'hide_scale');
+	classie.add(document.getElementById('path'), 'hide');
 	classie.add(document.getElementById('title'), 'hide');
 
 	var xmlhttp = new XMLHttpRequest();
@@ -128,7 +129,7 @@ function loadCanvas(target, title) {
 					var resp = JSON.parse(xmlhttp.responseText);
 					document.title = resp.desc + ' - ' + PROJECT_TITLE;
 					if(target == 'root')
-						updatePathTitle('', '');
+						updatePathTitle('', '&nbsp;');
 					else
 						updatePathTitle(resp.path, title);
 					syncScrollReload(startTime, resp, target);
@@ -220,6 +221,7 @@ function updatePathTitle(path, title) {
 	setTimeout(function() {
 		document.getElementById('path').innerHTML = path;
 		document.getElementById('title').innerHTML = title;
+		classie.remove(document.getElementById('path'), 'hide');
 		classie.remove(document.getElementById('title'), 'hide');
 	}, 300);
 }
