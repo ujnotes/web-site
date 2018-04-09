@@ -1,7 +1,10 @@
-
 #home-message {
 	float: left;
 	display: inline-block
+}
+
+#home-message > p:first-child {
+	margin-top: -2px;
 }
 
 #home-menu {
