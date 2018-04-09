@@ -260,7 +260,7 @@ div#path {
 	transition: 0s !important;
 }
 
-.hide_scale#title-container {
+.hide_scale#title-container, .hide_scale#path-container {
   transform: scaleY(0);
 	transition: all 0.3s;
 	max-height: 0px !important;
@@ -849,10 +849,13 @@ span.header-logo {
 		background-position: 0% 50%
 	}
 }
-
 #home-message {
 	float: left;
 	display: inline-block
+}
+
+#home-message > p:first-child {
+	margin-top: -2px;
 }
 
 #home-menu {
@@ -1051,7 +1054,7 @@ var trackOutboundLink = function(title, url) {
 						<div id='google_translate_element'></div>
 						<div id='search_box'><gcse:search></gcse:search></div>
 						<div id='canvas-wrapper'>
-							<div id='path-container'><div id=path>&nbsp;</div></div>
+							<div id='path-container' class="hide_scale"><div id=path>&nbsp;</div></div>
 							<div id='title-container' class="hide_scale"><h1 id='title'>&nbsp;</h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<div id='nav-menu'>

@@ -103,10 +103,14 @@ function loadCanvas(target, title) {
 	syncScrollReload.startTime = null;
 	scrollTop();
 	initLoading();
-	if(target == 'root')
+	if(target == 'root') {
+		classie.add(document.getElementById('path-container'), 'hide_scale');
 		classie.add(document.getElementById('title-container'), 'hide_scale');
-	else
+	}
+	else {
+		classie.remove(document.getElementById('path-container'), 'hide_scale');
 		classie.remove(document.getElementById('title-container'), 'hide_scale');
+	}
 	classie.add(document.getElementById('path'), 'hide');
 	classie.add(document.getElementById('title'), 'hide');
 
