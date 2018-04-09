@@ -52,7 +52,7 @@
 						<div id='google_translate_element'></div>
 						<div id='search_box'><gcse:search></gcse:search></div>
 						<div id='canvas-wrapper'>
-							<div id='path-container'><div id=path><?php require '../HTML/Fragment/Path.php' ?></div></div>
+							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id=path><?php require '../HTML/Fragment/Path.php' ?></div></div>
 							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $title) ?></h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<?php require '../../HTML/Fragment/Menu.php'; ?>
