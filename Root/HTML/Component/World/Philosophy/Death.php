@@ -38,7 +38,7 @@
 		Organ donation should be considered.
 	</p>
 	<h3>
-		&diams;
+		And so:
 	</h3>
 	<p>
 		Death teaches us the futility of material possessions and self-centeredness.<br>

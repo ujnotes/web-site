@@ -17,7 +17,7 @@
 		You leverage a lot from the society you live in. And so you also have an obligation, a responsibility.
   </p>
 	<h3>
-		&diams;
+		And so:
 	</h3>
 	<p>
 		Be nice, be awesome. Be selfless not selfish. Remember that you are not the centre of the universe.<br>

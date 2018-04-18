@@ -19,7 +19,7 @@
 		Which again are impeded by the first problem.
 	</p>
 	<h3>
-		&diams;
+		And so:
 	</h3>
 	<p>
 		Man, by his nature seeks to control and thus dominate what is around him.<br>
