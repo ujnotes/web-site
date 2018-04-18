@@ -10,17 +10,7 @@
 	</p>
 </div>
 <div id='content-body-separator' class='center'></div>
-<div id='sub-list' class='center'>
-	<div class="sidebar-nav-group">
-		<a class="item_block" id="os" href="/computer/os" target="_blank" onclick='trackOutboundLink("OS","https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ"); return false;'>
-			<div>OS</div>
-		</a><a class="item_block" id="program" href="/computer/program" target="_blank" onclick='trackOutboundLink("Program","https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk"); return false;'>
-			<div>Program</div>
-		</a><a class="item_block" id="programming" href="/computer/programming" target="_blank" onclick='trackOutboundLink("Programming","https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM"); return false;'>
-			<div>Programming</div>
-		</a>
-	</div>
-</div>
+<?php group_image_id('sub-list', 'center page-list', 0, ['computer/os', 'OS', 'http://ujnotes.com'], ['computer/program', 'Program', 'http://ujnotes.com'], ['computer/programming', 'Programming', 'http://ujnotes.com'], ['computer/game', 'Game']); ?>
 <div id='fb_components'>
 	<?php require('..\HTML\Fragment\Component_FB_comments.php') ?>
 	<?php require('..\HTML\Fragment\Component_FB_buttons.php') ?>

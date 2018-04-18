@@ -84,43 +84,39 @@
 	<p>
 		There can be two types of 'god' - that could justify all the above roles, albeit to varying degrees:
 	</p>
-	<div class="indent-20">
-		<ol>
-			<li>An animated, personal god, that has a conscience and personality like ours. Who can see, feel, like and dislike, think, and possibly be happy and sad and calm or angry, like us.</li>
-			<li>An inanimate god, that does not have conscience and thus is neither benevolent or malevolent. It just 'is', and it just does what it does.</li>
-		</ol>
-	</div>
+	<ol class="list-bullet content-list">
+		<li><div>An animated, personal god, that has a conscience and personality like ours. Who can see, feel, like and dislike, think, and possibly be happy and sad and calm or angry, like us.</div></li>
+		<li><div>An inanimate god, that does not have conscience and thus is neither benevolent or malevolent. It just 'is', and it just does what it does.</div></li>
+	</ol>
 	<h3>Personal god</h3>
 	<p>
 		The personal god, that many humans are inclined to believe in simply because it is 'simple', especially for an average human being, for it is like him.<br>
 		However following are some of the inconsistencies associated with the existence of a personal god:
 	</p>
-		<div class="indent-20">
-			<ul>
-				<li>
-					If we and everything else require a creator, then who created the creator?
-				</li>
-				<li>
-					Where is he? Why does he not show up? Say, on one of the television news conferences?
-				</li>
-				<li>
-					If he is so powerful to have created everything, why does he allow so much suffering?<br>
-					Would you let one of your children burn and kill your other child? If a normal human being cannot do that then how could a god who is all so powerful and has all the 'love' of the world "allow" such horrible things to happen?<br>
-					And before riding out on the escape goat of the theory of "free will", do go through the "<a class="content-link" href="https://www.youtube.com/watch?v=WiufsmxiUiU" target="_blank">Evil god challenge</a>" &ndash; by Stephen Law<br>
-					It is simply not justifiable, be it ANY reason; for a all powerful personal god is supposed to be beyond any and all earthly 'reasons' and 'limitations'.
-				</li>
-				<li>
-					Why are 'godly' i.e. holy objects like a book of the religion, an idol not discovered outside this planet?
-				</li>
-				<li>
-					Effectively, there is no undisputable evidence of a supernatural entity altering the world.<br>
-					While we are still in the process of knowing more, by now we know why diseases happen, why earthquakes happen etc.
-				</li>
-				<li>
-					Why the creation of life is scientifically explainable by the theories of 'the Big bang' and 'Evolution' that have empirical physical evidence in support.
-				</li>
-			</ul>
-		</div>
+	<ul class="list-bullet content-list">
+		<li>
+			<div>If we and everything else require a creator, then who created the creator?</div>
+		</li>
+		<li>
+			<div>Where is he? Why does he not show up? Say, on one of the television news conferences?</div>
+		</li>
+		<li>
+			<div>If he is so powerful to have created everything, why does he allow so much suffering?<br>
+			Would you let one of your children burn and kill your other child? If a normal human being cannot do that then how could a god who is all so powerful and has all the 'love' of the world "allow" such horrible things to happen?<br>
+			And before riding out on the escape goat of the theory of "free will", do go through the "<a class="content-link" href="https://www.youtube.com/watch?v=WiufsmxiUiU" target="_blank">Evil god challenge</a>" &ndash; by Stephen Law<br>
+			It is simply not justifiable, be it ANY reason; for a all powerful personal god is supposed to be beyond any and all earthly 'reasons' and 'limitations'.</div>
+		</li>
+		<li>
+			<div>Why are 'godly' i.e. holy objects like a book of the religion, an idol not discovered outside this planet?</div>
+		</li>
+		<li>
+			<div>Effectively, there is no undisputable evidence of a supernatural entity altering the world.<br>
+			While we are still in the process of knowing more, by now we know why diseases happen, why earthquakes happen etc.</div>
+		</li>
+		<li>
+			<div>Why the creation of life is scientifically explainable by the theories of 'the Big bang' and 'Evolution' that have empirical physical evidence in support.</div>
+		</li>
+	</ul>
 	<p>
 		Thus, either a personal god simply does not exist and neither ever did or is an 'evil' god.
 	</p>

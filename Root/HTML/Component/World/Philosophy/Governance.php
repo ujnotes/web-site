@@ -8,7 +8,7 @@
 		<li>By the people, for the people</li>
 	</ol>
 </p>
-<ul class="list-bullet">
+<ul class="list-bullet content-list">
 	<li>
 		Totalitarianism
 		<p>

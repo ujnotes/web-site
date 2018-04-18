@@ -13,6 +13,9 @@ Root\Resource\	launcher-icon-1-5x.png	\	launcher-icon-1-5x.png
 Root\Resource\	launcher-icon-2x.png	\	launcher-icon-2x.png
 Root\Resource\	launcher-icon-3x.png	\	launcher-icon-3x.png
 Root\Resource\	launcher-icon-4x.png	\	launcher-icon-4x.png
+Root\Resource\	Root.svg	\	root.svg
+Root\Resource\	Placeholder.svg	\resource\	placeholder.svg
+Root\Resource\	External.svg	\resource\	external.svg
 Root\Resource\World\	Index.jpg	\world\	index.jpg
 Root\Resource\World\Philosophy\	Index.jpg	\world\philosophy\	index.jpg
 Root\Resource\World\Philosophy\	Life.jpg	\world\philosophy\	life.jpg
@@ -25,3 +28,6 @@ Root\Resource\World\Philosophy\Solution\	Paths.svg	\world\philosophy\solution\	p
 Root\Resource\World\Philosophy\Solution\	Man-people-system.svg	\world\philosophy\solution\	man-people-system.svg
 Root\Resource\Computer\	Index.jpg	\computer\	index.jpg
 Root\Resource\Computer\Game\	Index.jpg	\computer\game\	index.jpg
+Root\Resource\Computer\OS\	Index.jpg	\computer\os\	index.jpg
+Root\Resource\Computer\Program\	Index.jpg	\computer\program\	index.jpg
+Root\Resource\Computer\programming\	Index.jpg	\computer\programming\	index.jpg
