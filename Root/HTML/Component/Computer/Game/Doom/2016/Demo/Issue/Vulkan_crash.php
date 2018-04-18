@@ -27,11 +27,12 @@
 	</p>
 	<p>
 		You can manually replace <code class='inline'>vulkan.dll</code> file with <code class='inline'>vulkan-1-1-0-21-0.dll</code><br>
-		Or use the following commands in a console with administrative rights.
+		Or use the following commands in a console with <em>administrative rights</em>.
 	</p>
 	<pre class='indent-20'><code class='block'>cd %windows%\system32
 move vulkan-1.dll vulkan-1.dll.bak
 copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
+	* the file version on your computer may be different.
 	<h3>
 		Caution
 	</h3>
@@ -42,9 +43,9 @@ copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	<h3>
 		Requirements
 	</h3>
-	<ul class="list-bullet">
-		<li>Vulkan compatible graphics drivers</li>
-		<li>Administrator rights</li>
+	<ul class="list-bullet content-list">
+		<li><div>Vulkan compatible graphics drivers</div></li>
+		<li><div>Administrator rights</div></li>
 	</ul>
 	<h3>
 		Fallback solution
@@ -86,7 +87,9 @@ copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	</h3>
 	<p>
 		The information provided here is as is, and without any warranties.<br>
-		You will be responsible and not me, for any damage inadvertently caused due to it.
+		You will be responsible and not me, for any damage caused inadvertently due to it.<br>
+		<br>
+		All trademarks are properties of their respective owenrs.
 	</p>
 </div>
 <?php require('..\HTML\Fragment\Component_bottom.php') ?>

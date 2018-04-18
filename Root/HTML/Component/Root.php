@@ -20,7 +20,7 @@
 			And computers &amp; tech.
 		</p>
 		<p>
-			Follow 'Ujnotes' by subscribing via the social channels down below.
+			Follow 'Ujnotes' via the social channels down below.
 		</P>
 	</span>
 	<span id='profile-image-container'>
