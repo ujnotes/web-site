@@ -97,7 +97,7 @@ blockquote {
 }
 
 .message {
-	padding: 0 6px 10px;
+	padding: 0 6px 18px;
 	clear: both;
 	overflow: hidden
 }
@@ -150,40 +150,56 @@ blockquote {
 .indent-20 {
 	padding-left: 20px
 }
-.content-list>li {
-	background-color: transparent;
-	vertical-align: baseline;
-	padding-bottom: 14px
+.message > .list-bullet.content-list {
+	padding-left: 16px !important;
 }
 
-.content-list-2>li {
-	padding-bottom: 8px
+.message > .list-bullet.content-list p {
+	padding-left: 10px !important;
+}
+
+p.content-list-example {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content-list ul, .content-list ol {
+	padding-left: 20px;
+}
+
+.content-list > li {
+	background-color: transparent;
+	vertical-align: baseline;
+	padding-bottom: 14px;
+}
+
+.content-list-2 > li {
+	padding-bottom: 8px;
 }
 
 .content-li-title {
 	font-size: larger;
 	font-weight: bold;
 	padding-bottom: 4px;
-	color: #69b7cf!important
-}
-
-ul.list-bullet {
-	list-style: none!important
+	color: #69b7cf !important;
 }
 
 ul.list-bullet li {
-	padding-left: 1em;
-	text-indent: -.7em
-}
-
-ul.list-bullet li:before {
-	content: "\002022";
+	list-style-type: disc;
 	color: #c8c8c8!important;
-	padding-right: 7px
 }
 
-ul.content-list-2 {
-	padding-left: 10px
+ul.list-bullet > li > div, ol.list-bullet > li > div {
+	color: #5a5a5a;
+}
+
+ul.list-bullet li, ol.list-bullet li {
+	padding-bottom: 0px;
+	margin-left: 6px;
+}
+
+ul.content-list-2, ol.content-list-2 {
+	padding-left: 10px;
 }
 #table_version>tbody>tr>td:first-child {
 	color: #808080;
@@ -198,26 +214,37 @@ ul.content-list-2 {
     padding: 16px 0 10px 10px;
     vertical-align: top
 }
-
 #nav-list {
 	padding: 26px 0 36px;
-	max-width: 512px
+	margin-bottom: 28px;
+	max-width: 564px;
 }
 
-#nav-list>a>div {
+#nav-list > a > div, .item_block_text > div {
 	display: inline-block
 }
 
-#nav-menu-up.center-arrow div {
-    margin: auto
+#nav-menu-up.center-arrow > .item_block_text > div {
+	text-align: center;
+	margin: auto;
+	display: block;
 }
 
 #nav-menu-prev {
-	float: left
+	float: left;
 }
 
 #nav-menu-next {
-	float: right
+	float: right;
+}
+
+#nav-menu-next > .item_block_text {
+	text-align: right;
+}
+
+#nav-menu-next > .item_block_text > div {
+	margin-left: 0px;
+	margin-right: 28px;
 }
 
 .path-separator {
@@ -409,6 +436,14 @@ body {
 	text-decoration: none;
 	color: #69b7cf!important
 }
+
+.grow {
+	transition: 0.5s;
+}
+
+.grow:hover {
+	transform: scale(1.1);	
+}
 @font-face {
 	font-family: 'Abel';
 	font-style: normal;
@@ -561,15 +596,15 @@ span.header-logo {
 }
 
 #menu-button:hover path {
-	fill: #56b4d1
+	fill: #56b4d1;
 }
 
 #menu-button:hover {
-	cursor: pointer
+	cursor: pointer;
 }
 
 #menu-button.active path {
-	fill: #56b4d1
+	fill: #56b4d1;
 }
 #translate-button, #search-button {
 	display: inline-block;
@@ -584,26 +619,103 @@ span.header-logo {
 #header_buttons_right path {
 	transition: all ease-out 0.3s;
 }
+.item_block_container {
+	width: 160px;
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
+	transition: 0.75s;
+}
+
+.item_block_image {
+	width: 160px;
+	height: 110px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.item_block_image_visible {
+	object-fit: cover;
+	opacity: 0.85 !important;
+	filter: alpha(opacity=85);
+	transition: opacity 2s !important;
+}
+
+.item_block_image_hidden {
+	object-fit: fill;
+	opacity: 50 !important;
+	filter: alpha(opacity=50);
+	transition: opacity 0.8s !important;
+}
+
+.item_block_container:hover .item_block_image {
+	cursor: pointer;
+	opacity: 1 !important;
+	filter: alpha(opacity=100);
+}
+
+.item_block_text {
+	width: 158px;
+	height: 32px;
+	margin-top: -5px;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-top-color: white;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	color: #69b7cf !important;
+	background-color: white;
+	border-color: #eee;
+	
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: left;
+	line-height: 32px;
+	transition: all ease-out 0.3s;
+}
+
+.item_block_text .external {
+	float: right;
+	padding-top: 5px;
+	padding-right: 7px;
+	margin: 0;
+}
+
+.item_block_container:hover .item_block_text {
+	cursor: pointer;
+	color: white !important;
+	border-color: #69b7cf;
+	background-color: #69b7cf;
+}
+
 .item_block {
 	width: 158px;
 	height: 64px;
 	margin: 5px;
 	border-style: solid;
 	border-width: 1px;
+	border-radius: 5px;
 
-	border-color: #69b7cf;
-	background-color: #69b7cf;
-
+	background: white;
+	border-color: #ddd;
+	color: #69b7cf !important;
+	
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
-	color: white!important;
 	text-align: left;
 	line-height: 64px;
 	transition: all ease-out 0.3s;
 }
 
 .item_block div {
+	margin-left: 28px;
+}
+
+.item_block div, .item_block_text div {
 	margin-left: 28px;
 	font-size: 15px;
 	vertical-align: middle;
@@ -614,15 +726,18 @@ span.header-logo {
 
 .item_block:hover {
 	cursor: pointer;
-	background: white;
-	border-color: #ddd
+	border-color: #69b7cf;
+	background-color: #69b7cf;
+	color: white !important;
 }
 
 .item_block:hover div {
-	color: #69b7cf!important
+	color: white !important;
 }
 
 .item_block-disabled {
+	visibility: hidden;
+	vertical-align: middle;
 	width: 158px;
 	height: 64px;
 	margin: 5px;
@@ -631,17 +746,41 @@ span.header-logo {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #efefef;
-	background-color: #fff!important
+	background-color: #fff !important;
 }
 
 .item_block-placeholder {
-	width: 158px;
+	width: 170px;
 	display: inline-block;
-	height: 0!important;
-	margin: 0 5px!important;
+	height: 0 !important;
+	margin: 0 5px !important;
 	visibility: hidden;
 }
+
+.page-list > .item_block_container {
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.page-list > .item_block_container:hover, .page-list > .item_block:hover {
+	transform: scale(1.05);
+}
+
+.sidebar-nav-group.page-list {
+	margin-left: 0px;
+}
+
+.sidebar-nav-group.page-list > .item_block_container, .sidebar-nav-group.page-list > .item_block {
+	margin: 8px 10px !important;
+}
+@media (max-width: 354px) {
+	#nav-list.page-list > .item_block_container {
+		float: none;
+	}
+}
+
 @media (max-width: 540px) {
+	
 	#main-wrapper {
 		padding:0!important
 	}
@@ -662,15 +801,27 @@ span.header-logo {
 		padding-left: 5px
 	}
 
-	#nav-menu-prev,#nav-menu-next {
-		float: none!important
+	#nav-list {
+		max-width: 354px;
 	}
-
+	
+	#nav-list.page-list > .item_block_container {
+		margin: 10px 6px;
+	}
+	
+	.item_block-disabled {
+		display: none;
+	}
+	
+	.sidebar-nav-group {
+		margin-bottom: 10px !important;
+	}
+	
 	#fb_components {
 		margin-left: 4px!important
 	}
 
-	#home-message>span {
+	#home-message > span {
 		padding-left: 5px
 	}
 
@@ -678,9 +829,10 @@ span.header-logo {
 		padding-left: 0!important
 	}
 
-	#home-menu>div.sidebar-nav-group {
+	#home-menu > div.sidebar-nav-group {
 		padding-left: 12px!important
 	}
+	
 }
 
 @media (max-width: 768px) {
@@ -862,22 +1014,26 @@ span.header-logo {
 	padding-left: 10px
 }
 
-#home-menu>div {
+#home-menu > div {
 	padding-left: 14px
 }
 
-#home-menu>div>a {
+#home-menu .home-menu-group-parent {
+	margin-bottom: 12px;
+}
+
+#home-menu > div > a {
 	text-decoration: none;
 	color: #aaa
 }
 
-#home-menu>div>span {
+#home-menu > div > span {
 	font-style: italic;
 	font-size: smaller;
 	color: #aaa
 }
 
-#home-menu>div.sidebar-nav-group {
+#home-menu > div.sidebar-nav-group {
 	padding-left: 28px
 }
 #profile-image-container {
@@ -960,14 +1116,14 @@ var trackOutboundLink = function(title, url) {
 		<div id='content-wrapper'>
 		<div id='header-wrapper' style='overflow: hidden'>
 	<div id='header-title'>
-	<div id='header-slogan' class='XURL' data-target='root' data-title=''>
-		<a id='header-slogan-href' href='/'>
-			<span id='header-slogan-text'>my notes</span>
-		</a>
-	</div>
-	<div id='header-logo' class='XURL' data-target='root' data-title=''>
-		<a id='header-logo-href' href='/'>
-			<span id='header-logo-image' class='header-logo image'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-185 383.9 192 74" fill="#56B4D1">
+		<div id='header-slogan' class='XURL' data-target='root' data-title=''>
+			<a id='header-slogan-href' href='/'>
+				<span id='header-slogan-text'>my notes</span>
+			</a>
+		</div>
+		<div id='header-logo' class='XURL' data-target='root' data-title=''>
+			<a id='header-logo-href' href='/'>
+				<span id='header-logo-image' class='header-logo image'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-185 383.9 192 74" fill="#56B4D1">
 	<g>
 		<path d="M-150.1,430.1c-0.5,1.3-1.3,2.3-2.2,3.3s-2,1.7-3.3,2.2s-2.6,0.8-4,0.8h-3c-1.4,0-2.8-0.3-4-0.8
 			s-2.4-1.3-3.3-2.2s-1.7-2-2.2-3.3s-0.8-2.6-0.8-4v-32.3h3.8v32.3c0,0.9,0.2,1.8,0.5,2.6s0.8,1.5,1.5,2.1s1.3,1.1,2.1,1.5
@@ -1007,11 +1163,11 @@ var trackOutboundLink = function(title, url) {
 	</g>
 </svg>
 </span>
-		</a>
-	</div>
+			</a>
+		</div>
 	</div>
 	<div id='header-bar'>
-	<div><span class='toggle-push-left image' id='menu-button'><svg xmlns:svg="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-9 1.4 200 200">
+	<div><span class='toggle-push-left image grow' id='menu-button'><svg xmlns:svg="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-9 1.4 200 200">
 	<rect fill="#FFFFFF" x="-9.2" y="1.4" width="200" height="200"/>
 	<g>
 		<path fill="#D9D9D9" d="M163,51c0,3.9-3.1,7-7,7H26c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h130C159.9,44,163,47.1,163,51L163,51z"/>
@@ -1030,12 +1186,12 @@ var trackOutboundLink = function(title, url) {
 	<div id='header-right-list'>
 		<span id='header_buttons_right'>
 			<span id='header_button'>
-				<span id='search-button'><span class='image'><svg xmlns="http://www.w3.org/2000/svg" fill="#D9D9D9" height="30" viewBox="0 0 24 24" width="30">
+				<span id='search-button' class='grow' class='image'><span class='image grow'><svg xmlns="http://www.w3.org/2000/svg" fill="#D9D9D9" height="30" viewBox="0 0 24 24" width="30">
 	<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
 	<path d="M0 0h24v24H0z" fill="none"/>
 </svg>
 </span></span>
-				<span id='translate-button'><span class='image'><svg xmlns="http://www.w3.org/2000/svg" fill="#D9D9D9" viewBox="0 0 24 24" width="30" height="30">
+				<span id='translate-button' class='grow'><span class='image'><svg xmlns="http://www.w3.org/2000/svg" fill="#D9D9D9" viewBox="0 0 24 24" width="30" height="30">
 	<path fill="none" d="M0 0h24v24H0z"/>
 	<path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
 </svg>
@@ -1062,14 +1218,20 @@ var trackOutboundLink = function(title, url) {
 								<div id='nav-menu'>
 	<div class='nav-menu_container'>
 		<div class='sidebar-nav-li sidebar-sub'>
-<div class='sidebar-nav-group'>
-<a class='XURL item_block' href='/' data-target='root' data-title=''><div>\</div></a><a class='XURL item_block' href='/world' data-target='world' data-title='World'><div>World</div></a><a class='XURL item_block' href='/computer' data-target='computer' data-title='Computer'><div>Computer</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
-<div class='sidebar-nav-group'>
-<a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
-<div class='sidebar-nav-group'>
+<div id='' class='sidebar-nav-group page-list'>
+<a
+	class='XURL item_block_container' href='/root' data-target='root' data-title=''>
+<img class='item_block_image item_block_image_visible' src='/root.svg'><div class="item_block_text"><div>home</div></div></a><a
+	class='XURL item_block_container' href='/world' data-target='world' data-title='World'>
+<img class='item_block_image item_block_image_visible' src='/world/index.jpg'><div class="item_block_text"><div>World</div></div></a><a
+	class='XURL item_block_container' href='/computer' data-target='computer' data-title='Computer'>
+<img class='item_block_image item_block_image_visible' src='/computer/index.jpg'><div class="item_block_text"><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<div class='sidebar-nav-group page-list'>
+<a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<div class='sidebar-nav-group page-list'>
 <a class='XURL item_block' href='/feedback' data-target='feedback' data-title='Feedback'><div>Feedback</div></a><a class='XURL item_block' href='/license' data-target='license' data-title='License'><div>License</div></a><a class='XURL item_block' href='/logo' data-target='logo' data-title='Logo'><div>Logo</div></a><a class='XURL item_block' href='/roadmap' data-target='roadmap' data-title='Roadmap'><div>Roadmap</div></a><a class='XURL item_block' href='/changelog' data-target='changelog' data-title='Changelog'><div>Changelog</div></a><a class='XURL item_block' href='/timeline' data-target='timeline' data-title='Timeline'><div>Timeline</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
-<div class='sidebar-nav-group'>
-<a class='XURL item_block' href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a><a class='XURL item_block' href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<div class='sidebar-nav-group page-list'>
+<a class='XURL item_block' href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a><a class='XURL item_block' href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 		</div>
 	</div>
 </div>
@@ -1192,7 +1354,7 @@ var trackOutboundLink = function(title, url) {
 	</div>
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
-			<span class='social'>
+			<span class='social grow'>
 				<a href='https://twitter.com/ujnotesx' id='site-twitter' onclick="trackOutboundLink('ujnotes-twitter', 'https://twitter.com/ujnotesx'); return false;"><span class='image'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 76 76" enable-background="new 0 0 76 76" xml:space="preserve">
 	<path fill="#D9D9D9" d="M76,14.4c-2.8,1.2-5.8,2.1-9,2.5c3.2-1.9,5.7-5,6.9-8.6c-3,1.8-6.3,3.1-9.9,3.8c-2.8-3-6.9-4.9-11.4-4.9
 		C44,7.1,37,14.1,37,22.7c0,1.2,0.1,2.4,0.4,3.6C24.5,25.6,13,19.4,5.3,10c-1.3,2.3-2.1,5-2.1,7.8c0,5.4,2.8,10.2,6.9,13
@@ -1202,7 +1364,7 @@ var trackOutboundLink = function(title, url) {
 </svg>
 </span></a>
 			</span>
-			<span class='social'>
+			<span class='social grow'>
 				<a href='https://facebook.com/ujnotes' id='site-facebook' onclick="trackOutboundLink('ujnotes-facebook', 'https://facebook.com/ujnotes'); return false;"><span class='image'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 76 76">
 	<path fill="#D9D9D9" d="M68.7,3.5H7.3c-2.1,0-3.8,1.7-3.8,3.8v61.4c0,2.1,1.7,3.8,3.8,3.8h33V45.8h-9V35.4h9v-7.7
 		c0-8.9,5.4-13.8,13.4-13.8c3.8,0,7.1,0.3,8,0.4v9.3l-5.5,0c-4.3,0-5.2,2.1-5.2,5.1v6.6h10.3l-1.3,10.4h-9v26.7h17.6
@@ -1210,7 +1372,7 @@ var trackOutboundLink = function(title, url) {
 </svg>
 </span></a>
 			</span>
-			<span class='social'>
+			<span class='social grow'>
 				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><span class='image'><svg id="youtube_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 -158 1024 1024">
 	<path fill="#FFFFFF" d="M407,493l276-143L407,206V493z"/>
 	<path fill="#D9D9D9" d="M407,206l242,161.6l34-17.6L407,206z"/>
