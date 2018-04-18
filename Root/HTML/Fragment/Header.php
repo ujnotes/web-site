@@ -10,6 +10,16 @@
 			<span id='header-logo-image' class='header-logo image'><?php echo file_get_contents('..\..\Resource\Logo_full.svg'); ?></span>
 		</a>
 	</div>
+		<div id='header-slogan' class='XURL' data-target='root' data-title=''>
+			<a id='header-slogan-href' href='/'>
+				<span id='header-slogan-text'>my notes</span>
+			</a>
+		</div>
+		<div id='header-logo' class='XURL' data-target='root' data-title=''>
+			<a id='header-logo-href' href='/'>
+				<span id='header-logo-image' class='header-logo image'><?php echo file_get_contents('..\..\Resource\Logo_full.svg'); ?></span>
+			</a>
+		</div>
 	</div>
 	<div id='header-bar'>
 	<div><span class='toggle-push-left image' id='menu-button'><?php echo file_get_contents('..\..\Resource\Menu_icon.svg'); ?></span></div>

@@ -6,10 +6,10 @@
 	<meta name='title' content="<?php echo $config['project_title'] ?>" >
 	<meta name='author' content="<?php echo $config['author'] ?>" >
 	<meta name='viewport' content="width=device-width, minimum-scale=1.0" >
-	<?php require '../HTML/Fragment/Google_Plus_Meta.php' ?>
-	<?php require '../HTML/Fragment/OG_Meta.php' ?>
-	<?php require '../HTML/Fragment/FB_Meta.php' ?>
-	<?php require '../HTML/Fragment/Twitter_Meta.php' ?>
+	<?php require '../HTML/Fragment/Google_plus_meta.php' ?>
+	<?php require '../HTML/Fragment/OG_meta.php' ?>
+	<?php require '../HTML/Fragment/FB_meta.php' ?>
+	<?php require '../HTML/Fragment/Twitter_meta.php' ?>
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
