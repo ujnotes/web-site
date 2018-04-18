@@ -15,7 +15,7 @@
 		Just like your body is a part of 'you' and is not exactly you, you are a part of something larger.<br>
 		Just as an organ of your body by itself alone does not amount to much, you alone do not amount to much.<br>
 		You leverage a lot from the society you live in. And so you also have an obligation, a responsibility.
-  </p>
+	</p>
 	<h3>
 		And so:
 	</h3>
