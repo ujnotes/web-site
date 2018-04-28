@@ -60,28 +60,26 @@ copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	<h3>
 		Version
 	</h3>
-	<p>
-		<table id='table_version' class='indent-20'>
-			<tbody>
-				<tr>
-					<td>Title</td>
-					<td>DOOM 2016 - Demo</td>
-				</tr>
-				<tr>
-					<td>Source</td>
-					<td>Steam</td>
-				</tr>
-				<tr>
-					<td>Build</td>
-					<td>20160720-180331-purple-razzmatazz<br>
-				</tr>
-				<tr>
-					<td>Date</td>
-					<td>15 March 2017<td>
-				</tr>
-			</tbody>
-		</table>
-	</p>
+	<table id='table_version' class='indent-20'>
+		<tbody>
+			<tr>
+				<td>Title</td>
+				<td>DOOM 2016 - Demo</td>
+			</tr>
+			<tr>
+				<td>Source</td>
+				<td>Steam</td>
+			</tr>
+			<tr>
+				<td>Build</td>
+				<td>20160720-180331-purple-razzmatazz</td>
+			</tr>
+			<tr>
+				<td>Date</td>
+				<td>15 March 2017</td>
+			</tr>
+		</tbody>
+	</table>
 	<h3>
 		Disclaimer
 	</h3>
