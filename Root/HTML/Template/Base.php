@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' itemscope='' itemtype='http://schema.org/'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en' itemscope='' itemtype='http://schema.org/WebPage'>
 <head>
-	<meta http-equiv='X-UA-Compatible' content='chrome=1' >
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' >
 	<meta name='title' content="<?php echo $config['project_title'] ?>" >
 	<meta name='author' content="<?php echo $config['author'] ?>" >
-	<meta name='viewport' content="width=device-width, minimum-scale=1.0" >
+	<meta name='viewport' content="width=device-width, initial-scale=1.0" >
 	<?php require '../HTML/Fragment/Google_plus_meta.php' ?>
 	<?php require '../HTML/Fragment/OG_meta.php' ?>
 	<?php require '../HTML/Fragment/FB_meta.php' ?>
@@ -25,6 +25,7 @@
 	}
 	require '../JS/Fragment/GTranslate.php';
 	require '../JS/Fragment/GCSE.php';
+	require '../JS/Fragment/Adsense_auto.php';
 	require '../JS/Fragment/Project_title.php';
 	require '../CSS/Fragment/CSS.php';
 ?>
@@ -36,7 +37,7 @@
 		require '../JS/Fragment/BodyBegin_FB.php';
 ?>
 	<script async src='//apis.google.com/js/platform.js' defer></script>
-	<script async src='//platform.twitter.com/widgets.js' charset='utf-8'></script>
+	<script async src='//platform.twitter.com/widgets.js'></script>
 <?php
 	}
 ?>
@@ -52,7 +53,7 @@
 						<div id='google_translate_element'></div>
 						<?php require '../HTML/Fragment/GCSE.php' ?>
 						<div id='canvas-wrapper'>
-							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id=path><?php require '../HTML/Fragment/Path.php' ?></div></div>
+							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id='path'><?php require '../HTML/Fragment/Path.php' ?></div></div>
 							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $title) ?></h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<?php require '../../HTML/Fragment/Menu.php'; ?>
