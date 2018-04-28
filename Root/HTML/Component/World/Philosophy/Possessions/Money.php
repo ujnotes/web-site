@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<p>
 		Money - is only a certificate - of how much (of help) the society owes you.
 	</p>

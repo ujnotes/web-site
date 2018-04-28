@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<p>
 		My my my<br>
 	</p>

@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	Write to:<br>
 	<p>
 		<a class='content-link' href='mailto:feedback@ujnotes.com?subject=Feedback'>feedback@ujnotes.com</a>

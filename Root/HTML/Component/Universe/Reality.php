@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<?php $alt='Surreal water droplets on thin fibers'; require('..\HTML\Fragment\Component_cover.php') ?>
 	<p>
 		Why is there something instead of nothing?<br>

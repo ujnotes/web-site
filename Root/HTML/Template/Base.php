@@ -50,7 +50,7 @@
 					<div id='content-wrapper-inside'>
 						<div class='shadow-scroll-top'></div>
 						<div id='google_translate_element'></div>
-						<div id='search_box'><gcse:search></gcse:search></div>
+						<?php require '../HTML/Fragment/GCSE.php' ?>
 						<div id='canvas-wrapper'>
 							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id=path><?php require '../HTML/Fragment/Path.php' ?></div></div>
 							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $title) ?></h1></div>

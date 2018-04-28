@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<?php $alt='A man thinking looking at the sunrise'; require('..\HTML\Fragment\Component_cover.php') ?>
 	<h2 class='center'>Understanding 'I' - the consciousness</h2>
 	<p>

@@ -2,8 +2,8 @@
 	require_once 'Fragment\Item_text.php';
 	require_once 'Fragment\Item_image.php';
 ?>
-<div class='message'>
 	<span id='home-message'>
+<div id='message'>
 		<p>
 			Hello,<br>
 			I am <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.

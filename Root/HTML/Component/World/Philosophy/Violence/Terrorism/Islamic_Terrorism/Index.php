@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<p>
 		Why Muslims?
 		I do not think that ‘Islam’ is the root cause of terrorism. Unfortunately due to the highly volatile conditions in the Islamic region it is perceived that Islam is the problem.

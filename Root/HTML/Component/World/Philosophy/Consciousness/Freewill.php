@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<?php $alt='A road'; require('..\HTML\Fragment\Component_cover.php') ?>
 	<h3>What is freewill?</h3>
 	<p>

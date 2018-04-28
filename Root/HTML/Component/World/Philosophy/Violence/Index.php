@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<p>
 		Why are so many people killed in these senseless acts of violence?
 	</p>

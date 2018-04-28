@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
   <p>
     Individuals come together to function better as a whole
   </p>

@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<?php $alt='A sculpture of a man thinking deeply'; require('..\HTML\Fragment\Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<p class='first-letter-high'>

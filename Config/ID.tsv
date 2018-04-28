@@ -1,43 +1,43 @@
-Id	Title	XURL	JS	Description
-about	About	0	0	More information about the project
-about_me	About me	0	1	Web links of the creator of this project : Ujjwal Singh
-about_site	About site	0	0	List of technology and software used to build this website
-changelog	Changelog	0	0	Log of changes across versions
-faq	FAQ	0	0	Frequently asked questions about this project
-feedback	Feedback	0	0	Links to leave feedback
-license	License	1	0	Copyright licenses for the intellectual properties associated with the project
-logo	Logo	0	0	Logo of Ujnotes
-roadmap	Roadmap	0	0	Future roadmap of features and implementations
-timeline	Timeline	0	0	Markable events in project's lifetime
-root	Ujnotes	1	1	Ujjwal Singh's notes on life and technology
-#	universe	Universe	0	0	Universe
-#	universe/reality	Reality	0	0	Reality
-world	World	1	0	The critical aspects of the world we live in
-world/philosophy	Philosophy	1	0	Philosophical analysis of the dimensions of a human life
-world/philosophy/life	Life	1	0	An understanding of our life
-world/philosophy/death	Death	1	0	An elaboration of death's significance
-#	world/philosophy/consciousness	Consciousness	1	0	Consciousness
-#	world/philosophy/consciousness/freewill	Freewill	1	0	Freewill
-#	world/philosophy/compassion	Compassion	1	0	Compassion
-#	world/philosophy/possessions	Possessions	1	0	Possessions
-#	world/philosophy/possessions/money	Money	1	0	Money
-#	world/philosophy/society	Society	1	0	Society
-#	world/philosophy/governance	Governance	1	0	Governance
-world/philosophy/god	God	1	0	Meaning of God
-world/philosophy/god/no_god	No God	1	0	Inexistence of God
-#	world/philosophy/god/manifestations	Manifestations	1	0	Manifestations of God
-world/philosophy/problem	Problem	1	0	What is a 'problem' and what afflicts the present day world
-world/philosophy/solution	Solution	1	0	What is the solution to the present day world's problem
-#	world/philosophy/religion	Religion	1	0	Religion
-#	world/philosophy/violence	Violence	1	0	Violence
-#	world/philosophy/violence/war	War	1	0	War
-#	world/philosophy/violence/terrorism	Terrorism	1	0	Terrorism
-#	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	1	0	Islamic Terrorism
-#	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	1	0	ISIS
-computer	Computer	1	0	Computer : the information processor
-computer/game	Game	1	0	Computer games
-computer/game/doom	Doom	1	0	A series of first person shooter video games by id software
-computer/game/doom/2016	Doom 2016	1	0	The fourth installment and reboot of the series
-computer/game/doom/2016/demo	Demo	1	0	Doom 2016 Demo
-computer/game/doom/2016/demo/issue	Issues	1	0	Doom 2016 Demo issues
-computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan crash	1	0	Doom 2016 Demo crash with Vulkan : Solution
+Id	Title	JS	Description
+about	About	0	More information about the project
+about_me	About me	1	Web links of the creator of this project : Ujjwal Singh
+about_site	About site	0	List of technology and software used to build this website
+changelog	Changelog	0	Log of changes across versions
+faq	FAQ	0	Frequently asked questions about this project
+feedback	Feedback	0	Links to leave feedback
+license	License	0	Copyright licenses for the intellectual properties associated with the project
+logo	Logo	0	Logo of Ujnotes
+roadmap	Roadmap	0	Future roadmap of features and implementations
+timeline	Timeline	0	Markable events in project's lifetime
+root	Ujnotes	1	Ujjwal Singh's notes on life and technology
+#	universe	Universe	0	Universe
+#	universe/reality	Reality	0	Reality
+world	World	0	The critical aspects of the world we live in
+world/philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life
+world/philosophy/life	Life	0	An understanding of our life
+world/philosophy/death	Death	0	An elaboration of death's significance
+#	world/philosophy/consciousness	Consciousness	0	Consciousness
+#	world/philosophy/consciousness/freewill	Freewill	0	Freewill
+#	world/philosophy/compassion	Compassion	0	Compassion
+#	world/philosophy/possessions	Possessions	0	Possessions
+#	world/philosophy/possessions/money	Money	0	Money
+#	world/philosophy/society	Society	0	Society
+#	world/philosophy/governance	Governance	0	Governance
+world/philosophy/god	God	0	Meaning of God
+world/philosophy/god/no_god	No God	0	Inexistence of God
+#	world/philosophy/god/manifestations	Manifestations	0	Manifestations of God
+world/philosophy/problem	Problem	0	What is a 'problem' and what afflicts the present day world
+world/philosophy/solution	Solution	0	What is the solution to the present day world's problem
+#	world/philosophy/religion	Religion	0	Religion
+#	world/philosophy/violence	Violence	0	Violence
+#	world/philosophy/violence/war	War	0	War
+#	world/philosophy/violence/terrorism	Terrorism	0	Terrorism
+#	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	0	Islamic Terrorism
+#	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS
+computer	Computer	0	Computer : the information processor
+computer/game	Game	0	Computer games
+computer/game/doom	Doom	0	A series of first person shooter video games by id software
+computer/game/doom/2016	Doom 2016	0	The fourth installment and reboot of the series
+computer/game/doom/2016/demo	Demo	0	Doom 2016 Demo
+computer/game/doom/2016/demo/issue	Issues	0	Doom 2016 Demo issues
+computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan crash	0	Doom 2016 Demo crash with Vulkan : Solution

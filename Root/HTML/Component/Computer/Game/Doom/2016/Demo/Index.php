@@ -1,4 +1,4 @@
-<div class='message'>
+<div id='message'>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<p>
 		Contains two levels.<br>

@@ -1,4 +1,4 @@
-<div class="message center">
+<div id='message' class='center'>
 	<div id='me-table'>
 		<div>
 			<span class='R1'>intro</span>
