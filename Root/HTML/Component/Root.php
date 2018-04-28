@@ -2,8 +2,8 @@
 	require_once 'Fragment\Item_text.php';
 	require_once 'Fragment\Item_image.php';
 ?>
-	<span id='home-message'>
 <div id='message'>
+	<div id='home-message'>
 		<p>
 			Hello,<br>
 			I am <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
@@ -22,12 +22,12 @@
 		<p>
 			Follow 'Ujnotes' via the social channels down below.
 		</P>
-	</span>
-	<span id='profile-image-container'>
+	</div>
+	<div id='profile-image-container'>
 		<a id='profile-image' href='#'>
 			<img src='/photo.jpg' alt="Author's picture">
 		</a>
-	</span>
+	</div>
 </div>
 <div class='center' id='content-body-separator'></div>
 <div id='home-menu'>
