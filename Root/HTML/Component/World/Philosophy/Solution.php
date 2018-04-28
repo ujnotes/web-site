@@ -5,7 +5,7 @@
 		What is the solution to the problems of the world?
 	</h3>
 	<p>
-		In the earlier <a class='content-link XURL' href='/world/philosophy/problem' data-target='/world/philosophy/problem' data-title='Philosophy'>article</a> I concluded that the main problem of the present day world is only: "man's ignorance and stupidity"<br>
+		In the earlier <a class="content-link XURL" href='/world/philosophy/problem' data-target='/world/philosophy/problem' data-title='Philosophy'>article</a> I concluded that the main problem of the present day world is only: "man's ignorance and stupidity"<br>
 		<br>
 		To begin with, first of all we need to understand the nature of reality.<br>
 		While there have always been very good people like Gandhi and Buddha, willing to even sacrifice their lives for the greater good of others, there also have been people like Hitler and the terrorists. Keen to inflict maximum carnage.<br>

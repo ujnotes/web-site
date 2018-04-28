@@ -6,7 +6,7 @@
 <div id='message'>
 		<p>
 			Hello,<br>
-			I am <a class='content-link XURL' href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
+			I am <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
 		</p>
 		<p>
 			Here I share my thoughts, findings and recommendations.
@@ -33,10 +33,10 @@
 <div id='home-menu'>
 	<div class="home-menu-group-parent"><?php link_xurl('world', 'World') ?></div>
 	<?php group_image('page-list', 0, ['world/philosophy', 'Philosophy']); ?>
-	<!--
-	'/universe' 'universe'
-		'world/reality''Reality'
-	-->
+	<?php
+	// '/universe' 'universe'
+	// 	'world/reality''Reality'
+	?>
 	<br>
 	<div class="home-menu-group-parent"><?php link_xurl('computer', 'Computer') ?></div>
 	<?php group_image('page-list', 1, ['computer/os', 'OS', 'http://ujnotes.com'], ['computer/program', 'Program', 'http://ujnotes.com'], ['computer/programming', 'Programming', 'http://ujnotes.com'], ['computer/game', 'Game']); ?>
