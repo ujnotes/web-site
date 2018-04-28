@@ -44,12 +44,14 @@
 	<p>
 		As stated earlier, there will always be pathologically insane and evil human beings, but they are not 'problems' per se but issues to be managed that the 'system' should be well prepared to deal with.
 	</p>
+	<p>
+		On the peoples' level it is needed, that first and foremost the meaning of <a class="content-link XURL" href='/world/philosophy/life' data-target='/world/philosophy/life' data-title='Life'>life</a> be understood:
+	</p>
 	<ul class="list-bullet content-list">
-		<p>On the peoples' level it is needed, that first and foremost the meaning of <a class='content-link XURL' href='/world/philosophy/life' data-target='/world/philosophy/life' data-title='Life'>life</a> be understood:</p>
 		<li><div>The value of life, all lives; that what wonderful 'gift' it is</div></li>
 		<li><div>Our personal existence's significance and insignificance</div></li>
 		<li><div>Gratefulness for all that is good</div></li>
-		<li><div>How we are all connected, by what we share, even our sufferings and <a class='content-link XURL' href='/world/philosophy/life' data-target='/world/philosophy/life' data-title='Life'>life</a> and <a class='content-link XURL' href='/world/philosophy/death' data-target='/world/philosophy/death' data-title='Death'>death</a></div></li>
+		<li><div>How we are all connected, by what we share, even our sufferings and <a class="content-link XURL" href='/world/philosophy/life' data-target='/world/philosophy/life' data-title='Life'>life</a> and <a class="content-link XURL" href='/world/philosophy/death' data-target='/world/philosophy/death' data-title='Death'>death</a></div></li>
 		<li><div>That alone you are nothing, it is with the world, the others, that you have any meaning whatsoever</div></li>
 		<li><div>The separation of the conceptual (not physical or supernatural) soul and the body</div></li>
 		<li><div>That we could be in any one of those bodies, looking through any of those eyes</div></li>
@@ -133,18 +135,16 @@
 		Often he feels and believes first and the reasons come only later; chosen specifically to reinforce what he already believes and that is often based on the limited and probably adulterated information he has.<br>
 		Also, if how he feels about something changes, his connected decisions are likely to change too. Though his memory and thus the habit can continue to hold it back.<br>
 	</p>
-	<p>
-		<h3>That in turn, requires us to understand 'feelings':</h3>
-	</p>
-	<ul class="list-bullet content-list">
+	<h3>That in turn, requires us to understand 'feelings':</h3>
+	<div>
 
-		<li><div>What is a feeling?</div></li>
+		<h4>What is a feeling?</h4>
 		<p>
 			A feeling is a distinct emotional perception that is usually connected to particular momentary states: of the environment or the individual's body and mind itself; And often induces a related reaction.<br>
 			E.g. the feeling of hunger is a perception connected to the lack of glucose in the blood stream and it induces the person to grab a snack.
 		</p>
 
-		<li><div>What is the relationship between feelings and needs?</div></li>
+		<h4>What is the relationship between feelings and needs?</h4>
 		<p>
 			Some of the strongest feelings are driven by needs:
 		</p>
@@ -155,7 +155,7 @@
 		</ul>
 		<br>
 
-		<li><div>What is the relationship between feelings and thoughts?</div></li>
+		<h4>What is the relationship between feelings and thoughts?</h4>
 		<p>
 			The relationship between feelings and thoughts is bilateral.<br>
 			Feelings trigger thoughts. They can override and also accentuate thoughts<br>
@@ -164,11 +164,11 @@
 		<p>
 			Often, people mistake their ideas as their possessions. And thus, they become the self proclaimed defenders of the idea.<br>
 			This invokes a range of associated primitive feelings when the idea is challenged.
-			<ul class="list-bullet content-list">
-				<li><div>Ego</div></li>
-				<li><div>Shame of 'loosing'</div></li>
-			</ul>
 		</p>
+		<ul class="list-bullet content-list">
+			<li><div>Ego</div></li>
+			<li><div>Shame of 'loosing'</div></li>
+		</ul>
 		<p>
 			Additionally the ideas may be tied to secondary perks and entitlements.<br>
 			E.g. say a person's right to things or power, stature and dominance may be justified and authorized based on ideas.<br>
@@ -182,7 +182,7 @@
 			Together, these factors make ideas hard to fairly contest and uproot.
 		</p>
 
-		<li><div>How are feelings installed?</div></li>
+		<h4>How are feelings installed?</h4>
 		<p>
 			Some are genetic and innate; Like the feeling of 'hunger'<br>
 			Some are learnt and acquired; Like 'craving of drugs' or 'hatred towards a race'.<br>
@@ -190,13 +190,13 @@
 			The wiring can happen by experience or indoctrination of the correlation.
 		</p>
 
-		<li><div>What decides the intensity and thus the priority of a 'feeling'?</div></li>
+		<h4>What decides the intensity and thus the priority of a 'feeling'?</h4>
 		<p>
 			The type and measure of emotions attached, which in turn are based on the cost of that what is at stake.<br>
 			E.g. Cost of life in case of the fear of snakes.
 		</p>
 
-		<li><div>How can feelings be neutralized</div></li>
+		<h4>How can feelings be neutralized</h4>
 		<p>
 			The intensity of feelings can be altered by:
 		</p>
@@ -205,7 +205,7 @@
 			<li><div>Retraining, disconnecting the emotions from the state. E.g. fear of ghosts</div></li>
 		</ul>
 
-	</ul>
+	</div>
 
 	<h3>People</h3>
 	<p>
@@ -217,22 +217,26 @@
 		Following are the issues in case of the popular idea:
 	</p>
 	<ul class="list-bullet content-list">
-		<li><div>Group conformity:</div></li>
-		<p>
-			Instead of thinking and reasoning independently, an individual is inclined to conform to the popular idea. Which can often even be the absurd ones.
-		</p>
-		<li><div>Group momentum:</div></li>
-		<p>
-			The loud noise of a crowd's ideas drown down an individual's voice and reasoning.
-		</p>
-		<li><div>Self validation:</div></li>
-		<p>
-			Individuals are deluded into believing the popular idea as the correct idea solely based on its local popularity.
-		</p>
-		<li><div>Entitlement:</div></li>
-		<p>
-			Owing to the mass resonance of an idea, people may end up believing not only they are right but also entitled to it, without requiring any valid justification or reasoning.
-		</p>
+		<li><div>Group conformity:
+			<div>
+				Instead of thinking and reasoning independently, an individual is inclined to conform to the popular idea. Which can often even be the absurd ones.
+			</div>
+		</div></li>
+		<li><div>Group momentum:
+			<div>
+				The loud noise of a crowd's ideas drown down an individual's voice and reasoning.
+			</div>
+		</div></li>
+		<li><div>Self validation:
+			<div>
+				Individuals are deluded into believing the popular idea as the correct idea solely based on its local popularity.
+			</div>
+		</div></li>
+		<li><div>Entitlement:
+			<p>
+				Owing to the mass resonance of an idea, people may end up believing not only they are right but also entitled to it, without requiring any valid justification or reasoning.
+			</p>
+		</div></li>
 	</ul>
 	<p>
 		Because of these following consequences arise:
@@ -250,18 +254,21 @@
 		Following are the issues in case of the enforced idea:
 	</p>
 	<ul class="list-bullet content-list">
-		<li><div>Forced conformity:</div></li>
-		<p>
-			Under pressure, instead of thinking and reasoning independently, individuals conform to the enforced idea irrespective of its implications.
-		</p>
-		<li><div>No validation:</div></li>
-		<p>
-			The ruling class is free to decide the fate of the population without even requiring any validation of the ideas it enforces.
-		</p>
-		<li><div>Momentum:</div></li>
-		<p>
-			An individual's reasoning and voice drown down. Not questioning the 'orders' becomes the norm, and can also trickle down to all levels of the society.
-		</p>
+		<li><div>Forced conformity:
+			<div>
+				Under pressure, instead of thinking and reasoning independently, individuals conform to the enforced idea irrespective of its implications.
+			</div>
+		</div></li>
+		<li><div>No validation:
+			<div>
+				The ruling class is free to decide the fate of the population without even requiring any validation of the ideas it enforces.
+			</div>
+		</div></li>
+		<li><div>Momentum:
+			<div>
+				An individual's reasoning and voice drown down. Not questioning the 'orders' becomes the norm, and can also trickle down to all levels of the society.
+			</div>
+		</div></li>
 	</ul>
 	<p>
 		Because of these following consequences arise:
@@ -319,28 +326,27 @@
 				</div></li>
 			</ul>
 		</div></li>
-		<br>
 		<li><div>How to make people more selfless?
 			<ul class="list-bullet content-list">
 				<li><div>How to make an individual feel good about being selfless and doing good?
 					<ul class="list-bullet content-list">
 						<li><div>Facilitate goodness; Make it easier to do good.
-							<p class="content-list-example">
+							<div class='content-list-example'>
 								E.g. placing first aid kits at places where they might be needed so that it is accessible and used to help someone in need
-							</p>
+							</div>
 						</div></li>
 						<li><div>Incentivize goodness
-							<ul class="list-bullet content-list">
-								<li><div>Glorify to popularize goodness</div></li>
-								<p class="content-list-example">
-									E.g. publicizing honest citizens who return lost valuables
-								</p>
-							</ul>
-							<ul class="list-bullet content-list">
-								<li><div>Reward goodness</div></li>
-								<p class="content-list-example">
-									E.g. awarding cash incentives to people that admit strangers who have been in an accident to hospitals.
-								</p>
+							<ul class='list-bullet content-list'>
+								<li><div>Glorify to popularize goodness
+									<div class="content-list-example">
+										E.g. publicizing honest citizens who return lost valuables
+									</div>
+								</div></li>	
+								<li><div>Reward goodness
+									<div class="content-list-example">
+										E.g. awarding cash incentives to people that admit strangers who have been in an accident to hospitals.
+									</div>
+								</div></li>
 							</ul>
 						</div></li>
 					</ul>
@@ -349,10 +355,11 @@
 					<ul class="list-bullet content-list">
 						<li><div>Disincentivize selfishness
 							<ul class="list-bullet content-list">
-								<li><div>Un-popularize selfishness</div></li>
-								<p class="content-list-example">
-									E.g. calling out on people who ignore and do not help fellow commuters who have been in an accident.
-								</p>
+								<li><div>Un-popularize selfishness
+									<div class="content-list-example">
+										E.g. calling out on people who ignore and do not help fellow commuters who have been in an accident.
+									</div>
+								</div></li>
 							</ul>
 						</div></li>
 					</ul>
