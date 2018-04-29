@@ -74,8 +74,8 @@
 	<?php
 		if($bPublish) {
 	?>
-			<script src='https://cdn.ravenjs.com/3.22.2/raven.min.js' crossorigin='anonymous'></script>
-			<script><?php require '../JS/Fragment/Sentry.php' ?></script>
+			<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
+			<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
 	<?php
 		}
 		require '../JS/Fragment/JS.php';
