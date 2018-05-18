@@ -19,10 +19,15 @@
 		echo $desc.' - '.$config['project_title'];
 ?>
 	</title>
-<?php
-	if($bPublish) {
+<?php	if($bPublish) {
 		require '../JS/Fragment/GA_HeadScript.php';
-	}
+		require '../JS/Fragment/GA_track.js';	?>
+		<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
+		<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
+		<script src='//apis.google.com/js/platform.js' async defer></script>
+		<script src='//platform.twitter.com/widgets.js' async></script>
+<?php	}
+	require '../JS/Fragment/JS.php';
 	require '../JS/Fragment/GTranslate.php';
 	require '../JS/Fragment/GCSE.php';
 	require '../JS/Fragment/Adsense_auto.php';
@@ -31,16 +36,7 @@
 ?>
 </head>
 <body>
-<?php
-	if($bPublish) {
-		require '../JS/Fragment/GA_track.js';
-		require '../JS/Fragment/BodyBegin_FB.php';
-?>
-	<script async src='//apis.google.com/js/platform.js' defer></script>
-	<script async src='//platform.twitter.com/widgets.js'></script>
-<?php
-	}
-?>
+<?php if($bPublish) { require '../JS/Fragment/BodyBegin_FB.php'; } ?>
 	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class="<?php echo $menu_active_class; echo ($id == 'root'? ' '.'hide_path_title_updated' : ' ') ?>">
 		<div id='content-wrapper'>
@@ -71,14 +67,5 @@
 		</div>
 		<?php require '../../HTML/Fragment/Footer.php'; ?>
 	</div>
-	<?php
-		if($bPublish) {
-	?>
-			<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
-			<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
-	<?php
-		}
-		require '../JS/Fragment/JS.php';
-	?>
 </body>
 </html>
