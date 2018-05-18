@@ -71,6 +71,50 @@ function supportsSvg() {
 	div.innerHTML = '<svg/>';
 	return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
 };
+// external PROJECT_TITLE
+var curTab;
+var gTarget;
+var URLid;
+
+var menuActive = false;
+var isTranslateButtonActive;
+var isSearchButtonActive;
+
+var activateMenuFn = function() {
+	var nav_menu = document.querySelector( '#nav-menu' ),
+		canvas_main = document.querySelector( '#canvas-main' ),
+		main_wrapper = document.querySelector( '#main-wrapper' ),
+		menu_button = document.querySelector( '#menu-button' );
+	main_wrapper.classList.add('pml-open');
+	menu_button.classList.add('active');
+	activeNav = 'pml-open';
+	var height = nav_menu.scrollHeight;
+	canvas_main.style.maxHeight = height+'px';
+	nav_menu.style.maxHeight = null;
+	menuActive = true;
+	if(!(typeof (ga) === 'undefined')) {
+		ga('set', 'page', '/'+'menu');
+		ga('send', 'pageview');
+	}
+}
+
+var activateMenu = function() {
+	window.history.pushState({'id':curTab}, '', '/'+curTab);
+	activateMenuFn();
+}
+
+var activateMainFn = function() {
+	document.getElementById('main-wrapper').classList.remove('pml-open');
+	document.getElementById('main-wrapper').classList.remove('hide_path_title_updated');
+	document.getElementById('menu-button').classList.remove('active');
+	menuActive = false;
+}
+
+var activateMain = function() {
+	window.history.pushState({'id':curTab}, '', '/'+curTab);
+	activateMainFn();	
+}
+
 function loadCanvasI(m) {
 	loadCanvasH(this);
 	return false;
@@ -96,23 +140,23 @@ function loadCanvas(target, title) {
 	var canvas_main = document.getElementById('canvas-main');
 	var main_wrapper = document.getElementById('main-wrapper');
 
-	classie.add(main_wrapper, 'hide_path_title_updated');
-	classie.add(canvas_main, 'hide');
+	main_wrapper.classList.add('hide_path_title_updated');
+	canvas_main.classList.add('hide');
 
 	var startTime = new Date().getTime();
 	syncScrollReload.startTime = null;
 	scrollTop();
 	initLoading();
 	if(target == 'root') {
-		classie.add(document.getElementById('path-container'), 'hide_scale');
-		classie.add(document.getElementById('title-container'), 'hide_scale');
+		document.getElementById('path-container').classList.add('hide_scale');
+		document.getElementById('title-container').classList.add('hide_scale');
 	}
 	else {
-		classie.remove(document.getElementById('path-container'), 'hide_scale');
-		classie.remove(document.getElementById('title-container'), 'hide_scale');
+		document.getElementById('path-container').classList.remove('hide_scale');
+		document.getElementById('title-container').classList.remove('hide_scale');
 	}
-	classie.add(document.getElementById('path'), 'hide');
-	classie.add(document.getElementById('title'), 'hide');
+	document.getElementById('path').classList.add('hide');
+	document.getElementById('title').classList.add('hide');
 
 	var xmlhttp = new XMLHttpRequest();
 	if(window.XMLHttpRequest) {
@@ -194,13 +238,11 @@ function executeReload(startTime, resp, target) {
 	if(typeof reloadTimeout != 'undefined')
 		clearTimeout(reloadTimeout);
 	reloadTimeout = setTimeout( function() {
-		var canvas_main = document.getElementById('canvas-main');
-		var main_wrapper = document.getElementById('main-wrapper');
 		document.getElementById('content').innerHTML = resp.content;
-		classie.remove(canvas_main, 'hide');
+		document.getElementById('canvas-main').classList.remove('hide');
 		document.getElementById('date').innerHTML = resp.date;
 		if(!URLid == '') {
-			classie.remove(main_wrapper, 'hide_path_title_updated')
+			document.getElementById('main-wrapper').classList.remove('hide_path_title_updated');
 		}
 		var height = document.getElementById('canvas-main').scrollHeight;
 		document.getElementById('nav-menu').style.maxHeight = height+'px';
@@ -224,233 +266,11 @@ function updatePathTitle(path, title) {
 	setTimeout(function() {
 		document.getElementById('path').innerHTML = path;
 		document.getElementById('title').innerHTML = title;
-		classie.remove(document.getElementById('path'), 'hide');
-		classie.remove(document.getElementById('title'), 'hide');
+		document.getElementById('path').classList.remove('hide');
+		document.getElementById('title').classList.remove('hide');
 	}, 300);
 }
-/*
- * classList.js: Cross-browser full element.classList implementation.
- * 2011-06-15
- *
- * By Eli Grey, http://eligrey.com
- * Public Domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- */
-
-/*global self, document, DOMException */
-
-/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
-
-if (typeof document !== "undefined" && !("classList" in document.createElement("a"))) {
-
-(function (view) {
-
-"use strict";
-
-var
-	  classListProp = "classList"
-	, protoProp = "prototype"
-	, elemCtrProto = (view.HTMLElement || view.Element)[protoProp]
-	, objCtr = Object
-	, strTrim = String[protoProp].trim || function () {
-		return this.replace(/^\s+|\s+$/g, "");
-	}
-	, arrIndexOf = Array[protoProp].indexOf || function (item) {
-		var
-			  i = 0
-			, len = this.length
-		;
-		for (; i < len; i++) {
-			if (i in this && this[i] === item) {
-				return i;
-			}
-		}
-		return -1;
-	}
-	// Vendors: please allow content code to instantiate DOMExceptions
-	, DOMEx = function (type, message) {
-		this.name = type;
-		this.code = DOMException[type];
-		this.message = message;
-	}
-	, checkTokenAndGetIndex = function (classList, token) {
-		if (token === "") {
-			throw new DOMEx(
-				  "SYNTAX_ERR"
-				, "An invalid or illegal string was specified"
-			);
-		}
-		if (/\s/.test(token)) {
-			throw new DOMEx(
-				  "INVALID_CHARACTER_ERR"
-				, "String contains an invalid character"
-			);
-		}
-		return arrIndexOf.call(classList, token);
-	}
-	, ClassList = function (elem) {
-		var
-			  trimmedClasses = strTrim.call(elem.className)
-			, classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
-			, i = 0
-			, len = classes.length
-		;
-		for (; i < len; i++) {
-			this.push(classes[i]);
-		}
-		this._updateClassName = function () {
-			elem.className = this.toString();
-		};
-	}
-	, classListProto = ClassList[protoProp] = []
-	, classListGetter = function () {
-		return new ClassList(this);
-	}
-;
-// Most DOMException implementations don't allow calling DOMException's toString()
-// on non-DOMExceptions. Error's toString() is sufficient here.
-DOMEx[protoProp] = Error[protoProp];
-classListProto.item = function (i) {
-	return this[i] || null;
-};
-classListProto.contains = function (token) {
-	token += "";
-	return checkTokenAndGetIndex(this, token) !== -1;
-};
-classListProto.add = function (token) {
-	token += "";
-	if (checkTokenAndGetIndex(this, token) === -1) {
-		this.push(token);
-		this._updateClassName();
-	}
-};
-classListProto.remove = function (token) {
-	token += "";
-	var index = checkTokenAndGetIndex(this, token);
-	if (index !== -1) {
-		this.splice(index, 1);
-		this._updateClassName();
-	}
-};
-classListProto.toggle = function (token) {
-	token += "";
-	if (checkTokenAndGetIndex(this, token) === -1) {
-		this.add(token);
-	} else {
-		this.remove(token);
-	}
-};
-classListProto.toString = function () {
-	return this.join(" ");
-};
-
-if (objCtr.defineProperty) {
-	var classListPropDesc = {
-		  get: classListGetter
-		, enumerable: true
-		, configurable: true
-	};
-	try {
-		objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-	} catch (ex) { // IE 8 doesn't support enumerable:true
-		if (ex.number === -0x7FF5EC54) {
-			classListPropDesc.enumerable = false;
-			objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-		}
-	}
-} else if (objCtr[protoProp].__defineGetter__) {
-	elemCtrProto.__defineGetter__(classListProp, classListGetter);
-}
-
-}(self));
-
-}
-
-/*!
- * classie v1.0.1
- * class helper functions
- * from bonzo https://github.com/ded/bonzo
- * MIT license
- *//* 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-/*global define: false, module: false */
-
-( function( window ) {
-
-'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
-
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
-
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
-
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
-
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
-
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else if ( typeof exports === 'object' ) {
-  // CommonJS
-  module.exports = classie;
-} else {
-  // browser global
-  window.classie = classie;
-}
-
-})( window );window.onpopstate = function(e) { //window.addEventListener('popstate', function(e)
+window.onpopstate = function(e) { //window.addEventListener('popstate', function(e)
 	if(!!e.state)
 		if(e.state.id == 'menu')
 			activateMenuFn();
@@ -458,122 +278,129 @@ if ( typeof define === 'function' && define.amd ) {
 			loadCanvas(e.state.id, e.state.title);
 		}
 }
-window.onload = function() {
-
-	setXURL(document);
-	var hashID = getHashID();
-	URLid = getURLid();
-
-	var canvas_main = document.querySelector('#canvas-main'),
-		menu_button = document.querySelector('.toggle-push-left'),
-		menu_items = document.querySelectorAll('.XURL'),
-		header_button = document.querySelector('#header_button'),
-		translate_button = document.querySelector('#translate-button'),
-		search_button = document.querySelector('#search-button'),
-		translate_box = document.querySelector('#google_translate_element'),
-		search_box = document.querySelector('#search_box');
-
-	if(!!hashID) {
-		curTab = 'root';
-		loadCanvas(document.getElementById(hashID));
+function initLoad() {
+	if(!initLoadDone && document.readyState === 'interactive') {
+		init();
+		initLoadDone = true;
 	}
-	else if(!!URLid)
-		curTab = URLid;
-	else
-		curTab = 'root';
+}
 
-	if(URLid == 'menu') {
-		menuActive = true;
-		classie.add( menu_button, 'active' );
-		canvas_main.style.maxHeight = document.querySelector('#nav-menu').scrollHeight+'px';
-	}
-	else
-		document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+'px';
-
-	if (!hashID && !URLid)
-		window.history.replaceState({'id':'root'}, '', '/');
-
-	menu_button.addEventListener( 'click', function() {
-		if (!menuActive) {
-			activateMenu();
+function init() {
+	
+		setXURL(document);
+		var hashID = getHashID();
+		URLid = getURLid();
+	
+		var canvas_main = document.querySelector('#canvas-main'),
+			menu_button = document.querySelector('.toggle-push-left'),
+			menu_items = document.querySelectorAll('.XURL'),
+			header_button = document.querySelector('#header_button'),
+			translate_button = document.querySelector('#translate-button'),
+			search_button = document.querySelector('#search-button'),
+			translate_box = document.querySelector('#google_translate_element'),
+			search_box = document.querySelector('#search_box');
+	
+		if(!!hashID) {
+			curTab = 'root';
+			loadCanvas(document.getElementById(hashID));
 		}
-		else {
-			if(curTab == 'root' || curTab == 'menu')
-				curTab = '';
-			window.history.pushState({'id':curTab}, '', '/'+curTab);
-			activateMainFn();
-			canvas_main.style.maxHeight = null;
+		else if(!!URLid)
+			curTab = URLid;
+		else
+			curTab = 'root';
+	
+		if(URLid == 'menu') {
+			menuActive = true;
+			menu_button.classList.add('active');
+			canvas_main.style.maxHeight = document.querySelector('#nav-menu').scrollHeight+'px';
+		}
+		else
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+'px';
-		}
-	} );
-
-	translate_button.addEventListener( 'click', function() {
-		if(typeof isTranslateButtonActive === 'undefined') {
-			var scriptTag = document.createElement('script');
-			scriptTag.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-			// scriptTag.onload = implementationCode;
-			// scriptTag.onreadystatechange = implementationCode;
-			translate_button.parentNode.appendChild(scriptTag);
-			isTranslateButtonActive = false;
-		}
-		if(!isTranslateButtonActive) {
-			classie.add(translate_button, 'header-button-active');
-			classie.remove(translate_box, 'hide_display');
-			isTranslateButtonActive = true;
-		}
-		else {
-			classie.remove(translate_button, 'header-button-active');
-			classie.add(translate_box, 'hide_display');
-			isTranslateButtonActive = false;
-		}
-	} );
-
-	search_button.addEventListener( 'click', function() {
-		if(isSearchButtonActive === undefined) {
-			gcse_init();
-			isSearchButtonActive = false;
-		}
-		if(!isSearchButtonActive) {
-			classie.add(search_button, 'header-button-active');
-			classie.remove(search_box, 'hide_display');
-			isSearchButtonActive = true;
-		}
-		else {
-			classie.remove(search_button, 'header-button-active');
-			classie.add(search_box, 'hide_display');
-			isSearchButtonActive = false;
-		}
-	});
-
-	[].forEach.call(document.getElementsByClassName('coming-soon'), function(el) { el.addEventListener( 'click', function() {
-		if(!(typeof (ga) === 'undefined')) {
-			ga('send', 'event', {
-				'eventCategory': 'download',
-				'eventAction': 'click'
-			});
-		}
-		alert("Hold your breath! Coming soon..");
-	});});
-
-	[].slice.call(menu_items).forEach( function(el,i) {
-			el.addEventListener( 'click', function() {
-				curTab = this.getAttribute('data-target');
+	
+		if (!hashID && !URLid)
+			window.history.replaceState({'id':'root'}, '', '/');
+	
+		menu_button.addEventListener( 'click', function() {
+			if (!menuActive) {
+				activateMenu();
+			}
+			else {
+				if(curTab == 'root' || curTab == 'menu')
+					curTab = '';
+				window.history.pushState({'id':curTab}, '', '/'+curTab);
 				activateMainFn();
-			} );
+				canvas_main.style.maxHeight = null;
+				document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+'px';
+			}
 		} );
-
-	if (!supportsSvg()) {
-		var image_div = document.getElementsByClassName('image');
-		var i;
-		var l = image_div.length;
-		for (i = 0; i < l; i++) {
-			image_div[i].classList.add('no-svg');
+	
+		translate_button.addEventListener( 'click', function() {
+			if(typeof isTranslateButtonActive === 'undefined') {
+				var scriptTag = document.createElement('script');
+				scriptTag.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+				// scriptTag.onload = implementationCode;
+				// scriptTag.onreadystatechange = implementationCode;
+				translate_button.parentNode.appendChild(scriptTag);
+				isTranslateButtonActive = false;
+			}
+			if(!isTranslateButtonActive) {
+				translate_button.classList.add('header-button-active');
+				translate_box.classList.remove('hide_display');
+				isTranslateButtonActive = true;
+			}
+			else {
+				translate_button.classList.remove('header-button-active');
+				translate_box.classList.add('hide_display');
+				isTranslateButtonActive = false;
+			}
+		} );
+	
+		search_button.addEventListener( 'click', function() {
+			if(isSearchButtonActive === undefined) {
+				gcse_init();
+				isSearchButtonActive = false;
+			}
+			if(!isSearchButtonActive) {
+				search_button.classList.add('header-button-active');
+				search_box.classList.remove('hide_display');
+				isSearchButtonActive = true;
+			}
+			else {
+				search_button.classList.remove('header-button-active');
+				search_box.classList.add('hide_display');
+				isSearchButtonActive = false;
+			}
+		});
+	
+		[].forEach.call(document.getElementsByClassName('coming-soon'), function(el) { el.addEventListener( 'click', function() {
+			if(!(typeof (ga) === 'undefined')) {
+				ga('send', 'event', {
+					'eventCategory': 'download',
+					'eventAction': 'click'
+				});
+			}
+			alert("Hold your breath! Coming soon..");
+		});});
+	
+		[].slice.call(menu_items).forEach( function(el,i) {
+				el.addEventListener( 'click', function() {
+					curTab = this.getAttribute('data-target');
+					activateMainFn();
+				} );
+			} );
+	
+		if (!supportsSvg()) {
+			var image_div = document.getElementsByClassName('image');
+			var i;
+			var l = image_div.length;
+			for (i = 0; i < l; i++) {
+				image_div[i].classList.add('no-svg');
+			}
+			// or even .className += ' no-svg'; for deeper support
 		}
-		// or even .className += ' no-svg'; for deeper support
-	}
-
-	initPageFunction(curTab);
-	return false;
+	
+		initPageFunction(curTab);
+		return false;
 
 }
 var initPageFunction = function(path) {
@@ -581,52 +408,6 @@ var initPageFunction = function(path) {
 	if (typeof window[pageFunction] === 'function')
 		window[pageFunction]();
 }
-// external PROJECT_TITLE
-var curTab;
-var gTarget;
-var URLid;
-
-var menuActive = false;
-var isTranslateButtonActive;
-var isSearchButtonActive;
-
-var activateMenuFn = function() {
-	var nav_menu = document.querySelector( '#nav-menu' ),
-		canvas_main = document.querySelector( '#canvas-main' ),
-		main_wrapper = document.querySelector( '#main-wrapper' ),
-		menu_button = document.querySelector( '#menu-button' );
-	classie.add( main_wrapper, 'pml-open' );
-	classie.add( menu_button, 'active' );
-	activeNav = 'pml-open';
-	var height = nav_menu.scrollHeight;
-	canvas_main.style.maxHeight = height+'px';
-	nav_menu.style.maxHeight = null;
-	menuActive = true;
-	if(!(typeof (ga) === 'undefined')) {
-		ga('set', 'page', '/'+'menu');
-		ga('send', 'pageview');
-	}
-}
-
-var activateMenu = function() {
-	window.history.pushState({'id':curTab}, '', '/'+curTab);
-	activateMenuFn();
-}
-
-var activateMainFn = function() {
-	var main_wrapper = document.querySelector( '#main-wrapper' ),
-		menu_button = document.querySelector( '#menu-button' );
-	classie.remove( main_wrapper, 'pml-open' );
-	classie.remove( main_wrapper, 'hide_path_title_updated' );
-	classie.remove( menu_button, 'active' );
-	menuActive = false;
-}
-
-var activateMain = function() {
-	window.history.pushState({'id':curTab}, '', '/'+curTab);
-	activateMainFn();	
-}
-
 function getURLid() {
 	var loc = window.location.pathname;
 	if(loc == '/')
@@ -653,6 +434,8 @@ function setXURL(node) {
 			arClassElement[i].onclick = loadCanvasI;
 	}
 }
+var initLoadDone = false;
+initLoad();
 function root() {
 	var e = document.getElementById('profile-image');
 	root.full = false;

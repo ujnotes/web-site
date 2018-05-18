@@ -8,11 +8,11 @@
 	<meta name='viewport' content="width=device-width, initial-scale=1.0" >
 	<meta itemprop="name" content="Ujnotes" />
 <meta itemprop="description" content="Computer games" />
-<meta itemprop="image" content="https://ujnotes.com/social.png" />
+<meta itemprop="image" content="https://ujnotes.com/computer/game/index.jpg" />
 	<meta property="og:url" content="https://ujnotes.com/computer/game" />
 <meta property="og:title" content="Game" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="https://ujnotes.com/social.png" />
+<meta property="og:image" content="https://ujnotes.com/computer/game/index.jpg" />
 <meta property="og:description" content="Computer games" />
 <meta property="og:site_name" content="Ujnotes.com" />
 	<meta property="fb:app_id" content="487343071466495" />
@@ -21,7 +21,7 @@
 <meta name="twitter:site" content="@ujnotes">
 <meta name="twitter:title" content="Game">
 <meta name="twitter:description" content="Computer games">
-<meta name="twitter:image" content="https://ujnotes.com/social.png">
+<meta name="twitter:image" content="https://ujnotes.com/computer/game/index.jpg">
 <meta name="twitter:creator" content="ujnotes.jpg">
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
@@ -40,6 +40,39 @@ Computer games - Ujnotes	</title>
   ga('send', 'pageview');
 
 </script>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+
+var trackOutboundLink = function(title, url) {
+	if(!(typeof (ga) === 'undefined')) {
+			if(!(typeof (title) === 'undefined'))
+				title = url;
+			ga('send', 'event', 'outbound', 'click', title, {
+				'transport': 'beacon',
+			'hitCallback': function(){document.location = url;}
+		});
+	}
+}
+
+</script>
+		<script src='https://cdn.ravenjs.com/3.22.2/raven.min.js' crossorigin='anonymous'
+></script>
+		<script>Raven.config('https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146').install();
+</script>
+		<script src='//apis.google.com/js/platform.js' async defer></script>
+		<script src='//platform.twitter.com/widgets.js' async></script>
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+	if(typeof initLoad != 'undefined')
+		initLoad();
+});
+	</script>
+	<script async src='/script.js' defer></script>
 <script>
 	function googleTranslateElementInit() {
 		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, autoDisplay: false, gaTrack: true , gaId: 'UA-49547226-1'}, 'google_translate_element');
@@ -437,6 +470,11 @@ body {
 	height: 100%;
 	font-family: Abel,Arial,Verdana,sans-serif;
 	color: #5a5a5a;
+}
+
+.full-width-object svg {
+	width: 100%;
+	height: auto;
 }
 
 .center {
@@ -1119,36 +1157,24 @@ span.header-logo {
 	</style>
 </head>
 <body>
-<script>
-/**
-* Function that tracks a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-
-var trackOutboundLink = function(title, url) {
-	if(!(typeof (ga) === 'undefined')) {
-			if(!(typeof (title) === 'undefined'))
-				title = url;
-			ga('send', 'event', 'outbound', 'click', title, {
-				'transport': 'beacon',
-			'hitCallback': function(){document.location = url;}
-		});
-	}
-}
-
-</script>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=487343071466495";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-	<script async src='//apis.google.com/js/platform.js' defer></script>
-	<script async src='//platform.twitter.com/widgets.js'></script>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId            : '487343071466495',
+			autoLogAppEvents : true,
+			xfbml            : true,
+			version          : 'v3.0'
+		});
+	};
+	(function(d, s, id) {
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 js.src = "https://connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
 	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class=" ">
 		<div id='content-wrapper'>
@@ -1398,19 +1424,5 @@ var trackOutboundLink = function(title, url) {
 	</div>
 </div>
 	</div>
-				<script src='https://cdn.ravenjs.com/3.22.2/raven.min.js' crossorigin='anonymous'></script>
-			<script>Raven.config('https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146').install();
-</script>
-		<script>
-if (!(window.history && window.history.pushState)) {
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.async = true;
-	script.src = '/history.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(script, s);
-}
-	</script>
-	<script async src='/script.js' defer></script>
 </body>
 </html>
