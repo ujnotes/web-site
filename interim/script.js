@@ -81,16 +81,12 @@ var isTranslateButtonActive;
 var isSearchButtonActive;
 
 var activateMenuFn = function() {
-	var nav_menu = document.querySelector( '#nav-menu' ),
-		canvas_main = document.querySelector( '#canvas-main' ),
-		main_wrapper = document.querySelector( '#main-wrapper' ),
-		menu_button = document.querySelector( '#menu-button' );
-	main_wrapper.classList.add('pml-open');
-	menu_button.classList.add('active');
+	document.getElementById('main-wrapper').classList.add('pml-open');
+	document.getElementById('menu-button').classList.add('active');
 	activeNav = 'pml-open';
-	var height = nav_menu.scrollHeight;
-	canvas_main.style.maxHeight = height+'px';
-	nav_menu.style.maxHeight = null;
+	var height = document.getElementById('nav-menu').scrollHeight;
+	document.getElementById('canvas-main').style.maxHeight = height+'px';
+	document.getElementById('nav-menu').style.maxHeight = null;
 	menuActive = true;
 	if(!(typeof (ga) === 'undefined')) {
 		ga('set', 'page', '/'+'menu');
@@ -99,7 +95,6 @@ var activateMenuFn = function() {
 }
 
 var activateMenu = function() {
-	window.history.pushState({'id':curTab}, '', '/'+curTab);
 	activateMenuFn();
 }
 
@@ -111,10 +106,9 @@ var activateMainFn = function() {
 }
 
 var activateMain = function() {
-	window.history.pushState({'id':curTab}, '', '/'+curTab);
+	replaceState(curTab, document.getElementById('title').innerText);
 	activateMainFn();	
 }
-
 function loadCanvasI(m) {
 	loadCanvasH(this);
 	return false;
@@ -126,8 +120,8 @@ function loadCanvasH(e) {
 		URLid = '';
 	else
 		URLid = target;
+	recordState(target, e.getAttribute('data-title'));
 	loadCanvas(target, e.getAttribute('data-title'));
-	window.history.pushState({'id':target, 'title':e.getAttribute('data-title')}, '', '/'+URLid);
 	if(!(typeof (ga) === 'undefined')) {
 		ga('set', 'page', '/'+URLid);
 		ga('send', 'pageview');
@@ -136,6 +130,7 @@ function loadCanvasH(e) {
 
 function loadCanvas(target, title) {
 
+	curTab = target;
 	var date = document.getElementById('updated');
 	var canvas_main = document.getElementById('canvas-main');
 	var main_wrapper = document.getElementById('main-wrapper');
@@ -160,10 +155,10 @@ function loadCanvas(target, title) {
 
 	var xmlhttp = new XMLHttpRequest();
 	if(window.XMLHttpRequest) {
-		xmlhttp=new XMLHttpRequest();
+		xmlhttp = new XMLHttpRequest();
 	}
 	else { // IE6, IE5
-		xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+		xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
 	}
 	xmlhttp.onreadystatechange = function() {
 
@@ -208,7 +203,9 @@ function loadCanvas(target, title) {
 
 function scrollTop() {
 	scrollActive = true;
-	var y = window.scrollY;
+	var y = document.documentElement.scrollTop;
+	if(typeof y === 'undefined')
+		y = 0;
 	var dy = 100;
 	var scrollInterval = setInterval(function() {
 		window.scrollTo(0, y);
@@ -270,13 +267,31 @@ function updatePathTitle(path, title) {
 		document.getElementById('title').classList.remove('hide');
 	}, 300);
 }
-window.onpopstate = function(e) { //window.addEventListener('popstate', function(e)
+window.onpopstate = function(e) {
 	if(!!e.state)
 		if(e.state.id == 'menu')
 			activateMenuFn();
 		else {
-			loadCanvas(e.state.id, e.state.title);
+			loadCanvas(e.state.id, e.state.title == null? '' : e.state.title);
 		}
+}
+
+function recordState(tab, title) {
+	var path;
+	if(tab != 'root')
+		path = tab;
+	else
+		path = '';
+	window.history.pushState({'id':tab, 'title':title}, '', '/'+path);
+}
+
+function replaceState(tab, title) {
+	var path;
+	if(tab != 'root')
+		path = tab;
+	else
+		path = '';
+	window.history.replaceState({'id':tab, 'title':title}, '', '/'+path);
 }
 function initLoad() {
 	if(!initLoadDone && document.readyState === 'interactive') {
@@ -318,17 +333,16 @@ function init() {
 			document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+'px';
 	
 		if (!hashID && !URLid)
-			window.history.replaceState({'id':'root'}, '', '/');
+			replaceState('root', '');
+		else if(URLid == 'menu')
+			replaceState('menu', '');
 	
 		menu_button.addEventListener( 'click', function() {
 			if (!menuActive) {
 				activateMenu();
 			}
 			else {
-				if(curTab == 'root' || curTab == 'menu')
-					curTab = '';
-				window.history.pushState({'id':curTab}, '', '/'+curTab);
-				activateMainFn();
+				activateMain();
 				canvas_main.style.maxHeight = null;
 				document.querySelector('#nav-menu').style.maxHeight = canvas_main.scrollHeight+'px';
 			}
@@ -384,7 +398,6 @@ function init() {
 	
 		[].slice.call(menu_items).forEach( function(el,i) {
 				el.addEventListener( 'click', function() {
-					curTab = this.getAttribute('data-target');
 					activateMainFn();
 				} );
 			} );
