@@ -449,6 +449,12 @@ function setXURL(node) {
 }
 var initLoadDone = false;
 initLoad();
+function about_me() {
+	if(typeof gapi !== 'undefined')
+		gapi.plus.go('me_g-plus');
+	if(typeof twttr !== 'undefined')
+		twttr.widgets.load();
+}
 function root() {
 	var e = document.getElementById('profile-image');
 	root.full = false;
@@ -460,13 +466,4 @@ function root() {
 		else
 			root.full = true;
 	});
-}
-
-function about_me() {
-	gapi.plus.go("me_g-plus");
-	twttr.widgets.load();
-}
-
-function presentation() {
-	beginLoading();
 }

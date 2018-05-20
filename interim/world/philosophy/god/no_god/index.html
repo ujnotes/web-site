@@ -956,21 +956,21 @@ span.header-logo {
 .shadow-scroll-bottom {
 	height: 4px;
 	margin-left: 20%;
-	margin-right: 20%
+	margin-right: 20%;
 }
 
-@media (-webkit-min-device-pixel-ratio:0) {
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
 
 	.shadow-scroll-top {
-		-webkit-mask-box-image: -webkit-linear-gradient(left,transparent 0%,rgba(0,0,0,.8) 50%,transparent 100%);
+		-webkit-mask-box-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.8) 50%, transparent 100%);
 		background-color: transparent;
-		background-image: -webkit-linear-gradient(top,rgba(0,0,0,.2),transparent)
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.2), transparent);
 	}
 
 	.shadow-scroll-bottom {
-		-webkit-mask-box-image: -webkit-linear-gradient(left,transparent 0%,rgba(0,0,0,.8) 50%,transparent 100%);
+		-webkit-mask-box-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.8) 50%, transparent 100%);
 		background-color: transparent;
-		background-image: -webkit-linear-gradient(bottom,rgba(0,0,0,.2),transparent);
+		background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.2), transparent);
 	}
 	
 }
