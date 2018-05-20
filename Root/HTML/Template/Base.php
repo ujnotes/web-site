@@ -14,12 +14,8 @@
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
 	<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel='canonical' >
-	<title>
-<?php
-		echo $desc.' - '.$config['project_title'];
-?>
-	</title>
-<?php	if($bPublish) {
+	<title><?php echo $desc.' - '.$config['project_title']; ?></title>
+<?php if($bPublish) {
 		require '../JS/Fragment/GA_HeadScript.php';
 		require '../JS/Fragment/GA_track.js';	?>
 		<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
@@ -36,7 +32,7 @@
 ?>
 </head>
 <body>
-<?php if($bPublish) { require '../JS/Fragment/BodyBegin_FB.php'; } ?>
+	<?php if($bPublish) { require '../JS/Fragment/BodyBegin_FB.php'; } ?>
 	<div id='wait_loader' class='hide'></div>
 	<div id='main-wrapper' class="<?php echo $menu_active_class; echo ($id == 'root'? ' '.'hide_path_title_updated' : ' ') ?>">
 		<div id='content-wrapper'>
