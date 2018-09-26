@@ -1,4 +1,6 @@
 **/Archive
-Thumbs.db
+**/Thumbs.db
+.firebase/*.cache
+firebase-debug.log
 public
 interim
