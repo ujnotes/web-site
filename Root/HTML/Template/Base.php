@@ -17,7 +17,8 @@
 	<title><?php echo $desc.' - '.$config['project_title']; ?></title>
 <?php if($bPublish) {
 		require '../JS/Fragment/GA_HeadScript.php';
-		require '../JS/Fragment/GA_track.js';	?>
+		require '../JS/Fragment/GA_track.js';
+		require '../JS/Fragment/Adsense_auto.php'; ?>
 		<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
 		<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
 		<script src='//apis.google.com/js/platform.js' async defer></script>
@@ -26,7 +27,6 @@
 	require '../JS/Fragment/JS.php';
 	require '../JS/Fragment/GTranslate.php';
 	require '../JS/Fragment/GCSE.php';
-	require '../JS/Fragment/Adsense_auto.php';
 	require '../JS/Fragment/Project_title.php';
 	require '../CSS/Fragment/CSS.php';
 ?>
