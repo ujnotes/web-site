@@ -17,11 +17,13 @@
 		You leverage a lot from the society you live in. And so you also have an obligation, a responsibility.
 	</p>
 	<h3>
-		And so:
+		How is life best lived?
 	</h3>
 	<p>
 		Be nice, be awesome. Be selfless not selfish. Remember that you are not the centre of the universe.<br>
 		Be of help in the good deeds of others and help 'life' itself. Live free, learn to learn and learn.<br>
+	</p>
+	<p>
 		And once you understand - have no fear. Choose your song and dance your best to it.
 	</p>
 </div>

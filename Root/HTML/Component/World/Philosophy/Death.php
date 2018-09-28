@@ -24,7 +24,7 @@
 		If only we were to control our population growth rate, we could turn around the environmental destruction of our mother planet within a century.
 	</p>
 	<h3>
-		Post death
+		What happens after death?
 	</h3>
 	<p>
 		After death, personally nothing special happens. It is quite like taking off the battery from a toy.<br>
@@ -33,20 +33,25 @@
 	</P>
 	<p>
 		Seeking to have a personal legacy even after death, is indeed one of mans' most ludicrous idea.<br>
-		The only legacy that a person should have, should be an impersonal one that inspires the future generation to goodness.<br>
-		Recycling one's dead body should be done in the most environment friendly way that has the smallest footprint and gives back to the world.<br>
-		Organ donation should be considered.
+		The only legacy that a person should have, should be an impersonal one that inspires the future generation to goodness.
 	</p>
 	<h3>
-		And so:
+		How to deal with death?
 	</h3>
 	<p>
 		Death teaches us the futility of material possessions and self-centeredness.<br>
-		It is also something that we share with the rest of the world. Trees die, animals die just as us humans.
+		It is also something that we share with the rest of the world. Trees die, animals die - just as us humans, rich or poor, evil or good.
 	</p>
 	<p>
-		Remember, death is but only a part of life.<br>
-		Learn and understand. Let not its fear - not let you live.
+		Remember, death is but only a part of life. That how without death, of those before us - our lives simply could not have been possible.<br>
+		Learn and understand.
+	</p>
+	<p>
+		Let not its fear - not let you live.
+	</p>
+	<p>
+		Organ donation should be promoted.<br>
+		Recycling one's dead body should be done in the most environment friendly way; One that has the smallest footprint and gives back to the world.
 	</p>
 </div>
 <?php require('..\HTML\Fragment\Component_bottom.php') ?>
