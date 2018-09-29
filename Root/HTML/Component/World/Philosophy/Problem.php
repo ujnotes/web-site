@@ -19,7 +19,7 @@
 		Which again are impeded by that one problem.
 	</p>
 	<p>
-		&ldquo;Except for the uncontrolled and misguided mind, there is no enemy within this world&rdquo;<br>
+		&ldquo;.. Except for the uncontrolled and misguided mind, there is no enemy within this world ..&rdquo;<br>
 		&nbsp; &mdash; <a class='content-link' href="http://gitabase.com/eng/SB/7/8/9" target='_blank'>Gita:7.8.9</a> (a book written by men, like EVERY other book)
 	</p>
 	<p>
