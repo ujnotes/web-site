@@ -14,14 +14,14 @@
 	</div>
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
-				<a href='https://twitter.com/ujnotesx' id='site-twitter' onclick="trackOutboundLink('ujnotes-twitter', 'https://twitter.com/ujnotesx'); return false;"><span class='image'><?php echo file_get_contents('..\..\Resource\twitter.svg'); ?></span></a>
-			</span>
-			<span class='social grow'>
-				<a href='https://facebook.com/ujnotes' id='site-facebook' onclick="trackOutboundLink('ujnotes-facebook', 'https://facebook.com/ujnotes'); return false;"><span class='image'><?php echo file_get_contents('..\..\Resource\facebook.svg'); ?></span></a>
-			</span>
-			<span class='social grow'>
-				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><span class='image'><?php echo file_get_contents('..\..\Resource\youtube.svg'); ?></span></a>
 			<div class='social grow'>
+				<a href='https://twitter.com/ujnotesx' id='site-twitter' onclick="trackOutboundLink('ujnotes-twitter', 'https://twitter.com/ujnotesx'); return false;"><div class='image'><?php echo file_get_contents('..\..\Resource\twitter.svg'); ?></div></a>
+			</div>
+			<div class='social grow'>
+				<a href='https://facebook.com/ujnotes' id='site-facebook' onclick="trackOutboundLink('ujnotes-facebook', 'https://facebook.com/ujnotes'); return false;"><div class='image'><?php echo file_get_contents('..\..\Resource\facebook.svg'); ?></div></a>
+			</div>
+			<div class='social grow'>
+				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><div class='image'><?php echo file_get_contents('..\..\Resource\youtube.svg'); ?></div></a>
 			</div>
 		</div>
 		<div class='footer-content' id='footer-rights'>
