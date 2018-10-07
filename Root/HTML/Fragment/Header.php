@@ -6,8 +6,8 @@
 			</a>
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>
-			<a id='header-logo-href' href='/'>
-				<span id='header-logo-image' class='header-logo image'><?php echo file_get_contents('..\..\Resource\Logo_full.svg'); ?></span>
+			<a id='header-logo-image' href='/' class='header-logo image'>
+				<?php echo file_get_contents('..\..\Resource\Logo_full.svg'); ?>
 			</a>
 		</div>
 	</div>
