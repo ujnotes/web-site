@@ -53,8 +53,8 @@
 				linkedIn
 			</div>
 			<div class='R2'>
-				<a href='https://in.linkedin.com/in/ujLion' onclick="trackOutboundLink('uj-linkedin', 'https://in.linkedin.com/in/ujLion'); return false;">
-					<img src='https://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png' width='160' height='33' border='0' alt="View Ujjwal Singh's profile on LinkedIn">
+				<a id='linkedin-badge' href='https://in.linkedin.com/in/ujLion' onclick="trackOutboundLink('uj-linkedin', 'https://in.linkedin.com/in/ujLion'); return false;">
+					<img src='https://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png' alt="View Ujjwal Singh's profile on LinkedIn">
 				</a>
 			</div>
 		</div>
@@ -71,8 +71,8 @@
 				stackOverflow
 			</div>
 			<div class='R2'>
-				<a href='https://stackoverflow.com/users/483588/ujjwal-singh' onclick="trackOutboundLink('uj-so', 'https://stackoverflow.com/users/483588/ujjwal-singh'); return false;">
-					<img src='https://stackoverflow.com/users/flair/483588.png?theme=dark' width='208' height='58' alt="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+				<a id='stackOverflow-badge' href='https://stackoverflow.com/users/483588/ujjwal-singh' onclick="trackOutboundLink('uj-so', 'https://stackoverflow.com/users/483588/ujjwal-singh'); return false;">
+					<img src='https://stackoverflow.com/users/flair/483588.png?theme=dark' alt="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 				</a>
 			</div>
 		</div>
@@ -81,8 +81,8 @@
 				facebook
 			</div>
 			<div class='R2'>
-				<a href='https://www.facebook.com/ujjwalSinghX' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalSinghX'); return false;">
-					<img src='https://badge.facebook.com/badge/100000014591845.2128.1052548703.png' style="border: 0px;" />
+				<a id='facebook-badge' href='https://www.facebook.com/ujjwalSinghX' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalSinghX'); return false;">
+					<img src='https://badge.facebook.com/badge/100000014591845.2128.1052548703.png' alt="profile for Ujjwal Singh at facebook">
 				</a>
 			</div>
 		</div>
