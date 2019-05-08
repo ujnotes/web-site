@@ -10,7 +10,7 @@
 	<div class='shadow-scroll-bottom'></div>
 	<div id='footer-wrapper-divider'></div>
 	<div class='footer-content' id='footer-support'>
-		<a class='content-link' href='https://patreon.com/ujnotes' id='patreon' onclick="trackOutboundLink('ujnotes-patreon', 'https://patreon.com/ujnotes'); return false;">support on Patreon</a>
+		<a class='content-link' href='https://patreon.com/ujnotes' id='patreon' onclick="trackOutboundLink('ujLion-patreon', 'https://patreon.com/ujLion'); return false;">support on Patreon</a>
 	</div>
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
