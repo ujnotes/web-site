@@ -12,7 +12,7 @@
 	<p>
 		Below are the primary broad generic versions of the term &ndash; 'god'.
 	</p>
-	<div class="indent-20">
+	<div class="indent-c">
 		<table>
 			<tr>
 				<td>

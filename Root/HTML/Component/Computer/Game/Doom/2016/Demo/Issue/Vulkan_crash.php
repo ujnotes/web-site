@@ -29,7 +29,7 @@
 		You can manually replace <code class='inline'>vulkan.dll</code> file with <code class='inline'>vulkan-1-1-0-21-0.dll</code><br>
 		Or use the following commands in a console with <em>administrative rights</em>.
 	</p>
-	<pre class='indent-20'><code class='block'>cd %windows%\system32
+	<pre class='indent-c'><code class='block'>cd %windows%\system32
 move vulkan-1.dll vulkan-1.dll.bak
 copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	* the file version on your computer may be different.
@@ -60,7 +60,7 @@ copy vulkan-1-1-0-21-0.dll vulkan-1.dll</code></pre>
 	<h3>
 		Version
 	</h3>
-	<table id='table_version' class='indent-20'>
+	<table id='table_version' class='indent-c'>
 		<tbody>
 			<tr>
 				<td>Title</td>
