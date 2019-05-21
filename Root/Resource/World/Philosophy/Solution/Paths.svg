@@ -1,6 +1,17 @@
 <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="170 -59.6 900 520">
-	<g fill='#2EA4DD' font-family='Abel'>
+	<defs>
+		<style type="text/css">
+			@font-face {
+				font-family: 'Abel';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+			}
+		</style>
+	</defs>
+	<g fill='#2EA4DD' style='font-family:Abel'>
 		<text transform="matrix(1 0 0 1 198.9995 394.1385)" font-size='25.509px'>Past</text>
 		<text transform="matrix(1 0 0 1 466.9863 244.2362)" font-size='25.509px'>Present</text>
 		<text transform="matrix(1 0 0 1 906.3345 130.2313)" font-size='25.509px'>The </text>

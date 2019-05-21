@@ -1,6 +1,17 @@
 <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="150 -168 900 736">
-	<g font-family='Abel' font-size='16px'>
+	<defs>
+		<style type="text/css">
+			@font-face {
+				font-family: 'Abel';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+			}
+		</style>
+	</defs>
+	<g style='font-family:Abel' font-size='16px'>
 		<circle fill="#F1F2F2" cx="600" cy="299" r="244"/>
 		<circle opacity="0.7" fill="#E6E7E8" cx="600" cy="130.9" r="274"/>
 		<g>
