@@ -6,6 +6,7 @@
 	<meta name='title' content="<?php echo $config['project_title'] ?>" >
 	<meta name='author' content="<?php echo $config['author'] ?>" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name='theme-color' content='#ffffff' >
 	<?php require '../HTML/Fragment/Google_plus_meta.php' ?>
 	<?php require '../HTML/Fragment/OG_meta.php' ?>
 	<?php require '../HTML/Fragment/FB_meta.php' ?>
