@@ -3,31 +3,31 @@
 	require_once 'Fragment\Item_image.php';
 ?>
 <div id='message'>
-	<div id='home-message'>
-		<p>
-			I am <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
-		</p>
-		<p>
-			Here I share my thoughts, findings and recommendations.
-		</p>
-		<p>
-			I strive to make them more accurate and relevant.<br>
-			As I come across new information, these may evolve.
-		</p>
-		<p>
-			I discuss topics ranging from <?php link_xurl('world/philosophy/life', 'Life') ?>, <?php link_xurl('world/philosophy/death', 'Death') ?> and <?php link_xurl('world/philosophy/god', 'God') ?> to current affairs;<br>
-			And computers &amp; tech.
-		</p>
-		<p>
-			Follow 'Ujnotes' via the social channels down below.
-		</P>
-	</div>
-	<div id='profile-image-container'>
-		<a id='profile-image' href='#'>
-			<img src='/photo.jpg' alt="Author's picture">
-		</a>
 	<div>
+		<div id='home-message'>
 			<p>Hello,</p>
+			<p>
+				I am <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
+			</p>
+			<p>
+				Here I share my thoughts, findings and recommendations.
+			</p>
+			<p>
+				I strive to make them more accurate and relevant.<br>
+				As I come across new information, these may evolve.
+			</p>
+			<p>
+				I discuss topics ranging from <?php link_xurl('world/philosophy/life', 'Life') ?>, <?php link_xurl('world/philosophy/death', 'Death') ?> and <?php link_xurl('world/philosophy/god', 'God') ?> to current affairs;<br>
+				And computers &amp; tech.
+			</p>
+			<p>
+				Follow 'Ujnotes' via the social channels down below.
+			</P>
+		</div>
+		<div id='profile-image-container' class='message_leave'>
+			<a id='profile-image' href='#'>
+				<img src='/photo.jpg' alt="Author's picture">
+			</a>
 		</div>
 	</div>
 </div>
