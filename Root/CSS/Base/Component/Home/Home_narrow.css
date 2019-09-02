@@ -1,0 +1,5 @@
+@media (max-width: 540px) {
+	#home-message {
+		margin-left: auto !important
+	}
+}

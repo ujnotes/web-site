@@ -1,10 +1,13 @@
 #home-message {
 	float: left;
-	display: inline-block
+	display: inline-block;
+	margin-left: 22px
 }
 
 #home-message > p:first-child {
 	margin-top: -2px;
+#home-message > p:not(:first-child) {
+	margin-left: 10px
 }
 
 #home-menu {

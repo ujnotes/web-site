@@ -5,7 +5,6 @@
 <div id='message'>
 	<div id='home-message'>
 		<p>
-			Hello,<br>
 			I am <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a>.
 		</p>
 		<p>
@@ -28,6 +27,7 @@
 			<img src='/photo.jpg' alt="Author's picture">
 		</a>
 	<div>
+			<p>Hello,</p>
 		</div>
 	</div>
 </div>
