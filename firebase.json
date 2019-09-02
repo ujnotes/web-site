@@ -29,6 +29,10 @@
 				"destination" : "https://patreon.com/ujnotes",
 				"type" : 302
 			}, {
+				"source" : "/amazon",
+				"destination" : "https://www.amazon.in/shop/ujjwalsinghx",
+				"type" : 302
+			}, {
 				"source" : "/philosophy",
 				"destination" : "/world/philosophy",
 				"type" : 301
