@@ -27,10 +27,12 @@
 		<a id='profile-image' href='#'>
 			<img src='/photo.jpg' alt="Author's picture">
 		</a>
+	<div>
+		</div>
 	</div>
 </div>
 <div class='center' id='content-body-separator'></div>
-<div id='home-menu'>
+<div class='message_center_div' id='home-menu'>
 	<div class="home-menu-group-parent"><?php link_xurl('world', 'World') ?></div>
 	<?php group_image('page-list', 0, ['world/philosophy', 'Philosophy']); ?>
 	<?php
