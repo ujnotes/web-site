@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' >
-	<meta name='title' content="<?php echo $config['project_title'] ?>" >
+	<meta name='title' content="<?php echo $desc.' - '.$config['project_title'] ?>" >
 	<meta name='author' content="<?php echo $config['author'] ?>" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta name='theme-color' content='#ffffff' >
