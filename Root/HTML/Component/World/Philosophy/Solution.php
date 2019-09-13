@@ -82,7 +82,7 @@
 		Dinosaurs went extinct and similarly all our lives could end too. Worst of all - we ourselves could end up bring that upon us with the unimaginable destructive power that we now posses.<br>
 		While there may be many paths that may lead to the pleasant future we so seek, there are many more that will get us nowhere. And then there is one that is the best and it might not be the one that we will actually end up treading.<br>
 	</p>
-	<?php $title='paths'; $ext='svg'; $alt=''; $center='true'; require('Fragment\Component_image.php') ?>
+	<?php $img_title='paths'; $ext='svg'; $alt=''; $center='true'; require('Fragment\Component_image.php') ?>
 	<p>
 		The best that we can do is identify what that best path is and to that, try to walk as close as we can. The result anyways, is beyond our control.<br>
 		The changes in nature usually are very gradual. But we may be required to make substantial changes very rapidly.<br>
@@ -91,7 +91,7 @@
 	<p>
 		Following is a representation of components and their relationships, of the structure of the human world:
 	</p>
-	<?php $title='man-people-system'; $ext='svg'; $alt=''; require('Fragment\Component_image.php') ?>
+	<?php $img_title='man-people-system'; $ext='svg'; $alt=''; require('Fragment\Component_image.php') ?>
 	<p>
 		While people and their system are bound by the unmovable reality, their ideas are not. And 'god' is such an idea that is outside the realm.<br>
 		It must be remarked that even an unreal idea can have real power within the realm. In god's case some constructive but mostly destructive; Primarily because it is misunderstood as a reality instead of an ideology.
