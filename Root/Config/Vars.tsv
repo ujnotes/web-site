@@ -11,7 +11,8 @@ fb_appId	487343071466495
 fb_admins	100000014591845
 google_analytics_id	UA-49547226-1
 google_cse_id	006667833380887598950:wbstdw_wxuc
-sentry_hash	52c8382bd8f04bf19da361ac5905e237
+sentry_key	52c8382bd8f04bf19da361ac5905e237
 sentry_id	187146
-sentry_version	4.0.6
+sentry_version	5.7.0
+sentry_hash	sha384-pHnCJ3bbzJ+LzI19wAdyBvGAjJ5vNAC59uxeRpw5WpgkSlZUQstEADxkSbBnI95q
 google_adsense_ad_client	ca-pub-0691046359633064
