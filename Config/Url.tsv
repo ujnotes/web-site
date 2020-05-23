@@ -4,3 +4,37 @@ Path	Name	Extension
 	manifest	json
 	script	js
 	style	css
+	robots	txt
+	sitemap	xml
+	ads	txt
+	apple-touch-icon	png
+	icon-social	png
+	social	png
+	favicon	ico
+	logo_full	svg
+	photo	jpg
+	photo	jpg
+	launcher-icon-0-75x	png
+	launcher-icon-1x	png
+	launcher-icon-1-5x	png
+	launcher-icon-2x	png
+	launcher-icon-3x	png
+	launcher-icon-4x	png
+	root	svg
+resource\	placeholder	svg
+resource\	external	svg
+world\	index	jpg
+world\philosophy\	index	jpg
+world\philosophy\	life	jpg
+world\philosophy\	death	jpg
+world\philosophy\god\	index	jpg
+world\philosophy\god\no_god\	index	jpg
+world\philosophy\	problem	jpg
+world\philosophy\solution\	index	jpg
+world\philosophy\solution\	paths	svg
+world\philosophy\solution\	man-people-system	svg
+computer\	index	jpg
+computer\game\	index	jpg
+computer\os\	index	jpg
+computer\program\	index	jpg
+computer\programming\	index	jpg
