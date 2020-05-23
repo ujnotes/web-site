@@ -59,6 +59,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.svg$ Resource/$1.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/File%{REQUEST_URI} -f
+RewriteRule ^(.+)$ file/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/Site%{REQUEST_URI} -f
+RewriteRule ^(.+)$ site/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
