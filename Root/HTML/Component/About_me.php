@@ -20,8 +20,6 @@
 			<div class='R1'>email</div>
 			<div class='R2'>
 				<a class='content-link' href="mailto:ujjwal@ujnotes.com?subject=Ujnotes">ujjwal@ujnotes.com</a>
-				<span class='separator'>|</span>
-				<a class='content-link' href="mailto:ujjwalsingh@outlook.com?subject=Ujnotes">ujjwalsingh@outlook.com</a>
 			</div>
 		</div>
 		<div>
@@ -39,13 +37,13 @@
 		<div>
 			<div class='R1'>paypal</div>
 			<div class='R2'>
-				<a class='content-link' href='https://paypal.me/ujLion'>ujLion</a><br>
+				<a class='content-link' href='https://paypal.me/ujlion'>ujLion</a><br>
 			</div>
 		</div>
 		<div>
 			<div class='R1'>patreon</div>
 			<div class='R2'>
-				<a class='content-link' href='https://patreon.com/ujLion'>ujLion</a>
+				<a class='content-link' href='https://patreon.com/ujlion'>ujLion</a>
 			</div>
 		</div>
 		<div>
@@ -53,8 +51,8 @@
 				linkedIn
 			</div>
 			<div class='R2'>
-				<a id='linkedin-badge' href='https://in.linkedin.com/in/ujLion' onclick="trackOutboundLink('uj-linkedin', 'https://in.linkedin.com/in/ujLion'); return false;">
-					<img src='https://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png' alt="View Ujjwal Singh's profile on LinkedIn">
+				<a id='linkedin-badge' class='content-link' href='https://in.linkedin.com/in/ujlion' onclick="trackOutboundLink('uj-linkedin', 'https://in.linkedin.com/in/ujlion'); return false;">
+					linkedin.com/in/ujLion
 				</a>
 			</div>
 		</div>
@@ -71,8 +69,8 @@
 				stackOverflow
 			</div>
 			<div class='R2'>
-				<a id='stackOverflow-badge' href='https://stackoverflow.com/users/483588/ujjwal-singh' onclick="trackOutboundLink('uj-so', 'https://stackoverflow.com/users/483588/ujjwal-singh'); return false;">
-					<img src='https://stackoverflow.com/users/flair/483588.png?theme=dark' alt="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ujjwal Singh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+				<a id='stackOverflow-badge' class='content-link' href='https://stackoverflow.com/users/483588/ujjwal-singh' onclick="trackOutboundLink('uj-so', 'https://stackoverflow.com/users/483588/ujjwal-singh'); return false;">
+					stackoverflow.com/users/483588
 				</a>
 			</div>
 		</div>
@@ -81,8 +79,8 @@
 				facebook
 			</div>
 			<div class='R2'>
-				<a id='facebook-badge' href='https://www.facebook.com/ujjwalSinghX' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalSinghX'); return false;">
-					<img src='https://badge.facebook.com/badge/100000014591845.2128.1052548703.png' alt="profile for Ujjwal Singh at facebook">
+				<a id='facebook-badge' class='content-link' href='https://www.facebook.com/ujjwalsinghx' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalsinghx'); return false;">
+					fb.com/ujjwalsinghx
 				</a>
 			</div>
 		</div>
@@ -91,7 +89,7 @@
 				instagram
 			</div>
 			<div class='R2'>
-				<a class='content-link' href='https://instagram.com/UjLion' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink('uj-ig', 'https://instagram.com/UjLion'); return false;">
+				<a class='content-link' href='https://instagram.com/Ujlion' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink('uj-ig', 'https://instagram.com/UjLion'); return false;">
 					ujLion
 				</a>
 			</div>
@@ -99,7 +97,9 @@
 		<div>
 			<div class='R1'>twitter</div>
 			<div class='R2'>
-				<blockquote class='twitter-tweet' lang='en'><p lang='en' dir='ltr'><a href='https://twitter.com/SpaceX'>@SpaceX</a> You guys did it! - congratulations :). Looking forward to more such morning - where the world has just changed.. Salutes</p>&mdash; Ujjwal Singh (@ujLion) <a href='https://twitter.com/ujLion/status/679166674910625793'>December 22, 2015</a></blockquote>
+				<a class='content-link' href='https://twitter.com/ujlion' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink('uj-twitter', 'https://twitter.com/ujlion'); return false;">
+					ujLion
+				</a>
 			</div>
 		</div>
 
