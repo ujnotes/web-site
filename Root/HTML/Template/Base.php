@@ -19,7 +19,8 @@
 <?php if($bPublish) {
 		require '../JS/Fragment/GA_HeadScript.php';
 		require '../JS/Fragment/GA_track.js';
-		require '../JS/Fragment/Adsense_auto.php'; ?>
+		// require '../JS/Fragment/Adsense_auto.php';
+?>
 		<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
 		<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
 		<script src='//apis.google.com/js/platform.js' async defer></script>
