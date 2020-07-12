@@ -33,6 +33,10 @@
 				"destination" : "https://www.amazon.in/shop/ujjwalsinghx",
 				"type" : 302
 			}, {
+				"source" : "/consciousness",
+				"destination" : "/world/philosophy/consciousness",
+				"type" : 301
+			}, {
 				"source" : "/philosophy",
 				"destination" : "/world/philosophy",
 				"type" : 301
@@ -90,6 +94,12 @@
 			}, {
 				"source": "/world/philosophy.jpg",
 				"destination": "/world/philosophy/index.jpg"
+			}, {
+				"source": "/world/philosophy/consciousness.json",
+				"destination": "/world/philosophy/consciousness/index.json"
+			}, {
+				"source": "/world/philosophy/consciousness.jpg",
+				"destination": "/world/philosophy/consciousness/index.jpg"
 			}, {
 				"source": "/world/philosophy/god.json",
 				"destination": "/world/philosophy/god/index.json"

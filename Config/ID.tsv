@@ -16,7 +16,7 @@ world	World	World	0	The critical aspects of the world we live in
 world/philosophy	Philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life
 world/philosophy/life	Life	Life	0	An understanding of our life
 world/philosophy/death	Death	Death	0	An elaboration of death's significance
-#	world/philosophy/consciousness	 Consciousness	Consciousness	0	Consciousness
+world/philosophy/consciousness	 Consciousness	What is consciousness	0	Examining thoughts, self-awareness, consciousness and free will
 #	world/philosophy/consciousness/freewill	Freewill	Freewill	0	Freewill
 #	world/philosophy/compassion	Compassion	Compassion	0	Compassion
 #	world/philosophy/possessions	Possessions	Possessions	0	Possessions
