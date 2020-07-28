@@ -31,7 +31,8 @@
 		<div>
 			<div class='R1'>invention</div>
 			<div class='R2'>
-				<a class='content-link' href='https://wcodes.org' onclick="trackOutboundLink('ujnotes', 'https://wcodes.com'); return false;">wcodes.org</a>
+				<a class='content-link' href='https://wcodes.org' onclick="trackOutboundLink('wcodes', 'https://wcodes.com'); return false;">wcodes.org</a><br>
+				<a class='content-link' href='https://wolo.codes' onclick="trackOutboundLink('wolo', 'https://wolo.codes'); return false;">wolo.codes</a>
 			</div>
 		</div>
 		<div>
