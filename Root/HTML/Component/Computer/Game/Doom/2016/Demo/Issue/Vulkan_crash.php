@@ -29,8 +29,8 @@
 		You can manually replace <code class='inline'>vulkan.dll</code> file with <code class='inline'>vulkan-1-1-0-21-0.dll</code><br>
 		Or use the following commands in a console with <em>administrative rights</em>.
 	</p>
-	* the file version on your computer may be different.
 	<pre class='indent-c'><code class='block'><?php include("Vulkan_crash_code_replace.txt") ?></code></pre>
+	<div>* the file version on your computer may be different</div>
 	<h3>
 		Caution
 	</h3>
