@@ -18,10 +18,10 @@
 		And the rest, like cancer and death are only 'realities'. If curable, defeating them are only 'tasks' to be accomplished.<br>
 		Which again are impeded by that one problem.
 	</p>
-	<p>
+	<blockquote>
 		&ldquo;.. Except for the uncontrolled and misguided mind, there is no enemy within this world ..&rdquo;<br>
-		&nbsp; &mdash; <a class='content-link' href="http://gitabase.com/eng/SB/7/8/9" target='_blank'>Gita:7.8.9</a> (a book written by men, like EVERY other book)
-	</p>
+		&nbsp; &mdash; <a class='content-link' href="http://gitabase.com/eng/SB/7/8/9" target='_blank'>Gita : 7.8.9</a> (a book written by men, like EVERY other book)
+	</blockquote>
 	<p>
 		This gives rise to and is even further compounded with a greater peril of the "<strong>illusion of knowledge</strong>".<br>
 		Which further shuts down an afflicted mind from any possibility of letting the right knowledge get in.<br>
