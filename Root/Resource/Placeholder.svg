@@ -1,4 +1,8 @@
 <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 width='160' height='110' viewBox="0 0 160 110" fill='#F8F8F8'>
-	<rect width='160' height='110' />
+	<pattern id="pattern-checkers" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" >
+		<rect class="checker" x="0" width="10" height="10" y="0"/>
+		<rect class="checker" x="10" width="10" height="10" y="10"/>
+	</pattern>
+	<rect width='160' height='110' fill="url(#pattern-checkers)" />
 </svg>
