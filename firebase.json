@@ -37,6 +37,14 @@
 				"destination" : "/world/philosophy/consciousness",
 				"type" : 301
 			}, {
+				"source" : "/free_will",
+				"destination" : "/world/philosophy/consciousness/free_will",
+				"type" : 301
+			}, {
+				"source" : "/freewill",
+				"destination" : "/world/philosophy/consciousness/free_will",
+				"type" : 301
+			}, {
 				"source" : "/philosophy",
 				"destination" : "/world/philosophy",
 				"type" : 301
@@ -100,6 +108,12 @@
 			}, {
 				"source": "/world/philosophy/consciousness.jpg",
 				"destination": "/world/philosophy/consciousness/index.jpg"
+			}, {
+				"source": "/world/philosophy/consciousness/free_will.json",
+				"destination": "/world/philosophy/consciousness/free_will/index.json"
+			}, {
+				"source": "/world/philosophy/consciousness/free_will.jpg",
+				"destination": "/world/philosophy/consciousness/free_will/index.jpg"
 			}, {
 				"source": "/world/philosophy/god.json",
 				"destination": "/world/philosophy/god/index.json"
