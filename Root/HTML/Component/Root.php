@@ -41,7 +41,7 @@
 	?>
 	<br>
 	<div class="home-menu-group-parent"><?php link_xurl('computer', 'Computer') ?></div>
-	<?php group_image('page-list', 1, ['computer/os', 'OS', 'http://ujnotes.com'], ['computer/program', 'Program', 'http://ujnotes.com'], ['computer/programming', 'Programming', 'http://ujnotes.com'], ['computer/game', 'Game']); ?>
+	<?php group_image('page-list', 1, ['computer/os', 'OS', '//ujnotes.com/computer/os'], ['computer/program', 'Program', '//ujnotes.com/computer/program'], ['computer/programming', 'Programming', '//ujnotes.com/computer/programming'], ['computer/game', 'Game']); ?>
 </div>
 <div id='fb_components'>
 	<?php require('..\HTML\Fragment\Component_FB_buttons.php') ?>
