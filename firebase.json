@@ -2,7 +2,8 @@
 	"hosting": {
 		"public": "public",
 		"ignore": [
-			".htaccess"
+			".htaccess",
+			".git/**"
 		],
 		"redirects": [ {
 				"source" : "/aboutme",
