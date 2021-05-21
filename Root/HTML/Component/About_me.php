@@ -80,7 +80,7 @@
 				facebook
 			</div>
 			<div class='R2'>
-				<a id='facebook-badge' class='content-link' href='https://www.facebook.com/ujjwalsinghx' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink(uj-fb, 'https://www.facebook.com/ujjwalsinghx'); return false;">
+				<a id='facebook-badge' class='content-link' href='https://www.facebook.com/ujjwalsinghx' target='_TOP' title="Ujjwal Singh" onclick="trackOutboundLink('uj-fb', 'https://www.facebook.com/ujjwalsinghx'); return false;">
 					fb.com/ujjwalsinghx
 				</a>
 			</div>
