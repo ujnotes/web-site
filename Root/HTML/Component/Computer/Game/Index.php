@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='The game of chess'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='The game of chess'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<p class='first-letter-high'>
 		Games mimic reality. Electronic computers have unleashed our creative imagination.<br>
@@ -10,4 +10,4 @@
 		Following is a list of computer games I have some information to share on.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

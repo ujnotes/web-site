@@ -18,4 +18,4 @@
 		I request you all to get off the path of mindless
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

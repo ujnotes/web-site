@@ -25,4 +25,4 @@
 		Violence is wrong, with the exception of the requried compulsive defence of the greater lives in danger.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

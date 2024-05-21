@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt=''; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt=''; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>
 		What is the solution to the problems of the world?
@@ -396,4 +396,4 @@
 		</div></li>
 	</ul>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

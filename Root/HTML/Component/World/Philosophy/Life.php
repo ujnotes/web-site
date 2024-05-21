@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='A baby looking inquisitively'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='A baby looking inquisitively'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>
 		What is life?
@@ -27,4 +27,4 @@
 		And once you understand - have no fear. Choose your song and dance your best to it.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

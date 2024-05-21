@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='A man thinking looking at the sunrise'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='A man thinking looking at the sunrise'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'>Understanding 'I' - the consciousness</h2>
 	<p>
 		We are a part of this world and made up of the same matter as the rest of it. Yet there is something profoundly different about us.<br>
@@ -31,4 +31,4 @@
 		A mind is that software platform on which the thought-simulations run.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

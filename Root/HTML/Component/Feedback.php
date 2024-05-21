@@ -5,5 +5,5 @@
 	</p>
 </div>
 <div id='fb_components'>
-	<?php require('..\HTML\Fragment\Component_FB_comments.php') ?>
+	<?php require('../HTML/Fragment/Component_FB_comments.php') ?>
 </div>

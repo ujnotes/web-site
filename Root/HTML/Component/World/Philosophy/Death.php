@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='A cemetery with crosses on the graves'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='A cemetery with crosses on the graves'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>
 		What is death?
@@ -54,4 +54,4 @@
 		Recycling one's dead body should be done in the most environment friendly way; One that has the smallest footprint and gives back to the world.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

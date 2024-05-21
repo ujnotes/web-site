@@ -1,6 +1,6 @@
 <?php
-	require_once 'Fragment\Item_text.php';
-	require_once 'Fragment\Item_image.php';
+	require_once 'Fragment/Item_text.php';
+	require_once 'Fragment/Item_image.php';
 ?>
 <div id='message'>
 	<div>
@@ -44,5 +44,5 @@
 	<?php group_image('page-list', 1, ['computer/os', 'OS', '//ujnotes.com/computer/os'], ['computer/program', 'Program', '//ujnotes.com/computer/program'], ['computer/programming', 'Programming', '//ujnotes.com/computer/programming'], ['computer/game', 'Game']); ?>
 </div>
 <div id='fb_components'>
-	<?php require('..\HTML\Fragment\Component_FB_buttons.php') ?>
+	<?php require('../HTML/Fragment/Component_FB_buttons.php') ?>
 </div>

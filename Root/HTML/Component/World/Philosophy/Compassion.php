@@ -4,4 +4,4 @@
 		This allows him to simulate what others would feel.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

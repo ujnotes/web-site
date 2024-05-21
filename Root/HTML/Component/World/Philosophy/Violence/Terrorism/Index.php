@@ -42,4 +42,4 @@
 		We are all plagued with the thought of being special. That our lives has to have a higher calling a special meaning. Well we are special - we are.. just that we are all special!
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

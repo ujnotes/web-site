@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='Surreal water droplets on thin fibers'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='Surreal water droplets on thin fibers'; require('../HTML/Fragment/Component_cover.php') ?>
 	<p>
 		Why is there something instead of nothing?<br>
 		The key to the answer of this question may lie in the fact that there is both 'something' and 'nothing' and both are a requisite for each other.<br>
@@ -11,4 +11,4 @@
 		
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

@@ -1,5 +1,5 @@
 <?php
-	require_once 'Fragment\Item.php';
+	require_once 'Fragment/Item.php';
 	$SIDEBAR_NAV_GROUP = 'sidebar-nav-group page-list';
 ?>
 <div id='nav-menu'>

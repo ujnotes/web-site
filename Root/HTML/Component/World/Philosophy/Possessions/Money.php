@@ -18,4 +18,4 @@
 		So the solution is to device a certificate that is a token - representing how much - of a common - standard unit, the society (here union of A, B & C) owes an individual.
 	</p>
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

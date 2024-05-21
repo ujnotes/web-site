@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='A road'; require('..\HTML\Fragment\Component_cover.php') ?>
+	<?php $alt='A road'; require('../HTML/Fragment/Component_cover.php') ?>
 	
 	<h3>What is free will?</h3>
 	<p>
@@ -83,4 +83,4 @@
 	</p>
 	
 </div>
-<?php require('..\HTML\Fragment\Component_bottom.php') ?>
+<?php require('../HTML/Fragment/Component_bottom.php') ?>
