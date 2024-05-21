@@ -1,6 +1,6 @@
 Path	Name	Extension
-	menu	
-	404	
+	menu
+	404
 	manifest	json
 	script	js
 	style	css
@@ -21,22 +21,22 @@ Path	Name	Extension
 	launcher-icon-3x	png
 	launcher-icon-4x	png
 	root	svg
-resource\	placeholder	svg
-resource\	external	svg
-world\	index	jpg
-world\philosophy\	index	jpg
-world\philosophy\	life	jpg
-world\philosophy\	death	jpg
-world\philosophy\consciousness\	index	jpg
-world\philosophy\consciousness\free_will\	index	jpg
-world\philosophy\god\	index	jpg
-world\philosophy\god\no_god\	index	jpg
-world\philosophy\	problem	jpg
-world\philosophy\solution\	index	jpg
-world\philosophy\solution\	paths	svg
-world\philosophy\solution\	man-people-system	svg
-computer\	index	jpg
-computer\game\	index	jpg
-computer\os\	index	jpg
-computer\program\	index	jpg
-computer\programming\	index	jpg
+resource/	placeholder	svg
+resource/	external	svg
+world/	index	jpg
+world/philosophy/	index	jpg
+world/philosophy/	life	jpg
+world/philosophy/	death	jpg
+world/philosophy/consciousness/	index	jpg
+world/philosophy/consciousness/free_will/	index	jpg
+world/philosophy/god/	index	jpg
+world/philosophy/god/no_god/	index	jpg
+world/philosophy/	problem	jpg
+world/philosophy/solution/	index	jpg
+world/philosophy/solution/	paths	svg
+world/philosophy/solution/	man-people-system	svg
+computer/	index	jpg
+computer/game/	index	jpg
+computer/os/	index	jpg
+computer/program/	index	jpg
+computer/programming/	index	jpg

@@ -4,7 +4,7 @@
 <div class='center' id='content-body-separator'></div>
 <div class="center">
 	<div class="sidebar-nav-group">
-		<?php require("Fragment\List.php") ?>
+		<?php require("Fragment/List.php") ?>
 	</div>
 </div>
-<?php require("Fragment\Comments_FB.php") ?>
+<?php require("Fragment/Comments_FB.php") ?>
