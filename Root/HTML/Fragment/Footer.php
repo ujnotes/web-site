@@ -20,7 +20,7 @@
 			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>
 		<div class='footer-content'>
-			<a class="content-link-gray XURL" href='/license' data-target='license' data-title='License'>Copyright &copy; 2020</a>
+			<a class="content-link-gray XURL" href='/license' data-target='license' data-title='License'>Copyright &copy; <?php echo date('Y'); ?></a>
 			<a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a><a class='content-link' target='_blank' href='/about_me' rel='author'></a>
 		</div>
 	</div>
