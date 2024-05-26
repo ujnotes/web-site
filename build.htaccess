@@ -1,0 +1,44 @@
+DirectoryIndex index.html
+
+RewriteBase /
+RewriteEngine On
+DirectorySlash Off
+
+RewriteRule ^(.+)/$ $1 [R=301]
+
+RewriteRule ^aboutme$ about_me [R=307,L]
+
+RewriteRule ^facebook$ https://facebook.com/ujnotes [R=307,L]
+RewriteRule ^twitter$ https://twitter.com/ujnotesx [R=307,L]
+RewriteRule ^gplus$ https://plus.google.com/+ujnotesx [R=307,L]
+RewriteRule ^patreon$ https://patreon.com/ujnotes [R=307,L]
+
+RewriteRule ^philosophy$ world/philosophy [R=301,L]
+RewriteRule ^life$ world/philosophy/life [R=301,L]
+RewriteRule ^death$ world/philosophy/death [R=301,L]
+RewriteRule ^god$ world/philosophy/god [R=301,L]
+RewriteRule ^no_god$ world/philosophy/god/no_god [R=301,L]
+RewriteRule ^nogod$ world/philosophy/god/no_god [R=301,L]
+RewriteRule ^problem$ world/philosophy/problem [R=301,L]
+RewriteRule ^solution$ world/philosophy/solution [R=301,L]
+
+RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
+
+RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
+RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
+RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
+
+rewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+)$ $1/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?)\.json$ $1/index.json [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?)\.jpg$ $1/index.jpg [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)$ $1.html [L]
