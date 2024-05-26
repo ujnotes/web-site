@@ -9,9 +9,11 @@ WORKDIR /app
 COPY . .
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
+    cp /app/site/project/httpd-vhosts.conf /etc/apache2/sites-available/ && \
     ln -s /app/site/project/root /var/www/root && \
     ln -s /app/site/project/interim /var/www/interim && \
     ln -s /app/site/project/public /var/www/public && \
+    a2ensite httpd-vhosts.conf \
     a2enmod rewrite && \
     apt-get -y update && \
     apt-get -y install git && \
