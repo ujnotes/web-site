@@ -1,9 +1,9 @@
 <div id='footer-wrapper'>
 	<div class='shadow-scroll-bottom'></div>
 	<div id='footer-wrapper-divider'></div>
-	<div class='footer-content' id='footer-support'>
+	<!-- <div class='footer-content' id='footer-support'>
 		<a class='content-link' href='https://patreon.com/ujlion' id='patreon' onclick="trackOutboundLink('ujLion-patreon', 'https://patreon.com/ujlion'); return false;">support on Patreon</a>
-	</div>
+	</div> -->
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
 			<div class='social grow'>
