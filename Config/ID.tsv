@@ -1,5 +1,5 @@
 Status	Id	Label	Title	JS	Description
-published	published	about	About	About this project	0	More information about the project
+published	about	About	About this project	0	More information about the project
 published	about_me	About me	About Ujjwal Singh	1	Web links of the creator of this project : Ujjwal Singh
 published	about_site	About site	About this site	0	List of technology and software used to build this website
 published	changelog	Changelog	Changelog	0	Log of changes across versions
@@ -13,7 +13,7 @@ published	root	Ujnotes	Ujnotes	1	Ujjwal Singh's notes on life and technology
 draft	universe	universe	Universe	0	Universe
 draft	universe/reality	universe/reality	Reality	0	Reality
 published	world	World	World	0	The critical aspects of the world we live in
-publish	world/philosophy	Philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life
+published	world/philosophy	Philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life
 published	world/philosophy/life	Life	Life	0	An understanding of our life
 published	world/philosophy/death	Death	Death	0	An elaboration of death's significance
 published	world/philosophy/consciousness	 Consciousness	What is consciousness	0	Examining thoughts, self-awareness, consciousness and free will
