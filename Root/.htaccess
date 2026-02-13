@@ -44,10 +44,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.ico$ Resource/$1.ico [L]
 
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
-RewriteRule ^(.*?)\.jpg$ Resource/$1/index.jpg [R=302,L]
+RewriteRule ^(.*?)\.jpg$ Resource/$1/index.jpg [L]
 
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
-RewriteRule ^(.*?)\.svg$ Resource/$1/index.svg [R=302,L]
+RewriteRule ^(.*?)\.svg$ Resource/$1/index.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
