@@ -1,7 +1,7 @@
-<?php $alt='Inference'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
-		<h3>What is inference?</h3>
+		<?php $alt='A wet umbrella and muddy footprints leading in from an open doorway'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
+	<h3>What is inference?</h3>
 	<p>
 		Inference is a conclusion drawn from what is already known or observed.
 	</p>
