@@ -1,43 +1,46 @@
-Status	Id	Label	Title	JS	Description
-published	about	About	About this project	0	More information about the project
-published	about_me	About me	About Ujjwal Singh	1	Web links of the creator of this project : Ujjwal Singh
-published	about_site	About site	About this site	0	List of technology and software used to build this website
-published	changelog	Changelog	Changelog	0	Log of changes across versions
-published	faq	FAQ	FAQ	0	Frequently asked questions about this project
-published	feedback	Feedback	Feedback	0	Links to leave feedback
-published	license	License	License	0	Copyright licenses for the intellectual properties associated with the project
-published	logo	Logo	Logo	0	Logo of Ujnotes
-published	roadmap	Roadmap	Roadmap	0	Future roadmap of features and implementations
-published	timeline	Timeline	Timeline	0	Markable events in project's lifetime
-published	root	Ujnotes	Ujnotes	1	Ujjwal Singh's notes on life and technology
-draft	universe	universe	Universe	0	Universe
-draft	universe/reality	universe/reality	Reality	0	Reality
-published	world	World	World	0	The critical aspects of the world we live in
-published	world/philosophy	Philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life
-published	world/philosophy/life	Life	Life	0	An understanding of our life
-published	world/philosophy/death	Death	Death	0	An elaboration of death's significance
-published	world/philosophy/consciousness	 Consciousness	What is consciousness	0	Examining thoughts, self-awareness, consciousness and free will
-published	world/philosophy/consciousness/free_will	Free will	Free will	0	Examining free will and if we are actually free
-draft	world/philosophy/compassion	Compassion	Compassion	0	Compassion
-draft	world/philosophy/possessions	Possessions	Possessions	0	Possessions
-draft	world/philosophy/possessions/money	Money	Money	0	Money
-draft	world/philosophy/society	Society	Society	0	Society
-draft	world/philosophy/governance	Governance	Governance	0	Governance
-published	world/philosophy/god	God	God	0	Meaning of God
-published	world/philosophy/god/no_god	No God	No God	0	Inexistence of God
-draft	world/philosophy/god/manifestations	Manifestations	0	Manifestations of God
-published	world/philosophy/problem	Problem	Problem	0	What is a 'problem' and what afflicts the present day world
-published	world/philosophy/solution	Solution	Solution	0	What is the solution to the present day world's problem
-draft	world/philosophy/religion	Religion	Religion	0	Religion
-draft	world/philosophy/violence	Violence	Violence	0	Violence
-draft	world/philosophy/violence/war	War	War	0	War
-draft	world/philosophy/violence/terrorism	Terrorism	Terrorism	0	Terrorism
-draft	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	Islamic Terrorism	0	Islamic Terrorism
-draft	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS
-published	computer	Computer	Computer	0	Computer : the information processor
-published	computer/game	Game	Game	0	Computer games
-published	computer/game/doom	Doom	Doom	0	A series of first person shooter video games by id software
-published	computer/game/doom/2016	Doom 2016	Doom 2016	0	The fourth installment and reboot of the series
-published	computer/game/doom/2016/demo	Demo	Demo	0	Doom 2016 Demo
-published	computer/game/doom/2016/demo/issue	Issues	Issues	0	Doom 2016 Demo issues
-published	computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan crash	Vulkan crash	0	Doom 2016 Demo crash with Vulkan : Solution
+Status	Id	Label	Title	JS	Description	Type
+published	about	About	About this project	0	More information about the project	page
+published	about_me	About me	About Ujjwal Singh	1	Web links of the creator of this project : Ujjwal Singh	page
+published	about_site	About site	About this site	0	List of technology and software used to build this website	page
+published	changelog	Changelog	Changelog	0	Log of changes across versions	page
+published	faq	FAQ	FAQ	0	Frequently asked questions about this project	page
+published	feedback	Feedback	Feedback	0	Links to leave feedback	page
+published	license	License	License	0	Copyright licenses for the intellectual properties associated with the project	page
+published	logo	Logo	Logo	0	Logo of Ujnotes	page
+published	roadmap	Roadmap	Roadmap	0	Future roadmap of features and implementations	page
+published	timeline	Timeline	Timeline	0	Markable events in project's lifetime	page
+published	root	Ujnotes	Ujnotes	1	Ujjwal Singh's notes on life and technology	page
+draft	universe	universe	Universe	0	Universe	page
+draft	universe/reality	universe/reality	Reality	0	Reality	article
+published	world	World	World	0	The critical aspects of the world we live in	page
+published	world/philosophy	Philosophy	Philosophy	0	Philosophical analysis of the dimensions of a human life	article
+published	world/philosophy/life	Life	Life	0	An understanding of our life	article
+published	world/philosophy/death	Death	Death	0	An elaboration of death's significance	article
+published	world/philosophy/consciousness	 Consciousness	What is consciousness	0	Examining thoughts, self-awareness, consciousness and free will	article
+published	world/philosophy/consciousness/free_will	Free will	Free will	0	Examining free will and if we are actually free	article
+draft	world/philosophy/compassion	Compassion	Compassion	0	Compassion	article
+draft	world/philosophy/possessions	Possessions	Possessions	0	Possessions	article
+draft	world/philosophy/possessions/money	Money	Money	0	Money	article
+draft	world/philosophy/society	Society	Society	0	Society	article
+draft	world/philosophy/governance	Governance	Governance	0	Governance	article
+published	world/philosophy/god	God	God	0	Meaning of God	article
+published	world/philosophy/god/no_god	No God	No God	0	Inexistence of God	article
+draft	world/philosophy/god/manifestations	Manifestations	0	Manifestations of God		article
+published	world/philosophy/problem	Problem	Problem	0	What is a 'problem' and what afflicts the present day world	article
+published	world/philosophy/solution	Solution	Solution	0	What is the solution to the present day world's problem	article
+draft	world/philosophy/religion	Religion	Religion	0	Religion	article
+draft	world/philosophy/violence	Violence	Violence	0	Violence	article
+draft	world/philosophy/violence/war	War	War	0	War	article
+draft	world/philosophy/violence/terrorism	Terrorism	Terrorism	0	Terrorism	article
+draft	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	Islamic Terrorism	0	Islamic Terrorism	article
+draft	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS		article
+published	computer	Computer	Computer	0	Computer : the information processor	page
+published	computer/game	Game	Game	0	Computer games	article
+published	computer/game/doom	Doom	Doom	0	A series of first person shooter video games by id software	article
+published	computer/game/doom/2016	Doom 2016	Doom 2016	0	The fourth installment and reboot of the series	article
+published	computer/game/doom/2016/demo	Demo	Demo	0	Doom 2016 Demo	article
+published	computer/game/doom/2016/demo/issue	Issues	Issues	0	Doom 2016 Demo issues	article
+published	computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan crash	Vulkan crash	0	Doom 2016 Demo crash with Vulkan : Solution	article
+publish	world/philosophy/intelligence	Intelligence	Intelligence	0	How patterns are detected, reasoning works under uncertainty, and solutions are reached.	article
+published	world/philosophy/inference	Inference	Inference	0	How we reach conclusions from what we know and observe.	article
+publish	world/philosophy/cognition	Cognition	Cognition	0	How information is acquired, organized, and used to guide decisions and actions	article

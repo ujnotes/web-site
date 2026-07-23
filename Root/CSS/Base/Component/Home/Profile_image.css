@@ -40,3 +40,16 @@
 	-webkit-box-shadow: 0 1px 10px #afafaf;
 	-moz-box-shadow: 0 1px 10px #afafaf
 }
+
+html.dark-mode #profile-image,
+html.dark-mode #profile-image:focus>img {
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45)
+}
+
+html.dark-mode #profile-image:focus {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none
+}
