@@ -1,10 +1,14 @@
 <div id='message'>
-		<h3>What is Hindu?</h3>
+		<?php $alt='A detailed wooden carving depicting the Hindu deity - Sri Krishna'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
+	<h3>What is Hindu?</h3>
 	<p>
-		“Hindu” is not only a religious label. It can describe a culture, a civilisation and a family of philosophies.
+		“Hindu” is not only a religious label. It can describe a culture, a civilization and a family of philosophies.
 	</p>
 	<p>
-		There is no single founder, prophet or compulsory belief that every Hindu must accept. Some Hindus worship a personal god. Some think of the ultimate reality as impersonal. Some do not believe in a creator god at all.
+		There is no single founder, prophet or compulsory belief that every Hindu must accept other than the core principle of ‘live and let live’.<br>
+		<br>
+		Some Hindus worship a personal god. Some think of the ultimate reality as impersonal. Some do not believe in a creator god at all.
 	</p>
 	<p>
 		Think of Hindu thought as a large old tree. Its branches grow in different directions, but they share a long history and many common ideas. Calling the whole tree a “religion” tells us something, but not enough.
@@ -20,7 +24,7 @@
 		The answer can depend on the situation. A doctor, a parent and a judge have different duties. But none of them may act without caring about truth, harm and consequence.
 	</p>
 	<p>
-		<em>God chhaina bhandaima je pani garna mildaina.</em> Not believing in God does not mean that anything goes.
+		Not believing in God does not mean that anything goes.
 	</p>
 	<p>
 		I do not need the fear of supernatural punishment to know that cruelty is wrong. Another person can suffer. Society depends on trust. My actions shape both the world and the person I become. That is enough reason to take dharma seriously.
@@ -64,7 +68,7 @@
 		<li><div><strong>Vedanta</strong> examines the Upanishads and includes Advaita, Vishishtadvaita, Dvaita and other positions.</div></li>
 	</ul>
 	<p>
-		The wider Indian conversation also includes schools that reject Vedic authority. <strong>Charvaka</strong> is materialist and sceptical. Buddhism and Jainism developed their own accounts of reality, conduct and liberation.
+		The wider Indian conversation also includes schools that reject Vedic authority. <strong>Charvaka</strong> is materialist and skeptical. Buddhism and Jainism developed their own accounts of reality, conduct and liberation.
 	</p>
 	<p>
 		These schools do not agree about God, the self, karma or what happens after death. Their disagreement is not a defect. It shows that inquiry was allowed to move in more than one direction.
@@ -103,7 +107,7 @@
 		Non-imposition protects freedom of thought and belief. It does not prevent society from restricting conduct when there is a serious ethical reason.
 	</p>
 	<p>
-		I do wish a ban on cow slaughter to be imposed where it is feasible to do so. For me, the cow represents nourishment, motherhood, patient service and a civilisational duty of gratitude. There is also a direct compassion argument: an animal capable of fear and suffering should not be killed merely because it is useful or edible.
+		I do wish a ban on cow slaughter to be imposed where it is feasible to do so. For me, the cow represents nourishment, motherhood, patient service and a civilizational duty of gratitude. There is also a direct compassion argument: an animal capable of fear and suffering should not be killed merely because it is useful or edible.
 	</p>
 	<p>
 		By “feasible”, I mean that a law must also consider animal welfare, abandoned cattle, farmers' livelihoods, food security and practical enforcement. A ban without responsibility for the living animal can become symbolic politics rather than compassion.
@@ -151,14 +155,14 @@
 		Quantum physics shows that nature does not always follow our everyday intuition. Superposition, measurement and entanglement force us to think carefully about separateness, properties and what can be known.
 	</p>
 	<p>
-		These mysteries can remind an Advaita reader of pointers towards unity and the limits of ordinary perception. But similarity is not proof. Quantum physics does not establish Brahman, Atman or Advaita. A philosophical pointer and a scientific theory must not be confused.
+		These mysteries can remind an Advaita reader of pointers towards unity and the limits of ordinary perception. That said similarity is not proof; Quantum physics does Not directly establish Brahman, Atman or Advaita.
 	</p>
 	<p>
 		Science should keep our claims honest. Philosophy can help us examine what those claims mean.
 	</p>
 	<h3>What follows?</h3>
 	<p>
-		A person may be Hindu through culture, ancestry, practice, philosophy or a commitment to dharma. Another person may be Hindu through devotion to a god.
+		A person may be Hindu through culture, ancestry, practice, philosophy or a commitment to dharma.
 	</p>
 	<p>
 		Neither one alone defines every Hindu.
