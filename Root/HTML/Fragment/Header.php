@@ -7,7 +7,7 @@
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>
 			<a id='header-logo-image' href='/' class='header-logo image'>
-				<?php includeSVG('', 'Logo_full'); ?>
+				<?php includeSVG('', 'Logo_Full'); ?>
 			</a>
 		</div>
 	</div>
