@@ -8,10 +8,10 @@
 	<meta name='author' content="<?php echo $config['author'] ?>" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta name='theme-color' content='#ffffff' >
-	<?php require '../HTML/Fragment/Google_plus_meta.php' ?>
-	<?php require '../HTML/Fragment/OG_meta.php' ?>
-	<?php require '../HTML/Fragment/FB_meta.php' ?>
-	<?php require '../HTML/Fragment/Twitter_meta.php' ?>
+	<?php require __DIR__.'/../../Framework/HTML/Fragment/Google_Plus_meta.php' ?>
+	<?php require __DIR__.'/../../Framework/HTML/Fragment/OG_meta.php' ?>
+	<?php require __DIR__.'/../../Framework/HTML/Fragment/FB_meta.php' ?>
+	<?php require __DIR__.'/../../Framework/HTML/Fragment/Twitter_meta.php' ?>
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
