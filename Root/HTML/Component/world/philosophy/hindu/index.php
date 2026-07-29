@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A detailed wooden carving depicting the Hindu deity - Sri Krishna'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A closeup detailed wooden carving depicting the Hindu deity - Sri Krishna'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is Hindu?</h3>
 	<p>
