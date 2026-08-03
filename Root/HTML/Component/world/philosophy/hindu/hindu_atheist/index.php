@@ -1,3 +1,5 @@
+<?php $alt='Hindu Atheist'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<h3>What is a Hindu atheist?</h3>
 	<p>
