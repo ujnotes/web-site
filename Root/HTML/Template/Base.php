@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en' itemscope='' itemtype='http://schema.org/WebPage'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='<?php echo $lang ?>' itemscope='' itemtype='http://schema.org/WebPage'>
 <script>(function(){try{var t=localStorage.getItem('cutie-dark-mode');t=t==='true'?'dark':t==='false'?'light':t;if(t!=='system'&&t!=='light'&&t!=='dark')t='system';var r=t==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':t==='system'?'light':t;document.documentElement.setAttribute('data-theme-preference',t);document.documentElement.setAttribute('data-theme-resolved',r);if(r==='dark')document.documentElement.classList.add('dark-mode');document.documentElement.style.colorScheme=r}catch(e){document.documentElement.setAttribute('data-theme-preference','system');document.documentElement.setAttribute('data-theme-resolved','light')}})()</script>
 <head>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
@@ -15,7 +15,8 @@
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
-	<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel='canonical' >
+	<link href="<?php echo $config['base_url']; if($lang !== 'en') echo '/'.$lang; if($id != 'root') echo '/'.$id ?>" rel='canonical' >
+	<?php require '../HTML/Fragment/Hreflang_meta.php' ?>
 	<title><?php echo $desc.' - '.$config['project_title']; ?></title>
 <?php if($bPublish) {
 		if(!empty($config['google_tag_id']))
@@ -46,7 +47,10 @@
 				<div class='container'>
 					<div id='content-wrapper-inside'>
 						<div class='shadow-scroll-top'></div>
-						<div id='google_translate_element'></div>
+						<div id='translation-controls' class='hide_display'>
+							<?php require '../HTML/Fragment/LanguageSwitcher.php' ?>
+							<div id='google_translate_element'></div>
+						</div>
 						<?php require '../HTML/Fragment/GCSE.php' ?>
 						<div id='canvas-wrapper'>
 							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id='path'><?php require '../HTML/Fragment/Path.php' ?></div></div>
