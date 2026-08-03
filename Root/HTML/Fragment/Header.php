@@ -1,8 +1,9 @@
+<?php require_once __DIR__.'/UITranslation.php'; ?>
 <div id='header-wrapper'>
 	<div id='header-title'>
 		<div id='header-slogan' class='XURL' data-target='root' data-title=''>
 			<a id='header-slogan-href' href='/'>
-				<div id='header-slogan-text'>my notes</div>
+				<div id='header-slogan-text'><?php echo htmlspecialchars(getUITranslation('my_notes', $lang), ENT_QUOTES, 'UTF-8'); ?></div>
 			</a>
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>
