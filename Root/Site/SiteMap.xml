@@ -183,4 +183,10 @@
 	<url>
 		<loc>https://ujnotes.com/hi/about_site</loc>
 	</url>
+	<url>
+		<loc>https://ujnotes.com</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/root</loc>
+	</url>
 </urlset>
