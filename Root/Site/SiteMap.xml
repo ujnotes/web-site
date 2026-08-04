@@ -189,4 +189,10 @@
 	<url>
 		<loc>https://ujnotes.com/hi/root</loc>
 	</url>
+	<url>
+		<loc>https://ujnotes.com/world</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world</loc>
+	</url>
 </urlset>
