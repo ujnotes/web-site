@@ -3,7 +3,7 @@
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<p>
 		This world that we live in - what is it? why is it the way it is?<br>
-
+		
 	</p>
 
 </div>

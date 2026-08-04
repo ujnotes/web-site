@@ -1,5 +1,3 @@
-<?php $alt='चार्वाक'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>चार्वाक क्या है?</h3>
 	<p>

@@ -1,20 +1,36 @@
 Status	ID	Label	Title	JS	Description	Type
-published	world	संसार	संसार	0	उस संसार के महत्त्वपूर्ण पहलू जिसमें हम रहते हैं	article
+published	world	संसार	संसार	0	उस संसार के महत्त्वपूर्ण पहलू जिसमें हम रहते हैं	page
 published	world/philosophy	दर्शन	दर्शन	0	मानव जीवन के आयामों का दार्शनिक विश्लेषण	article
 published	world/philosophy/hindu	हिंदू	हिंदू	0	हिंदू को धार्मिक पहचान से आगे एक सभ्यतागत, सांस्कृतिक, नैतिक और दार्शनिक पहचान के रूप में समझना।	article
 published	world/philosophy/hindu/advaita	अद्वैत	अद्वैत	0	अद्वैत वेदांत और उसका केंद्रीय कथन कि आत्मा और ब्रह्म अलग नहीं	article
 published	world/philosophy/hindu/hindu_atheist	हिंदू नास्तिक	हिंदू नास्तिक	0	धर्मनिष्ठ नास्तिक: संस्कृति और दर्शन से हिंदू, धर्म के प्रति नैतिक रूप से प्रतिबद्ध और व्यक्तिगत सृष्टिकर्ता ईश्वर के विषय में नास्तिक	article
 published	world/philosophy/hindu/charvaka	चार्वाक	चार्वाक	0	चार्वाक या लोकायत: शास्त्रीय भारतीय दर्शन की भौतिकवादी और संशयवादी धारा	article
-published	license	लाइसेंस	लाइसेंस	0	परियोजना से जुड़ी बौद्धिक संपत्तियों के कॉपीराइट लाइसेंस	article
-published	about	परिचय	इस परियोजना के बारे में	0	इस परियोजना के बारे में अधिक जानकारी	article
-published	faq	सामान्य प्रश्न	सामान्य प्रश्न	0	इस परियोजना के बारे में अक्सर पूछे जाने वाले प्रश्न	article
-published	feedback	प्रतिक्रिया	प्रतिक्रिया	0	प्रतिक्रिया देने के लिए संपर्क	article
-published	logo	लोगो	लोगो	0	Ujnotes का लोगो	article
-published	roadmap	कार्ययोजना	कार्ययोजना	0	भविष्य की सुविधाओं और काम की योजना	article
-published	changelog	परिवर्तन सूची	परिवर्तन सूची	0	विभिन्न संस्करणों में हुए बदलावों का लेखा	article
-published	timeline	समयरेखा	समयरेखा	0	परियोजना के जीवनकाल की उल्लेखनीय घटनाएँ	article
-published	about_site	वेबसाइट के बारे में	इस वेबसाइट के बारे में	0	इस वेबसाइट को बनाने में उपयोग हुई तकनीक और सॉफ़्टवेयर	article
-published	root	उज नोट्स	उज नोट्स	1	जीवन और तकनीक पर उज्ज्वल सिंह की टिप्पणियाँ	article
-published	computer	कंप्यूटर	कंप्यूटर	0	कंप्यूटर: सूचना को संसाधित करने वाली मशीन	article
-published	about_me	मेरे बारे में	उज्ज्वल सिंह के बारे में	1	इस परियोजना के निर्माता उज्ज्वल सिंह के वेब लिंक	article
+published	license	लाइसेंस	लाइसेंस	0	परियोजना से जुड़ी बौद्धिक संपत्तियों के कॉपीराइट लाइसेंस	page
+published	about	परिचय	इस परियोजना के बारे में	0	इस परियोजना के बारे में अधिक जानकारी	page
+published	faq	सामान्य प्रश्न	सामान्य प्रश्न	0	इस परियोजना के बारे में अक्सर पूछे जाने वाले प्रश्न	page
+published	feedback	प्रतिक्रिया	प्रतिक्रिया	0	प्रतिक्रिया देने के लिए संपर्क	page
+published	logo	लोगो	लोगो	0	Ujnotes का लोगो	page
+published	roadmap	कार्ययोजना	कार्ययोजना	0	भविष्य की सुविधाओं और काम की योजना	page
+published	changelog	परिवर्तन सूची	परिवर्तन सूची	0	विभिन्न संस्करणों में हुए बदलावों का लेखा	page
+published	timeline	समयरेखा	समयरेखा	0	परियोजना के जीवनकाल की उल्लेखनीय घटनाएँ	page
+published	about_site	वेबसाइट के बारे में	इस वेबसाइट के बारे में	0	इस वेबसाइट को बनाने में उपयोग हुई तकनीक और सॉफ़्टवेयर	page
+published	root	उज नोट्स	उज नोट्स	1	जीवन और तकनीक पर उज्ज्वल सिंह की टिप्पणियाँ	page
+published	computer	कंप्यूटर	कंप्यूटर	0	कंप्यूटर: सूचना को संसाधित करने वाली मशीन	page
+published	about_me	मेरे बारे में	उज्ज्वल सिंह के बारे में	1	इस परियोजना के निर्माता उज्ज्वल सिंह के वेब लिंक	page
 published	computer/game	खेल	खेल	0	कंप्यूटर खेल	article
+published	world/philosophy/cognition	संज्ञान	संज्ञान	0	सूचना कैसे प्राप्त, व्यवस्थित और निर्णय तथा कर्म के लिए उपयोग की जाती है	article
+published	world/philosophy/inference	अनुमान	अनुमान	0	हम जो जानते और देखते हैं, उससे निष्कर्ष तक कैसे पहुँचते हैं	article
+published	world/philosophy/intelligence	बुद्धिमत्ता	बुद्धिमत्ता	0	पैटर्न पहचानना, अनिश्चितता में तर्क करना और समाधान तक पहुँचना	article
+published	computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan क्रैश	Vulkan क्रैश	0	Vulkan के साथ Doom 2016 डेमो क्रैश: समाधान	article
+published	computer/game/doom/2016/demo	डेमो	डेमो	0	Doom 2016 डेमो	article
+published	computer/game/doom/2016/demo/issue	समस्याएँ	समस्याएँ	0	Doom 2016 डेमो की समस्याएँ	article
+published	computer/game/doom	Doom	Doom	0	id Software के प्रथम-व्यक्ति शूटर वीडियो गेमों की एक शृंखला	article
+published	computer/game/doom/2016	Doom 2016	Doom 2016	0	शृंखला का चौथा भाग और रीबूट	article
+published	world/philosophy/solution	समाधान	समाधान	0	आज के संसार की समस्या का समाधान क्या है	article
+published	world/philosophy/god/no_god	ईश्वर नहीं	ईश्वर नहीं	0	ईश्वर का अस्तित्व न होना	article
+published	world/philosophy/problem	समस्या	समस्या	0	‘समस्या’ क्या है और आज के संसार को क्या पीड़ित करता है	article
+published	world/philosophy/god	ईश्वर	ईश्वर	0	ईश्वर का अर्थ	article
+published	world/philosophy/consciousness/free_will	स्वतंत्र इच्छा	स्वतंत्र इच्छा	0	स्वतंत्र इच्छा और हम वास्तव में कितने स्वतंत्र हैं	article
+published	world/philosophy/consciousness	चेतना	चेतना क्या है	0	विचार, आत्म-जागरूकता, चेतना और स्वतंत्र इच्छा की जाँच	article
+published	world/philosophy/death	मृत्यु	मृत्यु	0	मृत्यु के महत्त्व की व्याख्या	article
+published	world/philosophy/life	जीवन	जीवन	0	हमारे जीवन की समझ	article

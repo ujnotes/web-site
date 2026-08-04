@@ -1,5 +1,3 @@
-<?php $alt='Advaita'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>What is Advaita?</h3>
 	<p>

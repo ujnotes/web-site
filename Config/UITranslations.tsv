@@ -14,3 +14,7 @@ menu_changelog	Changelog	परिवर्तन सूची	परिवर�
 menu_timeline	Timeline	समयरेखा	समयरेखा
 menu_about_site	About site	वेबसाइट के बारे में	वेबसाइट के बारे में
 menu_about_me	About me	मेरे बारे में	मेरे बारे में
+nav_previous_article	Previous article	पिछला लेख	पिछला लेख
+nav_next_article	Next article	अगला लेख	अगला लेख
+nav_no_previous_article	No previous article	कोई पिछला लेख नहीं	कोई पिछला लेख नहीं
+nav_no_next_article	No next article	कोई अगला लेख नहीं	कोई अगला लेख नहीं

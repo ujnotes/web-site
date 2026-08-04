@@ -1,5 +1,3 @@
-<?php $alt='हिंदू नास्तिक'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>हिंदू नास्तिक कौन है?</h3>
 	<p>

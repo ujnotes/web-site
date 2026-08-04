@@ -1,5 +1,3 @@
-<?php $alt='अद्वैत'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>अद्वैत क्या है?</h3>
 	<p>

@@ -1,8 +1,10 @@
 <div id='message'>
-	<h2 class='center'><?php echo $desc; ?></h2>
-	<p>
+		<p>
 		Contains two levels.<br>
-		Vulkan is supported.
+		<br>
+				Vulkan is supported.
 	</p>
+
 </div>
+
 <?php require('../HTML/Fragment/Component_bottom.php') ?>

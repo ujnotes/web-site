@@ -1,5 +1,7 @@
 function root() {
 	var e = document.getElementById('profile-image');
+	if(!e)
+		return;
 	root.full = false;
 	e.addEventListener( "click", function(){
 		if(root.full) {

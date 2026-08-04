@@ -55,19 +55,28 @@
 						<div id='canvas-wrapper'>
 							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id='path'><?php require '../HTML/Fragment/Path.php' ?></div></div>
 							<?php
+								require_once __DIR__.'/../Fragment/UITranslation.php';
 								$prev_article_id = getPrevArticleId($id);
 								$next_article_id = getNextArticleId($id);
+								$nav_previous_article = getUITranslation('nav_previous_article', $lang);
+								$nav_next_article = getUITranslation('nav_next_article', $lang);
+								$nav_no_previous_article = getUITranslation('nav_no_previous_article', $lang);
+								$nav_no_next_article = getUITranslation('nav_no_next_article', $lang);
 							?>
-							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>">
+							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"
+								data-nav-prev="<?php echo htmlspecialchars($nav_previous_article, ENT_QUOTES, 'UTF-8') ?>"
+								data-nav-next="<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>"
+								data-nav-prev-none="<?php echo htmlspecialchars($nav_no_previous_article, ENT_QUOTES, 'UTF-8') ?>"
+								data-nav-next-none="<?php echo htmlspecialchars($nav_no_next_article, ENT_QUOTES, 'UTF-8') ?>">
 								<a id='article-prev' class='article-title-nav XURL<?php echo ($prev_article_id == '' ? ' article-title-nav-disabled' : '') ?>'
-									<?php if($prev_article_id != '') { ?> href='<?php echo getComponentURL($prev_article_id) ?>' data-target='<?php echo $prev_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($prev_article_id), ENT_QUOTES, 'UTF-8') ?>' title='Previous article' aria-label='Previous article'
-									<?php } else { ?> aria-label='No previous article' aria-disabled='true' tabindex='-1'<?php } ?>>
+									<?php if($prev_article_id != '') { ?> href='<?php echo getComponentURL($prev_article_id) ?>' data-target='<?php echo $prev_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($prev_article_id), ENT_QUOTES, 'UTF-8') ?>' title='<?php echo htmlspecialchars($nav_previous_article, ENT_QUOTES, 'UTF-8') ?>' aria-label='<?php echo htmlspecialchars($nav_previous_article, ENT_QUOTES, 'UTF-8') ?>'
+									<?php } else { ?> aria-label='<?php echo htmlspecialchars($nav_no_previous_article, ENT_QUOTES, 'UTF-8') ?>' aria-disabled='true' tabindex='-1'<?php } ?>>
 									<span class='image'><?php includeSVG('', 'Previous'); ?></span>
 								</a>
 								<h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $label) ?></h1>
 								<a id='article-next' class='article-title-nav XURL<?php echo ($next_article_id == '' ? ' article-title-nav-disabled' : '') ?>'
-									<?php if($next_article_id != '') { ?> href='<?php echo getComponentURL($next_article_id) ?>' data-target='<?php echo $next_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($next_article_id), ENT_QUOTES, 'UTF-8') ?>' title='Next article' aria-label='Next article'
-									<?php } else { ?> aria-label='No next article' aria-disabled='true' tabindex='-1'<?php } ?>>
+									<?php if($next_article_id != '') { ?> href='<?php echo getComponentURL($next_article_id) ?>' data-target='<?php echo $next_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($next_article_id), ENT_QUOTES, 'UTF-8') ?>' title='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-label='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>'
+									<?php } else { ?> aria-label='<?php echo htmlspecialchars($nav_no_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-disabled='true' tabindex='-1'<?php } ?>>
 									<span class='image'><?php includeSVG('', 'Next'); ?></span>
 								</a>
 							</div>
@@ -75,7 +84,7 @@
 								<?php require '../../HTML/Fragment/Menu.php'; ?>
 								<div id='canvas-main'>
 									<div id='content'>
-										<?php require (getComponentPath($id)) ?>
+										<?php echo renderComponentBody($id); ?>
 									</div>
 								</div>
 							</div>

@@ -1,5 +1,3 @@
-<?php $alt='Charvaka'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>What is Charvaka?</h3>
 	<p>

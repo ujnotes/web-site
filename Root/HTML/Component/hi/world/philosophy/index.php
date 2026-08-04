@@ -1,5 +1,3 @@
-<?php $alt='दर्शन'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<h3>दर्शन क्या है?</h3>
 	<p>
