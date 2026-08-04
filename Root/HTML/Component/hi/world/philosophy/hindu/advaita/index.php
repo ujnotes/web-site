@@ -1,13 +1,7 @@
 <?php $alt='अद्वैत'; require('../HTML/Fragment/Component_cover.php') ?>
 
 <div id='message'>
-		<p>
-		<strong>Language:</strong> hi<br>
-		<strong>Label:</strong> अद्वैत<br>
-		<strong>Title:</strong> अद्वैत<br>
-		<strong>Description:</strong> अद्वैत वेदांत और उसका केंद्रीय कथन कि आत्मा और ब्रह्म अलग नहीं
-	</p>
-	<h3>अद्वैत क्या है?</h3>
+		<h3>अद्वैत क्या है?</h3>
 	<p>
 		<strong>अद्वैत</strong> का शाब्दिक अर्थ है “दो नहीं”: सबसे गहरा आत्मस्वरूप और परम सत्य दो अलग वास्तविकताएँ नहीं हैं।
 	</p>
