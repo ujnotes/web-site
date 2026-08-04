@@ -23,14 +23,10 @@ Path	Name	Extension
 	root	svg
 resource/	placeholder	svg
 resource/	external	svg
-world/philosophy/	index	jpg
-world/philosophy/	life	jpg
-world/philosophy/	death	jpg
 world/philosophy/consciousness/	index	jpg
 world/philosophy/consciousness/free_will/	index	jpg
 world/philosophy/god/	index	jpg
 world/philosophy/god/no_god/	index	jpg
-world/philosophy/	problem	jpg
 world/philosophy/solution/	index	jpg
 world/philosophy/solution/	paths	svg
 world/philosophy/solution/	man-people-system	svg
@@ -47,3 +43,4 @@ world/philosophy/hindu/advaita/	index	jpg
 world/philosophy/hindu/hindu_atheist/	index	jpg
 world/	index	jpg
 computer/	index	jpg
+world/philosophy/	index	jpg
