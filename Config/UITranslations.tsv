@@ -1,3 +1,16 @@
 key	en	hi	hi-in
 my_notes	my notes	मेरी टिप्पणियाँ	मेरी टिप्पणियाँ
 my_notes_font_scale	1	0.8	0.8
+menu_home	home	मुखपृष्ठ	मुखपृष्ठ
+menu_world	World	विश्व	विश्व
+menu_computer	Computer	कंप्यूटर	कंप्यूटर
+menu_about	About	परिचय	परिचय
+menu_faq	FAQ	सामान्य प्रश्न	सामान्य प्रश्न
+menu_feedback	Feedback	प्रतिक्रिया	प्रतिक्रिया
+menu_license	License	लाइसेंस	लाइसेंस
+menu_logo	Logo	लोगो	लोगो
+menu_roadmap	Roadmap	कार्ययोजना	कार्ययोजना
+menu_changelog	Changelog	परिवर्तन सूची	परिवर्तन सूची
+menu_timeline	Timeline	समयरेखा	समयरेखा
+menu_about_site	About site	वेबसाइट के बारे में	वेबसाइट के बारे में
+menu_about_me	About me	मेरे बारे में	मेरे बारे में
