@@ -6,7 +6,7 @@
 		A Hindu atheist is culturally or philosophically Hindu but does not believe in a personal creator god.
 	</p>
 	<p>
-		Theism is belief in one or more gods. Atheism is the absence of that belief. “Hindu”, however, is wider than belief in God. It can also describe a culture, a civilisation, an ethical tradition and a family of philosophies.
+		Theism is belief in one or more gods. Atheism is the absence of that belief. “Hindu”, however, is wider than belief in God. It can also describe a culture, a civilization, an ethical tradition and a family of philosophies.
 	</p>
 	<p>
 		So “Hindu atheist” is not a contradiction.
@@ -56,7 +56,7 @@
 		Imagine a road with no police officer nearby. I still should not drive into another person. Their life matters whether or not somebody is watching me.
 	</p>
 	<p>
-		Dharma works in a similar way. An action has consequences. Other beings can suffer. Trust can be broken. My behaviour shapes my character and the society around me.
+		Dharma works in a similar way. An action has consequences. Other beings can suffer. Trust can be broken. My behavior shapes my character and the society around me.
 	</p>
 	<p>
 		I can therefore have strong moral duties without believing that they came from a divine lawgiver.
@@ -207,7 +207,7 @@
 		Quantum physics has revealed superposition, entanglement and measurement results that do not fit ordinary classical intuition. These findings raise deep questions about separateness and what can be said about a system before measurement.
 	</p>
 	<p>
-		Some of these ideas may resemble pointers used in Advaita. The resemblance can inspire inquiry, but ofcourse that is not  yet a scientific proof of Advaita.
+		Some of these ideas may resemble pointers used in Advaita. The resemblance can inspire inquiry, but of course that is not  yet a scientific proof of Advaita.
 	</p>
 	<p>
 		I can respect both science and philosophical inquiry without forcing either one to pretend to be the other.
