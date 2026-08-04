@@ -1,3 +1,4 @@
+<?php $alt='A closeup detailed wooden carving depicting the Hindu deity - Sri Krishna'; require('../HTML/Fragment/Component_cover.php') ?>
 <div id='message'>
 	<h3>हिंदू कौन है?</h3>
 	<p>“हिंदू” केवल धार्मिक पहचान नहीं है। यह एक संस्कृति, सभ्यता और दर्शन के व्यापक परिवार का नाम भी है।</p>
