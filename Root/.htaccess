@@ -43,6 +43,11 @@ RewriteRule ^(.+)\.js$ Framework/JS/Link/$1.js [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.ico$ Resource/$1.ico [L]
 
+# Public /resource/... URLs map to the Resource/ tree without
+# re-applying the generic media rules (avoids Resource/resource/... loops).
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^resource/(.+)$ Resource/$1 [L]
+
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
 RewriteRule ^(.*?)\.jpg$ Resource/$1/index.jpg [L]
 
@@ -60,11 +65,11 @@ RewriteRule ^(.+)\.svg$ Resource/$1.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/File%{REQUEST_URI} -f
-RewriteRule ^(.+)$ file/$1 [L]
+RewriteRule ^(.+)$ File/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/Site%{REQUEST_URI} -f
-RewriteRule ^(.+)$ site/$1 [L]
+RewriteRule ^(.+)$ Site/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
