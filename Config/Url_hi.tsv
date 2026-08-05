@@ -1,76 +1,61 @@
 Path	Name	Extension
-menu
-404
-manifest	json
-script	js
-style	css
-robots	txt
-sitemap	xml
-ads	txt
-apple-touch-icon	png
-icon-social	png
-social	png
-favicon	ico
-logo_full	svg
-photo	jpg
-launcher-icon-0-75x	png
-launcher-icon-1x	png
-launcher-icon-1-5x	png
-launcher-icon-2x	png
-launcher-icon-3x	png
-launcher-icon-4x	png
-root	index	jpg
+menu		
+404		
+	manifest	json
+	script	js
+	style	css
+	robots	txt
+	sitemap	xml
+	ads	txt
+	apple-touch-icon	png
+	icon-social	png
+	social	png
+	favicon	ico
+	logo_full	svg
+	photo	jpg
+	launcher-icon-0-75x	png
+	launcher-icon-1x	png
+	launcher-icon-1-5x	png
+	launcher-icon-2x	png
+	launcher-icon-3x	png
+	launcher-icon-4x	png
+	root	jpg
 resource/	external	svg
-world/philosophy/consciousness/	index	jpg
-world/philosophy/consciousness/free_will/	index	jpg
-world/philosophy/god/	index	jpg
-world/philosophy/god/no_god/	index	jpg
+world/philosophy/	consciousness	jpg
+world/philosophy/consciousness/	free_will	jpg
+world/philosophy/	god	jpg
+world/philosophy/god/	no_god	jpg
 world/philosophy/solution/	man-people-system	svg
-computer/os/	index	jpg
-computer/program/	index	jpg
-computer/programming/	index	jpg
-world/philosophy/cognition/	index	jpg
-world/philosophy/intelligence/	index	jpg
-world/philosophy/inference/	index	jpg
-world/philosophy/hindu/	index	jpg
-world/philosophy/hindu/charvaka/	index	jpg
-world/philosophy/hindu/advaita/	index	jpg
-world/philosophy/hindu/hindu_atheist/	index	jpg
-world/	index	jpg
-computer/	index	jpg
-computer/game/	index	jpg
-world/philosophy/	index	jpg
-world\philosophy\hindu\charvaka	index	jpg
-world\philosophy\hindu\advaita	index	jpg
-world\philosophy\hindu	index	jpg
-world\philosophy\hindu\hindu_atheist	index	jpg
-world\philosophy\cognition	index	jpg
-world\philosophy\inference	index	jpg
-world\philosophy\intelligence	index	jpg
-computer\game\doom\2016\demo\issue\vulkan_crash	index	jpg
-computer\game\doom\2016\demo	index	jpg
-computer\game\doom\2016\demo\issue	index	jpg
-computer\game\doom	index	jpg
-computer\game\doom\2016	index	jpg
-computer	index	jpg
-computer\game	index	jpg
-world\philosophy\solution	index	jpg
-world\philosophy\god\no_god	index	jpg
-world\philosophy\problem	index	jpg
-world\philosophy\god	index	jpg
-world\philosophy\consciousness\free_will	index	jpg
-world\philosophy\consciousness	index	jpg
-world\philosophy\death	index	jpg
-world\philosophy\life	index	jpg
-world\philosophy	index	jpg
-world	index	jpg
-roadmap	index	jpg
-timeline	index	jpg
-logo	index	jpg
-faq	index	jpg
-feedback	index	jpg
-license	index	jpg
-changelog	index	jpg
-about	index	jpg
-about_me	index	jpg
-about_site	index	jpg
+computer/	os	jpg
+computer/	program	jpg
+computer/	programming	jpg
+world/philosophy/	cognition	jpg
+world/philosophy/	intelligence	jpg
+world/philosophy/	inference	jpg
+world/philosophy/	hindu	jpg
+world/philosophy/hindu/	charvaka	jpg
+world/philosophy/hindu/	advaita	jpg
+world/philosophy/hindu/	hindu_atheist	jpg
+	world	jpg
+	computer	jpg
+computer/	game	jpg
+world/	philosophy	jpg
+computer/game/doom/2016/demo/issue/	vulkan_crash	jpg
+computer/game/doom/2016/	demo	jpg
+computer/game/doom/2016/demo/	issue	jpg
+computer/game/	doom	jpg
+computer/game/doom/	2016	jpg
+world/philosophy/	solution	jpg
+world/philosophy/	problem	jpg
+world/philosophy/	death	jpg
+world/philosophy/	life	jpg
+	roadmap	jpg
+	timeline	jpg
+	logo	jpg
+	faq	jpg
+	feedback	jpg
+	license	jpg
+	changelog	jpg
+	about	jpg
+	about_me	jpg
+	about_site	jpg
