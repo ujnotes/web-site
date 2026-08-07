@@ -1,3 +1,5 @@
+<?php $alt='हिंदू'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<h3>हिंदू कौन है?</h3>
 	<p>

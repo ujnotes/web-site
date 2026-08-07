@@ -68,10 +68,10 @@
 		<li><div><strong>Vedanta</strong> examines the Upanishads and includes Advaita, Vishishtadvaita, Dvaita and other positions.</div></li>
 	</ul>
 	<p>
-		The wider Indian conversation also includes schools that reject Vedic authority. <strong>Charvaka</strong> is materialist and skeptical. Buddhism and Jainism developed their own accounts of reality, conduct and liberation.
+		The wider Indian conversation also includes schools that reject Vedic authority. <strong>Charvaka</strong> is materialist and skeptical. Buddhism and Jainism reject the authority of the Vedas and developed independent philosophical traditions, but they emerged from the same broader Bharatiya (Indian) intellectual milieu and share with Hindu traditions many foundational ideas concerning ‘karma’, ‘rebirth’, ‘liberation’, ‘disciplined conduct’, ‘meditation’ and the ‘overcoming of ignorance’.
 	</p>
 	<p>
-		These schools do not agree about God, the self, karma or what happens after death. Their disagreement is not a defect. It shows that inquiry was allowed to move in more than one direction.
+		Many of these schools do not agree about God, the self, karma or what happens after death. Their disagreement is not a defect. It shows that inquiry was allowed to move in more than one direction.
 	</p>
 	<h3>What is karma?</h3>
 	<p>
