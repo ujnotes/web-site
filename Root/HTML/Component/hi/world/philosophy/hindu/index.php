@@ -1,4 +1,5 @@
 <?php $alt='हिंदू'; require('../HTML/Fragment/Component_cover.php') ?>
+<h2 class='center'><?php echo $desc; ?></h2>
 
 <div id='message'>
 		<h3>हिंदू कौन है?</h3>
