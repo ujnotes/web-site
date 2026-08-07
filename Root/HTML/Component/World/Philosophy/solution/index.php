@@ -1,7 +1,7 @@
 <div id='message'>
 		<h3>What is the solution to the problems of the world?</h3>
 	<p>
-		In the earlier article titled '<a class="content-link XURL" href="/world/philosophy/problem" data-target="world/philosophy/problem" data-title="solution">solution</a>' - I concluded that the main problem of the present day world is only: "man's ignorance and stupidity"<br>
+		In the earlier article titled '<a class="content-link XURL" href="/world/philosophy/problem" data-target="world/philosophy/problem" data-title="Problem">Problem</a>' - I concluded that the main problem of the present day world is only: "man's ignorance and stupidity"<br>
 		<br>
 		<br>
 		<br>
@@ -57,13 +57,13 @@
 		As stated earlier, there will always be pathologically insane and evil human beings, but they are not 'problems' per se but issues to be managed that the 'system' should be well prepared to deal with.
 	</p>
 	<p>
-		On the peoples' level it is needed, that first and foremost the meaning of <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="life">life</a> be understood:
+		On the peoples' level it is needed, that first and foremost the meaning of <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="Life">life</a> be understood:
 	</p>
 	<ul class="list-bullet content-list">
 		<li><div>The value of life, all lives; that what wonderful 'gift' it is</div></li>
 		<li><div>Our personal existence's significance and insignificance</div></li>
 		<li><div>Gratefulness for all that is good</div></li>
-		<li><div>How we are all connected, by what we share, even our sufferings and <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="life">life</a> and <a class="content-link XURL" href="/world/philosophy/death" data-target="world/philosophy/death" data-title="death">death</a></div></li>
+		<li><div>How we are all connected, by what we share, even our sufferings and <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="Life">life</a> and <a class="content-link XURL" href="/world/philosophy/death" data-target="world/philosophy/death" data-title="Death">death</a></div></li>
 		<li><div>That alone you are nothing, it is with the world, the others, that you have any meaning whatsoever</div></li>
 		<li><div>The separation of the conceptual (not physical or supernatural) soul and the body</div></li>
 		<li><div>That we could be in any one of those bodies, looking through any of those eyes</div></li>
