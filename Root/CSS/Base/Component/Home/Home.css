@@ -16,20 +16,23 @@
 	padding-left: 10px
 }
 
-#home-menu > div {
-	padding-left: 14px
+#home-menu .home-menu-branch + .home-menu-branch {
+	margin-top: 24px
 }
 
-#home-menu .home-menu-group-parent {
-	margin-bottom: 12px;
-	font-family: 'Roboto Condensed', Abel, sans-serif
+#home-menu .home-menu-level {
+	box-sizing: border-box;
+	padding-left: calc(14px + (var(--home-menu-level) * 28px))
 }
 
-#home-menu > div > a {
-	text-decoration: none;
-	color: #aaa
+#home-menu .home-menu-level-0 {
+	--home-menu-level: 0
 }
 
-#home-menu > div.sidebar-nav-group {
-	padding-left: 28px
+#home-menu .home-menu-level-1 {
+	--home-menu-level: 1
+}
+
+#home-menu .home-menu-level-2 {
+	--home-menu-level: 2
 }

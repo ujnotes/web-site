@@ -2,4 +2,8 @@
 	#home-message {
 		margin-left: auto !important
 	}
+
+	#home-menu .home-menu-level {
+		padding-left: calc(var(--home-menu-level) * 12px)
+	}
 }
