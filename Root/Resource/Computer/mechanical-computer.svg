@@ -1,26 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="title description">
-  <title id="title">A beam balance as a mechanical computer</title>
-  <desc id="description">Two weights act as inputs. The beam and pivot compare them, and the beam angle is the output.</desc>
-  <defs>
-    <style>
-      .line { fill: none; stroke: #172033; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-labelledby="title description" role="img" version="1.1" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<title id="title">A beam balance as a mechanical computer</title>
+	<desc id="description">Two weights act as inputs. The beam and pivot compare them, and the beam angle is the output.</desc>
+	<defs>
+		<style>.line { fill: none; stroke: #172033; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
       .soft { fill: #d9ecff; stroke: #172033; stroke-width: 5; stroke-linejoin: round; }
       .accent { fill: #5aa9e6; stroke: #172033; stroke-width: 5; stroke-linejoin: round; }
       .label { fill: #172033; font: 600 22px system-ui, sans-serif; text-anchor: middle; }
-      .small { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }
-    </style>
-  </defs>
-  <text class="label" x="360" y="34">Mechanical comparison</text>
-  <path class="soft" d="M92 148h536a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10H92a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10Z"/>
-  <circle class="accent" cx="360" cy="214" r="27"/>
-  <path class="soft" d="M322 310h76l-24-69h-28Z"/>
-  <path class="line" d="M274 310h172"/>
-  <path class="line" d="M132 186v48m456-48v48"/>
-  <path class="soft" d="M84 234h96l-14 42H98Z"/>
-  <path class="soft" d="M540 234h96l-14 42h-68Z"/>
-  <rect class="accent" x="111" y="202" width="42" height="32" rx="5"/>
-  <rect class="accent" x="560" y="190" width="56" height="44" rx="5"/>
-  <text class="small" x="132" y="334">input</text>
-  <text class="small" x="360" y="334">compare</text>
-  <text class="small" x="588" y="334">input</text>
+      .small { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }</style>
+	</defs>
+	<text class="label" x="360" y="34">Mechanical comparison</text>
+	<path class="soft" d="M92 148h536a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10H92a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10Z"/>
+	<circle class="accent" cx="360" cy="214" r="27"/>
+	<path class="soft" d="m322 310h76l-24-69h-28z"/>
+	<path class="line" d="m274 310h172"/>
+	<g transform="translate(0,-132)">
+		<path class="soft" d="m84 234h96l-14 42h-68z"/>
+		<rect class="accent" x="111" y="202" width="42" height="32" rx="5"/>
+		<path class="soft" d="m540 234h96l-14 42h-68z"/>
+		<rect class="accent" x="560" y="190" width="56" height="44" rx="5"/>
+	</g>
+	<text class="small" x="132" y="128" font-family="system-ui, sans-serif" font-size="18px" style="line-height:normal">input</text>
+	<text class="small" x="360" y="334">compare</text>
+	<text class="small" x="588" y="128" font-family="system-ui, sans-serif" font-size="18px" style="line-height:normal">input</text>
+	<metadata>
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:title>A beam balance as a mechanical computer</dc:title>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
 </svg>

@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" role="img" aria-labelledby="title description">
   <title id="title">Fixed and programmable computers</title>
-  <desc id="description">A fixed computer changes task only when its mechanism is rebuilt. A programmable computer changes task when its instructions are changed.</desc>
+  <desc id="description">A beam balance has its procedure built into gears and levers. A Jacquard loom remains unchanged while punched-card instructions produce different woven patterns.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0 10 5 0 10Z" fill="#172033"/>
     </marker>
+    <pattern id="clothA" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#f4cf78"/><path d="M0 7h14M7 0v14" stroke="#b64942" stroke-width="4"/>
+    </pattern>
+    <pattern id="clothB" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#377887"/><path d="M0 4h16M0 12h16" stroke="#d8eee7" stroke-width="4"/>
+    </pattern>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#172033" flood-opacity=".16"/>
+    </filter>
     <style>
       .panel { fill: #f7fbff; stroke: #172033; stroke-width: 4; }
       .machine { fill: #d9ecff; stroke: #172033; stroke-width: 5; stroke-linejoin: round; }
@@ -13,24 +22,66 @@
       .label { fill: #172033; font: 700 25px system-ui, sans-serif; text-anchor: middle; }
       .note { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }
       .hole { fill: #172033; }
+      .wood { fill: #a95f3b; stroke: #172033; stroke-width: 4; stroke-linejoin: round; }
+      .metal { fill: #bfccd2; stroke: #172033; stroke-width: 4; stroke-linejoin: round; }
+      .brass { fill: #d9a13d; stroke: #172033; stroke-width: 3; }
+      .thread { fill: none; stroke: #738994; stroke-width: 1.4; }
+      .detail { fill: none; stroke: #465166; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .tiny { fill: #465166; font: 700 10px system-ui, sans-serif; letter-spacing: 1px; text-anchor: middle; }
+      .cloth-a { fill: url(#clothA); stroke: #172033; stroke-width: 3; }
+      .cloth-b { fill: url(#clothB); stroke: #172033; stroke-width: 3; }
     </style>
   </defs>
   <rect class="panel" x="22" y="25" width="410" height="350" rx="20"/>
   <rect class="panel" x="468" y="25" width="410" height="350" rx="20"/>
   <text class="label" x="227" y="66">Fixed computer</text>
   <text class="label" x="673" y="66">Programmable computer</text>
-  <path class="machine" d="M129 134h196v132H129Z"/>
-  <circle class="machine" cx="185" cy="200" r="34"/>
-  <path class="machine" d="M246 169h48v62h-48Z"/>
-  <path class="line" d="M227 292v30"/>
-  <text class="note" x="227" y="351">rebuild the mechanism</text>
-  <rect class="card" x="501" y="118" width="112" height="156" rx="8"/>
-  <circle class="hole" cx="530" cy="151" r="7"/><circle class="hole" cx="562" cy="151" r="7"/><circle class="hole" cx="584" cy="184" r="7"/>
-  <circle class="hole" cx="530" cy="217" r="7"/><circle class="hole" cx="562" cy="250" r="7"/>
-  <path class="line" d="M626 196h42"/>
-  <path class="machine" d="M685 134h160v132H685Z"/>
-  <circle class="machine" cx="733" cy="200" r="30"/>
-  <path class="machine" d="M785 171h35v58h-35Z"/>
-  <path class="line" d="M673 292v30"/>
-  <text class="note" x="673" y="351">replace the instructions</text>
+  <!-- A fixed-purpose beam balance: procedure embodied in structure -->
+  <g filter="url(#softShadow)">
+    <path class="wood" d="M76 270h302l-15 32H91Z"/>
+    <path class="metal" d="M205 143h44l15 127h-74Z"/>
+    <path class="detail" d="M227 109v40"/>
+    <path d="M79 142h298" stroke="#172033" stroke-width="9" stroke-linecap="round"/>
+    <path d="M227 126 79 142M227 126l150 16" stroke="#eef5f6" stroke-width="2"/>
+    <path class="detail" d="M103 148v66M353 148v66"/>
+    <path class="metal" d="M69 214h68l-9 14H78ZM319 214h68l-9 14h-50Z"/>
+    <path class="detail" d="M79 211q24-41 48 0M329 211q24-41 48 0"/>
+    <rect x="91" y="181" width="25" height="30" rx="3" fill="#688c98" stroke="#172033" stroke-width="3"/>
+    <rect x="340" y="171" width="28" height="40" rx="3" fill="#688c98" stroke="#172033" stroke-width="3"/>
+    <!-- The former circle is now a toothed gear -->
+    <g transform="translate(227 211)" filter="url(#softShadow)">
+      <g class="brass"><rect x="-7" y="-49" width="14" height="20" rx="2"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(30)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(60)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(90)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(120)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(150)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(180)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(210)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(240)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(270)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(300)"/><rect x="-7" y="-49" width="14" height="20" rx="2" transform="rotate(330)"/><circle r="36"/><circle r="12" fill="#fff8e5"/></g>
+      <path d="M-25-18 25 18M-25 18 25-18" stroke="#8e5925" stroke-width="5" opacity=".55"/>
+    </g>
+    <g transform="translate(284 247) scale(.48)" class="brass"><rect x="-7" y="-44" width="14" height="18"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(45)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(90)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(135)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(180)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(225)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(270)"/><rect x="-7" y="-44" width="14" height="18" transform="rotate(315)"/><circle r="32"/><circle r="10" fill="#fff8e5"/></g>
+    <path class="detail" d="M227 211 202 166M227 211l43-44M195 167h78"/>
+    <path class="brass" d="M215 113 227 98l12 15-12 13Z"/>
+  </g>
+  <text class="tiny" x="227" y="322">MECHANISM = PROCEDURE</text>
+  <text class="note" x="227" y="351">change task → rebuild the machine</text>
+  <!-- Articulated punched-card program -->
+  <g transform="translate(486 94) rotate(-5)" filter="url(#softShadow)">
+    <path class="card" d="M0 0h91v49H0ZM5 54h91v49H5ZM10 108h91v49H10Z"/>
+    <g class="hole"><circle cx="16" cy="14" r="4"/><circle cx="45" cy="14" r="4"/><circle cx="74" cy="14" r="4"/><circle cx="30" cy="34" r="4"/><circle cx="74" cy="34" r="4"/><circle cx="21" cy="69" r="4"/><circle cx="50" cy="69" r="4"/><circle cx="79" cy="69" r="4"/><circle cx="21" cy="89" r="4"/><circle cx="64" cy="89" r="4"/><circle cx="26" cy="123" r="4"/><circle cx="55" cy="123" r="4"/><circle cx="84" cy="123" r="4"/><circle cx="41" cy="143" r="4"/><circle cx="84" cy="143" r="4"/></g>
+  </g>
+  <path class="line" d="M579 130c22-22 37-25 56-17"/>
+  <!-- Detailed Jacquard loom, unchanged while cards and patterns vary -->
+  <g filter="url(#softShadow)">
+    <path class="wood" d="M619 100h171v205H619Z"/>
+    <path d="M634 116h141v174H634Z" fill="#fff9e9" stroke="#172033" stroke-width="4"/>
+    <path class="wood" d="M615 143h179v18H615ZM615 275h179v18H615Z"/>
+    <g class="thread"><path d="M644 160v111M652 160v111M660 160v111M668 160v111M676 160v111M684 160v111M692 160v111M700 160v111M708 160v111M716 160v111M724 160v111M732 160v111M740 160v111M748 160v111M756 160v111M764 160v111"/></g>
+    <path d="M638 207h133" stroke="#172033" stroke-width="8"/>
+    <path class="cloth-a" d="M644 212h120v48H644Z"/><path class="cloth-b" d="M644 260h120v30H644Z"/>
+    <path d="M641 184h127" stroke="#d19b42" stroke-width="4"/>
+    <path d="M652 175h91l22 9-22 9h-91l-20-9Z" fill="#bd6242" stroke="#172033" stroke-width="3"/>
+    <g transform="translate(767 118) scale(.43)" class="brass"><rect x="-7" y="-45" width="14" height="18"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(45)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(90)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(135)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(180)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(225)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(270)"/><rect x="-7" y="-45" width="14" height="18" transform="rotate(315)"/><circle r="32"/><circle r="10" fill="#fff8e5"/></g>
+  </g>
+  <!-- The same loom yields visibly different fabrics -->
+  <g transform="translate(806 171)"><path class="cloth-a" d="M0 0h49v49H0Z"/><path class="cloth-b" d="M0 61h49v49H0Z"/></g>
+  <path class="line" d="M785 195h14M785 257h14"/>
+  <text class="tiny" x="536" y="278">PUNCHED CARDS</text>
+  <text class="tiny" x="830" y="298">NEW PATTERNS</text>
+  <text class="tiny" x="673" y="322">SAME LOOM · NEW INSTRUCTIONS</text>
+  <text class="note" x="673" y="351">change cards → change the result</text>
 </svg>
