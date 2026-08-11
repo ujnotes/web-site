@@ -20,19 +20,63 @@
 	margin-top: 24px
 }
 
+#home-menu .home-menu-node,
+#home-menu .home-menu-level {
+	position: relative
+}
+
 #home-menu .home-menu-level {
 	box-sizing: border-box;
-	padding-left: calc(14px + (var(--home-menu-level) * 28px))
+	padding-left: 36px
 }
 
-#home-menu .home-menu-level-0 {
-	--home-menu-level: 0
+#home-menu .home-menu-subtree {
+	margin-left: 28px;
+	border-left: 1px dashed #aaa
 }
 
-#home-menu .home-menu-level-1 {
-	--home-menu-level: 1
+#home-menu .home-menu-subtree > .home-menu-node::before,
+#home-menu .home-menu-subtree > .home-menu-level::before {
+	position: absolute;
+	top: 76px;
+	left: 0;
+	width: 36px;
+	border-top: 1px dashed #aaa;
+	content: ''
 }
 
-#home-menu .home-menu-level-2 {
-	--home-menu-level: 2
+#home-menu .home-menu-toggle {
+	position: absolute;
+	z-index: 1;
+	top: 65px;
+	left: 8px;
+	box-sizing: border-box;
+	width: 22px;
+	height: 22px;
+	padding: 0;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	color: #69b7cf;
+	background: #fff;
+	cursor: pointer;
+	font: bold 16px/18px sans-serif
+}
+
+#home-menu .home-menu-toggle:hover,
+#home-menu .home-menu-toggle:focus-visible {
+	border-color: #69b7cf;
+	outline: 2px solid #69b7cf;
+	outline-offset: 2px
+}
+
+#home-menu .home-menu-toggle span::before {
+	content: '\2212'
+}
+
+#home-menu .home-menu-toggle[aria-expanded='false'] span::before {
+	content: '+'
+}
+
+#home-menu .home-menu-subtree[hidden] {
+	display: none
 }
