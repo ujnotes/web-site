@@ -1,3 +1,5 @@
+<?php $alt='A student taking notes while learning'; require('../HTML/Fragment/Component_cover.php') ?>
+<h2 class='center'><?php echo $desc; ?></h2>
 <div id='message'>
 		<h3>What is learning?</h3>
 	<p>

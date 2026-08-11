@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" role="img" aria-labelledby="title description">
+  <title id="title">Input, processing and output</title>
+  <desc id="description">Information flows from input through processing to output.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#172033"/>
+    </marker>
+    <style>
+      .box { fill: #d9ecff; stroke: #172033; stroke-width: 5; }
+      .process { fill: #8fd3c7; stroke: #172033; stroke-width: 5; }
+      .arrow { fill: none; stroke: #172033; stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow); }
+      .label { fill: #172033; font: 700 25px system-ui, sans-serif; text-anchor: middle; }
+      .note { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="box" x="44" y="76" width="220" height="118" rx="18"/>
+  <rect class="process" x="340" y="76" width="220" height="118" rx="18"/>
+  <rect class="box" x="636" y="76" width="220" height="118" rx="18"/>
+  <path class="arrow" d="M278 135h45"/>
+  <path class="arrow" d="M574 135h45"/>
+  <text class="label" x="154" y="127">Input</text>
+  <text class="note" x="154" y="159">information received</text>
+  <text class="label" x="450" y="127">Processing</text>
+  <text class="note" x="450" y="159">rules applied</text>
+  <text class="label" x="746" y="127">Output</text>
+  <text class="note" x="746" y="159">result produced</text>
+</svg>

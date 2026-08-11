@@ -1,3 +1,5 @@
+<?php $alt='A directional sign representing a decision'; require('../HTML/Fragment/Component_cover.php') ?>
+<h2 class='center'><?php echo $desc; ?></h2>
 <div id='message'>
 		<h3>What is a decision?</h3>
 	<p>

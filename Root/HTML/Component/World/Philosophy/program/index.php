@@ -1,3 +1,5 @@
+<?php $alt='Programming code on a computer screen'; require('../HTML/Fragment/Component_cover.php') ?>
+<h2 class='center'><?php echo $desc; ?></h2>
 <div id='message'>
 		<h3>What is a program?</h3>
 	<p>

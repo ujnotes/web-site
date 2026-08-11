@@ -62,6 +62,7 @@
 	<p>
 		In this broad sense, it is a simple mechanical computer—a comparator.
 	</p>
+	<?php $img_title='mechanical-computer'; $ext='svg'; $alt='A beam balance using two weights as inputs and its position as the result'; $center='true'; require('Fragment/Component_image.php') ?>
 	<p>
 		Its computation may be described as:
 	</p>
@@ -106,6 +107,24 @@ else:
 	<blockquote>
 		input → processing → output
 	</blockquote>
+	<?php $img_title='input-processing-output'; $ext='svg'; $alt='Information flowing from input through processing to output'; $center='true'; require('Fragment/Component_image.php') ?>
+	<h3>What makes a computer fixed or programmable?</h3>
+	<p>
+		Some computers perform one built-in procedure. Others can be given different procedures.
+	</p>
+	<p>
+		A <strong>fixed computer</strong> has its procedure built into its physical structure. A beam balance always compares weights. Changing its task requires changing the mechanism itself.
+	</p>
+	<p>
+		A <strong>programmable computer</strong> receives its instructions as information. Changing those instructions changes the task without rebuilding the machine.
+	</p>
+	<p>
+		The Jacquard loom showed this principle with punched cards that controlled different woven patterns. The loom remained the same, but changing the cards changed what it produced.
+	</p>
+	<p>
+		This is the difference between a machine made for one procedure and a machine that can follow many programs.
+	</p>
+	<?php $img_title='fixed-and-programmable'; $ext='svg'; $alt='A fixed computer must be rebuilt to change its task, while a programmable computer changes task when its instructions change'; $center='true'; require('Fragment/Component_image.php') ?>
 	<h3>What is hardware?</h3>
 	<p>
 		Hardware is what the computer is physically.
@@ -199,32 +218,6 @@ else:
 	<p>
 		The same physical computer can follow different programs. One program makes it behave like a calculator. Another makes it a word processor. Another helps control an aircraft.
 	</p>
-	<h3>What is a fixed computer?</h3>
-	<p>
-		In a fixed computer, the procedure is built into its physical structure.
-	</p>
-	<p>
-		A beam balance always compares weight. Its function can be changed only by physically changing the machine.
-	</p>
-	<p>
-		Many simple machines and early calculating devices worked this way. Their hardware and their procedure were effectively inseparable.
-	</p>
-	<h3>What is a programmable computer?</h3>
-	<p>
-		A programmable computer can change what it does without being physically rebuilt.
-	</p>
-	<p>
-		Its instructions are themselves supplied and stored as information.
-	</p>
-	<p>
-		The Jacquard loom demonstrated this principle using patterns of holes in cards to control the weaving of different designs. Changing the card changed the machine's operation.
-	</p>
-	<p>
-		Programming therefore does something remarkable: it alters the effective tool without altering the underlying machine.
-	</p>
-	<p>
-		It is as if the same physical tool could become a calculator, typewriter, camera, musical instrument or navigation system merely by receiving a new arrangement of instructions.
-	</p>
 	<h3>Can a computer perform an operation it was not directly built for?</h3>
 	<p>
 		Suppose a simple computer can add, subtract, store a value and repeat instructions, but has no direct multiplication operation.
@@ -314,8 +307,10 @@ show result</code></pre>
 	<p>
 		A computer is, finally, an engine for transforming information.
 	</p>
+	<p>
+		<em>Written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em>
+	</p>
 	<div id='content-body-separator' class='center'></div>
-	group_image_id('sub-list', 'center page-list', 0, ['computer/os', 'OS', 'http://ujnotes.com'], ['computer/program', 'Program', 'http://ujnotes.com'], ['computer/programming', 'Programming', 'http://ujnotes.com'], ['computer/game', 'Game']);
 
 </div>
 

@@ -1,3 +1,5 @@
+<?php $alt='Close-up of programming code'; require('../HTML/Fragment/Component_cover.php') ?>
+<h2 class='center'><?php echo $desc; ?></h2>
 <div id='message'>
 		<h3>What is an algorithm?</h3>
 	<p>
