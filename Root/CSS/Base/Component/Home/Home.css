@@ -31,8 +31,17 @@
 }
 
 #home-menu .home-menu-subtree {
-	margin-left: 28px;
-	border-left: 1px dashed #aaa
+	position: relative;
+	margin-left: 28px
+}
+
+#home-menu .home-menu-subtree::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-left: 1px solid rgba(105, 183, 207, 0.28);
+	content: ''
 }
 
 #home-menu .home-menu-subtree > .home-menu-node::before,
@@ -41,8 +50,21 @@
 	top: 76px;
 	left: 0;
 	width: 36px;
-	border-top: 1px dashed #aaa;
+	border-top: 1px solid rgba(105, 183, 207, 0.28);
 	content: ''
+}
+
+#home-menu .home-menu-subtree > .home-menu-node:last-child::after,
+#home-menu .home-menu-subtree > .home-menu-level:last-child::after {
+	position: absolute;
+	z-index: 0;
+	top: 77px;
+	bottom: 0;
+	left: -72px;
+	width: 74px;
+	background: #fff;
+	content: '';
+	pointer-events: none
 }
 
 #home-menu .home-menu-toggle {
@@ -54,19 +76,21 @@
 	width: 22px;
 	height: 22px;
 	padding: 0;
-	border: 1px solid #aaa;
+	border: 1px solid transparent;
 	border-radius: 50%;
 	color: #69b7cf;
-	background: #fff;
+	background: transparent;
 	cursor: pointer;
-	font: bold 16px/18px sans-serif
+	font: 500 15px/20px sans-serif;
+	transition: background .15s ease, border-color .15s ease, color .15s ease
 }
 
 #home-menu .home-menu-toggle:hover,
 #home-menu .home-menu-toggle:focus-visible {
-	border-color: #69b7cf;
-	outline: 2px solid #69b7cf;
-	outline-offset: 2px
+	border-color: rgba(105, 183, 207, 0.45);
+	background: #fff;
+	color: #4aa3c0;
+	outline: none
 }
 
 #home-menu .home-menu-toggle span::before {
@@ -79,4 +103,20 @@
 
 #home-menu .home-menu-subtree[hidden] {
 	display: none
+}
+html.dark-mode #home-menu .home-menu-subtree::before,
+html.dark-mode #home-menu .home-menu-subtree > .home-menu-node::before,
+html.dark-mode #home-menu .home-menu-subtree > .home-menu-level::before {
+	border-color: rgba(105, 183, 207, 0.22)
+}
+
+html.dark-mode #home-menu .home-menu-subtree > .home-menu-node:last-child::after,
+html.dark-mode #home-menu .home-menu-subtree > .home-menu-level:last-child::after {
+	background: #1a1a2e
+}
+
+html.dark-mode #home-menu .home-menu-toggle:hover,
+html.dark-mode #home-menu .home-menu-toggle:focus-visible {
+	background: #1a1a2e;
+	border-color: rgba(105, 183, 207, 0.5)
 }
