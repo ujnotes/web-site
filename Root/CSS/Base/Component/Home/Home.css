@@ -13,6 +13,13 @@
 }
 
 #home-menu {
+	--home-glyph-size: 18px;
+	--home-glyph-left: 10px;
+	--home-glyph-top: 8px;
+	--home-glyph-center: 19px;
+	--home-elbow-y: 17px;
+	--home-indent: 36px;
+	--home-line: rgba(105, 183, 207, 0.32);
 	padding-left: 10px
 }
 
@@ -27,30 +34,31 @@
 
 #home-menu .home-menu-level {
 	box-sizing: border-box;
-	padding-left: 36px
+	padding-left: var(--home-indent)
 }
 
 #home-menu .home-menu-subtree {
 	position: relative;
-	margin-left: 28px
+	padding-left: var(--home-indent)
 }
 
-#home-menu .home-menu-subtree::before {
+#home-menu .home-menu-node:has(> .home-menu-subtree:not([hidden]))::after {
 	position: absolute;
-	top: 0;
+	top: calc(var(--home-glyph-top) + var(--home-glyph-size));
 	bottom: 0;
-	left: 0;
-	border-left: 1px solid rgba(105, 183, 207, 0.28);
-	content: ''
+	left: var(--home-glyph-center);
+	border-left: 1px solid var(--home-line);
+	content: '';
+	pointer-events: none
 }
 
 #home-menu .home-menu-subtree > .home-menu-node::before,
 #home-menu .home-menu-subtree > .home-menu-level::before {
 	position: absolute;
-	top: 76px;
-	left: 0;
-	width: 36px;
-	border-top: 1px solid rgba(105, 183, 207, 0.28);
+	top: var(--home-elbow-y);
+	left: calc(var(--home-glyph-center) - var(--home-indent));
+	width: calc(var(--home-indent) - var(--home-glyph-center));
+	border-top: 1px solid var(--home-line);
 	content: ''
 }
 
@@ -58,10 +66,10 @@
 #home-menu .home-menu-subtree > .home-menu-level:last-child::after {
 	position: absolute;
 	z-index: 0;
-	top: 77px;
+	top: var(--home-elbow-y);
 	bottom: 0;
-	left: -72px;
-	width: 74px;
+	left: calc(var(--home-glyph-center) - var(--home-indent) - 1px);
+	width: 3px;
 	background: #fff;
 	content: '';
 	pointer-events: none
@@ -70,19 +78,20 @@
 #home-menu .home-menu-toggle {
 	position: absolute;
 	z-index: 1;
-	top: 65px;
-	left: 8px;
+	top: var(--home-glyph-top);
+	left: calc(var(--home-glyph-center) - var(--home-glyph-size) / 2);
 	box-sizing: border-box;
-	width: 22px;
-	height: 22px;
+	width: var(--home-glyph-size);
+	height: var(--home-glyph-size);
 	padding: 0;
 	border: 1px solid transparent;
 	border-radius: 50%;
 	color: #69b7cf;
 	background: transparent;
 	cursor: pointer;
-	font: 500 15px/20px sans-serif;
-	transition: background .15s ease, border-color .15s ease, color .15s ease
+	font: 500 14px/16px sans-serif;
+	transform-origin: center;
+	transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease
 }
 
 #home-menu .home-menu-toggle:hover,
@@ -90,7 +99,8 @@
 	border-color: rgba(105, 183, 207, 0.45);
 	background: #fff;
 	color: #4aa3c0;
-	outline: none
+	outline: none;
+	transform: scale(1.35)
 }
 
 #home-menu .home-menu-toggle span::before {
@@ -104,10 +114,9 @@
 #home-menu .home-menu-subtree[hidden] {
 	display: none
 }
-html.dark-mode #home-menu .home-menu-subtree::before,
-html.dark-mode #home-menu .home-menu-subtree > .home-menu-node::before,
-html.dark-mode #home-menu .home-menu-subtree > .home-menu-level::before {
-	border-color: rgba(105, 183, 207, 0.22)
+
+html.dark-mode #home-menu {
+	--home-line: rgba(105, 183, 207, 0.28)
 }
 
 html.dark-mode #home-menu .home-menu-subtree > .home-menu-node:last-child::after,

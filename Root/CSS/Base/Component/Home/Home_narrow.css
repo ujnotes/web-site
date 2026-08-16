@@ -3,7 +3,7 @@
 		margin-left: auto !important
 	}
 
-	#home-menu .home-menu-subtree {
-		margin-left: 12px
+	#home-menu {
+		--home-indent: 24px
 	}
 }
