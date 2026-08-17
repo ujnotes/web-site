@@ -32,11 +32,7 @@ world/philosophy/	intelligence	jpg
 world/philosophy/	inference	jpg
 	world	jpg
 world/	philosophy	jpg
-computer/game/doom/2016/demo/issue/	vulkan_crash	jpg
-computer/game/doom/2016/	demo	jpg
-computer/game/doom/2016/demo/	issue	jpg
 computer/game/	doom	jpg
-computer/game/doom/	2016	jpg
 world/philosophy/	solution	jpg
 world/philosophy/	problem	jpg
 world/philosophy/	death	jpg
@@ -62,3 +58,8 @@ world/philosophy/	hindu	jpg
 computer/	mechanical-computer	svg
 computer/	input-processing-output	svg
 computer/	fixed-and-programmable	svg
+computer/game/doom/	index	jpg
+computer/game/doom/2016/	index	jpg
+computer/game/doom/2016/demo/	index	jpg
+computer/game/doom/2016/demo/issue/	index	jpg
+computer/game/doom/2016/demo/issue/vulkan_crash/	index	jpg

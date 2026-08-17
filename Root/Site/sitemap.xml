@@ -55,7 +55,7 @@
 	<loc>http://ujnotes.com/computer/game</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer/game/doom/2016/demo/issue/vulkan_crash</loc>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo/issue/vulkan_crash</loc>
 </url>
 <url>
 	<loc>http://ujnotes.com/about</loc>
@@ -240,4 +240,20 @@
 	<url>
 		<loc>https://ujnotes.com/world/philosophy/decision</loc>
 	</url>
+<url>
+	<loc>https://ujnotes.com/computer/game/doom</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo/issue</loc>
+</url>
+
 </urlset>
