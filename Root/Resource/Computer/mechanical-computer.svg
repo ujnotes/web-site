@@ -30,4 +30,9 @@
 			</cc:Work>
 		</rdf:RDF>
 	</metadata>
+	<g font-family="system-ui, sans-serif" font-size="18px">
+		<text class="small" x="132" y="92.585365" style="line-height:normal">A</text>
+		<text class="small" x="588" y="86.585365" style="line-height:normal">B</text>
+		<text class="small" x="360" y="171.46332" style="line-height:normal">output</text>
+	</g>
 </svg>
