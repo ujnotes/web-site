@@ -12,4 +12,7 @@ The homepage tree specification applies recursively to every branch and takes pr
 ## Local vs production
 
 - `ujnotes.local` renders live PHP from `root/`. `ujnotes.com` serves baked HTML from `web-public`. Listing tiles stay on `/resource/placeholder.svg` until the parent listing is republished; publishing only the child article is not enough.
+- Homepage is slug `root` and bakes to `public/index.html`. It is not a Notion-queued article. Do not run `publish-notion.ps1 -Slug root` (that overwrites `Root.php` tree markup). Isolated child publishes do not rebuild homepage tiles.
+- Rebuild the homepage with Tiggu: write a temporary `Config/Render.lsv` containing only `root`, delete stale `public/index.html` first (Tiggu `check()` ignores Resource/Url.tsv cover changes), `docker compose -p ujnotes exec web-site /app/tiggu/build.sh /app/site/project`, copy `public/index.html` into `web-public`, commit, and push. Delete `Render.lsv` afterwards. Do not commit it.
+
 - See `H:\AGENTS.md` sections "Local vs production HTML" and "Publisher encoding (Windows)", and `H:\Website\AGENTS.md` section "Notion subtree publication".
