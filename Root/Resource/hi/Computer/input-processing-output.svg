@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-labelledby="title description" xml:lang="hi" role="img" version="1.1" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title id="title">निवेश, संसाधन और निर्गत</title>
+	<desc id="description">सूचना निवेश से संसाधन होते हुए निर्गत तक बहती है।</desc>
+	<defs>
+		<marker id="arrow" markerHeight="9" markerWidth="9" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+			<path d="m0 0 10 5-10 5z" class="ink-fill"/>
+		</marker>
+		<style>
+			:root { color-scheme: light dark; }
+			.ink-fill { fill: var(--ink); }
+			.box { fill: var(--fill); stroke: var(--ink); stroke-width: 5; }
+			.process { fill: var(--process); stroke: var(--ink); stroke-width: 5; }
+			.chevron { fill: var(--accent); stroke: var(--ink); stroke-width: .32398; }
+			.label { fill: var(--ink); font: 700 25px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+			.note { fill: var(--note); font: 18px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+			:root {
+				--ink: #172033;
+				--note: #465166;
+				--fill: #d9ecff;
+				--process: #8fd3c7;
+				--accent: #69b7cf;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--ink: #d8e4f0;
+					--note: #9aabbe;
+					--fill: #243044;
+					--process: #2d6b63;
+					--accent: #69b7cf;
+				}
+			}
+		</style>
+	</defs>
+	<rect class="box" x="44" y="76" width="220" height="118" rx="18"/>
+	<rect class="process" x="340" y="76" width="220" height="118" rx="18"/>
+	<rect class="box" x="636" y="76" width="220" height="118" rx="18"/>
+	<path id="rect10" class="chevron" d="m293.21 156.34v-43.526l21.763 21.763z"/>
+	<text class="label" x="154" y="127">निवेश</text>
+	<text class="note" x="154" y="159">सूचना मिली</text>
+	<text class="label" x="450" y="127">संसाधन</text>
+	<text class="note" x="450" y="159">नियम लगे</text>
+	<text class="label" x="746" y="127">निर्गत</text>
+	<text class="note" x="746" y="159">परिणाम निकला</text>
+	<use transform="translate(294)" xlink:href="#rect10"/>
+	<metadata>
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:title>निवेश, संसाधन और निर्गत</dc:title>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+</svg>

@@ -12,7 +12,7 @@
 		पर कंप्यूटर है क्या?
 	</p>
 	<p>
-		इस शब्द को compute + er में बाँटा जा सकता है।
+		इस शब्द को 'compute' + 'er' में बाँटा जा सकता है।
 	</p>
 	<p>
 		जैसे शिक्षक वह है जो पढ़ाता है, कंप्यूटर वह है जो गणना करता है।
@@ -66,12 +66,12 @@
 	<p>
 		उसकी गणना को इस प्रकार कहा जा सकता है:
 	</p>
-	<pre class='indent-c'><code class='block'>if the left side is heavier:
-    lean left
-else if the right side is heavier:
-    lean right
-else:
-    remain horizontal</code></pre>
+	<pre class='indent-c'><code class='block'>यदि बायाँ पक्ष भारी हो:
+    बाईं ओर झुकें
+अन्यथा यदि दायाँ पक्ष भारी हो:
+    दाईं ओर झुकें
+अन्यथा:
+    क्षैतिज रहें</code></pre>
 	<p>
 		तुला इलेक्ट्रॉनिक परिपथ, द्विआधारी संख्याएँ या लिखा हुआ कोड नहीं इस्तेमाल करती। फिर भी उसकी भौतिक व्यवस्था एक निश्चित तार्किक क्रिया करती है।
 	</p>
@@ -225,14 +225,14 @@ else:
 	<p>
 		गुणन बार-बार जोड़ से किया जा सकता है:
 	</p>
-	<pre class='indent-c'><code class='block'>receive n
-receive x
-set result to 0
+	<pre class='indent-c'><code class='block'>न प्राप्त करें
+क्ष प्राप्त करें
+परिणाम को 0 करें
 
-repeat n times:
-    result = result + x
+न बार दोहराएँ:
+    परिणाम = परिणाम + क्ष
 
-show result</code></pre>
+परिणाम दिखाएँ</code></pre>
 	<p>
 		हार्डवेयर में अलग गुणन यंत्र नहीं था। एक प्रोग्राम ने मशीन के पास पहले से मौजूद क्रियाओं को जोड़कर नई क्षमता बना दी।
 	</p>

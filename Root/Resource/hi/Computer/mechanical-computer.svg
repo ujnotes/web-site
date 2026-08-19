@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-labelledby="title description" xml:lang="hi" role="img" version="1.1" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<title id="title">यांत्रिक कंप्यूटर के रूप में दंड तुला</title>
+	<desc id="description">दो भार निवेश हैं। दंड और अक्ष उनकी तुलना करते हैं, और दंड का कोण निर्गत है।</desc>
+	<defs>
+		<style>
+			:root { color-scheme: light dark; }
+			.line { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+			.soft { fill: var(--fill); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+			.accent { fill: var(--accent); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+			.label { fill: var(--ink); font: 600 22px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+			.small { fill: var(--note); font: 18px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+			.formula { fill: var(--accent); font: italic 16.344px Georgia, 'Times New Roman', serif; }
+			.chevron { fill: var(--chevron); stroke: var(--ink); stroke-width: .081177; }
+			:root {
+				--ink: #172033;
+				--note: #465166;
+				--fill: #d9ecff;
+				--accent: #5aa9e6;
+				--chevron: #69b7cf;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--ink: #d8e4f0;
+					--note: #9aabbe;
+					--fill: #243044;
+					--accent: #5aa9e6;
+					--chevron: #69b7cf;
+				}
+			}
+		</style>
+	</defs>
+	<text class="label" x="360" y="34">यांत्रिक तुलना</text>
+	<path class="soft" d="M92 148h536a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10H92a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10Z"/>
+	<circle class="accent" cx="360" cy="214" r="27"/>
+	<path class="soft" d="m322 310h76l-24-69c-12.819 3.5551-15.079 3.9218-28 0z"/>
+	<path class="line" d="m274 310h172"/>
+	<g transform="translate(0,-132)">
+		<path class="soft" d="m84 234h96l-14 42h-68z"/>
+		<rect class="accent" x="111" y="202" width="42" height="32" rx="5"/>
+		<path class="soft" d="m540 234h96l-14 42h-68z"/>
+		<rect class="accent" x="560" y="190" width="56" height="44" rx="5"/>
+	</g>
+	<g font-family="system-ui, sans-serif" font-size="18px">
+		<text class="small" x="132" y="128" style="line-height:normal">निवेश</text>
+		<text class="small" x="360" y="334" style="line-height:normal">तुलना</text>
+		<text class="small" x="588" y="128" style="line-height:normal">निवेश</text>
+	</g>
+	<metadata>
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:title>यांत्रिक कंप्यूटर के रूप में दंड तुला</dc:title>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+	<g font-family="system-ui, sans-serif" font-size="18px">
+		<text class="small" x="132" y="92.585365" style="line-height:normal">A</text>
+		<text class="small" x="588" y="86.585365" style="line-height:normal">B</text>
+		<text class="small" x="360" y="171.46332" style="line-height:normal">निर्गत</text>
+	</g>
+	<g>
+		<path class="chevron" d="m356.4 177.03h10.906l-5.4529 5.4529z"/>
+		<text class="formula" x="280.39719" y="219.09592" xml:space="preserve"><tspan x="280.39719" y="219.09592">A &lt; B</tspan></text>
+		<text class="formula" x="402.39719" y="219.09592" xml:space="preserve"><tspan x="402.39719" y="219.09592">A &gt; B</tspan></text>
+	</g>
+</svg>
