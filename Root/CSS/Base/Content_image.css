@@ -1,0 +1,7 @@
+html.dark-mode .content-image object {
+	color-scheme: dark
+}
+
+html:not(.dark-mode) .content-image object {
+	color-scheme: light
+}
