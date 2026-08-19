@@ -1,0 +1,46 @@
+/* Stretch the article column so bottom nav tiles sit near the footer on short pages.
+   Long pages are unchanged. Homepage tree (#home-menu) stays in normal flow. */
+#content-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#wrapper {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#main,
+#main > .container,
+#content-wrapper-inside {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+#canvas-wrapper {
+	flex: 1 0 auto;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+}
+
+#canvas-wrapper-inner-container {
+	min-width: 0;
+}
+
+#canvas-main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+#content:has(> #sub-list) > #content-body-separator {
+	margin-top: auto;
+}
