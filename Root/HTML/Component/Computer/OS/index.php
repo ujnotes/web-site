@@ -1,3 +1,5 @@
+<?php $alt='OS'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<p>
 		Operating system notes from daily use: commands, setup, and fixes across *nix, Android, Windows, macOS, iOS, and Cygwin.

@@ -5,6 +5,11 @@
 	flex-direction: column;
 }
 
+#header-wrapper {
+	flex: 0 0 auto;
+	width: 100%;
+}
+
 #wrapper {
 	flex: 1 0 auto;
 	display: flex;
