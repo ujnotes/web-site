@@ -1,10 +1,6 @@
-<?php $alt='Demo'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<p>
-		Contains two levels.<br>
-		<br>
-				Vulkan is supported.
+		The 2016 Doom demo includes two levels and supports the Vulkan renderer.
 	</p>
 	<h3>Copyright and fair-use notice</h3>
 	<p>

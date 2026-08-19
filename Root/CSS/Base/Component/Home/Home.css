@@ -25,6 +25,7 @@
 	--home-node-width: 184px;
 	--home-line: rgba(105, 183, 207, 0.32);
 	--home-line-alt: rgba(40, 145, 190, 0.9);
+	--home-sibling-gap: 32px;
 	padding-left: 10px
 }
 
@@ -56,7 +57,8 @@
 	box-sizing: border-box;
 	width: var(--home-subtree-width, 100%);
 	position: relative;
-	padding-left: var(--home-indent)
+	padding-left: var(--home-indent);
+	row-gap: var(--home-sibling-gap)
 }
 
 #home-menu .home-menu-subtree > .home-menu-node {
@@ -64,10 +66,6 @@
 	box-sizing: border-box;
 	min-width: 0;
 	max-width: 100%
-}
-
-#home-menu .home-menu-subtree > .home-menu-node-game {
-	flex-basis: 100%
 }
 
 #home-menu .home-menu-node:has(> .home-menu-subtree:not([hidden]))::after {
@@ -131,7 +129,6 @@
 
 #home-menu .home-menu-connector-alternate > .home-menu-subtree::before,
 #home-menu .home-menu-connector-alternate > .home-menu-subtree > .home-menu-node::before,
-#home-menu .home-menu-connector-alternate > .home-menu-game-child-line,
 #home-menu .home-menu-connector-alternate > .home-menu-subtree > .home-menu-group-row-line {
 	border-top: 2px dashed var(--home-line-alt)
 }
@@ -145,6 +142,10 @@
 	padding-left: var(--home-bottom-child-indent, var(--home-indent))
 }
 
+#home-menu .home-menu-connector-bottom:not(:has(> .home-menu-subtree:not([hidden]))) {
+	padding-bottom: calc(var(--home-glyph-hit-size) + 16px)
+}
+
 #home-menu .home-menu-connector-bottom:has(> .home-menu-subtree:not([hidden]))::after {
 	top: var(--home-bottom-line-start-y);
 	left: var(--home-bottom-line-x)
@@ -155,45 +156,12 @@
 	left: calc(var(--home-bottom-line-x) - var(--home-glyph-hit-size) / 2)
 }
 
-#home-menu .home-menu-node-game > .home-menu-subtree {
-	margin-top: 48px;
-	padding-left: 0
-}
 
-#home-menu .home-menu-node-game > .home-menu-subtree > .home-menu-level {
-	margin-left: var(--home-game-child-left, 0px);
-	padding-left: 0
-}
 
-#home-menu .home-menu-node-game > .home-menu-subtree > .home-menu-level::before {
-	content: none
-}
 
-#home-menu .home-menu-node-game:has(> .home-menu-subtree:not([hidden]))::after {
-	top: var(--home-game-line-start-y);
-	height: var(--home-game-line-height);
-	left: var(--home-game-line-x)
-}
 
-#home-menu .home-menu-game-child-line {
-	position: absolute;
-	z-index: 0;
-	top: var(--home-game-elbow-y);
-	left: var(--home-game-elbow-left);
-	width: var(--home-game-elbow-width);
-	border-top: 1px solid var(--home-line);
-	content: '';
-	pointer-events: none
-}
 
-#home-menu .home-menu-node-game:has(> .home-menu-subtree[hidden]) > .home-menu-game-child-line {
-	display: none
-}
 
-#home-menu .home-menu-node-game > .home-menu-toggle {
-	top: var(--home-game-line-start-y);
-	left: calc(var(--home-game-line-x) - var(--home-glyph-hit-size) / 2)
-}
 
 #home-menu .home-menu-toggle {
 	position: absolute;
@@ -245,11 +213,22 @@
 	border-color: rgba(105, 183, 207, 0.45)
 }
 
-#home-menu .home-menu-toggle span::before {
+#home-menu .home-menu-toggle span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--home-glyph-size);
+	height: var(--home-glyph-size);
+	font-size: var(--home-glyph-size);
+	line-height: 1;
+	pointer-events: none
+}
+
+#home-menu .home-menu-toggle span:empty::before {
 	content: '\2212'
 }
 
-#home-menu .home-menu-toggle[aria-expanded='false'] span::before {
+#home-menu .home-menu-toggle[aria-expanded='false'] span:empty::before {
 	content: '+'
 }
 
@@ -269,4 +248,64 @@ html.dark-mode #home-menu .home-menu-toggle::before {
 html.dark-mode #home-menu .home-menu-toggle:hover::before,
 html.dark-mode #home-menu .home-menu-toggle:focus-visible::before {
 	border-color: rgba(105, 183, 207, 0.5)
+}
+
+#home-menu .home-menu-subtree > .home-menu-node.home-menu-has-more {
+	overflow: visible
+}
+
+#home-menu .home-menu-tile-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	position: relative
+}
+
+#home-menu .home-menu-more {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	width: 14px;
+	margin: 0 0 12px -10px;
+	padding: 0;
+	gap: 2px;
+	color: #69b7cf;
+	text-decoration: none
+}
+
+#home-menu .home-menu-more span {
+	display: block;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background: currentColor
+}
+
+#home-menu .home-menu-more:hover,
+#home-menu .home-menu-more:focus-visible {
+	color: #4aa3c0;
+	outline: none
+}
+
+html.dark-mode #home-menu .home-menu-more {
+	color: rgba(105, 205, 235, 0.92)
+}
+
+#home-image-disclaimer {
+	clear: both;
+	margin: 40px 0 0 var(--home-glyph-center);
+	max-width: 42em;
+	color: #888;
+	font-size: 11px;
+	line-height: 1.45
+}
+
+html.dark-mode #home-image-disclaimer {
+	color: #9a9a9a
 }

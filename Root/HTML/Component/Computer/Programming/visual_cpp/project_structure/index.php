@@ -1,0 +1,113 @@
+<div id='message'>
+	<p>
+		Working notes on Project Structure: Project A, Project A.vcproj.{COMPUTER}.{USER}, Header Files, Contain, Inherit, and Requirements.
+	</p>
+	<h2>Project A</h2>
+	<p>
+		.vcproj.
+	</p>
+	<h2>Project A.vcproj.{COMPUTER}.{USER</h2>
+	<p>
+		.user.
+	</p>
+	<h2>Header Files</h2>
+	<p>
+		.h.
+	</p>
+	<h4>Contain</h4>
+	<p>
+		External.
+	</p>
+	<p>
+		Internal.
+	</p>
+	<h4>Inherit</h4>
+	<p>
+		Add.
+	</p>
+	<p>
+		Base.
+	</p>
+	<p>
+		Foundation.
+	</p>
+	<p>
+		Use.
+	</p>
+	<h4>Notes</h4>
+	<h4>Requirements</h4>
+	<p>
+		.doc.
+	</p>
+	<h4>Design</h4>
+	<p>
+		.doc.
+	</p>
+	<h4>Manual</h4>
+	<p>
+		.doc.
+	</p>
+	<h4>Notes</h4>
+	<p>
+		.doc.
+	</p>
+	<h4>Optimizations</h4>
+	<p>
+		.doc.
+	</p>
+	<p>
+		Resource Files.
+	</p>
+	<h4>Source Files</h4>
+	<p>
+		.cpp.
+	</p>
+	<h4>Contain</h4>
+	<p>
+		External.
+	</p>
+	<p>
+		Internal.
+	</p>
+	<h4>Inherit</h4>
+	<p>
+		Add.
+	</p>
+	<p>
+		Base.
+	</p>
+	<p>
+		Foundation.
+	</p>
+	<p>
+		Use.
+	</p>
+	<h4>Build_Sets</h4>
+	<p>
+		.h.
+	</p>
+	<h4>VersionNo</h4>
+	<p>
+		.h.
+	</p>
+	<p>
+		Language.
+	</p>
+	<h2>ResXXX</h2>
+	<p>
+		Prj DLL.
+	</p>
+	<h2>ResDLL</h2>
+	<p>
+		.cpp.
+	</p>
+	<h2>ResXXX</h2>
+	<p>
+		.rc.
+	</p>
+	<p>
+		“.
+	</p>
+</div>
+
+<?php require('../HTML/Fragment/Component_bottom.php') ?>

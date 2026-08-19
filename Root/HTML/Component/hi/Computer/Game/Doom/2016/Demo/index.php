@@ -1,11 +1,6 @@
-<?php $alt='डेमो'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<p>
-		इसमें दो स्तर हैं।
-	</p>
-	<p>
-		Vulkan समर्थित है।
+		2016 के Doom डेमो में दो स्तर हैं और यह Vulkan रेंडरर का समर्थन करता है।
 	</p>
 	<h3>कॉपीराइट और उचित उपयोग सूचना</h3>
 	<p>

@@ -6,6 +6,7 @@ These rules govern the hierarchy shown on the Ujnotes homepage. Apply them gener
 
 - Sort siblings alphabetically by their trimmed, localized display label.
 - Keep childless siblings in the same row whenever space permits. Tiles must wrap naturally onto the next row when the available width is exhausted.
+- Keep a vertical gap between sibling groups that wrap onto the next row. A collapsed node still reserves space for its plus/minus so that control never sits on the next group’s tiles.
 - A branch must use the full available homepage content width; it must not shrink-wrap around its first tiles. This applies to the Computer tree and every other top-level branch.
 - Encountering a sibling with children must not force unrelated childless siblings out of the current row. The parent may remain beside its siblings when space permits.
 - Render a node's direct children one level below it. Children must always be visually displaced to the right of their parent.
@@ -36,6 +37,19 @@ These rules govern the hierarchy shown on the Ujnotes homepage. Apply them gener
 - Leave visual space between the glyph and its connector. A page-colored disc behind the glyph may create this break in the line.
 - Give each glyph a larger invisible circular hit target (currently 32 px) without making the visible glyph disproportionately large.
 - Preserve the control's legibility and line break in both light and dark themes.
+
+## Expansion cap
+
+- A homepage leaf is shown in the tree, but its descendants are not. This is a generic cap on expansion, not an article special-case in the renderer.
+- Record explicit leaf slugs in `home_menu_leaf_slugs()` in `root/HTML/Fragment/Home_menu.php`.
+- Record parents whose *direct children* are leaves in `home_menu_cap_children_of()`. Current: `computer/os`, `computer/program`, `computer/programming`, `computer/technology` (first child level only).
+- Current explicit leaf: `computer/game/doom` (the first Doom tile). Deeper Doom pages remain on the site; they are just omitted from the homepage tree.
+
+## Selected children
+
+- A parent may show only some of its direct children. Put an allowlist in `home_menu_selected_child_slugs()`, or a first-N limit in `home_menu_selected_child_limit()`. The allowlist wins when both are set.
+- When the visible set is a subset, render a vertical three-dot mark immediately to the right of that last visible child tile (one mark per truncated parent). The mark links to that parent’s listing page.
+- Current limits: OS, Program, Programming, and Technology show their first alphabetical child plus a vertical ⋮ on that child tile.
 
 ## Data and maintenance
 

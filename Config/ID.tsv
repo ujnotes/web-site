@@ -55,3 +55,1038 @@ published	world/philosophy/algorithm	Algorithm	Algorithm	0	What a definite proce
 published	world/philosophy/program	Program	Program	0	How instructions turn a general-purpose computer into a particular tool.	article
 published	world/philosophy/artificial-intelligence	Artificial Intelligence	Artificial Intelligence	0	What artificial intelligence can do, how it learns, and what its limits and responsibilities are.	article
 published	world/philosophy/decision	Decision	Decision	0	How possible actions are compared and one course is chosen under uncertainty.	article
+published	computer/os	OS	OS	0	Operating system notes from daily use: commands, setup, and fixes across *nix, Android, Windows, macOS, iOS, and Cygwin.	article
+published	computer/program	Program	Program	0	Notes on programs in daily use: tools, settings, and how they behave.	article
+published	computer/programming	Programming	Programming	0	Programming notes: languages, libraries, and the commands used with them.	article
+published	computer/technology	Technology	Technology	0	Working notes on web, hardware, licenses, ML, microservices, and software design.	article
+published	computer/program/adobe_illustrator/export_multiple_web_sizes	Export multiple web sizes	Export multiple web sizes	0	Working notes on Export multiple web sizes: scaleTo = scaleTo/document.width*100.0;, var i, layer,, if (!resFolder.exists), for (i = document.layers.length - 1; i >= 0; i--), and for (i = document.layers.length - 1; i >= 0; i--).	article
+published	computer/program/adobe_illustrator/notes	Notes	Notes	0	Shift + Ctrl + D.	article
+published	computer/program/adobe_illustrator/tutorial	Tutorial	Tutorial	0	Working notes on Tutorial: Long shadow.	article
+published	computer/program/adobe_illustrator	Adobe Illustrator	Adobe Illustrator	0	Working notes on Adobe Illustrator: Export multiple web sizes and Tutorial.	article
+published	computer/program/adobe_premier_pro/start	Start	Start	0	Working notes on Start: 2. Import clip and 3. Create sequence.	article
+published	computer/program/adobe_premier_pro	Adobe Premiere Pro	Adobe Premiere Pro	0	Working notes on Adobe Premiere Pro: Start.	article
+published	computer/program/amazon_cloud_reader/single_column_width	Single column width	Single column width	0	Working notes on Single column width.	article
+published	computer/program/amazon_cloud_reader	Amazon Cloud Reader	Amazon Cloud Reader	0	Working notes on Amazon Cloud Reader: Single column width.	article
+published	computer/program/amd_crimson/notes	Notes	Notes	0	Working notes on Notes: Settings path.	article
+published	computer/program/amd_crimson	AMD Crimson	AMD Crimson	0	Working notes on AMD Crimson.	article
+published	computer/program/android_studio/debug_key	Debug key	Debug key	0	SHA-1 hash of default key.	article
+published	computer/program/android_studio/emulator	Emulator	Emulator	0	**Emulator.** Emulator: ERROR: AdbHostServer.cpp:102: Unable to connect to adb daemon on port: 5037.	article
+published	computer/program/android_studio/issues	Issues	Issues	0	Working notes on Issues: 1. Gradle version x.x is required. Current version is x.x+n.	article
+published	computer/program/android_studio/new_project	New project	New project	0	Working notes on New project.	article
+published	computer/program/android_studio/setup	Setup	Setup	0	Config path 'C:\\Program Files(x86)\\Android\\android-studio\\config' is invalid.	article
+published	computer/program/android_studio/version	Version	Version	0	Working notes on Version: App AndroidManifest.xml.	article
+published	computer/program/android_studio	Android Studio	Android Studio	0	Working notes on Android Studio: Debug key, Emulator, Issues, New project, Setup, and Version.	article
+published	computer/program/apache_httpd/authentication	Authentication	Authentication	0	1. Create user & password.	article
+published	computer/program/apache_httpd/conf/extra/httpd_ssl_conf	httpd-ssl.conf	httpd-ssl.conf	0	They're here only as hints or reminders. If you are unsure.	article
+published	computer/program/apache_httpd/conf/extra	extra	extra	0	Working notes on extra: httpd-ssl.conf.	article
+published	computer/program/apache_httpd/conf/httpd_conf	httpd.conf	httpd.conf	0	Working notes on httpd.conf: # This is the main Apache HTTP server configuration file., configuration directives that give the server its instructions., In particular, see., for a discussion of each configuration directive., Do NOT simply read the instructions in here without understanding., and # what they do..	article
+published	computer/program/apache_httpd/conf	conf	conf	0	Working notes on conf: extra and httpd.conf.	article
+published	computer/program/apache_httpd/configuration	Configuration	Configuration	0	Working notes on Configuration: Follow Symbolic Link, ServerRoot, /, and <Directory htdocs.	article
+published	computer/program/apache_httpd/download	Download	Download	0	Working notes on Download: Website, x64, and x86.	article
+published	computer/program/apache_httpd/htaccess	.htAccess	.htAccess	0	Working notes on .htAccess: Turn on rewrite engine, ForceType, DefaultType, ErrorDocument, Redirect 404 /, and Default file.	article
+published	computer/program/apache_httpd/https	https	https	0	https: Place, ssl_module, Logs location, SSLSessionCache: 'shmcb', and <VirtualHost <_default_|domain_name>:443>.	article
+published	computer/program/apache_httpd/info	Info	Info	0	Working notes on Info.	article
+published	computer/program/apache_httpd/mac	Mac	Mac	0	Starts | stop | restart.	article
+published	computer/program/apache_httpd/mod_rewrite	mod_rewrite	mod_rewrite	0	mod_rewrite: References, RewriteBase, Example, RewriteRule, and Test.	article
+published	computer/program/apache_httpd/mode_rewrite_samples	mode_rewrite samples	mode_rewrite samples	0	Working notes on mode_rewrite samples: Remove Extension, Redirect all, and Remove trailing slash.	article
+published	computer/program/apache_httpd/proxy_server	Proxy Server	Proxy Server	0	Working notes on Proxy Server: Forward.	article
+published	computer/program/apache_httpd/reverse_proxy	Reverse Proxy	Reverse Proxy	0	Working notes on Reverse Proxy: ProxyPass.	article
+published	computer/program/apache_httpd/setup	Setup	Setup	0	Setup: Place, Path root, Directory, Edit configuration file, and Location.	article
+published	computer/program/apache_httpd/ubuntu	Ubuntu	Ubuntu	0	www-data.	article
+published	computer/program/apache_httpd/ubuntu_layout	Ubuntu layout	Ubuntu layout	0	Working notes on Ubuntu layout: |, |, |, |, and |.	article
+published	computer/program/apache_httpd/vhost	VHost	VHost	0	The first VHost is the default one.	article
+published	computer/program/apache_httpd	Apache HTTPD	Apache HTTPD	0	Working notes on Apache HTTPD: Authentication, conf, Configuration, Download, .htAccess, and https, and related topics.	article
+published	computer/program/apache_maven/additional_repository	Additional repository	Additional repository	0	Additional repository: <repositories>, <repositories> <repository>, <id>in-project</id>, <id>in-project</id> <name>Project-repo</name>, and <name>Project-repo</name> <url>file://${project.ba.	article
+published	computer/program/apache_maven/commands	Commands	Commands	0	Working notes on Commands: mvn package.	article
+published	computer/program/apache_maven/dependencies	Dependencies	Dependencies	0	Dependencies: JSON, JSON <dependency>, <groupId>javax.json</groupId>, <groupId>javax.json</groupId> <artifactId>javax.js, and <artifactId>javax.json-api</artifactId> <version>1.	article
+published	computer/program/apache_maven/exclude	Exclude	Exclude	0	<resources>.	article
+published	computer/program/apache_maven/notes	Notes	Notes	0	Working notes on Notes: * In eclipse: Whenever POM.xml is updated manually “Maven > Update project “ should, Install, Create stub project, Adapt to IDE, Eclipse, and [Proxy settings].	article
+published	computer/program/apache_maven/pom_xml	POM.xml	POM.xml	0	Working notes on POM.xml: <project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\".	article
+published	computer/program/apache_maven/project	Project	Project	0	Working notes on Project: Archetype, Group Id, and Granularity - project hierarchy.	article
+published	computer/program/apache_maven/search	Search	Search	0	Working notes on Search.	article
+published	computer/program/apache_maven/settings_xml_proxy	Settings.xml - proxy	Settings.xml - proxy	0	Settings.xml - proxy: <username></username>, and <username></username> <password></password>.	article
+published	computer/program/apache_maven	Apache Maven	Apache Maven	0	Working notes on Apache Maven: Additional repository, Commands, Dependencies, Exclude, POM.xml, and Project, and related topics.	article
+published	computer/program/apache_tomcat/appbase	AppBase	AppBase	0	Working notes on AppBase: Server.xml, conf/server.xml, appBase=”/c:/ProgramData/Apache Software Foundation/Tomcat/webApps”, and Prepend ‘/’ for absolute path.	article
+published	computer/program/apache_tomcat/cipher	Cipher	Cipher	0	Working notes on Cipher.	article
+published	computer/program/apache_tomcat/compression	Compression	Compression	0	Working notes on Compression: <connector.	article
+published	computer/program/apache_tomcat/context_environment_variables	Context - Environment variables	Context - Environment variables	0	Object object = ((Context)(new InitialContext().lookup(\"java:comp/env\")).lookup(\"mykey\");.	article
+published	computer/program/apache_tomcat/context_parameters	Context - parameters	Context - parameters	0	Working notes on Context - parameters: Context.xml, Web.xml, 1. Parameters, and 2. Environment entries.	article
+published	computer/program/apache_tomcat/context_resources	Context - Resources	Context - Resources	0	Working notes on Context - Resources: <Resource name=\"jdbc/postgres\" auth=\"Container\", if ( cxt == null ), and if ( ds == null ).	article
+published	computer/program/apache_tomcat/context_xml/context_xml	Context.xml	Context.xml	0	Context.xml: <Context override=\"true\" allowLinking=\"true\" swall, <Context <!-- Default set of monitored resources -, <!-- <WatchedResource>WEB-INF/web.xml</WatchedReso, and <WatchedResource>WEB-IN.	article
+published	computer/program/apache_tomcat/context_xml/location	Location	Location	0	Working notes on Location.	article
+published	computer/program/apache_tomcat/context_xml	Context.xml	Context.xml	0	Working notes on Context.xml: Context.xml and Location.	article
+published	computer/program/apache_tomcat/database_connection	Database connection	Database connection	0	Working notes on Database connection: Class.forName(\"com.microsoft.sqlserver.jdbc.SQLServerDriver\");.	article
+published	computer/program/apache_tomcat/dump	Dump	Dump	0	<VirtualHost *:80>.	article
+published	computer/program/apache_tomcat/jsp_variables	JSP - variables	JSP - variables	0	Working notes on JSP - variables: application.	article
+published	computer/program/apache_tomcat/locations	Locations	Locations	0	Old logs are pushed to date_ files.	article
+published	computer/program/apache_tomcat/logging	Logging	Logging	0	Working notes on Logging: WEB-INF\\Classes\\ and Separate per context.	article
+published	computer/program/apache_tomcat/multiple	Multiple	Multiple	0	Multiple: 1. Copy service script, 2. Remove base service script, 1. rm, 3. Uninstall base script, and 4. Install services scripts.	article
+published	computer/program/apache_tomcat/notes	Notes	Notes	0	Working notes on Notes.	article
+published	computer/program/apache_tomcat/permgen	Permgen	Permgen	0	Permgen: Windows, Linux, -XX:PermSize<size> - Set initial PermGen Size., -XX:PermSize<size> -XX:MaxPermSize<size> - Set the, and setenv.bat.	article
+published	computer/program/apache_tomcat/port	Port	Port	0	Port: iptables -A PREROUTING -t nat -i eth0 -p tcp --dpo.	article
+published	computer/program/apache_tomcat/setenv_sh	Setenv.sh	Setenv.sh	0	CATALINA_BASE one overrides CATALINA_HOME one.	article
+published	computer/program/apache_tomcat/setup	Setup	Setup	0	Setup: Install, Uninstall, Service.bat install MyService, and Service.bat.	article
+published	computer/program/apache_tomcat/ssl/notes	Notes	Notes	0	The certificate file i.e. keystore file can be a .p12 file, need not be a ‘.jks’.	article
+published	computer/program/apache_tomcat/ssl/redirect_http_to_https	Redirect: HTTP to HTTPS	Redirect: HTTP to HTTPS	0	Working notes on Redirect: HTTP to HTTPS: Server.xml.	article
+published	computer/program/apache_tomcat/ssl	SSL	SSL	0	Working notes on SSL: Redirect: HTTP to HTTPS.	article
+published	computer/program/apache_tomcat/start	Start	Start	0	Set JAVA_HOME to JDK path.	article
+published	computer/program/apache_tomcat/ubuntu/default	Default	Default	0	This is the default Tomcat home page. It can be found on the local filesystem at: /var/lib/tomcat7/webapps/ROOT/index.html.	article
+published	computer/program/apache_tomcat/ubuntu	Ubuntu	Ubuntu	0	Working notes on Ubuntu: Default.	article
+published	computer/program/apache_tomcat/url_rewrites	URL Rewrites	URL Rewrites	0	This is implemented via a URL Rewrite Filter -.	article
+published	computer/program/apache_tomcat/variables	Variables	Variables	0	Working notes on Variables: The common shared directory with, CATALINA_BASE, The per tomcat instance directory with, and Ubuntu.	article
+published	computer/program/apache_tomcat/web_xml/mapping	Mapping	Mapping	0	Mapping: <servlet>, <servlet-name></servlet-name>, <servlet-class></servlet-class>, <servlet-class></servlet-class> <jsp-file></jsp-fi, and </servlet>.	article
+published	computer/program/apache_tomcat/web_xml	Web.xml	Web.xml	0	Working notes on Web.xml: Mapping.	article
+published	computer/program/apache_tomcat	Apache Tomcat	Apache Tomcat	0	Working notes on Apache Tomcat: AppBase, Cipher, Compression, Context - Environment variables, Context - parameters, and Context - Resources, and related topics.	article
+published	computer/program/appium/eclipse	Eclipse	Eclipse	0	Working notes on Eclipse: 1. Install TestNG, 2. JAR, and 3. Specify in Appium server.	article
+published	computer/program/appium/installation	Installation	Installation	0	Working notes on Installation: Install nodejs/npm, Install grunt-cli, Install Appium, Set up a symlink in your .bashrc file for Appium, and If required.	article
+published	computer/program/appium	Appium	Appium	0	Working notes on Appium: Eclipse and Installation.	article
+published	computer/program/applications	Applications	Applications	0	A working list of desktop programs in daily use, grouped by job, with AutoRuns 10.06 (2010-11-29) and the other pinned names and URLs.	article
+published	computer/program/atom/notes	Notes	Notes	0	Working notes on Notes: Add packages.	article
+published	computer/program/atom	Atom	Atom	0	Working notes on Atom.	article
+published	computer/program/aws/issues	Issues	Issues	0	1. Set desired limit to 0.	article
+published	computer/program/aws/static_hosting	Static hosting	Static hosting	0	Working notes on Static hosting: Enable CDN (cloudflare) proxy.	article
+published	computer/program/aws	AWS	AWS	0	Working notes on AWS: Issues and Static hosting.	article
+published	computer/program/blender/commandline	Commandline	Commandline	0	-W.	article
+published	computer/program/blender/crowdrender	CrowdRender	CrowdRender	0	Working notes on CrowdRender: Install.	article
+published	computer/program/blender/notes	Notes	Notes	0	Working notes on Notes: Path and Project directory.	article
+published	computer/program/blender/render_area	Render area	Render area	0	Working notes on Render area: Sidebar - (top right notch 3D view).	article
+published	computer/program/blender/smoke	Smoke	Smoke	0	Working notes on Smoke: 7. Delete preroll files (all with -.	article
+published	computer/program/blender/ui_issues	UI - issues	UI - issues	0	Selectable options erroneously appear to be different tabs.	article
+published	computer/program/blender/white_background	White background	White background	0	Working notes on White background.	article
+published	computer/program/blender	Blender	Blender	0	Working notes on Blender: Commandline, CrowdRender, Render area, Smoke, UI - issues, and White background.	article
+published	computer/program/certbot/certbot_auto	certbot-auto	certbot-auto	0	Working notes on certbot-auto: No way to specify the primary domain for multiple domain certificate.	article
+published	computer/program/certbot/notes	Notes	Notes	0	Notes: Primary domain (CN), renew, Try to renew, Apache, and Primary domain (CN) First -d <primary-domain>.	article
+published	computer/program/certbot	CertBot	CertBot	0	Working notes on CertBot: certbot-auto.	article
+published	computer/program/cloudflare/tunnel	Tunnel	Tunnel	0	Working notes on Tunnel: 4. add config.yml and ingress.	article
+published	computer/program/cloudflare	Cloudflare	Cloudflare	0	Working notes on Cloudflare: Tunnel.	article
+published	computer/program/codecs	Codecs	Codecs	0	Windows codecs note: separate x86 and x64 builds, with the Matroska, AC3Filter, FLAC, OGG, FLV, and VobSub versions that were pinned.	article
+published	computer/program/cpanel/exclude_from_backup	Exclude from backup	Exclude from backup	0	Exclude from backup: Global, Local, /etc/cpbackup-exclude.conf, <path_of_directory_to_exclude>, and /home/username/cpbackup-exclude.conf.	article
+published	computer/program/cpanel	cPanel	cPanel	0	Working notes on cPanel: Exclude from backup.	article
+published	computer/program/creative_alchemy/alchemy	Alchemy	Alchemy	0	Working notes on Alchemy: Buffers, Duration, Maximum Voice Count, and Disable Direct Music.	article
+published	computer/program/creative_alchemy	Creative Alchemy	Creative Alchemy	0	Working notes on Creative Alchemy: Alchemy.	article
+published	computer/program/cvs/notes	Notes	Notes	0	This is to allow checking out previous versions.	article
+published	computer/program/cvs	CVS	CVS	0	Working notes on CVS.	article
+published	computer/program/davinci_resolve/path	Path	Path	0	ProgramData\\Blackmagic Design\\DaVinci Resolve\\Support\\Resolve Disk Database\\Resolve Projects\\Users\\guest\\Projects.	article
+published	computer/program/davinci_resolve/smooth_cut	Smooth cut	Smooth cut	0	Working notes on Smooth cut.	article
+published	computer/program/davinci_resolve	DaVinci Resolve	DaVinci Resolve	0	Working notes on DaVinci Resolve: Path and Smooth cut.	article
+published	computer/program/db2/sql_commands	SQL commands	SQL commands	0	list tables [for schema <Schema_Name>];.	article
+published	computer/program/db2/utility	Utility	Utility	0	Working notes on Utility: db2val.	article
+published	computer/program/db2	DB2	DB2	0	Working notes on DB2: SQL commands and Utility.	article
+published	computer/program/dbeaver/issues	Issues	Issues	0	Working notes on Issues: 1. Can’t save value via UI - says: pkey not in resultset, 1. Solution, 2. Can’t save value via UI - from a select query result set - says: virtual_pkey not present, 1. Solution, and ?Set virtual pkey.	article
+published	computer/program/dbeaver	Dbeaver	Dbeaver	0	Working notes on Dbeaver: Issues.	article
+published	computer/program/dd_wrt/dd_wrt	DD-Wrt	DD-Wrt	0	After typing info into the three boxes, you must scroll down to the bottom of the page and Save. It must be done for each entry before clicking add to get a new set of blank boxes.	article
+published	computer/program/dd_wrt	DD-WRT	DD-WRT	0	Working notes on DD-WRT: DD-Wrt.	article
+published	computer/program/docker/cmd	CMD	CMD	0	Working notes on CMD: First run., else, and Subsequent runs..	article
+published	computer/program/docker/commands	Commands	Commands	0	Docker build -t my_app .	article
+published	computer/program/docker/context	Context	Context	0	Context: docker context create <context>, docker docker context use <context>, and docker docker --context <context> login -u <userna.	article
+published	computer/program/docker/jargon	Jargon	Jargon	0	Working notes on Jargon: Docker Namespace, Docker Machine, Docker Network, and Orchestration.	article
+published	computer/program/docker/notes	Notes	Notes	0	Working notes on Notes: 5. Remember - the mount directory from the compose file is completely replaced - hence any operation by the build is simply overwritten and lost.	article
+published	computer/program/docker/shrink_vhd	Shrink VHD	Shrink VHD	0	Caution: this note covers destructive or admin-level changes.	article
+published	computer/program/docker	Docker	Docker	0	Working notes on Docker: CMD, Commands, Context, Jargon, and Shrink VHD.	article
+published	computer/program/drupal/setup	Setup	Setup	0	Working notes on Setup.	article
+published	computer/program/drupal	Drupal	Drupal	0	Working notes on Drupal: Setup.	article
+published	computer/program/eclipse/arguments	Arguments	Arguments	0	Arguments: Virtual memory, and eclipse.exe -vmargs -Xms512m -Xmx512m -XX:PermSize.	article
+published	computer/program/eclipse/bug_tomcat_7_0_server_add	Bug - Tomcat 7.0 Server add	Bug - Tomcat 7.0 Server add	0	Working notes on Bug - Tomcat 7.0 Server add: Issue, Soln, and Del.	article
+published	computer/program/eclipse/cvs	CVS	CVS	0	1. \"Window\" menu -> \"Show View\" -> \"Other\" -> find \"CVS\" section and expand -> \"CVS Repositories\".	article
+published	computer/program/eclipse/jdkhttps_www_matsim_org_docs_devguide_eclipse_jdk	JDKhttps://www.matsim.org/docs/devguide/eclipse/jdk	JDKhttps://www.matsim.org/docs/devguide/eclipse/jdk	0	JDKhttps://www.matsim.org/docs/devguide/eclipse/jdk: 1. eclipse.ini, 2. Place below line containing: -vm, and 2. -vmargs.	article
+published	computer/program/eclipse/reset	Reset	Reset	0	o[-clean -clearPersistedState.	article
+published	computer/program/eclipse/settings	Settings	Settings	0	Working notes on Settings: Always run last, Run/Debug > Launching > Launch Operation, Debug when breakpoints, and Run/Debug > Launching >.	article
+published	computer/program/eclipse/validation	Validation	Validation	0	Preferences > JavaScript > Include Path > Source >.	article
+published	computer/program/eclipse/web_development	Web development	Web development	0	Working notes on Web development: 1. Web development, 2. Web development tools, 3. WTP, and 4. Add classpath.	article
+published	computer/program/eclipse	Eclipse	Eclipse	0	Working notes on Eclipse: Arguments, Bug - Tomcat 7.0 Server add, CVS, JDK, Reset, and Settings, and related topics.	article
+published	computer/program/ffmpeg/hdr	HDR	HDR	0	HDR: .\\ffmpeg.exe -i \"<infile>\" -c:a copy -c:v libx265 , -ss 250 -t 5, and -ss -ss 30 -t 5.	article
+published	computer/program/ffmpeg	ffmpeg	ffmpeg	0	Working notes on ffmpeg: HDR.	article
+published	computer/program/filezilla_client/notes	Notes	Notes	0	Working notes on Notes: Timezone offset.	article
+published	computer/program/filezilla_client	FileZilla - Client	FileZilla - Client	0	Working notes on FileZilla - Client.	article
+published	computer/program/firebase/email	Email	Email	0	Working notes on Email.	article
+published	computer/program/firebase/functions/deploy	Deploy	Deploy	0	Deploy: Only specific function, and functions:<function_name>[, …].	article
+published	computer/program/firebase/functions/emulater	Emulater	Emulater	0	Config to be placed in ‘functions’ directory.	article
+published	computer/program/firebase/functions/environment	Environment	Environment	0	Working notes on Environment: Write to file, Set, Multiple, Expands as, and access.	article
+published	computer/program/firebase/functions/init	Init	Init	0	Working notes on Init.	article
+published	computer/program/firebase/functions/mailgun	Mailgun	Mailgun	0	(same would apply for domain).	article
+published	computer/program/firebase/functions/setup	Setup	Setup	0	npm i --save firebase-functions@latest.	article
+published	computer/program/firebase/functions	Functions	Functions	0	Working notes on Functions: Deploy, Emulater, Environment, Init, Mailgun, and Setup.	article
+published	computer/program/firebase/hosting	Hosting	Hosting	0	Working notes on Hosting: 2. Download firebase, 3. Authenticate, 4. Init, 5. Directory structure, 1. Project directory, and 8. Deploy.	article
+published	computer/program/firebase/install_web	Install - web	Install - web	0	npm install -g firebase-tools.	article
+published	computer/program/firebase/test	Test	Test	0	Will print the localhost url with port.	article
+published	computer/program/firebase	Firebase	Firebase	0	Working notes on Firebase: Email, Functions, Hosting, Install - web, and Test.	article
+published	computer/program/fly_io/db_install	db install	db install	0	Working notes on db install: use latest image and update.	article
+published	computer/program/fly_io/setup	Setup	Setup	0	Working notes on Setup: 1. join org account, 2. two ways to init, 3. command line tool, 4. login, 5. create app, and 3. Config file.	article
+published	computer/program/fly_io	fly io	fly io	0	Working notes on fly io: db install and Setup.	article
+published	computer/program/free_download_manager/download_all	Download all	Download all	0	Navigate to the page > Copy URL.	article
+published	computer/program/free_download_manager	Free Download Manager	Free Download Manager	0	Working notes on Free Download Manager: Download all.	article
+published	computer/program/gimp/resynthesizer	Resynthesizer	Resynthesizer	0	GIMP Resynthesizer is BETTER Than Photoshop's Content Aware Fill.	article
+published	computer/program/gimp	GIMP	GIMP	0	Working notes on GIMP: Resynthesizer.	article
+published	computer/program/git/backup	Backup	Backup	0	Working notes on Backup: Central repo and Bare repo (w/o .git and WD, content of .git at ./).	article
+published	computer/program/git/bitbucket	BitBucket	BitBucket	0	Working notes on BitBucket: Create repository and At console.	article
+published	computer/program/git/branch	Branch	Branch	0	Updates a local branch from a remote repository while preserving your uncommitted changes and maintaining a clean workflow.	article
+published	computer/program/git/commands	Commands	Commands	0	Working notes on Commands: init, add, reset, clone, remote, and diff.	article
+published	computer/program/git/continue	Continue	Continue	0	1. Branch a private copy.	article
+published	computer/program/git/cr_lf	cr-lf	cr-lf	0	Working notes on cr-lf: Here are the different settings and their effects, * core.autocrlf true (change for both - local and remote automatically), * core.autocrlf input (change only to input i.e. for remote), and * core.autocrlf off (change nothing).	article
+published	computer/program/git/crash_course	Crash course	Crash course	0	Crash course: status, diff head, reset _, checkout _, and rm _.	article
+published	computer/program/git/detached_head	Detached head	Detached head	0	The head points to a commit not on the branch.	article
+published	computer/program/git/diff	Diff	Diff	0	git remote add <id> <path>.git.	article
+published	computer/program/git/file_rename_only_case	File rename only case	File rename only case	0	Issue on case-insensitive OS like Windows & Mac.	article
+published	computer/program/git/history	History	History	0	git log --follow -p -- <file>.	article
+published	computer/program/git/ignore	Ignore	Ignore	0	Working notes on Ignore: comment, Tracked file, and Undo.	article
+published	computer/program/git/init	init	init	0	Does not alter on checkout.	article
+published	computer/program/git/issues	Issues	Issues	0	**Message.** Rejected master -> master (non-fast-forward).	article
+published	computer/program/git/list	List	List	0	Show files in git index.	article
+published	computer/program/git/mac	Mac	Mac	0	Working notes on Mac: 2. Git config username and email needs to be set on init.	article
+published	computer/program/git/master_to_main	master to main	master to main	0	Create branch from main - rename.	article
+published	computer/program/git/merge_branch	Merge branch	Merge branch	0	Merge branch: Select the branch to merge to, Merge, Delete, Push, and Choose one version over the other.	article
+published	computer/program/git/multiple_accounts	Multiple accounts	Multiple accounts	0	Assisted by google workspace - help me write.	article
+published	computer/program/git/notes	Notes	Notes	0	Git does not let you work on any one else’s branch.	article
+published	computer/program/git/ownership	Ownership	Ownership	0	Ownership: Change origin, and git remote set-url origin <>.	article
+published	computer/program/git/remote	Remote	Remote	0	‘Origin’ is the default one.	article
+published	computer/program/git/remote_filesystem	Remote - filesystem	Remote - filesystem	0	Working notes on Remote - filesystem: 1. Remote, 1. Create remote directory, 2. At client, 1., 2. Add remote, and 3. Push.	article
+published	computer/program/git/remote_mirror	Remote mirror	Remote mirror	0	Every fetch overrides any local change.	article
+published	computer/program/git/remote_structure	Remote structure	Remote structure	0	Working notes on Remote structure: Working directory, C, Main remote, D, First backup, and U.	article
+published	computer/program/git/remove	Remove	Remove	0	Working notes on Remove: at once.	article
+published	computer/program/git/rename_branch	Rename branch	Rename branch	0	Rename branch: git push origin :old_branch, git branch -m old_branch new_branch # Rena, and git push --set-upstream origin new_branch # Push.	article
+published	computer/program/git/signed	Signed	Signed	0	gpg --list-secret-keys --keyid-format=long.	article
+published	computer/program/git/stash	Stash	Stash	0	Working notes on Stash: git stash, (save), apply, pop, drop, and list.	article
+published	computer/program/git/submodule	Submodule	Submodule	0	Working notes on Submodule: Instead only a .git file, *Path should match in / style too, The directory name though still is the git target’s name, This has to be renamed manually if required, Should show up as a already staged entry in git status, and deinit.	article
+published	computer/program/git/tags	tags	tags	0	Working notes on tags: tag.	article
+published	computer/program/git/tutorials	Tutorials	Tutorials	0	5th of September - 2022.	article
+published	computer/program/git/undo	Undo	Undo	0	Undo: Keep interim changes between, Remove trace (nuke), Remove the very first commit, Minor changes, and Git reset --soft HEAD~.	article
+published	computer/program/git/unexpected_modified_marks	Unexpected modified marks	Unexpected modified marks	0	1. input is modified - to LF.	article
+published	computer/program/git	Git	Git	0	Working notes on Git: Backup, BitBucket, Branch, Commands, Continue, and cr-lf, and related topics.	article
+published	computer/program/github/actions	Actions	Actions	0	Working notes on Actions: Pull repo from another, steps, jobs, - name: checkout repo, with, and ?Same user’s repos.	article
+published	computer/program/github/org_readme	Org-readme	Org-readme	0	Working notes on Org-readme: 1. repo named, 2. dir, and 3. file.	article
+published	computer/program/github/repo_name	Repo name	Repo name	0	Repo name: function getElementByXpath(path) {, function overrideRepoNames(repoNames) {, for (x in repoNames) {, getElementByXpath('//*[@id=\"desktop-app-toolbar\"]/div[1]/div/div/button').addEventLi.	article
+published	computer/program/github/search	Search	Search	0	<text>.	article
+published	computer/program/github	GitHub	GitHub	0	Working notes on GitHub: Actions, Org-readme, Repo name, and Search.	article
+published	computer/program/gmail/alias	Alias	Alias	0	Like user email aliases, each group can have up to 30 aliases.	article
+published	computer/program/gmail/notes	Notes	Notes	0	Working notes on Notes.	article
+published	computer/program/gmail	GMail	GMail	0	Working notes on GMail: Alias.	article
+published	computer/program/google_analytics/excluding_internal	Excluding internal	Excluding internal	0	Working notes on Excluding internal: References, 4. Use custom dimension (universal only), and 6. Tag assistant.	article
+published	computer/program/google_analytics/notes	Notes	Notes	0	Pageviews & Virtual pageviews (dynamic / AJAX).	article
+published	computer/program/google_analytics	Google Analytics	Google Analytics	0	Working notes on Google Analytics: Excluding internal.	article
+published	computer/program/google_apps/delete_account	Delete account	Delete account	0	Working notes on Delete account: Download data, New Drive data owner, and Move archive directory.	article
+published	computer/program/google_apps/directory	Directory	Directory	0	Working notes on Directory: Contact sharing - enable, > Users, and > Groups.	article
+published	computer/program/google_apps	Google Apps	Google Apps	0	Working notes on Google Apps: Delete account and Directory.	article
+published	computer/program/google_chrome/commandline_switches	CommandLine Switches	CommandLine Switches	0	CommandLine Switches: --proxy-server=[Server] Can be made empty t, --proxy-server=[Server] --no-proxy-server , --no-proxy-server --profile-directory=\"<Default|Pr, and --profile-directory=\"<Default.	article
+published	computer/program/google_chrome/config_pages	Config pages	Config pages	0	Working notes on Config pages.	article
+published	computer/program/google_chrome/cors	CORS	CORS	0	CORS: Bypass, and \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\.	article
+published	computer/program/google_chrome/default_icons	Default icons	Default icons	0	Default icons: foreach ($file in (ls \"~\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Chrome Apps\")) {.	article
+published	computer/program/google_chrome/flags	Flags	Flags	0	Working notes on Flags: Smooth Scrolling, GPU compositing on all pages, Threaded compositing, Accelerated overflow scroll, GPU Accelerated SVG Filters, and Disable 3D software rasterizer.	article
+published	computer/program/google_chrome/inspect/dynamic_script	Dynamic script	Dynamic script	0	Append the following at the end of a script snippet.	article
+published	computer/program/google_chrome/inspect/js_debug	JS debug	JS debug	0	**Local file.** Index.html that refers to script.js.	article
+published	computer/program/google_chrome/inspect/notes	Notes	Notes	0	Working notes on Notes: Copy to clipboard and Active element - highlighted by pointer.	article
+published	computer/program/google_chrome/inspect/save_sync	Save sync	Save sync	0	Sources > Context-menu > SaveAs.	article
+published	computer/program/google_chrome/inspect	Inspect	Inspect	0	Working notes on Inspect: Dynamic script, JS debug, and Save sync.	article
+published	computer/program/google_chrome/omnibar	Omnibar	Omnibar	0	Working notes on Omnibar.	article
+published	computer/program/google_chrome/print	Print	Print	0	Set Header & Footer to None.	article
+published	computer/program/google_chrome/profile	Profile	Profile	0	Working notes on Profile: Switch, Change index for profile creation : directory name, and ‘Loca state’ > ‘Profiles_created’.	article
+published	computer/program/google_chrome/vp9_hardware_decode	vp9 Hardware decode	vp9 Hardware decode	0	Working notes on vp9 Hardware decode: chrome://gpu.	article
+published	computer/program/google_chrome/x64_in_x86_issue	x64 - in x86 : issue	x64 - in x86 : issue	0	Working notes on x64 - in x86 : issue.	article
+published	computer/program/google_chrome	Google Chrome	Google Chrome	0	Working notes on Google Chrome: CommandLine Switches, Config pages, CORS, Default icons, Flags, and Inspect, and related topics.	article
+published	computer/program/google_cloud/functions/notes	Notes	Notes	0	Notes: Local emulator, Create, Start emulator, Deploy, and Call.	article
+published	computer/program/google_cloud/functions	Functions	Functions	0	Notes: Local emulator, Create, Start emulator, Deploy, and Call.	article
+published	computer/program/google_cloud	Google Cloud	Google Cloud	0	Working notes on Google Cloud: Functions.	article
+published	computer/program/google_drive/comment	Comment	Comment	0	**To comment on a specific point.** Select, by highlighting the words or placing your cursor at the point you wish to comment upon - then 'Insert' > 'Comment' or {Ctrl + Alt + M}.	article
+published	computer/program/google_drive/doc_2_html	Doc 2 html	Doc 2 html	0	Working notes on Doc 2 html.	article
+published	computer/program/google_drive/multiple_account_sync	Multiple account sync	Multiple account sync	0	Working notes on Multiple account sync: 2. Run setup script, with following content, 4. Run, and 5. Create a startup entry for this bat file.	article
+published	computer/program/google_drive/note	Note	Note	0	**Remember.** Double quotes - specialized when typed.	article
+published	computer/program/google_drive/shared_folder_in	Shared folder (in)	Shared folder (in)	0	Shortcut menu (right click) > Move to home folder.	article
+published	computer/program/google_drive/spreadsheet/difference	Difference	Difference	0	Working notes on Difference: Unique.	article
+published	computer/program/google_drive/spreadsheet/indian_number_format	Indian number format	Indian number format	0	Does not work when two negative limits are combined.	article
+published	computer/program/google_drive/spreadsheet/notes	Notes	Notes	0	Working notes on Notes: Reference data from sheet, Reference data from workbook, =importrange(spreadsheet-key, range), and =text(A1,”0000”).	article
+published	computer/program/google_drive/spreadsheet	SpreadSheet	SpreadSheet	0	Working notes on SpreadSheet: Difference and Indian number format.	article
+published	computer/program/google_drive	Google Drive	Google Drive	0	Working notes on Google Drive: Comment, Doc 2 html, Multiple account sync, Shared folder (in), and SpreadSheet.	article
+published	computer/program/google_maps/links	Links	Links	0	Working notes on Links.	article
+published	computer/program/google_maps/notes	Notes	Notes	0	Notes: Direction, Location, Reverse geocoding, Address to map, and Reverse geocoding https://maps.googleapis.com/maps.	article
+published	computer/program/google_maps	Google Maps	Google Maps	0	Working notes on Google Maps.	article
+published	computer/program/google_search/notes	Notes	Notes	0	1. Send directions to phone.	article
+published	computer/program/google_search	Google Search	Google Search	0	Working notes on Google Search.	article
+published	computer/program/google_translate/web_plugin/notes	Notes	Notes	0	Notes: HORIZONTAL, Google branding only logo, within box, and VERTICAL.	article
+published	computer/program/google_translate/web_plugin	Web plugin	Web plugin	0	Notes: HORIZONTAL, Google branding only logo, within box, and VERTICAL.	article
+published	computer/program/google_translate	Google Translate	Google Translate	0	Working notes on Google Translate: Web plugin.	article
+published	computer/program/grub/rescue	Rescue	Rescue	0	The moral of the story is try each partition until it works =p.	article
+published	computer/program/grub	Grub	Grub	0	Working notes on Grub: Rescue.	article
+published	computer/program/gscript/notes	Notes	Notes	0	Working notes on Notes: Source.	article
+published	computer/program/gscript	GScript	GScript	0	Working notes on GScript.	article
+published	computer/program/gtalk/pin_button	Pin button	Pin button	0	[HKEY_CURRENT_USER\\Software\\Google\\Google Talk\\Options].	article
+published	computer/program/gtalk	GTalk	GTalk	0	Working notes on GTalk: Pin button.	article
+published	computer/program/ie/command_line	Command line	Command line	0	Command line: InPrivate, and InPrivate -private.	article
+published	computer/program/ie	IE	IE	0	Working notes on IE: Command line.	article
+published	computer/program/inkscape/command_line	Command line	Command line	0	Working notes on Command line: Binary, for input from stdin, has issues when hindi language text is passed, and 1st argument.	article
+published	computer/program/inkscape/notes	Notes	Notes	0	Working notes on Notes: 1. Select nodes underneath, 2. Invert colours (Black & White), and 3. Object trace not working.	article
+published	computer/program/inkscape	Inkscape	Inkscape	0	Working notes on Inkscape: Command line.	article
+published	computer/program/install_location	Install location	Install location	0	Layout for Program Files, ProgramData, and UserAppData as Organization, optional product group, then Product.	article
+published	computer/program/installshield/commandline	Commandline	Commandline	0	setup.exe /b\"<outdir>\" /v\"/l \"<debugfile>\"\".	article
+published	computer/program/installshield	InstallShield	InstallShield	0	Working notes on InstallShield: Commandline.	article
+published	computer/program/internet_explorer/policies	Policies	Policies	0	Disable (Hide) the Connections page.	article
+published	computer/program/internet_explorer/shortcuts	Shortcuts	Shortcuts	0	Working notes on Shortcuts: Save settings.	article
+published	computer/program/internet_explorer	Internet Explorer	Internet Explorer	0	Working notes on Internet Explorer: Policies and Shortcuts.	article
+published	computer/program/java/decompiler	Decompiler	Decompiler	0	Working notes on Decompiler.	article
+published	computer/program/java/environment_vars	Environment Vars	Environment Vars	0	Gets auto updated when Java is updated (Oracle).	article
+published	computer/program/java/memory	Memory	Memory	0	Working notes on Memory: xms and xmx.	article
+published	computer/program/java/vm_options	VM options	VM options	0	-X<var_code>.	article
+published	computer/program/java	Java	Java	0	Working notes on Java: Decompiler, Environment Vars, Memory, and VM options.	article
+published	computer/program/jmeter/enable_compression	Enable compression	Enable compression	0	Add an HTTP Header Manager to the Thread Group in your Test Plan.	article
+published	computer/program/jmeter	JMeter	JMeter	0	Working notes on JMeter: Enable compression.	article
+published	computer/program/keytool/notes	Notes	Notes	0	Notes: keytool -importkeystore -deststorepass <PASS> -des, and keytool -import -trustcacerts -alias root -file <c.	article
+published	computer/program/keytool	Keytool	Keytool	0	Working notes on Keytool.	article
+published	computer/program/laravel/issue	Issue	Issue	0	**services.json failed to open stream.** Permission denied in Laravel 4.	article
+published	computer/program/laravel	Laravel	Laravel	0	Working notes on Laravel: Issue.	article
+published	computer/program/llm/list	List	List	0	Working notes on List.	article
+published	computer/program/llm	LLM	LLM	0	Working notes on LLM: List.	article
+published	computer/program/mailgun/setup	Setup	Setup	0	Working notes on Setup.	article
+published	computer/program/mailgun	Mailgun	Mailgun	0	Working notes on Mailgun: Setup.	article
+published	computer/program/maya/white_background	White background	White background	0	Working notes on White background.	article
+published	computer/program/maya	Maya	Maya	0	Working notes on Maya: White background.	article
+published	computer/program/mercurial/proxy	Proxy	Proxy	0	Working notes on Proxy: Environment variable.	article
+published	computer/program/mercurial	Mercurial	Mercurial	0	Working notes on Mercurial: Proxy.	article
+published	computer/program/mermaid/notes	Notes	Notes	0	Mermaid - code to diagram.	article
+published	computer/program/mermaid	Mermaid	Mermaid	0	Working notes on Mermaid.	article
+published	computer/program/microsoft_excel/import	Import	Import	0	=importrange(\"\", \"<>:<>\")	article
+published	computer/program/microsoft_excel/lookup	Lookup	Lookup	0	Working notes on Lookup.	article
+published	computer/program/microsoft_excel/set_column_width	Set Column width	Set Column width	0	While (ActiveCell.Width <> points) And (Count < 20)	article
+published	computer/program/microsoft_excel/set_row_height	Set Row height	Set Row height	0	Cell height cannot be resized via GUI.	article
+published	computer/program/microsoft_excel	Microsoft Excel	Microsoft Excel	0	Working notes on Microsoft Excel: Import, Lookup, Set Column width, and Set Row height.	article
+published	computer/program/microsoft_office/n2007	2007	2007	0	2007: C:\\Program Files (x86)\\Common Files\\microsoft shar, and Setup.exe.	article
+published	computer/program/microsoft_office	Microsoft Office	Microsoft Office	0	Working notes on Microsoft Office: 2007.	article
+published	computer/program/microsoft_outlook/add_button	Add button	Add button	0	Select Tools | Customize... from the menu.	article
+published	computer/program/microsoft_outlook/delete_deleted	Delete deleted	Delete deleted	0	Working notes on Delete deleted.	article
+published	computer/program/microsoft_outlook/hide_markerd_deleted	Hide - markerd deleted	Hide - markerd deleted	0	Working notes on Hide - markerd deleted.	article
+published	computer/program/microsoft_outlook/import_contact_csv_outlook	Import Contact csv Outlook	Import Contact csv Outlook	0	File > Import/Export > Import for another program > .csv > >.	article
+published	computer/program/microsoft_outlook/migrate	Migrate	Migrate	0	Working notes on Migrate: Registry and Files.	article
+published	computer/program/microsoft_outlook/purge_cached_email_addresses	Purge cached email addresses	Purge cached email addresses	0	Select with arrow key (down) and {Del}.	article
+published	computer/program/microsoft_outlook/settings	Settings	Settings	0	Working notes on Settings: Remove all from Favorite Folders.	article
+published	computer/program/microsoft_outlook	Microsoft Outlook	Microsoft Outlook	0	Working notes on Microsoft Outlook: Add button, Delete deleted, Hide - markerd deleted, Import Contact csv Outlook, Migrate, and Purge cached email addresses, and related topics.	article
+published	computer/program/microsoft_remote_desktop/shortcut_keys	Shortcut Keys	Shortcut Keys	0	Working notes on Shortcut Keys: Shortcut key.	article
+published	computer/program/microsoft_remote_desktop	Microsoft Remote Desktop	Microsoft Remote Desktop	0	Working notes on Microsoft Remote Desktop: Shortcut Keys.	article
+published	computer/program/microsoft_security_essentials/allow	Allow	Allow	0	Working notes on Allow: 1., > History > All detected items, and 2..	article
+published	computer/program/microsoft_security_essentials	Microsoft Security Essentials	Microsoft Security Essentials	0	Working notes on Microsoft Security Essentials: Allow.	article
+published	computer/program/microsoft_sql_server/notes	Notes	Notes	0	Notes: Port, SQL Commandline utilities, Limit, and C:\\Program Files\\Microsoft SQL Server\\90\\Tools\\Bin.	article
+published	computer/program/microsoft_sql_server	Microsoft SQL Server	Microsoft SQL Server	0	Working notes on Microsoft SQL Server.	article
+published	computer/program/microsoft_visual_studio/break_on_exit	Break on exit	Break on exit	0	Working notes on Break on exit: Function breakpoint and ExitProcess.	article
+published	computer/program/microsoft_visual_studio/emulator/command_line	Command line	Command line	0	Command line: emulatorcmd.exe launch /sku:Android /id:<UUID>.	article
+published	computer/program/microsoft_visual_studio/emulator	Emulator	Emulator	0	Working notes on Emulator: Command line.	article
+published	computer/program/microsoft_visual_studio/file_types	File types	File types	0	Working notes on File types: suo.	article
+published	computer/program/microsoft_visual_studio	Microsoft Visual Studio	Microsoft Visual Studio	0	Working notes on Microsoft Visual Studio: Break on exit, Emulator, and File types.	article
+published	computer/program/microsoft_word/change_case	Change Case	Change Case	0	* Home tab, in the Font group, click Change Case.	article
+published	computer/program/microsoft_word	Microsoft Word	Microsoft Word	0	Working notes on Microsoft Word: Change Case.	article
+published	computer/program/mysql/authentication	Authentication	Authentication	0	Setting the “authentication plugin” to the older one at the user level is not sufficient if the “default authentication plugin” for the server is set to the newer plugin.	article
+published	computer/program/mysql/commands	Commands	Commands	0	Working notes on Commands.	article
+published	computer/program/mysql/export_output_to_file	Export output to file	Export output to file	0	Working notes on Export output to file: 3. MySQL-dump.	article
+published	computer/program/mysql/function	Function	Function	0	Working notes on Function: mysqli_real_escape_string() and error_log().	article
+published	computer/program/mysql/import	Import	Import	0	Import: -u username -p -h 202.54.1.10 <, and --max_allowed_packet=100M.	article
+published	computer/program/mysql/insert	Insert	Insert	0	Insert: insert into <table> values (‘<value>’|NULL...).	article
+published	computer/program/mysql/mac	Mac	Mac	0	Working notes on Mac.	article
+published	computer/program/mysql/manage	Manage	Manage	0	Working notes on Manage: Kill and Status.	article
+published	computer/program/mysql/notes	Notes	Notes	0	Working notes on Notes: NULL, ‘field’=NULL will not work, and Escape.	article
+published	computer/program/mysql/password	Password	Password	0	UPDATE mysql.user SET Password=PASSWORD('MyNewPass') WHERE User='root';.	article
+published	computer/program/mysql/remote_access	Remote access	Remote access	0	Remote access: 0.0.0.0, verify, /etc//mysql/my.cnf, bind-address =, and lsof -i -P | grep :3306.	article
+published	computer/program/mysql/replace	Replace	Replace	0	Replace: UPDATE <table>, and UPDATE SET <column> = REPLACE(<column>, '<existing.	article
+published	computer/program/mysql/security	Security	Security	0	Working notes on Security.	article
+published	computer/program/mysql/status	Status	Status	0	Status: # mysqladmin -u root -p status.	article
+published	computer/program/mysql/table_information	Table Information	Table Information	0	Working notes on Table Information.	article
+published	computer/program/mysql	MySQL	MySQL	0	Working notes on MySQL: Authentication, Commands, Export output to file, Function, Import, and Insert, and related topics.	article
+published	computer/program/netbeans/web_support	Web support	Web support	0	Working notes on Web support: Plugin, Old, and 7.x.	article
+published	computer/program/netbeans	Netbeans	Netbeans	0	Working notes on Netbeans: Web support.	article
+published	computer/program/nextjs/notes	Notes	Notes	0	If CSS styles are missing - rebuild (purge cache).	article
+published	computer/program/nextjs	nextjs	nextjs	0	Working notes on nextjs.	article
+published	computer/program/nitgen_access_manager/setup	Setup	Setup	0	(You may refer to the chart/table given in the manual that specifies what pre-requisites be installed on which OS).	article
+published	computer/program/nitgen_access_manager	Nitgen Access Manager	Nitgen Access Manager	0	Working notes on Nitgen Access Manager: Setup.	article
+published	computer/program/nodejs/notes	Notes	Notes	0	Working notes on Notes: Version.	article
+published	computer/program/nodejs	nodejs	nodejs	0	Working notes on nodejs.	article
+published	computer/program/notepad/column_mode	Column mode	Column mode	0	Working notes on Column mode: Prevent multiplication.	article
+published	computer/program/notepad/find_more_than_one_space	Find - more than one 'space	Find - more than one 'space	0	Working notes on Find - more than one 'space': find RegEx.	article
+published	computer/program/notepad/regex/coding	Coding	Coding	0	Working notes on Coding.	article
+published	computer/program/notepad/regex/remove_comments	Remove comments	Remove comments	0	Working notes on Remove comments: #.*$, ^\\s+$, and -.	article
+published	computer/program/notepad/regex/replace_with_found	Replace with found	Replace with found	0	( X ) ( Y ).	article
+published	computer/program/notepad/regex	RegEx	RegEx	0	Working notes on RegEx: Coding, Remove comments, and Replace with found.	article
+published	computer/program/notepad/replace_more_than_one_line	Replace more than one line	Replace more than one line	0	TextFX > Edit > Remove surplus lines.	article
+published	computer/program/notepad/settings	Settings	Settings	0	Working notes on Settings.	article
+published	computer/program/notepad/themes	Themes	Themes	0	**Go to Settings > Styler Configurator.** Select Theme.	article
+published	computer/program/notepad	Notepad++	Notepad++	0	Working notes on Notepad++: Column mode, Find - more than one 'space, RegEx, Replace more than one line, Settings, and Themes.	article
+published	computer/program/obs_studio/ndi	NDI	NDI	0	Working notes on NDI.	article
+published	computer/program/obs_studio	OBS studio	OBS studio	0	Working notes on OBS studio: NDI.	article
+published	computer/program/openssl/check_connection	Check connection	Check connection	0	Check connection: openssl s_client -connect google.com:443 -ssl3.	article
+published	computer/program/openssl/config_file	Config file	Config file	0	Working notes on Config file: keyUsage = digitalSignature, keyEncipherment and keyUsage = nonRepudiation, digitalSignature, keyEncipherment.	article
+published	computer/program/openssl/config_file_prompt	Config file - Prompt	Config file - Prompt	0	CountryName = Country Name (2 letter code).	article
+published	computer/program/openssl/config_file_silent	Config file - Silent	Config file - Silent	0	Working notes on Config file - Silent.	article
+published	computer/program/openssl/notes	Notes	Notes	0	Public key from private key.	article
+published	computer/program/openssl/ssl_certificate_external	SSL certificate - external	SSL certificate - external	0	SSL certificate - external: 1. Generate Private key, 2. Create the CSR file, 1. Provide details on prompt, The output content of CSR file can be verified using, and 5. Create certificate file.	article
+published	computer/program/openssl/ssl_certificate_internal	SSL certificate - internal	SSL certificate - internal	0	SSL certificate - internal: Debug, Check, 2. openssl req -new -out server.csr, openssl req -in server.csr -text -noout, and 3. openssl rsa -in privkey.pem -out server.key.	article
+published	computer/program/openssl/windows	Windows	Windows	0	Working notes on Windows: command.	article
+published	computer/program/openssl	OpenSSL	OpenSSL	0	Working notes on OpenSSL: Check connection, Config file, Config file - Prompt, Config file - Silent, SSL certificate - external, and SSL certificate - internal, and related topics.	article
+published	computer/program/origin/migrate	Migrate	Migrate	0	Move game directory to backup.	article
+published	computer/program/origin	Origin	Origin	0	Working notes on Origin: Migrate.	article
+published	computer/program/php/apache_httpd	Apache HTTPD	Apache HTTPD	0	Thread safe for use with Apache (will contain php5apache2_4.dll).	article
+published	computer/program/php/echo	Echo	Echo	0	Single quote requires no escaping.	article
+published	computer/program/php/log	Log	Log	0	Specify log file in php.ini.	article
+published	computer/program/php/mac	Mac	Mac	0	Working notes on Mac: MCrypt.	article
+published	computer/program/php/modules	Modules	Modules	0	Ensure that required dlls for the modules are also loaded.	article
+published	computer/program/php/php_ini	PHP.ini	PHP.ini	0	Uncomment to add the module.	article
+published	computer/program/php/phpinfo	PHPInfo	PHPInfo	0	Working notes on PHPInfo.	article
+published	computer/program/php	PHP	PHP	0	Working notes on PHP: Apache HTTPD, Echo, Log, Mac, Modules, and PHP.ini, and related topics.	article
+published	computer/program/pipefy/notes	Notes	Notes	0	Sub processes can be their own pipes.	article
+published	computer/program/pipefy	Pipefy	Pipefy	0	Working notes on Pipefy.	article
+published	computer/program/postgresql/commands	Commands	Commands	0	Working notes on Commands: Quit, Import, db, tables, Relations, and Insert {\\n}.	article
+published	computer/program/postgresql/design	Design	Design	0	Working notes on Design: CREATE TABLE user (, Foreign, is still referenced from table, and Constraint.	article
+published	computer/program/postgresql/direct_start	Direct start	Direct start	0	pg_ctl.exe -o \"-p 5433\" -D %PGDATA% start.	article
+published	computer/program/postgresql/execute	Execute	Execute	0	Execute: PSQL -h<localhost|<IP[:Port]>> -U<username> -d<Dat.	article
+published	computer/program/postgresql/free_connections	Free connections	Free connections	0	Working notes on Free connections: Terminate.	article
+published	computer/program/postgresql/functions	Functions	Functions	0	nextVal((<Sequence>))	article
+published	computer/program/postgresql/notes	Notes	Notes	0	NULL and empty string ‘’ are entirely different.	article
+published	computer/program/postgresql/pom	POM	POM	0	POM: <dependency>, <groupId>org.postgresql</groupId>, <groupId>org.postgresql</groupId> <artifactId>post, <artifactId>postgresql</artifactId> <version>9.4-1, and <version>9.4-1200-jdbc41</version>.	article
+published	computer/program/postgresql/transfer	Transfer	Transfer	0	pg_dump -U postgres -t <old_table> <old_database> | psql -U postgres -d <new_database>.	article
+published	computer/program/postgresql	PostgreSQL	PostgreSQL	0	Working notes on PostgreSQL: Commands, Design, Direct start, Execute, Free connections, and Functions, and related topics.	article
+published	computer/program/powershell/commands	Commands	Commands	0	Commands: Show all - command shortcuts.	article
+published	computer/program/powershell/env_vars	Env vars	Env vars	0	Working notes on Env vars: View, Set, and ! Note.	article
+published	computer/program/powershell/execution_policy	Execution policy	Execution policy	0	Prevent unintentional execution of scripts.	article
+published	computer/program/powershell/gotchas	Gotchas	Gotchas	0	Does not like curly branches {.	article
+published	computer/program/powershell/history	History	History	0	History: Set-PSReadLineOption –HistoryNoDuplicates:$True, and %AppData%\\Microsoft\\Windows\\PowerShell\\PSReadLine\\.	article
+published	computer/program/powershell	PowerShell	PowerShell	0	Working notes on PowerShell: Commands, Env vars, Execution policy, Gotchas, and History.	article
+published	computer/program/putty/command_line	Command line	Command line	0	-load \"<session_name>\".	article
+published	computer/program/putty/pvt_key_provided_flow	Pvt key provided - flow	Pvt key provided - flow	0	Working notes on Pvt key provided - flow: 1. if key explicit, 1. Check serial with server, 1. Ok, 1. If passphrase, and 2. Else keys::PAgent.	article
+published	computer/program/putty/ssh	SSH	SSH	0	Working notes on SSH: Key Generator and If key is saved with passphrase.	article
+published	computer/program/putty	Putty	Putty	0	Working notes on Putty: Command line, Pvt key provided - flow, and SSH.	article
+published	computer/program/python/requirements	Requirements	Requirements	0	pipreqs --force --ignore .venv,archive ./	article
+published	computer/program/python	Python	Python	0	Working notes on Python: Requirements.	article
+published	computer/program/relive/issue	Issue	Issue	0	Working notes on Issue: Hotkey not working, Cause, Solution, No audio, and Solution.	article
+published	computer/program/relive	Relive	Relive	0	Working notes on Relive: Issue.	article
+published	computer/program/remote	Remote	Remote	0	Remote access options used here: Remote Desktop, Remote Assistance, and TeamViewer.	article
+published	computer/program/reshade/notes	Notes	Notes	0	That is, D3D8 to D3D9.	article
+published	computer/program/reshade	Reshade	Reshade	0	Working notes on Reshade.	article
+published	computer/program/rsync/command	Command	Command	0	Trailing slash : contents of directory not directory.	article
+published	computer/program/rsync	RSync	RSync	0	Working notes on RSync: Command.	article
+published	computer/program/runpod/commands	Commands	Commands	0	1. runpodctl stop pod $RUNPOD_POD_ID.	article
+published	computer/program/runpod	Runpod	Runpod	0	Working notes on Runpod: Commands.	article
+published	computer/program/screenbright/commandline	Commandline	Commandline	0	Working notes on Commandline: save, Soft, and High.	article
+published	computer/program/screenbright	ScreenBright	ScreenBright	0	Working notes on ScreenBright: Commandline.	article
+published	computer/program/sed/content_between	Content between	Content between	0	sed -n \"/COPY TABLE/,/'\\.'/p\" x.txt.	article
+published	computer/program/sed/line_ending	Line ending	Line ending	0	Working notes on Line ending: CRLF to LF, Current - recursive, and LF to CRLF.	article
+published	computer/program/sed/notes	Notes	Notes	0	Can use ‘|’ instead of ‘/’.	article
+published	computer/program/sed	Sed	Sed	0	Working notes on Sed: Content between and Line ending.	article
+published	computer/program/selenium/notes	Notes	Notes	0	Working notes on Notes: 1. Get Selenium web driver, 2. Get Web-driver for chrome, 2. Get your browser version, 3. Get webdriver build number, 4. Get webdriver, and 3. Place the webdriver file at.	article
+published	computer/program/selenium	Selenium	Selenium	0	Working notes on Selenium.	article
+published	computer/program/sentry/notes	Notes	Notes	0	Working notes on Notes: Trigger error, >, Get hash, and Prefer NPM install over CDN.	article
+published	computer/program/sentry	Sentry	Sentry	0	Working notes on Sentry.	article
+published	computer/program/sharepoint/delete_library	Delete Library	Delete Library	0	(Top-Right) Site Actions > Site Settings > Site Administration > Site libraries and lists.	article
+published	computer/program/sharepoint/links	Links	Links	0	Links: Site, Note: to get link-, and \\\\go.onmobile.com@8081\\personal\\ujjwal_singh\\Engin.	article
+published	computer/program/sharepoint	SharePoint	SharePoint	0	Working notes on SharePoint: Delete Library.	article
+published	computer/program/slack/free_version	Free version	Free version	0	Restricted account and Single channel account are not allowed.	article
+published	computer/program/slack	Slack	Slack	0	Working notes on Slack: Free version.	article
+published	computer/program/spring_boot/notes	Notes	Notes	0	Start spring boot server only after the previous shutdown is complete.	article
+published	computer/program/spring_boot	Spring boot	Spring boot	0	Working notes on Spring boot.	article
+published	computer/program/steam/pin_programs_to_start	Pin programs to start	Pin programs to start	0	Working notes on Pin programs to start: Copy Steam URL, New shortcut, and Shortcut icon.	article
+published	computer/program/steam	Steam	Steam	0	Working notes on Steam: Pin programs to start.	article
+published	computer/program/svn/ankhsvn/clear_authentication	Clear Authentication	Clear Authentication	0	Tools > Options > Source Control > Subversion Environment > Authentication Cache.	article
+published	computer/program/svn/ankhsvn/init	Init	Init	0	Do not create following structure.	article
+published	computer/program/svn/ankhsvn/remove_soln_binding	Remove Soln. Binding	Remove Soln. Binding	0	Working notes on Remove Soln. Binding: Edit soln file, Remove, and GlobalSection(SubversionScc) = preSolution.	article
+published	computer/program/svn/ankhsvn	AnkhSVN	AnkhSVN	0	Working notes on AnkhSVN: Clear Authentication, Init, and Remove Soln. Binding.	article
+published	computer/program/svn/import_in_place	Import in Place	Import in Place	0	Create a new project folder directly in the repository.	article
+published	computer/program/svn/update	Update	Update	0	Since the client data - may end up too old.	article
+published	computer/program/svn/visual_svn_server/setup	Setup	Setup	0	Working notes on Setup: Repositories - ContextMenu.	article
+published	computer/program/svn/visual_svn_server	Visual SVN Server	Visual SVN Server	0	Working notes on Visual SVN Server: Setup.	article
+published	computer/program/svn	SVN	SVN	0	Working notes on SVN: AnkhSVN, Import in Place, Update, and Visual SVN Server.	article
+published	computer/program/sweetlow/details	Details	Details	0	Working notes on Details.	article
+published	computer/program/sweetlow/steps	Steps	Steps	0	* Follow all steps in sequence.	article
+published	computer/program/sweetlow	SweetLow	SweetLow	0	Working notes on SweetLow: Details and Steps.	article
+published	computer/program/teamviewer/settings	Settings	Settings	0	Working notes on Settings.	article
+published	computer/program/teamviewer	TeamViewer	TeamViewer	0	Working notes on TeamViewer: Settings.	article
+published	computer/program/tesseract/config	Config	Config	0	Working notes on Config: Page segmentation modes and Character set.	article
+published	computer/program/tesseract/pathpytesseract_pytesseract_tesseract_cmd_r_c_users_user_appdata_local_tesseract_ocr_tesseract_exe	pathpytesseract.pytesseract.tesseract_cmd = r'C:\\Users\\USER\\AppData\\Local\\Tesseract-OCR\\tesseract.exe	pathpytesseract.pytesseract.tesseract_cmd = r'C:\\Users\\USER\\AppData\\Local\\Tesseract-OCR\\tesseract.exe	0	Working notes on pathpytesseract.pytesseract.tesseract_cmd = r'C:\\Users\\USER\\AppData\\Local\\Tesseract-OCR\\tesseract.exe'.	article
+published	computer/program/tesseract	Tesseract	Tesseract	0	Working notes on Tesseract: Config and pathpytesseract.pytesseract.tesseract_cmd = r'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Tesseract-OCR\\\\tesseract.exe.	article
+published	computer/program/unity/nomenclature	Nomenclature	Nomenclature	0	*** Scene.** A working environment where you place objects, lights, cameras, and create the game's layout.	article
+published	computer/program/unity	Unity	Unity	0	Working notes on Unity: Nomenclature.	article
+published	computer/program/utilities	Utilities	Utilities	0	DNS Benchmark via namebench, with the report host and the Kwt id.	article
+published	computer/program/utorrent/disable_featured_content	Disable: Featured content	Disable: Featured content	0	GUI settings marked with *.	article
+published	computer/program/utorrent	uTorrent	uTorrent	0	Working notes on uTorrent: Disable: Featured content.	article
+published	computer/program/vi/cygwin	Cygwin	Cygwin	0	Cygwin: Arrow key issue, create file, with, and ~/.virc.	article
+published	computer/program/vi/vi	VI	VI	0	VI: Ref, Quit, Quit without saving, all, and Save and quit.	article
+published	computer/program/vi	VI	VI	0	Working notes on VI: Cygwin and VI.	article
+published	computer/program/viber/ports	Ports	Ports	0	Working notes on Ports.	article
+published	computer/program/viber	Viber	Viber	0	Working notes on Viber: Ports.	article
+published	computer/program/virtualbox/notes	Notes	Notes	0	Working notes on Notes: Mount VirtualBox companion disk, In the VM host - check enable acceleration, and net use x.	article
+published	computer/program/virtualbox	VirtualBox	VirtualBox	0	Working notes on VirtualBox.	article
+published	computer/program/vs_code/notes	Notes	Notes	0	Working notes on Notes: 1. Edit the keyboard setting json file.	article
+published	computer/program/vs_code/replace	Replace	Replace	0	Working notes on Replace.	article
+published	computer/program/vs_code/settings	Settings	Settings	0	Working notes on Settings.	article
+published	computer/program/vs_code/shells	Shells	Shells	0	1. Edit settings.json (user settings).	article
+published	computer/program/vs_code	VS Code	VS Code	0	Working notes on VS Code: Replace, Settings, and Shells.	article
+published	computer/program/vulkan/notes	Notes	Notes	0	Working notes on Notes: vulkan-1.dll.	article
+published	computer/program/vulkan	Vulkan	Vulkan	0	Working notes on Vulkan.	article
+published	computer/program/web/robots	Robots	Robots	0	Working notes on Robots: Location.	article
+published	computer/program/web	Web	Web	0	Working notes on Web: Robots.	article
+published	computer/program/wget/notes	Notes	Notes	0	Can be used multiple times.	article
+published	computer/program/wget	WGet	WGet	0	Working notes on WGet.	article
+published	computer/program/whatsapp/app_setting_path	App setting path	App setting path	0	C:\\Users\\Ujjwal\\AppData\\Local\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\\LocalCache\\Roaming\\WhatsApp.	article
+published	computer/program/whatsapp	Whatsapp	Whatsapp	0	Working notes on Whatsapp: App setting path.	article
+published	computer/program/windows_media_player/commandline	Commandline	Commandline	0	/Playlist <name>.	article
+published	computer/program/windows_media_player/invoke	Invoke	Invoke	0	\"%ProgramFiles(x86)%\\SysInternals\\PSTools\\PSExec.exe\" -i -s Cmd.exe /c Start F:\\WMP_x64.bat.	article
+published	computer/program/windows_media_player/media_player_x64	Media Player x64	Media Player x64	0	**2. Replace.** ProgramFiles(x86)\\Windows Media Player > ProgramFiles\\Windows Media Player.	article
+published	computer/program/windows_media_player/media_player_x86	Media Player x86	Media Player x86	0	To undo the x64 change, and to switch, swap, revert and change back the default media player to Windows Media Player 12 x86 32-bit edition,.	article
+published	computer/program/windows_media_player	Windows Media Player	Windows Media Player	0	Working notes on Windows Media Player: Commandline, Invoke, Media Player x64, and Media Player x86.	article
+published	computer/program/windows_terminal/notes	Notes	Notes	0	Working notes on Notes: Command line options and startingDirectory = \"%__CD__%\".	article
+published	computer/program/windows_terminal	Windows Terminal	Windows Terminal	0	Working notes on Windows Terminal.	article
+published	computer/program/wol	WOL	Wake-on-LAN	0	Wake-on-LAN links for Aquila WOL; groups can only be added from an individual machine entry page.	article
+published	computer/program/wordpress/config	Config	Config	0	Working notes on Config: Plugin installation, Required modules, and Required dlls.	article
+published	computer/program/wordpress/git	git	git	0	Commit at every individual stage.	article
+published	computer/program/wordpress/permissions	Permissions	Permissions	0	The root folder is required to be readable by world.	article
+published	computer/program/wordpress/send_gmail	Send gmail	Send gmail	0	Send mail using wordpress mail - via gmail.	article
+published	computer/program/wordpress/setup	Setup	Setup	0	Working notes on Setup: Apache httpd, enable, MySQL module in php.ini, Create database, Create user, and Update.	article
+published	computer/program/wordpress	Wordpress	Wordpress	0	Working notes on Wordpress: Config, git, Permissions, Send gmail, and Setup.	article
+published	computer/program/youtube/embed	Embed	Embed	0	1. Params in query string.	article
+published	computer/program/youtube/notes	Notes	Notes	0	Working notes on Notes: Loop.	article
+published	computer/program/youtube	Youtube	Youtube	0	Working notes on Youtube: Embed.	article
+published	computer/program/zbrush/ipad/notes	Notes	Notes	0	Working notes on Notes: Supported formats.	article
+published	computer/program/zbrush/ipad	iPad	iPad	0	Working notes on iPad.	article
+published	computer/program/zbrush	ZBrush	ZBrush	0	Working notes on ZBrush: iPad.	article
+published	computer/programming/ajax	AJAX	AJAX	0	Ways to return content through XMLHTTPRequest: plain text, JavaScript variables, JSON objects, and XML.	article
+published	computer/programming/android/aar_include	AAR include	AAR include	0	Working notes on AAR include: dependencies, repositories, and flatDir.	article
+published	computer/programming/android/activity	Activity	Activity	0	Working notes on Activity: Bundle.	article
+published	computer/programming/android/backup_ignore	Backup - Ignore	Backup - Ignore	0	**# Copyright.** Benjamin Weiss (keyboardsurfer) https://github.com/keyboardsurfer.	article
+published	computer/programming/android/beta	Beta	Beta	0	The package name should be same.	article
+published	computer/programming/android/build/build_gradle	build.gradle	build.gradle	0	Working notes on build.gradle: Android, packagingOptions, defaultConfig, signingConfigs, buildTypes, and release.	article
+published	computer/programming/android/build/build_variants	Build variants	Build variants	0	Build variants: Common should not have repeat class ?may have resource?.	article
+published	computer/programming/android/build/manifest_vars	Manifest Vars	Manifest Vars	0	Manifest Vars: ApplicationInfo ai = getPackageManager().getApplicationInfo(, and <var> = bundle.getString(\\\"<key>\\\");.	article
+published	computer/programming/android/build/proguard	Proguard	Proguard	0	* Android Studio disables ProGuard when using Instant Run.	article
+published	computer/programming/android/build	Build	Build	0	Working notes on Build: build.gradle, Build variants, Manifest Vars, and Proguard.	article
+published	computer/programming/android/build_flavours/notes	Notes	Notes	0	Once an additional product flavour is defined, there’s no default.	article
+published	computer/programming/android/build_flavours	Build flavours	Build flavours	0	Once an additional product flavour is defined, there’s no default.	article
+published	computer/programming/android/certificate_details	Certificate details	Certificate details	0	Working notes on Certificate details: Windows.	article
+published	computer/programming/android/delay	Delay	Delay	0	Working notes on Delay: final Handler handler = new Handler();, handler.postDelayed(new Runnable(), public void run(), try, and } catch( NameNotFoundException e ).	article
+published	computer/programming/android/development/beta_distribution	Beta distribution	Beta distribution	0	Working notes on Beta distribution: 1. Google play, 1. Pros, 2. Fabric beta, 1. Pros, and 2. Cons.	article
+published	computer/programming/android/development	Development	Development	0	Working notes on Development: Beta distribution.	article
+published	computer/programming/android/dynamic_permissions	Dynamic permissions	Dynamic permissions	0	Working notes on Dynamic permissions.	article
+published	computer/programming/android/gcm	GCM	GCM	0	1. Google console :: Project Id.	article
+published	computer/programming/android/google_console	Google console	Google console	0	Same application id cannot be placed in two separate projects.	article
+published	computer/programming/android/google_play_services	Google play services	Google play services	0	Working notes on Google play services.	article
+published	computer/programming/android/gui/button	Button	Button	0	Working notes on Button: XML.	article
+published	computer/programming/android/gui/notes	Notes	Notes	0	The system wide bar with clock and network icons.	article
+published	computer/programming/android/gui/title_bar	Title bar	Title bar	0	<style name=\"Fullscreen\" parent=\"Theme.AppCompat\">.	article
+published	computer/programming/android/gui/untitled_document	GUI	GUI	0	Which is used to tint widgets -->.	article
+published	computer/programming/android/gui	GUI	GUI	0	Working notes on GUI: Button, Title bar, and GUI.	article
+published	computer/programming/android/issues	Issues	Issues	0	Working notes on Issues: Activity: onCreate.	article
+published	computer/programming/android/java_library_test	Java library test	Java library test	0	Working notes on Java library test: Local test, Issue junit not found, allprojects, and repositories.	article
+published	computer/programming/android/menu	Menu	Menu	0	Working notes on Menu: @Override, public boolean onOptionsItemSelected(MenuItem item), switch (item.getItemId()), case R.id.main_menu_actionAbout, and default.	article
+published	computer/programming/android/preferences	Preferences	Preferences	0	Preferences: Common, Write, Read, Common SharedPreferences sharedPref = <Activity>.g, and Write SharedPreferences.Editor <editor> = <sharedP.	article
+published	computer/programming/android/project_setup	Project Setup	Project Setup	0	The minimum on which the app should run.	article
+published	computer/programming/android/properties	Properties	Properties	0	Properties: setProperty, remove, remove set to <“”>, and getProperty <>.	article
+published	computer/programming/android/setup	Setup	Setup	0	Android SDK Tools - without bundled ADT.	article
+published	computer/programming/android/speech_recognition	Speech recognition	Speech recognition	0	Working notes on Speech recognition.	article
+published	computer/programming/android/support_library	Support Library	Support Library	0	1. Place the support library jar in the lib directory of project.	article
+published	computer/programming/android/textwatcher	TextWatcher	TextWatcher	0	Working notes on TextWatcher: CharSequence s,, * ‘after’ is length of delta text, onTextChanged, Within ‘s’, beginning from ‘start’, ‘count’ characters have changed that had length ‘before’, and afterTextChanged.	article
+published	computer/programming/android/vector_drawables	Vector drawables	Vector drawables	0	Can be resized by ScaleType.	article
+published	computer/programming/android/version	Version	Version	0	Working notes on Version: Name and Change.	article
+published	computer/programming/android/view	View	View	0	Working notes on View: Get Parent view - activity.	article
+published	computer/programming/android	Android	Android	0	Working notes on Android: AAR include, Activity, Backup - Ignore, Beta, Build, and Build flavours, and related topics.	article
+published	computer/programming/angular/notes	Notes	Notes	0	Working notes on Notes: Annotations, ng-, Variables, $scope, Iterate, and /.	article
+published	computer/programming/angular	Angular	Angular	0	Working notes on Angular.	article
+published	computer/programming/awk/commandline_parameters	CommandLine parameters	CommandLine parameters	0	-f.	article
+published	computer/programming/awk/external	External	External	0	External: -f ”_.awk\" I_file-1 I_file-2 >$o_file.	article
+published	computer/programming/awk/links	Links	Links	0	Working notes on Links.	article
+published	computer/programming/awk/load_file_trick	Load file - trick	Load file - trick	0	Working notes on Load file - trick: Script and Parameters.	article
+published	computer/programming/awk/notes	Notes	Notes	0	Notes: External variable, and External variable -v my_var=\"hello this is me\".	article
+published	computer/programming/awk/shell_vars_from_awk	Shell vars from awk	Shell vars from awk	0	Setup shell variables using awk.	article
+published	computer/programming/awk/skip_header	skip Header	skip Header	0	NR <= 5 { next }.	article
+published	computer/programming/awk/variables	Variables	Variables	0	Working notes on Variables: FS, NR, NF, FNR, OFS, and RS.	article
+published	computer/programming/awk	AWK	AWK	0	Working notes on AWK: CommandLine parameters, External, Load file - trick, Shell vars from awk, skip Header, and Variables.	article
+published	computer/programming/batch/admin_test	Admin-Test	Admin-Test	0	Working notes on Admin-Test: Admin Test, IF %ERRORLEVEL% NEQ 0, and Exit.	article
+published	computer/programming/batch/cmd	Cmd	Cmd	0	Working notes on Cmd: Dir, WildCard, *, ?, and See summary of dir and not content.	article
+published	computer/programming/batch/if_else	if - else	if - else	0	Working notes on if - else: Parentheses should be on the same line and ) else (.	article
+published	computer/programming/batch/notes	Notes	Notes	0	Working notes on Notes: redirect stderr to stdout, | find /i \"search_string\", Concatenate Variables, Set X=Y, Set Y=Z, and Echo %%X%%.	article
+published	computer/programming/batch/script_syntax	Script Syntax	Script Syntax	0	Block Braces must remain on Same line not new.	article
+published	computer/programming/batch/sleep	Sleep	Sleep	0	ping 127.0.0.1 -n 2 -w 1000 > NUL.	article
+published	computer/programming/batch	Batch	Batch	0	Working notes on Batch: Admin-Test, Cmd, if - else, Script Syntax, and Sleep.	article
+published	computer/programming/coding_conventions	Coding conventions	Coding conventions	0	Naming and control-statement conventions: Capital functions, camelCase variables, i/len/b prefixes, and a newline before else, catch, and finally.	article
+published	computer/programming/coding_style	Coding style	Coding style	0	Style rules for indentation, blank lines, braces, casting, assignment spacing, and relying on built-in word wrap for width.	article
+published	computer/programming/command_line_interface_description_language	CLI description language	Command line — interface description language	0	CLI notation: angle brackets for required params, square brackets for optional, pipe for or, ampersand-pipe for and-or, and escape only when needed.	article
+published	computer/programming/cpp/programming_in_cpp	Programming in C++	Programming in C++	0	Working notes on Programming in C++: LETTERS, DIGITS, ~, WHITE SPACES, OTHER CHARACTERS, and if.	article
+published	computer/programming/cpp/remember	Remember	Remember	0	Elder Friend who is accessible by Younger friend.	article
+published	computer/programming/cpp	C++	C++	0	Working notes on C++: Programming in C++ and Remember.	article
+published	computer/programming/css/animation	Animation	Animation	0	<selector> {.	article
+published	computer/programming/css/notes	Notes	Notes	0	**margin-left.** 25%; margin-right: 25%; width: 50%.	article
+published	computer/programming/css/responsive	Responsive	Responsive	0	Working notes on Responsive: (min-device-width: 320px) and (max-device-width: 480px), Prevent reflow, and Set container div for img.	article
+published	computer/programming/css/selectors	Selectors	Selectors	0	Working notes on Selectors: Child Selector, .class1 .class2, :nth-child(n), and multiple classes.	article
+published	computer/programming/css	CSS	CSS	0	Working notes on CSS: Animation, Responsive, and Selectors.	article
+published	computer/programming/firebase/config	Config	Config	0	functions.config().<key>.<value>.	article
+published	computer/programming/firebase	Firebase	Firebase	0	Working notes on Firebase: Config.	article
+published	computer/programming/ftp/commands	Commands	Commands	0	To prevent ‘Kerberos’ error message.	article
+published	computer/programming/ftp	FTP	FTP	0	Working notes on FTP: Commands.	article
+published	computer/programming/fusionchart/javascipt_mode_chart	JavaScipt mode - Chart	JavaScipt mode - Chart	0	Working notes on JavaScipt mode - Chart.	article
+published	computer/programming/fusionchart/parameters	Parameters	Parameters	0	Working notes on Parameters: Chart, Minimum value, Maximum value, Prefix value, Rounded, and No gradient.	article
+published	computer/programming/fusionchart	FusionChart	FusionChart	0	Working notes on FusionChart: JavaScipt mode - Chart and Parameters.	article
+published	computer/programming/google_api/gcm/gpservices_flow	GPServices flow	GPServices flow	0	Working notes on GPServices flow: 1. Register token using API Key and 2. Send message.	article
+published	computer/programming/google_api/gcm	GCM	GCM	0	Working notes on GCM: GPServices flow.	article
+published	computer/programming/google_api/places/notes	Notes	Notes	0	Working notes on Notes: Place Type, Base, Billing, and Post.	article
+published	computer/programming/google_api/places	Places	Places	0	Working notes on Places.	article
+published	computer/programming/google_api	Google API	Google API	0	Working notes on Google API: GCM and Places.	article
+published	computer/programming/google_cloud_platform_functions/notes	Notes	Notes	0	Working notes on Notes: Module and console.log().	article
+published	computer/programming/google_cloud_platform_functions	Google Cloud Platform Functions	Google Cloud Platform Functions	0	Working notes on Google Cloud Platform Functions.	article
+published	computer/programming/grails/asset_manifest	Asset - manifest	Asset - manifest	0	Working notes on Asset - manifest: Combine assets into a single file, Refer, and Ref.	article
+published	computer/programming/grails/async	Async	Async	0	Working notes on Async: def index = and def asyncProcess = new Thread(.	article
+published	computer/programming/grails/command	Command	Command	0	Working notes on Command: prod, dev, and test.	article
+published	computer/programming/grails/command_2	Command	Command	0	Working notes on Command: grails and clean.	article
+published	computer/programming/grails/config	Config	Config	0	Working notes on Config.	article
+published	computer/programming/grails/issue	Issue	Issue	0	**Uncaught Error.** [$injector:modulerr] Failed to instantiate module app.	article
+published	computer/programming/grails/issues	Issues	Issues	0	1. Empty .grails_history file @ %Home%.	article
+published	computer/programming/grails/notes	Notes	Notes	0	Working notes on Notes: MVC, Model, View, Inline: Specific gsp, when action does not ‘render’, and Layout template.	article
+published	computer/programming/grails/setup	Setup	Setup	0	Working notes on Setup: Setup SDK and Works from.	article
+published	computer/programming/grails	Grails	Grails	0	Working notes on Grails: Asset - manifest, Async, Command, Command, Config, and Issue, and related topics.	article
+published	computer/programming/groovy/notes	Notes	Notes	0	Working notes on Notes: List, Initialize, Append, Size, Index, and get.	article
+published	computer/programming/groovy	Groovy	Groovy	0	Working notes on Groovy.	article
+published	computer/programming/guidelines	Guidelines	Guidelines	0	Account and machine hygiene: password-protect the login, no shared admin access, encrypt transfers, and use ZoneAlarm or Firewall Notifier plus Google Drive Sync when the box is not yours.	article
+published	computer/programming/html/anchor	Anchor	Anchor	0	This is why IE AJAX must use /#/ID.	article
+published	computer/programming/html/apple_web_applications	Apple - Web Applications	Apple - Web Applications	0	<link rel=\"apple-touch-icon\" href=\"touch-icon-iphone.png\" />.	article
+published	computer/programming/html/center	Center	Center	0	The container div should have.	article
+published	computer/programming/html/compatibility	Compatibility	Compatibility	0	Compatibility: <!--[if IE 9]>, <style>, * {word-spacing: -2px;}, <style> </style>, and <!--[if <![endif]-->.	article
+published	computer/programming/html/download	Download	Download	0	Var bb = new BlobBuilder();.	article
+published	computer/programming/html/favicon	favicon	favicon	0	Working notes on favicon: Proportion, Dimension, Max, HTML spec, In practice, and Recommended.	article
+published	computer/programming/html/form	Form	Form	0	Working notes on Form: Input, Type, Name, Value, and Label.	article
+published	computer/programming/html/html	HTML	HTML	0	Since it is not based on SGML - requires no dtd.	article
+published	computer/programming/html/image	Image	Image	0	Working notes on Image: IE image tag with a - gets a black border around and Center img in div.	article
+published	computer/programming/html/redirect	Redirect	Redirect	0	<meta http-equiv=\"refresh\" content=\"1; url=http://_\">.	article
+published	computer/programming/html/responsive	Responsive	Responsive	0	Working notes on Responsive: CSS.	article
+published	computer/programming/html/side_scrollbar_toggle_re_render	Side scrollbar toggle : re-render	Side scrollbar toggle : re-render	0	Working notes on Side scrollbar toggle : re-render.	article
+published	computer/programming/html/slider_menu	Slider menu	Slider menu	0	1. First view side bar.	article
+published	computer/programming/html/snippets	Snippets	Snippets	0	Working notes on Snippets: .disabled and if class present use prevent default on focus and on click, and dbl click.	article
+published	computer/programming/html/sticky_footer	Sticky Footer	Sticky Footer	0	1. Sticks to the bottom.	article
+published	computer/programming/html/table	Table	Table	0	Working notes on Table: table: table-layout: fixed;.	article
+published	computer/programming/html/vertical_center	Vertical Center	Vertical Center	0	<div style=\"width: 100%; height: 100%; display: table; text-align: center;\">.	article
+published	computer/programming/html	HTML	HTML	0	Working notes on HTML: Anchor, Apple - Web Applications, Center, Compatibility, Download, and favicon, and related topics.	article
+published	computer/programming/http/compression	Compression	Compression	0	Working notes on Compression: Request, header, Response, and header.	article
+published	computer/programming/http/expiry	Expiry	Expiry	0	HTTP header sets an expiry duration.	article
+published	computer/programming/http	HTTP	HTTP	0	Working notes on HTTP: Compression and Expiry.	article
+published	computer/programming/ios/simulator	Simulator	Simulator	0	1. Simulator > Debug > Location.	article
+published	computer/programming/ios	iOS	iOS	0	Working notes on iOS: Simulator.	article
+published	computer/programming/java/anonymous_run	Anonymous run	Anonymous run	0	Working notes on Anonymous run: Thread t = new Thread(new Runnable() and public void run().	article
+published	computer/programming/java/charset	Charset	Charset	0	Working notes on Charset.	article
+published	computer/programming/java/conversions	Conversions	Conversions	0	Working notes on Conversions: Byte array to String.	article
+published	computer/programming/java/current_directory	Current directory	Current directory	0	Working notes on Current directory.	article
+published	computer/programming/java/custom_sort	Custom sort	Custom sort	0	@Override public int compare(HockeyPlayer p1, HockeyPlayer p2) {.	article
+published	computer/programming/java/download	Download	Download	0	Working notes on Download: public class Download extends HttpServlet and public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException.	article
+published	computer/programming/java/execution	Execution	Execution	0	Working notes on Execution: Run Jar, Directories not to be preceded by a ‘/’, Classpath, Windows, Linux, and Working directory.	article
+published	computer/programming/java/external_jar_location	External JAr location	External JAr location	0	Working notes on External JAr location.	article
+published	computer/programming/java/file	File	File	0	Final String UTF8_BOM = \"\\uFEFF\";.	article
+published	computer/programming/java/integer_string	Integer > String	Integer > String	0	1. String.valueOf(<number>)	article
+published	computer/programming/java/java	Java	Java	0	Process p = Runtime.getRuntime().exec(\"cmd /c dir\");.	article
+published	computer/programming/java/java_properties_file	Java Properties file	Java Properties file	0	Working notes on Java Properties file.	article
+published	computer/programming/java/name_value_pair	Name Value pair	Name Value pair	0	HttpPost request = new HttpPost();.	article
+published	computer/programming/java/notes	Notes	Notes	0	Working notes on Notes: Join two lists, 2. ListUtils.union(list1,list2);, Get class’s details, ArrayList : capacity & size, that does not equate to size, and == operator checks if both sides reference same object.	article
+published	computer/programming/java/pass_by	Pass by	Pass by	0	(unlike C++ where references are just another ‘name’ for the same variable).	article
+published	computer/programming/java/random	Random	Random	0	(int) new Random().nextInt(<N>);.	article
+published	computer/programming/java/remote_debugging	Remote debugging	Remote debugging	0	No spaces in the runjdwp option.	article
+published	computer/programming/java/servlet	Servlet	Servlet	0	Working notes on Servlet.	article
+published	computer/programming/java/string_conversions	String conversions	String conversions	0	String conversions: to Hex string, byteArray to String, String.getByte(“<encoding:UTF-8>”), and byteArray to String new String(<byteArray> [, <enc.	article
+published	computer/programming/java	Java	Java	0	Working notes on Java: Anonymous run, Charset, Conversions, Current directory, Custom sort, and Download, and related topics.	article
+published	computer/programming/java_vs_cpp	Java vs C++	Java vs C++	0	Java versus C++ as used here: no #define (constants), no header file, per-member access specifiers, and no destructor (auto GC).	article
+published	computer/programming/javascript/array	Array	Array	0	Working notes on Array: E.g..	article
+published	computer/programming/javascript/conversions	Conversions	Conversions	0	Round off to decimal places.	article
+published	computer/programming/javascript/document_object_model	Document Object Model	Document Object Model	0	Working notes on Document Object Model: textareaObject.value, Iterate, and for (var i = 0; i < list.length; i++).	article
+published	computer/programming/javascript/dynamic_elements	Dynamic elements	Dynamic elements	0	Dynamic elements: var <element> = document.createElement(“<>”);, var <element>.<attribute> = <value>;, and <element>.<attribute> container.appendChild(<eleme.	article
+published	computer/programming/javascript/geo_location	Geo location	Geo location	0	Working notes on Geo location: function getLocation(), if (navigator.geolocation), } else, and function showPosition(position).	article
+published	computer/programming/javascript/notes	Notes	Notes	0	Working notes on Notes: if(!!var), undefined, Null, if (typeof something === \"undefined\"), Delete Node, and Parent.	article
+published	computer/programming/javascript/timer	Timer	Timer	0	SetTimeout(function, timeout [, language : JScript | VBScript | JavaScript);.	article
+published	computer/programming/javascript/variables	Variables	Variables	0	1. Primitive assignment actually creates disconnected copies.	article
+published	computer/programming/javascript	JavaScript	JavaScript	0	Working notes on JavaScript: Array, Conversions, Document Object Model, Dynamic elements, Geo location, and Timer, and related topics.	article
+published	computer/programming/json/array	Array	Array	0	Working notes on Array: General.	article
+published	computer/programming/json/notes	Notes	Notes	0	Working notes on Notes: Array, ex., Java array to JSON, for (String n : name), and ResponseText > JSON.	article
+published	computer/programming/json	JSON	JSON	0	Working notes on JSON: Array.	article
+published	computer/programming/jsp/include	Include	Include	0	Include: Inplace, Dynamic, <%@ include file = \"EnumAccess.jsp\" %>, and <jsp:include page=\"...\" />.	article
+published	computer/programming/jsp/notes	Notes	Notes	0	Private void myFuncX(String sBits, javax.servlet.jsp.JspWriter myOut).	article
+published	computer/programming/jsp/redirects	Redirects	Redirects	0	<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>.	article
+published	computer/programming/jsp/remote_debug_tomcat	Remote Debug - Tomcat	Remote Debug - Tomcat	0	Working notes on Remote Debug - Tomcat: Win and set your JPDA settings.	article
+published	computer/programming/jsp/template	Template	Template	0	Template: <%@page, contentType=\"text/html; charset=${encoding}\", pageEncoding=\"${encoding}\", %>, and <!DOCTYPE html>.	article
+published	computer/programming/jsp	JSP	JSP	0	Working notes on JSP: Include, Redirects, Remote Debug - Tomcat, and Template.	article
+published	computer/programming/language_codes	Language codes	Language codes	0	Language IDs used here: 461 Nepali NP, 439 Hindi IN, 409 English US, and 44B Kannada IN.	article
+published	computer/programming/latex/encrypt_xelatex	Encrypt XeLaTex	Encrypt XeLaTex	0	Encrypt XeLaTex: \\special{pdf:encrypt ownerpw (<owner_password>) us.	article
+published	computer/programming/latex/notes	Notes	Notes	0	Working notes on Notes.	article
+published	computer/programming/latex	LaTex	LaTex	0	Working notes on LaTex: Encrypt XeLaTex.	article
+published	computer/programming/lines_of_code	Lines of code	Lines of code	0	Count lines with find and xargs wc -l on *.php, and grep cpp|c for C and C++.	article
+published	computer/programming/log4j/grails	Grails	Grails	0	Working notes on Grails: log4j =, appenders, environments, and def logger = Logger.getRootLogger().	article
+published	computer/programming/log4j/levels	Levels	Levels	0	Working notes on Levels.	article
+published	computer/programming/log4j/location	Location	Location	0	Location: /WEB-INF/classes/, <context-param>, <param-name>log4jConfigLocation</param-name>, <param-name>log4jConfigLocation</param-name> <para, and <context-param> </context-param>.	article
+published	computer/programming/log4j/log4j_xml	log4j.xml	log4j.xml	0	Working notes on log4j.xml: <log4j:configuration debug=\"true\".	article
+published	computer/programming/log4j/structure	Structure	Structure	0	Working notes on Structure: Appender, name, param, and Root.	article
+published	computer/programming/log4j	log4j	log4j	0	Working notes on log4j: Grails, Levels, Location, log4j.xml, and Structure.	article
+published	computer/programming/logitech_lua/untitled_document	Logitech - LUA	Logitech - LUA	0	Working notes on Logitech - LUA.	article
+published	computer/programming/logitech_lua	Logitech - LUA	Logitech - LUA	0	Working notes on Logitech - LUA: Logitech - LUA.	article
+published	computer/programming/markdown	Markdown	Markdown	0	Markdown as used on StackOverflow, including the horizontal line.	article
+published	computer/programming/maths/ceil	Ceil	Ceil	0	Without float and library fn.	article
+published	computer/programming/maths	Maths	Maths	0	Working notes on Maths: Ceil.	article
+published	computer/programming/ms_sql/case	Case	Case	0	IS NULL Then \"Absent\" else \"\" end as _B_.	article
+published	computer/programming/ms_sql/column_condition	Column condition	Column condition	0	Case when Z.xDate IS NULL Then \"Absent\" else \"Present\" end as _B_.	article
+published	computer/programming/ms_sql/datediff_as_time	Datediff as time	Datediff as time	0	CONVERT(varchar(12), DATEADD(ms, DATEDIFF(ms, @dt1, @dt2), 0), 114).	article
+published	computer/programming/ms_sql/function	Function	Function	0	Must be stored in db.	article
+published	computer/programming/ms_sql/procedure	Procedure	Procedure	0	Create Procedure @Present (@dateX datetime).	article
+published	computer/programming/ms_sql/temprorary_tables	Temprorary Tables	Temprorary Tables	0	Working notes on Temprorary Tables: Scope and @.	article
+published	computer/programming/ms_sql	MS SQL	MS SQL	0	Working notes on MS SQL: Case, Column condition, Datediff as time, Function, Procedure, and Temprorary Tables.	article
+published	computer/programming/nant/notes	Notes	Notes	0	Notes: Zip, UnZip, Download, Installation, and To build release bits, run \"make ship\" or \"nant -D.	article
+published	computer/programming/nant	NAnt	NAnt	0	Working notes on NAnt.	article
+published	computer/programming/objective_c/notes	Notes	Notes	0	Working notes on Notes: .h, [-], [+], .m, Invoke, and Classes can also be objects.	article
+published	computer/programming/objective_c	Objective C	Objective C	0	Working notes on Objective C.	article
+published	computer/programming/php/buffer	Buffer	Buffer	0	Working notes on Buffer: Clear, ob_end_clean();, Stop, and ob_stop();.	article
+published	computer/programming/php/constructs	Constructs	Constructs	0	Working notes on Constructs.	article
+published	computer/programming/php/debug	Debug	Debug	0	**echo \"File.** {$frame['file']} - Line: {$frame['line']} - Function: {$frame['function']}\\n\";.	article
+published	computer/programming/php/include	Include	Include	0	Always relative to the first file path (index.php).	article
+published	computer/programming/php/laravel	Laravel	Laravel	0	A MVC framework based on PHP.	article
+published	computer/programming/php/php	PHP	PHP	0	All PHP (including ‘include’ files included in php files) must be enclosed.	article
+published	computer/programming/php	PHP	PHP	0	Working notes on PHP: Buffer, Constructs, Debug, Include, Laravel, and PHP.	article
+published	computer/programming/powershell/array	Array	Array	0	Working notes on Array.	article
+published	computer/programming/powershell/escape_characters	Escape characters	Escape characters	0	`<character>.	article
+published	computer/programming/powershell/execution_policy	Execution policy	Execution policy	0	Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned.	article
+published	computer/programming/powershell/inovoke_external	Inovoke external	Inovoke external	0	The param list should be an array.	article
+published	computer/programming/powershell/notes	Notes	Notes	0	Working notes on Notes: Execution-Policy, Status, ExecutionPolicy, Enable, Revert, and Execute Script.	article
+published	computer/programming/powershell/remove_files_recursively	Remove files recursively	Remove files recursively	0	* is for current path.	article
+published	computer/programming/powershell/sample	Sample	Sample	0	Working notes on Sample: Include.	article
+published	computer/programming/powershell/scripts/bulk_rename	Bulk rename	Bulk rename	0	Bulk rename: $args | Rename-Item -NewName { $_.Name.ToLower() -.	article
+published	computer/programming/powershell/scripts	Scripts	Scripts	0	Working notes on Scripts: Bulk rename.	article
+published	computer/programming/powershell/transcript	Transcript	Transcript	0	Error messages are not logged.	article
+published	computer/programming/powershell/traverse	Traverse	Traverse	0	Working notes on Traverse: Foreach-Object.	article
+published	computer/programming/powershell	PowerShell	PowerShell	0	Working notes on PowerShell: Array, Escape characters, Execution policy, Inovoke external, Remove files recursively, and Sample, and related topics.	article
+published	computer/programming/process	Process	Process	0	Process checklist: go slow, flow one after another, mapping, redundancy, code quality, and best practices.	article
+published	computer/programming/python/differences	Differences	Differences	0	1. Same function with different param list cannot be defined.	article
+published	computer/programming/python/pass_by	Pass by	Pass by	0	Working notes on Pass by.	article
+published	computer/programming/python/revise	Revise	Revise	0	Working notes on Revise: 1. Remove whitespace - beginning and end, 2. Uppercase, and 3. For.	article
+published	computer/programming/python	Python	Python	0	Working notes on Python: Differences, Pass by, and Revise.	article
+published	computer/programming/r/notes	Notes	Notes	0	attach <data_set>.	article
+published	computer/programming/r	R	R	0	Working notes on R.	article
+published	computer/programming/regex/notes	Notes	Notes	0	Working notes on Notes: ^, $, ., +, Greedy match, and If / is the delimiter.	article
+published	computer/programming/regex	RegEx	RegEx	0	Working notes on RegEx.	article
+published	computer/programming/regex_2	RegEx	RegEx	0	Regular-expression notes: special characters, escaping, and keeping ^ $ as they are.	article
+published	computer/programming/servlet/configuration	Configuration	Configuration	0	Configuration: private static List<String> listIp = Arrays.asList, private static List<String> listNoSecURI = Arrays., and private private static List<String> listNoSecDir =.	article
+published	computer/programming/servlet/notes	Notes	Notes	0	Working notes on Notes: Get session, Forward, Redirect, and GetSessionAttribute.	article
+published	computer/programming/servlet/properties_file	Properties file	Properties file	0	Working notes on Properties file.	article
+published	computer/programming/servlet/response	Response	Response	0	Working notes on Response: PrintWriter out = response.getWriter();.	article
+published	computer/programming/servlet	Servlet	Servlet	0	Working notes on Servlet: Configuration, Properties file, and Response.	article
+published	computer/programming/spring_boot/notes	Notes	Notes	0	Working notes on Notes.	article
+published	computer/programming/spring_boot	Spring Boot	Spring Boot	0	Working notes on Spring Boot.	article
+published	computer/programming/sql/create	Create	Create	0	Create Table <table> (.	article
+published	computer/programming/sql	SQL	SQL	0	Working notes on SQL: Create.	article
+published	computer/programming/tools/prompt_to_json	Prompt to json	Prompt to json	0	Working notes on Prompt to json: ChatGPT instructions, 1. **JSON Creation:**, 2. **Prompt Recreation:**, 3. **Review & Adjustments:**, and 4. **Final Presentation:**.	article
+published	computer/programming/tools	Tools	Tools	0	Working notes on Tools: Prompt to json.	article
+published	computer/programming/twitter/cards	Cards	Cards	0	Cards: Validatior, and <meta name=\"twitter:creator\" content=\"@SarahMaslin.	article
+published	computer/programming/twitter	twitter	twitter	0	Working notes on twitter: Cards.	article
+published	computer/programming/typescript/typescript	TypeScript	TypeScript	0	1. Typescript is superscript of the Javascript.	article
+published	computer/programming/typescript	TypeScript	TypeScript	0	Working notes on TypeScript: TypeScript.	article
+published	computer/programming/vb_applications/notes	Notes	Notes	0	Working notes on Notes: Module Name must be distinct from Sub or Function Name.	article
+published	computer/programming/vb_applications	VB Applications	VB Applications	0	Working notes on VB Applications.	article
+published	computer/programming/vb_script/notes	Notes	Notes	0	Working notes on Notes: Get Current Dir, Named Parameter, if WScript.Arguments.Named.Exists(\"a\") then, and and used thus.	article
+published	computer/programming/vb_script	VB Script	VB Script	0	Working notes on VB Script.	article
+published	computer/programming/versioning	Versioning	Versioning	0	Version scheme Major.Minor.Maintenance.Build, product vs file vs installer version, and the Program Files publisher/product path with a major-version symlink.	article
+published	computer/programming/visual_cpp/accelerator_keys	Accelerator Keys	Accelerator Keys	0	Working notes on Accelerator Keys: if(!TranslateAccelerator(MainWindow.hWnd, hAccel, &msg)), include \"Resource.h\"., include \"AFXRes.h\"., BEGIN, # define ID_ACTION, and case WM_COMMAND.	article
+published	computer/programming/visual_cpp/clipboard	ClipBoard	ClipBoard	0	Working notes on ClipBoard: if(OpenClipboard(NULL)) and if(!SetClipboardData(CF_TEXT, hMem)).	article
+published	computer/programming/visual_cpp/icon	Icon	Icon	0	Working notes on Icon.	article
+published	computer/programming/visual_cpp/ide_notes	IDE Notes	IDE Notes	0	IDE Notes: copy $(TargetPath) \"C:\\Program Files\\Pankh\\OCR\\Eng.	article
+published	computer/programming/visual_cpp/ide_setup	IDE Setup	IDE Setup	0	Working notes on IDE Setup: Tab Spacing and Disable.	article
+published	computer/programming/visual_cpp/language_resource_dll	Language Resource DLL	Language Resource DLL	0	Working notes on Language Resource DLL: pragma code_page(57008)., pragma code_page(1252)., pragma code_page(1252)., pragma code_page(57002)., Project Setup, and Linker.	article
+published	computer/programming/visual_cpp/project_setup	Project Setup	Project Setup	0	Working notes on Project Setup: Configuration Properties, General, 1. Single Project - Solution, Output Directory, Output Directory, and 2. Multi Project - Solution.	article
+published	computer/programming/visual_cpp/project_structure	Project Structure	Project Structure	0	Working notes on Project Structure: Project A, Project A.vcproj.{COMPUTER}.{USER}, Header Files, Contain, Inherit, and Requirements.	article
+published	computer/programming/visual_cpp/remember	Remember	Remember	0	Remember: Architecture #Defines: _M_X64 _M_AMD64//_WIN64 || .	article
+published	computer/programming/visual_cpp/setup_bat	Setup.bat	Setup.bat	0	Working notes on Setup.bat: IF %ERRORLEVEL% NEQ 0 and Exit.	article
+published	computer/programming/visual_cpp/solution_structure	Solution Structure	Solution Structure	0	Working notes on Solution Structure: Solution, 1. Single Project Solution, Project {Main}, Project {Aux}, 2. Multi Project Solution, and Project {1}.	article
+published	computer/programming/visual_cpp/windows	Windows	Windows	0	Working notes on Windows: WM_CREATE is an Extension of the CreateWindow Fn call, Message Loop, Parent Window Object, SendMessage, SubClassing, and DialogBox Get Tab & Enter.	article
+published	computer/programming/visual_cpp/wix	WiX	WiX	0	Working notes on WiX: Not availabe, 1. Single Project - Solution, OutPath, 2. Multi Project - Solution, and OutPath.	article
+published	computer/programming/visual_cpp	Visual C++	Visual C++	0	Working notes on Visual C++: Accelerator Keys, ClipBoard, Icon, IDE Notes, IDE Setup, and Language Resource DLL, and related topics.	article
+published	computer/programming/visual_studio/macro	Macro	Macro	0	Working notes on Macro.	article
+published	computer/programming/visual_studio	Visual Studio	Visual Studio	0	Working notes on Visual Studio: Macro.	article
+published	computer/programming/winapi/notes	Notes	Notes	0	Working notes on Notes: Window and Hide.	article
+published	computer/programming/winapi	WinAPI	WinAPI	0	Working notes on WinAPI.	article
+published	computer/programming/wix/custom_action	Custom Action	Custom Action	0	<CustomAction Id='StopOrcService' BinaryKey='StopOrcService' DllEntry='StopOrcService' Execute='immediate' Return='check'/>.	article
+published	computer/programming/wix/lauch_application_upon_finish	Lauch application upon finish	Lauch application upon finish	0	Working notes on Lauch application upon finish: 4. <Publish Dialog=\"ExitDialog\".	article
+published	computer/programming/wix/notes	Notes	Notes	0	Working notes on Notes: Get PrintEULA.dll.	article
+published	computer/programming/wix/upgrade_support	Upgrade Support	Upgrade Support	0	Working notes on Upgrade Support: <Product Id=\"*\", Version no. (first 3 parts) must change, and <MajorUpgrade.	article
+published	computer/programming/wix	WiX	WiX	0	Working notes on WiX: Custom Action, Lauch application upon finish, and Upgrade Support.	article
+published	computer/programming/xml/xslt	XSLT	XSLT	0	**XSL.** EXtensible Stylesheet Language or XML Style Sheets.	article
+published	computer/programming/xml	XML	XML	0	Working notes on XML: XSLT.	article
+published	computer/technology/algorithms/binary_search	Binary Search	Binary Search Algorithm	0	Binary search: split the range, compare against the first-half max, discard a half, repeat.	article
+published	computer/technology/algorithms	Algorithms	Algorithms	0	Working notes on Algorithms: Binary Search Algorithm.	article
+published	computer/technology/cap_theorem	CAP Theorem	CAP Theorem — Consistency, Availability, and Partition	0	CAP: a distributed system cannot simultaneously provide consistency, availability, and partition tolerance.	article
+published	computer/technology/design/solid	SOLID	SOLID	0	SOLID object-oriented design: SRP, OCP, LSP, ISP, DIP — maintainability, reuse, scale, flexibility.	article
+published	computer/technology/design	Design	Design	0	Working notes on Design: SOLID.	article
+published	computer/technology/digital_certificate/structure	Structure	Structure	0	Digital certificate layout: Version 1, extensions including SANs, critical extensions, and properties.	article
+published	computer/technology/digital_certificate	Digital Certificate	Digital Certificate	0	Working notes on Digital Certificate: Structure.	article
+published	computer/technology/email/free	Free	Free	0	Free Gmail custom-domain routing: five domains, verified recipients only; CC raises the domain cap.	article
+published	computer/technology/email	Email	Email	0	Working notes on Email: Free.	article
+published	computer/technology/future	Future	Future	0	Near-term (2024–2025) bets: generative AI, AR/VR, green tech; then printing a computer, and the limits of an LLM assistant.	article
+published	computer/technology/hardware/front_audio	Front Audio	Front Panel Audio	0	Intel HD Audio front-panel header versus AC'97: jack sensing and the 10-pin pinout.	article
+published	computer/technology/hardware	Hardware	Hardware	0	Working notes on Hardware: Front Panel Audio.	article
+published	computer/technology/license	License	Open Source License	0	Open-source licenses as availability plus usability; GPL v2 Tivoization versus v3, and mere aggregation.	article
+published	computer/technology/llm/langchain	LangChain	LangChain	0	ChatOpenAI JSON mode via model_kwargs; the prompt must contain the word json, and passing response_format directly warns but still works.	article
+published	computer/technology/llm/prompting	Prompting	Prompting	0	Prompting: think in steps, keep it short, avoid repetition, and give examples.	article
+published	computer/technology/llm	LLM	LLM	0	Working notes on LLM: LangChain and Prompting.	article
+published	computer/technology/machine_learning/cnn	CNN	Image Classification — Intro to CNN	0	CNNs learn features from raw pixels: input feature map (width, height, RGB depth) and a stack of convolution, ReLU, pooling.	article
+published	computer/technology/machine_learning/links	Links	Links	0	Working notes on Links.	article
+published	computer/technology/machine_learning/notes	Notes	Notes	0	Machine learning as training a program to predict from similar data: examples, features, labels, and models.	article
+published	computer/technology/machine_learning	Machine Learning	Machine Learning	0	Working notes on Machine Learning: Image Classification — Intro to CNN.	article
+published	computer/technology/microservices/architecture_types	Architecture Types	Architecture Types	0	Microservice architecture types: strangler, saga (orchestrated or choreographed), and aggregator.	article
+published	computer/technology/microservices/components	Components	Components	0	Sixteen microservices components, from single-responsibility services and an API gateway through saga-adjacent event-driven pieces and versioning.	article
+published	computer/technology/microservices/event_sourcing	Event Sourcing	Event Sourcing	0	Event sourcing stores a stream of events as the source of truth, then replays them (or snapshots) to reconstruct state.	article
+published	computer/technology/microservices/saga	Saga	Saga	0	Saga splits a distributed transaction into per-service steps with choreography or orchestration, plus compensating transactions.	article
+published	computer/technology/microservices	Microservices	Microservices	0	Working notes on Microservices: Architecture Types, Components, Event Sourcing, and Saga.	article
+published	computer/technology/nfc/desfire	DESFire	DESFire	0	MIFARE DESFire: 7-byte UID, master and application keys, 0x28 applications of 0x32 files, 2/4/8 K variants.	article
+published	computer/technology/nfc	NFC	NFC	0	Working notes on NFC: DESFire.	article
+published	computer/technology/privacy/policy	Policy	Policy	0	Generate a privacy policy at termsfeed.com.	article
+published	computer/technology/privacy	Privacy	Privacy	0	Working notes on Privacy: Policy.	article
+published	computer/technology/proxy/wpad	WPAD	WPAD	0	WPAD locates wpad.dat via DHCP option 252 or DNS names starting at wpad.<client-domain>.	article
+published	computer/technology/proxy	Proxy	Proxy	0	Working notes on Proxy: WPAD.	article
+published	computer/technology/rss/feedburner	FeedBurner	FeedBurner	0	FeedBurner sits as a filter; the original RSS stays private between the site and FeedBurner.	article
+published	computer/technology/rss	RSS	RSS	0	Working notes on RSS: FeedBurner.	article
+published	computer/technology/software/developer	Developer	Software Developer	0	Qualities of a solid software developer: technical skill, problem-solving, testing, and the surrounding soft skills.	article
+published	computer/technology/software/versioning	Versioning	Versioning	0	Semantic versioning MAJOR.MINOR.PATCH, +meta build metadata, and one GitHub tag with many named assets.	article
+published	computer/technology/software/windows_iso	Windows ISO	Windows Installation Disk from ISO	0	Build a UEFI Windows 11 USB from an ISO with diskpart, FAT32, bootsect /nt60, and xcopy /E /F /H.	article
+published	computer/technology/software	Software	Software	0	Working notes on Software: Software Developer, Versioning, and Windows Installation Disk from ISO.	article
+published	computer/technology/web/ad_size	Ad Size	Recommended Ad Size	0	Wide ad sizes: 336x280, 300x250, 728x90, and 160x600.	article
+published	computer/technology/web/caching	Caching	Caching	0	ETag revalidation returns Not_modified; file versioning is the way to invalidate before expiry. Cache 1 week to 1 year.	article
+published	computer/technology/web/css/purify	Purify	Purify	0	Unused CSS: Chrome audit (current state only), CSS Scanner, word-based PurifyCSS, and UnCSS on URLs via PhantomJS.	article
+published	computer/technology/web/css	CSS	CSS	0	CSS notes: finding unused rules with audit tools and PurifyCSS.	article
+published	computer/technology/web/minify	Minify	Minify	0	Minify resources; Google's PageSpeed Insights minify guide.	article
+published	computer/technology/web/modus_operandi	Modus Operandi	Modus Operandi	0	Site setup: domain, 000WebHost space, DNS, FTP, local dev, then Webmaster HTML verify and Analytics with dev excluded.	article
+published	computer/technology/web/progressive	Progressive	Progressive	0	PWA manifest link, 24-bit transparency breaking icons, and a 5x density entry that also breaks them.	article
+published	computer/technology/web/responsive_img	Responsive img	Responsive img	0	Responsive images with srcset widths 4000w down to 1000w and a fallback src.	article
+published	computer/technology/web/seo/guidelines	Guidelines	Guidelines	0	SEO titles: · as separator, site name at the end with -, unique titles, https shown, www redundant.	article
+published	computer/technology/web/seo	SEO	SEO	0	SEO notes: titles, protocol display, and www.	article
+published	computer/technology/web/sitemap	Sitemap	Sitemap	0	Sitemap as txt (URLs only) or XML (video/jpg); do not publish both http and https versions.	article
+published	computer/technology/web/ssl/letsencrypt	Let's Encrypt	Let's Encrypt	0	Let's Encrypt via gethttpsforfree.com: admin RSA key, server CSR, install on the server; test on SSL Labs; JKS via certbot issue 2920.	article
+published	computer/technology/web/ssl/renewal	Renewal	Renewal	0	Do not reuse the CSR on renewal; repeat the entire Let's Encrypt process.	article
+published	computer/technology/web/ssl	SSL	SSL	0	SSL notes: Let's Encrypt issuance, JKS, testing, and renewal.	article
+published	computer/technology/web	Web	Web	0	Working notes on Web: Recommended Ad Size, Caching, CSS, Minify, Modus Operandi, and Progressive, and related topics.	article
+published	computer/os/android/adb/adb_path	ADB path	ADB path	0	Default adb locations in Android SDK platform-tools on Windows and Mac.	article
+published	computer/os/android/adb/adb_wifi	ADB WiFi	ADB over WiFi	0	Put adbd on TCP port 5555, connect over WiFi, and switch back to USB.	article
+published	computer/os/android/adb/freeze_background	Freeze background	Freeze background	0	Set RUN_IN_BACKGROUND appops to ignore or allow for a package.	article
+published	computer/os/android/adb/logcat	logcat	logcat	0	Filter adb logcat, tag logs with Log.d, and show one tag exclusively with -s.	article
+published	computer/os/android/adb/notes	ADB notes	ADB notes	0	Push a file to device paths and set a property with adb shell setprop.	article
+published	computer/os/android/adb/run_to_debug	Run to debug	Run to debug	0	Start an activity in debug wait with am start -D.	article
+published	computer/os/android/adb/wifi_debugging	WiFi debugging	WiFi debugging	0	Enable Wireless debugging, pair with a code, then adb connect.	article
+published	computer/os/android/adb	ADB	ADB	0	Working notes on ADB: ADB path, ADB over WiFi, Freeze background, logcat, ADB notes, and Run to debug, and related topics.	article
+published	computer/os/android/android	Android	Android	0	Android as a licensed Linux OS, Dalvik/APK/dex, partitions, and bootloader unlock on Nexus.	article
+published	computer/os/android/archive/adhoc_wifi	Ad-hoc WiFi	Ad-hoc WiFi	0	Replace WPA_Supplicant on /system to allow ad-hoc WiFi.	article
+published	computer/os/android/archive/bluestacks	BlueStacks	BlueStacks	0	BlueStacks mounts the user's Documents folder with write access.	article
+published	computer/os/android/archive	Archive	Archive	0	Working notes on Archive: Ad-hoc WiFi and BlueStacks.	article
+published	computer/os/android/emulator	Emulator	Emulator	0	List AVDs and start one with emulator -avd.	article
+published	computer/os/android/flashing	Flashing	Flashing	0	Unlock the bootloader, fastboot flash partitions, or install a zip from ClockWorks recovery.	article
+published	computer/os/android/hibernate_freeze	Hibernate freeze	Hibernate and freeze	0	Force-stop or start a package with am, disable or enable it with pm.	article
+published	computer/os/android/install_apk	Install APK	Install APK	0	Start adb, list devices, remount, and install an APK.	article
+published	computer/os/android/notes	Android notes	Android notes	0	Keep the launcher from hibernating, install an APK with pm, and skip media scan with .nomedia.	article
+published	computer/os/android/rooting	Rooting	Rooting	0	Unlock the bootloader from FastBoot, then install SuperUser from recovery.	article
+published	computer/os/android	Android	Android	0	Android notes from daily use: adb, flashing, the emulator, APK install, hibernate/force-stop, and rooting.	article
+published	computer/os/cygwin/set_windows_home_as_home	Cygwin home	Set Windows home as home	0	Point Cygwin home at the Windows user profile by setting db_home in /etc/nsswitch.conf.	article
+published	computer/os/cygwin	Cygwin	Cygwin	0	Cygwin notes: running a *nix environment on Windows, including pointing Cygwin home at the Windows user profile.	article
+published	computer/os/ios/notes	Hidden files	Notes	0	Show or hide Finder hidden files with defaults write and killall Finder, including the OS X 10.8 form.	article
+published	computer/os/ios	iOS	iOS	0	iOS notes: show or hide Finder hidden files with defaults write and killall Finder, including the OS X 10.8 form.	article
+published	computer/os/mac/disk_usage	Disk usage	Disk usage	0	Directory-wise disk usage in human-readable form with du -sh *.	article
+published	computer/os/mac/export	Export PATH	Export	0	Append a directory to PATH for the current shell with export.	article
+published	computer/os/mac/find	Find	Find	0	Search a path for names matching a pattern with find -name.	article
+published	computer/os/mac/hidden_files	Hidden files	Hidden files	0	Show or hide Finder hidden files from Terminal with defaults write and killall Finder.	article
+published	computer/os/mac/netcat	Netcat	Netcat	0	Listen on a local port with nc -l localhost.	article
+published	computer/os/mac/open	Open	Open	0	Launch an application with /usr/bin/open -a and pass arguments with --args.	article
+published	computer/os/mac/osascript	osascript	osascript	0	Set Terminal window 1 background color from a four-value tuple.	article
+published	computer/os/mac/paste_newline_unicode	Unicode newline	Paste newline unicode	0	Replace Unicode newline bytes in permission.txt with real newlines using sed.	article
+published	computer/os/mac/path	PATH	PATH	0	Prepend a directory to PATH in ~/.bash_profile.	article
+published	computer/os/mac/setup_usb_installation_media	USB installer	Setup USB installation media	0	Format a USB volume in Disk Utility and write an OS X Yosemite installer with createinstallmedia.	article
+published	computer/os/mac/ssh	SSH	SSH	0	Recreate id_rsa.pub from id_rsa, add a key with ssh-add -K, and enable debug with -vvv.	article
+published	computer/os/mac	Mac	Mac	0	macOS notes: shell, PATH, disks, Finder hidden files, SSH keys, and Yosemite USB install media.	article
+published	computer/os/nix/at	at	at	0	Schedule a one-shot job with at, including a job a minute from now.	article
+published	computer/os/nix/cd	cd	cd	0	cd shortcuts for previous directory, filesystem root, and home.	article
+published	computer/os/nix/chmod	chmod	chmod	0	chmod permission sets, who-bits, recursive -R, and 777 all-access.	article
+published	computer/os/nix/commands	Commands	Common commands	0	tail, follow, move, aliases, unalias, native-command prefix, and delete.	article
+published	computer/os/nix/cron/commands	Crontab	Crontab commands	0	crontab flags to edit, list, and remove a user's scheduled jobs.	article
+published	computer/os/nix/cron	Cron	Cron	0	Working notes on Cron: Crontab commands.	article
+published	computer/os/nix/custom/server_ssh_colour_change	SSH colour	Server SSH colour change	0	Override ssh with a wrapper that sets Terminal background colour from the remote hostname.	article
+published	computer/os/nix/custom	Custom	Custom	0	Working notes on Custom: Server SSH colour change.	article
+published	computer/os/nix/date	date	date	0	date format strings, command substitution for assignment, and when date echoes instead.	article
+published	computer/os/nix/delete	Delete	Delete	0	Remove empty directories with rmdir, non-empty trees with rm -rf, and files by path or match pattern.	article
+published	computer/os/nix/find	find	find	0	Recursive find by name, depth, type, -exec, and files modified within a time window.	article
+published	computer/os/nix/ftp	FTP	FTP	0	Working notes on FTP.	article
+published	computer/os/nix/gpg	gpg	gpg	0	Verify a digital signature with gpg on the .asc signature file.	article
+published	computer/os/nix/grep	grep	grep	0	grep flags for omit, exact, recursive, line numbers, context, and finding files by content.	article
+published	computer/os/nix/history	history	history	0	List shell command history and delete an entry by index with -d.	article
+published	computer/os/nix/hit_url	Hit URL	Hit a URL	0	Hit an HTTP URL with nc or bash /dev/tcp, without wget or curl.	article
+published	computer/os/nix/hostname	hostname	hostname	0	Display or set the hostname and FQDN, persist it in /etc/hostname and /etc/hosts, and verify.	article
+published	computer/os/nix/hosts	hosts	hosts	0	/etc/hosts lines mapping localhost and a host FQDN to IPv4 addresses.	article
+published	computer/os/nix/iptables	iptables	iptables	0	List, flush, block, allow, and clear iptables rules, including per-IP, per-port, and crawler DROP.	article
+published	computer/os/nix/ln	ln	ln	0	Create a symbolic link with ln -s from a relative or absolute source to a name.	article
+published	computer/os/nix/ls	ls	ls	0	ls flags for human-readable size, long format, timestamps, and the long-listing columns.	article
+published	computer/os/nix/management/disk	Disk	Disk	0	df and du for disk space, directory sizes, and finding deleted files that still hold space.	article
+published	computer/os/nix/management/file	File	File	0	Check mode bits, take ownership, and set executable or read permissions.	article
+published	computer/os/nix/management/firewall	Firewall	Firewall	0	Block an IP by appending a DROP rule on INPUT with iptables.	article
+published	computer/os/nix/management/memory	Memory	Memory	0	Inspect memory with /proc/meminfo, free, top, vmstat, and dmidecode.	article
+published	computer/os/nix/management/network	Network	Network	0	Static IP in /etc/network/interfaces, DNS in resolv.conf, networking restart, and ifconfig.	article
+published	computer/os/nix/management/permissions	Permissions	Permissions	0	ls -l file types and the owner, group, and other permission bits including setuid, setgid, and sticky.	article
+published	computer/os/nix/management/time	Time	Date and time	0	View and set timezone, hardware clock, and restart cron after a timezone change.	article
+published	computer/os/nix/management/uninstall	Uninstall	Uninstall	0	Purge a package with apt-get, then autoremove and autoclean leftover files.	article
+published	computer/os/nix/management/users	Users	Users and groups	0	Add and delete users and groups, passwords, ACLs, and sudoers.d.	article
+published	computer/os/nix/management/version	Version	Version	0	Show OS and kernel version with release files, lsb_release, /proc/version, and uname.	article
+published	computer/os/nix/management	Management	Management	0	Working notes on Management: Disk, File, Firewall, Memory, Network, and Permissions, and related topics.	article
+published	computer/os/nix/mint	Mint	Mint	0	Working notes on Mint.	article
+published	computer/os/nix/network/view	View	View network	0	See which process is bound to a port with isof and netstat.	article
+published	computer/os/nix/network	Network	Network	0	Working notes on Network: View network.	article
+published	computer/os/nix/nohup	nohup	nohup	0	Run a command with nohup, passing arguments as usual, backgrounding with &, and redirecting to a file.	article
+published	computer/os/nix/ports	Ports	Ports	0	List active and listening ports with netstat -lnptu, or all with nmap.	article
+published	computer/os/nix/process	Process	Process	0	List running processes with ps -ef and stop one with kill -9.	article
+published	computer/os/nix/ps	ps	ps	0	Rank processes by CPU usage with ps -eo pcpu,pid,user,args, sorted, in less.	article
+published	computer/os/nix/rescue/rescue_disks	Rescue disks	Rescue disks	0	SystemRescueCd download, NTFS read-write support, and the Windows USB media creator.	article
+published	computer/os/nix/rescue	Rescue	Rescue	0	Working notes on Rescue: Rescue disks.	article
+published	computer/os/nix/sar	sar	sar	0	Sample CPU usage with sar -u 2 5 to see users using max CPU.	article
+published	computer/os/nix/scp	scp	scp	0	Copy files with scp put/get, including debug, bandwidth limit, recursive, and quiet flags.	article
+published	computer/os/nix/sh/call	Call	Call a script	0	Run a shell script with sh and optional positional arguments.	article
+published	computer/os/nix/sh/case	case	case	0	Shell case syntax matching values and running the matching statement.	article
+published	computer/os/nix/sh/case_2	case example	case example	0	A case branch on TEST, including a default * pattern.	article
+published	computer/os/nix/sh/command_line_arguments	Arguments	Command-line arguments	0	Positional parameters in a shell script, indexed from 1.	article
+published	computer/os/nix/sh/function	Function	Function	0	Define a shell function, refer to $1 arguments, and call it. POSIX function keyword on dash.	article
+published	computer/os/nix/sh/if_else	If else	If else	0	Shell if, elif, and else syntax, with numerical and string comparison operators.	article
+published	computer/os/nix/sh/include	Include	Include	0	Source another shell file with . (alias for source).	article
+published	computer/os/nix/sh/inline	Inline	Inline	0	Inline a command's output in a string with $(...).	article
+published	computer/os/nix/sh/notes	Notes	Notes	0	Set shell variables, export environment variables, and write comments.	article
+published	computer/os/nix/sh/output_to_file_and_screen	Output to file and screen	Output to file and screen	0	Send stdout and stderr to both the screen and a file with tee -a.	article
+published	computer/os/nix/sh/shebang	Shebang	Shebang	0	Portable bash shebang using env, and why sh is not bash.	article
+published	computer/os/nix/sh/string	String	String	0	Single quotes block variable expansion unless they sit inside double quotes.	article
+published	computer/os/nix/sh	Sh	Sh	0	Working notes on Sh: Call a script, case, case example, Command-line arguments, Function, and If else, and related topics.	article
+published	computer/os/nix/ssh/keys	Keys	Keys	0	Generate RSA keys, drop a host from known_hosts, and load a .pem with ssh-add.	article
+published	computer/os/nix/ssh/reconnect	Reconnect	Reconnect	0	List and reattach GNU screen sessions with sudo screen -list and -d -r.	article
+published	computer/os/nix/ssh/ssh	SSH	SSH	0	Configure sshd, place authorized_keys, set permissions, restart the Ubuntu ssh service, and lock down root password login.	article
+published	computer/os/nix/ssh/ssh_debug	SSH debug	SSH debug	0	Test sshd config, run a parallel debug daemon on another port, and connect with ssh -vvv.	article
+published	computer/os/nix/ssh	SSH	SSH	0	Working notes on SSH: Keys, Reconnect, SSH, and SSH debug.	article
+published	computer/os/nix/su	su	su	0	Switch user with su, start a login shell with su -, and run a command as another user with -c.	article
+published	computer/os/nix/sudo	sudo	sudo	0	Run with superuser privileges while the user stays the same, and open a new root shell with sudo -s.	article
+published	computer/os/nix/tar	tar	tar	0	Create and extract tar archives; flag order matters, f is the file, z compresses.	article
+published	computer/os/nix/tree	tree	tree	0	Filter a directory tree listing with tree -P and a glob like *foo.	article
+published	computer/os/nix/ubuntu/apt_get	apt-get	apt-get	0	Install packages with apt-get install and refresh indexes with apt-get update.	article
+published	computer/os/nix/ubuntu/bug_persistent_disk_will_be_checked	Bug Persistent - disk will be checked	Bug Persistent - disk will be checked	0	Clear the Ubuntu fsck-at-reboot notifier that keeps showing a disk-will-be-checked message.	article
+published	computer/os/nix/ubuntu/fixes	Fixes	Fixes	0	Rebuild corrupted apt lists and change software sources when update still fails.	article
+published	computer/os/nix/ubuntu/issues	Issues	Issues	0	Remove the persistent disk check message by deleting fsck-at-reboot.	article
+published	computer/os/nix/ubuntu/management	Management	Management	0	Shut down with poweroff or shutdown now, and restart with reboot.	article
+published	computer/os/nix/ubuntu/notes	Notes	Notes	0	Install and start ubuntu-desktop, and control the firewall with ufw and iptables.	article
+published	computer/os/nix/ubuntu/profile	Profile	Profile	0	Prepend a directory to PATH in ~/.bashrc.	article
+published	computer/os/nix/ubuntu/service	Service	Service	0	SysV init scripts under /etc/init.d and update-rc.d defaults.	article
+published	computer/os/nix/ubuntu/update	Update	Update	0	apt-get update, upgrade, dist-upgrade, do-release-upgrade, and rebuilding apt lists.	article
+published	computer/os/nix/ubuntu/version	Version	Version	0	Print Ubuntu release information with lsb_release -a.	article
+published	computer/os/nix/ubuntu	Ubuntu	Ubuntu	0	Working notes on Ubuntu: apt-get, Bug Persistent - disk will be checked, Fixes, Issues, Management, and Profile, and related topics.	article
+published	computer/os/nix/utility/dummy_file	Dummy file	Dummy file	0	Create a dummy file of repeated lines with yes and head, or random bytes from /dev/urandom.	article
+published	computer/os/nix/utility	Utility	Utility	0	Working notes on Utility: Dummy file.	article
+published	computer/os/nix/version	Version	Version	0	Show the OS version from /etc/*-release and lsb_release -a.	article
+published	computer/os/nix/wc	wc	wc	0	Count lines with wc -l, and count files with ls -1 piped to wc -l.	article
+published	computer/os/nix/xargs	xargs	xargs	0	xargs -n, -l, and -I placeholder replacement, including quoting and ampersand escape.	article
+published	computer/os/nix/yum/notes	Notes	Notes	0	Enable a disabled yum repo for one run and print yum variables from YumBase.	article
+published	computer/os/nix/yum	Yum	Yum	0	Enable a disabled yum repo for one run and print yum variables from YumBase.	article
+published	computer/os/nix/zip	zip	zip	0	Create a zip from a target and source paths, including recursive -r.	article
+published	computer/os/nix	*Nix	*Nix	0	*nix notes: shells, ssh, packages, filesystem commands, and day-to-day system management.	article
+published	computer/os/windows/acl/acl	ACL	ACL	0	icacls grants Full control; CACLS is deprecated; ICACLS does not set or read the owner.	article
+published	computer/os/windows/acl/mirror_acl_registry	Mirror ACL	Mirror ACL registry	0	Copy a registry ACL from hkcu:\\software\\foo onto hkcu:\\software\\bar with get-acl and set-acl.	article
+published	computer/os/windows/acl/takeown	takeown	takeown	0	takeown takes ownership of a path, recursively, optionally for Administrators.	article
+published	computer/os/windows/acl	ACL	ACL	0	Working notes on ACL: ACL, Mirror ACL registry, and takeown.	article
+published	computer/os/windows/ad_hoc_wifi	Ad hoc Wi-Fi	Ad hoc Wi-Fi	0	Start a hosted WLAN with netsh wlan after checking that the driver supports Hosted network.	article
+published	computer/os/windows/autostart	Autostart	Autostart	0	Start Outlook at logon with a delayed Task Scheduler task and the /recycle argument.	article
+published	computer/os/windows/bash/notes	Notes	Notes	0	lxrun default user and package update, lxss location, password reset, and C: mounts.	article
+published	computer/os/windows/bash	Bash	Bash	0	lxrun default user and package update, lxss location, password reset, and C: mounts.	article
+published	computer/os/windows/command_shell/cd	cd	cd	0	Escape $ in a cd path with a backslash.	article
+published	computer/os/windows/command_shell/command_prompt	Command Prompt	Command Prompt	0	Completion keys, cmd /k, start /d, stream redirect, and comment forms in Command Prompt.	article
+published	computer/os/windows/command_shell/echo	echo	echo	0	Escape Command Prompt echo with ^; pipes must be escaped.	article
+published	computer/os/windows/command_shell/find	find	find	0	Search drive C: for a file name with dir /a /s.	article
+published	computer/os/windows/command_shell/notes	Notes	Notes	0	List sessions with query user, and start an executable without waiting.	article
+published	computer/os/windows/command_shell	Command Shell	Command Shell	0	Working notes on Command Shell: cd, Command Prompt, echo, and find.	article
+published	computer/os/windows/customization/base	Customization	Customization	0	Disable Aero Peek by setting EnableAeroPeek to 0.	article
+published	computer/os/windows/customization	Customization	Customization	0	Working notes on Customization: Customization.	article
+published	computer/os/windows/dir	dir	dir	0	List files recursively with dir /A:-DR /S.	article
+published	computer/os/windows/efs	EFS	EFS	0	EFS certificate location, read-only certs, .pfx export, import, and sharing the key across computers.	article
+published	computer/os/windows/enable_ahci	AHCI	Enable AHCI	0	Enable AHCI on Windows 10 with bcdedit safe mode, and the Windows XP iaStorV and storahci registry values (untested).	article
+published	computer/os/windows/environment_variable	Environment variable	Environment variable	0	Open the environment-variables box as a standard user with rundll32 sysdm.cpl,EditEnvironmentVariables.	article
+published	computer/os/windows/explorer	Explorer	Explorer	0	Explorer switches /n, /e, /root, and /select for window view, root, and initial focus.	article
+published	computer/os/windows/file_sharing	File Sharing	File Sharing	0	Directories accessible with the present credential become visible automatically, for example Users\\\\User1.	article
+published	computer/os/windows/firewall/log_blocked_outgoing_connections	Blocked connections	Log blocked outgoing connections	0	Audit failed object access on Windows 7 and 8 and read WFP block events 5152 and 5157.	article
+published	computer/os/windows/firewall	Firewall	Firewall	0	Working notes on Firewall: Log blocked outgoing connections.	article
+published	computer/os/windows/hidden_partition	Hidden Partition	Hidden Partition	0	Unhide a diskpart Type=Hidden partition (Id 27) by setting Id=07 Override, then assign a letter in Disk Management.	article
+published	computer/os/windows/hide_folder	Hide Folder	Hide Folder	0	Hide a folder by renaming it to the Recycle Bin CLSID, or with attrib +h +s.	article
+published	computer/os/windows/install/installation_source_info	ISO version	Installation source info	0	Read ISO image edition info with dism /Get-WimInfo on install.wim or install.esd.	article
+published	computer/os/windows/install	Install	Install	0	Working notes on Install: Installation source info.	article
+published	computer/os/windows/joakim_runassystem_runfrmtoken	RunAsSystem	RunAsSystem and RunFromToken	0	Joakim's RunFromToken runs arg2 with arg1's token; RunAsSystem runs the argument as System, including a cascaded TrustedInstaller cmd.	article
+published	computer/os/windows/key	Key	Key	0	Working notes on Key.	article
+published	computer/os/windows/lang	Lang	Language Codes	0	Microsoft list of Windows language codes.	article
+published	computer/os/windows/license/deactivate	Deactivate	Deactivate	0	Uninstall a Windows product key with slmgr /dlv and slmgr /upk.	article
+published	computer/os/windows/license/original_key	Original key	Original key	0	Read OA3xOriginalProductKey from SoftwareLicensingService with wmic.	article
+published	computer/os/windows/license	License	License	0	Working notes on License: Deactivate and Original key.	article
+published	computer/os/windows/migrate_to_ssd	Migrate to SSD	Migrate to SSD	0	After an SSD move, assign a letter to the ~260 MB FAT EFI volume, bootrec /fixboot, then rebuild BCD with bcdboot.	article
+published	computer/os/windows/monitor_power_management	Monitor Power	Monitor Power Management	0	WM_SYSCOMMAND SC_MONITORPOWER values to put the display in low power, off, or on.	article
+published	computer/os/windows/msi	MSI	MSI	0	Uninstall an MSI package by GUID with MSIExec /x. The GUID has dashes.	article
+published	computer/os/windows/n10/guest_account	Guest account	Guest account	0	Add a Visitor account, remove it from Users, and put it in Guests.	article
+published	computer/os/windows/n10/interactive_service	Interactive service	Interactive service	0	NoInteractiveServices can show a service on the parallel session screen, but it cannot take input.	article
+published	computer/os/windows/n10/personalize	Personalize	Personalize	0	Flat login-screen colour with DisableLogonBackgroundImage, Theme colour, or desk.cpl Advanced.	article
+published	computer/os/windows/n10/start_menu	Start menu	Start menu	0	Pin shortcuts from %Programs%, fix custom .url shortcuts, and how Start menu hash uses Target only.	article
+published	computer/os/windows/n10/windows_apps	Windows Apps	Windows Apps	0	Copy WindowsApps with robocopy /E /COPYALL /DCOPY:DAT.	article
+published	computer/os/windows/n10	10	10	0	Working notes on 10: Guest account, Interactive service, Personalize, Start menu, and Windows Apps.	article
+published	computer/os/windows/n7/administrator_account	Administrator	Administrator account	0	Toggle the built-in Administrator account with Net User /Active.	article
+published	computer/os/windows/n7/change_oem_info	OEM info	Change OEM info	0	Set OEM logo, manufacturer, model, and support fields under OEMInformation.	article
+published	computer/os/windows/n7/group_policy_unidentified_network	Unidentified network	Group policy unidentified network	0	Treat unidentified networks as private and let the user change network location via Group Policy.	article
+published	computer/os/windows/n7/troubleshoot/print_queue	Print queue	Print queue	0	Clear a stuck print queue by stopping the spooler, deleting spool files, and starting it again.	article
+published	computer/os/windows/n7/troubleshoot	Troubleshoot	Troubleshoot	0	Working notes on Troubleshoot: Print queue.	article
+published	computer/os/windows/n7/user_profile_directory	Profile directory	User profile directory	0	Find each account's profile path under ProfileList by SID.	article
+published	computer/os/windows/n7	7	7	0	Working notes on 7: Administrator account, Change OEM info, Group policy unidentified network, Troubleshoot, and User profile directory.	article
+published	computer/os/windows/n8/lock_screen	Lock screen	Lock screen	0	Hide the lock screen with the Do Not Display the Lock Screen policy.	article
+published	computer/os/windows/n8/lockscreen	Lockscreen	Lockscreen	0	Lock screen image paths under Web\\Screen, SystemData, and WinSxS.	article
+published	computer/os/windows/n8/notes	Notes	Notes	0	Shortcuts to the same program with the same AppId show only once per folder, in alphabetical order.	article
+published	computer/os/windows/n8/pin_files_to_start	Pin to Start	Pin files to Start	0	Pin files to Start by dropping shortcuts into the Start Menu Programs folder.	article
+published	computer/os/windows/n8/shortcuts	Shortcuts	Shortcuts	0	Windows 8 Start, Charms, app switcher, close, and screenshot keyboard shortcuts.	article
+published	computer/os/windows/n8/start_screen_background_colour	Start colour	Start screen background colour	0	Set Start screen colour with MSOoBE.exe, then kill it and restart Explorer.	article
+published	computer/os/windows/n8/user_account_picture	Account picture	User account picture	0	Default user account picture files, sizes, and formats under ProgramData.	article
+published	computer/os/windows/n8/window_border_width	Border width	Window border width	0	Set BorderWidth and PaddedBorderWidth under WindowMetrics to 0.	article
+published	computer/os/windows/n8	8	8	0	Working notes on 8: Lock screen, Lockscreen, Pin files to Start, Shortcuts, Start screen background colour, and User account picture, and related topics.	article
+published	computer/os/windows/navigation_pane	Navigation Pane	Navigation Pane	0	Open Explorer rooted at a path, hide Favorites, Libraries, and Network in the navigation pane on x86 and x64, or show all folders.	article
+published	computer/os/windows/net	NET	NET	0	Create a local user with NET USER /ADD and add the user to a group with NET LOCALGROUP /add.	article
+published	computer/os/windows/network/delete_ghost_adapter_names	Ghost adapters	Delete ghost adapter names	0	Remove ghosted network adapter entries by deleting matching GUIDs from Control\\Network and Tcpip together.	article
+published	computer/os/windows/network/network_profiles	Network profiles	Network profiles	0	Rename or delete network profiles in the registry, and stop USB tethering from creating a new profile each connect.	article
+published	computer/os/windows/network/route_ip	Route IP	Route IP	0	Bind an extra IP to the loopback adapter with netsh int ip add addr, and remove it.	article
+published	computer/os/windows/network	Network	Network	0	Working notes on Network: Delete ghost adapter names, Network profiles, and Route IP.	article
+published	computer/os/windows/partitions/mount_boot_partition	Mount boot	Mount boot partition	0	Map and unmap the system boot partition with mountvol /s and /d, then browse it from an elevated Explorer.	article
+published	computer/os/windows/partitions	Partitions	Partitions	0	Working notes on Partitions: Mount boot partition.	article
+published	computer/os/windows/power_management/hibernation	Hibernation	Hibernation	0	Turn hibernation off and on with powercfg -h.	article
+published	computer/os/windows/power_management/notes	Notes	Notes	0	Open powercfg.cpl, list power schemes, and set the active profile by GUID.	article
+published	computer/os/windows/power_management/profile	Profile	Profile	0	Working notes on Profile.	article
+published	computer/os/windows/power_management	Power Management	Power Management	0	Working notes on Power Management: Hibernation and Profile.	article
+published	computer/os/windows/prepare_usb_media_os_installation	USB Install Media	Prepare USB Media for OS Installation	0	NTFS-format the USB, run bootsect.exe /nt60 /force /mbr from another drive, copy the install files, or use a recovery disc and replace files.	article
+published	computer/os/windows/prevent_password_change	Password Change	Prevent Password Change	0	Allow or deny a user changing their own password with net user /passwordchg:yes|no.	article
+published	computer/os/windows/readyboost/log	Log	Log	0	ReadyBoost Random Read and Write logs in Event Viewer.	article
+published	computer/os/windows/readyboost	ReadyBoost	ReadyBoost	0	Working notes on ReadyBoost: Log.	article
+published	computer/os/windows/recovery	Recovery	Recovery	0	Windows Recovery Environment layout, ReAgentC info/enable/disable, and reagentc /setosimage for Winre.wim and install.wim.	article
+published	computer/os/windows/redistributables/vc	VC	VC	0	Visual C++ redistributable downloads for 2013 and 2012 VC 11.	article
+published	computer/os/windows/redistributables	Redistributables	Redistributables	0	Working notes on Redistributables: VC.	article
+published	computer/os/windows/registry/last_location	Last location	Last location	0	Lastkey stores the last Registry Editor path, with My Computer\\ on XP and Computer\\ later.	article
+published	computer/os/windows/registry/user_sids	User SIDs	User SIDs	0	Map accounts to SIDs in ProfileList and hivelist, and list them with wmic useraccount.	article
+published	computer/os/windows/registry	Registry	Registry	0	Working notes on Registry: Last location and User SIDs.	article
+published	computer/os/windows/remote_assistance/port	Port	Port	0	Remote Assistance port 61950, changed via RDP-Tcp PortNumber.	article
+published	computer/os/windows/remote_assistance	Remote Assistance	Remote Assistance	0	Working notes on Remote Assistance: Port.	article
+published	computer/os/windows/remote_desktop/notes	Notes	Notes	0	Return a Remote Desktop session to the unlocked console with tscon /dest:console.	article
+published	computer/os/windows/remote_desktop/remote_desktop	Remote Desktop	Remote Desktop	0	Remote Desktop port 3389, connect as IP:Port, and in-session keyboard shortcuts.	article
+published	computer/os/windows/remote_desktop/settings	Settings	Settings	0	Center a Remote Desktop window with WinPosStr from screen size, window size, and Windows 8 border totals.	article
+published	computer/os/windows/remote_desktop	Remote Desktop	Remote Desktop	0	Working notes on Remote Desktop: Remote Desktop and Settings.	article
+published	computer/os/windows/remote_powershell/initialize	Initialize	Initialize	0	Enable PowerShell remoting, enter a PSSession, and start the RemoteRegistry service.	article
+published	computer/os/windows/remote_powershell	Remote PowerShell	Remote PowerShell	0	Working notes on Remote PowerShell: Initialize.	article
+published	computer/os/windows/remote_registry/requirements	Requirements	Requirements	0	Remote Registry needs SecurePipeServers permissions, the service running on both machines, and SMB/RPC ports.	article
+published	computer/os/windows/remote_registry	Remote Registry	Remote Registry	0	Working notes on Remote Registry: Requirements.	article
+published	computer/os/windows/reset_password	Reset Password	Reset Password	0	From recovery, replace osk.exe with cmd.exe so Win+U on the logon screen opens a prompt for net user admin *.	article
+published	computer/os/windows/robocopy	Robocopy	Robocopy	0	Robocopy /b /mir /xj /copyall flags for an OS backup, with /xd for Recycler and System volume information.	article
+published	computer/os/windows/run	Run	Run	0	Open the System page with control /name Microsoft.System, add a Run command via AppPath, and launch Remote Desktop with MSTSC.	article
+published	computer/os/windows/sc	SC	SC	0	Create an interactive own-process service with SC CREATE (cmd.exe or regedit.exe) and start it with SC start.	article
+published	computer/os/windows/search	Search	Search	0	Set a file extension PersistentHandler for content search, then query with content:<key>, optionally combined with a file match filter.	article
+published	computer/os/windows/server_2008/notes	Notes	Notes	0	Working notes on Notes.	article
+published	computer/os/windows/server_2008	Server 2008	Server 2008	0	Working notes on Server 2008.	article
+published	computer/os/windows/shortcut	Shortcut	Shortcut	0	Working notes on Shortcut.	article
+published	computer/os/windows/ssd_settings	SSD Settings	SSD Settings	0	TEMP and TMP at CU and LU, and MkLink /D Download under SoftwareDistribution to F:\\Win-8-Pro-x64_Updates.	article
+published	computer/os/windows/start	Start	Start	0	start /affinity uses per-processor bit flags, and start passes an empty title then the path and parameters.	article
+published	computer/os/windows/start_menu	Start Menu	Start Menu	0	Ctrl+Shift+right-click for the hidden Exit Explorer option.	article
+published	computer/os/windows/symlink	Symlink	Symlink	0	MkLink soft links are relative to the target; junctions are followed over the network; hard links share edits and are relative to CD.	article
+published	computer/os/windows/symlink_2	Symlink 2	Symlink Relative Paths	0	Relative symlink relativity is the link's current location; nested links only work inside the parent; /J is followed on the network, /D is not.	article
+published	computer/os/windows/system_account_cmd	System CMD	System Account CMD	0	Open a System command prompt with at /interactive on XP/2003, or psexec -i -s on 7/8.	article
+published	computer/os/windows/taskbar	Taskbar	Taskbar	0	User-pinned taskbar shortcuts live under %APPDATA%\\Microsoft\\Internet Explorer\\Quick Launch\\User Pinned\\TaskBar.	article
+published	computer/os/windows/telnet	Telnet	Telnet	0	Telnet -o opens a host at ip or domain name and port.	article
+published	computer/os/windows/time_auto_update	Time	Time Auto Update	0	NTP is UDP 123. Point Windows at time.nist.gov with net time /setsntp, then w32tm /config /update and /resync /rediscover.	article
+published	computer/os/windows/touch	Touch	Touch	0	Set LastWriteTime to now on every item in the current directory, or in the Chrome Apps Start Menu folder.	article
+published	computer/os/windows/unhide_folder	Unhide Folder	Unhide Folder	0	Clear hidden and system attributes with attrib -h -s, including /s for subdirectories and /d for directories.	article
+published	computer/os/windows/uninstall_tool	Uninstall Tool	Uninstall Tool	0	Microsoft KB 290301 for the Windows uninstall tool.	article
+published	computer/os/windows/update/catalog	Catalog	Catalog	0	Download updates from the Microsoft Update Catalog in Internet Explorer.	article
+published	computer/os/windows/update	Update	Update	0	Working notes on Update: Catalog.	article
+published	computer/os/windows/wsl/install	Install	Install	0	Install Windows Subsystem for Linux from the shell with wsl –install.	article
+published	computer/os/windows/wsl	WSL	WSL	0	Working notes on WSL: Install.	article
+published	computer/os/windows/xbox/save_location	Save location	Save location	0	Xbox captures default to {Video}\\Capture; change the path by moving the {Video} location.	article
+published	computer/os/windows/xbox	XBox	XBox	0	Working notes on XBox: Save location.	article
+published	computer/os/windows/xp/bootable_usb	Bootable USB	Bootable USB	0	Make a bootable USB from an ISO with Rufus.	article
+published	computer/os/windows/xp/service_pack_identifier_registry	CSDVersion	Service pack identifier registry	0	Read the service pack string from CSDVersion under CurrentVersion.	article
+published	computer/os/windows/xp	XP	XP	0	Working notes on XP: Bootable USB and Service pack identifier registry.	article
+published	computer/os/windows	Windows	Windows	0	Windows notes: setup, shell, registry, networking, partitions, and fixes across XP through 10 and Server 2008.	article
+published	computer/os/android/hibernate_and_freeze	Hibernate & Freeze	Hibernate & Freeze	0	Working notes on Hibernate & Freeze: am force-stop package.name, am start package.name, pm disable package.name, and pm enable package.name.	article

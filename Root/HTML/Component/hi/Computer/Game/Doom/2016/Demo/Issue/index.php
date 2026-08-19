@@ -1,8 +1,6 @@
-<?php $alt='समस्याएँ'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<p>
-		समस्याओं की सूची निम्न है:
+		Doom 2016 डेमो चलाते समय मिली समस्याएँ।
 	</p>
 	<h3>कॉपीराइट और उचित उपयोग सूचना</h3>
 	<p>

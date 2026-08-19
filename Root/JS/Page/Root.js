@@ -1,3 +1,10 @@
+function homeMenuNodeTile(node) {
+	if(!node)
+		return null;
+	return node.querySelector(':scope > .home-menu-level > .item_block_container')
+		|| node.querySelector(':scope > .home-menu-tile-row > .home-menu-level > .item_block_container');
+}
+
 function syncHomeMenuConnectorStyles(menu) {
 	var nodes = menu.querySelectorAll('.home-menu-node');
 	var branches = [];
@@ -68,12 +75,6 @@ function syncHomeMenuConnectorStyles(menu) {
 			var level = subtree.querySelector(':scope > .home-menu-level');
 			if(level)
 				addPseudoSegment(branch, level, '::before', false);
-		}
-		var gameLine = node.querySelector(':scope > .home-menu-game-child-line');
-		if(gameLine) {
-			var gameLineRect = gameLine.getBoundingClientRect();
-			if(gameLineRect.width > 0)
-				branch.segments.push({ vertical: false, fixed: gameLineRect.top, start: gameLineRect.left, end: gameLineRect.right });
 		}
 		branches.push(branch);
 	});
@@ -177,8 +178,8 @@ function syncHomeMenuConnectors(settled) {
 		var siblings = parentSubtree.querySelectorAll(':scope > .home-menu-node');
 		if(siblings.length < 2)
 			return;
-		var source = node.querySelector(':scope > .home-menu-level > .item_block_container');
-		var firstChildSource = subtree.querySelector(':scope > .home-menu-node > .home-menu-level > .item_block_container');
+		var source = homeMenuNodeTile(node);
+		var firstChildSource = homeMenuNodeTile(subtree.querySelector(':scope > .home-menu-node'));
 		if(!source || !firstChildSource)
 			return;
 		var sourceRect = source.getBoundingClientRect();
@@ -201,7 +202,7 @@ function syncHomeMenuConnectors(settled) {
 	});
 
 	[].forEach.call(document.querySelectorAll('#home-menu .home-menu-node'), function(node) {
-		var source = node.querySelector(':scope > .home-menu-level > .item_block_container');
+		var source = homeMenuNodeTile(node);
 		if(!source)
 			return;
 
@@ -210,9 +211,23 @@ function syncHomeMenuConnectors(settled) {
 		var sourceCenter = sourceRect.top - nodeRect.top + sourceRect.height / 2;
 		node.style.setProperty('--home-node-center-y', sourceCenter + 'px');
 
+		var subtreeAll = node.querySelector(':scope > .home-menu-subtree');
 		var subtree = node.querySelector(':scope > .home-menu-subtree:not([hidden])');
+		var parentSubtree = node.parentElement;
+		var siblingCount = parentSubtree && parentSubtree.classList.contains('home-menu-subtree')
+			? parentSubtree.querySelectorAll(':scope > .home-menu-node').length
+			: 0;
+		var bottomConnector = siblingCount > 1 && !!subtreeAll;
+		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
+
+		if(bottomConnector) {
+			var parentLineXCollapsed = sourceRect.left - nodeRect.left + sourceRect.width / 2;
+			var lineOriginYCollapsed = sourceRect.bottom - nodeRect.top + 8;
+			node.style.setProperty('--home-bottom-line-start-y', lineOriginYCollapsed + 'px');
+			node.style.setProperty('--home-bottom-line-x', parentLineXCollapsed + 'px');
+		}
+
 		if(!subtree) {
-			node.classList.remove('home-menu-connector-bottom');
 			node.classList.remove('home-menu-group-connector');
 			node.classList.remove('home-menu-connector-alternate');
 			node.style.removeProperty('--home-line-height');
@@ -221,12 +236,6 @@ function syncHomeMenuConnectors(settled) {
 
 		var directNodes = subtree.querySelectorAll(':scope > .home-menu-node');
 		var directNode = directNodes.length ? directNodes[directNodes.length - 1] : null;
-		var parentSubtree = node.parentElement;
-		var siblingCount = parentSubtree && parentSubtree.classList.contains('home-menu-subtree')
-			? parentSubtree.querySelectorAll(':scope > .home-menu-node').length
-			: 0;
-		var bottomConnector = siblingCount > 1 && !node.classList.contains('home-menu-node-game');
-		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		var parentLineX = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-center')) || 19;
 		var lineOriginY = sourceCenter;
@@ -234,7 +243,7 @@ function syncHomeMenuConnectors(settled) {
 			parentLineX = sourceRect.left - nodeRect.left + sourceRect.width / 2;
 			lineOriginY = sourceRect.bottom - nodeRect.top + 8;
 			var firstChild = directNodes.length ? directNodes[0] : null;
-			var firstChildSource = firstChild ? firstChild.querySelector(':scope > .home-menu-level > .item_block_container') : null;
+			var firstChildSource = homeMenuNodeTile(firstChild);
 			if(firstChildSource) {
 				var firstChildRect = firstChild.getBoundingClientRect();
 				var childSourceOffset = firstChildSource.getBoundingClientRect().left - firstChildRect.left;
@@ -244,7 +253,7 @@ function syncHomeMenuConnectors(settled) {
 			node.style.setProperty('--home-bottom-line-x', parentLineX + 'px');
 		}
 		[].forEach.call(directNodes, function(child) {
-			var childSource = child.querySelector(':scope > .home-menu-level > .item_block_container');
+			var childSource = homeMenuNodeTile(child);
 			if(!childSource)
 				return;
 			var childRect = child.getBoundingClientRect();
@@ -262,7 +271,7 @@ function syncHomeMenuConnectors(settled) {
 		var groupTop = Infinity;
 		var groupBottom = -Infinity;
 		[].forEach.call(directNodes, function(child) {
-			var childSource = child.querySelector(':scope > .home-menu-level > .item_block_container');
+			var childSource = homeMenuNodeTile(child);
 			if(!childSource)
 				return;
 			var childSourceRect = childSource.getBoundingClientRect();
@@ -283,8 +292,8 @@ function syncHomeMenuConnectors(settled) {
 		node.classList.toggle('home-menu-group-connector', wrappedGroup);
 
 		var target = directNode
-			? directNode.querySelector(':scope > .home-menu-level > .item_block_container')
-			: subtree.querySelector(':scope > .home-menu-level > .item_block_container');
+			? homeMenuNodeTile(directNode)
+			: homeMenuNodeTile(subtree.querySelector(':scope > .home-menu-node')) || subtree.querySelector(':scope > .home-menu-level > .item_block_container');
 
 		if(!target) {
 			node.style.removeProperty('--home-line-height');
@@ -318,31 +327,7 @@ function syncHomeMenuConnectors(settled) {
 		}
 		node.style.setProperty('--home-line-height', Math.max(0, targetCenter - lineOriginY) + 'px');
 
-		if(node.classList.contains('home-menu-node-game')) {
-			var game = node.querySelector(':scope > .home-menu-level > [data-target="computer/game"]');
-			if(game) {
-				var gameRect = game.getBoundingClientRect();
-				var lineStart = gameRect.bottom - nodeRect.top + 8;
-				var lineCenterX = gameRect.left - nodeRect.left + gameRect.width / 2;
-				var targetLevel = target.parentElement;
-				var targetLevelRect = targetLevel.getBoundingClientRect();
-				var targetOffsetX = targetRect.left - targetLevelRect.left;
-				var childLevelLeft = lineCenterX + 36 - targetOffsetX;
-				targetLevel.style.setProperty('--home-game-child-left', childLevelLeft + 'px');
 
-				targetRect = target.getBoundingClientRect();
-				var elbowY = targetRect.top - nodeRect.top + targetRect.height / 2;
-				var targetEdgeX = targetRect.left - nodeRect.left - 8;
-				var elbowLeft = Math.min(lineCenterX, targetEdgeX);
-				var elbowWidth = Math.abs(lineCenterX - targetEdgeX);
-				node.style.setProperty('--home-game-line-start-y', lineStart + 'px');
-				node.style.setProperty('--home-game-line-height', Math.max(0, elbowY - lineStart) + 'px');
-				node.style.setProperty('--home-game-line-x', lineCenterX + 'px');
-				node.style.setProperty('--home-game-elbow-y', elbowY + 'px');
-				node.style.setProperty('--home-game-elbow-left', elbowLeft + 'px');
-				node.style.setProperty('--home-game-elbow-width', elbowWidth + 'px');
-			}
-		}
 	});
 
 	syncHomeMenuConnectorStyles(menu);
@@ -372,6 +357,9 @@ function root() {
 			return;
 
 		button.setAttribute('data-home-menu-initialized', 'true');
+		var glyph = button.querySelector('span');
+		if(glyph && !glyph.textContent)
+			glyph.textContent = button.getAttribute('aria-expanded') == 'false' ? '+' : '\u2212';
 		button.addEventListener('click', function() {
 			var target = document.getElementById(button.getAttribute('aria-controls'));
 			if(!target)
@@ -380,6 +368,9 @@ function root() {
 			var expanded = button.getAttribute('aria-expanded') == 'true';
 			button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
 			button.setAttribute('aria-label', (expanded ? 'Expand ' : 'Collapse ') + button.getAttribute('data-home-menu-label'));
+			var glyph = button.querySelector('span');
+			if(glyph)
+				glyph.textContent = expanded ? '+' : '\u2212';
 			target.hidden = expanded;
 			requestAnimationFrame(syncHomeMenuConnectors);
 		});

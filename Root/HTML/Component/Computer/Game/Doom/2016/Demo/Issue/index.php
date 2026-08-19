@@ -1,8 +1,6 @@
-<?php $alt='Issues'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
 		<p>
-		Following is list of issues:
+		Problems found while running the Doom 2016 demo.
 	</p>
 	<h3>Copyright and fair-use notice</h3>
 	<p>

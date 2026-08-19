@@ -116,7 +116,7 @@ else:
 		A <strong>fixed computer</strong> has its procedure built into its physical structure. A beam balance always compares weights. Changing its task requires changing the mechanism itself.
 	</p>
 	<p>
-		A <strong>programmable computer</strong> receives its instructions as information. Changing those instructions changes the task without rebuilding the machine.
+		A <strong>programmable computer</strong> receives its instructions as information, from a separate unit. Changing those instructions changes the task without rebuilding the machine.
 	</p>
 	<p>
 		The Jacquard loom showed this principle with punched cards that controlled different woven patterns. The loom remained the same, but changing the cards changed what it produced.
