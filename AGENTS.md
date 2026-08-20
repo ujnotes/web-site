@@ -9,6 +9,12 @@ The homepage tree specification applies recursively to every branch and takes pr
 - Operational dirs stay lowercase (`root`, `interim`, `public`, `config`). Public-facing topic names stay capitalized (`World`, `Philosophy`, `Life`). See `H:\AGENTS.md` section "Path casing".
 - `interim` and `public` are entirely lowercase.
 
+## Production deploy trigger
+
+- `ujnotes.com` deploys when `ujnotes/web-public` `main` is pushed (Firebase Hosting GitHub Action).
+- That push is manual: local `publish-notion.ps1` / `publish-notion-subtree.ps1` in `H:\Website\project`, or the `Publish page from Source` `workflow_dispatch` on `ujnotes/web`.
+- Notion database polling (15-minute cron) is parked. Do not restore it. The planned replacement is a URL hook / dashboard trigger.
+
 ## Local vs production
 
 - `ujnotes.local` renders live PHP from `root/`. `ujnotes.com` serves baked HTML from `web-public`. Listing tiles stay on `/resource/placeholder.svg` until the parent listing is republished; publishing only the child article is not enough.
