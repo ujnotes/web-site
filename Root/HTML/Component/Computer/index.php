@@ -12,7 +12,7 @@
 		But what is a computer?
 	</p>
 	<p>
-		The word can be separated into <strong>'compute' + 'er'</strong>.
+		<strong>The word can be separated into 'compute' + 'er'.</strong>
 	</p>
 	<p>
 		Just as a teacher is one who teaches, a computer is one that computes.
