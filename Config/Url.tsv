@@ -19,7 +19,6 @@ menu
 	launcher-icon-2x	png
 	launcher-icon-3x	png
 	launcher-icon-4x	png
-	root	jpg
 resource/	external	svg
 world/philosophy/	consciousness	jpg
 world/philosophy/consciousness/	free_will	jpg
@@ -42,16 +41,6 @@ world/philosophy/	decision	jpg
 world/philosophy/	learning	jpg
 world/philosophy/	model	jpg
 world/philosophy/	program	jpg
-	roadmap	jpg
-	timeline	jpg
-	logo	jpg
-	faq	jpg
-	feedback	jpg
-	license	jpg
-	changelog	jpg
-	about	jpg
-	about_me	jpg
-	about_site	jpg
 world/philosophy/	hindu	jpg
 	computer	jpg
 computer/	mechanical-computer	svg

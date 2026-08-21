@@ -47,18 +47,23 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^resource/(.+)$ Resource/$1 [L]
 
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1/index.jpg -f
 RewriteRule ^(.*?)\.jpg$ Resource/$1/index.jpg [L]
 
 RewriteCond %{DOCUMENT_ROOT}/Resource/$1 -d
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1/index.svg -f
 RewriteRule ^(.*?)\.svg$ Resource/$1/index.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1.jpg -f
 RewriteRule ^(.+)\.jpg$ Resource/$1.jpg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1.png -f
 RewriteRule ^(.+)\.png$ Resource/$1.png [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/Resource/$1.svg -f
 RewriteRule ^(.+)\.svg$ Resource/$1.svg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
