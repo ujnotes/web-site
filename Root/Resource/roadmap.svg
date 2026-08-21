@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Roadmap</title><desc id="desc">A winding cyan path crosses a quiet landscape toward a small golden marker.</desc>
+  <defs><linearGradient id="bg" y2="1"><stop stop-color="#e7f1f3"/><stop offset="1" stop-color="#f4efe4"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 665C220 603 393 620 574 659S952 757 1600 620V900H0z" fill="#d9ddd2"/><path d="M0 720C292 653 490 725 738 756s486 13 862-81" fill="none" stroke="#40516f" stroke-width="8" opacity=".35"/>
+  <path d="M225 770C489 704 422 570 668 561s196-198 427-211 175-142 286-182" fill="none" stroke="#fff" stroke-width="54" stroke-linecap="round"/><path d="M225 770C489 704 422 570 668 561s196-198 427-211 175-142 286-182" fill="none" stroke="#56b4d1" stroke-width="13" stroke-linecap="round" stroke-dasharray="4 28"/>
+  <g fill="#f7f4ec" stroke="#40516f" stroke-width="10"><circle cx="439" cy="658" r="29"/><circle cx="788" cy="520" r="29"/><circle cx="1128" cy="345" r="29"/></g><g fill="#d0a85c"><circle cx="439" cy="658" r="10"/><circle cx="788" cy="520" r="10"/><circle cx="1128" cy="345" r="10"/></g>
+  <path d="M1379 172v170M1380 177l-112 47 112 48" fill="#d0a85c" stroke="#40516f" stroke-width="11" stroke-linejoin="round"/>
+</svg>

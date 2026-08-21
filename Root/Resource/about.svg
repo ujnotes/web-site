@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">About the project</title><desc id="desc">An open book holds a small constellation of connected ideas.</desc>
+  <defs><linearGradient id="bg" y2="1"><stop stop-color="#f7f3e9"/><stop offset="1" stop-color="#dcebef"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M241 653c216-67 399-42 559 37 160-79 343-104 559-37" fill="none" stroke="#69b7cf" stroke-width="9" opacity=".5"/>
+  <path d="M800 690c-130-94-283-126-459-94V268c188-25 342 15 459 111z" fill="#fff" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/><path d="M800 690c130-94 283-126 459-94V268c-188-25-342 15-459 111z" fill="#eef2eb" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/>
+  <g stroke="#56b4d1" stroke-width="9"><path d="M800 379l-154 74 89 112-158 51M800 379l161 90-82 111 153 45"/></g><g fill="#d0a85c" stroke="#40516f" stroke-width="8"><circle cx="800" cy="379" r="22"/><circle cx="646" cy="453" r="22"/><circle cx="735" cy="565" r="22"/><circle cx="577" cy="616" r="22"/><circle cx="961" cy="469" r="22"/><circle cx="879" cy="580" r="22"/><circle cx="1032" cy="625" r="22"/></g>
+</svg>

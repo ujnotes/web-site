@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Feedback</title><desc id="desc">A paper message travels out and returns as a gentle response.</desc>
+  <defs><linearGradient id="bg" y2="1"><stop stop-color="#e6f0f2"/><stop offset="1" stop-color="#f7f1e7"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M281 631l365-340 207 167-572 173z" fill="#fff" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/><path d="M281 631l319-84 46-256M600 547l132 95 121-184" fill="none" stroke="#56b4d1" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M874 287c224-81 419 20 451 191 23 122-54 228-188 249" fill="none" stroke="#40516f" stroke-width="18" stroke-linecap="round"/><path d="M1166 656l-30 72 77 23" fill="none" stroke="#40516f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#d0a85c"><circle cx="1000" cy="249" r="13"/><circle cx="1075" cy="240" r="13"/><circle cx="1150" cy="251" r="13"/></g>
+</svg>

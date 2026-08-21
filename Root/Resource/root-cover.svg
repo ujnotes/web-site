@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ujnotes home</title><desc id="desc">An open doorway of light connecting two quiet fields of thought.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f7f4ec"/><stop offset="1" stop-color="#dceaf0"/></linearGradient><linearGradient id="light" x1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e0b768" stop-opacity=".2"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><circle cx="800" cy="438" r="270" fill="#fff" opacity=".36"/>
+  <path d="M234 677C460 626 560 669 718 711M1366 677C1140 626 1040 669 882 711" fill="none" stroke="#69b7cf" stroke-width="7" opacity=".55"/>
+  <g fill="#f8f5ed" stroke="#40516f" stroke-width="13" stroke-linejoin="round"><path d="M584 724V244l216-68 216 68v480z"/><path d="M800 176v548"/></g>
+  <path d="M620 704V280l180-57v481z" fill="url(#light)" stroke="#56b4d1" stroke-width="9"/><path d="M980 704V280l-180-57v481z" fill="#edf1ee" stroke="#40516f" stroke-width="9"/>
+  <circle cx="718" cy="478" r="10" fill="#d0a85c"/><circle cx="882" cy="478" r="10" fill="#d0a85c"/>
+  <g fill="#56b4d1" stroke="#40516f" stroke-width="7"><circle cx="337" cy="650" r="25"/><circle cx="1263" cy="650" r="25"/></g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ujnotes logo</title><desc id="desc">A minimal U-shaped vessel holding a bright rising note.</desc>
+  <defs><radialGradient id="halo"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#eef3f1"/><stop offset="1" stop-color="#d8e9ef"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/><circle cx="800" cy="430" r="330" fill="url(#halo)"/>
+  <path d="M515 272v252c0 164 112 252 285 252s285-88 285-252V272" fill="none" stroke="#40516f" stroke-width="58" stroke-linecap="round"/>
+  <path d="M640 292v218c0 98 61 147 160 147s160-49 160-147V292" fill="none" stroke="#56b4d1" stroke-width="30" stroke-linecap="round"/>
+  <path d="M800 573V206" stroke="#d0a85c" stroke-width="22" stroke-linecap="round"/><circle cx="800" cy="190" r="44" fill="#d0a85c" stroke="#40516f" stroke-width="12"/>
+</svg>

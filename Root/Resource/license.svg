@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">License</title><desc id="desc">A clean document bearing a trusted seal.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f7f3e9"/><stop offset="1" stop-color="#ddecef"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M462 137h487l189 189v437H462z" fill="#fff" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/><path d="M949 137v189h189" fill="#d8edf2" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/>
+  <g stroke="#69b7cf" stroke-width="13" stroke-linecap="round"><path d="M590 348h242"/><path d="M590 422h389"/><path d="M590 496h300"/></g>
+  <circle cx="970" cy="628" r="113" fill="#f6dfaa" stroke="#40516f" stroke-width="14"/><circle cx="970" cy="628" r="79" fill="none" stroke="#d0a85c" stroke-width="10"/><path d="M918 628l34 35 72-78" fill="none" stroke="#40516f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M918 727l-33 88 85-42 85 42-33-88" fill="#56b4d1" stroke="#40516f" stroke-width="12" stroke-linejoin="round"/>
+</svg>

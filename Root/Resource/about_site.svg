@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">About this site</title><desc id="desc">A browser window reveals the simple structure beneath a website.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f6f1e7"/><stop offset="1" stop-color="#dcebef"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="260" y="162" width="1080" height="610" rx="34" fill="#fff" stroke="#40516f" stroke-width="14"/><path d="M260 280h1080" stroke="#40516f" stroke-width="14"/>
+  <g fill="#d0a85c"><circle cx="325" cy="221" r="17"/><circle cx="380" cy="221" r="17"/><circle cx="435" cy="221" r="17"/></g><rect x="532" y="197" width="654" height="48" rx="24" fill="#e2edf0"/>
+  <path d="M544 425l-101 87 101 87M1056 425l101 87-101 87" fill="none" stroke="#56b4d1" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path d="M870 372L730 652" stroke="#40516f" stroke-width="22" stroke-linecap="round"/>
+  <g fill="#d9edf2" stroke="#40516f" stroke-width="9"><circle cx="800" cy="346" r="29"/><circle cx="800" cy="681" r="29"/></g>
+</svg>

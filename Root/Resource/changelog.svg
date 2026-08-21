@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Changelog</title><desc id="desc">Layered pages reveal a sequence of small, ordered changes.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e0edf0"/><stop offset="1" stop-color="#f6f1e7"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <g stroke="#40516f" stroke-width="13" stroke-linejoin="round"><path d="M515 210h557v525H515z" fill="#d6e8ec" transform="rotate(8 793 473)"/><path d="M473 193h557v525H473z" fill="#edf1e9" transform="rotate(-5 751 456)"/><path d="M516 170h557v545H516z" fill="#fff"/></g>
+  <path d="M666 332h256M666 443h256M666 554h256" stroke="#69b7cf" stroke-width="14" stroke-linecap="round"/>
+  <g fill="#d0a85c" stroke="#40516f" stroke-width="9"><circle cx="600" cy="332" r="23"/><circle cx="600" cy="443" r="23"/><circle cx="600" cy="554" r="23"/></g><path d="M600 355v65M600 466v65" stroke="#40516f" stroke-width="9"/>
+  <path d="M1123 610a128 128 0 1 1-36-88" fill="#f7f4ec" stroke="#40516f" stroke-width="14" stroke-linecap="round"/><path d="M1087 479l7 58-59-1" fill="none" stroke="#40516f" stroke-width="14" stroke-linecap="round"/><path d="M995 610v-69M995 610l54 34" stroke="#56b4d1" stroke-width="15" stroke-linecap="round"/>
+</svg>

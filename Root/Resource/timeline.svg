@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Timeline</title><desc id="desc">A sequence of milestones connected across a calm field.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f7f4ec"/><stop offset="1" stop-color="#dfecef"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M170 456h1260" stroke="#40516f" stroke-width="12" stroke-linecap="round"/><path d="M223 456h1112" stroke="#56b4d1" stroke-width="5" stroke-dasharray="3 25" stroke-linecap="round"/>
+  <g fill="#f7f4ec" stroke="#40516f" stroke-width="11"><circle cx="290" cy="456" r="38"/><circle cx="620" cy="456" r="38"/><circle cx="950" cy="456" r="38"/><circle cx="1280" cy="456" r="38"/></g>
+  <g fill="#56b4d1"><circle cx="290" cy="456" r="13"/><circle cx="620" cy="456" r="13"/><circle cx="950" cy="456" r="13"/></g><circle cx="1280" cy="456" r="13" fill="#d0a85c"/>
+  <g fill="none" stroke="#69b7cf" stroke-width="8" stroke-linecap="round"><path d="M290 394v-95h150"/><path d="M620 518v100h150"/><path d="M950 394v-132h150"/><path d="M1280 518v66h110"/></g>
+  <g fill="#40516f"><circle cx="440" cy="299" r="10"/><circle cx="770" cy="618" r="10"/><circle cx="1100" cy="262" r="10"/><circle cx="1390" cy="584" r="10"/></g>
+</svg>

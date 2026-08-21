@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">About me</title><desc id="desc">A quiet human profile surrounded by a few connected points.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#dfecef"/><stop offset="1" stop-color="#f5efe5"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="442" r="288" fill="#fff" opacity=".55"/><circle cx="800" cy="347" r="126" fill="#d9edf2" stroke="#40516f" stroke-width="14"/>
+  <path d="M492 722c29-174 142-266 308-266s279 92 308 266" fill="#56b4d1" opacity=".85" stroke="#40516f" stroke-width="14" stroke-linejoin="round"/>
+  <g fill="none" stroke="#69b7cf" stroke-width="8"><path d="M499 319C346 363 318 500 410 612"/><path d="M1101 319c153 44 181 181 89 293"/></g>
+  <g fill="#d0a85c" stroke="#40516f" stroke-width="8"><circle cx="476" cy="331" r="22"/><circle cx="373" cy="467" r="22"/><circle cx="428" cy="626" r="22"/><circle cx="1124" cy="331" r="22"/><circle cx="1227" cy="467" r="22"/><circle cx="1172" cy="626" r="22"/></g>
+</svg>
