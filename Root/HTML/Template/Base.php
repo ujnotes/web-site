@@ -60,6 +60,7 @@
 								$next_article_id = getNextArticleId($id);
 								$nav_previous_article = getUITranslation('nav_previous_article', $lang);
 								$nav_next_article = getUITranslation('nav_next_article', $lang);
+								$nav_bottom = getUITranslation('nav_bottom', $lang);
 								$nav_no_previous_article = getUITranslation('nav_no_previous_article', $lang);
 								$nav_no_next_article = getUITranslation('nav_no_next_article', $lang);
 							?>
@@ -74,11 +75,16 @@
 									<span class='image'><?php includeSVG('', 'Previous'); ?></span>
 								</a>
 								<h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $label) ?></h1>
-								<a id='article-next' class='article-title-nav XURL<?php echo ($next_article_id == '' ? ' article-title-nav-disabled' : '') ?>'
-									<?php if($next_article_id != '') { ?> href='<?php echo getComponentURL($next_article_id) ?>' data-target='<?php echo $next_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($next_article_id), ENT_QUOTES, 'UTF-8') ?>' title='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-label='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>'
-									<?php } else { ?> aria-label='<?php echo htmlspecialchars($nav_no_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-disabled='true' tabindex='-1'<?php } ?>>
-									<span class='image'><?php includeSVG('', 'Next'); ?></span>
-								</a>
+								<div class='article-title-nav-end'>
+									<button id='article-bottom' class='article-title-nav' type='button' title='<?php echo htmlspecialchars($nav_bottom, ENT_QUOTES, 'UTF-8') ?>' aria-label='<?php echo htmlspecialchars($nav_bottom, ENT_QUOTES, 'UTF-8') ?>' onclick='return scrollToArticleNavigation()'>
+										<span class='image'><?php includeSVG('', 'Next'); ?></span>
+									</button>
+									<a id='article-next' class='article-title-nav XURL<?php echo ($next_article_id == '' ? ' article-title-nav-disabled' : '') ?>'
+										<?php if($next_article_id != '') { ?> href='<?php echo getComponentURL($next_article_id) ?>' data-target='<?php echo $next_article_id ?>' data-title='<?php echo htmlspecialchars(getComponentLabel($next_article_id), ENT_QUOTES, 'UTF-8') ?>' title='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-label='<?php echo htmlspecialchars($nav_next_article, ENT_QUOTES, 'UTF-8') ?>'
+										<?php } else { ?> aria-label='<?php echo htmlspecialchars($nav_no_next_article, ENT_QUOTES, 'UTF-8') ?>' aria-disabled='true' tabindex='-1'<?php } ?>>
+										<span class='image'><?php includeSVG('', 'Next'); ?></span>
+									</a>
+								</div>
 							</div>
 							<div id='canvas-wrapper-inner-container'>
 								<?php require '../../HTML/Fragment/Menu.php'; ?>
