@@ -17,7 +17,7 @@ The homepage tree specification applies recursively to every branch and takes pr
 
 ## Local vs production
 
-- `ujnotes.local` renders live PHP from `root/`. `ujnotes.com` serves baked HTML from `web-public`. Listing tiles stay on `/resource/placeholder.svg` until the parent listing is republished; publishing only the child article is not enough.
+- `ujnotes.local` renders live PHP from `root/`. `interim.ujnotes.local` and `public.ujnotes.local` serve baked trees and must map canonical `/{slug}.jpg` (and `.json`) through `.htaccess` onto `/{slug}/index.*`. `ujnotes.com` does the same with Firebase rewrites. Listing tiles stay on `/resource/placeholder.svg` until the parent listing is republished; publishing only the child article is not enough.
 - Never edit `web-public` / GitHub raw HTML by hand (no search-replace on `build/public/*.html`). Production files are minify output. Always render into `interim`, let Tiggu minify into `public`, then publish that. If a tile or script src is wrong, fix source or rerun Tiggu, then publish.
 
 - Homepage is slug `root` and bakes to `public/index.html`. It is not a Notion-queued article. Do not run `publish-notion.ps1 -Slug root` (that overwrites `Root.php` tree markup). Isolated child publishes do not rebuild homepage tiles.
