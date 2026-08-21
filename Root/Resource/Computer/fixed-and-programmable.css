@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: dark) {
+  .panel { fill: #1e2438; stroke: #d8e4f0; }
+  .machine { fill: #243044; stroke: #d8e4f0; }
+  .card { fill: #3d3420; stroke: #d8e4f0; }
+  .line, .beam, .heddle { stroke: #d8e4f0; }
+  .label, .hole, .ink-fill { fill: #d8e4f0; }
+  .note, .tiny { fill: #9aabbe; }
+  .wood { fill: #8a4e32; stroke: #d8e4f0; }
+  .metal { fill: #6a7a84; stroke: #d8e4f0; }
+  .brass { fill: #e0b056; stroke: #d8e4f0; }
+  .thread { stroke: #8aa0b0; }
+  .detail { stroke: #9aabbe; }
+  .cloth-a, .cloth-b { stroke: #d8e4f0; }
+  .weight { fill: #7ea0ac; stroke: #d8e4f0; }
+  .loom-face { fill: #2a3148; stroke: #d8e4f0; }
+  .shuttle { fill: #c56e4e; stroke: #d8e4f0; }
+  .hub { fill: #3a3424; }
+  .spoke, .gold-line { stroke: #e0b056; }
+  #clothA rect { fill: #c9a65a; }
+  #clothA path { stroke: #e07a72; }
+  #clothB rect { fill: #4a9aaa; }
+  #clothB path { stroke: #cfeee6; }
+}
