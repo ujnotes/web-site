@@ -1,5 +1,4 @@
 Path	Name	Extension
-menu		
 404		
 	manifest	json
 	script	js
@@ -19,18 +18,40 @@ menu
 	launcher-icon-2x	png
 	launcher-icon-3x	png
 	launcher-icon-4x	png
+	root	jpg
+	root-cover	svg
+	roadmap	jpg
+	roadmap	svg
+	timeline	jpg
+	timeline	svg
+	logo	jpg
+	logo	svg
+	faq	jpg
+	faq	svg
+	feedback	jpg
+	feedback	svg
+	license	jpg
+	license	svg
+	changelog	jpg
+	changelog	svg
+	about	jpg
+	about	svg
+	about_me	jpg
+	about_me	svg
+	about_site	jpg
+	about_site	svg
 resource/	external	svg
+	world	jpg
+	computer	jpg
+world/	philosophy	jpg
 world/philosophy/	consciousness	jpg
 world/philosophy/consciousness/	free_will	jpg
 world/philosophy/	god	jpg
 world/philosophy/god/	no_god	jpg
-world/philosophy/solution/	man-people-system	svg
 world/philosophy/	cognition	jpg
 world/philosophy/	information	jpg
 world/philosophy/	intelligence	jpg
 world/philosophy/	inference	jpg
-	world	jpg
-world/	philosophy	jpg
 world/philosophy/	solution	jpg
 world/philosophy/	problem	jpg
 world/philosophy/	death	jpg
@@ -42,10 +63,7 @@ world/philosophy/	learning	jpg
 world/philosophy/	model	jpg
 world/philosophy/	program	jpg
 world/philosophy/	hindu	jpg
-	computer	jpg
-computer/	mechanical-computer	svg
-computer/	input-processing-output	svg
-computer/	fixed-and-programmable	svg
+world/philosophy/solution/	man-people-system	svg
 computer/game/	index	jpg
 computer/game/doom/	index	jpg
 computer/game/doom/2016/	index	jpg
