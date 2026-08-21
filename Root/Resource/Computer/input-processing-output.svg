@@ -15,7 +15,7 @@
 			.label { fill: var(--ink); font: 700 25px system-ui, sans-serif; text-anchor: middle; }
 			.note { fill: var(--note); font: 18px system-ui, sans-serif; text-anchor: middle; }
 			:root {
-				--ink: #172033;
+				--ink: #40516f;
 				--note: #465166;
 				--fill: #d9ecff;
 				--process: #8fd3c7;

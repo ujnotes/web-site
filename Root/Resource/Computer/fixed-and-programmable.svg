@@ -98,30 +98,30 @@
     </pattern>
     <style
        id="style3">
-      .panel { fill: #f7fbff; stroke: #172033; stroke-width: 4; }
-      .machine { fill: #d9ecff; stroke: #172033; stroke-width: 5; stroke-linejoin: round; }
-      .card { fill: #fff3bf; stroke: #172033; stroke-width: 4; }
-      .line { fill: none; stroke: #172033; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .label { fill: #172033; font: 700 25px system-ui, sans-serif; text-anchor: middle; }
+      .panel { fill: #f7fbff; stroke: #40516f; stroke-width: 4; }
+      .machine { fill: #d9ecff; stroke: #40516f; stroke-width: 5; stroke-linejoin: round; }
+      .card { fill: #fff3bf; stroke: #40516f; stroke-width: 4; }
+      .line { fill: none; stroke: #40516f; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .label { fill: #40516f; font: 700 25px system-ui, sans-serif; text-anchor: middle; }
       .note { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }
-      .hole { fill: #172033; }
-      .wood { fill: #a95f3b; stroke: #172033; stroke-width: 4; stroke-linejoin: round; }
-      .metal { fill: #bfccd2; stroke: #172033; stroke-width: 4; stroke-linejoin: round; }
-      .brass { fill: #d9a13d; stroke: #172033; stroke-width: 3; }
+      .hole { fill: #40516f; }
+      .wood { fill: #a95f3b; stroke: #40516f; stroke-width: 4; stroke-linejoin: round; }
+      .metal { fill: #bfccd2; stroke: #40516f; stroke-width: 4; stroke-linejoin: round; }
+      .brass { fill: #d9a13d; stroke: #40516f; stroke-width: 3; }
       .thread { fill: none; stroke: #738994; stroke-width: 1.4; }
       .detail { fill: none; stroke: #465166; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
       .tiny { fill: #465166; font: 700 10px system-ui, sans-serif; letter-spacing: 1px; text-anchor: middle; }
-      .cloth-a { fill: url(#clothA); stroke: #172033; stroke-width: 3; }
-      .cloth-b { fill: url(#clothB); stroke: #172033; stroke-width: 3; }
-      .weight { fill: #688c98; stroke: #172033; stroke-width: 3; }
-      .loom-face { fill: #fff9e9; stroke: #172033; stroke-width: 4; }
-      .beam { stroke: #172033; stroke-linecap: round; stroke-width: 9; fill: none; }
-      .shuttle { fill: #bd6242; stroke: #172033; stroke-width: 3; }
+      .cloth-a { fill: url(#clothA); stroke: #40516f; stroke-width: 3; }
+      .cloth-b { fill: url(#clothB); stroke: #40516f; stroke-width: 3; }
+      .weight { fill: #688c98; stroke: #40516f; stroke-width: 3; }
+      .loom-face { fill: #fff9e9; stroke: #40516f; stroke-width: 4; }
+      .beam { stroke: #40516f; stroke-linecap: round; stroke-width: 9; fill: none; }
+      .shuttle { fill: #bd6242; stroke: #40516f; stroke-width: 3; }
       .hub { fill: #fff8e5; }
       .spoke { opacity: .55; stroke: #8e5925; stroke-width: 5; fill: none; }
       .gold-line { stroke: #d9a13d; stroke-width: 4; fill: none; }
-      .heddle { stroke: #172033; stroke-width: 8; fill: none; }
-      .ink-fill { fill: #172033; }
+      .heddle { stroke: #40516f; stroke-width: 8; fill: none; }
+      .ink-fill { fill: #40516f; }
       /* UJNOTES_BROWSER_DARK_MODE_START */
       @media (prefers-color-scheme: dark) {
         .panel { fill: #1e2438; stroke: #d8e4f0; }
