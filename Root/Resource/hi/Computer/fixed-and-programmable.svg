@@ -125,7 +125,7 @@
       .heddle { stroke: var(--ink); stroke-width: 8; fill: none; }
       .ink-fill { fill: var(--ink); }
       :root {
-        --ink: #172033;
+        --ink: #40516f;
         --note: #465166;
         --panel: #f7fbff;
         --fill: #d9ecff;

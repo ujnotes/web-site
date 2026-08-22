@@ -1,0 +1,15 @@
+.cover-credit {
+	margin: 6px 2px 14px;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #40516f;
+	text-align: right;
+}
+
+.cover-credit strong {
+	font-weight: 600
+}
+
+html.dark-mode .cover-credit {
+	color: #9aa8bd
+}

@@ -41,7 +41,7 @@
 		<?php home_menu_render_branch('computer'); ?>
 	</section>
 	<p id='home-image-disclaimer'>
-		Some images on this page are copyrighted by their respective owners. They are reproduced here in a limited, non-commercial, informational context under fair use. No ownership is claimed.
+		<strong>Image credits:</strong> Third-party images are used under their respective licenses or applicable copyright exceptions. Copyright remains with the respective owners. Where required, attribution and licensing information are provided with the image or its <a class='content-link XURL' href='/license' data-target='license' data-title='License'>source link</a>.
 	</p>
 </div>
 <div id='fb_components'>

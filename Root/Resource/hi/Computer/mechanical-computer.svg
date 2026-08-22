@@ -13,7 +13,7 @@
 			.formula { fill: var(--accent); font: italic 16.344px Georgia, 'Times New Roman', serif; }
 			.chevron { fill: var(--chevron); stroke: var(--ink); stroke-width: .081177; }
 			:root {
-				--ink: #172033;
+				--ink: #40516f;
 				--note: #465166;
 				--fill: #d9ecff;
 				--accent: #5aa9e6;
