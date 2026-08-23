@@ -71,4 +71,13 @@
 	if($line === '')
 		return;
 ?>
-<p class='cover-credit'><strong>Image:</strong> <?php echo $line; ?></p>
+<p class='cover-credit'>
+	<button type='button' class='cover-credit-toggle' aria-label='Image credit'>
+		<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='14' height='14' aria-hidden='true' focusable='false'>
+			<circle cx='8' cy='8' r='6.25' fill='none' stroke='currentColor' stroke-width='1.2'/>
+			<circle cx='8' cy='5.2' r='0.85' fill='currentColor'/>
+			<path fill='currentColor' d='M7.28 7.15h1.44v4.55H7.28z'/>
+		</svg>
+	</button>
+	<span class='cover-credit-popup'><?php echo $line; ?></span>
+</p>
