@@ -1,0 +1,26 @@
+.cover-image-tile {
+	height: auto;
+	width: 160px;
+	margin: 8px auto 12px;
+	padding-bottom: 0;
+	background: #f6f6f6;
+	box-shadow: none;
+}
+
+.cover-image-tile img {
+	width: 160px;
+	height: 110px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 4px;
+	display: block;
+}
+
+html.dark-mode .cover-image-tile {
+	background: #222244;
+	box-shadow: none;
+}
+
+.item_block_image_contain {
+	object-fit: contain;
+}

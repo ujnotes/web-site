@@ -21,6 +21,15 @@ An article image should express the central idea in one clear visual metaphor. I
 - Prefer an eye-level or slightly low viewpoint unless the idea requires another angle.
 - The image must remain legible as a small thumbnail.
 
+## Display role
+
+Article assets are either a full-width **hero** or a **tile** (listing thumbnail, and the same size on the article page).
+
+- Photographic 16:9 covers are heroes. They fill listing tiles with `object-fit: cover`.
+- Logos and marks are tiles. They never expand into the hero well; the article shows them at tile size with `object-fit: contain`.
+- SVG covers default to tile without a config row.
+- Raster logos and any crop/fit exception are recorded in `config/Image_display.tsv` (`slug`, `role`, `tile_fit`, `tile_position`). Leave a field blank to keep the default. Do not put this in `Image_credits.csv` or `Url.tsv`.
+
 ## Light and colour
 
 - Use directional natural light, window light or a restrained shaft of light when it supports the idea.
