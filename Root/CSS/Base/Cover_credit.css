@@ -21,8 +21,17 @@
 	transform: translateX(94px)
 }
 
+.cover-credit-anchor {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	pointer-events: auto
+}
+
 .cover-credit-toggle {
-	pointer-events: auto;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -39,17 +48,20 @@
 }
 
 .cover-credit-toggle:hover,
-.cover-credit-toggle:focus-visible {
+.cover-credit-toggle:focus-visible,
+.cover-credit.is-open .cover-credit-toggle {
 	opacity: 0.9;
 	outline: none
 }
 
 .cover-credit-popup {
 	position: absolute;
-	right: 22px;
-	bottom: 50%;
-	transform: translateY(50%);
-	max-width: min(340px, calc(100% - 28px));
+	top: 50%;
+	right: calc(100% + 6px);
+	left: auto;
+	transform: translateY(-50%);
+	width: max-content;
+	max-width: min(340px, 70vw);
 	padding: 6px 8px;
 	border-radius: 6px;
 	background: rgba(255, 255, 255, 0.96);
@@ -62,11 +74,11 @@
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	z-index: 3;
 	transition: opacity 0.12s ease
 }
 
-.cover-credit:hover .cover-credit-popup,
-.cover-credit:focus-within .cover-credit-popup {
+.cover-credit.is-open .cover-credit-popup {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto
@@ -74,7 +86,7 @@
 
 .content-image-container:has(.cover-image-tile) + .cover-credit .cover-credit-popup {
 	right: auto;
-	left: 22px;
+	left: calc(100% + 6px);
 	text-align: left
 }
 
