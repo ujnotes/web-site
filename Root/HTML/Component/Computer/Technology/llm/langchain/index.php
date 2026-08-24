@@ -4,7 +4,7 @@
 		JSON mode — the prompt must also contain the term <code class='inline'>json</code>.
 	</p>
 	<h2>If passed directly</h2>
-	<pre class='indent-c'><code class='block'>UserWarning: WARNING! response_format is not default parameter. 
+	<pre class='indent-c'><code class='block'>UserWarning: WARNING! response_format is not default parameter.
                 response_format was transferred to model_kwargs.
                 Please confirm that response_format is what you intended.</code></pre>
 	<p>
