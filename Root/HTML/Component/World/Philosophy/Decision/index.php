@@ -1,5 +1,5 @@
-<?php $alt='A directional sign representing a decision'; require('../HTML/Fragment/Component_cover.php') ?>
-<h2 class='center'><?php echo $desc; ?></h2>
+<?php $alt='Decision'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<h3>What is a decision?</h3>
 	<p>
@@ -156,7 +156,7 @@
 		Responsibility remains with the people and institutions that design, deploy and benefit from the system.
 	</p>
 	<p>
-		A machine may rank applicants, recommend treatment or control a vehicle. Its output results from a <a class="content-link XURL" href="/world/philosophy/program" data-target="world/philosophy/program" data-title="program">program</a>, a model, training data, chosen goals and rules about how the output is used.
+		A machine may rank applicants, recommend treatment or control a vehicle. Its output results from a <a class="content-link XURL" href="/computer/program" data-target="computer/program" data-title="program">program</a>, a model, training data, chosen goals and rules about how the output is used.
 	</p>
 	<p>
 		Calling the result “the computer's decision” can hide these human choices.

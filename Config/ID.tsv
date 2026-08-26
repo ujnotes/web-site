@@ -33,10 +33,8 @@ published	world/philosophy/inference	Inference	Inference	0	How we reach conclusi
 published	world/philosophy/intelligence	Intelligence	Intelligence	0	How patterns are detected, reasoning works under uncertainty, and solutions are reached.	article
 published	world/philosophy/learning	Learning	Learning	0	How experience changes memory, skill, models, and future behaviour.	article
 published	world/philosophy/model	Model	Model	0	How simplified representations help minds and machines explain, predict, and act.	article
-published	world/philosophy/algorithm	Algorithm	Algorithm	0	What a definite procedure is, how it works, and why correctness and limits matter.	article
-published	world/philosophy/program	Program	Program	0	How instructions turn a general-purpose computer into a particular tool.	article
 published	world/philosophy/decision	Decision	Decision	0	How possible actions are compared and one course is chosen under uncertainty.	article
-publish	computer/technology/artificial_intelligence	Artificial Intelligence	Artificial Intelligence	0	What artificial intelligence can do, how it learns, and what its limits and responsibilities are.	article
+published	computer/technology/artificial_intelligence	Artificial Intelligence	Artificial Intelligence	0	What artificial intelligence can do, how it learns, and what its limits and responsibilities are.	article
 draft	world/philosophy/possessions	Possessions	Possessions	0	Possessions	article
 draft	world/philosophy/possessions/money	Money	Money	0	Money	article
 draft	world/philosophy/society	Society	Society	0	Society	article
@@ -49,6 +47,9 @@ draft	world/philosophy/violence/terrorism	Terrorism	Terrorism	0	Terrorism	articl
 draft	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	Islamic Terrorism	0	Islamic Terrorism	article
 draft	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS		article
 published	computer	Computer	Computer	0	Computer : the information processor	article
+published	computer/algorithm	Algorithm	Algorithm	0	What a definite procedure is, how it works, and why correctness and limits matter.	article
+published	computer/algorithm/binary_search	Binary Search	Binary Search Algorithm	0	Binary search: split the range, compare against the first-half max, discard a half, repeat.	article
+published	computer/program	Program	Program	0	How instructions turn a general-purpose computer into a particular tool.	article
 published	computer/os	OS	OS	0	Operating system notes from daily use: commands, setup, and fixes across *nix, Android, Windows, macOS, iOS, and Cygwin.	article
 published	computer/os/nix	*Nix	*Nix	0	*nix notes: shells, ssh, packages, filesystem commands, and day-to-day system management.	article
 published	computer/os/nix/at	at	at	0	Schedule a one-shot job with at, including a job a minute from now.	article
@@ -551,7 +552,6 @@ published	computer/programming/wix/notes	Notes	Notes	0	Working notes on Notes: G
 published	computer/programming/wix/upgrade_support	Upgrade Support	Upgrade Support	0	Working notes on Upgrade Support: <Product Id=\"*\", Version no. (first 3 parts) must change, and <MajorUpgrade.	article
 published	computer/programming/xml	XML	XML	0	Working notes on XML: XSLT.	article
 published	computer/programming/xml/xslt	XSLT	XSLT	0	**XSL.** EXtensible Stylesheet Language or XML Style Sheets.	article
-published	computer/program	Program	Program	0	Notes on programs in daily use: tools, settings, and how they behave.	article
 published	computer/program/adobe_illustrator	Adobe Illustrator	Adobe Illustrator	0	Working notes on Adobe Illustrator: Export multiple web sizes and Tutorial.	article
 published	computer/program/adobe_illustrator/export_multiple_web_sizes	Export multiple web sizes	Export multiple web sizes	0	Working notes on Export multiple web sizes: scaleTo = scaleTo/document.width*100.0;, var i, layer,, if (!resFolder.exists), for (i = document.layers.length - 1; i >= 0; i--), and for (i = document.layers.length - 1; i >= 0; i--).	article
 published	computer/program/adobe_illustrator/notes	Notes	Notes	0	Shift + Ctrl + D.	article
@@ -1032,8 +1032,6 @@ published	computer/program/zbrush	ZBrush	ZBrush	0	Working notes on ZBrush: iPad.
 published	computer/program/zbrush/ipad	iPad	iPad	0	Working notes on iPad.	article
 published	computer/program/zbrush/ipad/notes	Notes	Notes	0	Working notes on Notes: Supported formats.	article
 published	computer/technology	Technology	Technology	0	Working notes on web, hardware, licenses, ML, microservices, and software design.	article
-published	computer/technology/algorithms	Algorithms	Algorithms	0	Working notes on Algorithms: Binary Search Algorithm.	article
-published	computer/technology/algorithms/binary_search	Binary Search	Binary Search Algorithm	0	Binary search: split the range, compare against the first-half max, discard a half, repeat.	article
 published	computer/technology/cap_theorem	CAP Theorem	CAP Theorem — Consistency, Availability, and Partition	0	CAP: a distributed system cannot simultaneously provide consistency, availability, and partition tolerance.	article
 published	computer/technology/design	Design	Design	0	Working notes on Design: SOLID.	article
 published	computer/technology/design/solid	SOLID	SOLID	0	SOLID object-oriented design: SRP, OCP, LSP, ISP, DIP — maintainability, reuse, scale, flexibility.	article
@@ -1048,10 +1046,10 @@ published	computer/technology/license	License	Open Source License	0	Open-source 
 published	computer/technology/llm	LLM	LLM	0	Working notes on LLM: LangChain and Prompting.	article
 published	computer/technology/llm/langchain	LangChain	LangChain	0	ChatOpenAI JSON mode via model_kwargs; the prompt must contain the word json, and passing response_format directly warns but still works.	article
 published	computer/technology/llm/prompting	Prompting	Prompting	0	Prompting: think in steps, keep it short, avoid repetition, and give examples.	article
-publish	computer/technology/artificial_intelligence/machine_learning	Machine Learning	Machine Learning	0	How data helps shape a learned computer program, how training works, and where machine learning fits within artificial intelligence.	article
-publish	computer/technology/artificial_intelligence/machine_learning/cnn	CNN	Image Classification — Intro to CNN	0	CNNs learn features from raw pixels: input feature map (width, height, RGB depth) and a stack of convolution, ReLU, pooling.	article
-publish	computer/technology/artificial_intelligence/machine_learning/links	Links	Links	0	Working notes on Links.	article
-publish	computer/technology/artificial_intelligence/machine_learning/notes	Notes	Notes	0	Machine learning as training a program to predict from similar data: examples, features, labels, and models.	article
+published	computer/technology/artificial_intelligence/machine_learning	Machine Learning	Machine Learning	0	How data helps shape a learned computer program, how training works, and where machine learning fits within artificial intelligence.	article
+published	computer/technology/artificial_intelligence/machine_learning/cnn	CNN	Image Classification — Intro to CNN	0	CNNs learn features from raw pixels: input feature map (width, height, RGB depth) and a stack of convolution, ReLU, pooling.	article
+published	computer/technology/artificial_intelligence/machine_learning/links	Links	Links	0	Working notes on Links.	article
+published	computer/technology/artificial_intelligence/machine_learning/notes	Notes	Notes	0	Machine learning as training a program to predict from similar data: examples, features, labels, and models.	article
 published	computer/technology/microservices	Microservices	Microservices	0	Working notes on Microservices: Architecture Types, Components, Event Sourcing, and Saga.	article
 published	computer/technology/microservices/architecture_types	Architecture Types	Architecture Types	0	Microservice architecture types: strangler, saga (orchestrated or choreographed), and aggregator.	article
 published	computer/technology/microservices/components	Components	Components	0	Sixteen microservices components, from single-responsibility services and an API gateway through saga-adjacent event-driven pieces and versioning.	article

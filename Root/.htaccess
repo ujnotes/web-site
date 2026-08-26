@@ -28,6 +28,14 @@ RewriteRule ^computer/dos$ computer/os [R=301,L]
 RewriteRule ^computer/dprogram$ computer/program [R=301,L]
 RewriteRule ^computer/dprogramming$ computer/programming [R=301,L]
 
+RewriteRule ^world/philosophy/algorithm$ computer/algorithm [R=301,L]
+RewriteRule ^world/philosophy/program$ computer/program [R=301,L]
+RewriteRule ^world/philosophy/artificial-intelligence$ computer/technology/artificial_intelligence [R=301,L]
+RewriteRule ^computer/technology/algorithms$ computer/algorithm [R=301,L]
+RewriteRule ^computer/technology/algorithms/(.+)$ computer/algorithm/$1 [R=301,L]
+RewriteRule ^computer/technology/machine_learning$ computer/technology/artificial_intelligence/machine_learning [R=301,L]
+RewriteRule ^computer/technology/machine_learning/(.+)$ computer/technology/artificial_intelligence/machine_learning/$1 [R=301,L]
+
 
 
 RewriteRule ^style.css$ Framework/CSS/Style.php [L]

@@ -229,15 +229,6 @@
 		<loc>https://ujnotes.com/world/philosophy/model</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/algorithm</loc>
-	</url>
-	<url>
-		<loc>https://ujnotes.com/world/philosophy/program</loc>
-	</url>
-	<url>
-		<loc>https://ujnotes.com/world/philosophy/artificial-intelligence</loc>
-	</url>
-	<url>
 		<loc>https://ujnotes.com/world/philosophy/decision</loc>
 	</url>
 <url>
@@ -254,6 +245,34 @@
 
 <url>
 	<loc>https://ujnotes.com/computer/game/doom/2016/demo/issue</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/technology/artificial_intelligence</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/algorithm</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/algorithm/binary_search</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/technology/artificial_intelligence/machine_learning/cnn</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/technology/artificial_intelligence/machine_learning/links</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/technology/artificial_intelligence/machine_learning/notes</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/technology/artificial_intelligence/machine_learning</loc>
 </url>
 
 </urlset>

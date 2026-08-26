@@ -1,5 +1,5 @@
-<?php $alt='A student taking notes while learning'; require('../HTML/Fragment/Component_cover.php') ?>
-<h2 class='center'><?php echo $desc; ?></h2>
+<?php $alt='Learning'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<h3>What is learning?</h3>
 	<p>
@@ -142,7 +142,7 @@
 		It may be shown correct answers, discover patterns without labels, or learn which actions lead to reward.
 	</p>
 	<p>
-		An <a class="content-link XURL" href="/world/philosophy/algorithm" data-target="world/philosophy/algorithm" data-title="algorithm">algorithm</a> determines how the model changes. Training data supplies experience. A measure of error or reward guides adjustment.
+		An <a class="content-link XURL" href="/computer/algorithm" data-target="computer/algorithm" data-title="algorithm">algorithm</a> determines how the model changes. Training data supplies experience. A measure of error or reward guides adjustment.
 	</p>
 	<p>
 		The system has learnt when this adjustment improves its behaviour on relevant new cases, not merely when it remembers its training examples.

@@ -1,127 +1,173 @@
+<?php $alt='Program'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
-		<p>
-		Notes on programs in daily use: tools, settings, and how they behave.
+		<h3>What is a program?</h3>
+	<p>
+		A program is an organized set of instructions that tells a computer what to do.
 	</p>
-	<h2>Topics</h2>
+	<p>
+		A computer may be able to add, compare, store, copy and communicate. A program arranges these basic abilities into a particular activity: calculating a bill, displaying a page, guiding a vehicle or generating a sentence.
+	</p>
+	<p>
+		The computer supplies the possible operations. The program selects and orders them.
+	</p>
+	<p>
+		In short, a program turns a general machine into a particular tool.
+	</p>
+	<h3>Is a program the same as an algorithm?</h3>
+	<p>
+		No.
+	</p>
+	<p>
+		An <a class="content-link XURL" href="/computer/algorithm" data-target="computer/algorithm" data-title="algorithm">algorithm</a> is a definite method for performing a task or solving a problem. A program is an expression of one or more algorithms in a form that a computer can execute.
+	</p>
+	<p>
+		The method for sorting names alphabetically is an algorithm. Its instructions written in Python, JavaScript or machine code form a program.
+	</p>
+	<p>
+		The same algorithm can be expressed through different programs. A single program can also contain many algorithms.
+	</p>
+	<h3>What is an instruction?</h3>
+	<p>
+		An instruction asks the computer to perform one available operation.
+	</p>
+	<p>
+		It may tell the computer to:
+	</p>
 	<ul class="list-bullet content-list">
-		<li><div><strong>Adobe Illustrator</strong></div></li>
-		<li><div><strong>Adobe Premiere Pro</strong></div></li>
-		<li><div><strong>Amazon Cloud Reader</strong></div></li>
-		<li><div><strong>AMD Crimson</strong></div></li>
-		<li><div><strong>Android Studio</strong></div></li>
-		<li><div><strong>Apache HTTPD</strong></div></li>
-		<li><div><strong>Apache Maven</strong></div></li>
-		<li><div><strong>Apache Tomcat</strong></div></li>
-		<li><div><strong>Appium</strong></div></li>
-		<li><div><strong>Applications</strong> — * Essentials in Bold.</div></li>
-		<li><div><strong>Atom</strong></div></li>
-		<li><div><strong>AWS</strong></div></li>
-		<li><div><strong>Blender</strong></div></li>
-		<li><div><strong>CertBot</strong></div></li>
-		<li><div><strong>Cloudflare</strong></div></li>
-		<li><div><strong>Codecs</strong> — Microsoft Windows.</div></li>
-		<li><div><strong>cPanel</strong></div></li>
-		<li><div><strong>Creative Alchemy</strong></div></li>
-		<li><div><strong>CVS</strong></div></li>
-		<li><div><strong>DaVinci Resolve</strong></div></li>
-		<li><div><strong>DB2</strong></div></li>
-		<li><div><strong>Dbeaver</strong></div></li>
-		<li><div><strong>DD-WRT</strong></div></li>
-		<li><div><strong>Docker</strong></div></li>
-		<li><div><strong>Drupal</strong></div></li>
-		<li><div><strong>Eclipse</strong></div></li>
-		<li><div><strong>ffmpeg</strong></div></li>
-		<li><div><strong>FileZilla - Client</strong></div></li>
-		<li><div><strong>Firebase</strong></div></li>
-		<li><div><strong>fly io</strong></div></li>
-		<li><div><strong>Free Download Manager</strong></div></li>
-		<li><div><strong>GIMP</strong></div></li>
-		<li><div><strong>Git</strong></div></li>
-		<li><div><strong>GitHub</strong></div></li>
-		<li><div><strong>GMail</strong></div></li>
-		<li><div><strong>Google Analytics</strong></div></li>
-		<li><div><strong>Google Apps</strong></div></li>
-		<li><div><strong>Google Chrome</strong></div></li>
-		<li><div><strong>Google Cloud</strong></div></li>
-		<li><div><strong>Google Drive</strong></div></li>
-		<li><div><strong>Google Maps</strong></div></li>
-		<li><div><strong>Google Search</strong></div></li>
-		<li><div><strong>Google Translate</strong></div></li>
-		<li><div><strong>Grub</strong></div></li>
-		<li><div><strong>GScript</strong></div></li>
-		<li><div><strong>GTalk</strong></div></li>
-		<li><div><strong>IE</strong></div></li>
-		<li><div><strong>Inkscape</strong></div></li>
-		<li><div><strong>Install location</strong> — [Product group].</div></li>
-		<li><div><strong>InstallShield</strong></div></li>
-		<li><div><strong>Internet Explorer</strong></div></li>
-		<li><div><strong>Java</strong></div></li>
-		<li><div><strong>JMeter</strong></div></li>
-		<li><div><strong>Keytool</strong></div></li>
-		<li><div><strong>Laravel</strong></div></li>
-		<li><div><strong>LLM</strong></div></li>
-		<li><div><strong>Mailgun</strong></div></li>
-		<li><div><strong>Maya</strong></div></li>
-		<li><div><strong>Mercurial</strong></div></li>
-		<li><div><strong>Mermaid</strong></div></li>
-		<li><div><strong>Microsoft Excel</strong></div></li>
-		<li><div><strong>Microsoft Office</strong></div></li>
-		<li><div><strong>Microsoft Outlook</strong></div></li>
-		<li><div><strong>Microsoft Remote Desktop</strong></div></li>
-		<li><div><strong>Microsoft Security Essentials</strong></div></li>
-		<li><div><strong>Microsoft SQL Server</strong></div></li>
-		<li><div><strong>Microsoft Visual Studio</strong></div></li>
-		<li><div><strong>Microsoft Word</strong></div></li>
-		<li><div><strong>MySQL</strong></div></li>
-		<li><div><strong>Netbeans</strong></div></li>
-		<li><div><strong>nextjs</strong></div></li>
-		<li><div><strong>Nitgen Access Manager</strong></div></li>
-		<li><div><strong>nodejs</strong></div></li>
-		<li><div><strong>Notepad++</strong></div></li>
-		<li><div><strong>OBS studio</strong></div></li>
-		<li><div><strong>OpenSSL</strong></div></li>
-		<li><div><strong>Origin</strong></div></li>
-		<li><div><strong>PHP</strong></div></li>
-		<li><div><strong>Pipefy</strong></div></li>
-		<li><div><strong>PostgreSQL</strong></div></li>
-		<li><div><strong>PowerShell</strong></div></li>
-		<li><div><strong>Putty</strong></div></li>
-		<li><div><strong>Python</strong></div></li>
-		<li><div><strong>Relive</strong></div></li>
-		<li><div><strong>Remote</strong> — 1. Remote Desktop.</div></li>
-		<li><div><strong>Reshade</strong></div></li>
-		<li><div><strong>RSync</strong></div></li>
-		<li><div><strong>Runpod</strong></div></li>
-		<li><div><strong>ScreenBright</strong></div></li>
-		<li><div><strong>Sed</strong></div></li>
-		<li><div><strong>Selenium</strong></div></li>
-		<li><div><strong>Sentry</strong></div></li>
-		<li><div><strong>SharePoint</strong></div></li>
-		<li><div><strong>Slack</strong></div></li>
-		<li><div><strong>Spring boot</strong></div></li>
-		<li><div><strong>Steam</strong></div></li>
-		<li><div><strong>SVN</strong></div></li>
-		<li><div><strong>SweetLow</strong></div></li>
-		<li><div><strong>TeamViewer</strong></div></li>
-		<li><div><strong>Tesseract</strong></div></li>
-		<li><div><strong>Unity</strong></div></li>
-		<li><div><strong>Utilities</strong> — DNS Benchmark.</div></li>
-		<li><div><strong>uTorrent</strong></div></li>
-		<li><div><strong>VI</strong></div></li>
-		<li><div><strong>Viber</strong></div></li>
-		<li><div><strong>VirtualBox</strong></div></li>
-		<li><div><strong>VS Code</strong></div></li>
-		<li><div><strong>Vulkan</strong></div></li>
-		<li><div><strong>Web</strong></div></li>
-		<li><div><strong>WGet</strong></div></li>
-		<li><div><strong>Whatsapp</strong></div></li>
-		<li><div><strong>Windows Media Player</strong></div></li>
-		<li><div><strong>Windows Terminal</strong></div></li>
-		<li><div><strong>WOL</strong> — http://wol.aquilatech.com/</div></li>
-		<li><div><strong>Wordpress</strong></div></li>
-		<li><div><strong>Youtube</strong></div></li>
-		<li><div><strong>ZBrush</strong></div></li>
+		<li><div>Load or store some data</div></li>
+		<li><div>Add or compare values</div></li>
+		<li><div>Choose between two paths</div></li>
+		<li><div>Repeat a group of instructions</div></li>
+		<li><div>Receive input or produce output</div></li>
 	</ul>
+	<p>
+		Each instruction is small. Useful behaviour appears when many such instructions cooperate.
+	</p>
+	<p>
+		A recipe provides a simple analogy. “Heat the pan” is one instruction. It does little alone, but becomes meaningful as part of an ordered procedure.
+	</p>
+	<h3>Why does order matter?</h3>
+	<p>
+		Later instructions often depend upon earlier results.
+	</p>
+	<p>
+		If a program tries to display a total before calculating it, the correct ingredients may all be present while the result is still wrong.
+	</p>
+	<p>
+		Order also matters when the world changes. A navigation program must learn the present location before deciding which turn comes next.
+	</p>
+	<p>
+		A program is therefore not merely a bag of commands. It is a structure of dependencies through time.
+	</p>
+	<h3>How does a program make choices?</h3>
+	<p>
+		Programs use conditions.
+	</p>
+	<p>
+		A thermostat might follow a rule such as:
+	</p>
+	<pre class='indent-c'><code class='block'>if the room is colder than the chosen temperature:
+    turn the heater on
+else:
+    turn the heater off</code></pre>
+	<p>
+		The condition connects information with action.
+	</p>
+	<p>
+		More complex programs may examine many conditions, estimate uncertainty or compare several possible outcomes. But the basic idea remains: different information can lead the computation along different paths.
+	</p>
+	<h3>Why do programs repeat steps?</h3>
+	<p>
+		Many tasks contain the same operation more than once.
+	</p>
+	<p>
+		A program can examine every name in a list, every pixel in an image or every measurement from a sensor by repeating a set of instructions.
+	</p>
+	<p>
+		This repetition is called a loop.
+	</p>
+	<p>
+		Without loops, a programmer would need to write nearly identical instructions again and again. A loop compresses the repeated pattern into a rule: continue until the work is complete or a condition changes.
+	</p>
+	<h3>What are data and state?</h3>
+	<p>
+		Data is information represented in a form the program can process.
+	</p>
+	<p>
+		State is the information that describes the program's present situation.
+	</p>
+	<p>
+		In a music player, the audio file is data. The current track, volume and playback position are part of the state.
+	</p>
+	<p>
+		State gives the past a way to affect the future. When a program remembers that you have already signed in, an earlier event changes what it does now.
+	</p>
+	<h3>What is source code?</h3>
+	<p>
+		Source code is a program written in a language intended to be read and changed by people.
+	</p>
+	<p>
+		Programming languages provide words, symbols and rules for expressing instructions precisely. They let a programmer name information, divide work into parts and describe choices and repetition.
+	</p>
+	<p>
+		A <a class="content-link XURL" href="/computer" data-target="computer" data-title="computer">computer</a> does not usually execute high-level source code directly. Another program translates or interprets it into operations the machine can perform.
+	</p>
+	<p>
+		This creates layers of meaning: human ideas become source code, source code becomes lower-level instructions, and those instructions become physical changes in hardware.
+	</p>
+	<h3>What is a bug?</h3>
+	<p>
+		A bug is a defect that makes a program behave differently from what was intended.
+	</p>
+	<p>
+		The computer may execute every instruction correctly and still produce the wrong result because the instructions themselves are wrong.
+	</p>
+	<p>
+		A program that calculates a discount before checking whether the customer qualifies is not disobeyed by the machine. It faithfully carries out a mistaken procedure.
+	</p>
+	<p>
+		This is why testing matters. A program should be tried with ordinary cases, boundary cases and unexpected input. Testing cannot prove that a large program has no defects, but it can expose failures before they cause harm.
+	</p>
+	<h3>Can a program change itself?</h3>
+	<p>
+		A program can change stored data, and that data may influence its later behaviour.
+	</p>
+	<p>
+		A learning system goes further: experience changes its internal <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a>, which changes how future inputs are handled.
+	</p>
+	<p>
+		This is sometimes described loosely as a program rewriting itself. Usually, however, the learning rules remain part of the program while adjustable values within the model change.
+	</p>
+	<p>
+		The distinction matters. A system can acquire new behaviour without becoming free from the rules that govern how it learns.
+	</p>
+	<h3>Is a program intelligent?</h3>
+	<p>
+		Not by itself.
+	</p>
+	<p>
+		A short fixed program may follow a clever rule without understanding anything. A larger program may perceive patterns, learn from examples, draw <a class="content-link XURL" href="/world/philosophy/inference" data-target="world/philosophy/inference" data-title="inferences">inferences</a> and make <a class="content-link XURL" href="/world/philosophy/decision" data-target="world/philosophy/decision" data-title="decisions">decisions</a>.
+	</p>
+	<p>
+		Whether that behaviour counts as <a class="content-link XURL" href="/world/philosophy/intelligence" data-target="world/philosophy/intelligence" data-title="intelligence">intelligence</a> depends upon its flexibility, understanding and success across situations—not merely upon the fact that code is running.
+	</p>
+	<p>
+		A program is a means of organizing computation. Intelligence is one possible result.
+	</p>
+	<h3>So what is a program, finally?</h3>
+	<p>
+		A program is information that organizes the operations of a computer.
+	</p>
+	<p>
+		It receives data, preserves state, makes choices, repeats work and produces results. Its instructions may express algorithms, use models and change their behaviour through learning.
+	</p>
+	<p>
+		Hardware provides the physical ability to compute. A program gives that ability a temporary purpose.
+	</p>
+	<p>
+		That is why one machine can become many different tools without being rebuilt.
+	</p>
 
 </div>
 

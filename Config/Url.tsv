@@ -48,7 +48,6 @@ computer/os/	ios	svg
 computer/os/	mac	svg
 computer/os/	nix	svg
 computer/os/	windows	svg
-computer/	program	jpg
 computer/program/	adobe_illustrator	svg
 computer/program/	adobe_premier_pro	svg
 computer/program/	amazon_cloud_reader	svg
@@ -189,14 +188,12 @@ computer/programming/	winapi	svg
 computer/programming/	wix	svg
 computer/programming/	xml	svg
 computer/	technology	jpg
-computer/technology/	algorithms	jpg
 computer/technology/	cap_theorem	svg
 computer/technology/	digital_certificate	svg
 computer/technology/	email	svg
 computer/technology/	hardware	svg
 computer/technology/	license	svg
 computer/technology/	llm	svg
-computer/technology/artificial_intelligence/	machine_learning	svg
 computer/technology/	nfc	svg
 computer/technology/	proxy	svg
 computer/technology/	rss	svg
@@ -211,13 +208,10 @@ computer/technology/	rss	svg
 	universe	jpg
 	world	jpg
 world/	philosophy	jpg
-world/philosophy/	algorithm	jpg
-computer/technology/	artificial_intelligence	jpg
 world/philosophy/	cognition	jpg
 world/philosophy/	consciousness	jpg
 world/philosophy/consciousness/	free_will	jpg
 world/philosophy/	death	jpg
-world/philosophy/	decision	jpg
 world/philosophy/	god	jpg
 world/philosophy/god/	no_god	jpg
 world/philosophy/	hindu	jpg
@@ -227,11 +221,9 @@ world/philosophy/hindu/	hindu_atheist	jpg
 world/philosophy/	inference	jpg
 world/philosophy/	information	jpg
 world/philosophy/	intelligence	jpg
-world/philosophy/	learning	jpg
 world/philosophy/	life	jpg
 world/philosophy/	model	jpg
 world/philosophy/	problem	jpg
-world/philosophy/	program	jpg
 world/philosophy/	solution	jpg
 computer/program/adobe_illustrator/	notes	svg
 computer/program/amd_crimson/	notes	svg
@@ -335,3 +327,9 @@ computer/os/windows/n8/	notes	svg
 computer/os/windows/power_management/	notes	svg
 computer/os/windows/remote_desktop/	notes	svg
 computer/os/windows/server_2008/	notes	svg
+computer/	algorithm	jpg
+computer/	program	jpg
+computer/technology/	artificial_intelligence	jpg
+computer/technology/artificial_intelligence/	machine_learning	svg
+world/philosophy/	learning	jpg
+world/philosophy/	decision	jpg
