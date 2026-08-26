@@ -23,7 +23,7 @@
 	--home-elbow-y: var(--home-node-center-y);
 	--home-indent: 36px;
 	--home-node-width: 184px;
-	--home-line: rgba(105, 183, 207, 0.32);
+	--home-line: #3d738c;
 	--home-line-alt: rgba(40, 145, 190, 0.9);
 	--home-sibling-gap: 32px;
 	padding-left: 10px
@@ -300,7 +300,7 @@ html.dark-mode #home-menu .home-menu-more {
 #home-image-disclaimer {
 	clear: both;
 	margin: 40px 0 0 var(--home-glyph-center);
-	max-width: 42em;
+	max-width: 54em;
 	color: #888;
 	font-size: 11px;
 	line-height: 1.45

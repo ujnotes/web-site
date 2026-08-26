@@ -4,6 +4,7 @@ function home_menu_leaf_slugs() {
 	// Homepage shows these nodes but does not expand their descendants.
 	return [
 		'computer/game/doom',
+		'computer/technology/artificial_intelligence/machine_learning',
 	];
 }
 
@@ -13,7 +14,6 @@ function home_menu_cap_children_of() {
 		'computer/os',
 		'computer/program',
 		'computer/programming',
-		'computer/technology',
 	];
 }
 
@@ -25,7 +25,7 @@ function home_menu_selected_child_slugs() {
 }
 
 function home_menu_selected_child_limit() {
-	// Parent slug => keep the first N children after alphabetical sort.
+	// Parent slug => keep the first N children in Config/ID.tsv order.
 	// Used when that parent has no explicit selected-child list.
 	return [
 		'computer/os' => 1,
@@ -90,11 +90,6 @@ function home_menu_render_branch($slug) {
 }
 
 function home_menu_render_tree($items, $level, $parent_slug) {
-	usort($items, function($a, $b) {
-		$label_order = strcasecmp(trim($a[1]), trim($b[1]));
-		return $label_order == 0 ? strcasecmp($a[0], $b[0]) : $label_order;
-	});
-
 	$truncated = false;
 	if ($parent_slug) {
 		list($items, $truncated) = home_menu_visible_children($parent_slug, $items);
