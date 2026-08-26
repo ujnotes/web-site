@@ -1,3 +1,5 @@
+<?php $alt='Technology'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<p>
 		Working notes on web, hardware, licenses, ML, microservices, and software design.

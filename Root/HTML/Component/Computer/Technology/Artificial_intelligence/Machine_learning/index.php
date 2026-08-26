@@ -1,3 +1,5 @@
+<?php $alt='Machine Learning'; require('../HTML/Fragment/Component_cover.php') ?>
+
 <div id='message'>
 		<h3>What is machine learning?</h3>
 	<p>

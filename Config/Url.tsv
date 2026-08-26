@@ -34,8 +34,6 @@ world/philosophy/solution/	man-people-system	svg
 	about_me	jpg
 	about_site	jpg
 	changelog	jpg
-	computer	jpg
-computer/	game	jpg
 computer/game/	doom	jpg
 computer/game/doom/	2016	jpg
 computer/game/doom/2016/	demo	jpg
@@ -187,7 +185,6 @@ computer/programming/	visual_studio	svg
 computer/programming/	winapi	svg
 computer/programming/	wix	svg
 computer/programming/	xml	svg
-computer/	technology	jpg
 computer/technology/	cap_theorem	svg
 computer/technology/	digital_certificate	svg
 computer/technology/	email	svg
@@ -329,7 +326,10 @@ computer/os/windows/remote_desktop/	notes	svg
 computer/os/windows/server_2008/	notes	svg
 computer/	algorithm	jpg
 computer/	program	jpg
-computer/technology/	artificial_intelligence	jpg
-computer/technology/artificial_intelligence/	machine_learning	jpg
 world/philosophy/	learning	jpg
 world/philosophy/	decision	jpg
+computer/technology/	artificial_intelligence	jpg
+computer/technology/artificial_intelligence/	machine_learning	jpg
+	computer	jpg
+computer/	game	jpg
+computer/	technology	jpg
