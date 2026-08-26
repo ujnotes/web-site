@@ -196,7 +196,7 @@ computer/technology/	email	svg
 computer/technology/	hardware	svg
 computer/technology/	license	svg
 computer/technology/	llm	svg
-computer/technology/	machine_learning	svg
+computer/technology/artificial_intelligence/	machine_learning	svg
 computer/technology/	nfc	svg
 computer/technology/	proxy	svg
 computer/technology/	rss	svg
@@ -212,7 +212,7 @@ computer/technology/	rss	svg
 	world	jpg
 world/	philosophy	jpg
 world/philosophy/	algorithm	jpg
-world/philosophy/	artificial-intelligence	jpg
+computer/technology/	artificial_intelligence	jpg
 world/philosophy/	cognition	jpg
 world/philosophy/	consciousness	jpg
 world/philosophy/consciousness/	free_will	jpg
@@ -317,7 +317,7 @@ computer/programming/visual_cpp/	ide_notes	svg
 computer/programming/winapi/	notes	svg
 computer/programming/wix/	notes	svg
 computer/technology/llm/	langchain	svg
-computer/technology/machine_learning/	notes	svg
+computer/technology/artificial_intelligence/machine_learning/	notes	svg
 computer/technology/software/	versioning	svg
 computer/technology/web/	css	svg
 computer/technology/web/ssl/	letsencrypt	svg
