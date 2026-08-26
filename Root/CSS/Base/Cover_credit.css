@@ -8,7 +8,7 @@
 	align-items: center;
 	position: relative;
 	height: 0;
-	margin: 0 4px 0 0;
+	margin: 0;
 	top: -22px;
 	z-index: 2;
 	line-height: 0;
@@ -17,7 +17,6 @@
 
 .content-image-container:has(.cover-image-tile) + .cover-credit {
 	justify-content: center;
-	margin-right: 0;
 	transform: translateX(94px)
 }
 
@@ -28,7 +27,13 @@
 	justify-content: center;
 	width: 18px;
 	height: 18px;
+	padding: 0 4px 0 0;
+	box-sizing: content-box;
 	pointer-events: auto
+}
+
+.content-image-container:has(.cover-image-tile) + .cover-credit .cover-credit-anchor {
+	padding-right: 0
 }
 
 .cover-credit-toggle {
