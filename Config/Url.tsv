@@ -211,7 +211,6 @@ world/philosophy/consciousness/	free_will	jpg
 world/philosophy/	death	jpg
 world/philosophy/	god	jpg
 world/philosophy/god/	no_god	jpg
-world/philosophy/	hindu	jpg
 world/philosophy/hindu/	advaita	jpg
 world/philosophy/hindu/	charvaka	jpg
 world/philosophy/hindu/	hindu_atheist	jpg
@@ -324,7 +323,6 @@ computer/os/windows/n8/	notes	svg
 computer/os/windows/power_management/	notes	svg
 computer/os/windows/remote_desktop/	notes	svg
 computer/os/windows/server_2008/	notes	svg
-computer/	algorithm	jpg
 computer/	program	jpg
 world/philosophy/	learning	jpg
 world/philosophy/	decision	jpg
@@ -335,3 +333,5 @@ computer/algorithm/binary_search/	example	svg
 computer/	game	jpg
 computer/	technology	jpg
 computer/algorithm/	binary_search	jpg
+world/philosophy/	hindu	jpg
+computer/	algorithm	jpg

@@ -174,7 +174,7 @@
 		Hindu philosophy gives us many ways to examine these questions. Its diversity should lead towards inquiry and humility, not the domination of one school over every other person.
 	</p>
 	<p>
-		<em>Written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em>
+		<em>Written with the help of Ai (ChatGPT). You are encouraged to point out errors and omissions.</em>
 	</p>
 
 </div>
