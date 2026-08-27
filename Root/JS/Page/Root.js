@@ -237,7 +237,7 @@ function syncHomeMenuConnectors(settled) {
 		var directNodes = subtree.querySelectorAll(':scope > .home-menu-node');
 		var directNode = directNodes.length ? directNodes[directNodes.length - 1] : null;
 
-		var parentLineX = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-center')) || 19;
+		var parentLineX = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-center')) || 21;
 		var lineOriginY = sourceCenter;
 		if(bottomConnector) {
 			parentLineX = sourceRect.left - nodeRect.left + sourceRect.width / 2;

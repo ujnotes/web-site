@@ -18,9 +18,7 @@
 	--home-glyph-hit-size: 32px;
 	--home-glyph-left: 10px;
 	--home-node-center-y: 73px;
-	--home-glyph-top: calc(var(--home-node-center-y) - var(--home-glyph-hit-size) / 2);
-	--home-glyph-center: 19px;
-	--home-elbow-y: var(--home-node-center-y);
+	--home-glyph-center: 21px;
 	--home-indent: 36px;
 	--home-node-width: 184px;
 	--home-line: #3d738c;
@@ -36,6 +34,11 @@
 #home-menu .home-menu-node,
 #home-menu .home-menu-level {
 	position: relative
+}
+
+#home-menu .home-menu-node {
+	--home-elbow-y: var(--home-node-center-y);
+	--home-glyph-top: calc(var(--home-node-center-y) - var(--home-glyph-hit-size) / 2)
 }
 
 #home-menu .home-menu-level > .item_block_container {
@@ -221,7 +224,8 @@
 	height: var(--home-glyph-size);
 	font-size: var(--home-glyph-size);
 	line-height: 1;
-	pointer-events: none
+	pointer-events: none;
+	transform: translateX(1px)
 }
 
 #home-menu .home-menu-toggle span:empty::before {
