@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Binary search</title>
+  <desc id="description">A sorted row of values is repeatedly divided in half until the target value 37 is found.</desc>
+  <defs>
+    <style>
+      .background { fill: #f7fbff; }
+      .heading { fill: #40516f; font: 700 52px system-ui, sans-serif; letter-spacing: 4px; }
+      .subheading { fill: #64748b; font: 500 22px system-ui, sans-serif; }
+      .label { fill: #64748b; font: 700 17px system-ui, sans-serif; letter-spacing: 1.5px; }
+      .value { fill: #40516f; font: 700 22px system-ui, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .card { fill: #ffffff; stroke: #40516f; stroke-width: 3; }
+      .discarded { opacity: .15; }
+      .mid { fill: #fff1b8; stroke: #c37a27; stroke-width: 4; }
+      .target { fill: #cfeee6; stroke: #27786c; stroke-width: 5; }
+      .guide { fill: none; stroke: #8ba0b6; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 7 9; }
+      .arrow { fill: none; stroke: #c37a27; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowhead); }
+      .found-ring { fill: none; stroke: #27786c; stroke-width: 5; }
+      .complexity { fill: #40516f; font: 700 24px ui-monospace, SFMono-Regular, Consolas, monospace; text-anchor: end; }
+      @media (prefers-color-scheme: dark) {
+        .background { fill: #1e2438; }
+        .heading, .value, .complexity { fill: #d8e4f0; }
+        .subheading, .label { fill: #9aabbe; }
+        .card { fill: #283247; stroke: #d8e4f0; }
+        .mid { fill: #554420; stroke: #e0b056; }
+        .target { fill: #214b49; stroke: #62b8a8; }
+        .guide { stroke: #70849a; }
+        .arrow { stroke: #e0b056; }
+        .found-ring { stroke: #62b8a8; }
+      }
+    </style>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#c37a27"/>
+    </marker>
+    <g id="card"><rect class="card" width="58" height="54" rx="10"/></g>
+  </defs>
+
+  <rect class="background" width="1200" height="630" rx="28"/>
+  <text class="heading" x="70" y="86">BINARY SEARCH</text>
+  <text class="subheading" x="72" y="122">Find 37 by discarding half of the sorted range each time</text>
+
+  <!-- Step 1: compare with 42 and keep the left half. -->
+  <text class="label" x="72" y="190">1  START</text>
+  <g transform="translate(184 154)">
+    <g transform="translate(0)"><use href="#card"/><text class="value" x="29" y="28">3</text></g>
+    <g transform="translate(62)"><use href="#card"/><text class="value" x="29" y="28">8</text></g>
+    <g transform="translate(124)"><use href="#card"/><text class="value" x="29" y="28">14</text></g>
+    <g transform="translate(186)"><use href="#card"/><text class="value" x="29" y="28">19</text></g>
+    <g transform="translate(248)"><use href="#card"/><text class="value" x="29" y="28">25</text></g>
+    <g transform="translate(310)"><use href="#card"/><text class="value" x="29" y="28">31</text></g>
+    <g transform="translate(372)"><use href="#card"/><text class="value" x="29" y="28">37</text></g>
+    <g transform="translate(434)"><rect class="mid" width="58" height="54" rx="10"/><text class="value" x="29" y="28">42</text></g>
+    <g transform="translate(496)"><use href="#card"/><text class="value" x="29" y="28">49</text></g>
+    <g transform="translate(558)"><use href="#card"/><text class="value" x="29" y="28">55</text></g>
+    <g transform="translate(620)"><use href="#card"/><text class="value" x="29" y="28">63</text></g>
+    <g transform="translate(682)"><use href="#card"/><text class="value" x="29" y="28">71</text></g>
+    <g transform="translate(744)"><use href="#card"/><text class="value" x="29" y="28">82</text></g>
+    <g transform="translate(806)"><use href="#card"/><text class="value" x="29" y="28">90</text></g>
+    <g transform="translate(868)"><use href="#card"/><text class="value" x="29" y="28">97</text></g>
+  </g>
+  <path class="arrow" d="M647 220v30H414v28"/>
+  <text class="subheading" x="672" y="240">37 &lt; 42</text>
+
+  <!-- Step 2: compare with 19 and keep the right side of the remaining range. -->
+  <text class="label" x="72" y="330">2  HALVE</text>
+  <g transform="translate(184 294)">
+    <g transform="translate(0)"><use href="#card"/><text class="value" x="29" y="28">3</text></g>
+    <g transform="translate(62)"><use href="#card"/><text class="value" x="29" y="28">8</text></g>
+    <g transform="translate(124)"><use href="#card"/><text class="value" x="29" y="28">14</text></g>
+    <g transform="translate(186)"><rect class="mid" width="58" height="54" rx="10"/><text class="value" x="29" y="28">19</text></g>
+    <g transform="translate(248)"><use href="#card"/><text class="value" x="29" y="28">25</text></g>
+    <g transform="translate(310)"><use href="#card"/><text class="value" x="29" y="28">31</text></g>
+    <g transform="translate(372)"><use href="#card"/><text class="value" x="29" y="28">37</text></g>
+    <g class="discarded" transform="translate(434)"><use href="#card"/><text class="value" x="29" y="28">42</text></g>
+    <g class="discarded" transform="translate(496)"><use href="#card"/><text class="value" x="29" y="28">49</text></g>
+    <g class="discarded" transform="translate(558)"><use href="#card"/><text class="value" x="29" y="28">55</text></g>
+    <g class="discarded" transform="translate(620)"><use href="#card"/><text class="value" x="29" y="28">63</text></g>
+    <g class="discarded" transform="translate(682)"><use href="#card"/><text class="value" x="29" y="28">71</text></g>
+    <g class="discarded" transform="translate(744)"><use href="#card"/><text class="value" x="29" y="28">82</text></g>
+    <g class="discarded" transform="translate(806)"><use href="#card"/><text class="value" x="29" y="28">90</text></g>
+    <g class="discarded" transform="translate(868)"><use href="#card"/><text class="value" x="29" y="28">97</text></g>
+  </g>
+  <path class="arrow" d="M399 360v30h169v28"/>
+  <text class="subheading" x="424" y="380">37 &gt; 19</text>
+
+  <!-- Step 3: compare with 31, then find 37. -->
+  <text class="label" x="72" y="470">3  HALVE</text>
+  <g transform="translate(184 434)">
+    <g class="discarded" transform="translate(0)"><use href="#card"/><text class="value" x="29" y="28">3</text></g>
+    <g class="discarded" transform="translate(62)"><use href="#card"/><text class="value" x="29" y="28">8</text></g>
+    <g class="discarded" transform="translate(124)"><use href="#card"/><text class="value" x="29" y="28">14</text></g>
+    <g class="discarded" transform="translate(186)"><use href="#card"/><text class="value" x="29" y="28">19</text></g>
+    <g transform="translate(248)"><use href="#card"/><text class="value" x="29" y="28">25</text></g>
+    <g transform="translate(310)"><rect class="mid" width="58" height="54" rx="10"/><text class="value" x="29" y="28">31</text></g>
+    <g transform="translate(372)"><rect class="target" width="58" height="54" rx="10"/><text class="value" x="29" y="28">37</text></g>
+    <g class="discarded" transform="translate(434)"><use href="#card"/><text class="value" x="29" y="28">42</text></g>
+    <g class="discarded" transform="translate(496)"><use href="#card"/><text class="value" x="29" y="28">49</text></g>
+    <g class="discarded" transform="translate(558)"><use href="#card"/><text class="value" x="29" y="28">55</text></g>
+    <g class="discarded" transform="translate(620)"><use href="#card"/><text class="value" x="29" y="28">63</text></g>
+    <g class="discarded" transform="translate(682)"><use href="#card"/><text class="value" x="29" y="28">71</text></g>
+    <g class="discarded" transform="translate(744)"><use href="#card"/><text class="value" x="29" y="28">82</text></g>
+    <g class="discarded" transform="translate(806)"><use href="#card"/><text class="value" x="29" y="28">90</text></g>
+    <g class="discarded" transform="translate(868)"><use href="#card"/><text class="value" x="29" y="28">97</text></g>
+  </g>
+  <path class="guide" d="M553 500v32"/>
+  <path class="arrow" d="M523 500v30h62v-30"/>
+  <circle class="found-ring" cx="585" cy="461" r="39"/>
+  <text class="subheading" x="632" y="474">found</text>
+
+  <path class="guide" d="M72 550H1128"/>
+  <text class="subheading" x="72" y="590">15 values → at most 4 comparisons</text>
+  <text class="complexity" x="1128" y="590">O(log n)</text>
+</svg>

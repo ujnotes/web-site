@@ -6,7 +6,6 @@
 	</p>
 	<h2>Topics</h2>
 	<ul class="list-bullet content-list">
-		<li><div><strong>Algorithms</strong> — Algorithm notes, starting with binary search.</div></li>
 		<li><div><strong>CAP Theorem — Consistency, Availability, and Partition</strong> — Scope: distributed computing and database systems.</div></li>
 		<li><div><strong>Design</strong> — Design principles for object-oriented code, starting with SOLID.</div></li>
 		<li><div><strong>Digital Certificate</strong></div></li>
