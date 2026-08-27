@@ -48,7 +48,7 @@ draft	world/philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	Is
 draft	world/philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS		article
 published	computer	Computer	Computer	0	Computer : the information processor	article
 published	computer/algorithm	Algorithm	Algorithm	0	What a definite procedure is, how it works, and why correctness and limits matter.	article
-publish	computer/algorithm/binary_search	Binary Search	Binary Search	0	Binary search finds a value in sorted data by comparing the middle value and discarding half of the remaining range.	article
+published	computer/algorithm/binary_search	Binary Search	Binary Search	0	Binary search finds a value in sorted data by comparing the middle value and discarding half of the remaining range.	article
 published	computer/program	Program	Program	0	How instructions turn a general-purpose computer into a particular tool.	article
 published	computer/os	OS	OS	0	Operating system notes from daily use: commands, setup, and fixes across *nix, Android, Windows, macOS, iOS, and Cygwin.	article
 published	computer/os/nix	*Nix	*Nix	0	*nix notes: shells, ssh, packages, filesystem commands, and day-to-day system management.	article
