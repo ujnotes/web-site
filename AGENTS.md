@@ -1,5 +1,7 @@
 # Project instructions
 
+When something new is learned, persist it: create or update a dedicated skill under `H:\Website\.cursor\skills\`, or add a short rule here / in `H:\AGENTS.md` / `H:\Website\AGENTS.md`. Do not leave the lesson only in chat.
+
 For any work that creates, changes, debugs, or reviews the homepage hierarchy, read and follow [HOMESCREEN_TREE.md](HOMESCREEN_TREE.md) in full before making changes.
 
 The homepage tree specification applies recursively to every branch and takes precedence over incidental layout produced by older branch-specific markup.
@@ -24,3 +26,4 @@ The homepage tree specification applies recursively to every branch and takes pr
 - Rebuild the homepage with Tiggu: write a temporary `Config/Render.lsv` containing only `root`, delete stale `public/index.html` first (Tiggu `check()` ignores Resource/Url.tsv cover changes), `docker compose -p ujnotes exec web-site /app/tiggu/build.sh /app/site/project`, copy `public/index.html` into `web-public`, commit, and push. Delete `Render.lsv` afterwards. Do not commit it.
 
 - See `H:\AGENTS.md` sections "Local vs production HTML" and "Publisher encoding (Windows)", and `H:\Website\AGENTS.md` section "Notion subtree publication".
+- Timeline date dashes: `root/CSS/Base/Component/Timeline.css` and Framework `CSS/Base/Component/Timeline.css` (`span.date`, `min-width:11ch`). Do not hand-edit baked HTML. Republish uses NCMS PHP plus `Protect-TimelineDates.py`; pin Framework SHA in the same change set when that CSS moves.
