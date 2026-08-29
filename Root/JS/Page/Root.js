@@ -5,6 +5,19 @@ function homeMenuNodeTile(node) {
 		|| node.querySelector(':scope > .home-menu-tile-row > .home-menu-level > .item_block_container');
 }
 
+function homeMenuSharesRowWithPrevious(node) {
+	var parentSubtree = node.parentElement;
+	if(!parentSubtree || !parentSubtree.classList.contains('home-menu-subtree'))
+		return false;
+	var siblings = parentSubtree.querySelectorAll(':scope > .home-menu-node');
+	var index = [].indexOf.call(siblings, node);
+	if(index < 1)
+		return false;
+	var previousRect = siblings[index - 1].getBoundingClientRect();
+	var nodeRect = node.getBoundingClientRect();
+	return Math.abs(previousRect.top - nodeRect.top) < 2;
+}
+
 function syncHomeMenuConnectorStyles(menu) {
 	var nodes = menu.querySelectorAll('.home-menu-node');
 	var branches = [];
@@ -213,11 +226,7 @@ function syncHomeMenuConnectors() {
 
 		var subtreeAll = node.querySelector(':scope > .home-menu-subtree');
 		var subtree = node.querySelector(':scope > .home-menu-subtree:not([hidden])');
-		var parentSubtree = node.parentElement;
-		var siblingCount = parentSubtree && parentSubtree.classList.contains('home-menu-subtree')
-			? parentSubtree.querySelectorAll(':scope > .home-menu-node').length
-			: 0;
-		var bottomConnector = siblingCount > 1 && !!subtreeAll;
+		var bottomConnector = !!subtreeAll && homeMenuSharesRowWithPrevious(node);
 		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		if(bottomConnector) {
@@ -225,6 +234,12 @@ function syncHomeMenuConnectors() {
 			var lineOriginYCollapsed = sourceRect.bottom - nodeRect.top + 8;
 			node.style.setProperty('--home-bottom-line-start-y', lineOriginYCollapsed + 'px');
 			node.style.setProperty('--home-bottom-line-x', parentLineXCollapsed + 'px');
+		}
+		else {
+			node.style.removeProperty('--home-bottom-line-start-y');
+			node.style.removeProperty('--home-bottom-line-x');
+			if(subtreeAll)
+				subtreeAll.style.removeProperty('--home-bottom-child-indent');
 		}
 
 		if(!subtree) {

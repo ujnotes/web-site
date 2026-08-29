@@ -1,0 +1,11 @@
+@media (max-width: 540px) {
+	.cover-credit-popup {
+		max-width: min(280px, calc(100vw - 24px))
+	}
+
+	.content-image-container:has(.cover-image-tile) + .cover-credit .cover-credit-popup {
+		right: calc(100% + 6px);
+		left: auto;
+		text-align: right
+	}
+}

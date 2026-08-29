@@ -4,6 +4,37 @@
 	}
 
 	#home-menu {
-		--home-indent: 24px
+		--home-indent: 24px;
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 10px !important;
+		box-sizing: border-box;
+		align-self: stretch
+	}
+
+	#home-image-disclaimer {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+		padding-right: 8px;
+		box-sizing: border-box;
+		text-align: left
+	}
+
+	#home-menu .home-menu-connector-bottom > .home-menu-subtree {
+		margin-top: 0;
+		padding-left: var(--home-indent)
+	}
+
+	#home-menu .home-menu-connector-bottom:has(> .home-menu-subtree:not([hidden]))::after {
+		top: var(--home-elbow-y);
+		left: var(--home-glyph-center)
+	}
+
+	#home-menu .home-menu-connector-bottom > .home-menu-toggle {
+		top: var(--home-glyph-top);
+		left: calc(var(--home-glyph-center) - var(--home-glyph-hit-size) / 2)
 	}
 }
