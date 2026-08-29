@@ -1,4 +1,5 @@
-#message .content-list .date {
+#message .content-list .date,
+#content-timeline .date {
 	font-family: consolas, ui-monospace, monospace;
 	display: inline-block;
 	min-width: 11ch;
