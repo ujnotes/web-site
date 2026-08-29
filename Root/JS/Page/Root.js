@@ -153,7 +153,7 @@ function syncHomeMenuConnectorStyles(menu) {
 		branches[branchIndex].node.classList.toggle('home-menu-connector-alternate', styles[branchIndex]);
 	}
 }
-function syncHomeMenuConnectors(settled) {
+function syncHomeMenuConnectors() {
 	var menu = document.getElementById('home-menu');
 	if(!menu)
 		return;
@@ -326,16 +326,10 @@ function syncHomeMenuConnectors(settled) {
 			});
 		}
 		node.style.setProperty('--home-line-height', Math.max(0, targetCenter - lineOriginY) + 'px');
-
-
 	});
 
 	syncHomeMenuConnectorStyles(menu);
-
-	if(settled !== true)
-		requestAnimationFrame(function() {
-			syncHomeMenuConnectors(true);
-		});
+	menu.classList.add('home-menu-ready');
 }
 
 function root() {

@@ -103,10 +103,16 @@ function home_menu_render_tree($items, $level, $parent_slug) {
 		$children = getSubComponents($item[0]);
 		$has_children = count($children) > 0 && !home_menu_is_leaf($item[0]);
 		$show_more = $truncated && $index === $count;
+		$bottom_connector = $count > 1 && $has_children;
 		$control_id = 'home-' . trim(preg_replace('/[^a-z0-9]+/i', '-', $item[0]), '-') . '-children';
 		$more_label = getComponentLabel($parent_slug);
+		$node_class = 'home-menu-node';
+		if ($show_more)
+			$node_class .= ' home-menu-has-more';
+		if ($bottom_connector)
+			$node_class .= ' home-menu-connector-bottom';
 ?>
-		<div class="home-menu-node<?php echo $show_more ? ' home-menu-has-more' : '' ?>">
+		<div class="<?php echo $node_class ?>">
 <?php if($has_children) { ?>
 			<button class="home-menu-toggle" type="button" aria-expanded="true" aria-controls="<?php echo $control_id ?>" aria-label="Collapse <?php echo htmlspecialchars($item[1]) ?> descendants" data-home-menu-toggle data-home-menu-label="<?php echo htmlspecialchars($item[1]) ?> descendants"><span aria-hidden="true"></span></button>
 <?php } ?>

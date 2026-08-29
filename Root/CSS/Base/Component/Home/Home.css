@@ -17,14 +17,41 @@
 	--home-glyph-disc-size: 24px;
 	--home-glyph-hit-size: 32px;
 	--home-glyph-left: 10px;
-	--home-node-center-y: 73px;
+	--home-tile-width: 160px;
+	--home-tile-margin: 5px;
+	--home-tile-image-height: 110px;
+	--home-tile-text-height: 32px;
+	--home-node-center-y: calc(var(--home-tile-margin) + (var(--home-tile-image-height) + var(--home-tile-text-height) - 8px) / 2);
 	--home-glyph-center: 21px;
 	--home-indent: 36px;
 	--home-node-width: 184px;
+	--home-bottom-line-x: calc(var(--home-indent) + var(--home-tile-margin) + var(--home-tile-width) / 2);
+	--home-bottom-line-start-y: calc(var(--home-tile-margin) + var(--home-tile-image-height) + var(--home-tile-text-height) - 8px + 8px);
+	--home-bottom-child-indent: calc(var(--home-indent) + var(--home-tile-width) / 2);
 	--home-line: #3d738c;
 	--home-line-alt: rgba(40, 145, 190, 0.9);
 	--home-sibling-gap: 32px;
+	container-type: inline-size;
 	padding-left: 10px
+}
+
+#home-menu:not(.home-menu-ready) .home-menu-node::before,
+#home-menu:not(.home-menu-ready) .home-menu-node::after,
+#home-menu:not(.home-menu-ready) .home-menu-subtree::before,
+#home-menu:not(.home-menu-ready) .home-menu-subtree::after,
+#home-menu:not(.home-menu-ready) .home-menu-level::before,
+#home-menu:not(.home-menu-ready) .home-menu-group-row-line {
+	opacity: 0
+}
+
+@media (scripting: none) {
+	#home-menu:not(.home-menu-ready) .home-menu-node::before,
+	#home-menu:not(.home-menu-ready) .home-menu-node::after,
+	#home-menu:not(.home-menu-ready) .home-menu-subtree::before,
+	#home-menu:not(.home-menu-ready) .home-menu-subtree::after,
+	#home-menu:not(.home-menu-ready) .home-menu-level::before {
+		opacity: 1
+	}
 }
 
 #home-menu .home-menu-branch + .home-menu-branch {
@@ -37,6 +64,7 @@
 }
 
 #home-menu .home-menu-node {
+	overflow: visible;
 	--home-elbow-y: var(--home-node-center-y);
 	--home-glyph-top: calc(var(--home-node-center-y) - var(--home-glyph-hit-size) / 2)
 }
@@ -58,7 +86,8 @@
 	flex-wrap: wrap;
 	align-items: flex-start;
 	box-sizing: border-box;
-	width: var(--home-subtree-width, 100%);
+	width: var(--home-subtree-width, calc(100cqi - var(--home-indent)));
+	max-width: calc(100cqi - var(--home-indent));
 	position: relative;
 	padding-left: var(--home-indent);
 	row-gap: var(--home-sibling-gap)
@@ -142,7 +171,7 @@
 
 #home-menu .home-menu-connector-bottom > .home-menu-subtree {
 	margin-top: 48px;
-	padding-left: var(--home-bottom-child-indent, var(--home-indent))
+	padding-left: var(--home-bottom-child-indent)
 }
 
 #home-menu .home-menu-connector-bottom:not(:has(> .home-menu-subtree:not([hidden]))) {
