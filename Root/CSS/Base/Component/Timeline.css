@@ -1,0 +1,6 @@
+#message .content-list .date {
+	font-family: consolas, ui-monospace, monospace;
+	display: inline-block;
+	min-width: 11ch;
+	text-align: right
+}
