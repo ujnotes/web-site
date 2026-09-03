@@ -1,5 +1,7 @@
 /* Stretch the article column so bottom nav tiles sit near the footer on short pages.
-   Long pages are unchanged. Homepage tree (#home-menu) stays in normal flow. */
+   Long pages are unchanged. Homepage tree (#home-menu) stays in normal flow.
+   #canvas-wrapper stays a flex column (not grid) so its 1s height transition
+   and the menu/home slide still see the real content height. */
 #content-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -26,17 +28,27 @@
 
 #canvas-wrapper {
 	flex: 1 0 auto;
-	display: grid;
-	grid-template-rows: auto auto 1fr;
+	display: flex;
+	flex-direction: column;
+}
+
+#path-container,
+#title-container {
+	flex: 0 0 auto;
 }
 
 #canvas-wrapper-inner-container {
+	flex: 1 0 auto;
 	min-width: 0;
 }
 
 #canvas-main {
 	display: flex;
 	flex-direction: column;
+	min-height: 100%;
+}
+
+#nav-menu {
 	min-height: 100%;
 }
 
