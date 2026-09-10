@@ -1,0 +1,25 @@
+@media (max-width: 540px) {
+
+	#me-table > div,
+	#me-table .R1 {
+		overflow: visible;
+	}
+
+	#me-table .R1 {
+		width: auto !important;
+		max-width: 100%;
+		float: none;
+		text-align: left;
+		padding-left: 6px;
+	}
+
+	#me-table .R2 {
+		clear: both;
+		float: none;
+		max-width: 100%;
+		padding-left: 45px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+}
