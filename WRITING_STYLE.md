@@ -49,11 +49,13 @@ Not every article needs every step. Stop when the idea is clear.
 
 - Use Heading 1 blocks for the main questions. NCMS renders them as article section headings.
 - Use ordinary paragraph blocks for the explanation.
+- On FAQ pages, put each question in a Heading 1 and the answer in the paragraphs below it. Do not label blocks `Q.` / `Ans:`, and do not put answers inside numbered-list children: NCMS does not render nested blocks under list items, so only the question would publish.
 - Use bulleted or numbered lists only for genuinely separate items.
 - Use bold for a term at the beginning of a list item; use italics for light emphasis.
 - Add links where they help the reader continue through Ujnotes or check a source.
 - Use special emoji callouts only for their documented NCMS purpose.
-- Do not add `Component_bottom.php`, Facebook comments or Facebook buttons to the Notion page. NCMS appends `Component_bottom.php` automatically, and that fragment already provides the updated date, sub-list, Facebook comments, like/share buttons and navigation.
+- For a labelled two-column page such as About me, start with a 📐 `me-table` callout. Put each short label in a heading and the value in the paragraphs under it. NCMS keeps `#me-table` / `.R1` / `.R2` styling. Do not paste that PHP table into a 🔧 callout.
+- Do not add `Component_bottom.php`, Facebook comments or Facebook buttons to the Notion page. NCMS appends `Component_bottom.php` automatically, and that fragment already provides the updated date, sub-list, Facebook comments, like/share buttons and navigation. A 📐 `me-table` page uses `Component_bottom_nav.php` instead.
 
 ## Editing checklist
 
