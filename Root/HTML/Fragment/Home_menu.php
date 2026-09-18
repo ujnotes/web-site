@@ -47,6 +47,20 @@ function home_menu_parent_slug($slug) {
 	return $pos === false ? '' : substr($slug, 0, $pos);
 }
 
+function home_menu_branch_children($slug) {
+	// Homepage hubs nested under World (URLs stay /philosophy, /science, /technology).
+	// Order: Philosophy → Science → Technology. Timeline is a site meta page, not here.
+	if (strtolower($slug) === 'world') {
+		$hubs = ['philosophy', 'science', 'technology'];
+		$out = [];
+		foreach ($hubs as $hub) {
+			if (componentExists($hub) && isComponentLocalized($hub))
+				$out[] = [$hub, getComponentLabel($hub)];
+		}
+		return $out;
+	}
+	return getSubComponents($slug);
+}
 function home_menu_is_leaf($slug) {
 	$slug = strtolower($slug);
 	if (in_array($slug, home_menu_leaf_slugs(), true))
@@ -87,7 +101,7 @@ function home_menu_visible_children($parent_slug, $children) {
 
 function home_menu_render_branch($slug) {
 	$label = getComponentLabel($slug);
-	$children = getSubComponents($slug);
+	$children = home_menu_branch_children($slug);
 	$control_id = 'home-' . trim(preg_replace('/[^a-z0-9]+/i', '-', $slug), '-') . '-children';
 ?>
 	<div class="home-menu-node">
@@ -157,3 +171,4 @@ function home_menu_render_tree($items, $level, $parent_slug) {
 <?php
 	}
 }
+
