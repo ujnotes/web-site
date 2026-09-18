@@ -25,7 +25,7 @@
 		Decisions appear when alternatives are represented and one is selected.
 	</p>
 	<p>
-		Even then, much of the work may remain unconscious. A choice can feel sudden because <a class="content-link XURL" href="/world/philosophy/cognition" data-target="world/philosophy/cognition" data-title="cognition">cognition</a> has compared possibilities before the result enters awareness.
+		Even then, much of the work may remain unconscious. A choice can feel sudden because <a class="content-link XURL" href="/philosophy/cognition" data-target="philosophy/cognition" data-title="cognition">cognition</a> has compared possibilities before the result enters awareness.
 	</p>
 	<h3>What does a decision require?</h3>
 	<p>
@@ -52,7 +52,7 @@
 		If I leave now, I may arrive on time. If I wait, I may avoid the rain but miss the train.
 	</p>
 	<p>
-		A <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a> connects each action with expected consequences. <a class="content-link XURL" href="/world/philosophy/inference" data-target="world/philosophy/inference" data-title="Inference">Inference</a> estimates which consequences are likely.
+		A <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="model">model</a> connects each action with expected consequences. <a class="content-link XURL" href="/philosophy/inference" data-target="philosophy/inference" data-title="Inference">Inference</a> estimates which consequences are likely.
 	</p>
 	<p>
 		The decision then depends upon both likelihood and value. A small chance of severe harm may matter more than a large chance of mild inconvenience.
@@ -95,7 +95,7 @@
 	</p>
 	<h3>What is the value of more information?</h3>
 	<p>
-		More <a class="content-link XURL" href="/world/philosophy/information" data-target="world/philosophy/information" data-title="information">information</a> is valuable when it can change the choice enough to justify the time or cost of obtaining it.
+		More <a class="content-link XURL" href="/philosophy/information" data-target="philosophy/information" data-title="information">information</a> is valuable when it can change the choice enough to justify the time or cost of obtaining it.
 	</p>
 	<p>
 		Checking the weather before a journey is cheap and may change what you carry. Delaying urgent treatment for a small improvement in certainty may cause greater harm than acting now.
@@ -169,7 +169,7 @@
 		No.
 	</p>
 	<p>
-		<a class="content-link XURL" href="/world/philosophy/intelligence" data-target="world/philosophy/intelligence" data-title="Intelligence">Intelligence</a> can improve prediction and reveal effective actions. It does not decide which goals are morally right.
+		<a class="content-link XURL" href="/philosophy/intelligence" data-target="philosophy/intelligence" data-title="Intelligence">Intelligence</a> can improve prediction and reveal effective actions. It does not decide which goals are morally right.
 	</p>
 	<p>
 		A highly intelligent person can choose selfishly. An efficient system can optimize a harmful objective.

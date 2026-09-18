@@ -13,31 +13,31 @@
 	<loc>http://ujnotes.com/world</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy</loc>
+	<loc>http://ujnotes.com/philosophy</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/life</loc>
+	<loc>http://ujnotes.com/philosophy/life</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/consciousness</loc>
+	<loc>http://ujnotes.com/philosophy/consciousness</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/consciousness/free_will</loc>
+	<loc>http://ujnotes.com/philosophy/consciousness/free_will</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/death</loc>
+	<loc>http://ujnotes.com/philosophy/death</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/god</loc>
+	<loc>http://ujnotes.com/philosophy/god</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/god/no_god</loc>
+	<loc>http://ujnotes.com/philosophy/god/no_god</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/problem</loc>
+	<loc>http://ujnotes.com/philosophy/problem</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/world/philosophy/solution</loc>
+	<loc>http://ujnotes.com/philosophy/solution</loc>
 </url>
 <url>
 	<loc>https://ujnotes.com/computer</loc>
@@ -89,45 +89,45 @@
 </url>
 
 <url>
-	<loc>https://ujnotes.com/world/philosophy/intelligence</loc>
+	<loc>https://ujnotes.com/philosophy/intelligence</loc>
 </url>
 
 <url>
-	<loc>https://ujnotes.com/world/philosophy/inference</loc>
+	<loc>https://ujnotes.com/philosophy/inference</loc>
 </url>
 
 <url>
-	<loc>https://ujnotes.com/world/philosophy/cognition</loc>
+	<loc>https://ujnotes.com/philosophy/cognition</loc>
 </url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/hindu</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://ujnotes.com/world/philosophy/hindu" />
-		<xhtml:link rel="alternate" hreflang="hi" href="https://ujnotes.com/hi/world/philosophy/hindu" />
-		<xhtml:link rel="alternate" hreflang="x-default" href="https://ujnotes.com/world/philosophy/hindu" />
+		<loc>https://ujnotes.com/philosophy/hindu</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://ujnotes.com/philosophy/hindu" />
+		<xhtml:link rel="alternate" hreflang="hi" href="https://ujnotes.com/hi/philosophy/hindu" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://ujnotes.com/philosophy/hindu" />
 	</url>
 	<url>
-		<loc>https://ujnotes.com/hi/world/philosophy/hindu</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://ujnotes.com/world/philosophy/hindu" />
-		<xhtml:link rel="alternate" hreflang="hi" href="https://ujnotes.com/hi/world/philosophy/hindu" />
-		<xhtml:link rel="alternate" hreflang="x-default" href="https://ujnotes.com/world/philosophy/hindu" />
+		<loc>https://ujnotes.com/hi/philosophy/hindu</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://ujnotes.com/philosophy/hindu" />
+		<xhtml:link rel="alternate" hreflang="hi" href="https://ujnotes.com/hi/philosophy/hindu" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://ujnotes.com/philosophy/hindu" />
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/hindu/hindu_atheist</loc>
+		<loc>https://ujnotes.com/philosophy/hindu/hindu_atheist</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/hindu/advaita</loc>
+		<loc>https://ujnotes.com/philosophy/hindu/advaita</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/hindu/charvaka</loc>
+		<loc>https://ujnotes.com/philosophy/hindu/charvaka</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/hi/world/philosophy/hindu/advaita</loc>
+		<loc>https://ujnotes.com/hi/philosophy/hindu/advaita</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/hi/world/philosophy/hindu/hindu_atheist</loc>
+		<loc>https://ujnotes.com/hi/philosophy/hindu/hindu_atheist</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/hi/world/philosophy/hindu/charvaka</loc>
+		<loc>https://ujnotes.com/hi/philosophy/hindu/charvaka</loc>
 	</url>
 	<url>
 		<loc>https://ujnotes.com/license</loc>
@@ -208,10 +208,10 @@
 		<loc>https://ujnotes.com/hi/about_me</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy</loc>
+		<loc>https://ujnotes.com/philosophy</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/hi/world/philosophy</loc>
+		<loc>https://ujnotes.com/hi/philosophy</loc>
 	</url>
 	<url>
 		<loc>https://ujnotes.com/computer/game</loc>
@@ -220,16 +220,16 @@
 		<loc>https://ujnotes.com/hi/computer/game</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/information</loc>
+		<loc>https://ujnotes.com/philosophy/information</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/learning</loc>
+		<loc>https://ujnotes.com/philosophy/learning</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/model</loc>
+		<loc>https://ujnotes.com/philosophy/model</loc>
 	</url>
 	<url>
-		<loc>https://ujnotes.com/world/philosophy/decision</loc>
+		<loc>https://ujnotes.com/philosophy/decision</loc>
 	</url>
 <url>
 	<loc>https://ujnotes.com/computer/game/doom</loc>
@@ -301,6 +301,46 @@
 
 <url>
 	<loc>https://ujnotes.com/technology/computer</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/artificial_intelligence</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/cap_theorem</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/design</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/digital_certificate</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/email</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/future</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/hardware</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/license</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/llm</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/location_codes</loc>
 </url>
 
 </urlset>

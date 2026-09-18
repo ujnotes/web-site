@@ -20,7 +20,7 @@
 				नई जानकारी मिलने पर इनमें बदलाव हो सकते हैं।
 			</p>
 			<p>
-				मैं <?php link_xurl('world/philosophy/life', 'जीवन') ?>, <?php link_xurl('world/philosophy/death', 'मृत्यु') ?> और <?php link_xurl('world/philosophy/god', 'ईश्वर') ?> से लेकर समसामयिक विषयों तक लिखता हूँ।
+				मैं <?php link_xurl('philosophy/life', 'जीवन') ?>, <?php link_xurl('philosophy/death', 'मृत्यु') ?> और <?php link_xurl('philosophy/god', 'ईश्वर') ?> से लेकर समसामयिक विषयों तक लिखता हूँ।
 			</p>
 			<p>
 				मैं कंप्यूटर और तकनीक के बारे में भी लिखता हूँ।
@@ -41,8 +41,8 @@
 	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('world')) ?>">
 		<?php home_menu_render_branch('world'); ?>
 	</section>
-	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('computer')) ?>">
-		<?php home_menu_render_branch('computer'); ?>
+	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('technology')) ?>">
+		<?php home_menu_render_branch('technology'); ?>
 	</section>
 	<p id='home-image-disclaimer'>
 		<strong>चित्र श्रेय:</strong> तृतीय-पक्ष छवियाँ उनकी संबंधित अनुज्ञप्तियों या लागू कॉपीराइट अपवादों के अंतर्गत उपयोग की गई हैं। कॉपीराइट संबंधित स्वामियों के पास रहता है। जहाँ आवश्यक है, श्रेय और अनुज्ञप्ति जानकारी छवि के साथ या उसके <a class='content-link XURL' href='/license' data-target='license' data-title='License'>स्रोत लिंक</a> पर दी गई है।

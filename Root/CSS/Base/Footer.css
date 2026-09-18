@@ -1,7 +1,5 @@
-#footer-wrapper {
-	margin-top: -186px;
-}
-
+/* Sticky footer is owned by Framework Shell.css (flex column).
+   Do not use negative margin — it pulls the footer into tall page content. */
 #footer-wrapper-inside {
 	margin-top: 15px;
 }

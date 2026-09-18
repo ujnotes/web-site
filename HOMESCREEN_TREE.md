@@ -4,6 +4,7 @@ These rules govern the hierarchy shown on the Ujnotes homepage. Apply them gener
 
 ## Ordering and layout
 
+- Top-level homepage branches, in order: world → technology → science → philosophy.
 - Keep siblings in `Config/ID.tsv` order so related articles stay together (Life then Death, Problem then Solution). Do not re-sort by label.
 - Keep childless siblings in the same row whenever space permits. Tiles must wrap naturally onto the next row when the available width is exhausted.
 - Keep a vertical gap between sibling groups that wrap onto the next row. A collapsed node still reserves space for its plus/minus so that control never sits on the next group’s tiles.
@@ -33,7 +34,7 @@ These rules govern the hierarchy shown on the Ujnotes homepage. Apply them gener
 
 - Show a minus glyph for an expanded node and a plus glyph for a collapsed node.
 - Draw connector strokes beneath the tile layer; connector lines must never paint over a tile.
-- Place a bottom connector's plus/minus control immediately below the parent tile after the small bottom gap, at the start of the vertical segment.
+- Call the plus/minus a branch toggle. On a bottom connector it sits on the horizontal arm of the L, vertically centered in the gap between the parent tile and the first child row; the leader drops from under the parent tile, then enters the toggle from the left before continuing to the children.
 - Leave visual space between the glyph and its connector. A page-colored disc behind the glyph may create this break in the line.
 - Give each glyph a larger invisible circular hit target (currently 32 px) without making the visible glyph disproportionately large.
 - Preserve the control's legibility and line break in both light and dark themes.
@@ -42,17 +43,26 @@ These rules govern the hierarchy shown on the Ujnotes homepage. Apply them gener
 
 - A homepage leaf is shown in the tree, but its descendants are not. This is a generic cap on expansion, not an article special-case in the renderer.
 - Record explicit leaf slugs in `home_menu_leaf_slugs()` in `root/HTML/Fragment/Home_menu.php`.
-- Record parents whose *direct children* are leaves in `home_menu_cap_children_of()`. Current: `computer/os`, `computer/program`, and `computer/programming` (first child level only).
-- Current explicit leaves: `computer/game/doom` and `computer/technology/artificial_intelligence/machine_learning`. Deeper pages remain on the site; they are just omitted from the homepage tree.
+- Record parents whose *direct children* are leaves in `home_menu_cap_children_of()`. Current: `technology/computer/os`, `technology/computer/program`, and `technology/computer/programming` (first child level only).
+- Current explicit leaves: `technology/computer/game/doom` and `technology/computer/artificial_intelligence/machine_learning`. Deeper pages remain on the site; they are just omitted from the homepage tree.
 
 ## Selected children
 
 - A parent may show only some of its direct children. Put an allowlist in `home_menu_selected_child_slugs()`, or a first-N limit in `home_menu_selected_child_limit()`. The allowlist wins when both are set.
 - When the visible set is a subset, render a vertical three-dot mark immediately to the right of that last visible child tile (one mark per truncated parent). The mark links to that parent’s listing page.
-- Current limits: OS, Program, Programming, and Technology show their first child in `Config/ID.tsv` order plus a vertical ⋮ on that child tile.
+- Current limits: OS, Program, Programming, and Technology (`technology/computer`) show their first child in `Config/ID.tsv` order plus a vertical ⋮ on that child tile.
 
 ## Data and maintenance
 
 - Derive the tree recursively from the homepage component hierarchy, including eligible localized descendants, instead of hardcoding individual article tiles.
 - Preserve intentional external destinations in branches that contain them.
 - Keep connector calculation and hierarchy behavior shared across branches. A fix for one branch must not regress or bypass the generic behavior used by the others.
+
+
+
+
+
+
+
+
+

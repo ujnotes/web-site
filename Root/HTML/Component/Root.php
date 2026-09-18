@@ -18,8 +18,8 @@
 				As I come across new information, these may evolve.
 			</p>
 			<p>
-				I discuss topics ranging from <?php link_xurl('world/philosophy/life', 'Life') ?>, <?php link_xurl('world/philosophy/death', 'Death') ?> and <?php link_xurl('world/philosophy/god', 'God') ?> to current affairs;<br>
-				And <?php link_xurl('computer', 'Computers') ?> &amp; <?php link_xurl('computer/technology', 'Technology') ?>.
+				I discuss topics ranging from <?php link_xurl('philosophy/life', 'Life') ?>, <?php link_xurl('philosophy/death', 'Death') ?> and <?php link_xurl('philosophy/god', 'God') ?> to current affairs;<br>
+				And <?php link_xurl('technology/computer', 'Computers') ?> &amp; <?php link_xurl('technology', 'Technology') ?>.
 			</p>
 			<p>
 				Follow 'Ujnotes' via the social channels down below.
@@ -37,8 +37,14 @@
 	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('world')) ?>">
 		<?php home_menu_render_branch('world'); ?>
 	</section>
-	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('computer')) ?>">
-		<?php home_menu_render_branch('computer'); ?>
+	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('technology')) ?>">
+		<?php home_menu_render_branch('technology'); ?>
+	</section>
+	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('science')) ?>">
+		<?php home_menu_render_branch('science'); ?>
+	</section>
+	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('philosophy')) ?>">
+		<?php home_menu_render_branch('philosophy'); ?>
 	</section>
 	<p id='home-image-disclaimer'>
 		<strong>Image credits:</strong> Third-party images are used under their respective licenses or applicable copyright exceptions. Copyright remains with the respective owners. Where required, attribution and licensing information are provided with the image or its <a class='content-link XURL' href='/license' data-target='license' data-title='License'>source link</a>.

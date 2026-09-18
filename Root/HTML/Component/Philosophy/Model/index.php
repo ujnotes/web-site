@@ -92,7 +92,7 @@
 		A child learns that unsupported objects fall. A mechanic learns how a particular sound relates to a failing bearing. A machine-learning system adjusts internal values so that its outputs better match examples.
 	</p>
 	<p>
-		<a class="content-link XURL" href="/world/philosophy/learning" data-target="world/philosophy/learning" data-title="Learning">Learning</a> is not merely adding facts. It is changing a model so that future interpretation and action improve.
+		<a class="content-link XURL" href="/philosophy/learning" data-target="philosophy/learning" data-title="Learning">Learning</a> is not merely adding facts. It is changing a model so that future interpretation and action improve.
 	</p>
 	<p>
 		The learner must decide which similarities matter. That is why more experience does not always produce a better model.
@@ -150,7 +150,7 @@
 		We do not first receive a complete world and then build a model of it.
 	</p>
 	<p>
-		<a class="content-link XURL" href="/world/philosophy/cognition" data-target="world/philosophy/cognition" data-title="Cognition">Cognition</a> uses earlier models while interpreting present signals. A rope in dim light may be seen as a snake because expectation helps organize an uncertain image.
+		<a class="content-link XURL" href="/philosophy/cognition" data-target="philosophy/cognition" data-title="Cognition">Cognition</a> uses earlier models while interpreting present signals. A rope in dim light may be seen as a snake because expectation helps organize an uncertain image.
 	</p>
 	<p>
 		This makes perception fast. It also permits error.
@@ -160,7 +160,7 @@
 	</p>
 	<h3>How do models guide decisions?</h3>
 	<p>
-		A <a class="content-link XURL" href="/world/philosophy/decision" data-target="world/philosophy/decision" data-title="decision">decision</a> compares possible actions through predicted consequences.
+		A <a class="content-link XURL" href="/philosophy/decision" data-target="philosophy/decision" data-title="decision">decision</a> compares possible actions through predicted consequences.
 	</p>
 	<p>
 		Should I carry an umbrella? The answer depends upon a model of the weather, the cost of carrying it and the cost of getting wet.

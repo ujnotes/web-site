@@ -6,7 +6,7 @@
 		In machine learning, a model is the learned program that turns inputs into predictions or generated outputs.
 	</p>
 	<p>
-		It is a special case of a more general idea. In the ordinary sense, a <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a> is a simplified representation that keeps selected relationships and leaves other details out.
+		It is a special case of a more general idea. In the ordinary sense, a <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="model">model</a> is a simplified representation that keeps selected relationships and leaves other details out.
 	</p>
 	<p>
 		A street map models a city for navigation. A weather forecast models how the atmosphere may change. A machine-learning model represents relationships found in data so that a computer can act on new cases.
@@ -16,7 +16,7 @@
 	</p>
 	<h3>How is this related to the philosophical idea of a model?</h3>
 	<p>
-		The article on <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="Model">Model</a> asks what a model is in general: why it must leave things out, how it explains and predicts, when it can be wrong yet useful, and how overfitting and underfitting fail.
+		The article on <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="Model">Model</a> asks what a model is in general: why it must leave things out, how it explains and predicts, when it can be wrong yet useful, and how overfitting and underfitting fail.
 	</p>
 	<p>
 		Those questions still apply here. A machine-learning model preserves patterns that helped on its training examples. It omits almost everything else about the situations those examples came from.
@@ -57,7 +57,7 @@
 		Two runs of the same training program can produce different models when the examples differ. The program provides the learning procedure. The model is what that procedure has learnt.
 	</p>
 	<p>
-		This is the same distinction drawn in the general account of a <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a>: procedure and learnt representation are related, but not identical.
+		This is the same distinction drawn in the general account of a <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="model">model</a>: procedure and learnt representation are related, but not identical.
 	</p>
 	<h3>What does the model contain?</h3>
 	<p>
@@ -88,7 +88,7 @@
 		A model can be wrong in detail and still useful within a limited range. A flat map is not a complete description of the Earth, yet it helps you walk across a neighbourhood.
 	</p>
 	<p>
-		The same caution applies to machine learning. A model that matches its training data closely may still fail on new cases if it has fitted accidents rather than the wider pattern. That failure is <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="overfitting">overfitting</a>. A model that is too simple to capture an important pattern underfits.
+		The same caution applies to machine learning. A model that matches its training data closely may still fail on new cases if it has fitted accidents rather than the wider pattern. That failure is <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="overfitting">overfitting</a>. A model that is too simple to capture an important pattern underfits.
 	</p>
 	<p>
 		Useful questions are therefore practical:
@@ -107,7 +107,7 @@
 		It begins with <a class="content-link XURL" href="/technology/computer/artificial_intelligence/machine_learning/models/llm" data-target="technology/computer/artificial_intelligence/machine_learning/models/llm" data-title="large language models">large language models</a> and <a class="content-link XURL" href="/technology/computer/artificial_intelligence/machine_learning/models/transformer" data-target="technology/computer/artificial_intelligence/machine_learning/models/transformer" data-title="Transformers">Transformers</a>. An LLM is a kind of model; a Transformer is an architecture used to build many LLMs. Related pages under <a class="content-link XURL" href="/technology/computer/artificial_intelligence" data-target="technology/computer/artificial_intelligence" data-title="artificial intelligence">artificial intelligence</a> and <a class="content-link XURL" href="/technology/computer/artificial_intelligence/machine_learning" data-target="technology/computer/artificial_intelligence/machine_learning" data-title="machine learning">machine learning</a> describe the wider methods those models depend on.
 	</p>
 	<p>
-		For the general idea of representation, prediction, explanation and the limits of any model, start from <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="Model">Model</a>.
+		For the general idea of representation, prediction, explanation and the limits of any model, start from <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="Model">Model</a>.
 	</p>
 	<div id='content-body-separator' class='center'></div>
 	<p>

@@ -18,7 +18,10 @@
 	<p>
 		The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes. In essence, the system can withstand network failures.
 	</p>
+	<div id='content-body-separator' class='center'></div>
+	<p>
+		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em> &amp;#x20;
+	</p>
 
 </div>
-
 <?php require('../HTML/Fragment/Component_bottom.php') ?>

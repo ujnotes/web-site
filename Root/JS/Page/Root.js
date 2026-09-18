@@ -261,21 +261,16 @@ function syncHomeMenuConnectors() {
 		var parentLineX = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-center')) || 21;
 		var lineOriginY = sourceCenter;
 		if(bottomConnector) {
+			// Drop from under the parent tile center, then turn right onto a
+			// horizontal where the plus/minus sits — entered from the left.
 			parentLineX = sourceRect.left - nodeRect.left + sourceRect.width / 2;
 			lineOriginY = sourceRect.bottom - nodeRect.top + 8;
 			var firstChild = directNodes.length ? directNodes[0] : null;
 			var firstChildSource = homeMenuNodeTile(firstChild);
 			if(firstChildSource) {
 				var firstChildRect = firstChild.getBoundingClientRect();
-				var childSourceRect = firstChildSource.getBoundingClientRect();
-				var childSourceOffset = childSourceRect.left - firstChildRect.left;
-				var subtreeRect = subtree.getBoundingClientRect();
-				// Center the child tile on the parent stem. The old indent parked
-				// children to the right of the stem, so Algorithm→Binary Search
-				// spilled into Program's column and the two stems looked doubled.
-				var indent = nodeRect.left + parentLineX - childSourceRect.width / 2
-					- subtreeRect.left - childSourceOffset;
-				subtree.style.setProperty('--home-bottom-child-indent', Math.max(0, indent) + 'px');
+				var childSourceOffset = firstChildSource.getBoundingClientRect().left - firstChildRect.left;
+				subtree.style.setProperty('--home-bottom-child-indent', Math.max(0, parentLineX + 36 - childSourceOffset) + 'px');
 			}
 			node.style.setProperty('--home-bottom-line-start-y', lineOriginY + 'px');
 			node.style.setProperty('--home-bottom-line-x', parentLineX + 'px');
@@ -289,17 +284,29 @@ function syncHomeMenuConnectors() {
 			var elbowY = childSourceRect.top - childRect.top + childSourceRect.height / 2;
 			var lineX = nodeRect.left + parentLineX - childRect.left;
 			child.style.setProperty('--home-parent-elbow-y', elbowY + 'px');
-			if(bottomConnector) {
-				// Stem already meets the tile center; no side spur.
-				child.style.setProperty('--home-parent-elbow-left', lineX + 'px');
-				child.style.setProperty('--home-parent-elbow-width', '0px');
-			}
-			else {
-				var tileEdgeX = childSourceRect.left - childRect.left - 8;
-				child.style.setProperty('--home-parent-elbow-left', Math.min(lineX, tileEdgeX) + 'px');
-				child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
-			}
+			var tileEdgeX = childSourceRect.left - childRect.left - 8;
+			child.style.setProperty('--home-parent-elbow-left', Math.min(lineX, tileEdgeX) + 'px');
+			child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
 		});
+
+		// Bottom connectors: park the branch toggle on the horizontal arm so
+		// the drop under the parent turns right and enters it from the left.
+		if(bottomConnector && directNodes.length) {
+			var hitSize = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-hit-size')) || 32;
+			var elbowChild = directNodes[0];
+			var elbowTile = homeMenuNodeTile(elbowChild);
+			if(elbowTile) {
+				var elbowTileRect = elbowTile.getBoundingClientRect();
+				var elbowAbsY = elbowTileRect.top + elbowTileRect.height / 2;
+				var glyphAbsX = nodeRect.left + parentLineX + hitSize * 0.75;
+				node.style.setProperty('--home-bottom-glyph-y', (elbowAbsY - nodeRect.top - hitSize / 2) + 'px');
+				node.style.setProperty('--home-bottom-glyph-x', (glyphAbsX - nodeRect.left - hitSize / 2) + 'px');
+			}
+		}
+		else {
+			node.style.removeProperty('--home-bottom-glyph-y');
+			node.style.removeProperty('--home-bottom-glyph-x');
+		}
 
 		var childRows = {};
 		var groupLeft = Infinity;
@@ -313,9 +320,11 @@ function syncHomeMenuConnectors() {
 			var rowKey = Math.round(childSourceRect.top);
 			var rowCenterY = childSourceRect.top + childSourceRect.height / 2;
 			if(!childRows[rowKey])
-				childRows[rowKey] = { left: childSourceRect.left, centerY: rowCenterY };
-			else
+				childRows[rowKey] = { left: childSourceRect.left, right: childSourceRect.right, centerY: rowCenterY };
+			else {
 				childRows[rowKey].left = Math.min(childRows[rowKey].left, childSourceRect.left);
+				childRows[rowKey].right = Math.max(childRows[rowKey].right, childSourceRect.right);
+			}
 			groupLeft = Math.min(groupLeft, childSourceRect.left);
 			groupTop = Math.min(groupTop, rowCenterY);
 			groupBottom = Math.max(groupBottom, rowCenterY);
@@ -341,10 +350,7 @@ function syncHomeMenuConnectors() {
 			var subtreeRect = subtree.getBoundingClientRect();
 			var groupCenterY = (groupTop + groupBottom) / 2;
 			var lineAbsoluteX = nodeRect.left + parentLineX;
-			// Sit just left of the leftmost child tiles. Do not pull this onto the
-			// parent drop (lineAbsoluteX): that stacks two verticals on one x.
-			// First-column child stems use the bottom/center drop, so they no
-			// longer collide with this spine the way the old side stems did.
+			// Sit close left of the leftmost child tiles.
 			var groupSpineX = groupLeft - 24;
 			targetCenter = groupCenterY - nodeRect.top;
 			subtree.style.setProperty('--home-group-elbow-y', groupCenterY - subtreeRect.top + 'px');

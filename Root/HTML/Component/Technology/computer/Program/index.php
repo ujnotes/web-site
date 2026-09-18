@@ -134,7 +134,7 @@ else:
 		A program can change stored data, and that data may influence its later behaviour.
 	</p>
 	<p>
-		A learning system goes further: experience changes its internal <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a>, which changes how future inputs are handled.
+		A learning system goes further: experience changes its internal <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="model">model</a>, which changes how future inputs are handled.
 	</p>
 	<p>
 		This is sometimes described loosely as a program rewriting itself. Usually, however, the learning rules remain part of the program while adjustable values within the model change.
@@ -147,10 +147,10 @@ else:
 		Not by itself.
 	</p>
 	<p>
-		A short fixed program may follow a clever rule without understanding anything. A larger program may perceive patterns, learn from examples, draw <a class="content-link XURL" href="/world/philosophy/inference" data-target="world/philosophy/inference" data-title="inferences">inferences</a> and make <a class="content-link XURL" href="/world/philosophy/decision" data-target="world/philosophy/decision" data-title="decisions">decisions</a>.
+		A short fixed program may follow a clever rule without understanding anything. A larger program may perceive patterns, learn from examples, draw <a class="content-link XURL" href="/philosophy/inference" data-target="philosophy/inference" data-title="inferences">inferences</a> and make <a class="content-link XURL" href="/philosophy/decision" data-target="philosophy/decision" data-title="decisions">decisions</a>.
 	</p>
 	<p>
-		Whether that behaviour counts as <a class="content-link XURL" href="/world/philosophy/intelligence" data-target="world/philosophy/intelligence" data-title="intelligence">intelligence</a> depends upon its flexibility, understanding and success across situations—not merely upon the fact that code is running.
+		Whether that behaviour counts as <a class="content-link XURL" href="/philosophy/intelligence" data-target="philosophy/intelligence" data-title="intelligence">intelligence</a> depends upon its flexibility, understanding and success across situations—not merely upon the fact that code is running.
 	</p>
 	<p>
 		A program is a means of organizing computation. Intelligence is one possible result.

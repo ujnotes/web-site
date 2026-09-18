@@ -141,7 +141,7 @@
 		A route-finding algorithm can discover a short path without knowing what travel feels like. A chess algorithm can choose a strong move without wanting to win.
 	</p>
 	<p>
-		An algorithm describes a relation between inputs, operations and outputs. Understanding and <a class="content-link XURL" href="/world/philosophy/consciousness" data-target="world/philosophy/consciousness" data-title="consciousness">consciousness</a> are separate questions.
+		An algorithm describes a relation between inputs, operations and outputs. Understanding and <a class="content-link XURL" href="/philosophy/consciousness" data-target="philosophy/consciousness" data-title="consciousness">consciousness</a> are separate questions.
 	</p>
 	<p>
 		We often use human words such as “choose”, “see” or “learn” to describe its operation. These words may describe the function correctly without implying an inner experience.
@@ -164,10 +164,10 @@
 	</p>
 	<h3>How do algorithms relate to intelligence?</h3>
 	<p>
-		Algorithms provide repeatable methods. <a class="content-link XURL" href="/world/philosophy/intelligence" data-target="world/philosophy/intelligence" data-title="Intelligence">Intelligence</a> includes recognizing which method fits the situation, adapting when it fails and sometimes inventing a better one.
+		Algorithms provide repeatable methods. <a class="content-link XURL" href="/philosophy/intelligence" data-target="philosophy/intelligence" data-title="Intelligence">Intelligence</a> includes recognizing which method fits the situation, adapting when it fails and sometimes inventing a better one.
 	</p>
 	<p>
-		An intelligent system may use many algorithms for perception, memory, <a class="content-link XURL" href="/world/philosophy/learning" data-target="world/philosophy/learning" data-title="learning">learning</a>, inference and decision.
+		An intelligent system may use many algorithms for perception, memory, <a class="content-link XURL" href="/philosophy/learning" data-target="philosophy/learning" data-title="learning">learning</a>, inference and decision.
 	</p>
 	<p>
 		The algorithms organize the work. Intelligence appears in how effectively the whole system understands and responds.

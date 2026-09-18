@@ -5,13 +5,13 @@
 	<h3>Earlier public site</h3>
 	<ul class="list-bullet content-list">
 		<li><div><span class='date'>15 Mar 2017</span> — published <a class="content-link XURL" href="/computer/game/doom/2016/demo/issue/vulkan_crash" data-target="computer/game/doom/2016/demo/issue/vulkan_crash" data-title="Vulkan crash">Vulkan crash</a></div></li>
-		<li><div><span class='date'>09 Feb 2017</span> — published <a class="content-link XURL" href="/world/philosophy/solution" data-target="world/philosophy/solution" data-title="Solution">Solution</a></div></li>
-		<li><div><span class='date'>09 Jan 2017</span> — published <a class="content-link XURL" href="/world/philosophy/problem" data-target="world/philosophy/problem" data-title="Problem">Problem</a></div></li>
-		<li><div><span class='date'>11 Dec 2016</span> — published <a class="content-link XURL" href="/world/philosophy/god/no_god" data-target="world/philosophy/god/no_god" data-title="No God">No God</a></div></li>
-		<li><div><span class='date'>16 Nov 2016</span> — published <a class="content-link XURL" href="/world/philosophy/god" data-target="world/philosophy/god" data-title="God">God</a></div></li>
-		<li><div><span class='date'>7 Nov 2016</span> — published <a class="content-link XURL" href="/world/philosophy/death" data-target="world/philosophy/death" data-title="Death">Death</a></div></li>
-		<li><div><span class='date'>5 Nov 2016</span> — published <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="Life">Life</a></div></li>
-		<li><div><span class='date'>3 Nov 2016</span> — published <a class="content-link XURL" href="/world/philosophy" data-target="world/philosophy" data-title="Philosophy">Philosophy</a></div></li>
+		<li><div><span class='date'>09 Feb 2017</span> — published <a class="content-link XURL" href="/philosophy/solution" data-target="philosophy/solution" data-title="Solution">Solution</a></div></li>
+		<li><div><span class='date'>09 Jan 2017</span> — published <a class="content-link XURL" href="/philosophy/problem" data-target="philosophy/problem" data-title="Problem">Problem</a></div></li>
+		<li><div><span class='date'>11 Dec 2016</span> — published <a class="content-link XURL" href="/philosophy/god/no_god" data-target="philosophy/god/no_god" data-title="No God">No God</a></div></li>
+		<li><div><span class='date'>16 Nov 2016</span> — published <a class="content-link XURL" href="/philosophy/god" data-target="philosophy/god" data-title="God">God</a></div></li>
+		<li><div><span class='date'>7 Nov 2016</span> — published <a class="content-link XURL" href="/philosophy/death" data-target="philosophy/death" data-title="Death">Death</a></div></li>
+		<li><div><span class='date'>5 Nov 2016</span> — published <a class="content-link XURL" href="/philosophy/life" data-target="philosophy/life" data-title="Life">Life</a></div></li>
+		<li><div><span class='date'>3 Nov 2016</span> — published <a class="content-link XURL" href="/philosophy" data-target="philosophy" data-title="Philosophy">Philosophy</a></div></li>
 	</ul>
 	<h3>First version published</h3>
 	<ul class="list-bullet content-list">

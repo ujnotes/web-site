@@ -48,7 +48,7 @@
 		Suppose you expect a door to open when pushed, but it does not. The failure directs attention towards the handle, the lock or the possibility that the door opens the other way.
 	</p>
 	<p>
-		A learner uses such differences to correct a <a class="content-link XURL" href="/world/philosophy/model" data-target="world/philosophy/model" data-title="model">model</a>.
+		A learner uses such differences to correct a <a class="content-link XURL" href="/philosophy/model" data-target="philosophy/model" data-title="model">model</a>.
 	</p>
 	<p>
 		Without an expectation, an event may merely happen. With an expectation, surprise becomes information about what needs to change.
@@ -178,10 +178,10 @@
 	</p>
 	<h3>How does learning support intelligence?</h3>
 	<p>
-		<a class="content-link XURL" href="/world/philosophy/intelligence" data-target="world/philosophy/intelligence" data-title="Intelligence">Intelligence</a> cannot remain effective in a changing world without learning.
+		<a class="content-link XURL" href="/philosophy/intelligence" data-target="philosophy/intelligence" data-title="Intelligence">Intelligence</a> cannot remain effective in a changing world without learning.
 	</p>
 	<p>
-		Learning corrects models, adds skills and changes expectations. <a class="content-link XURL" href="/world/philosophy/inference" data-target="world/philosophy/inference" data-title="Inference">Inference</a> uses what has been learnt to reach new conclusions. Decision uses those conclusions to select action.
+		Learning corrects models, adds skills and changes expectations. <a class="content-link XURL" href="/philosophy/inference" data-target="philosophy/inference" data-title="Inference">Inference</a> uses what has been learnt to reach new conclusions. Decision uses those conclusions to select action.
 	</p>
 	<p>
 		The action creates another experience, and the cycle continues.

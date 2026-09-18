@@ -182,18 +182,12 @@
 	top: var(--home-bottom-line-start-y);
 	left: var(--home-bottom-line-x)
 }
-
+/* Bottom connectors: plus/minus sits on the horizontal arm so the leader
+   drops from under the parent tile, then enters the glyph from the left. */
 #home-menu .home-menu-connector-bottom > .home-menu-toggle {
-	top: var(--home-bottom-line-start-y);
-	left: calc(var(--home-bottom-line-x) - var(--home-glyph-hit-size) / 2)
+	top: var(--home-bottom-glyph-y, var(--home-bottom-line-start-y));
+	left: var(--home-bottom-glyph-x, calc(var(--home-bottom-line-x) - var(--home-glyph-hit-size) / 2))
 }
-
-
-
-
-
-
-
 
 #home-menu .home-menu-toggle {
 	position: absolute;

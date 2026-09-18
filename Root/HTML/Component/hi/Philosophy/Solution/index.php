@@ -1,7 +1,7 @@
 <div id='message'>
 		<h3>संसार की समस्याओं का समाधान क्या है?</h3>
 	<p>
-		पिछले लेख <a class="content-link XURL" href="/world/philosophy/problem" data-target="world/philosophy/problem" data-title="समस्या">समस्या</a> में मैंने निष्कर्ष निकाला कि आज के संसार की मुख्य समस्या “मनुष्य की अज्ञानता और मूर्खता” है।
+		पिछले लेख <a class="content-link XURL" href="/philosophy/problem" data-target="philosophy/problem" data-title="समस्या">समस्या</a> में मैंने निष्कर्ष निकाला कि आज के संसार की मुख्य समस्या “मनुष्य की अज्ञानता और मूर्खता” है।
 	</p>
 	<p>
 		आरम्भ में हमें वास्तविकता की प्रकृति समझनी होगी।
@@ -40,13 +40,13 @@
 	</p>
 	<h3>जीवन के बारे में क्या समझना चाहिए?</h3>
 	<p>
-		लोगों के स्तर पर सबसे पहले <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="जीवन">जीवन</a> का अर्थ समझना आवश्यक है:
+		लोगों के स्तर पर सबसे पहले <a class="content-link XURL" href="/philosophy/life" data-target="philosophy/life" data-title="जीवन">जीवन</a> का अर्थ समझना आवश्यक है:
 	</p>
 	<ul class="list-bullet content-list">
 		<li><div>हर जीवन का मूल्य और उसका अद्भुत उपहार होना।</div></li>
 		<li><div>निजी अस्तित्व का महत्त्व और उसकी सीमा।</div></li>
 		<li><div>हर अच्छी बात के प्रति कृतज्ञता।</div></li>
-		<li><div>साझा जीवन, पीड़ा और <a class="content-link XURL" href="/world/philosophy/death" data-target="world/philosophy/death" data-title="मृत्यु">मृत्यु</a> से हमारा जुड़ाव।</div></li>
+		<li><div>साझा जीवन, पीड़ा और <a class="content-link XURL" href="/philosophy/death" data-target="philosophy/death" data-title="मृत्यु">मृत्यु</a> से हमारा जुड़ाव।</div></li>
 		<li><div>अकेले व्यक्ति का अर्थ सीमित और दूसरों के साथ उसका अर्थ व्यापक होना।</div></li>
 		<li><div>शरीर और वैचारिक—भौतिक या अलौकिक नहीं—आत्म के बीच अन्तर।</div></li>
 		<li><div>यह कल्पना कि हम किसी भी शरीर और आँखों से संसार देख सकते थे।</div></li>

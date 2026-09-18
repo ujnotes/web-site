@@ -7,7 +7,10 @@
 	<p>
 		https://simplyian.com/2015/01/07/Hacking-GMail-to-use-custom-domains-for-free.
 	</p>
+	<div id='content-body-separator' class='center'></div>
+	<p>
+		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em> &amp;#x20;
+	</p>
 
 </div>
-
 <?php require('../HTML/Fragment/Component_bottom.php') ?>

@@ -4,6 +4,7 @@ my_notes_font_scale	1	0.8	0.8
 menu_home	home	मुखपृष्ठ	मुखपृष्ठ
 menu_world	World	विश्व	विश्व
 menu_computer	Computer	कंप्यूटर	कंप्यूटर
+menu_technology	Technology	प्रौद्योगिकी	प्रौद्योगिकी
 menu_about	About	परिचय	परिचय
 menu_faq	FAQ	सामान्य प्रश्न	सामान्य प्रश्न
 menu_feedback	Feedback	प्रतिक्रिया	प्रतिक्रिया
@@ -19,3 +20,4 @@ nav_next_article	Next article	अगला लेख	अगला लेख
 nav_bottom	Jump to page navigation	पृष्ठ नेविगेशन पर जाएँ	पृष्ठ नेविगेशन पर जाएँ
 nav_no_previous_article	No previous article	कोई पिछला लेख नहीं	कोई पिछला लेख नहीं
 nav_no_next_article	No next article	कोई अगला लेख नहीं	कोई अगला लेख नहीं
+

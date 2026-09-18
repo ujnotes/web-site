@@ -5,13 +5,13 @@
 	<h3>पूर्व सार्वजनिक साइट</h3>
 	<ul class="list-bullet content-list">
 		<li><div><span class='date'>15 Mar 2017</span> — <a class="content-link XURL" href="/computer/game/doom/2016/demo/issue/vulkan_crash" data-target="computer/game/doom/2016/demo/issue/vulkan_crash" data-title="वल्कन क्रैश">वल्कन क्रैश</a> प्रकाशित</div></li>
-		<li><div><span class='date'>09 Feb 2017</span> — <a class="content-link XURL" href="/world/philosophy/solution" data-target="world/philosophy/solution" data-title="समाधान">समाधान</a> प्रकाशित</div></li>
-		<li><div><span class='date'>09 Jan 2017</span> — <a class="content-link XURL" href="/world/philosophy/problem" data-target="world/philosophy/problem" data-title="समस्या">समस्या</a> प्रकाशित</div></li>
-		<li><div><span class='date'>11 Dec 2016</span> — <a class="content-link XURL" href="/world/philosophy/god/no_god" data-target="world/philosophy/god/no_god" data-title="कोई ईश्वर नहीं">कोई ईश्वर नहीं</a> प्रकाशित</div></li>
-		<li><div><span class='date'>16 Nov 2016</span> — <a class="content-link XURL" href="/world/philosophy/god" data-target="world/philosophy/god" data-title="ईश्वर">ईश्वर</a> प्रकाशित</div></li>
-		<li><div><span class='date'>7 Nov 2016</span> — <a class="content-link XURL" href="/world/philosophy/death" data-target="world/philosophy/death" data-title="मृत्यु">मृत्यु</a> प्रकाशित</div></li>
-		<li><div><span class='date'>5 Nov 2016</span> — <a class="content-link XURL" href="/world/philosophy/life" data-target="world/philosophy/life" data-title="जीवन">जीवन</a> प्रकाशित</div></li>
-		<li><div><span class='date'>3 Nov 2016</span> — <a class="content-link XURL" href="/world/philosophy" data-target="world/philosophy" data-title="दर्शन">दर्शन</a> प्रकाशित</div></li>
+		<li><div><span class='date'>09 Feb 2017</span> — <a class="content-link XURL" href="/philosophy/solution" data-target="philosophy/solution" data-title="समाधान">समाधान</a> प्रकाशित</div></li>
+		<li><div><span class='date'>09 Jan 2017</span> — <a class="content-link XURL" href="/philosophy/problem" data-target="philosophy/problem" data-title="समस्या">समस्या</a> प्रकाशित</div></li>
+		<li><div><span class='date'>11 Dec 2016</span> — <a class="content-link XURL" href="/philosophy/god/no_god" data-target="philosophy/god/no_god" data-title="कोई ईश्वर नहीं">कोई ईश्वर नहीं</a> प्रकाशित</div></li>
+		<li><div><span class='date'>16 Nov 2016</span> — <a class="content-link XURL" href="/philosophy/god" data-target="philosophy/god" data-title="ईश्वर">ईश्वर</a> प्रकाशित</div></li>
+		<li><div><span class='date'>7 Nov 2016</span> — <a class="content-link XURL" href="/philosophy/death" data-target="philosophy/death" data-title="मृत्यु">मृत्यु</a> प्रकाशित</div></li>
+		<li><div><span class='date'>5 Nov 2016</span> — <a class="content-link XURL" href="/philosophy/life" data-target="philosophy/life" data-title="जीवन">जीवन</a> प्रकाशित</div></li>
+		<li><div><span class='date'>3 Nov 2016</span> — <a class="content-link XURL" href="/philosophy" data-target="philosophy" data-title="दर्शन">दर्शन</a> प्रकाशित</div></li>
 	</ul>
 	<h3>पहला संस्करण प्रकाशित</h3>
 	<ul class="list-bullet content-list">

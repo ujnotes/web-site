@@ -3,17 +3,17 @@
 function home_menu_leaf_slugs() {
 	// Homepage shows these nodes but does not expand their descendants.
 	return [
-		'computer/game/doom',
-		'computer/technology/artificial_intelligence/machine_learning',
+		'technology/computer/game/doom',
+		'technology/computer/artificial_intelligence/machine_learning',
 	];
 }
 
 function home_menu_cap_children_of() {
 	// Direct children of these nodes are shown as leaves (no deeper).
 	return [
-		'computer/os',
-		'computer/program',
-		'computer/programming',
+		'technology/computer/os',
+		'technology/computer/program',
+		'technology/computer/programming',
 	];
 }
 
@@ -21,6 +21,14 @@ function home_menu_selected_child_slugs() {
 	// Parent slug => child slugs to show. When set, other siblings are omitted
 	// and a vertical ⋮ is shown against that last selected child tile.
 	return [
+		'technology/computer' => [
+			'technology/computer/algorithm',
+			'technology/computer/program',
+			'technology/computer/os',
+			'technology/computer/programming',
+			'technology/computer/game',
+			'technology/computer/artificial_intelligence',
+		],
 	];
 }
 
@@ -28,10 +36,9 @@ function home_menu_selected_child_limit() {
 	// Parent slug => keep the first N children in Config/ID.tsv order.
 	// Used when that parent has no explicit selected-child list.
 	return [
-		'computer/os' => 1,
-		'computer/program' => 1,
-		'computer/programming' => 1,
-		'computer/technology' => 1,
+		'technology/computer/os' => 1,
+		'technology/computer/program' => 1,
+		'technology/computer/programming' => 1,
 	];
 }
 
@@ -60,7 +67,15 @@ function home_menu_visible_children($parent_slug, $children) {
 			if (isset($set[strtolower($child[0])]))
 				$visible[] = $child;
 		}
-		return array($visible, count($visible) < count($children));
+		$ordered = array();
+		foreach ($allow[$parent_slug] as $slug) {
+			$slug = strtolower($slug);
+			foreach ($visible as $child) {
+				if (strtolower($child[0]) === $slug)
+					$ordered[] = $child;
+			}
+		}
+		return array($ordered, count($ordered) < count($children));
 	}
 	$limits = home_menu_selected_child_limit();
 	if (isset($limits[$parent_slug]) && count($children) > $limits[$parent_slug]) {
