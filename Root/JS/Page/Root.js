@@ -5,17 +5,26 @@ function homeMenuNodeTile(node) {
 		|| node.querySelector(':scope > .home-menu-tile-row > .home-menu-level > .item_block_container');
 }
 
-function homeMenuSharesRowWithPrevious(node) {
+function homeMenuSharesRowWithSibling(node) {
+	// True when another sibling sits on the same row (left or right). First-in-row
+	// must count too (e.g. Algorithm beside Program) so bottom leaders and child
+	// tiles like Binary Search align with Illustrator / *Nix / Ajax.
 	var parentSubtree = node.parentElement;
 	if(!parentSubtree || !parentSubtree.classList.contains('home-menu-subtree'))
 		return false;
 	var siblings = parentSubtree.querySelectorAll(':scope > .home-menu-node');
 	var index = [].indexOf.call(siblings, node);
-	if(index < 1)
+	if(index < 0 || siblings.length < 2)
 		return false;
-	var previousRect = siblings[index - 1].getBoundingClientRect();
 	var nodeRect = node.getBoundingClientRect();
-	return Math.abs(previousRect.top - nodeRect.top) < 2;
+	for(var i = 0; i < siblings.length; i++) {
+		if(i === index)
+			continue;
+		var otherRect = siblings[i].getBoundingClientRect();
+		if(Math.abs(otherRect.top - nodeRect.top) < 2)
+			return true;
+	}
+	return false;
 }
 
 function syncHomeMenuConnectorStyles(menu) {
@@ -226,15 +235,15 @@ function syncHomeMenuConnectors() {
 
 		var subtreeAll = node.querySelector(':scope > .home-menu-subtree');
 		var subtree = node.querySelector(':scope > .home-menu-subtree:not([hidden])');
-		// Bottom drop only when this node shares a row with the previous sibling
-		// (wrapped horizontal group). Vertically stacked children keep the side
-		// toggle next to their tile (e.g. Hindu). World hubs never use it.
+		// Bottom drop when this node shares a row with any sibling (including
+		// first-in-row, e.g. Algorithm beside Program). Vertically stacked
+		// children keep the side toggle next to their tile. World hubs never use it.
 		var siblingNodes = node.parentElement && node.parentElement.classList.contains('home-menu-subtree')
 			? node.parentElement.querySelectorAll(':scope > .home-menu-node')
 			: [];
 		var bottomConnector = !!subtreeAll && siblingNodes.length > 1
 			&& !node.classList.contains('home-menu-hub')
-			&& homeMenuSharesRowWithPrevious(node);
+			&& homeMenuSharesRowWithSibling(node);
 		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		if(bottomConnector) {
@@ -291,19 +300,15 @@ function syncHomeMenuConnectors() {
 			child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
 		});
 
-		// Bottom connectors: park the branch toggle on the horizontal arm so
-		// the drop under the parent turns right and enters it from the left.
-		if(bottomConnector && directNodes.length) {
+		// Bottom connectors: park the expand glyph soon after the leader START
+		// (under the parent tile), not out at the first child's elbow.
+		if(bottomConnector) {
 			var hitSize = parseFloat(getComputedStyle(node).getPropertyValue('--home-glyph-hit-size')) || 32;
-			var elbowChild = directNodes[0];
-			var elbowTile = homeMenuNodeTile(elbowChild);
-			if(elbowTile) {
-				var elbowTileRect = elbowTile.getBoundingClientRect();
-				var elbowAbsY = elbowTileRect.top + elbowTileRect.height / 2;
-				var glyphAbsX = nodeRect.left + parentLineX + hitSize * 0.75;
-				node.style.setProperty('--home-bottom-glyph-y', (elbowAbsY - nodeRect.top - hitSize / 2) + 'px');
-				node.style.setProperty('--home-bottom-glyph-x', (glyphAbsX - nodeRect.left - hitSize / 2) + 'px');
-			}
+			// Just below the drop origin, centered on the vertical stem.
+			var glyphTop = lineOriginY + hitSize * 0.15;
+			var glyphLeft = parentLineX - hitSize / 2;
+			node.style.setProperty('--home-bottom-glyph-y', glyphTop + 'px');
+			node.style.setProperty('--home-bottom-glyph-x', glyphLeft + 'px');
 		}
 		else {
 			node.style.removeProperty('--home-bottom-glyph-y');

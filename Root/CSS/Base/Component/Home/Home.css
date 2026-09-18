@@ -83,6 +83,19 @@
 	margin-top: 24px
 }
 
+/* Hub subtrees: isolate stacking so Philosophy spines do not paint over Science. */
+#home-menu .home-menu-hub > .home-menu-subtree {
+	position: relative;
+	z-index: 1;
+	isolation: isolate
+}
+
+/* Bottom-leader children share one baseline under a horizontal parent row. */
+#home-menu .home-menu-subtree > .home-menu-connector-bottom > .home-menu-subtree {
+	align-self: flex-start
+}
+
+
 #home-menu .home-menu-node,
 #home-menu .home-menu-level {
 	position: relative
