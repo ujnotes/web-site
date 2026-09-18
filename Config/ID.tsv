@@ -1093,3 +1093,4 @@ published	computer/technology/artificial_intelligence/machine_learning/models/ll
 published	computer/technology/artificial_intelligence/machine_learning/models/transformer	Transformer	Transformer	0	How a Transformer uses attention and context, how its parts fit together, and why it matters for language and image models.	article
 published	computer/program/caddy/setup_windows	Caddy setup on Windows	Caddy setup on Windows	0	Install and run Caddy on Windows as a local HTTPS reverse proxy for an app on localhost:3000.	article
 published	computer/program/caddy/setup_mac	Caddy setup on macOS	Caddy setup on macOS	0	Install Caddy with Homebrew on macOS and use it as a local HTTPS reverse proxy for an app on localhost:3000.	article
+publish	technology/computer	Technology	Technology	0	Working notes on web, hardware, licenses, ML, microservices, and software design.	article
