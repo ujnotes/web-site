@@ -58,6 +58,26 @@
 	margin-top: 24px
 }
 
+/* World hubs (Philosophy / Science / Technology): stack full-width like the
+   old separate branches. Expanded hub trees push the next hub far down. */
+#home-menu #home-world-children {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	row-gap: 24px;
+	width: 100%;
+	max-width: 100%
+}
+
+#home-menu #home-world-children > .home-menu-hub {
+	flex: 0 0 auto;
+	width: 100%;
+	max-width: 100%
+}
+
+#home-menu #home-world-children > .home-menu-hub:has(> .home-menu-subtree:not([hidden])) + .home-menu-hub {
+	margin-top: 24px
+}
+
 #home-menu .home-menu-node,
 #home-menu .home-menu-level {
 	position: relative

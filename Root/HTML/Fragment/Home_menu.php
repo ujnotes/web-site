@@ -132,10 +132,14 @@ function home_menu_render_tree($items, $level, $parent_slug) {
 		$children = getSubComponents($item[0]);
 		$has_children = count($children) > 0 && !home_menu_is_leaf($item[0]);
 		$show_more = $truncated && $index === $count;
-		$bottom_connector = $count > 1 && $has_children;
+		$is_hub = strtolower($parent_slug) === 'world';
+		// Hubs under World stack like old top-level branches (no bottom drop).
+		$bottom_connector = !$is_hub && $count > 1 && $has_children;
 		$control_id = 'home-' . trim(preg_replace('/[^a-z0-9]+/i', '-', $item[0]), '-') . '-children';
 		$more_label = getComponentLabel($parent_slug);
 		$node_class = 'home-menu-node';
+		if ($is_hub)
+			$node_class .= ' home-menu-hub';
 		if ($show_more)
 			$node_class .= ' home-menu-has-more';
 		if ($bottom_connector)

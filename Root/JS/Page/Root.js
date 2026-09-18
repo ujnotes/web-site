@@ -232,7 +232,7 @@ function syncHomeMenuConnectors() {
 		var siblingNodes = node.parentElement && node.parentElement.classList.contains('home-menu-subtree')
 			? node.parentElement.querySelectorAll(':scope > .home-menu-node')
 			: [];
-		var bottomConnector = !!subtreeAll && siblingNodes.length > 1;
+		var bottomConnector = !!subtreeAll && siblingNodes.length > 1 && !node.classList.contains('home-menu-hub');
 		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		if(bottomConnector) {
