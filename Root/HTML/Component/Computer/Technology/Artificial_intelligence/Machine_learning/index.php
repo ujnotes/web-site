@@ -71,7 +71,7 @@
 	</p>
 	<h3>Is machine learning the same as artificial intelligence?</h3>
 	<p>
-		No. <a class="content-link XURL" href="/computer/technology/artificial_intelligence" data-target="computer/technology/artificial_intelligence" data-title="Artificial intelligence"><strong>Artificial intelligence</strong></a><strong> is the broader field, and machine learning is one way of building artificial intelligence.</strong>
+		No. <a class="content-link XURL" href="/technology/computer/artificial_intelligence" data-target="technology/computer/artificial_intelligence" data-title="Artificial intelligence"><strong>Artificial intelligence</strong></a><strong> is the broader field, and machine learning is one way of building artificial intelligence.</strong>
 	</p>
 	<p>
 		AI is the attempt to make machines perform tasks that appear to require abilities such as reasoning, planning, perception, language or decision-making. Some AI systems use rules written directly by people. Machine-learning systems instead learn much of their behaviour from data.

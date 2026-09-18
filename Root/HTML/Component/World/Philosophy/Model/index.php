@@ -1,7 +1,7 @@
 <?php $alt='A globe and folded map'; require('../HTML/Fragment/Component_cover.php') ?>
 <h2 class='center'><?php echo $desc; ?></h2>
 <div id='message'>
-		<h3>What is a model?</h3>
+			<h3>What is a model?</h3>
 	<p>
 		A model is a simplified representation of something.
 	</p>
@@ -184,6 +184,9 @@
 	<p>
 		The program provides the learning procedure. The model is what that procedure has learnt.
 	</p>
+	<p>
+		Notes on models inside machine learning, including large language models, continue under <a class="content-link XURL" href="/technology/computer/artificial_intelligence/machine_learning/models" data-target="technology/computer/artificial_intelligence/machine_learning/models" data-title="Models">Models</a>.
+	</p>
 	<h3>So what is a model, finally?</h3>
 	<p>
 		A model is a selective representation used to explain, predict or act.
@@ -196,6 +199,10 @@
 	</p>
 	<p>
 		Intelligence requires building them, testing them and remembering that even the best map is not the land.
+	</p>
+	<div id='content-body-separator' class='center'></div>
+	<p>
+		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em> &amp;#x20;
 	</p>
 
 </div>

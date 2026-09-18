@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Design</title>
+  <rect width="512" height="512" rx="72" fill="#eef2f7"/>
+  <path d="M138 374 175 253 327 101l84 84-152 152-121 37Z" fill="#6f8fbd"/>
+  <path d="m175 253 84 84-121 37 37-121Z" fill="#d9a66f"/>
+  <path d="m153 326-15 48 48-15-33-33Z" fill="#40516f"/>
+  <path d="m327 101 84 84-35 35-84-84 35-35Z" fill="#e58d86"/>
+  <path d="M292 136 175 253m201-33L259 337" fill="none" stroke="#40516f" stroke-width="16" stroke-linecap="round"/>
+</svg>

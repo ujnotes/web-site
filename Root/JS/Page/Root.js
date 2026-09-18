@@ -226,7 +226,13 @@ function syncHomeMenuConnectors() {
 
 		var subtreeAll = node.querySelector(':scope > .home-menu-subtree');
 		var subtree = node.querySelector(':scope > .home-menu-subtree:not([hidden])');
-		var bottomConnector = !!subtreeAll && homeMenuSharesRowWithPrevious(node);
+		// Match Home_menu.php: any node with siblings + children uses the bottom
+		// drop. First-in-row used to keep a short side connector, which made
+		// Algorithm→Binary Search look shorter than Program/OS/… for no reason.
+		var siblingNodes = node.parentElement && node.parentElement.classList.contains('home-menu-subtree')
+			? node.parentElement.querySelectorAll(':scope > .home-menu-node')
+			: [];
+		var bottomConnector = !!subtreeAll && siblingNodes.length > 1;
 		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		if(bottomConnector) {
@@ -261,8 +267,15 @@ function syncHomeMenuConnectors() {
 			var firstChildSource = homeMenuNodeTile(firstChild);
 			if(firstChildSource) {
 				var firstChildRect = firstChild.getBoundingClientRect();
-				var childSourceOffset = firstChildSource.getBoundingClientRect().left - firstChildRect.left;
-				subtree.style.setProperty('--home-bottom-child-indent', Math.max(0, parentLineX + 36 - childSourceOffset) + 'px');
+				var childSourceRect = firstChildSource.getBoundingClientRect();
+				var childSourceOffset = childSourceRect.left - firstChildRect.left;
+				var subtreeRect = subtree.getBoundingClientRect();
+				// Center the child tile on the parent stem. The old indent parked
+				// children to the right of the stem, so Algorithm→Binary Search
+				// spilled into Program's column and the two stems looked doubled.
+				var indent = nodeRect.left + parentLineX - childSourceRect.width / 2
+					- subtreeRect.left - childSourceOffset;
+				subtree.style.setProperty('--home-bottom-child-indent', Math.max(0, indent) + 'px');
 			}
 			node.style.setProperty('--home-bottom-line-start-y', lineOriginY + 'px');
 			node.style.setProperty('--home-bottom-line-x', parentLineX + 'px');
@@ -275,10 +288,17 @@ function syncHomeMenuConnectors() {
 			var childSourceRect = childSource.getBoundingClientRect();
 			var elbowY = childSourceRect.top - childRect.top + childSourceRect.height / 2;
 			var lineX = nodeRect.left + parentLineX - childRect.left;
-			var tileEdgeX = childSourceRect.left - childRect.left - 8;
 			child.style.setProperty('--home-parent-elbow-y', elbowY + 'px');
-			child.style.setProperty('--home-parent-elbow-left', Math.min(lineX, tileEdgeX) + 'px');
-			child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
+			if(bottomConnector) {
+				// Stem already meets the tile center; no side spur.
+				child.style.setProperty('--home-parent-elbow-left', lineX + 'px');
+				child.style.setProperty('--home-parent-elbow-width', '0px');
+			}
+			else {
+				var tileEdgeX = childSourceRect.left - childRect.left - 8;
+				child.style.setProperty('--home-parent-elbow-left', Math.min(lineX, tileEdgeX) + 'px');
+				child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
+			}
 		});
 
 		var childRows = {};
@@ -319,9 +339,13 @@ function syncHomeMenuConnectors() {
 		var targetCenter = targetRect.top - nodeRect.top + targetRect.height / 2;
 		if(wrappedGroup) {
 			var subtreeRect = subtree.getBoundingClientRect();
-			var groupSpineX = groupLeft - 24;
 			var groupCenterY = (groupTop + groupBottom) / 2;
 			var lineAbsoluteX = nodeRect.left + parentLineX;
+			// Sit just left of the leftmost child tiles. Do not pull this onto the
+			// parent drop (lineAbsoluteX): that stacks two verticals on one x.
+			// First-column child stems use the bottom/center drop, so they no
+			// longer collide with this spine the way the old side stems did.
+			var groupSpineX = groupLeft - 24;
 			targetCenter = groupCenterY - nodeRect.top;
 			subtree.style.setProperty('--home-group-elbow-y', groupCenterY - subtreeRect.top + 'px');
 			subtree.style.setProperty('--home-group-elbow-left', Math.min(lineAbsoluteX, groupSpineX) - subtreeRect.left + 'px');

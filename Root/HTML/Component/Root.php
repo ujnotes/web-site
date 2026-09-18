@@ -19,7 +19,7 @@
 			</p>
 			<p>
 				I discuss topics ranging from <?php link_xurl('world/philosophy/life', 'Life') ?>, <?php link_xurl('world/philosophy/death', 'Death') ?> and <?php link_xurl('world/philosophy/god', 'God') ?> to current affairs;<br>
-				And computers &amp; tech.
+				And <?php link_xurl('computer', 'Computers') ?> &amp; <?php link_xurl('computer/technology', 'Technology') ?>.
 			</p>
 			<p>
 				Follow 'Ujnotes' via the social channels down below.

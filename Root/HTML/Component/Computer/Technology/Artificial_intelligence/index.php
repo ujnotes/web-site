@@ -35,7 +35,7 @@
 		A tax calculator may be told exactly how to apply each rate. A traditional spam filter may be given a list of forbidden phrases.
 	</p>
 	<p>
-		<a class="content-link XURL" href="/computer/technology/artificial_intelligence/machine_learning" data-target="computer/technology/artificial_intelligence/machine_learning" data-title="Machine-learning systems">Machine-learning systems</a> are instead given a method for adjusting a model from examples. The programmer does not specify every useful pattern. The training process discovers relationships that help reduce error or increase reward.
+		<a class="content-link XURL" href="/technology/computer/artificial_intelligence/machine_learning" data-target="technology/computer/artificial_intelligence/machine_learning" data-title="Machine-learning systems">Machine-learning systems</a> are instead given a method for adjusting a model from examples. The programmer does not specify every useful pattern. The training process discovers relationships that help reduce error or increase reward.
 	</p>
 	<p>
 		The boundary is not sharp. Most practical AI systems combine learnt models with ordinary software and human-written rules.

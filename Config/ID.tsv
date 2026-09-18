@@ -1031,7 +1031,7 @@ published	computer/program/youtube/notes	Notes	Notes	0	Working notes on Notes: L
 published	computer/program/zbrush	ZBrush	ZBrush	0	Working notes on ZBrush: iPad.	article
 published	computer/program/zbrush/ipad	iPad	iPad	0	Working notes on iPad.	article
 published	computer/program/zbrush/ipad/notes	Notes	Notes	0	Working notes on Notes: Supported formats.	article
-published	computer/technology	Technology	Technology	0	Working notes on web, hardware, licenses, ML, microservices, and software design.	article
+published	computer/technology	Technology	Technology	0	An introduction to computer technology: software, hardware, connected systems, artificial intelligence, and the methods that make them dependable.	article
 published	computer/technology/cap_theorem	CAP Theorem	CAP Theorem — Consistency, Availability, and Partition	0	CAP: a distributed system cannot simultaneously provide consistency, availability, and partition tolerance.	article
 published	computer/technology/design	Design	Design	0	Working notes on Design: SOLID.	article
 published	computer/technology/design/solid	SOLID	SOLID	0	SOLID object-oriented design: SRP, OCP, LSP, ISP, DIP — maintainability, reuse, scale, flexibility.	article
@@ -1088,3 +1088,8 @@ published	computer/game/doom/2016	Doom 2016	Doom 2016	0	The fourth installment a
 published	computer/game/doom/2016/demo	Demo	Demo	0	Doom 2016 Demo	article
 published	computer/game/doom/2016/demo/issue	Issues	Issues	0	Doom 2016 Demo issues	article
 published	computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan crash	Vulkan crash	0	Doom 2016 Demo crash with Vulkan : Solution	article
+published	computer/technology/artificial_intelligence/machine_learning/models	Models	Models	0	What a machine-learning model is, how it relates to the general idea of a model, and where large language models fit.	article
+published	computer/technology/artificial_intelligence/machine_learning/models/llm	LLM	Large Language Model	0	What a large language model is, how it predicts text, and what that does and does not mean	article
+published	computer/technology/artificial_intelligence/machine_learning/models/transformer	Transformer	Transformer	0	How a Transformer uses attention and context, how its parts fit together, and why it matters for language and image models.	article
+published	computer/program/caddy/setup_windows	Caddy setup on Windows	Caddy setup on Windows	0	Install and run Caddy on Windows as a local HTTPS reverse proxy for an app on localhost:3000.	article
+published	computer/program/caddy/setup_mac	Caddy setup on macOS	Caddy setup on macOS	0	Install Caddy with Homebrew on macOS and use it as a local HTTPS reverse proxy for an app on localhost:3000.	article

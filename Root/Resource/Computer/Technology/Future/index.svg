@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Future</title>
+  <rect width="512" height="512" rx="72" fill="#eaf2f2"/>
+  <circle cx="256" cy="256" r="154" fill="#fff" stroke="#40516f" stroke-width="20"/>
+  <path d="M256 122v268M122 256h268" fill="none" stroke="#83b8b4" stroke-width="14"/>
+  <path d="M163 163c54 48 132 48 186 0M163 349c54-48 132-48 186 0" fill="none" stroke="#83b8b4" stroke-width="14"/>
+  <path d="M256 256 343 169" fill="none" stroke="#40516f" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="18" fill="#e29a61"/>
+</svg>

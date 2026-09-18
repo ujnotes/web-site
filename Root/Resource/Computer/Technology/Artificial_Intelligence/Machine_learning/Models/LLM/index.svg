@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+	<title id="title">Large language model</title>
+	<path d="M10 12h44v32H31L20 53v-9H10z" fill="#eef2f7" stroke="#40516f" stroke-width="2.5" stroke-linejoin="round"/>
+	<g fill="#56b4d1" stroke="#40516f" stroke-width="1.8">
+		<circle cx="21" cy="28" r="3.5"/>
+		<circle cx="32" cy="22" r="3.5"/>
+		<circle cx="43" cy="29" r="3.5"/>
+		<circle cx="32" cy="36" r="3.5"/>
+	</g>
+	<path d="m24 27 5-3m6 0 5 3m0 4-5 3m-6 0-5-4" fill="none" stroke="#40516f" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Web</title>
+  <rect width="512" height="512" rx="72" fill="#eaf2f2"/>
+  <circle cx="256" cy="256" r="162" fill="#6f8fbd" stroke="#40516f" stroke-width="18"/>
+  <g fill="none" stroke="#fff" stroke-width="16">
+    <path d="M94 256h324M118 190h276M118 322h276"/>
+    <ellipse cx="256" cy="256" rx="78" ry="162"/>
+    <path d="M256 94v324"/>
+  </g>
+</svg>

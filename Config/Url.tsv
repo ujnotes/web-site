@@ -185,15 +185,21 @@ computer/programming/	visual_studio	svg
 computer/programming/	winapi	svg
 computer/programming/	wix	svg
 computer/programming/	xml	svg
-computer/technology/	cap_theorem	svg
-computer/technology/	digital_certificate	svg
-computer/technology/	email	svg
-computer/technology/	hardware	svg
-computer/technology/	license	svg
-computer/technology/	llm	svg
-computer/technology/	nfc	svg
-computer/technology/	proxy	svg
-computer/technology/	rss	svg
+technology/computer/	cap_theorem	svg
+technology/computer/	design	svg
+technology/computer/	digital_certificate	svg
+technology/computer/	email	svg
+technology/computer/	future	svg
+technology/computer/	hardware	svg
+technology/computer/	license	svg
+technology/computer/	llm	svg
+technology/computer/	microservices	svg
+technology/computer/	nfc	svg
+technology/computer/	privacy	svg
+technology/computer/	proxy	svg
+technology/computer/	rss	svg
+technology/computer/	software	svg
+technology/computer/	web	svg
 	faq	jpg
 	feedback	jpg
 	license	jpg
@@ -303,11 +309,13 @@ computer/programming/vb_script/	notes	svg
 computer/programming/visual_cpp/	ide_notes	svg
 computer/programming/winapi/	notes	svg
 computer/programming/wix/	notes	svg
-computer/technology/llm/	langchain	svg
-computer/technology/artificial_intelligence/machine_learning/	notes	svg
-computer/technology/software/	versioning	svg
-computer/technology/web/	css	svg
-computer/technology/web/ssl/	letsencrypt	svg
+technology/computer/llm/	langchain	svg
+technology/computer/artificial_intelligence/machine_learning/	notes	svg
+technology/computer/artificial_intelligence/machine_learning/	cnn	svg
+technology/computer/artificial_intelligence/machine_learning/	links	svg
+technology/computer/software/	versioning	svg
+technology/computer/web/	css	svg
+technology/computer/web/ssl/	letsencrypt	svg
 computer/os/android/adb/	notes	svg
 computer/os/android/	android	svg
 computer/os/android/	notes	svg
@@ -325,8 +333,8 @@ computer/os/windows/server_2008/	notes	svg
 computer/	program	jpg
 world/philosophy/	learning	jpg
 world/philosophy/	decision	jpg
-computer/technology/	artificial_intelligence	jpg
-computer/technology/artificial_intelligence/	machine_learning	jpg
+technology/computer/	artificial_intelligence	jpg
+technology/computer/artificial_intelligence/	machine_learning	jpg
 computer/algorithm/binary_search/	example	svg
 	computer	jpg
 computer/	game	jpg
@@ -334,5 +342,22 @@ computer/	technology	jpg
 computer/algorithm/	binary_search	jpg
 world/philosophy/	hindu	jpg
 computer/	algorithm	jpg
-computer/technology/artificial_intelligence/machine_learning/models/llm/	bucket	jpg
-computer/technology/artificial_intelligence/machine_learning/models/llm/	pendulum	jpg
+technology/computer/artificial_intelligence/machine_learning/	models	svg
+technology/computer/artificial_intelligence/machine_learning/models/	llm	svg
+technology/computer/artificial_intelligence/machine_learning/models/llm/	bucket	jpg
+technology/computer/artificial_intelligence/machine_learning/models/llm/	pendulum	jpg
+technology/computer/artificial_intelligence/machine_learning/models/	llm	jpg
+technology/computer/artificial_intelligence/machine_learning/models/	transformer	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	context	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	processing	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	variants	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	context-dark	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	processing-dark	jpg
+technology/computer/artificial_intelligence/machine_learning/models/transformer/	variants-dark	jpg
+technology/computer/artificial_intelligence/machine_learning/	models	jpg
+computer/program/caddy/	setup_windows	jpg
+computer/program/caddy/	setup_mac	jpg
+technology/computer/artificial_intelligence/machine_learning/embeddings/	embeddings	png
+technology/computer/artificial_intelligence/machine_learning/embeddings/	embeddings-dark	png
+technology/computer/artificial_intelligence/machine_learning/models/llm/rag/	rag	png
+technology/computer/artificial_intelligence/machine_learning/models/llm/rag/	rag-dark	png

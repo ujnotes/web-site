@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Microservices</title>
+  <rect width="512" height="512" rx="72" fill="#eef1f6"/>
+  <g fill="none" stroke="#40516f" stroke-width="18" stroke-linecap="round">
+    <path d="M176 176h160M176 336h160M176 176v160M336 176v160"/>
+    <path d="m256 176-80 80 80 80 80-80-80-80Z"/>
+  </g>
+  <g stroke="#fff" stroke-width="10">
+    <rect x="112" y="112" width="128" height="128" rx="28" fill="#6f8fbd"/>
+    <rect x="272" y="112" width="128" height="128" rx="28" fill="#83b8b4"/>
+    <rect x="112" y="272" width="128" height="128" rx="28" fill="#d9a66f"/>
+    <rect x="272" y="272" width="128" height="128" rx="28" fill="#b58ab4"/>
+  </g>
+</svg>

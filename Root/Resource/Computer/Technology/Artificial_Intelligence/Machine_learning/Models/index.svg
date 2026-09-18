@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+	<title id="title">Machine-learning models</title>
+	<path d="M10 14h44v36H10z" fill="#eef2f7" stroke="#40516f" stroke-width="2.5" stroke-linejoin="round"/>
+	<path d="M18 41 27 31l8 6 11-14" fill="none" stroke="#56b4d1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+	<g fill="#f2b84b" stroke="#40516f" stroke-width="2">
+		<circle cx="18" cy="41" r="3"/>
+		<circle cx="27" cy="31" r="3"/>
+		<circle cx="35" cy="37" r="3"/>
+		<circle cx="46" cy="23" r="3"/>
+	</g>
+</svg>

@@ -6,6 +6,10 @@ RewriteBase /
 RewriteEngine On
 DirectorySlash Off
 
+# Canonical AJAX payloads. Must run before File/Site catch-alls and before
+# Apache could negotiate a sibling directory named like the slug.
+RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
+
 RewriteRule ^(.+)/$ $1 [R=301]
 
 RewriteRule ^aboutme$ about_me [R=307,L]
@@ -30,11 +34,15 @@ RewriteRule ^computer/dprogramming$ computer/programming [R=301,L]
 
 RewriteRule ^world/philosophy/algorithm$ computer/algorithm [R=301,L]
 RewriteRule ^world/philosophy/program$ computer/program [R=301,L]
-RewriteRule ^world/philosophy/artificial-intelligence$ computer/technology/artificial_intelligence [R=301,L]
+RewriteRule ^world/philosophy/artificial-intelligence$ technology/computer/artificial_intelligence [R=301,L]
 RewriteRule ^computer/technology/algorithms$ computer/algorithm [R=301,L]
 RewriteRule ^computer/technology/algorithms/(.+)$ computer/algorithm/$1 [R=301,L]
-RewriteRule ^computer/technology/machine_learning$ computer/technology/artificial_intelligence/machine_learning [R=301,L]
-RewriteRule ^computer/technology/machine_learning/(.+)$ computer/technology/artificial_intelligence/machine_learning/$1 [R=301,L]
+RewriteRule ^computer/technology/machine_learning$ technology/computer/artificial_intelligence/machine_learning [R=301,L]
+RewriteRule ^computer/technology/machine_learning/(.+)$ technology/computer/artificial_intelligence/machine_learning/$1 [R=301,L]
+RewriteRule ^computer/technology$ technology/computer [R=301,L]
+RewriteRule ^computer/technology/(.+)$ technology/computer/$1 [R=301,L]
+RewriteRule ^technology/computer/machine_learning$ technology/computer/artificial_intelligence/machine_learning [R=301,L]
+RewriteRule ^technology/computer/machine_learning/(.+)$ technology/computer/artificial_intelligence/machine_learning/$1 [R=301,L]
 
 
 
@@ -82,7 +90,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/Site%{REQUEST_URI} -f
 RewriteRule ^(.+)$ Site/$1 [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f

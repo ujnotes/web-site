@@ -1,7 +1,7 @@
-<?php $alt='LLM'; require('../HTML/Fragment/Component_cover.php') ?>
-
 <div id='message'>
-		<h3>What is a large language model?</h3>
+		<?php $alt='A large language model turning a sequence of tokens into a likely next token'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
+	<h3>What is a large language model?</h3>
 	<p>
 		A large language model is a machine-learning model trained to predict the next piece of text from the text that came before it.
 	</p>
@@ -127,32 +127,6 @@
 	<p>
 		But the units do not tell us whether the tap actually keeps running at that rate. Our four-minute answer assumes an empty bucket, a steady flow and no leaks. Matching units is a necessary check, not proof that our model fits the situation.
 	</p>
-	<h3>What about a swing or pendulum?</h3>
-	<p>
-		A playground swing gives us a less obvious example. A longer swing tends to move back and forth more slowly. How does the time depend on its length?
-	</p>
-	<p>
-		To simplify the problem, imagine a small weight on a light, fixed-length string. The <strong>period</strong> is the time it takes to travel from one side to the other and back to where it started.
-	</p>
-	<?php $img_title='pendulum'; $ext='jpg'; $alt='Image placeholder: a pendulum with length measured from pivot to the centre of the weight, a small release angle, and arrows showing one complete back-and-forth swing.'; $center='center'; require('Fragment/Component_image.php') ?>
-	<p>
-		Let the string length be L and gravitational acceleration be g. Length is measured in metres; acceleration in metres per second squared. Dividing L by g therefore gives seconds squared. Taking the square root gives seconds.
-	</p>
-	<p>
-		<strong>Period = a number × √(L/g)</strong>
-	</p>
-	<p>
-		Under this ideal model, dimensional analysis gives us the square-root relationship. It does not supply the number in front, or tell us how that number changes with the release angle.
-	</p>
-	<p>
-		At the same angle and gravity, making the string four times longer makes the period twice as long. A heavier weight does not change the period in this model. If mass, length and gravity are the only dimensional ingredients, there is no other mass quantity available to cancel the mass units.
-	</p>
-	<p>
-		For small swings, mechanics supplies the factor 2π. A pendulum about 1 metre long takes roughly 2 seconds for a complete cycle; one 4 metres long takes roughly 4 seconds. These are idealised estimates: friction, a stretching rope or someone actively pumping a playground swing can change the behaviour.
-	</p>
-	<p>
-		The useful lesson is that units can narrow down a relationship. We still need physics or experiment to fill in what the units leave undecided.
-	</p>
 	<h3>What does this suggest about LLMs?</h3>
 	<p>
 		The connection I see is limited but useful. Dimensional analysis shows that recognising the right structure can take us a long way before every detail is derived.
@@ -211,8 +185,7 @@
 		<a class="content-link" href="https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay2.pdf" target="_blank" rel="noopener noreferrer">MIT: Dimensional Analysis of Models and Data Sets — pendulum scaling and its assumptions</a>.
 	</p>
 	<div id='content-body-separator' class='center'></div>
-	<p><br></p>
-	<p class='footnote'>
+	<p>
 		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em>
 	</p>
 

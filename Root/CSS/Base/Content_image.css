@@ -5,3 +5,12 @@ html.dark-mode .content-image object {
 html:not(.dark-mode) .content-image object {
 	color-scheme: light
 }
+
+/* A themed diagram renders both assets in the markup.  These rules must win
+   over shared display utility classes so only the resolved theme is visible. */
+.content-image .theme-image-light { display: block !important }
+.content-image .theme-image-dark { display: none !important }
+html.dark-mode .content-image .theme-image-light,
+html[data-theme-resolved='dark'] .content-image .theme-image-light { display: none !important }
+html.dark-mode .content-image .theme-image-dark,
+html[data-theme-resolved='dark'] .content-image .theme-image-dark { display: block !important }

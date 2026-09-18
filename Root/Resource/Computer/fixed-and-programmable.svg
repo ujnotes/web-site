@@ -98,6 +98,7 @@
     </pattern>
     <style
        id="style3">
+      .page-background { fill: #ffffff; }
       .panel { fill: #f7fbff; stroke: #40516f; stroke-width: 4; }
       .machine { fill: #d9ecff; stroke: #40516f; stroke-width: 5; stroke-linejoin: round; }
       .card { fill: #fff3bf; stroke: #40516f; stroke-width: 4; }
@@ -124,6 +125,7 @@
       .ink-fill { fill: #40516f; }
       /* UJNOTES_BROWSER_DARK_MODE_START */
       @media (prefers-color-scheme: dark) {
+        .page-background { fill: #1a1a2e; }
         .panel { fill: #1e2438; stroke: #d8e4f0; }
         .machine { fill: #243044; stroke: #d8e4f0; }
         .card { fill: #3d3420; stroke: #d8e4f0; }
@@ -149,6 +151,11 @@
       /* UJNOTES_BROWSER_DARK_MODE_END */
     </style>
   </defs>
+  <rect
+     class="page-background"
+     width="900"
+     height="410"
+     id="page-background" />
   <rect
      class="panel"
      x="22"
