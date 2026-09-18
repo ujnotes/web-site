@@ -65,7 +65,9 @@
 	flex-wrap: nowrap;
 	row-gap: 24px;
 	width: 100%;
-	max-width: 100%
+	max-width: 100%;
+	/* Keep World's vertical leader near the left; short elbows into hubs. */
+	padding-left: 8px
 }
 
 #home-menu #home-world-children > .home-menu-hub {
