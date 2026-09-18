@@ -3,3 +3,18 @@
 #footer-wrapper-inside {
 	margin-top: 15px;
 }
+
+#footer-image-disclaimer {
+	max-width: 54em;
+	margin: 12px auto 0;
+	padding: 0 12px;
+	color: #888;
+	font-size: 11px;
+	line-height: 1.45;
+	text-align: center
+}
+
+html.dark-mode #footer-image-disclaimer {
+	color: #9a9a9a
+}
+

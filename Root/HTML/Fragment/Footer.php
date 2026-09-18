@@ -16,6 +16,16 @@
 				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><div class='image'><?php includeSVG('', 'YouTube'); ?></div></a>
 			</div>
 		</div>
+		<div class='footer-content' id='footer-image-disclaimer'>
+			<?php
+			if (!function_exists('getUITranslation'))
+				require_once __DIR__.'/UITranslation.php';
+			$lang = $lang ?? 'en';
+			?>
+			<strong><?php echo htmlspecialchars(getUITranslation('footer_image_credits_label', $lang)); ?>:</strong>
+			<?php echo htmlspecialchars(getUITranslation('footer_image_credits_body', $lang)); ?>
+			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'><?php echo htmlspecialchars(getUITranslation('footer_image_credits_link', $lang)); ?></a>.
+		</div>
 		<div class='footer-content' id='footer-rights'>
 			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>

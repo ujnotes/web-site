@@ -37,9 +37,6 @@
 	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('world')) ?>">
 		<?php home_menu_render_branch('world'); ?>
 	</section>
-	<p id='home-image-disclaimer'>
-		<strong>Image credits:</strong> Third-party images are used under their respective licenses or applicable copyright exceptions. Copyright remains with the respective owners. Where required, attribution and licensing information are provided with the image or its <a class='content-link XURL' href='/license' data-target='license' data-title='License'>source link</a>.
-	</p>
 </div>
 <div id='fb_components'>
 	<?php require('../HTML/Fragment/Component_FB_buttons.php') ?>

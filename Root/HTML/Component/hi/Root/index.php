@@ -41,9 +41,6 @@
 	<section class="home-menu-branch" aria-label="<?php echo htmlspecialchars(getComponentLabel('world')) ?>">
 		<?php home_menu_render_branch('world'); ?>
 	</section>
-	<p id='home-image-disclaimer'>
-		<strong>चित्र श्रेय:</strong> तृतीय-पक्ष छवियाँ उनकी संबंधित अनुज्ञप्तियों या लागू कॉपीराइट अपवादों के अंतर्गत उपयोग की गई हैं। कॉपीराइट संबंधित स्वामियों के पास रहता है। जहाँ आवश्यक है, श्रेय और अनुज्ञप्ति जानकारी छवि के साथ या उसके <a class='content-link XURL' href='/license' data-target='license' data-title='License'>स्रोत लिंक</a> पर दी गई है।
-	</p>
 </div>
 <div id='fb_components'>
 	<?php require('../HTML/Fragment/Component_FB_buttons.php') ?>

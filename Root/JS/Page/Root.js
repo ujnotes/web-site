@@ -226,13 +226,15 @@ function syncHomeMenuConnectors() {
 
 		var subtreeAll = node.querySelector(':scope > .home-menu-subtree');
 		var subtree = node.querySelector(':scope > .home-menu-subtree:not([hidden])');
-		// Match Home_menu.php: any node with siblings + children uses the bottom
-		// drop. First-in-row used to keep a short side connector, which made
-		// Algorithm→Binary Search look shorter than Program/OS/… for no reason.
+		// Bottom drop only when this node shares a row with the previous sibling
+		// (wrapped horizontal group). Vertically stacked children keep the side
+		// toggle next to their tile (e.g. Hindu). World hubs never use it.
 		var siblingNodes = node.parentElement && node.parentElement.classList.contains('home-menu-subtree')
 			? node.parentElement.querySelectorAll(':scope > .home-menu-node')
 			: [];
-		var bottomConnector = !!subtreeAll && siblingNodes.length > 1 && !node.classList.contains('home-menu-hub');
+		var bottomConnector = !!subtreeAll && siblingNodes.length > 1
+			&& !node.classList.contains('home-menu-hub')
+			&& homeMenuSharesRowWithPrevious(node);
 		node.classList.toggle('home-menu-connector-bottom', bottomConnector);
 
 		if(bottomConnector) {

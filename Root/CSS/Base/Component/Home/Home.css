@@ -22,7 +22,7 @@
 	--home-tile-image-height: 110px;
 	--home-tile-text-height: 32px;
 	--home-node-center-y: calc(var(--home-tile-margin) + (var(--home-tile-image-height) + var(--home-tile-text-height) - 8px) / 2);
-	--home-glyph-center: 21px;
+	--home-glyph-center: 28px; /* nearer tile */
 	--home-indent: 36px;
 	--home-node-width: 184px;
 	--home-bottom-line-x: calc(var(--home-indent) + var(--home-tile-margin) + var(--home-tile-width) / 2);
@@ -73,7 +73,10 @@
 #home-menu #home-world-children > .home-menu-hub {
 	flex: 0 0 auto;
 	width: 100%;
-	max-width: 100%
+	max-width: 100%;
+	/* Hub's own spine/toggle sits right of World's leader so lines don't stack. */
+	--home-glyph-center: 40px;
+	--home-indent: 52px
 }
 
 #home-menu #home-world-children > .home-menu-hub:has(> .home-menu-subtree:not([hidden])) + .home-menu-hub {
@@ -344,17 +347,4 @@ html.dark-mode #home-menu .home-menu-toggle:focus-visible::before {
 
 html.dark-mode #home-menu .home-menu-more {
 	color: rgba(105, 205, 235, 0.92)
-}
-
-#home-image-disclaimer {
-	clear: both;
-	margin: 40px 0 0 var(--home-glyph-center);
-	max-width: 54em;
-	color: #888;
-	font-size: 11px;
-	line-height: 1.45
-}
-
-html.dark-mode #home-image-disclaimer {
-	color: #9a9a9a
 }
