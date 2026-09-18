@@ -351,4 +351,68 @@
 	<loc>https://ujnotes.com/science/physics</loc>
 </url>
 
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electromagnetism</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/optics</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/quantum_physics</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/capacitance</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/current</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/ohms_law</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/resistance</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/voltage</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electromagnetism/maxwells_equations</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/optics/diffraction</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/optics/double_slit_experiment</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/optics/laser</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/optics/polarization_of_light</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/quantum_physics/black_body_radiation</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/quantum_physics/schrodingers_equation</loc>
+</url>
+
 </urlset>

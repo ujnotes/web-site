@@ -1096,4 +1096,20 @@ published	technology/computer/artificial_intelligence/machine_learning/models	Mo
 published	technology/computer/artificial_intelligence/machine_learning/models/llm	LLM	Large Language Model	0	What a large language model is, how it predicts text, and what that does and does not mean	article
 published	technology/computer/artificial_intelligence/machine_learning/models/transformer	Transformer	Transformer	0	How a Transformer uses attention and context, how its parts fit together, and why it matters for language and image models.	article
 publish	technology/computer/location_codes	Location Codes	Location Codes	0	How compact codes can identify a location through a defined geographic reference system.	article
-publish	science/physics	Physics	Physics	0	The study of matter, energy, fields, motion and the laws used to describe nature.	article
+published	science/physics	Physics	Physics	0	The study of matter, energy, fields, motion and the laws used to describe nature.	article
+published	science/physics/electrical	Electrical	Electrical	0	The movement, control and use of electric charge, energy and fields.	article
+published	science/physics/electromagnetism	Electromagnetism	Electromagnetism	0	How electric charge, magnetic fields, light and electromagnetic waves form one physical theory.	article
+published	science/physics/optics	Optics	Optics	0	The study of light, its propagation, interaction with matter, imaging and measurement.	article
+published	science/physics/quantum_physics	Quantum Physics	Quantum Physics	0	The framework used to describe matter and light at atomic and subatomic scales.	article
+published	science/physics/electrical/capacitance	Capacitance	Capacitance	0	How a system stores charge per unit voltage and why geometry and materials matter.	article
+published	science/physics/electrical/current	Current	Current	0	How electric charge flows, what determines its size and how engineers measure it safely.	article
+published	science/physics/electrical/ohms_law	Ohms Law	Ohms Law	0	How voltage, current and resistance are related in an ideal resistive model.	article
+published	science/physics/electrical/resistance	Resistance	Resistance	0	Why materials oppose charge flow and how resistance turns electrical energy into heat.	article
+published	science/physics/electrical/voltage	Voltage	Voltage	0	What electrical potential difference means and how it drives energy transfer in circuits.	article
+published	science/physics/electromagnetism/maxwells_equations	Maxwells Equations	Maxwells Equations	0	The four equations that describe how electric and magnetic fields are produced and evolve.	article
+published	science/physics/optics/diffraction	Diffraction	Diffraction	0	How waves spread and form patterns when they pass openings or encounter edges.	article
+published	science/physics/optics/double_slit_experiment	Double Slit Experiment	Double Slit Experiment	0	Why two paths can produce an interference pattern and challenge classical intuition about light and matter.	article
+published	science/physics/optics/laser	Laser	Laser	0	How stimulated emission creates coherent light and why lasers transform science, technology and medicine.	article
+published	science/physics/optics/polarization_of_light	Polarization of Light	Polarization of Light	0	How the orientation of an electromagnetic wave changes what light can do and reveal.	article
+published	science/physics/quantum_physics/black_body_radiation	Black Body Radiation	Black Body Radiation	0	How heated matter emits light and why its spectrum helped begin quantum physics.	article
+published	science/physics/quantum_physics/schrodingers_equation	Schrodingers Equation	Schrodingers Equation	0	How a quantum state changes in time and how probabilities arise from its mathematical description.	article

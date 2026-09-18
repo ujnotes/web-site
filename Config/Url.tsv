@@ -364,3 +364,19 @@ technology/computer/	location_codes	jpg
 	science	jpg
 	philosophy	jpg
 science/	physics	jpg
+science/physics/	electrical	jpg
+science/physics/	electromagnetism	jpg
+science/physics/	optics	jpg
+science/physics/	quantum_physics	jpg
+science/physics/electrical/	capacitance	jpg
+science/physics/electrical/	current	jpg
+science/physics/electrical/	ohms_law	jpg
+science/physics/electrical/	resistance	jpg
+science/physics/electrical/	voltage	jpg
+science/physics/electromagnetism/	maxwells_equations	jpg
+science/physics/optics/	diffraction	jpg
+science/physics/optics/	double_slit_experiment	jpg
+science/physics/optics/	laser	jpg
+science/physics/optics/	polarization_of_light	jpg
+science/physics/quantum_physics/	black_body_radiation	jpg
+science/physics/quantum_physics/	schrodingers_equation	jpg
