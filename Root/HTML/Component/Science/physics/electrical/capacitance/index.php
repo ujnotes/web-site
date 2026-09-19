@@ -28,7 +28,7 @@
 	</p>
 	<div id='content-body-separator' class='center'></div>
 	<p>
-		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em> &amp;#x20;
+		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em>
 	</p>
 
 </div>

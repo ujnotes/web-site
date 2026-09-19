@@ -47,7 +47,6 @@ draft	philosophy/violence/war	War	War	0	War	article
 draft	philosophy/violence/terrorism	Terrorism	Terrorism	0	Terrorism	article
 draft	philosophy/violence/terrorism/islamic_terrorism	Islamic Terrorism	Islamic Terrorism	0	Islamic Terrorism	article
 draft	philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS		article
-draft	philosophy/violence/terrorism/islamic_terrorism/isis	ISIS	0	ISIS		article
 published	technology/computer/artificial_intelligence	Artificial Intelligence	Artificial Intelligence	0	What artificial intelligence can do, how it learns, and what its limits and responsibilities are.	article
 published	technology/computer	Computer	Computer	0	Computer : the information processor	article
 published	technology/computer/algorithm	Algorithm	Algorithm	0	What a definite procedure is, how it works, and why correctness and limits matter.	article
@@ -1113,3 +1112,57 @@ published	science/physics/optics/laser	Laser	Laser	0	How stimulated emission cre
 published	science/physics/optics/polarization_of_light	Polarization of Light	Polarization of Light	0	How the orientation of an electromagnetic wave changes what light can do and reveal.	article
 published	science/physics/quantum_physics/black_body_radiation	Black Body Radiation	Black Body Radiation	0	How heated matter emits light and why its spectrum helped begin quantum physics.	article
 published	science/physics/quantum_physics/schrodingers_equation	Schrodingers Equation	Schrodingers Equation	0	How a quantum state changes in time and how probabilities arise from its mathematical description.	article
+published	business/startup	Startup	Startup	0	Startup notes covering the early work of shaping, presenting and building a company.	page
+published	business	Business	Business	0	Business notes covering entrepreneurship, organisations, markets and commercial practice.	page
+published	technology/telecommunications/splitter	Telephone Line Splitter	Telephone Line Splitter	0	How filters separate voice and data frequency bands on a shared copper line.	article
+published	technology/telecommunications/adsl	ADSL	ADSL	0	How asymmetric digital subscriber line service provides different downstream and upstream data rates.	article
+published	technology/telecommunications/dsl	DSL	DSL	0	How digital subscriber line technologies use higher frequencies on copper telephone wiring for data.	article
+published	technology/telecommunications/dial_up	Dial-Up Internet	Dial-Up Internet	0	How computers used telephone calls and modems to establish temporary data connections.	article
+published	technology/telecommunications/modem	Modem	Modem	0	How a modulator and demodulator convert digital data into signals suitable for a communication channel.	article
+published	technology/telecommunications/fax	Fax	Fax	0	How scanned documents are converted into signals and reproduced at a distant machine.	article
+published	technology/telecommunications/telephone_network	Telephone Networks	Telephone Networks	0	How switching, signaling and subscriber lines connect voice calls and data services.	article
+published	technology/telecommunications	Telecommunications	Telecommunications	0	How information travels across distance through wired, wireless and optical communication systems.	article
+published	technology/computer/graphics_card/compute_shader	Compute Shaders	Compute Shaders	0	General-purpose GPU programs that use graphics hardware without producing traditional pixels.	article
+published	technology/computer/graphics_card/rendering_pipeline	Rendering Pipeline	Rendering Pipeline	0	The ordered stages that transform scene data into an image on a display.	article
+published	technology/computer/graphics_card/rasterization	Rasterization	Rasterization	0	How geometric primitives become fragments and pixels in a real-time rendering pipeline.	article
+published	technology/computer/graphics_card/shader	Shaders	Shaders	0	Small programs that run on graphics hardware to transform geometry, calculate pixels and simulate materials.	article
+published	technology/computer/graphics_card/dlss	DLSS	DLSS	0	How deep-learning super sampling reconstructs high-resolution images from lower-resolution renders.	article
+published	technology/computer/graphics_card/ray_tracing	Ray Tracing	Ray Tracing	0	How simulated rays model light transport to create reflections, shadows and global illumination.	article
+published	technology/computer/graphics_card/vulkan	Vulkan	Vulkan	0	A low-level, explicit graphics and compute API designed for control, predictability and portability.	article
+published	technology/computer/graphics_card/directx	DirectX	DirectX	0	Microsoft's family of APIs for graphics, audio, input and game-oriented Windows and Xbox software.	article
+published	technology/computer/graphics_card/opengl	OpenGL	OpenGL	0	A portable graphics API for describing geometry, textures, shaders and rendering operations.	article
+published	technology/computer/graphics_card/graphics_apis	Graphics APIs	Graphics APIs	0	How software communicates with graphics hardware to define images, compute work and synchronization.	article
+published	technology/electronics/semiconductor/manufacturing	Semiconductor Manufacturing	Semiconductor Manufacturing	0	How materials, fabrication steps, packaging and testing turn a chip design into a working device.	article
+published	technology/electronics/semiconductor/lithography	Lithography	Lithography	0	How patterned light, masks and chemistry create microscopic structures on semiconductor wafers.	article
+published	technology/electronics/fpga	FPGAs	FPGAs	0	How programmable logic devices implement custom digital hardware after manufacturing.	article
+published	technology/electronics/vhdl	VHDL	VHDL	0	How a hardware description language expresses digital circuits for simulation and synthesis.	article
+published	technology/computer/parallel_computing	Parallel Computing	Parallel Computing	0	How many processing elements cooperate on parts of one problem.	article
+published	technology/computer/cuda	CUDA	CUDA	0	How NVIDIA's platform lets programs use GPUs for general-purpose parallel computation.	article
+published	technology/computer/cisc	CISC	CISC	0	How complex instruction set architectures place richer operations in the processor instruction set.	article
+published	technology/computer/risc	RISC	RISC	0	How reduced instruction set computer architectures trade instruction complexity for efficient implementation.	article
+published	technology/computer/gpu	Graphics Processing Units	Graphics Processing Units	0	Why massively parallel processors are useful for graphics, simulation and machine learning.	article
+published	technology/computer/graphics_card	Graphics Cards	Graphics Cards	0	How a specialized computer board renders images and accelerates parallel workloads.	article
+published	technology/electronics/resistor	Resistors	Resistors	0	How controlled opposition to current sets voltage, limits power and defines circuit behavior.	article
+published	technology/electronics/capacitor	Capacitors	Capacitors	0	How separated charge stores electrical energy and shapes timing, filtering and power delivery.	article
+published	technology/electronics/diode	Diodes	Diodes	0	How semiconductor junctions control current direction and convert, protect or sense electrical signals.	article
+published	technology/electronics/op_amp	Operational Amplifiers	Operational Amplifiers	0	How high-gain differential amplifiers use feedback to perform precise analog operations.	article
+published	technology/electronics/microcontroller	Microcontrollers	Microcontrollers	0	How a small computer with processor, memory and peripherals controls physical devices.	article
+published	technology/electronics/microprocessor	Microprocessors	Microprocessors	0	How a programmable processor places general-purpose computation on a semiconductor chip.	article
+published	technology/radio/modulation	Modulation	Modulation	0	How information changes a carrier wave so it can travel through a communication channel.	article
+published	technology/electronics/filter	Filters	Filters	0	How circuits select, reject and reshape ranges of frequencies.	article
+published	technology/electronics/amplifier	Amplifiers	Amplifiers	0	How circuits increase signal strength while preserving useful information.	article
+published	technology/radio/telegraph	Telegraph	Telegraph	0	How electrical signals carried written messages across long distances before voice and digital networks.	article
+published	technology/radio/morse_code	Morse Code	Morse Code	0	How short and long signals became a compact, human-readable code for communication.	article
+published	technology/electronics/integrated_circuits	Integrated Circuits	Integrated Circuits	0	How many electronic components can be manufactured together on one small piece of semiconductor.	article
+published	technology/electronics/antenna	Antennas	Antennas	0	How conductors launch and receive electromagnetic waves and connect circuits to the world.	article
+published	technology/electronics/signal	Signals	Signals	0	How changing physical quantities represent information and how systems preserve, transform and recover it.	article
+published	technology/electronics/semiconductor	Semiconductors	Semiconductors	0	Why materials between conductors and insulators make controllable electronic devices possible.	article
+published	technology/electronics/optical_fiber	Optical Fiber	Optical Fiber	0	How light guided through glass carries information across continents and into homes.	article
+published	technology/electronics/digital_electronics	Digital Electronics	Digital Electronics	0	How discrete states, logic gates and stored bits make reliable programmable systems.	article
+published	technology/electronics/lc_oscillation	LC Oscillation	LC Oscillation	0	How inductors and capacitors exchange energy to create resonant electrical oscillations.	article
+published	technology/electronics/transistors	Transistors	Transistors	0	How a small semiconductor device controls current and became the foundation of modern electronics.	article
+published	technology/electronics/valves	Electronic Valves	Electronic Valves	0	How vacuum tubes controlled electrons and enabled the first electronic amplifiers, computers and radios.	article
+published	technology/radio	Radio	Radio	0	How electromagnetic waves carry information through space and how radios create, receive and interpret them.	article
+published	technology/power_electronics	Power Electronics	Power Electronics	0	How semiconductor circuits convert and control electrical power efficiently.	article
+published	technology/electronics	Electronics	Electronics	0	How circuits control electrons and signals to sense, compute, communicate and create.	article
+published	technology/information_technology	Information Technology	Information Technology	0	How information technology became a powerful human tool, why it matters, and how it may shape the future.	article

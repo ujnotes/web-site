@@ -8,6 +8,7 @@ DirectorySlash Off
 
 # Canonical AJAX payloads. Must run before File/Site catch-alls and before
 # Apache could negotiate a sibling directory named like the slug.
+RewriteCond %{REQUEST_URI} !^/manifest\.json$
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteRule ^(.+)/$ $1 [R=301]
@@ -57,7 +58,7 @@ RewriteRule ^computer/(.*)$ technology/computer/$1 [R=301,L]
 RewriteRule ^style.css$ Framework/CSS/Style.php [L]
 RewriteRule ^script.js$ Framework/JS/Script.php [L]
 
-RewriteRule ^manifest\.json$ /Framework/Files/Manifest.json.php [L]
+RewriteRule ^manifest\.json$ Framework/Files/Manifest.json.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.js$ Framework/JS/Link/$1.js [L]

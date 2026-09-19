@@ -1,6 +1,6 @@
 # Project instructions
 
-When something new is learned, persist it: create or update a dedicated skill under `H:\Website\.cursor\skills\`, or add a short rule here / in `H:\AGENTS.md` / `H:\Website\AGENTS.md`. Do not leave the lesson only in chat.
+When something new is learned, persist it: create or update a dedicated skill under `D:\Ujnotes\Website\.cursor\skills\`, or add a short rule here / in `D:\Ujnotes\AGENTS.md` / `D:\Ujnotes\Website\AGENTS.md`. Do not leave the lesson only in chat.
 
 For any work that creates, changes, debugs, or reviews the homepage hierarchy, read and follow [HOMESCREEN_TREE.md](HOMESCREEN_TREE.md) in full before making changes.
 
@@ -8,13 +8,13 @@ The homepage tree specification applies recursively to every branch and takes pr
 
 ## Path casing
 
-- Operational dirs stay lowercase (`root`, `interim`, `public`, `config`). Public-facing topic names stay capitalized (`World`, `Philosophy`, `Life`). See `H:\AGENTS.md` section "Path casing".
+- Operational dirs stay lowercase (`root`, `interim`, `public`, `config`). Public-facing topic names stay capitalized (`World`, `Philosophy`, `Life`). See `D:\Ujnotes\AGENTS.md` section "Path casing".
 - `interim` and `public` are entirely lowercase.
 
 ## Production deploy trigger
 
 - `ujnotes.com` deploys when `ujnotes/web-public` `main` is pushed (Firebase Hosting GitHub Action).
-- That push is manual: local `publish-notion.ps1` / `publish-notion-subtree.ps1` in `H:\Website\project`, or the `Publish page from Source` `workflow_dispatch` on `ujnotes/web`.
+- That push is manual: local `publish-notion.ps1` / `publish-notion-subtree.ps1` in `D:\Ujnotes\Website\project`, or the `Publish page from Source` `workflow_dispatch` on `ujnotes/web`.
 - Notion database polling (15-minute cron) is parked. Do not restore it. The planned replacement is a URL hook / dashboard trigger.
 
 ## Local vs production
@@ -25,7 +25,7 @@ The homepage tree specification applies recursively to every branch and takes pr
 - Homepage is slug `root` and bakes to `public/index.html`. It is not a Notion-queued article. Do not run `publish-notion.ps1 -Slug root` (that overwrites `Root.php` tree markup). Isolated child publishes do not rebuild homepage tiles.
 - Rebuild the homepage with Tiggu: write a temporary `Config/Render.lsv` containing only `root`, delete stale `public/index.html` first (Tiggu `check()` ignores Resource/Url.tsv cover changes), `docker compose -p ujnotes exec web-site /app/tiggu/build.sh /app/site/project`, copy `public/index.html` into `web-public`, commit, and push. Delete `Render.lsv` afterwards. Do not commit it.
 
-- See `H:\AGENTS.md` sections "Local vs production HTML" and "Publisher encoding (Windows)", and `H:\Website\AGENTS.md` section "Notion subtree publication".
+- See `D:\Ujnotes\AGENTS.md` sections "Local vs production HTML" and "Publisher encoding (Windows)", and `D:\Ujnotes\Website\AGENTS.md` section "Notion subtree publication".
 - Timeline date dashes: `root/CSS/Base/Component/Timeline.css` and Framework `CSS/Base/Component/Timeline.css` (`span.date`, `min-width:11ch`). Do not hand-edit baked HTML. Republish uses NCMS PHP plus `Protect-TimelineDates.py`; pin Framework SHA in the same change set when that CSS moves.
 
 ## Resource → URL list
