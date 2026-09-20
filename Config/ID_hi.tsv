@@ -36,3 +36,27 @@ published	technology/computer/game/doom/2016/demo	डेमो	डेमो	0	Do
 published	technology/computer/game/doom/2016/demo/issue	समस्याएँ	समस्याएँ	0	Doom 2016 डेमो की समस्याएँ	article
 published	technology/computer/game/doom	Doom	Doom	0	id Software के प्रथम-व्यक्ति शूटर वीडियो गेमों की एक शृंखला	article
 published	technology/computer/game/doom/2016	Doom 2016	Doom 2016	0	शृंखला का चौथा भाग और रीबूट	article
+published	business	व्यवसाय	व्यवसाय	0	व्यापार, मुद्रा, साख, पूँजी बाज़ार और नए उद्यमों के मूलभूत स्तंभ।	page
+published	business/trade	व्यापार	व्यापार	0	स्वैच्छिक विनिमय किस प्रकार दोनों पक्षों को लाभ पहुँचाता है और विशेषज्ञता को बढ़ावा देता है।	article
+published	business/trade/barter	वस्तु-विनिमय	वस्तु-विनिमय	0	मुद्रा के बिना वस्तुओं का सीधा आदान-प्रदान और वे बाधाएँ जिन्होंने मुद्रा के उद्भव को जन्म दिया।	article
+published	business/money	मुद्रा	मुद्रा	0	विनिमय का माध्यम, मूल्य का मापक और सामाजिक विश्वास पर टिकी लेखा प्रणाली।	article
+published	business/money/plastic_money	प्लास्टिक मनी	प्लास्टिक मनी	0	डेबिट और क्रेडिट कार्ड, इलेक्ट्रॉनिक भुगतान नेटवर्क और भौतिक नकदी का विकल्प।	article
+published	business/money/digital_money	डिजिटल मनी	डिजिटल मनी	0	इलेक्ट्रॉनिक बहीखाते, तत्काल भुगतान नेटवर्क (UPI) और केंद्रीय बैंक डिजिटल मुद्राएँ।	article
+published	business/money/inflation	मुद्रास्फीति	मुद्रास्फीति (महँगाई)	0	सामान्य मूल्य स्तर में वृद्धि किस प्रकार मुद्रा की क्रय शक्ति को घटाती है।	article
+published	business/money/exchange_rate	विनिमय दर	विनिमय दर	0	विभिन्न देशों की मुद्राओं का सापेक्ष मूल्य और विदेशी मुद्रा बाज़ार की ताकतें।	article
+published	business/debt	ऋण	ऋण	0	मुद्रा मूल रूप से ऋण क्यों है, साख निर्माण और भविष्य की उत्पादकता को वर्तमान में लाना।	article
+published	business/debt/interest	ब्याज	ब्याज	0	समय, अवसर लागत और ऋण जोखिम का मूल्य।	article
+published	business/debt/compound_interest	चक्रवृद्धि ब्याज	चक्रवृद्धि ब्याज	0	ब्याज पर ब्याज से होने वाली घातीय वृद्धि और समय का प्रभाव।	article
+published	business/debt/bond	बॉन्ड	बॉन्ड	0	ऋण प्रतिभूतियाँ, निश्चित कूपन ब्याज और मूल्य तथा प्रतिफल का सी-सॉ संबंध।	article
+published	business/market	बाज़ार	वित्तीय बाज़ार	0	पूँजी बाज़ार किस प्रकार मूल्य खोजते हैं और उत्पादक उद्यमों को पूँजी आवंटित करते हैं।	article
+published	business/market/stock	स्टॉक	स्टॉक और शेयर	0	कंपनी में आनुपातिक स्वामित्व, लाभांश और पूँजीगत वृद्धि।	article
+published	business/market/stock_exchange	स्टॉक एक्सचेंज	स्टॉक एक्सचेंज	0	ऑर्डर बुक, इलेक्ट्रॉनिक मिलान और प्रतिभूतियों की तरलता का संगठित बाज़ार।	article
+published	business/market/hedging	हेजिंग	हेजिंग	0	प्रतिकूल मूल्य परिवर्तनों से सुरक्षा और डेरिवेटिव्स के माध्यम से वित्तीय बीमा।	article
+published	business/startup	स्टार्टअप	स्टार्टअप	0	आरंभिक उद्यम निर्माण, विचार और टीम निर्माण पर व्यावहारिक टिप्पणियाँ।	article
+published	business/startup/how_to_present	प्रस्तुति कैसे दें	प्रभावी प्रस्तुति कैसे दें	0	कंपनी या स्टार्टअप की प्रस्तुति, स्लाइड संरचना, संवाद और प्रश्नोत्तर के लिए व्यावहारिक मार्गदर्शन।	article
+published	science/mathematics	गणित	गणित	0	संख्याओं, संरचनाओं, अंतरिक्ष और प्रतिमानों का अमूर्त अध्ययन, जो परिभाषाओं, अभिगृहीतों और तार्किक प्रमाणों पर आधारित है।	article
+published	science/mathematics/axioms	अभिगृहीत	गणितीय अभिगृहीत	0	बिना प्रमाण के स्वीकार की गई आधारभूत मान्यताएँ किस प्रकार तार्किक गणितीय प्रणालियों का आधार बनती हैं।	article
+published	science/mathematics/proof	प्रमाण	गणितीय प्रमाण	0	कठोर निगमनात्मक तर्क किस प्रकार स्थायी सत्यों को स्थापित करता है और एक प्रमाण दूसरे प्रमाण का आधार बनता है।	article
+published	science/mathematics/multiplication	गुणा	गुणा	0	किस प्रकार गुणा बार-बार होने वाले जोड़ से शुरू होकर आयताकार ग्रिड, क्षेत्रफल और सतत स्केलिंग में विकसित होता है।	article
+published	science/mathematics/zero	शून्य	शून्य	0	शून्य मात्रा की अनुपस्थिति और योगात्मक तत्समक क्यों है, और शुद्ध शून्य की कोई इकाई क्यों नहीं होती।	article
+published	science/mathematics/division_by_zero	शून्य से विभाजन	शून्य से विभाजन	0	अंकगणित में शून्य से विभाजन अपरिभाषित क्यों है और सीमांत पर क्या होता है।	article

@@ -1,10 +1,12 @@
 <div id='message'>
-		<p>
+		<?php $alt='Early-stage venture ideation, team building, and company creation.'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
+	<p>
 		Startup notes covering the early work of shaping, presenting and building a company.
 	</p>
-	<h2>Topics</h2>
+	<h3>Topics</h3>
 	<ul class="list-bullet content-list">
-		<li><div><a class="content-link XURL" href="/business/startup/how_to_present" data-target="business/startup/how_to_present" data-title="How to present">How to present</a> — A practical guide to presenting a company or startup clearly and confidently.</div></li>
+		<li><div><strong>How to present</strong> — A practical guide to presenting a company or startup clearly and confidently.</div></li>
 	</ul>
 	<div id='content-body-separator' class='center'></div>
 	<p>

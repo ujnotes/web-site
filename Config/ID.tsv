@@ -1112,7 +1112,7 @@ published	science/physics/optics/laser	Laser	Laser	0	How stimulated emission cre
 published	science/physics/optics/polarization_of_light	Polarization of Light	Polarization of Light	0	How the orientation of an electromagnetic wave changes what light can do and reveal.	article
 published	science/physics/quantum_physics/black_body_radiation	Black Body Radiation	Black Body Radiation	0	How heated matter emits light and why its spectrum helped begin quantum physics.	article
 published	science/physics/quantum_physics/schrodingers_equation	Schrodingers Equation	Schrodingers Equation	0	How a quantum state changes in time and how probabilities arise from its mathematical description.	article
-published	business/startup	Startup	Startup	0	Startup notes covering the early work of shaping, presenting and building a company.	page
+published	business/startup	Startup	Startup	0	Startup notes covering the early work of shaping, presenting and building a company.	article
 published	business	Business	Business	0	Business notes covering entrepreneurship, organisations, markets and commercial practice.	page
 published	technology/telecommunications/splitter	Telephone Line Splitter	Telephone Line Splitter	0	How filters separate voice and data frequency bands on a shared copper line.	article
 published	technology/telecommunications/adsl	ADSL	ADSL	0	How asymmetric digital subscriber line service provides different downstream and upstream data rates.	article
@@ -1166,3 +1166,28 @@ published	technology/radio	Radio	Radio	0	How electromagnetic waves carry informa
 published	technology/power_electronics	Power Electronics	Power Electronics	0	How semiconductor circuits convert and control electrical power efficiently.	article
 published	technology/electronics	Electronics	Electronics	0	How circuits control electrons and signals to sense, compute, communicate and create.	article
 published	technology/information_technology	Information Technology	Information Technology	0	How information technology became a powerful human tool, why it matters, and how it may shape the future.	article
+published	science/physics/electrical/inductance	Inductance	Inductance	0	How changing current induces opposing voltage, stores energy in magnetic fields, and shapes electrical circuits.	article
+published	technology/electronics/inductor	Inductors	Inductors	0	How coils store energy in magnetic fields to resist current changes, filter signals and manage power.	article
+published	technology/computer/artificial_intelligence/machine_learning/models/llm/cache_handling	LLM Cache Handling	LLM Cache Handling	0	How prompt caching, KV cache management, and context stability reduce latency, save tokens, and improve language model systems.	article
+published	business/trade	Trade	Trade	0	Why voluntary exchange creates mutual benefit, drives specialization, and forms the basis of commerce.	article
+published	business/trade/barter	Barter	Barter	0	How direct exchange operates without money, and the severe frictions that led societies to create currency.	article
+published	business/money	Money	Money	0	What makes an object or ledger entry money, how it solves barter frictions, and why trust is its true foundation.	article
+published	business/money/plastic_money	Plastic Money	Plastic Money	0	How payment cards, magnetic stripes, and electronic payment networks replaced physical cash with instant card-based transactions.	article
+published	business/money/digital_money	Digital Money	Digital Money	0	How currency transformed into purely electronic ledger entries, real-time payment networks, and programmable money.	article
+published	business/money/inflation	Inflation	Inflation	0	How the general rise in prices erodes purchasing power, what causes money to lose value, and how central banks manage it.	article
+published	business/money/exchange_rate	Exchange Rate	Exchange Rate	0	Why different countries have different currency values, and the fundamental economic forces that drive exchange rates.	article
+published	business/debt	Debt	Debt	0	Why money is fundamentally debt, how credit pulls future productivity into the present, and how ledgers record social obligations.	article
+published	business/debt/interest	Interest	Interest	0	How interest acts as the price of time and risk, balancing deferred consumption with capital productivity.	article
+published	business/debt/compound_interest	Compound Interest	Compound Interest	0	How interest earning interest creates exponential growth over time, rewarding early savings and punishing long-term debt.	article
+published	business/debt/bond	Bond	Bond	0	How debt securities allow governments and companies to borrow capital from the public, paying fixed interest until maturity.	article
+published	business/market	Market	Market	0	How financial and capital markets discover prices, allocate investment capital, and provide liquidity.	article
+published	business/market/stock	Stock	Stock	0	How shares represent fractional ownership in a corporation, giving holders residual claims on profits and voting rights.	article
+published	business/market/stock_exchange	Stock Exchange	Stock Exchange	0	How organized, regulated marketplaces provide liquidity, price discovery, and fair trading for buyers and sellers of securities.	article
+published	business/market/hedging	Hedging	Hedging	0	How businesses and investors take offsetting positions in markets to reduce or eliminate the risk of adverse price movements.	article
+published	business/startup/how_to_present	How to present	How to Present	0	Practical advice for presenting a company or startup clearly and confidently, from preparation and delivery to slide structure and Q&A.	article
+published	science/mathematics	Mathematics	Mathematics	0	The abstract study of number, quantity, space and patterns, built on definitions, axioms and deductive proof.	article
+published	science/mathematics/axioms	Axioms	Mathematical Axioms	0	How foundational assumptions accepted without proof establish the starting ground for consistent mathematical systems.	article
+published	science/mathematics/proof	Proof	Mathematical Proof	0	How rigorous logical deduction establishes permanent truths, and how each proven result becomes the foundation for future proofs.	article
+published	science/mathematics/multiplication	Multiplication	Multiplication	0	How multiplication begins as applied addition, expands into rectangular grids and area, and scales continuous quantities.	article
+published	science/mathematics/zero	Zero	Zero	0	Why zero is both an identity element and a positional placeholder, and why pure zero carries no physical unit.	article
+published	science/mathematics/division_by_zero	Division by Zero	Division by Zero	0	Why dividing by zero is undefined in arithmetic, what breaks when we attempt it, and how calculus approaches the boundary.	article
