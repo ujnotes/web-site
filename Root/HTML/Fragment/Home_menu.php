@@ -5,6 +5,8 @@ function home_menu_leaf_slugs() {
 	return [
 		'technology/computer/game/doom',
 		'technology/computer/artificial_intelligence/machine_learning',
+		'technology/telecommunications',
+		'technology/radio',
 	];
 }
 
@@ -14,13 +16,35 @@ function home_menu_cap_children_of() {
 		'technology/computer/os',
 		'technology/computer/program',
 		'technology/computer/programming',
+		'technology/electronics',
 	];
+}
+
+function home_menu_large_group_slugs() {
+	// Large groups take full width on the homepage so their child trees have
+	// unconstrained horizontal room. Sibling sections follow on another row.
+	return [
+		'technology/computer',
+		'technology/electronics',
+	];
+}
+
+function home_menu_is_large_group($slug) {
+	return in_array(strtolower($slug), home_menu_large_group_slugs(), true);
 }
 
 function home_menu_selected_child_slugs() {
 	// Parent slug => child slugs to show. When set, other siblings are omitted
 	// and a vertical ⋮ is shown against that last selected child tile.
 	return [
+		'technology' => [
+			'technology/computer',
+			'technology/electronics',
+			'technology/telecommunications',
+			'technology/radio',
+			'technology/power_electronics',
+			'technology/information_technology',
+		],
 		'technology/computer' => [
 			'technology/computer/algorithm',
 			'technology/computer/program',
@@ -28,6 +52,13 @@ function home_menu_selected_child_slugs() {
 			'technology/computer/programming',
 			'technology/computer/game',
 			'technology/computer/artificial_intelligence',
+		],
+		'technology/electronics' => [
+			'technology/electronics/semiconductor',
+			'technology/electronics/transistors',
+			'technology/electronics/integrated_circuits',
+			'technology/electronics/digital_electronics',
+			'technology/electronics/microprocessor',
 		],
 	];
 }
@@ -140,6 +171,8 @@ function home_menu_render_tree($items, $level, $parent_slug) {
 		$node_class = 'home-menu-node';
 		if ($is_hub)
 			$node_class .= ' home-menu-hub';
+		if (home_menu_is_large_group($item[0]))
+			$node_class .= ' home-menu-large-group';
 		if ($show_more)
 			$node_class .= ' home-menu-has-more';
 		if ($bottom_connector)

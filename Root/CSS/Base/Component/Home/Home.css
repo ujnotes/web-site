@@ -138,6 +138,25 @@
 	max-width: 100%
 }
 
+/* Large groups (e.g. Computer, Electronics): span full width on the homepage
+   so their child trees have unconstrained horizontal room. Sibling sections
+   get pushed down together to another row. */
+#home-menu .home-menu-subtree > .home-menu-node.home-menu-large-group {
+	flex: 0 0 100%;
+	width: 100%;
+	max-width: 100%
+}
+
+#home-menu .home-menu-subtree > .home-menu-node.home-menu-large-group:has(> .home-menu-subtree:not([hidden])) + .home-menu-node {
+	margin-top: 24px
+}
+
+#home-menu .home-menu-node.home-menu-large-group > .home-menu-subtree {
+	position: relative;
+	z-index: 1;
+	isolation: isolate
+}
+
 #home-menu .home-menu-node:has(> .home-menu-subtree:not([hidden]))::after {
 	position: absolute;
 	z-index: 0;
