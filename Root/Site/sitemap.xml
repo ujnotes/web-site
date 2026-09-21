@@ -523,4 +523,32 @@
 	<loc>https://ujnotes.com/business</loc>
 </url>
 
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/circuit</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electrical/kirchhoffs_laws</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electromagnetism/coulombs_law</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electromagnetism/faradays_law</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/electromagnetism/lenzs_law</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/physics/quantum_physics/photoelectric_effect</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/technology/computer/artificial_intelligence/machine_learning/models/llm/flow_architecture</loc>
+</url>
+
 </urlset>

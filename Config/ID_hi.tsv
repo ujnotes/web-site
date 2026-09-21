@@ -60,3 +60,10 @@ published	science/mathematics/proof	प्रमाण	गणितीय प्
 published	science/mathematics/multiplication	गुणा	गुणा	0	किस प्रकार गुणा बार-बार होने वाले जोड़ से शुरू होकर आयताकार ग्रिड, क्षेत्रफल और सतत स्केलिंग में विकसित होता है।	article
 published	science/mathematics/zero	शून्य	शून्य	0	शून्य मात्रा की अनुपस्थिति और योगात्मक तत्समक क्यों है, और शुद्ध शून्य की कोई इकाई क्यों नहीं होती।	article
 published	science/mathematics/division_by_zero	शून्य से विभाजन	शून्य से विभाजन	0	अंकगणित में शून्य से विभाजन अपरिभाषित क्यों है और सीमांत पर क्या होता है।	article
+published	science/physics/electrical/circuit	विद्युत परिपथ	विद्युत परिपथ	0	कैसे बंद संवाहक पथ निरंतर आवेश प्रवाह की अनुमति देते हैं, विद्युत ऊर्जा स्थानांतरित करते हैं और कार्यशील प्रणालियाँ बनाते हैं।	article
+published	science/physics/electrical/kirchhoffs_laws	किरचॉफ के नियम	किरचॉफ के नियम	0	नोड्स पर आवेश संरक्षण और लूप्स में ऊर्जा संरक्षण कैसे पूर्ण परिपथ विश्लेषण को संभव बनाते हैं।	article
+published	science/physics/electromagnetism/coulombs_law	कूलॉम का नियम	कूलॉम का नियम	0	स्थिर विद्युत आवेश अपनी दूरी के वर्ग के व्युत्क्रमानुपाती बल से एक-दूसरे को कैसे आकर्षित या प्रतिकर्षित करते हैं।	article
+published	science/physics/electromagnetism/faradays_law	फैराडे का नियम	फैराडे का प्रेरण नियम	0	बदलता चुंबकीय प्रवाह कैसे विद्युत वाहक बल प्रेरित करता है, जो चुंबकीय क्षेत्रों को सीधे विद्युत से जोड़ता है।	article
+published	science/physics/electromagnetism/lenzs_law	लेंज़ का नियम	लेंज़ का नियम	0	प्रेरित धारा हमेशा उस चुंबकीय प्रवाह परिवर्तन का विरोध क्यों करती है जिसने इसे उत्पन्न किया, ऊर्जा संरक्षण को बनाए रखती है।	article
+published	science/physics/quantum_physics/photoelectric_effect	प्रकाश-विद्युत प्रभाव	प्रकाश-विद्युत प्रभाव	0	प्रकाश केवल एक देहली आवृत्ति से ऊपर ही पदार्थ से इलेक्ट्रॉनों को कैसे उत्सर्जित करता है, यह सिद्ध करते हुए कि प्रकाश फोटॉनों में क्वांटीकृत है।	article
+published	technology/computer/artificial_intelligence/machine_learning/models/llm/flow_architecture	एलएलएम फ्लो आर्किटेक्चर	एलएलएम फ्लो आर्किटेक्चर	0	आधुनिक भाषा मॉडल अनुप्रयोग विश्वसनीय प्रणालियाँ बनाने के लिए पाइपलाइन, रूटिंग, रिट्रीवल, उपकरण और स्थिति को कैसे व्यवस्थित करते हैं।	article
