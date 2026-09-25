@@ -28,12 +28,12 @@
 	<p>
 		HTTPS-only local stacks (no port 80) will time out on plain HTTP even when DNS/hosts and ping succeed.
 	</p>
+<p>
+		USB Wi-Fi soft hangs under load on older EHCI hosts are a hardware/driver issue (rtw88), not Omarchy-specific — see <a class="content-link XURL" href="/technology/computer/issues/usb_wifi_soft_hang/nix/omarchy" data-target="technology/computer/issues/usb_wifi_soft_hang/nix/omarchy" data-title="USB Wi-Fi soft hang (Omarchy notes)">USB Wi-Fi soft hang (Omarchy notes)</a>.
+	</p>
 	<div id='content-body-separator' class='center'></div>
 	<p>
 		<em>Ai disclosure: written with the help of AI (ChatGPT). You are encouraged to point out errors and omissions.</em>
-	</p>
-	<p>
-		USB Wi-Fi soft hangs under load on older EHCI hosts are a hardware/driver issue (rtw88), not Omarchy-specific — see <a class="content-link XURL" href="/technology/computer/issues/usb_wifi_soft_hang/nix/omarchy" data-target="technology/computer/issues/usb_wifi_soft_hang/nix/omarchy" data-title="USB Wi-Fi soft hang (Omarchy notes)">USB Wi-Fi soft hang (Omarchy notes)</a>.
 	</p>
 
 </div>
