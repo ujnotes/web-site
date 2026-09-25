@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Stock certificates and financial market charts illustrating equity shares in a company.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A laptop showing a stock market chart.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is a stock?</h3>
 	<p>

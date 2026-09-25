@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Credit and debit cards with embedded microchips and payment terminals.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A card being used at a payment terminal in a cafe.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is plastic money?</h3>
 	<p>

@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Digital transaction streams connecting smartphones, bank servers, and electronic ledgers.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A smartphone held over a contactless payment terminal.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is digital money?</h3>
 	<p>

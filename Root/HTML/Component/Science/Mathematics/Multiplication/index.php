@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A neat rectangular grid of identical elements illustrating repeated groups and area scaling.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='Two students working through mathematics on a classroom blackboard.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is multiplication?</h3>
 	<p>

@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A shopping cart filled with fewer goods over time, illustrating the eroding purchasing power of money.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='Grocery shelves displaying products and price labels.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is inflation?</h3>
 	<p>

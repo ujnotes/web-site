@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "kind": "image",
+      "items": [
+        "root",
+        "world"
+      ],
+      "includeHomeHubs": true
+    },
+    {
+      "kind": "text",
+      "items": [
+        "about",
+        "faq"
+      ]
+    },
+    {
+      "kind": "text",
+      "items": [
+        "feedback",
+        "license",
+        "logo",
+        "roadmap",
+        "changelog",
+        "timeline"
+      ]
+    },
+    {
+      "kind": "text",
+      "items": [
+        "about_site",
+        "about_me"
+      ]
+    }
+  ],
+  "labels": {
+    "root": {
+      "en": "home",
+      "hi": "मुखपृष्ठ"
+    },
+    "technology": {
+      "hi": "प्रौद्योगिकी"
+    }
+  }
+}

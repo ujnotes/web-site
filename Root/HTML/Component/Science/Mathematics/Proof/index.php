@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Interlocking stepping stones forming an ascending staircase of deductive reasoning.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A hand writing mathematical equations on a blackboard.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is a mathematical proof?</h3>
 	<p>

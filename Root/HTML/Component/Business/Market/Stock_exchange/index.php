@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Trading floor terminals and digital order books matching buy and sell bids.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A laptop displaying a stock exchange graph.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is a stock exchange?</h3>
 	<p>

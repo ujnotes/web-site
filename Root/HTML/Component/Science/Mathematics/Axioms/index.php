@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A solid architectural foundation stone supporting interlocking pillars of logic.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='Mathematical equations written in chalk on a classroom blackboard.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is an axiom?</h3>
 	<p>

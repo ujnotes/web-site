@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='An umbrella shielding an investment portfolio from volatile market swings.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A person checking market charts on a laptop and smartphone.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is hedging?</h3>
 	<p>

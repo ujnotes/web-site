@@ -1,6 +1,5 @@
 <?php
 	require_once 'Fragment/Item.php';
-	require_once __DIR__.'/UITranslation.php';
 	$SIDEBAR_NAV_GROUP = 'sidebar-nav-group page-list';
 ?>
 <div id='nav-menu'>
@@ -8,10 +7,15 @@
 		<div class='sidebar-nav-li sidebar-sub'>
 			<?php
 			$MENU_MAX_ITEM_COUNT = -5;
-			group_image($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['root', getUITranslation('menu_home', $lang)], ['world', getUITranslation('menu_world', $lang)], ['philosophy', getUITranslation('menu_philosophy', $lang)], ['science', getUITranslation('menu_science', $lang)], ['technology', getUITranslation('menu_technology', $lang)]);
-			group_text($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['about', getUITranslation('menu_about', $lang)], ['faq', getUITranslation('menu_faq', $lang)]);
-			group_text($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['feedback', getUITranslation('menu_feedback', $lang)], ['license', getUITranslation('menu_license', $lang)], ['logo', getUITranslation('menu_logo', $lang)], ['roadmap', getUITranslation('menu_roadmap', $lang)], ['changelog', getUITranslation('menu_changelog', $lang)], ['timeline', getUITranslation('menu_timeline', $lang)]);
-			group_text($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['about_site', getUITranslation('menu_about_site', $lang)], ['about_me', getUITranslation('menu_about_me', $lang)]);
+			foreach (sidebar_menu_groups() as $group) {
+				$items = array();
+				foreach ($group['items'] as $slug)
+					$items[] = array($slug, htmlspecialchars(sidebar_menu_label($slug, $lang), ENT_QUOTES, 'UTF-8'));
+				if ($group['kind'] === 'image')
+					group_image($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ...$items);
+				else
+					group_text($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ...$items);
+			}
 			?>
 		</div>
 	</div>

@@ -1,0 +1,79 @@
+{
+  "branch": "world",
+  "syntheticChildren": {
+    "world": [
+      "philosophy",
+      "science",
+      "technology",
+      "business"
+    ]
+  },
+  "leafSlugs": [
+    "technology/computer/game/doom",
+    "technology/computer/artificial_intelligence/machine_learning",
+    "technology/telecommunications",
+    "technology/radio"
+  ],
+  "capChildrenOf": [
+    "technology/computer/os",
+    "technology/computer/program",
+    "technology/computer/programming",
+    "technology/electronics",
+    "science/physics/electrical",
+    "science/physics/electromagnetism",
+    "science/physics/optics",
+    "science/physics/quantum_physics",
+    "science/mathematics",
+    "business/trade",
+    "business/money",
+    "business/debt",
+    "business/market",
+    "business/startup"
+  ],
+  "largeGroupSlugs": [
+    "science/physics",
+    "science/physics/electrical",
+    "science/physics/electromagnetism",
+    "science/physics/optics",
+    "science/physics/quantum_physics",
+    "technology/computer",
+    "technology/electronics"
+  ],
+  "selectedChildren": {
+    "business": [
+      "business/trade",
+      "business/money",
+      "business/debt",
+      "business/market",
+      "business/startup"
+    ],
+    "technology": [
+      "technology/computer",
+      "technology/electronics",
+      "technology/telecommunications",
+      "technology/radio",
+      "technology/power_electronics",
+      "technology/information_technology"
+    ],
+    "technology/computer": [
+      "technology/computer/algorithm",
+      "technology/computer/program",
+      "technology/computer/os",
+      "technology/computer/programming",
+      "technology/computer/game",
+      "technology/computer/artificial_intelligence"
+    ],
+    "technology/electronics": [
+      "technology/electronics/semiconductor",
+      "technology/electronics/transistors",
+      "technology/electronics/integrated_circuits",
+      "technology/electronics/digital_electronics",
+      "technology/electronics/microprocessor"
+    ]
+  },
+  "childLimits": {
+    "technology/computer/os": 1,
+    "technology/computer/program": 1,
+    "technology/computer/programming": 1
+  }
+}

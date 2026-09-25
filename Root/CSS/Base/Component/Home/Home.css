@@ -147,6 +147,14 @@
 	max-width: 100%
 }
 
+/* Each business pillar has its own article row. Give that row the full hub
+   width so it cannot extend across the next pillar's tile or children. */
+#home-menu #home-business-children > .home-menu-node {
+	flex: 0 0 100%;
+	width: 100%;
+	max-width: 100%
+}
+
 #home-menu .home-menu-subtree > .home-menu-node.home-menu-large-group:has(> .home-menu-subtree:not([hidden])) + .home-menu-node {
 	margin-top: 24px
 }
@@ -157,15 +165,26 @@
 	isolation: isolate
 }
 
+#home-menu .home-menu-group-connector > .home-menu-node::after {
+    content: none;
+    border-left: none;
+}
+
+/* Restore leader line for regular nodes */
 #home-menu .home-menu-node:has(> .home-menu-subtree:not([hidden]))::after {
-	position: absolute;
-	z-index: 0;
-	top: var(--home-elbow-y);
-	height: calc(var(--home-line-height, 146px) + 1px);
-	left: var(--home-glyph-center);
-	border-left: 1px solid var(--home-line);
-	content: '';
-	pointer-events: none
+    position: absolute;
+    z-index: 0;
+    top: var(--home-elbow-y);
+    height: calc(var(--home-line-height, 146px) + 1px);
+    left: var(--home-glyph-center);
+    border-left: 1px solid var(--home-line);
+    content: '';
+    pointer-events: none;
+}
+
+/* Use general sibling selector to push all following siblings after a large group */
+#home-menu .home-menu-subtree > .home-menu-node.home-menu-large-group:has(> .home-menu-subtree:not([hidden])) ~ .home-menu-node {
+    margin-top: 24px;
 }
 
 #home-menu .home-menu-subtree > .home-menu-node::before,
@@ -321,7 +340,8 @@
 }
 
 html.dark-mode #home-menu {
-	--home-line: rgba(105, 183, 207, 0.28);
+	/* Opaque strokes keep shared connector segments the same brightness. */
+	--home-line: #30465b;
 	--home-line-alt: rgba(105, 205, 235, 0.92)
 }
 

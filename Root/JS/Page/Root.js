@@ -295,7 +295,8 @@ function syncHomeMenuConnectors() {
 			var elbowY = childSourceRect.top - childRect.top + childSourceRect.height / 2;
 			var lineX = nodeRect.left + parentLineX - childRect.left;
 			child.style.setProperty('--home-parent-elbow-y', elbowY + 'px');
-			var tileEdgeX = childSourceRect.left - childRect.left - 8;
+			var toggle = child.querySelector(':scope > .home-menu-toggle');
+	var tileEdgeX = toggle ? (toggle.getBoundingClientRect().left - childRect.left + toggle.getBoundingClientRect().width / 2 - 8) : (childSourceRect.left - childRect.left - 8);
 			child.style.setProperty('--home-parent-elbow-left', Math.min(lineX, tileEdgeX) + 'px');
 			child.style.setProperty('--home-parent-elbow-width', Math.abs(tileEdgeX - lineX) + 'px');
 		});

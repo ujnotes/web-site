@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A clean circular ring balancing positive and negative coordinate axes at the origin.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A large zero against a red background.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is zero?</h3>
 	<p>

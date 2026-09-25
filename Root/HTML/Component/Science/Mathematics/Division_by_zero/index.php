@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A hyperbolic curve splitting dramatically toward positive and negative infinity near the vertical axis.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A hand writing equations with chalk on a blackboard.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is division by zero?</h3>
 	<p>

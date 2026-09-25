@@ -22,9 +22,11 @@
 				require_once __DIR__.'/UITranslation.php';
 			$lang = $lang ?? 'en';
 			?>
-			<strong><?php echo htmlspecialchars(getUITranslation('footer_image_credits_label', $lang)); ?>:</strong>
-			<?php echo htmlspecialchars(getUITranslation('footer_image_credits_body', $lang)); ?>
-			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'><?php echo htmlspecialchars(getUITranslation('footer_image_credits_link', $lang)); ?></a>.
+			<span class='footer-image-disclaimer-label'><strong><?php echo htmlspecialchars(getUITranslation('footer_image_credits_label', $lang)); ?>:</strong></span>
+			<span class='footer-image-disclaimer-body'>
+				<?php echo htmlspecialchars(getUITranslation('footer_image_credits_body', $lang)); ?>
+				<?php echo htmlspecialchars(getUITranslation('footer_image_credits_link', $lang)); ?>
+			</span>
 		</div>
 		<div class='footer-content' id='footer-rights'>
 			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>

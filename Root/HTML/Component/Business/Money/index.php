@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Historic coins, paper currency, and digital ledger nodes tracing the evolution of money.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A hand holding paper currency.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is money?</h3>
 	<p>

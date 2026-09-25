@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='Currency symbols interacting on a balancing scale, illustrating foreign exchange valuation.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='A currency exchange office displaying exchange rates on a city street.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is an exchange rate?</h3>
 	<p>
