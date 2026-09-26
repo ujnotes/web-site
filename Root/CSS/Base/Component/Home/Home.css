@@ -1,7 +1,9 @@
 #home-message {
 	float: left;
 	display: inline-block;
-	margin-left: 22px
+	margin-left: 22px;
+	color: #27363a;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, .9)
 }
 
 #home-message > p:first-child {
@@ -12,11 +14,31 @@
 	margin-left: 10px
 }
 
-/* Let the landscape dissolve into the page on the left, right and bottom. */
+/* Handmade paper repeats across the homepage, including behind the hero. */
+#main-wrapper:has(#home-menu) {
+	background: #f5f0e5 url('/resource/nepali-paper.jpg') repeat
+}
+
+/* The hidden breadcrumb and title rows still reserve space on the homepage. */
+#main-wrapper:has(#home-menu) #path-container,
+#main-wrapper:has(#home-menu) #title-container {
+	display: none
+}
+
+html.dark-mode #main-wrapper:has(#home-menu) {
+	background-color: #1a1a2e;
+	background-blend-mode: multiply
+}
+
+/* Let the landscape dissolve into the paper on every edge. */
 #message {
-	--home-hero-edge: #fff;
+	--home-hero-edge: #f5f0e5;
 	position: relative;
-	isolation: isolate
+	isolation: isolate;
+	box-sizing: border-box;
+	min-height: clamp(480px, 66vh, 760px);
+	margin-top: 0;
+	padding-top: clamp(18px, 3vw, 46px)
 }
 
 #message::before {
@@ -24,13 +46,13 @@
 	z-index: 0;
 	inset: 0;
 	background-image:
-		linear-gradient(to right, var(--home-hero-edge), transparent 17%, transparent 83%, var(--home-hero-edge)),
-		linear-gradient(to top, var(--home-hero-edge), transparent 68%),
+		linear-gradient(to right, var(--home-hero-edge), transparent 15%, transparent 85%, var(--home-hero-edge)),
+		linear-gradient(to bottom, var(--home-hero-edge), transparent 28%, transparent 74%, var(--home-hero-edge)),
 		url('/resource/homepage-nature-science.jpg');
 	background-position: center, center, center 46%;
 	background-size: cover;
 	content: '';
-	opacity: .22;
+	opacity: .64;
 	pointer-events: none
 }
 
@@ -43,8 +65,13 @@ html.dark-mode #message {
 	--home-hero-edge: #1a1a2e
 }
 
+html.dark-mode #home-message {
+	color: #e1e5e7;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, .85)
+}
+
 html.dark-mode #message::before {
-	opacity: .48
+	opacity: .58
 }
 
 #home-menu {
@@ -439,14 +466,17 @@ html.dark-mode #home-menu .home-menu-more {
 /* Motion stays inside each tile so the connector geometry never shifts. */
 @media (prefers-reduced-motion: no-preference) {
 	#home-message > p {
-		animation: home-copy-in 420ms cubic-bezier(.22, .65, .3, 1) both
+		--home-copy-delay: 0ms;
+		animation:
+			home-copy-in 420ms cubic-bezier(.22, .65, .3, 1) var(--home-copy-delay) both,
+			home-copy-type 1050ms steps(32, end) var(--home-copy-delay) both
 	}
 
-	#home-message > p:nth-child(2) { animation-delay: 340ms }
-	#home-message > p:nth-child(3) { animation-delay: 680ms }
-	#home-message > p:nth-child(4) { animation-delay: 1020ms }
-	#home-message > p:nth-child(5) { animation-delay: 1360ms }
-	#home-message > p:nth-child(6) { animation-delay: 1700ms }
+	#home-message > p:nth-child(2) { --home-copy-delay: 500ms }
+	#home-message > p:nth-child(3) { --home-copy-delay: 1000ms }
+	#home-message > p:nth-child(4) { --home-copy-delay: 1500ms }
+	#home-message > p:nth-child(5) { --home-copy-delay: 2000ms }
+	#home-message > p:nth-child(6) { --home-copy-delay: 2500ms }
 
 	#profile-image:hover:not(:focus) {
 		animation: home-portrait-breathe 1.8s ease-in-out infinite alternate
@@ -496,6 +526,11 @@ html.dark-mode #home-menu .home-menu-more {
 @keyframes home-copy-in {
 	from { opacity: 0; transform: translateY(8px) }
 	to { opacity: 1; transform: translateY(0) }
+}
+
+@keyframes home-copy-type {
+	from { clip-path: inset(0 100% 0 0) }
+	to { clip-path: inset(0 0 0 0) }
 }
 
 @keyframes home-portrait-breathe {
