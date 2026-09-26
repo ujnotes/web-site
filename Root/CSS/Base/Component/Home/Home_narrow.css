@@ -1,4 +1,9 @@
 @media (max-width: 540px) {
+	#message {
+		height: auto;
+		min-height: 400px
+	}
+
 	#home-message {
 		margin-left: auto !important
 	}

@@ -2,7 +2,9 @@
 	float: left;
 	display: inline-block;
 	margin-left: 22px;
+	padding: 12px 20px 14px 0;
 	color: #27363a;
+	background: linear-gradient(to right, rgba(248, 245, 237, .94), rgba(248, 245, 237, .83) 78%, rgba(248, 245, 237, .55));
 	text-shadow: 0 1px 2px rgba(255, 255, 255, .9)
 }
 
@@ -14,9 +16,14 @@
 	margin-left: 10px
 }
 
-/* Handmade paper repeats across the homepage, including behind the hero. */
+/* Keep one tile origin across the whole viewport, including the side gutters. */
+body:has(#home-menu) {
+	background: #f5f0e5 url('/resource/nepali-paper.jpg') repeat;
+	background-size: 675px 675px
+}
+
 #main-wrapper:has(#home-menu) {
-	background: #f5f0e5 url('/resource/nepali-paper.jpg') repeat
+	background: transparent
 }
 
 /* The hidden breadcrumb and title rows still reserve space on the homepage. */
@@ -25,9 +32,13 @@
 	display: none
 }
 
-html.dark-mode #main-wrapper:has(#home-menu) {
+html.dark-mode body:has(#home-menu) {
 	background-color: #1a1a2e;
 	background-blend-mode: multiply
+}
+
+html.dark-mode #main-wrapper:has(#home-menu) {
+	background: transparent
 }
 
 /* Let the landscape dissolve into the paper on every edge. */
@@ -36,7 +47,7 @@ html.dark-mode #main-wrapper:has(#home-menu) {
 	position: relative;
 	isolation: isolate;
 	box-sizing: border-box;
-	min-height: clamp(480px, 66vh, 760px);
+	height: 400px;
 	margin-top: 0;
 	padding-top: clamp(18px, 3vw, 46px)
 }
@@ -67,6 +78,7 @@ html.dark-mode #message {
 
 html.dark-mode #home-message {
 	color: #e1e5e7;
+	background: linear-gradient(to right, rgba(24, 27, 45, .94), rgba(24, 27, 45, .84) 78%, rgba(24, 27, 45, .58));
 	text-shadow: 0 1px 3px rgba(0, 0, 0, .85)
 }
 
@@ -207,6 +219,22 @@ html.dark-mode #message::before {
 	flex: 0 0 100%;
 	width: 100%;
 	max-width: 100%
+}
+
+#home-menu .item_block_text {
+	background-color: rgba(246, 246, 246, .76)
+}
+
+#home-menu .item_block_container:hover .item_block_text {
+	background-color: rgba(105, 183, 207, .9)
+}
+
+html.dark-mode #home-menu .item_block_text {
+	background-color: rgba(34, 34, 68, .76)
+}
+
+html.dark-mode #home-menu .item_block_container:hover .item_block_text {
+	background-color: rgba(105, 183, 207, .9)
 }
 
 /* Each business pillar has its own article row. Give that row the full hub
