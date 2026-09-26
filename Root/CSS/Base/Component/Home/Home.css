@@ -16,13 +16,13 @@
 	margin-left: 10px
 }
 
-/* Keep one tile origin across the whole viewport, including the side gutters. */
-body:has(#home-menu) {
+/* About Me keeps one paper tile origin across the viewport and side gutters. */
+body:has(#message #me-table) {
 	background: #f5f0e5 url('/resource/nepali-paper.jpg') repeat;
 	background-size: 675px 675px
 }
 
-#main-wrapper:has(#home-menu) {
+#main-wrapper:has(#message #me-table) {
 	background: transparent
 }
 
@@ -32,18 +32,18 @@ body:has(#home-menu) {
 	display: none
 }
 
-html.dark-mode body:has(#home-menu) {
+html.dark-mode body:has(#message #me-table) {
 	background-color: #1a1a2e;
 	background-blend-mode: multiply
 }
 
-html.dark-mode #main-wrapper:has(#home-menu) {
+html.dark-mode #main-wrapper:has(#message #me-table) {
 	background: transparent
 }
 
-/* Let the landscape dissolve into the paper on every edge. */
-#message {
-	--home-hero-edge: #f5f0e5;
+/* The landscape belongs to the homepage alone. */
+body:has(#home-menu) #message {
+	--home-hero-edge: #fff;
 	position: relative;
 	isolation: isolate;
 	box-sizing: border-box;
@@ -52,7 +52,7 @@ html.dark-mode #main-wrapper:has(#home-menu) {
 	padding-top: clamp(18px, 3vw, 46px)
 }
 
-#message::before {
+body:has(#home-menu) #message::before {
 	position: absolute;
 	z-index: 0;
 	inset: 0;
@@ -67,12 +67,12 @@ html.dark-mode #main-wrapper:has(#home-menu) {
 	pointer-events: none
 }
 
-#message > div {
+body:has(#home-menu) #message > div {
 	position: relative;
 	z-index: 1
 }
 
-html.dark-mode #message {
+html.dark-mode body:has(#home-menu) #message {
 	--home-hero-edge: #1a1a2e
 }
 
@@ -82,7 +82,7 @@ html.dark-mode #home-message {
 	text-shadow: 0 1px 3px rgba(0, 0, 0, .85)
 }
 
-html.dark-mode #message::before {
+html.dark-mode body:has(#home-menu) #message::before {
 	opacity: .58
 }
 

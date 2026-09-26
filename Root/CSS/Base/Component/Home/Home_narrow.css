@@ -1,5 +1,5 @@
 @media (max-width: 540px) {
-	#message {
+	body:has(#home-menu) #message {
 		height: auto;
 		min-height: 400px
 	}
