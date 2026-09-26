@@ -1202,5 +1202,5 @@ published	technology/computer/artificial_intelligence/machine_learning/models/ll
 published	technology/computer/issues	Issues	Computer issues	0	Hardware and driver troubleshooting notes that are not tied to one app or article tree.	article
 published	technology/computer/issues/usb_wifi_soft_hang	USB Wi-Fi soft hang	USB Wi-Fi soft hang under load (rtw88 + older EHCI)	0	High-throughput soft hang of a Realtek USB Wi-Fi dongle on older AMD EHCI hosts.	article
 published	technology/computer/issues/usb_wifi_soft_hang/nix	*nix	USB Wi-Fi soft hang on *nix	0	*nix notes for the USB Wi-Fi soft hang under load on older EHCI hosts.	article
-published	technology/computer/issues/usb_wifi_soft_hang/nix/omarchy	Omarchy	USB Wi-Fi soft hang under load on Omarchy (rtw88 + older EHCI)	0	Omarchy/*nix notes for the USB Wi-Fi soft hang on older AMD EHCI: symptoms, dead ends, and rtw88 mitigations. The underlying issue is hardware/driver, not Omarchy-only.	article
+published	technology/computer/issues/usb_wifi_soft_hang/nix/omarchy	Omarchy	USB Wi-Fi soft hang under load on Omarchy (rtw88 + older EHCI)	0	USB Wi-Fi soft hang on older AMD EHCI under heavy load: symptoms, dead ends, and rtw88 mitigations	article
 published	technology/computer/os/omarchy	Omarchy	Omarchy	0	Generic notes on running local AI and reaching Windows Caddy *.local sites from an Omarchy (Arch) box.	article
