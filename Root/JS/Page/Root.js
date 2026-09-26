@@ -412,18 +412,81 @@ function initHomeMenuMotion(menu) {
 	menu.classList.add('home-motion-enabled');
 }
 
-function root() {
-	var e = document.getElementById('profile-image');
-	if(e) {
-		root.full = false;
-		e.addEventListener( "click", function(){
-			if(root.full) {
-				e.blur();
-				root.full = false;
+function initHomeWordReveal() {
+	var message = document.getElementById('home-message');
+	if(!message || message.dataset.wordsInitialized || window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+		return;
+	message.dataset.wordsInitialized = 'true';
+	var wordIndex = 0;
+	var walker = document.createTreeWalker(message, NodeFilter.SHOW_TEXT);
+	var nodes = [];
+	while(walker.nextNode())
+		nodes.push(walker.currentNode);
+	nodes.forEach(function(node) {
+		if(!node.nodeValue.trim())
+			return;
+		var fragment = document.createDocumentFragment();
+		node.nodeValue.split(/(\s+)/).forEach(function(part) {
+			if(!part)
+				return;
+			if(/^\s+$/.test(part)) {
+				fragment.appendChild(document.createTextNode(part));
+				return;
 			}
-			else
-				root.full = true;
+			var word = document.createElement('span');
+			word.className = 'home-word';
+			word.style.setProperty('--home-word-delay', (wordIndex++ * 85) + 'ms');
+			word.textContent = part;
+			fragment.appendChild(word);
 		});
+		node.parentNode.replaceChild(fragment, node);
+	});
+	message.classList.add('home-words-ready');
+}
+
+function root() {
+	initHomeWordReveal();
+	var portrait = document.getElementById('profile-image');
+	var dialog = document.getElementById('profile-image-dialog');
+	if(portrait && !dialog) {
+		var hindi = document.documentElement.lang == 'hi';
+		dialog = document.createElement('dialog');
+		dialog.id = 'profile-image-dialog';
+		dialog.setAttribute('aria-label', hindi ? 'प्रोफ़ाइल चित्र' : 'Profile picture');
+		var image = document.createElement('img');
+		image.src = portrait.querySelector('img').src;
+		image.alt = hindi ? 'उज्ज्वल सिंह' : 'Ujjwal Singh';
+		var close = document.createElement('button');
+		close.id = 'profile-image-dialog-close';
+		close.type = 'button';
+		close.setAttribute('aria-label', hindi ? 'प्रोफ़ाइल चित्र बंद करें' : 'Close profile picture');
+		close.innerHTML = '&times;';
+		dialog.appendChild(image);
+		dialog.appendChild(close);
+		document.body.appendChild(dialog);
+	}
+	if(portrait && dialog && !portrait.dataset.dialogInitialized) {
+		portrait.dataset.dialogInitialized = 'true';
+		portrait.setAttribute('role', 'button');
+		portrait.setAttribute('aria-label', document.documentElement.lang == 'hi' ? 'प्रोफ़ाइल चित्र बड़ा करें' : 'Enlarge profile picture');
+		portrait.addEventListener('click', function(event) {
+			event.preventDefault();
+			dialog.showModal();
+		});
+		portrait.addEventListener('keydown', function(event) {
+			if(event.key == ' ') {
+				event.preventDefault();
+				dialog.showModal();
+			}
+		});
+		if(!dialog.dataset.closeInitialized) {
+			dialog.dataset.closeInitialized = 'true';
+			dialog.querySelector('#profile-image-dialog-close').addEventListener('click', function() { dialog.close(); });
+			dialog.addEventListener('click', function(event) {
+				if(event.target === dialog)
+					dialog.close();
+			});
+		}
 	}
 
 	[].forEach.call(document.querySelectorAll('#home-menu [data-home-menu-toggle]'), function(button) {

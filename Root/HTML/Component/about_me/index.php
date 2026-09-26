@@ -1,4 +1,7 @@
 <div id='message' class='center'>
+	<figure id='about-me-portrait'>
+		<img src='/photo.jpg' alt='Ujjwal Singh'>
+	</figure>
 		<div id='me-table'>
 		<div>
 			<div class='R1'>intro</div>

@@ -1,55 +1,101 @@
 #profile-image-container {
-	display: inline-block;
-	float: right;
-	text-align: center;
-	margin: 0 2px 18px 0
+	flex: 0 0 auto;
+	align-self: center;
+	margin: 0 22px 0 0;
+	text-align: center
 }
 
 #profile-image {
-	display: inline-block;
-	max-width: 300px;
-	background: url(/photo.jpg);
-	background-position-x: -304px;
-	background-position-y: -116px;
-	background-repeat: no-repeat;
-	border-radius: 4px;
-	box-shadow: 0 1px 10px #afafaf;
-	-webkit-box-shadow: 0 1px 10px #afafaf;
-	-moz-box-shadow: 0 1px 10px #afafaf;
-	z-index: 999
+	display: block;
+	width: clamp(180px, 21vw, 260px);
+	padding: 0;
+	border: 0;
+	border-radius: 8px;
+	background: none;
+	box-shadow: 0 4px 18px rgba(22, 45, 67, .22);
+	cursor: zoom-in;
+	overflow: hidden
 }
 
-#profile-image>img {
-	visibility: hidden;
-	transition-duration: 0s
+#profile-image > img {
+	display: block;
+	width: 100%;
+	height: auto
 }
 
-#profile-image:focus {
-	float: none;
-	margin: auto;
-	max-width: none;
-	background-image: none;
-	box-shadow: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none
+#profile-image:focus-visible {
+	outline: 3px solid #3d738c;
+	outline-offset: 4px
 }
 
-#profile-image:focus>img {
-	visibility: visible;
-	box-shadow: 0 1px 10px #afafaf;
-	-webkit-box-shadow: 0 1px 10px #afafaf;
-	-moz-box-shadow: 0 1px 10px #afafaf
+#profile-image-dialog {
+	max-width: min(920px, 90vw);
+	max-height: 90vh;
+	padding: 0;
+	border: 0;
+	border-radius: 8px;
+	background: transparent;
+	box-shadow: 0 18px 60px rgba(0, 0, 0, .4);
+	overflow: visible
 }
 
-html.dark-mode #profile-image,
-html.dark-mode #profile-image:focus>img {
-	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-	-webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-	-moz-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45)
+#profile-image-dialog::backdrop {
+	background: rgba(15, 25, 32, .58);
+	backdrop-filter: blur(9px)
 }
 
-html.dark-mode #profile-image:focus {
-	box-shadow: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none
+#profile-image-dialog > img {
+	display: block;
+	max-width: 90vw;
+	max-height: 90vh;
+	width: auto;
+	height: auto;
+	border-radius: 8px
+}
+
+#profile-image-dialog-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(15, 25, 32, .75);
+	color: white;
+	font-size: 26px;
+	line-height: 1;
+	cursor: pointer
+}
+
+#about-me-portrait {
+	max-width: 320px;
+	margin: 0 auto 28px;
+	text-align: center
+}
+
+#about-me-portrait img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 5px 20px rgba(22, 45, 67, .22)
+}
+
+@media (max-width: 768px) {
+	body:has(#home-menu) #message {
+		height: auto;
+		min-height: 400px
+	}
+
+	body:has(#home-menu) #message > div {
+		flex-direction: column;
+		justify-content: center;
+		gap: 16px
+	}
+
+	#profile-image-container {
+		margin: 0 auto 18px;
+		width: auto !important
+	}
 }
