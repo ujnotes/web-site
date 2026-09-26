@@ -1,3 +1,4 @@
+<?php require(__DIR__.'/../../../Fragment/Home_ajax_styles.php'); ?>
 <div id='message'>
 	<div>
 		<div id='home-message'>
