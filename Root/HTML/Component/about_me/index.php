@@ -1,6 +1,6 @@
 <div id='message' class='center'>
-	<figure id='about-me-portrait'>
-		<img src='/photo.jpg' alt='Ujjwal Singh'>
+	<figure id='about-me-portrait' class='no-auto-cover'>
+		<a id='profile-image' href='/photo.jpg'><img src='/photo.jpg' alt='Ujjwal Singh'></a>
 	</figure>
 		<div id='me-table'>
 		<div>

@@ -444,8 +444,7 @@ function initHomeWordReveal() {
 	message.classList.add('home-words-ready');
 }
 
-function root() {
-	initHomeWordReveal();
+function initProfileImageDialog() {
 	var portrait = document.getElementById('profile-image');
 	var dialog = document.getElementById('profile-image-dialog');
 	if(portrait && !dialog) {
@@ -488,6 +487,11 @@ function root() {
 			});
 		}
 	}
+}
+
+function root() {
+	initHomeWordReveal();
+	initProfileImageDialog();
 
 	[].forEach.call(document.querySelectorAll('#home-menu [data-home-menu-toggle]'), function(button) {
 		if(button.getAttribute('data-home-menu-initialized') == 'true')
@@ -516,8 +520,17 @@ function root() {
 
 	syncHomeMenuConnectors();
 	var homeMenu = document.getElementById('home-menu');
-	if(homeMenu)
-		initHomeMenuMotion(homeMenu);
+	if(homeMenu) {
+		// AJAX inserts the whole tree at once. The first geometry pass changes
+		// connector classes and wrapping, so measure again after layout settles.
+		requestAnimationFrame(function() {
+			syncHomeMenuConnectors();
+			requestAnimationFrame(function() {
+				syncHomeMenuConnectors();
+				initHomeMenuMotion(homeMenu);
+			});
+		});
+	}
 
 	if(!root.homeMenuResizeInitialized) {
 		root.homeMenuResizeInitialized = true;

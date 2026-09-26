@@ -82,6 +82,11 @@
 	box-shadow: 0 5px 20px rgba(22, 45, 67, .22)
 }
 
+#about-me-portrait #profile-image {
+	width: 100%;
+	border-radius: 8px
+}
+
 @media (max-width: 768px) {
 	body:has(#home-menu) #message {
 		height: auto;
