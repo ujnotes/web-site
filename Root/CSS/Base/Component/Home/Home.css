@@ -400,3 +400,73 @@ html.dark-mode #home-menu .home-menu-toggle:focus-visible::before {
 html.dark-mode #home-menu .home-menu-more {
 	color: rgba(105, 205, 235, 0.92)
 }
+
+/* Motion stays inside each tile so the connector geometry never shifts. */
+@media (prefers-reduced-motion: no-preference) {
+	#home-message {
+		animation: home-intro-in 650ms cubic-bezier(.2, .75, .25, 1) both
+	}
+
+	#profile-image-container {
+		animation: home-intro-in 750ms 100ms cubic-bezier(.2, .75, .25, 1) both
+	}
+
+	#home-menu .home-menu-level > .item_block_container > .item_block_image,
+	#home-menu .home-menu-level > .item_block_container > .item_block_text {
+		transition: transform 320ms cubic-bezier(.2, .75, .25, 1),
+			box-shadow 320ms ease, opacity 550ms ease,
+			background-color 300ms ease, border-color 300ms ease !important
+	}
+
+	#home-menu .home-menu-level > .item_block_container:hover > .item_block_image,
+	#home-menu .home-menu-level > .item_block_container:focus-visible > .item_block_image {
+		transform: translateY(-5px) scale(1.025);
+		box-shadow: 0 12px 24px rgba(22, 45, 67, .18)
+	}
+
+	#home-menu .home-menu-level > .item_block_container:hover > .item_block_text,
+	#home-menu .home-menu-level > .item_block_container:focus-visible > .item_block_text {
+		transform: translateY(-5px);
+		box-shadow: 0 12px 24px rgba(22, 45, 67, .12)
+	}
+
+	#home-menu .home-menu-level > .item_block_container:active > .item_block_image,
+	#home-menu .home-menu-level > .item_block_container:active > .item_block_text {
+		transform: translateY(-1px) scale(.985);
+		transition-duration: 120ms !important
+	}
+
+	#home-menu .home-motion-pending:not(.home-motion-visible) > .item_block_image,
+	#home-menu .home-motion-pending:not(.home-motion-visible) > .item_block_text {
+		opacity: 0 !important;
+		transform: translateY(16px)
+	}
+
+	#home-menu .home-motion-pending.home-motion-visible > .item_block_image,
+	#home-menu .home-motion-pending.home-motion-visible > .item_block_text {
+		transition-delay: var(--home-motion-delay, 0ms) !important
+	}
+
+	#home-menu .home-menu-subtree.home-branch-opening:not([hidden]) {
+		animation: home-branch-in 380ms ease-out both
+	}
+}
+
+@keyframes home-intro-in {
+	from { opacity: 0; transform: translateY(18px) }
+	to { opacity: 1; transform: translateY(0) }
+}
+
+@keyframes home-branch-in {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#home-menu .home-motion-pending > .item_block_image,
+	#home-menu .home-motion-pending > .item_block_text {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important
+	}
+}

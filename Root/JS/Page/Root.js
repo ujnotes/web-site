@@ -385,6 +385,33 @@ function syncHomeMenuConnectors() {
 	menu.classList.add('home-menu-ready');
 }
 
+function initHomeMenuMotion(menu) {
+	if(menu.dataset.homeMotionInitialized || !('IntersectionObserver' in window)
+		|| window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+		return;
+	menu.dataset.homeMotionInitialized = 'true';
+
+	var tiles = menu.querySelectorAll('.home-menu-level > .item_block_container');
+	var observer = new IntersectionObserver(function(entries) {
+		entries.forEach(function(entry) {
+			if(!entry.isIntersecting)
+				return;
+			entry.target.classList.add('home-motion-visible');
+			observer.unobserve(entry.target);
+		});
+	}, { rootMargin: '0px 0px 48px 0px', threshold: 0.08 });
+
+	[].forEach.call(tiles, function(tile, index) {
+		// Keep the first screen readable while connector layout is measured.
+		if(tile.getClientRects().length && tile.getBoundingClientRect().top < window.innerHeight + 48)
+			return;
+		tile.style.setProperty('--home-motion-delay', ((index % 5) * 55) + 'ms');
+		tile.classList.add('home-motion-pending');
+		observer.observe(tile);
+	});
+	menu.classList.add('home-motion-enabled');
+}
+
 function root() {
 	var e = document.getElementById('profile-image');
 	if(e) {
@@ -418,12 +445,16 @@ function root() {
 			var glyph = button.querySelector('span');
 			if(glyph)
 				glyph.textContent = expanded ? '+' : '\u2212';
-			target.hidden = expanded;
-			requestAnimationFrame(syncHomeMenuConnectors);
+		target.hidden = expanded;
+		target.classList.toggle('home-branch-opening', !expanded);
+		requestAnimationFrame(syncHomeMenuConnectors);
 		});
 	});
 
 	syncHomeMenuConnectors();
+	var homeMenu = document.getElementById('home-menu');
+	if(homeMenu)
+		initHomeMenuMotion(homeMenu);
 
 	if(!root.homeMenuResizeInitialized) {
 		root.homeMenuResizeInitialized = true;
