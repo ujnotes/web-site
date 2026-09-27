@@ -470,7 +470,7 @@ function initProfileImageDialog() {
 		}
 		var image = document.createElement('img');
 		image.src = portrait.querySelector('img').src;
-		image.alt = hindi ? 'उज्ज्वल सिंह' : 'Ujjwal Singh';
+		image.alt = '';
 		var photo = document.createElement('figure');
 		photo.className = 'profile-image-dialog-photo';
 		var caption = document.createElement('figcaption');
