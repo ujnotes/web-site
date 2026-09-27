@@ -29,3 +29,23 @@ html.dark-mode #footer-image-disclaimer {
 	color: #9a9a9a
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	#footer-wrapper.footer-motion-pending #footer-wrapper-inside {
+		transition: opacity 650ms ease, transform 650ms cubic-bezier(.2, .75, .25, 1)
+	}
+
+	#footer-wrapper.footer-motion-pending #footer-wrapper-divider {
+		transition: opacity 700ms ease, transform 700ms ease-out
+	}
+
+	#footer-wrapper.footer-motion-pending:not(.footer-motion-visible) #footer-wrapper-inside {
+		opacity: 0;
+		transform: translateY(12px)
+	}
+
+	#footer-wrapper.footer-motion-pending:not(.footer-motion-visible) #footer-wrapper-divider {
+		opacity: 0;
+		transform: scaleX(.55)
+	}
+}
+

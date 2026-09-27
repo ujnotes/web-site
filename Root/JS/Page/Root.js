@@ -452,15 +452,38 @@ function initProfileImageDialog() {
 		dialog = document.createElement('dialog');
 		dialog.id = 'profile-image-dialog';
 		dialog.setAttribute('aria-label', hindi ? 'प्रोफ़ाइल चित्र' : 'Profile picture');
+		var headerTitle = document.getElementById('header-title');
+		if(headerTitle) {
+			var slogan = headerTitle.querySelector('#header-slogan-text');
+			var logo = headerTitle.querySelector('#header-logo-image svg');
+			if(slogan && logo) {
+				var brand = document.createElement('div');
+				brand.className = 'profile-image-dialog-brand';
+				var brandSlogan = document.createElement('span');
+				brandSlogan.className = 'profile-image-dialog-slogan';
+				brandSlogan.textContent = slogan.textContent;
+				brandSlogan.style.fontSize = slogan.style.fontSize;
+				brand.appendChild(brandSlogan);
+				brand.appendChild(logo.cloneNode(true));
+				dialog.appendChild(brand);
+			}
+		}
 		var image = document.createElement('img');
 		image.src = portrait.querySelector('img').src;
 		image.alt = hindi ? 'उज्ज्वल सिंह' : 'Ujjwal Singh';
+		var photo = document.createElement('figure');
+		photo.className = 'profile-image-dialog-photo';
+		var caption = document.createElement('figcaption');
+		caption.className = 'profile-image-dialog-name';
+		caption.textContent = 'Ujjwal Singh';
+		photo.appendChild(image);
+		photo.appendChild(caption);
 		var close = document.createElement('button');
 		close.id = 'profile-image-dialog-close';
 		close.type = 'button';
 		close.setAttribute('aria-label', hindi ? 'प्रोफ़ाइल चित्र बंद करें' : 'Close profile picture');
 		close.innerHTML = '&times;';
-		dialog.appendChild(image);
+		dialog.appendChild(photo);
 		dialog.appendChild(close);
 		document.body.appendChild(dialog);
 	}

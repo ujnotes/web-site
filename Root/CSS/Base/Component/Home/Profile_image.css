@@ -30,7 +30,7 @@
 
 #profile-image-dialog {
 	max-width: min(920px, 90vw);
-	max-height: 90vh;
+	max-height: 95vh;
 	padding: 0;
 	border: 0;
 	border-radius: 8px;
@@ -39,23 +39,82 @@
 	overflow: visible
 }
 
+.profile-image-dialog-brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 70px;
+	padding: 8px 24px;
+	border-radius: 8px 8px 0 0;
+	background: #fff
+}
+
+.profile-image-dialog-slogan {
+	color: #a9a9a9;
+	white-space: nowrap
+}
+
+.profile-image-dialog-brand svg {
+	display: block;
+	width: 144px;
+	height: 50px
+}
+
+html.dark-mode .profile-image-dialog-brand {
+	background: #1a1a2e
+}
+
+html.dark-mode .profile-image-dialog-brand svg path {
+	fill: #888
+}
+
 #profile-image-dialog::backdrop {
 	background: rgba(15, 25, 32, .58);
 	backdrop-filter: blur(9px)
 }
 
-#profile-image-dialog > img {
+.profile-image-dialog-photo {
+	position: relative;
+	margin: 0
+}
+
+.profile-image-dialog-photo > img {
 	display: block;
 	max-width: 90vw;
-	max-height: 90vh;
+	max-height: calc(95vh - 86px);
 	width: auto;
 	height: auto;
-	border-radius: 8px
+	border-radius: 0 0 8px 8px
+}
+
+.profile-image-dialog-photo::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 90px;
+	border-radius: 0 0 8px 8px;
+	background: linear-gradient(transparent, rgba(0, 0, 0, .32));
+	content: '';
+	pointer-events: none
+}
+
+.profile-image-dialog-name {
+	position: absolute;
+	z-index: 1;
+	bottom: 16px;
+	left: 18px;
+	color: #56b4d1;
+	font-size: clamp(18px, 2.6vw, 26px);
+	font-weight: 600;
+	letter-spacing: .02em;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, .85), 0 0 10px rgba(86, 180, 209, .75)
 }
 
 #profile-image-dialog-close {
 	position: absolute;
-	top: 8px;
+	top: 94px;
 	right: 8px;
 	width: 40px;
 	height: 40px;
