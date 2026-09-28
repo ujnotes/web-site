@@ -104,12 +104,12 @@ html.dark-mode .profile-image-dialog-brand svg path {
 	position: absolute;
 	z-index: 1;
 	bottom: 16px;
-	left: 18px;
+	right: 18px;
 	color: #56b4d1;
 	font-size: clamp(18px, 2.6vw, 26px);
 	font-weight: 600;
 	letter-spacing: .02em;
-	text-shadow: 0 1px 5px rgba(0, 0, 0, .85), 0 0 10px rgba(86, 180, 209, .75)
+	text-shadow: 0 1px 2px rgb(102 99 190 / 85%), 0 0 5px rgba(86, 180, 209, .75);
 }
 
 #profile-image-dialog-close {
