@@ -28,6 +28,10 @@
 				<?php echo htmlspecialchars(getUITranslation('footer_image_credits_link', $lang)); ?>
 			</span>
 		</div>
+		<div class='footer-content footer-note' id='footer-site-disclaimer'>
+			<span class='footer-note-label'><strong><?php echo htmlspecialchars(getUITranslation('footer_disclaimer_label', $lang)); ?>:</strong></span>
+			<span class='footer-note-body'><?php echo htmlspecialchars(getUITranslation('footer_disclaimer_body', $lang)); ?></span>
+		</div>
 		<div class='footer-content' id='footer-rights'>
 			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>

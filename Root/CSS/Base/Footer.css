@@ -4,7 +4,8 @@
 	margin-top: 15px;
 }
 
-#footer-image-disclaimer {
+#footer-image-disclaimer,
+.footer-note {
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
@@ -17,16 +18,23 @@
 	line-height: 1.45;
 }
 
-.footer-image-disclaimer-label {
+.footer-image-disclaimer-label,
+.footer-note-label {
 	flex-shrink: 0;
 }
 
-.footer-image-disclaimer-body {
+.footer-image-disclaimer-body,
+.footer-note-body {
 	text-align: left;
 }
 
-html.dark-mode #footer-image-disclaimer {
+html.dark-mode #footer-image-disclaimer,
+html.dark-mode .footer-note {
 	color: #9a9a9a
+}
+
+#footer-site-disclaimer {
+	margin-top: 8px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
