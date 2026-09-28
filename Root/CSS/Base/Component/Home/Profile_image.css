@@ -148,8 +148,7 @@ html.dark-mode .profile-image-dialog-brand svg path {
 
 @media (max-width: 768px) {
 	body:has(#home-menu) #message {
-		height: auto;
-		min-height: 400px
+		height: auto
 	}
 
 	body:has(#home-menu) #message > div {

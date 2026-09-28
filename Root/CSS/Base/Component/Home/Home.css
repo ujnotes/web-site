@@ -81,7 +81,9 @@ body:has(#home-menu) #message > div {
 body:has(#home-menu) #home-message {
 	float: none;
 	flex: 1 1 auto;
-	min-width: 0
+	box-sizing: border-box;
+	min-width: 0;
+	max-width: 450px
 }
 
 html.dark-mode body:has(#home-menu) #message {
@@ -101,7 +103,7 @@ html.dark-mode body:has(#home-menu) #message::before {
 #home-menu {
 	--home-glyph-size: 18px;
 	--home-glyph-disc-size: 24px;
-	--home-glyph-hit-size: 32px;
+	--home-glyph-hit-size: 44px;
 	--home-glyph-left: 10px;
 	--home-tile-width: 160px;
 	--home-tile-margin: 5px;
