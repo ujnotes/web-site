@@ -16,14 +16,14 @@
 				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><div class='image'><?php includeSVG('', 'YouTube'); ?></div></a>
 			</div>
 		</div>
-		<div class='footer-content' id='footer-image-disclaimer'>
+		<div class='footer-content footer-note' id='footer-image-disclaimer'>
 			<?php
 			if (!function_exists('getUITranslation'))
 				require_once __DIR__.'/UITranslation.php';
 			$lang = $lang ?? 'en';
 			?>
-			<span class='footer-image-disclaimer-label'><strong><?php echo htmlspecialchars(getUITranslation('footer_image_credits_label', $lang)); ?>:</strong></span>
-			<span class='footer-image-disclaimer-body'>
+			<span class='footer-note-label'><strong><?php echo htmlspecialchars(getUITranslation('footer_image_credits_label', $lang)); ?>:</strong></span>
+			<span class='footer-note-body'>
 				<?php echo htmlspecialchars(getUITranslation('footer_image_credits_body', $lang)); ?>
 				<?php echo htmlspecialchars(getUITranslation('footer_image_credits_link', $lang)); ?>
 			</span>
