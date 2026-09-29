@@ -1121,7 +1121,7 @@ published	technology/telecommunications/dial_up	Dial-Up Internet	Dial-Up Interne
 published	technology/telecommunications/modem	Modem	Modem	0	How a modulator and demodulator convert digital data into signals suitable for a communication channel.	article
 published	technology/telecommunications/fax	Fax	Fax	0	How scanned documents are converted into signals and reproduced at a distant machine.	article
 published	technology/telecommunications/telephone_network	Telephone Networks	Telephone Networks	0	How switching, signaling and subscriber lines connect voice calls and data services.	article
-published	technology/telecommunications	Telecommunications	Telecommunications	0	How information travels across distance through wired, wireless and optical communication systems.	article
+published	technology/telecommunications	Telecom	Telecommunications	0	How information travels across distance through wired, wireless and optical communication systems.	article
 published	technology/computer/graphics_card/compute_shader	Compute Shaders	Compute Shaders	0	General-purpose GPU programs that use graphics hardware without producing traditional pixels.	article
 published	technology/computer/graphics_card/rendering_pipeline	Rendering Pipeline	Rendering Pipeline	0	The ordered stages that transform scene data into an image on a display.	article
 published	technology/computer/graphics_card/rasterization	Rasterization	Rasterization	0	How geometric primitives become fragments and pixels in a real-time rendering pipeline.	article
@@ -1163,9 +1163,9 @@ published	technology/electronics/lc_oscillation	LC Oscillation	LC Oscillation	0	
 published	technology/electronics/transistors	Transistors	Transistors	0	How a small semiconductor device controls current and became the foundation of modern electronics.	article
 published	technology/electronics/valves	Electronic Valves	Electronic Valves	0	How vacuum tubes controlled electrons and enabled the first electronic amplifiers, computers and radios.	article
 published	technology/radio	Radio	Radio	0	How electromagnetic waves carry information through space and how radios create, receive and interpret them.	article
-published	technology/power_electronics	Power Electronics	Power Electronics	0	How semiconductor circuits convert and control electrical power efficiently.	article
+published	technology/power_electronics	Power Elec.	Power Electronics	0	How semiconductor circuits convert and control electrical power efficiently.	article
 published	technology/electronics	Electronics	Electronics	0	How circuits control electrons and signals to sense, compute, communicate and create.	article
-published	technology/information_technology	Information Technology	Information Technology	0	How information technology became a powerful human tool, why it matters, and how it may shape the future.	article
+published	technology/information_technology	Info Tech	Information Technology	0	How information technology became a powerful human tool, why it matters, and how it may shape the future.	article
 published	science/physics/electrical/inductance	Inductance	Inductance	0	How changing current induces opposing voltage, stores energy in magnetic fields, and shapes electrical circuits.	article
 published	technology/electronics/inductor	Inductors	Inductors	0	How coils store energy in magnetic fields to resist current changes, filter signals and manage power.	article
 published	technology/computer/artificial_intelligence/machine_learning/models/llm/cache_handling	LLM Cache Handling	LLM Cache Handling	0	How prompt caching, KV cache management, and context stability reduce latency, save tokens, and improve language model systems.	article
