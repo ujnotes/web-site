@@ -1204,5 +1204,5 @@ published	technology/computer/issues/usb_wifi_soft_hang	USB Wi-Fi soft hang	USB 
 published	technology/computer/issues/usb_wifi_soft_hang/nix	*nix	USB Wi-Fi soft hang on *nix	0	*nix notes for the USB Wi-Fi soft hang under load on older EHCI hosts.	article
 published	technology/computer/issues/usb_wifi_soft_hang/nix/omarchy	Omarchy	USB Wi-Fi soft hang under load on Omarchy (rtw88 + older EHCI)	0	USB Wi-Fi soft hang on older AMD EHCI under heavy load: symptoms, dead ends, and rtw88 mitigations	article
 published	technology/computer/os/omarchy	Omarchy	Omarchy	0	Generic notes on running local AI and reaching Windows Caddy *.local sites from an Omarchy (Arch) box.	article
-draft	policy	Privacy Policy	Privacy Policy	0	How Ujnotes handles visitor information and third-party services	page
-draft	terms	Terms of Use	Terms of Use	0	Terms for using Ujnotes content and website features	page
+published	policy	Privacy Policy	Privacy Policy	0	How Ujnotes handles visitor information and third-party services	page
+published	terms	Terms of Use	Terms of Use	0	Terms for using Ujnotes content and website features	page
