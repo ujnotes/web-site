@@ -24,8 +24,15 @@
 		require '../JS/Fragment/GA_track.js';
 		// require '../JS/Fragment/Adsense_auto.php';
 ?>
-		<script <?php require '../JS/Fragment/Sentry_version.php' ?>></script>
-		<script><?php require '../JS/Fragment/Sentry_exec.php' ?></script>
+		<script>
+		function initSentry() {
+			if (window.__sentry_initialized || typeof Sentry === 'undefined') return;
+			window.__sentry_initialized = true;
+			<?php require '../JS/Fragment/Sentry_exec.php'; ?>
+		}
+		document.addEventListener('DOMContentLoaded', initSentry);
+		</script>
+		<script defer <?php require '../JS/Fragment/Sentry_version.php' ?> onload="initSentry()"></script>
 		<script src='//apis.google.com/js/platform.js' async defer></script>
 		<script src='//platform.twitter.com/widgets.js' async></script>
 <?php	}
