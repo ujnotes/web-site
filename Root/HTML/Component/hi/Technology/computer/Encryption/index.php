@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='पढ़ने योग्य सन्देश कूटपाठ में बदलता है; सही कुंजी से उसका प्राप्तकर्ता मूल सन्देश पढ़ सकता है।'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='सीज़र सिफर का उदाहरण: हर अक्षर तीन स्थान आगे बढ़ता है और HELLO से KHOOR बनता है।'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>एन्क्रिप्शन क्या है?</h3>
 	<p>

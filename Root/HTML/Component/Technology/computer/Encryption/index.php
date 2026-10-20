@@ -1,5 +1,5 @@
 <div id='message'>
-		<?php $alt='A readable message becomes ciphertext; the correct key allows its recipient to recover it.'; require('../HTML/Fragment/Component_cover.php') ?>
+		<?php $alt='Caesar cipher example: shift each letter by three places so HELLO becomes KHOOR.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 	<h3>What is encryption?</h3>
 	<p>
