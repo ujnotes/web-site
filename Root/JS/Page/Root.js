@@ -416,7 +416,14 @@ function initHomeWordReveal() {
 	var message = document.getElementById('home-message');
 	if(!message || message.dataset.wordsInitialized || window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 		return;
+	try {
+		if(localStorage.getItem('ujnotes-home-intro-seen'))
+			return;
+	} catch(e) {}
 	message.dataset.wordsInitialized = 'true';
+	try {
+		localStorage.setItem('ujnotes-home-intro-seen', 'true');
+	} catch(e) {}
 	var wordIndex = 0;
 	var walker = document.createTreeWalker(message, NodeFilter.SHOW_TEXT);
 	var nodes = [];
