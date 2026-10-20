@@ -2,6 +2,8 @@
 
 This guide defines the visual language for Ujnotes article images.
 
+The photographic guidance below is the default for editorial covers. Explicitly requested explanatory SVG covers and inline diagrams may use labels and diagram layouts. Follow `Website/.cursor/skills/ujnotes-svg-graphics/SKILL.md` for styling, theme handling, asset registration, and verification.
+
 An article image should express the central idea in one clear visual metaphor. It should create curiosity without trying to summarise every section of the article.
 
 ## Core style
