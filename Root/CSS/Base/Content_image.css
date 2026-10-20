@@ -1,8 +1,10 @@
-html.dark-mode .content-image object {
+html.dark-mode .content-image object,
+html.dark-mode .cover-image img {
 	color-scheme: dark
 }
 
-html:not(.dark-mode) .content-image object {
+html:not(.dark-mode) .content-image object,
+html:not(.dark-mode) .cover-image img {
 	color-scheme: light
 }
 

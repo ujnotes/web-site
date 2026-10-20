@@ -28,6 +28,7 @@ Article assets are either a full-width **hero** or a **tile** (listing thumbnail
 - Photographic 16:9 covers are heroes. They fill listing tiles with `object-fit: cover`.
 - Logos and marks are tiles. They never expand into the hero well; the article shows them at tile size with `object-fit: contain`.
 - SVG covers default to tile without a config row.
+- For a theme-aware SVG hero, add a `hero` row to `config/Image_display.tsv`, keep palettes inside the SVG's `prefers-color-scheme` media query, and pass the selected page theme to `.cover-image img` through CSS `color-scheme`. Register the SVG route in `Url.tsv`; retain a JPG fallback where required. Verify the actual page toggle, since an SVG displayed as an image cannot read the parent document's CSS classes.
 - Raster logos and any crop/fit exception are recorded in `config/Image_display.tsv` (`slug`, `role`, `tile_fit`, `tile_position`). Leave a field blank to keep the default. Do not put this in `Image_credits.csv` or `Url.tsv`.
 
 ## Light and colour
