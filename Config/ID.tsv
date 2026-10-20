@@ -1044,7 +1044,7 @@ published	technology/computer/game/doom/2016/demo/issue/vulkan_crash	Vulkan cras
 published	technology/computer/cap_theorem	CAP Theorem	CAP Theorem — Consistency, Availability, and Partition	0	CAP: a distributed system cannot simultaneously provide consistency, availability, and partition tolerance.	article
 published	technology/computer/design	Design	Design	0	Working notes on Design: SOLID.	article
 published	technology/computer/design/solid	SOLID	SOLID	0	SOLID object-oriented design: SRP, OCP, LSP, ISP, DIP — maintainability, reuse, scale, flexibility.	article
-draft	technology/computer/digital_certificate	Digital Certificate	Digital Certificate	0	How digital certificates bind identities to public keys, how trust chains work, and what signatures can verify.	article
+published	technology/computer/digital_certificate	Digital Certificate	Digital Certificate	0	How digital certificates bind identities to public keys, how trust chains work, and what signatures can verify.	article
 published	technology/computer/digital_certificate/structure	Structure	Structure	0	Digital certificate layout: Version 1, extensions including SANs, critical extensions, and properties.	article
 published	technology/computer/email	Email	Email	0	Working notes on Email: Free.	article
 published	technology/computer/email/free	Free	Free	0	Free Gmail custom-domain routing: five domains, verified recipients only; CC raises the domain cap.	article
