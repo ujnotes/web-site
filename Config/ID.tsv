@@ -1208,3 +1208,6 @@ published	technology/computer/os/omarchy	Omarchy	Omarchy	0	Generic notes on runn
 published	policy	Privacy Policy	Privacy Policy	0	How Ujnotes handles visitor information and third-party services	page
 published	terms	Terms of Use	Terms of Use	0	Terms for using Ujnotes content and website features	page
 published	technology/computer/encryption	Encryption	Encryption	0	How encryption protects information, how symmetric and asymmetric keys differ, and how signatures and certificates fit in.	article
+published	science/measurement/accuracy_and_precision	Accuracy and Precision	Accuracy, Precision and Tolerance	0	Closeness to a reference, consistency of results, and acceptable limits—explained through cutting 5 cm metal pieces.	article
+published	science/measurement/significant_figures	Significant Figures	Significant Figures and Rounding	0	How significant digits, decimal places, exact conversions and uncertainty determine the appropriate way to report a measurement.	article
+published	science/measurement	Measurement	Measurement, Resolution and Uncertainty	0	How to define a quantity, choose a measuring method, understand error and uncertainty, and report a useful result.	article
