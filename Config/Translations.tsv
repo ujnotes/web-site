@@ -86,3 +86,6 @@ technology/computer/digital_certificate	published	published
 science/measurement/accuracy_and_precision	published
 science/measurement/significant_figures	published
 science/measurement	published
+science/measurement/error/random_error	published
+science/measurement/error/systematic_error	published
+science/measurement/error	published

@@ -64,7 +64,7 @@
 		For an ordinary object, the exact true value is generally unknown. We cannot find its exact measurement error merely by looking at the display.
 	</p>
 	<p>
-		Error can include <strong>systematic</strong> and <strong>random</strong> components. Their differences, and the distinction between an error and a mistake, are explained in <a class="content-link" href="https://jcgm.bipm.org/vim/en/2.16.html" target="_blank" rel="noopener noreferrer">Measurement error (VIM)</a>.
+		Error can include <strong>systematic</strong> and <strong>random</strong> components. Their differences, and the distinction between an error and a mistake, are explained in <a class="content-link XURL" href="/science/measurement/error" data-target="science/measurement/error" data-title="Measurement Error">Measurement Error</a>.
 	</p>
 	<h3>What is measurement uncertainty?</h3>
 	<p>
@@ -121,7 +121,7 @@
 	</p>
 	<h3>Explore measurement</h3>
 	<ul class="list-bullet content-list">
-		<li><div><a class="content-link" href="https://jcgm.bipm.org/vim/en/2.16.html" target="_blank" rel="noopener noreferrer">Measurement error (VIM)</a>: errors, their components and common mistakes.</div></li>
+		<li><div><a class="content-link XURL" href="/science/measurement/error" data-target="science/measurement/error" data-title="Measurement Error">Measurement Error</a>: errors, their components and common mistakes.</div></li>
 		<li><div><a class="content-link XURL" href="/science/measurement/accuracy_and_precision" data-target="science/measurement/accuracy_and_precision" data-title="Accuracy and Precision">Accuracy and Precision</a>: closeness, consistency and tolerance.</div></li>
 		<li><div><a class="content-link XURL" href="/science/measurement/significant_figures" data-target="science/measurement/significant_figures" data-title="Significant Figures">Significant Figures</a>: reporting digits and rounding.</div></li>
 	</ul>

@@ -603,4 +603,16 @@
 	<loc>https://ujnotes.com/science/measurement</loc>
 </url>
 
+<url>
+	<loc>https://ujnotes.com/science/measurement/error/random_error</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/measurement/error/systematic_error</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/science/measurement/error</loc>
+</url>
+
 </urlset>
