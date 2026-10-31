@@ -1,14 +1,14 @@
 <div id='message'>
 		<p>
-		AI model pricing is the cost of sending input to a model and receiving its output. Use the comparison below to estimate a workload across selected Google, OpenAI and Anthropic APIs.
-	</p>
-	<p>
-		Change the number of requests, input tokens, billable output tokens and service tier. Search or filter the models, then sort by price or estimated total. The comparison separates current, retired and to-be-released models.
-	</p>
-	<p>
 		Prices are provided for reference and guidance only and may be out of date. Check the original provider’s official pricing for current rates and billing terms.
 	</p>
 <section lang="en" class="frontend-component no-auto-cover" data-component="model-pricing" data-source="/resource/data/model-pricing.json" data-component-script="/resource/components/model-pricing.js" data-component-style="/resource/components/model-pricing.css"><p data-component-status role="status">Loading interactive comparison…</p><noscript><p>Enable JavaScript to use this interactive comparison.</p></noscript></section>
+	<p>
+		Compare selected Google, OpenAI, Anthropic and xAI APIs in the table and chart. Click a current model row or a chart bar to select it in the calculator. Provider tags can be combined to filter the comparison.
+	</p>
+	<p>
+		Suggested uses are editorial starting points based on the linked model guides. Test the model on your own workload before choosing it.
+	</p>
 	<h3>How is the estimate calculated?</h3>
 	<p>
 		Prices are in US dollars per one million tokens. For a simple uncached workload:
@@ -21,7 +21,7 @@
 		The estimate date selects a published rate for that date, including scheduled price changes recorded in the data. It is not a prediction of future availability or unannounced prices. Batch estimates use the model's own published batch rates.
 	</p>
 	<p>
-		Choose a display currency for prices and estimates. For currencies other than USD, enter the amount of your chosen currency equal to 1 USD. This exchange rate is your assumption; bank conversion fees and tax are excluded.
+		Non-USD prices use the latest available daily reference exchange rate from <a class="content-link" href="https://frankfurter.dev/" target="_blank" rel="noopener noreferrer">Frankfurter</a>. The rate source and date are shown, and you can enter a manual override. The exchange rate is separate from the model-price estimate date. Bank conversion fees and tax are excluded.
 	</p>
 	<h3>What should I check before choosing a model?</h3>
 	<p>

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated_on": "2026-10-31",
-  "coverage": "Selected first-party text-generation API models from Google, OpenAI and Anthropic; not an exhaustive model catalogue.",
+  "coverage": "Selected first-party text-generation API models from Google, OpenAI, Anthropic and xAI; not an exhaustive model catalogue.",
   "status_values": [
     "retired",
     "current",
@@ -12,16 +12,18 @@
     "base": "USD",
     "quote": "INR",
     "rate": null,
-    "source_url": null,
+    "source_url": "https://frankfurter.dev/",
     "checked_on": null,
-    "notes": "User-entered estimate until a sourced and dated rate is supplied."
+    "notes": "Latest daily reference rates are fetched in the browser; the rate date is shown. A user-entered override is an assumption.",
+    "provider": "Frankfurter"
   },
   "workload": {
     "requests": 10000,
     "input_tokens_per_request": 1000,
     "output_tokens_per_request": 200,
     "service_tier": "standard",
-    "notes": "Equal token counts illustrate arithmetic, not equal model tokenisation or quality. Billable reasoning, caching, tools, taxes and retries need separate accounting."
+    "notes": "Equal token counts illustrate arithmetic, not equal model tokenisation or quality. Billable reasoning, caching, tools, taxes and retries need separate accounting.",
+    "model_id": "gemini-3.5-flash-lite"
   },
   "models": [
     {
@@ -51,7 +53,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "High-volume extraction, classification and translation.",
+        "hi": "अधिक मात्रा में जानकारी निकालना, वर्गीकरण और अनुवाद।"
+      },
+      "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gemini-3.8-flash",
@@ -103,7 +111,13 @@
           "effective_until": null,
           "service_tier": "batch"
         }
-      ]
+      ],
+      "usage_fit": {
+        "en": "Coding and multi-step agent workflows.",
+        "hi": "कोडिंग और कई चरणों वाले एजेंट कार्य।"
+      },
+      "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gemini-4-argon",
@@ -155,7 +169,13 @@
           "effective_until": null,
           "service_tier": "batch"
         }
-      ]
+      ],
+      "usage_fit": {
+        "en": "Difficult reasoning, scientific problems and complex coding.",
+        "hi": "कठिन तर्क, वैज्ञानिक समस्याएँ और जटिल कोडिंग।"
+      },
+      "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gpt-6-luna",
@@ -184,7 +204,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Triage, focused tasks and frequent automations.",
+        "hi": "प्राथमिक छँटाई, सीमित कार्य और नियमित स्वचालन।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gpt-6.1-terra",
@@ -213,7 +239,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Visual reasoning, computer use and concise writing.",
+        "hi": "दृश्य तर्क, कंप्यूटर का उपयोग और संक्षिप्त लेखन।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gpt-6.1-sol",
@@ -242,7 +274,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Complex coding and analysis with attention to time and cost.",
+        "hi": "समय और लागत ध्यान में रखकर जटिल कोडिंग और विश्लेषण।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gpt-6-astra",
@@ -271,7 +309,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Ambiguous problems, deep analysis and demanding deliverables.",
+        "hi": "अस्पष्ट समस्याएँ, गहरा विश्लेषण और कठिन कार्य-परिणाम।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "claude-haiku-5-5",
@@ -325,7 +369,13 @@
             "effective_until": null
           }
         }
-      ]
+      ],
+      "usage_fit": {
+        "en": "Fast classification, extraction and request routing.",
+        "hi": "तेज़ वर्गीकरण, जानकारी निकालना और अनुरोधों की रूटिंग।"
+      },
+      "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "claude-sonnet-5-5",
@@ -354,7 +404,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Everyday coding and reasoning where response speed matters.",
+        "hi": "सामान्य कोडिंग और तर्क, जहाँ उत्तर की गति महत्त्वपूर्ण हो।"
+      },
+      "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "claude-opus-5-5",
@@ -383,7 +439,13 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Long-running coding agents and knowledge work.",
+        "hi": "लंबे समय तक चलने वाले कोडिंग एजेंट और ज्ञान-आधारित काम।"
+      },
+      "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "claude-fable-5-1",
@@ -412,7 +474,73 @@
         "effective_from": null,
         "effective_until": null
       },
-      "scheduled_prices": []
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Demanding reasoning and long-horizon agent tasks.",
+        "hi": "कठिन तर्क और लंबे लक्ष्य वाले एजेंट कार्य।"
+      },
+      "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
+      "usage_checked_on": "2026-10-31"
+    },
+    {
+      "id": "grok-4.7",
+      "provider": "xai",
+      "name": "Grok 4.7",
+      "status": "current",
+      "availability": "First-party xAI API; check account access and model limits.",
+      "scope": "Short prompts below 200,000 input tokens; tool calls billed separately.",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 6,
+        "source_url": "https://docs.x.ai/developers/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1.6,
+        "output": 4.8,
+        "source_url": "https://docs.x.ai/developers/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": [],
+      "context_tiers": [
+        {
+          "prompt_tokens_min_inclusive": 200000,
+          "standard": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 4,
+            "output": 12,
+            "source_url": "https://docs.x.ai/developers/pricing",
+            "checked_on": "2026-10-31",
+            "effective_from": null,
+            "effective_until": null
+          },
+          "batch": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 3.2,
+            "output": 9.6,
+            "source_url": "https://docs.x.ai/developers/pricing",
+            "checked_on": "2026-10-31",
+            "effective_from": null,
+            "effective_until": null
+          }
+        }
+      ],
+      "usage_fit": {
+        "en": "Coding, tool-using agents and knowledge work.",
+        "hi": "कोडिंग, टूल इस्तेमाल करने वाले एजेंट और ज्ञान-आधारित काम।"
+      },
+      "usage_source_url": "https://docs.x.ai/developers/models/grok-4.7",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gemini-1.5-flash",
@@ -425,7 +553,13 @@
       "standard": null,
       "batch": null,
       "historical_prices": [],
-      "notes": "Historical price not independently verified in this edition; excluded from active estimates."
+      "notes": "Historical price not independently verified in this edition; excluded from active estimates.",
+      "usage_fit": {
+        "en": "Historical reference only; use a supported model for new projects.",
+        "hi": "केवल पुराने काम के संदर्भ के लिए; नए प्रोजेक्ट में समर्थित मॉडल चुनें।"
+      },
+      "usage_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
+      "usage_checked_on": "2026-10-31"
     },
     {
       "id": "gemini-1.5-pro",
@@ -438,7 +572,13 @@
       "standard": null,
       "batch": null,
       "historical_prices": [],
-      "notes": "Historical price not independently verified in this edition; excluded from active estimates."
+      "notes": "Historical price not independently verified in this edition; excluded from active estimates.",
+      "usage_fit": {
+        "en": "Historical reference only; use a supported model for new projects.",
+        "hi": "केवल पुराने काम के संदर्भ के लिए; नए प्रोजेक्ट में समर्थित मॉडल चुनें।"
+      },
+      "usage_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
+      "usage_checked_on": "2026-10-31"
     }
   ]
 }
