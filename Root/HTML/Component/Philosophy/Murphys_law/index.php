@@ -1,6 +1,7 @@
 <div id='message'>
 		<?php $alt='A house key kept in a jeans pocket, illustrating the habit of removing an opportunity for error. AI-generated illustration.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
+	<style>#title-container{min-width:0}#title{white-space:normal}</style>
 	<p>
 		Before starting an ordinary task, there is one question worth asking:
 	</p>

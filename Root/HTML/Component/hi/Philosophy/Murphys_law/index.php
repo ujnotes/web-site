@@ -1,6 +1,7 @@
 <div id='message'>
 		<?php $alt='जीन्स की जेब में रखी घर की चाबी—गलती का मौका हटाने की आदत का प्रतीक। एआई से निर्मित चित्र।'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
+	<style>#title-container{min-width:0}#title{white-space:normal}</style>
 	<p>
 		कोई साधारण-सा काम शुरू करने से पहले एक सवाल पूछना चाहिए:
 	</p>

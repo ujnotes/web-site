@@ -31,3 +31,9 @@ The homepage tree specification applies recursively to every branch and takes pr
 ## Resource → URL list
 
 **Resource → URL list:** When you add a file under `root/Resource/` that must appear in production (covers, logos, static images), also add a matching row to the site’s bake URL list (`Config/Url.tsv` / `URL.tsv`, and `Url_<lang>.tsv` when language-specific). Empty Path + Name + Extension → public `/{name}.{ext}` (usual for covers like `faq.svg`). Path `resource/` → public `/resource/{name}.{ext}`. Live PHP may work from Resource alone; baked Firebase/`web-public` only gets assets Tiggu fetches from that list. Do not hand-edit `interim/`/`public/`/`web-public` for new assets—update Resource + Url list, then bake and publish.
+
+
+## Narrow-screen article title verification
+
+- Check new long-titled articles and each translation at a 390px viewport. A short existing title does not exercise the title-container minimum-size behavior. Verify document.documentElement.scrollWidth does not exceed innerWidth.
+- The flex title container can expand the surrounding grid when its minimum width remains auto. Preserve a required article-specific rendering adjustment in Notion so a later publication retains it; keep ordinary article prose in native blocks.
