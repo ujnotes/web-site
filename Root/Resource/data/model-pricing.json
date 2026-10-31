@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated_on": "2026-10-31",
-  "coverage": "Selected first-party text-generation API models from Google, OpenAI, Anthropic and xAI; not an exhaustive model catalogue.",
+  "coverage": "Selected first-party and third-party text-generation API offerings; prices depend on the selling provider and route.",
   "status_values": [
     "retired",
     "current",
@@ -281,6 +281,33 @@
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
       "usage_checked_on": "2026-10-31"
+    },
+    {
+      "id": "gpt-6.1-sol@openrouter-azure-eu",
+      "provider": "openrouter",
+      "name": "GPT-6.1 Sol",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Azure EU in-region routing via OpenRouter; Business or Enterprise required.",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2.2,
+        "output": 11,
+        "source_url": "https://openrouter.ai/openai/gpt-6.1-sol",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": null,
+      "scheduled_prices": [],
+      "usage_fit": {
+        "en": "Complex coding and analysis with attention to time and cost.",
+        "hi": "समय और लागत ध्यान में रखकर जटिल कोडिंग और विश्लेषण।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
+      "usage_checked_on": "2026-10-31",
+      "model_id": "gpt-6.1-sol"
     },
     {
       "id": "gpt-6-astra",

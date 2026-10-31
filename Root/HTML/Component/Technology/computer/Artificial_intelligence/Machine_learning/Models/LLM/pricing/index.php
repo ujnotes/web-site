@@ -4,7 +4,7 @@
 	</p>
 <section lang="en" class="frontend-component no-auto-cover" data-component="model-pricing" data-source="/resource/data/model-pricing.json" data-component-script="/resource/components/model-pricing.js" data-component-style="/resource/components/model-pricing.css"><p data-component-status role="status">Loading interactive comparison…</p><noscript><p>Enable JavaScript to use this interactive comparison.</p></noscript></section>
 	<p>
-		Compare selected Google, OpenAI, Anthropic and xAI APIs in the table and chart. Click a current model row or a chart bar to select it in the calculator. Provider tags can be combined to filter the comparison.
+		Compare selected model offerings in the table and chart. The same model can have different prices through different providers or routes. Click a current row or chart bar to select that offering in the calculator. Provider tags can be combined to filter the comparison.
 	</p>
 	<p>
 		Suggested uses are editorial starting points based on the linked model guides. Test the model on your own workload before choosing it.

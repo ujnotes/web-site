@@ -4,7 +4,7 @@
 	</p>
 <section lang="hi" class="frontend-component no-auto-cover" data-component="model-pricing" data-source="/resource/data/model-pricing.json" data-component-script="/resource/components/model-pricing.js" data-component-style="/resource/components/model-pricing.css"><p data-component-status role="status">तुलना लोड हो रही है…</p><noscript><p>इस तुलना उपकरण का उपयोग करने के लिए JavaScript चालू करें।</p></noscript></section>
 	<p>
-		तालिका और चार्ट में Google, OpenAI, Anthropic और xAI के चुनिंदा एपीआई की तुलना करें। किसी वर्तमान मॉडल की पंक्ति या चार्ट के बार पर क्लिक करके उसे कैलकुलेटर में चुनें। कई प्रदाताओं के टैग साथ चुनकर तुलना फ़िल्टर कर सकते हैं।
+		तालिका और चार्ट में चुनिंदा मॉडल सेवाओं की तुलना करें। एक ही मॉडल की कीमत अलग प्रदाताओं या रास्तों पर अलग हो सकती है। किसी वर्तमान पंक्ति या चार्ट के बार पर क्लिक करके वह सेवा कैलकुलेटर में चुनें। कई प्रदाताओं के टैग साथ चुनकर तुलना फ़िल्टर कर सकते हैं।
 	</p>
 	<p>
 		सुझाए गए उपयोग, जुड़े हुए मॉडल विवरणों पर आधारित संपादकीय सुझाव हैं। मॉडल चुनने से पहले उसे अपने काम पर आज़माएँ।

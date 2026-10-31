@@ -109,7 +109,7 @@
             var formatter = new Intl.NumberFormat(hi ? 'hi-IN' : 'en-IN', {style: 'currency', currency: currency.value, maximumFractionDigits: 6});
             return amount > 0 && amount < 0.000001 ? '<' + formatter.format(0.000001) : formatter.format(amount);
         }
-        var providerName = function (name) { return name === 'openai' ? 'OpenAI' : name === 'xai' ? 'xAI' : name.charAt(0).toUpperCase() + name.slice(1); };
+        var providerName = function (name) { return name === 'openai' ? 'OpenAI' : name === 'xai' ? 'xAI' : name === 'openrouter' ? 'OpenRouter' : name.charAt(0).toUpperCase() + name.slice(1); };
         var displayDate = function (value) { return value ? new Intl.DateTimeFormat(hi ? 'hi-IN' : 'en-GB', {day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}).format(new Date(value)) : t('Not announced', 'घोषित नहीं'); };
         function el(tag, text, className) {
             var node = document.createElement(tag);
@@ -128,7 +128,7 @@
         download.setAttribute('download', 'model-pricing.json'); top.append(heading, download); root.append(top);
         var form = el('form', undefined, 'mp-controls');
         form.addEventListener('submit', function (event) { event.preventDefault(); }, {signal: context.signal});
-        var modelSelect = select(t('Calculator model', 'कैलकुलेटर का मॉडल'), data.models.filter(function (model) { return model.status === 'current'; }).map(function (model) { return [model.id, model.name]; }));
+        var modelSelect = select(t('Calculator model', 'कैलकुलेटर का मॉडल'), data.models.filter(function (model) { return model.status === 'current'; }).map(function (model) { return [model.id, model.name + ' — ' + providerName(model.provider)]; }));
         if (data.workload?.model_id && data.models.some(function (m) { return m.id === data.workload.model_id && m.status === 'current'; })) modelSelect.value = data.workload.model_id;
         function field(label, type, value, options) {
             var wrapper = el('label', undefined, 'mp-field'); wrapper.append(el('span', label));
@@ -226,7 +226,9 @@
         metric.addEventListener('change', function () { render(); }, {signal: context.signal});
         var calculator = el('section', undefined, 'mp-calculator');
         calculator.append(el('h3', t('Cost calculator', 'लागत कैलकुलेटर')), el('p', t('Select a model in the table or chart, then adjust the token budget below.', 'तालिका या चार्ट में मॉडल चुनें, फिर नीचे टोकन बजट बदलें.'), 'mp-note'), form, summary);
-        root.replaceChildren(top, toolbar, fxNote, filters, feedback, sections, unitNote, chart, calculator);
+        var tableArea = el('div', undefined, 'mp-table-area');
+        tableArea.append(filters, feedback, sections);
+        root.replaceChildren(top, toolbar, fxNote, tableArea, unitNote, chart, calculator);
         function chooseModel(event) {
             if (event.target.closest('a')) return;
             var row = event.target.closest('[data-model-id]');
@@ -277,7 +279,7 @@
                 var scroller = el('div', undefined, 'mp-table-scroll'); scroller.tabIndex = 0; scroller.setAttribute('role', 'region'); scroller.setAttribute('aria-label', group[1]);
                 var table = el('table'); var caption = el('caption', group[1] + ' — ' + currency.value + t(' per 1 million tokens', ' प्रति 10 लाख टोकन')); caption.className = 'mp-sr-only'; table.append(caption);
                 var head = el('thead'), hr = el('tr');
-                var titles = [t('Model / conditions', 'मॉडल / शर्तें'), t('Input', 'इनपुट'), t('Output', 'आउटपुट'), t('Estimated total', 'अनुमानित कुल'), t('Source / checked', 'स्रोत / जाँच')];
+                var titles = [t('Model / conditions', 'मॉडल / शर्तें'), t('Suggested use', 'सुझाया गया उपयोग'), t('Input', 'इनपुट'), t('Output', 'आउटपुट'), t('Estimated total', 'अनुमानित कुल'), t('Source / checked', 'स्रोत / जाँच')];
                 titles.forEach(function (title) { var th = el('th', title); th.scope = 'col'; hr.append(th); }); head.append(hr); table.append(head);
                 var body = el('tbody');
                 models.forEach(function (model) {
@@ -293,7 +295,6 @@
                         nameLine.append(pick); if (model.id === modelSelect.value) tr.className = 'mp-selected';
                     } else nameLine.append(el('strong', model.name));
                     nameLine.append(el('span', providerName(model.provider), 'mp-provider')); name.append(nameLine);
-                    if (model.usage_fit) name.append(el('small', t('Suggested use: ', 'सुझाया गया उपयोग: ') + (model.usage_fit[hi ? 'hi' : 'en'] || model.usage_fit.en), 'mp-fit'));
                     var longPrompt = s && model.context_tiers?.some(function (tier) { return contextApplies(tier, s.input); });
                     if (model.scope && !longPrompt) name.append(el('small', model.scope, 'mp-condition'));
                     if (model.status === 'retired') name.append(el('small', t('Retired: ', 'सेवानिवृत्त: ') + displayDate(model.retired_on), 'mp-condition'));
@@ -303,6 +304,7 @@
                     var next = (model.scheduled_prices || []).filter(function (p) { return s && p.service_tier === s.tier && p.effective_from > s.date; }).sort(function (a,b) { return a.effective_from.localeCompare(b.effective_from); })[0];
                     if (next) name.append(el('small', money(next.input) + ' / ' + money(next.output) + t(' from ', ' से ') + displayDate(next.effective_from), 'mp-condition'));
                     tr.append(name);
+                    tr.append(el('td', model.usage_fit ? (model.usage_fit[hi ? 'hi' : 'en'] || model.usage_fit.en) : '—', 'mp-use'));
                     ['input', 'output'].forEach(function (key) { tr.append(el('td', price && price[key] !== null && s ? money(price[key]) : '—', 'mp-number')); });
                     var total = el('td', undefined, 'mp-number');
                     if (result) {
@@ -326,13 +328,24 @@
             var chartModels = filtered.filter(function (m) { return estimates.get(m.id); }).sort(function (a, b) { return compareModels(a, b, metric.value, 'desc', estimates); });
             var chartValue = function (m) { var value = estimates.get(m.id); return metric.value === 'cost' ? value.total : value.price[metric.value]; };
             var maximum = Math.max(0, ...chartModels.map(chartValue));
+            var breakdownMaximum = metric.value === 'cost' ? maximum : Math.max(0, ...chartModels.flatMap(function (m) { var p = estimates.get(m.id).price; return [p.input, p.output]; }));
             if (!chartModels.length) bars.append(el('p', t('No priced models match the current filters and inputs.', 'वर्तमान फ़िल्टर और इनपुट के लिए कीमत वाले मॉडल नहीं मिले.'), 'mp-empty'));
             chartModels.forEach(function (m) {
                 var value = chartValue(m), button = el('button', undefined, 'mp-bar-row');
                 button.type = 'button'; button.dataset.modelId = m.id; button.setAttribute('aria-pressed', String(m.id === modelSelect.value));
-                var line = el('span', undefined, 'mp-bar-label'); line.append(el('span', m.name), el('strong', money(value)));
+                var line = el('span', undefined, 'mp-bar-label'); line.append(el('span', m.name + ' · ' + providerName(m.provider)), el('strong', money(value)));
                 var track = el('span', undefined, 'mp-bar-track'), fill = el('span', undefined, 'mp-bar-fill');
-                fill.style.width = (maximum ? value / maximum * 100 : 0) + '%'; track.append(fill); button.append(line, track); bars.append(button);
+                fill.style.width = (maximum ? value / maximum * 100 : 0) + '%'; track.append(fill); button.append(line, track);
+                var breakdown = estimates.get(m.id), inputCost, outputCost;
+                if (metric.value === 'cost') { inputCost = s.requests * s.input * breakdown.price.input / 1000000; outputCost = s.requests * s.output * breakdown.price.output / 1000000; }
+                else { inputCost = breakdown.price.input; outputCost = breakdown.price.output; }
+                var scale = breakdownMaximum;
+                [[t('Input','इनपुट'), inputCost, 'mp-input'], [t('Output','आउटपुट'), outputCost, 'mp-output']].forEach(function (part) {
+                    var sub = el('span', undefined, 'mp-subbar'); var label = el('span', part[0] + ' · ' + money(part[1]), 'mp-sub-label');
+                    var subtrack = el('span', undefined, 'mp-bar-track'); var subfill = el('span', undefined, 'mp-bar-fill ' + part[2]);
+                    subfill.style.width = (scale ? part[1] / scale * 100 : 0) + '%'; subtrack.append(subfill); sub.append(label, subtrack); button.append(sub);
+                });
+                bars.append(button);
             });
         }
         var pending;
