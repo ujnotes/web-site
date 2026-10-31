@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-31",
+  "coverage": "Selected first-party text-generation API models from Google, OpenAI and Anthropic; not an exhaustive model catalogue.",
+  "status_values": [
+    "retired",
+    "current",
+    "to_be_released"
+  ],
+  "unknown_value": null,
+  "fx": {
+    "base": "USD",
+    "quote": "INR",
+    "rate": null,
+    "source_url": null,
+    "checked_on": null,
+    "notes": "User-entered estimate until a sourced and dated rate is supplied."
+  },
+  "workload": {
+    "requests": 10000,
+    "input_tokens_per_request": 1000,
+    "output_tokens_per_request": 200,
+    "service_tier": "standard",
+    "notes": "Equal token counts illustrate arithmetic, not equal model tokenisation or quality. Billable reasoning, caching, tools, taxes and retries need separate accounting."
+  },
+  "models": [
+    {
+      "id": "gemini-3.5-flash-lite",
+      "provider": "google",
+      "name": "Gemini 3.5 Flash-Lite",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard paid API",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.3,
+        "output": 2.5,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.15,
+        "output": 1.25,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "provider": "google",
+      "name": "Gemini 3.8 Flash",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard paid API; dated introductory and scheduled rates",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.75,
+        "output": 3.75,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": "2026-12-31"
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.375,
+        "output": 1.875,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": "2026-12-31"
+      },
+      "scheduled_prices": [
+        {
+          "currency": "USD",
+          "unit": "per_1m_tokens",
+          "input": 1.5,
+          "output": 7.5,
+          "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "checked_on": "2026-10-31",
+          "effective_from": "2027-01-01",
+          "effective_until": null,
+          "service_tier": "standard"
+        },
+        {
+          "currency": "USD",
+          "unit": "per_1m_tokens",
+          "input": 0.75,
+          "output": 3.75,
+          "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "checked_on": "2026-10-31",
+          "effective_from": "2027-01-01",
+          "effective_until": null,
+          "service_tier": "batch"
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-argon",
+      "provider": "google",
+      "name": "Gemini 4 Argon",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard paid API; dated introductory and scheduled rates",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 10,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": "2026-11-30"
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1,
+        "output": 5,
+        "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": "2026-11-30"
+      },
+      "scheduled_prices": [
+        {
+          "currency": "USD",
+          "unit": "per_1m_tokens",
+          "input": 4,
+          "output": 20,
+          "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "checked_on": "2026-10-31",
+          "effective_from": "2026-12-01",
+          "effective_until": null,
+          "service_tier": "standard"
+        },
+        {
+          "currency": "USD",
+          "unit": "per_1m_tokens",
+          "input": 2,
+          "output": 10,
+          "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "checked_on": "2026-10-31",
+          "effective_from": "2026-12-01",
+          "effective_until": null,
+          "service_tier": "batch"
+        }
+      ]
+    },
+    {
+      "id": "gpt-6-luna",
+      "provider": "openai",
+      "name": "GPT-6 Luna",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard, short-context pricing; check provider long-context tier",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.1,
+        "output": 0.5,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.05,
+        "output": 0.25,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "gpt-6.1-terra",
+      "provider": "openai",
+      "name": "GPT-6.1 Terra",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard, short-context pricing; check provider long-context tier",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1,
+        "output": 5,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.5,
+        "output": 2.5,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "provider": "openai",
+      "name": "GPT-6.1 Sol",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard, short-context pricing; check provider long-context tier",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 10,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1,
+        "output": 5,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "gpt-6-astra",
+      "provider": "openai",
+      "name": "GPT-6 Astra",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard, short-context pricing; check provider long-context tier",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 10,
+        "output": 50,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 5,
+        "output": 25,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "provider": "anthropic",
+      "name": "Claude Haiku 5.5",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Prompts up to 100,000 tokens",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.1,
+        "output": 0.5,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 0.05,
+        "output": 0.25,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": [],
+      "context_tiers": [
+        {
+          "prompt_tokens_min_exclusive": 100000,
+          "standard": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 0.5,
+            "output": 2.5,
+            "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked_on": "2026-10-31",
+            "effective_from": null,
+            "effective_until": null
+          },
+          "batch": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 0.25,
+            "output": 1.25,
+            "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked_on": "2026-10-31",
+            "effective_from": null,
+            "effective_until": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "provider": "anthropic",
+      "name": "Claude Sonnet 5.5",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard first-party API",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 10,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1,
+        "output": 5,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "claude-opus-5-5",
+      "provider": "anthropic",
+      "name": "Claude Opus 5.5",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard first-party API",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 4,
+        "output": 20,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 10,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "claude-fable-5-1",
+      "provider": "anthropic",
+      "name": "Claude Fable 5.1",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Standard first-party API",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 10,
+        "output": 50,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 5,
+        "output": 25,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "checked_on": "2026-10-31",
+        "effective_from": null,
+        "effective_until": null
+      },
+      "scheduled_prices": []
+    },
+    {
+      "id": "gemini-1.5-flash",
+      "provider": "google",
+      "name": "Gemini 1.5 Flash",
+      "status": "retired",
+      "retired_on": "2025-09-29",
+      "lifecycle_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
+      "lifecycle_checked_on": "2026-10-31",
+      "standard": null,
+      "batch": null,
+      "historical_prices": [],
+      "notes": "Historical price not independently verified in this edition; excluded from active estimates."
+    },
+    {
+      "id": "gemini-1.5-pro",
+      "provider": "google",
+      "name": "Gemini 1.5 Pro",
+      "status": "retired",
+      "retired_on": "2025-09-29",
+      "lifecycle_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
+      "lifecycle_checked_on": "2026-10-31",
+      "standard": null,
+      "batch": null,
+      "historical_prices": [],
+      "notes": "Historical price not independently verified in this edition; excluded from active estimates."
+    }
+  ]
+}

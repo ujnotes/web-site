@@ -8,7 +8,13 @@ DirectorySlash Off
 
 # Canonical AJAX payloads. Must run before File/Site catch-alls and before
 # Apache could negotiate a sibling directory named like the slug.
+# Component datasets are static resources, not article AJAX payloads.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^resource/(.+\.json)$ - [END,NC]
+RewriteRule ^resource/(.+\.json)$ Resource/$1 [END]
 RewriteCond %{REQUEST_URI} !^/manifest\.json$
+RewriteCond %{REQUEST_URI} !^/[Rr]esource/
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteRule ^(.+)/$ $1 [R=301]
@@ -98,8 +104,6 @@ RewriteRule ^(.+)$ File/$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/Site%{REQUEST_URI} -f
 RewriteRule ^(.+)$ Site/$1 [L]
-
-RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ Framework/HTML/Page.php [L]
