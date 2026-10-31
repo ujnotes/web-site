@@ -37,3 +37,5 @@ The homepage tree specification applies recursively to every branch and takes pr
 
 - Check new long-titled articles and each translation at a 390px viewport. A short existing title does not exercise the title-container minimum-size behavior. Verify document.documentElement.scrollWidth does not exceed innerWidth.
 - The flex title container can expand the surrounding grid when its minimum width remains auto. Preserve a required article-specific rendering adjustment in Notion so a later publication retains it; keep ordinary article prose in native blocks.
+
+- For native article tables, verify narrow-screen page width as well as row count. Keep a wide table scrollable within the article rather than allowing its minimum content width to expand the page; preserve any necessary layout markup in the canonical Notion source.
