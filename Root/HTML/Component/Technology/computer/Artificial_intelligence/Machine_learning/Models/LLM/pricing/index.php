@@ -5,6 +5,9 @@
 	<p>
 		Change the number of requests, input tokens, billable output tokens and service tier. Search or filter the models, then sort by price or estimated total. The comparison separates current, retired and to-be-released models.
 	</p>
+	<p>
+		Prices are provided for reference and guidance only and may be out of date. Check the original provider’s official pricing for current rates and billing terms.
+	</p>
 <section lang="en" class="frontend-component no-auto-cover" data-component="model-pricing" data-source="/resource/data/model-pricing.json" data-component-script="/resource/components/model-pricing.js" data-component-style="/resource/components/model-pricing.css"><p data-component-status role="status">Loading interactive comparison…</p><noscript><p>Enable JavaScript to use this interactive comparison.</p></noscript></section>
 	<h3>How is the estimate calculated?</h3>
 	<p>
@@ -18,7 +21,7 @@
 		The estimate date selects a published rate for that date, including scheduled price changes recorded in the data. It is not a prediction of future availability or unannounced prices. Batch estimates use the model's own published batch rates.
 	</p>
 	<p>
-		INR conversion is optional. A rate you enter is an assumption; bank conversion fees and tax are excluded.
+		Choose a display currency for prices and estimates. For currencies other than USD, enter the amount of your chosen currency equal to 1 USD. This exchange rate is your assumption; bank conversion fees and tax are excluded.
 	</p>
 	<h3>What should I check before choosing a model?</h3>
 	<p>

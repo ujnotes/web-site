@@ -38,3 +38,17 @@ test('invalid rates and provenance are rejected', () => {
         assert.throws(() => pricing.validate(copy));
     }
 });
+
+test('sort columns support both directions and keep unknown prices last', () => {
+    const a = {id:'a',name:'Alpha',provider:'google'};
+    const b = {id:'b',name:'Beta',provider:'anthropic'};
+    const unknown = {id:'unknown',name:'Unknown',provider:'openai'};
+    const estimates = new Map([['a',{total:0,price:{input:0,output:2}}],['b',{total:10,price:{input:4,output:1}}]]);
+    const sorted = (key, direction) => [unknown,a,b].sort((x,y)=>pricing.compareModels(x,y,key,direction,estimates)).map(m=>m.id);
+    assert.deepEqual(sorted('cost','desc'),['b','a','unknown']);
+    assert.deepEqual(sorted('cost','asc'),['a','b','unknown']);
+    assert.deepEqual(sorted('output','desc'),['a','b','unknown']);
+    assert.deepEqual(sorted('input','desc'),['b','a','unknown']);
+    assert.deepEqual(sorted('name','desc'),['unknown','b','a']);
+    assert.deepEqual(sorted('provider','asc'),['b','a','unknown']);
+});

@@ -67,7 +67,19 @@
         var total = perRequest * state.requests;
         return Number.isFinite(total) ? {price: price, perRequest: perRequest, total: total} : null;
     }
-    var api = {validate: validate, priceFor: priceFor, estimate: estimate};
+    function compareModels(a, b, key, direction, estimates) {
+        var sign = direction === 'asc' ? 1 : -1;
+        if (key === 'name' || key === 'provider') {
+            return sign * a[key].localeCompare(b[key]) || a.name.localeCompare(b.name);
+        }
+        var x = estimates.get(a.id), y = estimates.get(b.id);
+        var av = key === 'cost' ? x?.total : x?.price[key];
+        var bv = key === 'cost' ? y?.total : y?.price[key];
+        // Unknown values stay last in either direction; zero remains a price.
+        if (av == null || bv == null) return av == null && bv == null ? a.name.localeCompare(b.name) : av == null ? 1 : -1;
+        return sign * (av - bv) || a.name.localeCompare(b.name);
+    }
+    var api = {validate: validate, priceFor: priceFor, estimate: estimate, compareModels: compareModels};
     if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
 
     global.UjnotesComponents.register('model-pricing', async function (root, context) {
@@ -82,9 +94,14 @@
         if (context.signal.aborted) return;
         var defaults = data.workload || {};
         var numberFormat = new Intl.NumberFormat(hi ? 'hi-IN' : 'en-IN', {maximumFractionDigits: 6});
-        var usd = function (value) { return value > 0 && value < 0.000001 ? '<$0.000001' : '$' + numberFormat.format(value); };
+        function money(value) {
+            var factor = currency.value === 'USD' ? 1 : Number(fx.value);
+            if (!Number.isFinite(factor) || factor <= 0) return '—';
+            var amount = value * factor;
+            var formatter = new Intl.NumberFormat(hi ? 'hi-IN' : 'en-IN', {style: 'currency', currency: currency.value, maximumFractionDigits: 6});
+            return amount > 0 && amount < 0.000001 ? '<' + formatter.format(0.000001) : formatter.format(amount);
+        }
         var providerName = function (name) { return name === 'openai' ? 'OpenAI' : name.charAt(0).toUpperCase() + name.slice(1); };
-        var inr = function (value) { return '₹' + new Intl.NumberFormat(hi ? 'hi-IN' : 'en-IN', {maximumFractionDigits: 2}).format(value); };
         var displayDate = function (value) { return value ? new Intl.DateTimeFormat(hi ? 'hi-IN' : 'en-GB', {day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'}).format(new Date(value)) : t('Not announced', 'घोषित नहीं'); };
         function el(tag, text, className) {
             var node = document.createElement(tag);
@@ -123,9 +140,20 @@
         var today = new Date();
         var localDate = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, '0'), String(today.getDate()).padStart(2, '0')].join('-');
         var date = field(t('Estimate date', 'अनुमान की तारीख'), 'date', localDate < data.updated_on ? data.updated_on : localDate, {required: '', min: data.updated_on});
-        var fx = field(t('USD → INR (optional)', 'USD → INR (वैकल्पिक)'), 'number', data.fx?.rate ?? '', {min: '0.000001', max: '1000000', step: 'any', placeholder: t('Your exchange rate', 'आपकी विनिमय दर')});
+        var currency = select(t('Currency', 'मुद्रा'), [['USD', 'USD — US Dollar'], ['INR', 'INR — Indian Rupee'], ['NPR', 'NPR — Nepalese Rupee'], ['EUR', 'EUR — Euro'], ['GBP', 'GBP — Pound Sterling'], ['JPY', 'JPY — Japanese Yen'], ['AUD', 'AUD — Australian Dollar'], ['CAD', 'CAD — Canadian Dollar']]);
+        var fx = field(t('Exchange rate', 'विनिमय दर'), 'number', '', {min: '0.000001', max: '1000000', step: 'any', placeholder: t('Your exchange rate', 'आपकी विनिमय दर')});
+        var fxWrapper = fx.parentElement;
+        fxWrapper.hidden = true;
         root.append(form);
-        var fxNote = el('p', t('INR uses your assumed exchange rate; bank fees and tax are excluded.', 'INR का अनुमान आपकी मानी हुई विनिमय दर पर आधारित है; बैंक शुल्क और कर शामिल नहीं हैं.'), 'mp-note');
+        var fxNote = el('p', t('Provider prices are in USD. Choose another currency and enter an exchange rate to convert all displayed prices.', 'प्रदाता की दरें USD में हैं। सभी कीमतें बदलने के लिए दूसरी मुद्रा चुनें और विनिमय दर भरें.'), 'mp-note');
+        currency.addEventListener('change', function () {
+            var converted = currency.value !== 'USD';
+            fxWrapper.hidden = !converted; fx.disabled = !converted; fx.required = converted;
+            fx.value = converted && data.fx?.quote === currency.value && data.fx?.rate ? data.fx.rate : '';
+            fxWrapper.querySelector('span').textContent = '1 USD = ' + currency.value;
+            fxNote.textContent = converted ? t('Converted prices use your assumed exchange rate. Bank fees and tax are excluded; the provider’s published rates remain in USD.', 'रूपान्तरित कीमतें आपकी मानी हुई विनिमय दर पर आधारित हैं। बैंक शुल्क और कर शामिल नहीं हैं; प्रदाता की प्रकाशित दरें USD में रहती हैं.') : t('Provider prices are in USD. Choose another currency and enter an exchange rate to convert all displayed prices.', 'प्रदाता की दरें USD में हैं। सभी कीमतें बदलने के लिए दूसरी मुद्रा चुनें और विनिमय दर भरें.');
+        }, {signal: context.signal});
+        fx.disabled = true;
         root.append(fxNote);
         var filters = el('div', undefined, 'mp-filters');
         var searchLabel = el('label', undefined, 'mp-field'); searchLabel.append(el('span', t('Find a model', 'मॉडल खोजें')));
@@ -135,51 +163,58 @@
             values.forEach(function (item) { var opt = el('option', item[1]); opt.value = item[0]; node.append(opt); });
             wrapper.append(node); filters.append(wrapper); return node;
         }
-        var provider = filterSelect(t('Provider', 'प्रदाता'), [['', t('All providers', 'सभी प्रदाता')]].concat(Array.from(new Set(data.models.map(function (m) { return m.provider; }))).sort().map(function (name) { return [name, providerName(name)]; })));
-        var sort = filterSelect(t('Sort by', 'क्रम'), [['cost', t('Lowest estimated cost', 'न्यूनतम अनुमानित लागत')], ['input', t('Lowest input rate', 'न्यूनतम इनपुट दर')], ['output', t('Lowest output rate', 'न्यूनतम आउटपुट दर')], ['name', t('Model name', 'मॉडल का नाम')]]);
+        var sort = filterSelect(t('Sort by column', 'कॉलम के अनुसार क्रम'), [['cost', t('Estimated total', 'अनुमानित कुल')], ['input', t('Input price', 'इनपुट दर')], ['output', t('Output price', 'आउटपुट दर')], ['name', t('Model name', 'मॉडल का नाम')], ['provider', t('Provider', 'प्रदाता')]]);
+        var direction = filterSelect(t('Order', 'क्रम की दिशा'), [['desc', t('Descending ↓', 'घटता क्रम ↓')], ['asc', t('Ascending ↑', 'बढ़ता क्रम ↑')]]);
+        var providers = el('fieldset', undefined, 'mp-providers');
+        providers.append(el('legend', t('Model providers', 'मॉडल प्रदाता')));
+        var providerChecks = Array.from(new Set(data.models.map(function (m) { return m.provider; }))).sort().map(function (name) {
+            var label = el('label', undefined, 'mp-provider-toggle');
+            var checkbox = el('input'); checkbox.type = 'checkbox'; checkbox.value = name; checkbox.checked = true;
+            label.append(checkbox, el('span', providerName(name))); providers.append(label); return checkbox;
+        });
+        filters.append(providers);
         root.append(filters);
         var feedback = el('p', '', 'mp-feedback'); feedback.setAttribute('role', 'status'); root.append(feedback);
         var summary = el('div', undefined, 'mp-summary'); summary.setAttribute('aria-live', 'polite'); root.append(summary);
         var sections = el('div', undefined, 'mp-sections'); root.append(sections);
-        root.append(el('p', t('Prices per 1 million tokens · USD · Checked dates are shown per source. Equal token counts do not mean equal quality or tokenisation. Estimates exclude cache, storage, tools, tax and retries. Confirm context limits and account access with the provider.', 'दरें प्रति 10 लाख टोकन · USD · हर स्रोत के साथ जाँच की तारीख है। समान टोकन का अर्थ समान गुणवत्ता या टोकन-विभाजन नहीं है। कैश, स्टोरेज, टूल, कर और दोबारा किए गए अनुरोध शामिल नहीं हैं। संदर्भ सीमा और खाते की पहुँच प्रदाता से जाँचें.'), 'mp-note'));
+        var unitNote = el('p', '', 'mp-note'); root.append(unitNote);
 
         function state() {
             var numeric = [requests, input, output, fx];
             var valid = numeric.every(function (node) { return node.checkValidity(); }) && date.checkValidity() && isDate(date.value);
-            return valid ? {requests: Number(requests.value), input: Number(input.value), output: Number(output.value), tier: tier.value, date: date.value, fx: fx.value === '' ? null : Number(fx.value)} : null;
+            return valid ? {requests: Number(requests.value), input: Number(input.value), output: Number(output.value), tier: tier.value, date: date.value} : null;
         }
         function render() {
             var s = state();
-            feedback.textContent = s ? '' : t('Enter valid non-negative token counts and requests, a date on or after the data snapshot, and a positive exchange rate if used.', 'मान्य अनुरोध व टोकन संख्या, डेटा की तारीख या उसके बाद की तारीख और वैकल्पिक धनात्मक विनिमय दर भरें.');
+            feedback.textContent = s ? '' : currency.value !== 'USD' && !fx.checkValidity() ? t('Enter a positive exchange rate to display prices in ', 'कीमतें दिखाने के लिए धनात्मक विनिमय दर भरें: ') + currency.value : t('Enter valid non-negative token counts and requests, a date on or after the data snapshot, and a positive exchange rate if used.', 'मान्य अनुरोध व टोकन संख्या, डेटा की तारीख या उसके बाद की तारीख और वैकल्पिक धनात्मक विनिमय दर भरें.');
+            unitNote.textContent = t('Prices per 1 million tokens · ', 'दरें प्रति 10 लाख टोकन · ') + currency.value + t(' · Checked dates are shown per source. Equal token counts do not mean equal quality or tokenisation. Estimates exclude cache, storage, tools, tax and retries. Confirm context limits and account access with the provider.', ' · हर स्रोत के साथ जाँच की तारीख है। समान टोकन का अर्थ समान गुणवत्ता या टोकन-विभाजन नहीं है। कैश, स्टोरेज, टूल, कर और दोबारा किए गए अनुरोध शामिल नहीं हैं। संदर्भ सीमा और खाते की पहुँच प्रदाता से जाँचें.');
             summary.replaceChildren(); sections.replaceChildren();
             var query = search.value.trim().toLowerCase();
-            var filtered = data.models.filter(function (m) { return (!provider.value || m.provider === provider.value) && (m.name + ' ' + m.provider).toLowerCase().includes(query); });
+            var enabledProviders = new Set(providerChecks.filter(function (checkbox) { return checkbox.checked; }).map(function (checkbox) { return checkbox.value; }));
+            var filtered = data.models.filter(function (m) { return enabledProviders.has(m.provider) && (m.name + ' ' + m.provider).toLowerCase().includes(query); });
             var estimates = new Map(filtered.map(function (m) { return [m.id, s ? estimate(m, s) : null]; }));
             var priced = filtered.filter(function (m) { return estimates.get(m.id); }).sort(function (a, b) { return estimates.get(a.id).total - estimates.get(b.id).total || a.name.localeCompare(b.name); });
             if (s && priced.length) {
                 var cheapest = priced[0], best = estimates.get(cheapest.id);
-                var a = el('div'); a.append(el('span', t('LOWEST ESTIMATE IN THIS VIEW', 'इस दृश्य में न्यूनतम अनुमान'), 'mp-eyebrow'), el('strong', usd(best.total), 'mp-total'), el('span', cheapest.name));
+                var a = el('div'); a.append(el('span', t('LOWEST ESTIMATE IN THIS VIEW', 'इस दृश्य में न्यूनतम अनुमान'), 'mp-eyebrow'), el('strong', money(best.total), 'mp-total'), el('span', cheapest.name));
                 var b = el('div'); b.append(el('span', t('YOUR WORKLOAD', 'आपका काम'), 'mp-eyebrow'), el('strong', numberFormat.format(s.requests), 'mp-total'), el('span', t('requests · ', 'अनुरोध · ') + numberFormat.format(s.requests * (s.input + s.output)) + t(' tokens', ' टोकन')));
                 var c = el('div'); c.append(el('span', t('PRICE SNAPSHOT', 'मूल्य डेटा'), 'mp-eyebrow'), el('strong', displayDate(data.updated_on), 'mp-snapshot'), el('span', t('Manually reviewed · not a live feed', 'मैनुअल समीक्षा · लाइव फ़ीड नहीं')));
                 summary.append(a, b, c);
             }
             [['current', t('Current models', 'वर्तमान मॉडल')], ['retired', t('Retired models', 'सेवानिवृत्त मॉडल')], ['to_be_released', t('To be released models', 'आगामी मॉडल')]].forEach(function (group) {
                 var models = filtered.filter(function (m) { return m.status === group[0]; });
+                if (group[0] === 'to_be_released' && !models.length) return;
                 models.sort(function (a, b) {
-                    if (!s || sort.value === 'name') return a.name.localeCompare(b.name);
-                    var x = estimates.get(a.id), y = estimates.get(b.id);
-                    var av = sort.value === 'cost' ? x?.total : x?.price[sort.value];
-                    var bv = sort.value === 'cost' ? y?.total : y?.price[sort.value];
-                    return (av ?? Infinity) - (bv ?? Infinity) || a.name.localeCompare(b.name);
+                    return compareModels(a, b, sort.value, direction.value, estimates);
                 });
                 var section = el('section', undefined, 'mp-section');
                 var h = el('h3', group[1]); h.append(el('span', String(models.length), 'mp-count')); section.append(h);
                 if (!models.length) {
-                    section.append(el('p', group[0] === 'to_be_released' && !query && !provider.value ? t('No officially announced unreleased models have been verified for this dataset.', 'इस डेटा में किसी आधिकारिक रूप से घोषित आगामी मॉडल का सत्यापन नहीं हुआ है.') : t('No models match these filters.', 'इन फ़िल्टर से कोई मॉडल नहीं मिला.'), 'mp-empty'));
+                    section.append(el('p', t('No models match these filters.', 'इन फ़िल्टर से कोई मॉडल नहीं मिला.'), 'mp-empty'));
                     sections.append(section); return;
                 }
                 var scroller = el('div', undefined, 'mp-table-scroll'); scroller.tabIndex = 0; scroller.setAttribute('role', 'region'); scroller.setAttribute('aria-label', group[1]);
-                var table = el('table'); var caption = el('caption', group[1] + t(' — USD per 1 million tokens', ' — USD प्रति 10 लाख टोकन')); caption.className = 'mp-sr-only'; table.append(caption);
+                var table = el('table'); var caption = el('caption', group[1] + ' — ' + currency.value + t(' per 1 million tokens', ' प्रति 10 लाख टोकन')); caption.className = 'mp-sr-only'; table.append(caption);
                 var head = el('thead'), hr = el('tr');
                 var titles = [t('Model / conditions', 'मॉडल / शर्तें'), t('Input', 'इनपुट'), t('Output', 'आउटपुट'), t('Estimated total', 'अनुमानित कुल'), t('Source / checked', 'स्रोत / जाँच')];
                 titles.forEach(function (title) { var th = el('th', title); th.scope = 'col'; hr.append(th); }); head.append(hr); table.append(head);
@@ -196,13 +231,12 @@
                     if (model.status === 'to_be_released') name.append(el('small', t('Release: ', 'जारी होने की तारीख: ') + displayDate(model.release_on), 'mp-condition'));
                     if (longPrompt) name.append(el('small', t('Long-prompt rate applied', 'लंबे प्रॉम्प्ट की दर लागू'), 'mp-condition'));
                     var next = (model.scheduled_prices || []).filter(function (p) { return s && p.service_tier === s.tier && p.effective_from > s.date; }).sort(function (a,b) { return a.effective_from.localeCompare(b.effective_from); })[0];
-                    if (next) name.append(el('small', usd(next.input) + ' / ' + usd(next.output) + t(' from ', ' से ') + displayDate(next.effective_from), 'mp-condition'));
+                    if (next) name.append(el('small', money(next.input) + ' / ' + money(next.output) + t(' from ', ' से ') + displayDate(next.effective_from), 'mp-condition'));
                     tr.append(name);
-                    ['input', 'output'].forEach(function (key) { tr.append(el('td', price && price[key] !== null ? usd(price[key]) : '—', 'mp-number')); });
+                    ['input', 'output'].forEach(function (key) { tr.append(el('td', price && price[key] !== null && s ? money(price[key]) : '—', 'mp-number')); });
                     var total = el('td', undefined, 'mp-number');
                     if (result) {
-                        total.append(el('strong', usd(result.total)), el('small', usd(result.perRequest) + t(' / request', ' / अनुरोध')));
-                        if (s.fx !== null) total.append(el('small', inr(result.total * s.fx)));
+                        total.append(el('strong', money(result.total)), el('small', money(result.perRequest) + t(' / request', ' / अनुरोध')));
                     } else total.textContent = model.status === 'retired' ? t('Archived', 'संग्रहीत') : model.status === 'to_be_released' ? t('Not available', 'उपलब्ध नहीं') : t('Not estimated', 'अनुमान उपलब्ध नहीं');
                     tr.append(total);
                     var source = el('td', undefined, 'mp-source');
