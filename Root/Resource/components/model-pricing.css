@@ -1503,22 +1503,29 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-fx-status::before{content:"i";display:grid;place-items:center;width:16px;height:16px;border:1px solid var(--mp-muted);border-radius:50%;color:var(--mp-muted);font-family:serif;font-size:11px;font-weight:700;line-height:1}
 .model-pricing .mp-fx-status::after{content:attr(data-tooltip);position:absolute;z-index:40;left:0;top:calc(100% + 8px);width:max-content;max-width:min(330px,calc(100vw - 32px));padding:.65rem .75rem;border:1px solid var(--mp-line);border-radius:7px;background:var(--mp-card);box-shadow:var(--mp-shadow-md);color:var(--mp-ink);font-size:11px;font-weight:400;line-height:1.45;opacity:0;pointer-events:none;transform:translateY(-3px);transition:opacity .15s ease,transform .15s ease}
 .model-pricing .mp-fx-status:hover::after,.model-pricing .mp-fx-status:focus::after{opacity:1;transform:translateY(0)}
-.model-pricing .mp-common-controls .mp-filter-details{margin-top:.5rem}
+.model-pricing .mp-common-controls{border:0;border-radius:0;background:transparent;overflow:visible}
+.model-pricing .mp-common-controls>.mp-toolbar-card{margin:0;padding:1rem 1.25rem .75rem;border:1px solid var(--mp-line);border-radius:12px;box-shadow:var(--mp-shadow-sm)}
+.model-pricing .mp-common-controls .mp-filter-details{margin-top:.8rem;border:1px solid var(--mp-line);border-radius:12px;background:var(--mp-card);box-shadow:var(--mp-shadow-sm)}
+.model-pricing .mp-currency-field .mp-fx-status{position:absolute;left:calc(100% + .45rem);bottom:.55rem;margin:0}
 .model-pricing .mp-filter-group{position:relative}
 .model-pricing .mp-filter-restore{
   align-self:center;
   margin-left:auto;
-  padding:.15rem 0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  padding:0;
   border:0;
-  border-bottom:1px solid currentColor;
-  border-radius:0;
+  border-radius:50%;
   background:transparent;
   color:var(--mp-accent);
-  font-size:10.5px;
+  font-size:16px;
   font-weight:600;
   line-height:1.35;
 }
-.model-pricing .mp-filter-restore:hover{color:var(--mp-ink)}
+.model-pricing .mp-filter-restore:hover{background:var(--mp-tint);color:var(--mp-ink)}
 .model-pricing .mp-filter-restore:disabled{display:none}
 .model-pricing .mp-table-header-search{display:inline-flex;position:relative;float:right;right:auto;top:auto;flex:none;align-items:center;width:auto;min-width:0;margin:0;transform:none;vertical-align:middle}
 .model-pricing .mp-table-header-search .mp-search-toggle{

@@ -269,7 +269,8 @@
             fxStatus.setAttribute('aria-label', text);
         }
         setFxStatus(t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.'));
-        toolbarCard.append(toolbar, fxStatus);
+        currencyField.append(fxStatus);
+        toolbarCard.append(toolbar);
 
         var fxMode = 'base', fxRequest = 0, fxAbort = null, fxCache = new Map();
         function rateNote(record) {
@@ -428,7 +429,7 @@
             return button;
         });
         function addGroupRestore(fieldset, buttons, label) {
-            var restore = el('button', t('Restore', 'पुनर्स्थापित करें'), 'mp-filter-restore');
+            var restore = el('button', '×', 'mp-filter-restore');
             restore.type = 'button';
             restore.title = t('Restore all ', 'सभी पुनर्स्थापित करें ') + label;
             restore.setAttribute('aria-label', restore.title);
