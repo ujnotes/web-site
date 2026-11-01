@@ -256,21 +256,31 @@
         fxWrapper.hidden = true;
 
         var currencyField = fieldWrapper(t('Currency', 'मुद्रा'), currencySelect); currencyField.classList.add('mp-currency-field');
+        currencyField.append(el('span', undefined, 'mp-currency-caret'));
         var tierField = fieldWrapper(t('Service tier', 'सेवा प्रकार'), tierToggle); tierField.classList.add('mp-tier-field');
         toolbar.append(currencyField, tierField, dateControl, fxWrapper);
 
         var fxStatus = el('div', undefined, 'mp-fx-status');
-        fxStatus.textContent = t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.');
+        fxStatus.tabIndex = 0;
         fxStatus.setAttribute('aria-live', 'polite');
+        function setFxStatus(text) {
+            fxStatus.textContent = text;
+            fxStatus.dataset.tooltip = text;
+            fxStatus.setAttribute('aria-label', text);
+        }
+        setFxStatus(t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.'));
         toolbarCard.append(toolbar, fxStatus);
 
         var fxMode = 'base', fxRequest = 0, fxAbort = null, fxCache = new Map();
         function rateNote(record) {
+            var note = '1 USD = ' + numberFormat.format(record.rate) + ' ' + record.quote + ' · Frankfurter · ' + displayDate(record.date) + t(' · Daily reference rate (taxes & bank charges excluded).', ' · दैनिक संदर्भ दर (कर व बैंक शुल्क शामिल नहीं).');
             fxStatus.replaceChildren(
                 document.createTextNode('1 USD = ' + numberFormat.format(record.rate) + ' ' + record.quote + ' · '),
                 sourceLink('Frankfurter', 'https://frankfurter.dev/'),
                 document.createTextNode(' · ' + displayDate(record.date) + t(' · Daily reference rate (taxes & bank charges excluded).', ' · दैनिक संदर्भ दर (कर व बैंक शुल्क शामिल नहीं).'))
             );
+            fxStatus.dataset.tooltip = note;
+            fxStatus.setAttribute('aria-label', note);
         }
         async function loadRate() {
             var ticket = ++fxRequest, quote = currency.value;
@@ -281,12 +291,12 @@
             fxWrapper.querySelector('span').textContent = '1 USD = ' + currency.value;
             if (!converted) {
                 fxMode = 'base';
-                fxStatus.textContent = t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.');
+                setFxStatus(t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.'));
                 render();
                 return;
             }
             fxMode = 'loading';
-            fxStatus.textContent = t('Fetching live reference exchange rate from Frankfurter… You may also enter a custom rate.', 'नवीनतम संदर्भ विनिमय दर लोड हो रही है… आप स्वयं भी दर भर सकते हैं.');
+            setFxStatus(t('Fetching live reference exchange rate from Frankfurter… You may also enter a custom rate.', 'नवीनतम संदर्भ विनिमय दर लोड हो रही है… आप स्वयं भी दर भर सकते हैं.'));
             render();
             if (fxCache.has(quote)) {
                 var cached = fxCache.get(quote);
@@ -311,14 +321,14 @@
             } catch (_) {
                 if (ticket !== fxRequest || context.signal.aborted) return;
                 fxMode = 'manual';
-                fxStatus.textContent = t('Exchange-rate service unavailable. Please enter a manual rate above.', 'विनिमय दर सेवा उपलब्ध नहीं है। कृपया ऊपर दर स्वयं भरें।');
+                setFxStatus(t('Exchange-rate service unavailable. Please enter a manual rate above.', 'विनिमय दर सेवा उपलब्ध नहीं है। कृपया ऊपर दर स्वयं भरें।'));
                 render();
             } finally { clearTimeout(timeout); }
         }
         currency.addEventListener('change', loadRate, {signal: context.signal});
         fx.addEventListener('input', function () {
             fxRequest++; if (fxAbort) fxAbort.abort(); fxMode = 'manual';
-            fxStatus.textContent = t('Manual exchange rate applied. Bank fees and taxes excluded.', 'स्वयं भरी गई विनिमय दर लागू। बैंक शुल्क व कर शामिल नहीं।');
+            setFxStatus(t('Manual exchange rate applied. Bank fees and taxes excluded.', 'स्वयं भरी गई विनिमय दर लागू। बैंक शुल्क व कर शामिल नहीं।'));
         }, {signal: context.signal});
         context.signal.addEventListener('abort', function () { fxRequest++; if (fxAbort) fxAbort.abort(); }, {once: true});
         fx.disabled = true;

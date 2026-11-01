@@ -1486,6 +1486,8 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-currency-field .mp-select{
   min-height:38px;
   padding:.45rem 1.45rem .45rem 0;
+  appearance:none;
+  -webkit-appearance:none;
   border:0;
   border-bottom:1px solid var(--mp-line);
   border-radius:0;
@@ -1494,6 +1496,14 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 }
 .model-pricing .mp-currency-field .mp-select:hover{border-bottom-color:var(--mp-accent)}
 .model-pricing .mp-currency-field .mp-select:focus{border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
+.model-pricing .mp-currency-field{position:relative}
+.model-pricing .mp-currency-caret{position:absolute;right:.25rem;bottom:.9rem;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);color:var(--mp-muted);opacity:0;pointer-events:none;transition:opacity .15s ease,color .15s ease}
+.model-pricing .mp-currency-field:hover .mp-currency-caret,.model-pricing .mp-currency-field:focus-within .mp-currency-caret{opacity:1;color:var(--mp-accent)}
+.model-pricing .mp-fx-status{position:relative;display:block;width:20px;height:20px;margin:.15rem 0 0;padding:0;border:0;background:transparent;color:transparent;font-size:0;cursor:help}
+.model-pricing .mp-fx-status::before{content:"i";display:grid;place-items:center;width:16px;height:16px;border:1px solid var(--mp-muted);border-radius:50%;color:var(--mp-muted);font-family:serif;font-size:11px;font-weight:700;line-height:1}
+.model-pricing .mp-fx-status::after{content:attr(data-tooltip);position:absolute;z-index:40;left:0;top:calc(100% + 8px);width:max-content;max-width:min(330px,calc(100vw - 32px));padding:.65rem .75rem;border:1px solid var(--mp-line);border-radius:7px;background:var(--mp-card);box-shadow:var(--mp-shadow-md);color:var(--mp-ink);font-size:11px;font-weight:400;line-height:1.45;opacity:0;pointer-events:none;transform:translateY(-3px);transition:opacity .15s ease,transform .15s ease}
+.model-pricing .mp-fx-status:hover::after,.model-pricing .mp-fx-status:focus::after{opacity:1;transform:translateY(0)}
+.model-pricing .mp-common-controls .mp-filter-details{margin-top:.5rem}
 .model-pricing .mp-filter-group{position:relative}
 .model-pricing .mp-filter-restore{
   align-self:center;
@@ -1510,8 +1520,7 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 }
 .model-pricing .mp-filter-restore:hover{color:var(--mp-ink)}
 .model-pricing .mp-filter-restore:disabled{display:none}
-.model-pricing .mp-table-scroll thead th:first-child{position:sticky}
-.model-pricing .mp-table-header-search{display:inline-flex;position:absolute;right:.45rem;top:50%;flex:none;align-items:center;margin:0;transform:translateY(-50%);vertical-align:middle}
+.model-pricing .mp-table-header-search{display:inline-flex;position:relative;float:right;right:auto;top:auto;flex:none;align-items:center;width:auto;min-width:0;margin:0;transform:none;vertical-align:middle}
 .model-pricing .mp-table-header-search .mp-search-toggle{
   display:inline-flex;
   align-items:center;
