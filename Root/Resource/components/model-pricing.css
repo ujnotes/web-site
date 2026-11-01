@@ -1367,7 +1367,7 @@ html.dark-mode .model-pricing{--mp-bg:#1c2333;--mp-card:#202839;--mp-card-subtle
 .model-pricing .mp-archive[open]>.mp-table-scroll{margin-top:1rem}
 .model-pricing .mp-unit-note{font-size:11px;line-height:1.65;color:var(--mp-muted)}
 .model-pricing .mp-calculator,.model-pricing .mp-chart{box-shadow:none;margin:1.25rem 0;padding:1.25rem}
-.model-pricing .mp-bar-row{background:transparent;border-bottom:1px solid var(--mp-line);border-radius:4px}
+.model-pricing .mp-bar-row{background:transparent;border-bottom:0;border-radius:4px}
 .model-pricing .mp-bar-row:hover,.model-pricing .mp-bar-row[aria-pressed="true"]{transform:none;box-shadow:none}
 .model-pricing .mp-chart-legend{font-size:11px}
 .model-pricing .mp-preset-btn{box-shadow:none}

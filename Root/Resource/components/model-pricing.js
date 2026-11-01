@@ -598,7 +598,7 @@
         chartHeader.append(el('h3', t('Graphical Comparison', 'चित्रात्मक तुलना')));
 
         var metric = el('select');
-        [['input', t('Input rate ($/1M)', 'इनपुट दर')], ['output', t('Output rate ($/1M)', 'आउटपुट दर')], ['typical', t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण')], ['cost', t('Estimated Total Cost', 'अनुमानित कुल लागत')]].forEach(function (entry) {
+        [['input', t('Input rate ($/1M)', 'इनपुट दर')], ['output', t('Output rate ($/1M)', 'आउटपुट दर')], ['typical', t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण')], ['cost', t('Est. cost', 'अनुमानित लागत')]].forEach(function (entry) {
             var option = el('option', entry[1]); option.value = entry[0]; metric.append(option);
         });
         metric.hidden = true;
@@ -610,6 +610,7 @@
             var choice = el('button', option.textContent);
             choice.type = 'button';
             choice.dataset.metric = option.value;
+            if (option.value === 'typical') choice.title = t('Typical mix: 3 input tokens (75%) and 1 output token (25%).', 'सामान्य मिश्रण: 3 इनपुट टोकन (75%) और 1 आउटपुट टोकन (25%)।');
             choice.setAttribute('aria-pressed', String(option.value === metric.value));
             choice.addEventListener('click', function () {
                 metric.value = option.value;
@@ -740,7 +741,7 @@
             inLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');
             outLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Output share', 'आउटपुट हिस्सा') : t('Output rate', 'आउटपुट दर');
             Array.from(metricOptions.children).forEach(function (button) {
-                if (button.dataset.metric !== 'cost') button.textContent = button.dataset.metric === 'input' ? t('Input rate', 'इनपुट दर') : button.dataset.metric === 'output' ? t('Output rate', 'आउटपुट दर') : t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण');
+                button.textContent = button.dataset.metric === 'input' ? t('Input rate', 'इनपुट दर') : button.dataset.metric === 'output' ? t('Output rate', 'आउटपुट दर') : button.dataset.metric === 'typical' ? t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण') : t('Est. cost', 'अनुमानित लागत');
             });
             var searchFocused = document.activeElement === search;
             var caret = searchFocused ? search.selectionStart : null;
