@@ -1480,3 +1480,15 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-disclaimer{font-size:10px}
 }
 .model-pricing .mp-common-controls>.mp-toolbar-card{border-radius:12px 12px 0 0}
+
+/* Workload presets and plain slider tracks. */
+.model-pricing .mp-preset-btn{flex-direction:row;align-items:center;gap:.75rem}
+.model-pricing .mp-preset-btn>.mp-ui-icon{width:21px;height:21px;color:var(--mp-accent)}
+.model-pricing .mp-preset-text{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.model-pricing input[type="range"]{appearance:none;-webkit-appearance:none;height:24px;min-height:24px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.model-pricing input[type="range"]:focus{box-shadow:none;border:0}
+.model-pricing input[type="range"]::-webkit-slider-runnable-track{height:3px;background:var(--mp-line);border:0;border-radius:2px;box-shadow:none}
+.model-pricing input[type="range"]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:12px;height:12px;margin-top:-4.5px;border:0;border-radius:50%;background:var(--mp-accent);box-shadow:none}
+.model-pricing input[type="range"]::-moz-range-track{height:3px;border:0;border-radius:2px;background:var(--mp-line);box-shadow:none}
+.model-pricing input[type="range"]::-moz-range-progress{height:3px;background:var(--mp-line);border:0}
+.model-pricing input[type="range"]::-moz-range-thumb{width:12px;height:12px;border:0;border-radius:50%;background:var(--mp-accent);box-shadow:none}

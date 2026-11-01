@@ -142,7 +142,11 @@
                 expand: 'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',
                 collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5',
                 calendar: 'M4 5h16v16H4z M8 3v4 M16 3v4 M4 10h16 M8 14h2 M14 14h2 M8 17h2',
-                filter: 'M4 6h16 M7 12h10 M10 18h4'
+                filter: 'M4 6h16 M7 12h10 M10 18h4',
+                chat: 'M4 4h16v12H9l-5 4z M8 8h8 M8 12h5',
+                document: 'M5 3h9l5 5v13H5z M14 3v5h5 M8 12h8 M8 16h6',
+                agent: 'M8 3H3v5h5z M21 3h-5v5h5z M9 16h6v5H9z M5 8v4h14V8 M12 12v4',
+                volume: 'M13 2 4 14h7l-1 8 10-13h-7z'
             };
             var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
@@ -505,10 +509,12 @@
         var input = inField.box;
         var output = outField.box;
 
-        presetConfigs.forEach(function (conf) {
+        presetConfigs.forEach(function (conf, index) {
             var btn = el('button', undefined, 'mp-preset-btn');
             btn.type = 'button';
-            btn.append(el('strong', conf.name), el('span', conf.sub));
+            var presetText = el('span', undefined, 'mp-preset-text');
+            presetText.append(el('strong', conf.name), el('span', conf.sub));
+            btn.append(icon(['chat', 'document', 'agent', 'volume'][index]), presetText);
             btn.addEventListener('click', function () {
                 requests.value = conf.req; reqField.slider.value = Math.min(conf.req, 100000); reqField.display.textContent = numberFormat.format(conf.req);
                 input.value = conf.inT; inField.slider.value = Math.min(conf.inT, 32000); inField.display.textContent = numberFormat.format(conf.inT);
