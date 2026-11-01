@@ -151,11 +151,7 @@
         download.title = t('Download complete price dataset', 'संपूर्ण मूल्य डेटासेट डाउनलोड करें');
         download.setAttribute('aria-label', download.title);
         download.className = 'mp-download';
-        var topActions = el('div', undefined, 'mp-top-actions');
-        var quickCalculator = el('button', t('Estimate cost', 'लागत का अनुमान'), 'mp-quick-calc'); quickCalculator.type = 'button';
-        var quickChart = el('button', t('View chart', 'चार्ट देखें'), 'mp-quick-chart'); quickChart.type = 'button';
-        topActions.append(quickCalculator, quickChart, download);
-        top.append(heading, topActions);
+        top.append(heading);
 
         // 2. Primary Options Toolbar (Card)
         var toolbarCard = el('div', undefined, 'mp-toolbar-card');
@@ -295,7 +291,7 @@
 
         // 3. Search & Filter Toolbar
         var searchToolbar = el('div', undefined, 'mp-search-toolbar');
-        var searchWrapper = el('div', undefined, 'mp-search-wrapper');
+        var searchWrapper = el('div', undefined, 'mp-search-wrapper mp-table-header-search');
         var searchIcon = el('span', '', 'mp-search-icon'); searchIcon.setAttribute('aria-hidden', 'true');
         var search = el('input', undefined, 'mp-search-input');
         search.type = 'search';
@@ -348,7 +344,7 @@
         var resetFilters = el('button', t('Reset filters', 'फ़िल्टर रीसेट करें'), 'mp-reset');
         resetFilters.type = 'button';
 
-        searchToolbar.append(searchWrapper, sortWrapper, resetFilters);
+        searchToolbar.append(sortWrapper, resetFilters);
 
         // Filter Bar (Chips)
         var filterBar = el('div', undefined, 'mp-filter-bar');
@@ -420,7 +416,7 @@
 
         var sections = el('div', undefined, 'mp-sections');
         var tableArea = el('div', undefined, 'mp-table-area');
-        tableArea.append(toolbarCard, searchToolbar, filterDetails, feedback, sections);
+        tableArea.append(sections);
 
         var unitNote = el('p', '', 'mp-note mp-unit-note');
 
@@ -604,12 +600,55 @@
         }
         syncMetric();
 
-        root.replaceChildren(top, tableArea, unitNote, calculator, chart);
-        function revealPanel(panel) {
-            panel.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+        var commonControls = el('div', undefined, 'mp-common-controls');
+        commonControls.append(toolbarCard, searchToolbar, filterDetails, feedback);
+        var tabList = el('div', undefined, 'mp-tabs');
+        tabList.setAttribute('role', 'tablist');
+        tabList.setAttribute('aria-label', t('Pricing views', 'मूल्य दृश्य'));
+        function downloadFooter() {
+            var footer = el('div', undefined, 'mp-download-footer');
+            footer.append(download.cloneNode(true));
+            return footer;
         }
-        quickCalculator.addEventListener('click', function () { enableCalculator(true); revealPanel(calculator); modelSelect.focus({preventScroll:true}); }, {signal:context.signal});
-        quickChart.addEventListener('click', function () { revealPanel(chart); metricOptions.querySelector('button').focus({preventScroll:true}); }, {signal:context.signal});
+        var tablePanel = el('div', undefined, 'mp-view-panel'); tablePanel.append(tableArea, downloadFooter());
+        var chartPanel = el('div', undefined, 'mp-view-panel'); chartPanel.append(chart, downloadFooter());
+        var calculatorPanel = el('div', undefined, 'mp-view-panel'); calculatorPanel.append(calculator);
+        calculatorToggle.hidden = true;
+        var views = [
+            {key:'table', label:t('Table', 'तालिका'), panel:tablePanel},
+            {key:'chart', label:t('Chart', 'चार्ट'), panel:chartPanel},
+            {key:'calculator', label:t('Calculator', 'कैलकुलेटर'), panel:calculatorPanel}
+        ];
+        var activeView = 'table';
+        function selectView(key, focusTab) {
+            activeView = key;
+            views.forEach(function (view) {
+                var active = view.key === key;
+                view.panel.hidden = !active;
+                view.tab.setAttribute('aria-selected', String(active));
+                view.tab.tabIndex = active ? 0 : -1;
+                if (active && focusTab) view.tab.focus();
+            });
+            searchToolbar.hidden = key === 'calculator';
+            filterDetails.hidden = key === 'calculator';
+            if (key === 'calculator' && !calculatorEnabled) enableCalculator(true);
+        }
+        views.forEach(function (view, index) {
+            var id = 'mp-' + (hi ? 'hi' : 'en') + '-' + view.key;
+            var tab = el('button', view.label, 'mp-tab'); tab.type = 'button';
+            tab.id = id + '-tab'; tab.setAttribute('role', 'tab'); tab.setAttribute('aria-controls', id + '-panel');
+            view.panel.id = id + '-panel'; view.panel.setAttribute('role', 'tabpanel');
+            view.panel.setAttribute('aria-labelledby', tab.id); view.panel.tabIndex = 0;
+            view.tab = tab;
+            tab.addEventListener('click', function () { selectView(view.key, false); }, {signal:context.signal});
+            tab.addEventListener('keydown', function (event) {
+                var next = event.key === 'ArrowRight' ? (index + 1) % views.length : event.key === 'ArrowLeft' ? (index + views.length - 1) % views.length : event.key === 'Home' ? 0 : event.key === 'End' ? views.length - 1 : null;
+                if (next !== null) { event.preventDefault(); selectView(views[next].key, true); }
+            }, {signal:context.signal});
+            tabList.append(tab);
+        });
+        root.replaceChildren(top, tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote);
+        selectView('table', false);
         var archiveOpen = false;
 
         function chooseModel(event) {
@@ -617,9 +656,9 @@
             var row = event.target.closest('[data-model-id]');
             if (!row || !data.models.some(function (m) { return m.id === row.dataset.modelId && m.status === 'current'; })) return;
             modelSelect.value = row.dataset.modelId;
-            if (!calculatorEnabled) enableCalculator(true);
-            else render();
-            calculator.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+            selectView('calculator', false);
+            render();
+            modelSelect.focus({preventScroll:true});
         }
         sections.addEventListener('click', chooseModel, {signal: context.signal});
         bars.addEventListener('click', chooseModel, {signal: context.signal});
@@ -788,6 +827,7 @@
                             render();
                         }, {signal: context.signal});
                         th.append(btn);
+                        if (col.key === 'name' && group[0] === 'current') th.append(searchWrapper);
                     } else {
                         th.textContent = col.title;
                     }
