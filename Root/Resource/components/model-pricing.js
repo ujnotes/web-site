@@ -140,7 +140,9 @@
                 chart: 'M4 3v17h17 M8 16v-5 M13 16V6 M18 16V9',
                 calculator: 'M6 3h12v18H6z M9 7h6 M9 11h.01 M15 11h.01 M9 15h.01 M15 15h.01 M9 18h.01 M15 18h.01',
                 expand: 'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',
-                collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5'
+                collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5',
+                calendar: 'M4 5h16v16H4z M8 3v4 M16 3v4 M4 10h16 M8 14h2 M14 14h2 M8 17h2',
+                filter: 'M4 6h16 M7 12h10 M10 18h4'
             };
             var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
@@ -152,6 +154,9 @@
         }
 
         root.classList.add('model-pricing');
+        var disclaimer = root.querySelector('.mp-disclaimer');
+        if (!disclaimer && root.previousElementSibling?.tagName === 'P') disclaimer = root.previousElementSibling;
+        if (disclaimer) disclaimer.classList.add('mp-disclaimer');
         root.replaceChildren();
 
         // 1. Header & Title Area
@@ -222,6 +227,18 @@
         dateInput.required = true;
         dateInput.min = data.updated_on;
         var date = dateInput;
+        var defaultDate = date.value;
+        var dateControl = el('details', undefined, 'mp-date-control');
+        var dateButton = el('summary', undefined, 'mp-date-button'); dateButton.append(icon('calendar'));
+        dateButton.setAttribute('aria-label', t('Price date', 'मूल्य तारीख'));
+        var datePanel = el('div', undefined, 'mp-date-panel');
+        var resetDate = el('button', t('Reset to today', 'आज पर रीसेट करें'), 'mp-date-reset'); resetDate.type = 'button';
+        resetDate.addEventListener('click', function () { date.value = defaultDate; dateControl.open = false; render(); }, {signal:context.signal});
+        dateInput.addEventListener('change', function () { if (date.checkValidity()) dateControl.open = false; }, {signal:context.signal});
+        datePanel.append(fieldWrapper(t('Estimate date', 'अनुमान की तारीख'), dateInput), resetDate);
+        dateControl.append(dateButton, datePanel);
+        document.addEventListener('click', function (event) { if (!dateControl.contains(event.target)) dateControl.open = false; }, {signal:context.signal});
+        dateControl.addEventListener('keydown', function (event) { if (event.key === 'Escape') { dateControl.open = false; dateButton.focus(); } }, {signal:context.signal});
 
         var fxInput = el('input');
         fxInput.type = 'number';
@@ -233,12 +250,9 @@
         var fxWrapper = fieldWrapper(t('Exchange rate', 'विनिमय दर'), fxInput);
         fxWrapper.hidden = true;
 
-        toolbar.append(
-            fieldWrapper(t('Currency', 'मुद्रा'), currencySelect),
-            fieldWrapper(t('Service tier', 'सेवा प्रकार'), tierToggle),
-            fieldWrapper(t('Estimate date', 'अनुमान की तारीख'), dateInput),
-            fxWrapper
-        );
+        var currencyField = fieldWrapper(t('Currency', 'मुद्रा'), currencySelect); currencyField.classList.add('mp-currency-field');
+        var tierField = fieldWrapper(t('Service tier', 'सेवा प्रकार'), tierToggle); tierField.classList.add('mp-tier-field');
+        toolbar.append(currencyField, tierField, dateControl, fxWrapper);
 
         var fxStatus = el('div', undefined, 'mp-fx-status');
         fxStatus.textContent = t('Provider list rates are officially billed in USD.', 'प्रदाता दरें आधिकारिक रूप से USD में हैं.');
@@ -384,7 +398,7 @@
         var filterDetails = el('details', undefined, 'mp-filter-details');
         var filterSummary = el('summary', undefined, 'mp-filter-summary');
         var filterStatus = el('span', '', 'mp-filter-status');
-        filterSummary.append(el('span', t('Filter models', 'मॉडल फ़िल्टर करें')), filterStatus);
+        filterSummary.append(icon('filter'), el('span', t('Filter models', 'मॉडल फ़िल्टर करें')), filterStatus);
         filterDetails.append(filterSummary, filterBar);
 
         var feedback = el('div', undefined, 'mp-feedback');
@@ -611,7 +625,7 @@
         views.forEach(function (view, index) {
             var id = 'mp-' + (hi ? 'hi' : 'en') + '-' + view.key;
             var tab = el('button', undefined, 'mp-tab'); tab.type = 'button';
-            tab.append(icon(view.key), el('span', view.label));
+            tab.append(icon(view.key)); tab.setAttribute('aria-label', view.label); tab.title = view.label;
             tab.id = id + '-tab'; tab.setAttribute('role', 'tab'); tab.setAttribute('aria-controls', id + '-panel');
             view.panel.id = id + '-panel'; view.panel.setAttribute('role', 'tabpanel');
             view.panel.setAttribute('aria-labelledby', tab.id); view.panel.tabIndex = 0;
@@ -634,7 +648,9 @@
         root.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') { dismissedNoteId = document.activeElement?.getAttribute('aria-describedby'); hideModelNotes(); }
         }, {signal:context.signal});
-        root.replaceChildren(top, tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote, tooltipLayer);
+        root.replaceChildren(top);
+        if (disclaimer) root.append(disclaimer);
+        root.append(tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote, tooltipLayer);
         selectView('table', false);
         var archiveOpen = false;
         var expandedTables = new Set();
@@ -664,6 +680,10 @@
         }
 
         function render() {
+            var customDate = isDate(date.value) && date.value !== defaultDate;
+            dateControl.classList.toggle('mp-date-active', customDate);
+            dateButton.title = t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value);
+            dateButton.setAttribute('aria-label', t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value) + (customDate ? t(' (active)', ' (सक्रिय)') : ''));
             chartUnits.textContent = metric.value === 'cost' ? t('Estimated workload cost · ', 'अनुमानित कार्यभार लागत · ') + currency.value : currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर');
             inLegend.hidden = metric.value === 'output'; outLegend.hidden = metric.value === 'input';
             inLegend.lastChild.textContent = metric.value === 'cost' ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');

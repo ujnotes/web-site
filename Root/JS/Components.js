@@ -10,7 +10,7 @@
         if (!scripts.has(path)) {
             scripts.set(path, new Promise(function (resolve, reject) {
                 var script = document.createElement('script');
-                script.src = path + '?v=20261102-table-review';
+                script.src = path + '?v=20261102-icon-toolbar';
                 script.onload = resolve;
                 script.onerror = function () { script.remove(); scripts.delete(path); reject(new Error('Component could not load')); };
                 document.head.appendChild(script);
@@ -28,7 +28,7 @@
             if (!localAsset(script, 'js') || !localAsset(style, 'css')) throw new Error('Unknown component assets');
             if (!Array.from(document.querySelectorAll('link[data-component-style]')).some(function (link) { return link.getAttribute('href').split('?')[0] === style; })) {
                 var link = document.createElement('link');
-                link.rel = 'stylesheet'; link.href = style + '?v=20261102-table-review'; link.dataset.componentStyle = name;
+                link.rel = 'stylesheet'; link.href = style + '?v=20261102-icon-toolbar'; link.dataset.componentStyle = name;
                 document.head.appendChild(link);
             }
             await loadScript(script);

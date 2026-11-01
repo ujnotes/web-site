@@ -1445,3 +1445,38 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-model-tooltip .mp-condition-tag{font-size:12px;line-height:1.5}
 .model-pricing .mp-tooltip-layer{position:relative;z-index:1000}
 @media(max-width:768px){.model-pricing .mp-name-line{grid-template-columns:minmax(0,1fr);gap:.4rem}.model-pricing .mp-badges{width:100%}.model-pricing .mp-expand-table{width:30px;height:30px}}
+
+/* Compact icon navigation and balanced pricing toolbar. */
+.model-pricing .mp-heading{margin-bottom:.85rem}
+.model-pricing .mp-disclaimer{font-family:inherit;font-size:11px;color:var(--mp-muted);line-height:1.6;margin:.25rem 0 .6rem}
+.model-pricing .mp-tabs{justify-content:flex-start;gap:.5rem}
+.model-pricing .mp-tab{flex:none;width:44px;min-height:44px;padding:.6rem}
+.model-pricing .mp-tab .mp-ui-icon{width:20px;height:20px}
+.model-pricing .mp-common-controls{overflow:visible}
+.model-pricing .mp-table-options{grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:1rem}
+.model-pricing .mp-currency-field{width:min(100%,220px);justify-self:start}
+.model-pricing .mp-tier-field{width:min(100%,240px);justify-self:center}
+.model-pricing .mp-tier-field>span{text-align:center}
+.model-pricing .mp-table-options>.mp-field:not(.mp-currency-field):not(.mp-tier-field){grid-column:1/-1;max-width:240px}
+.model-pricing .mp-date-control{position:relative;justify-self:end;align-self:end}
+.model-pricing .mp-date-button{display:flex;align-items:center;justify-content:center;position:relative;width:40px;height:40px;list-style:none;cursor:pointer;border:1px solid var(--mp-line);border-radius:7px;background:var(--mp-bg);color:var(--mp-muted)}
+.model-pricing .mp-date-button::-webkit-details-marker{display:none}
+.model-pricing .mp-date-button .mp-ui-icon{width:19px;height:19px}
+.model-pricing .mp-date-control[open]>.mp-date-button,.model-pricing .mp-date-active>.mp-date-button{color:var(--mp-accent);border-color:var(--mp-accent);background:var(--mp-tint)}
+.model-pricing .mp-date-active>.mp-date-button::after{content:"";position:absolute;right:4px;top:4px;width:5px;height:5px;border-radius:50%;background:var(--mp-accent)}
+.model-pricing .mp-date-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:230px;padding:1rem;background:var(--mp-card);border:1px solid var(--mp-line);border-radius:9px;box-shadow:var(--mp-shadow-md)}
+.model-pricing .mp-date-reset{margin-top:.75rem;padding:.35rem 0;font-size:12px;color:var(--mp-accent)}
+.model-pricing .mp-filter-summary::before{display:none}
+.model-pricing .mp-filter-summary>.mp-ui-icon{color:var(--mp-accent);width:17px;height:17px}
+.model-pricing .mp-common-controls .mp-filter-details{border-radius:0 0 12px 12px}
+@media(max-width:768px){
+.model-pricing .mp-table-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.model-pricing .mp-table-options>.mp-field.mp-currency-field{grid-column:auto}
+.model-pricing .mp-tier-field{width:100%}
+.model-pricing .mp-tier-toggle button{padding:.35rem .15rem;font-size:10.5px}
+.model-pricing .mp-currency-field select{font-size:11px;padding:.55rem .4rem}
+.model-pricing .mp-date-button{width:36px;height:40px}
+.model-pricing .mp-field{font-size:11px}
+.model-pricing .mp-disclaimer{font-size:10px}
+}
+.model-pricing .mp-common-controls>.mp-toolbar-card{border-radius:12px 12px 0 0}
