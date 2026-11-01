@@ -1506,7 +1506,8 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-common-controls{border:0;border-radius:0;background:transparent;overflow:visible}
 .model-pricing .mp-common-controls>.mp-toolbar-card{margin:0;padding:1rem 1.25rem .75rem;border:1px solid var(--mp-line);border-radius:12px;box-shadow:var(--mp-shadow-sm)}
 .model-pricing .mp-common-controls .mp-filter-details{margin-top:.8rem;border:1px solid var(--mp-line);border-radius:12px;background:var(--mp-card);box-shadow:var(--mp-shadow-sm)}
-.model-pricing .mp-currency-field .mp-fx-status{position:absolute;left:calc(100% + .45rem);bottom:.55rem;margin:0}
+.model-pricing .mp-currency-field .mp-fx-status{position:absolute;left:calc(100% + .45rem);bottom:.55rem;margin:0;opacity:0;transition:opacity .15s ease}
+.model-pricing .mp-currency-field:hover .mp-fx-status,.model-pricing .mp-currency-field:focus-within .mp-fx-status{opacity:1}
 .model-pricing .mp-filter-group{position:relative}
 .model-pricing .mp-filter-restore{
   align-self:center;
