@@ -1096,8 +1096,9 @@ html.dark-mode .model-pricing tbody th {
 .model-pricing .mp-chart-legend {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1.25rem;
-  margin: 0.5rem 0 1.25rem;
+  margin: 1.25rem 0 0;
   font-size: 12px;
   color: var(--mp-muted);
 }
