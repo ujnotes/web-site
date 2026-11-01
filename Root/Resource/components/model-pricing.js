@@ -502,6 +502,7 @@
             modelSelect.value = data.workload.model_id;
         }
         modelSelectLabel.append(modelSelect);
+        modelSelectLabel.append(el('span', undefined, 'mp-calc-model-caret'));
         calcForm.append(modelSelectLabel);
 
         var calcGrid = el('div', undefined, 'mp-calc-grid');

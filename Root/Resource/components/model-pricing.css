@@ -1508,6 +1508,32 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-common-controls .mp-filter-details{margin-top:.8rem;border:1px solid var(--mp-line);border-radius:12px;background:var(--mp-card);box-shadow:var(--mp-shadow-sm)}
 .model-pricing .mp-currency-field .mp-fx-status{position:absolute;left:calc(100% + .45rem);bottom:.55rem;margin:0;opacity:0;transition:opacity .15s ease}
 .model-pricing .mp-currency-field:hover .mp-fx-status,.model-pricing .mp-currency-field:focus-within .mp-fx-status{opacity:1}
+.model-pricing .mp-calc-model-row{position:relative}
+.model-pricing .mp-calc-model-row .mp-select{
+  padding:.45rem 1.45rem .45rem 0;
+  appearance:none;
+  -webkit-appearance:none;
+  border:0;
+  border-bottom:1px solid var(--mp-line);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.model-pricing .mp-calc-model-row .mp-select:hover{border-bottom-color:var(--mp-accent)}
+.model-pricing .mp-calc-model-row .mp-select:focus{border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
+.model-pricing .mp-calc-model-caret{position:absolute;right:.35rem;bottom:.9rem;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);color:var(--mp-muted);opacity:0;pointer-events:none;transition:opacity .15s ease,color .15s ease}
+.model-pricing .mp-calc-model-row:hover .mp-calc-model-caret,.model-pricing .mp-calc-model-row:focus-within .mp-calc-model-caret{opacity:1;color:var(--mp-accent)}
+.model-pricing .mp-slider-card input[type="number"]{
+  min-height:38px;
+  padding:.45rem 0;
+  border:0;
+  border-bottom:1px solid var(--mp-line);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.model-pricing .mp-slider-card input[type="number"]:hover{border-bottom-color:var(--mp-accent)}
+.model-pricing .mp-slider-card input[type="number"]:focus{border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
 .model-pricing .mp-filter-group{position:relative}
 .model-pricing .mp-filter-restore{
   align-self:center;
