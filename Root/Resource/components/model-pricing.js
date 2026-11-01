@@ -134,6 +134,22 @@
         function sourceLink(label, url) {
             var a = el('a', label); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; return a;
         }
+        function icon(name) {
+            var paths = {
+                table: 'M3 3h18v18H3z M3 9h18 M9 9v12 M3 15h18',
+                chart: 'M4 3v17h17 M8 16v-5 M13 16V6 M18 16V9',
+                calculator: 'M6 3h12v18H6z M9 7h6 M9 11h.01 M15 11h.01 M9 15h.01 M15 15h.01 M9 18h.01 M15 18h.01',
+                expand: 'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',
+                collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5'
+            };
+            var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '1.7');
+            svg.setAttribute('stroke-linecap', 'round'); svg.setAttribute('stroke-linejoin', 'round');
+            svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false'); svg.classList.add('mp-ui-icon');
+            var path = document.createElementNS('http://www.w3.org/2000/svg', 'path'); path.setAttribute('d', paths[name]); svg.append(path);
+            return svg;
+        }
 
         root.classList.add('model-pricing');
         root.replaceChildren();
@@ -141,10 +157,9 @@
         // 1. Header & Title Area
         var top = el('div', undefined, 'mp-heading');
         var heading = el('div', undefined, 'mp-heading-text');
-        var eyebrow = el('span', t('PRICING WORKSPACE', 'मूल्य तुलना'), 'mp-eyebrow');
         var h2 = el('h2', t('Compare rates. Plan your spend.', 'दरें तुलना करें। खर्च की योजना बनाएँ।'));
         var subtitle = el('p', t('Explore API prices by model and provider, then estimate your own workload.', 'मॉडल और प्रदाता की API दरें देखें, फिर अपने काम की लागत का अनुमान लगाएँ।'));
-        heading.append(eyebrow, h2, subtitle);
+        heading.append(h2, subtitle);
 
         var download = sourceLink(t('↓ Download data', '↓ डेटा डाउनलोड करें'), url);
         download.setAttribute('download', 'model-pricing.json');
@@ -290,7 +305,6 @@
         fx.disabled = true;
 
         // 3. Search & Filter Toolbar
-        var searchToolbar = el('div', undefined, 'mp-search-toolbar');
         var searchWrapper = el('div', undefined, 'mp-search-wrapper mp-table-header-search');
         var searchIcon = el('span', '', 'mp-search-icon'); searchIcon.setAttribute('aria-hidden', 'true');
         var search = el('input', undefined, 'mp-search-input');
@@ -315,37 +329,6 @@
 
         var currentSortKey = 'input';
         var currentSortDirection = 'asc';
-        var sortWrapper = el('label', undefined, 'mp-field mp-sort-wrapper');
-        var sortSelect = el('select', undefined, 'mp-sort-select');
-        sortSelect.setAttribute('aria-label', t('Sort models by column and direction', 'मॉडल क्रमबद्ध करें'));
-        var sortOptions = [
-            ['cost:asc', t('Total cost (Lowest first) ↑', 'कुल लागत (कम से अधिक) ↑')],
-            ['cost:desc', t('Total cost (Highest first) ↓', 'कुल लागत (अधिक से कम) ↓')],
-            ['input:asc', t('Input price (Lowest first) ↑', 'इनपुट दर (कम से अधिक) ↑')],
-            ['input:desc', t('Input price (Highest first) ↓', 'इनपुट दर (अधिक से कम) ↓')],
-            ['output:asc', t('Output price (Lowest first) ↑', 'आउटपुट दर (कम से अधिक) ↑')],
-            ['output:desc', t('Output price (Highest first) ↓', 'आउटपुट दर (अधिक से कम) ↓')],
-            ['name:asc', t('Model name (A–Z)', 'मॉडल नाम (A–Z)')],
-            ['name:desc', t('Model name (Z–A)', 'मॉडल नाम (Z–A)')],
-            ['family:asc', t('Model family (A–Z)', 'मॉडल परिवार (A–Z)')],
-            ['provider:asc', t('Provider (A–Z)', 'प्रदाता (A–Z)')]
-        ];
-        sortOptions.forEach(function (item) {
-            var opt = el('option', item[1]); opt.value = item[0]; sortSelect.append(opt);
-        });
-        sortWrapper.append(sortSelect);
-        sortSelect.addEventListener('change', function () {
-            var parts = sortSelect.value.split(':');
-            currentSortKey = parts[0];
-            currentSortDirection = parts[1];
-            render();
-        }, {signal: context.signal});
-
-        var resetFilters = el('button', t('Reset filters', 'फ़िल्टर रीसेट करें'), 'mp-reset');
-        resetFilters.type = 'button';
-
-        searchToolbar.append(sortWrapper, resetFilters);
-
         // Filter Bar (Chips)
         var filterBar = el('div', undefined, 'mp-filter-bar');
         var familyFieldset = el('fieldset', undefined, 'mp-filter-group mp-families');
@@ -403,13 +386,6 @@
         var filterStatus = el('span', '', 'mp-filter-status');
         filterSummary.append(el('span', t('Filter models', 'मॉडल फ़िल्टर करें')), filterStatus);
         filterDetails.append(filterSummary, filterBar);
-
-        resetFilters.addEventListener('click', function () {
-            search.value = '';
-            searchClear.hidden = true;
-            familyButtons.concat(providerButtons).forEach(function (button) { button.setAttribute('aria-pressed', 'true'); });
-            render();
-        }, {signal: context.signal});
 
         var feedback = el('div', undefined, 'mp-feedback');
         feedback.setAttribute('role', 'status');
@@ -601,7 +577,7 @@
         syncMetric();
 
         var commonControls = el('div', undefined, 'mp-common-controls');
-        commonControls.append(toolbarCard, searchToolbar, filterDetails, feedback);
+        commonControls.append(toolbarCard, filterDetails, feedback);
         var tabList = el('div', undefined, 'mp-tabs');
         tabList.setAttribute('role', 'tablist');
         tabList.setAttribute('aria-label', t('Pricing views', 'मूल्य दृश्य'));
@@ -629,13 +605,13 @@
                 view.tab.tabIndex = active ? 0 : -1;
                 if (active && focusTab) view.tab.focus();
             });
-            searchToolbar.hidden = key === 'calculator';
             filterDetails.hidden = key === 'calculator';
             if (key === 'calculator' && !calculatorEnabled) enableCalculator(true);
         }
         views.forEach(function (view, index) {
             var id = 'mp-' + (hi ? 'hi' : 'en') + '-' + view.key;
-            var tab = el('button', view.label, 'mp-tab'); tab.type = 'button';
+            var tab = el('button', undefined, 'mp-tab'); tab.type = 'button';
+            tab.append(icon(view.key), el('span', view.label));
             tab.id = id + '-tab'; tab.setAttribute('role', 'tab'); tab.setAttribute('aria-controls', id + '-panel');
             view.panel.id = id + '-panel'; view.panel.setAttribute('role', 'tabpanel');
             view.panel.setAttribute('aria-labelledby', tab.id); view.panel.tabIndex = 0;
@@ -647,9 +623,21 @@
             }, {signal:context.signal});
             tabList.append(tab);
         });
-        root.replaceChildren(top, tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote);
+        var tooltipLayer = el('div', undefined, 'mp-tooltip-layer');
+        var notePositioners = new Map(), dismissedNoteId = null;
+        function hideModelNotes() { Array.from(tooltipLayer.children).forEach(function (note) { note.hidden = true; }); }
+        global.addEventListener('scroll', function () {
+            hideModelNotes();
+            var focusedNote = document.activeElement?.getAttribute('aria-describedby');
+            if (focusedNote !== dismissedNoteId && notePositioners.has(focusedNote)) notePositioners.get(focusedNote)();
+        }, {capture:true, signal:context.signal});
+        root.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') { dismissedNoteId = document.activeElement?.getAttribute('aria-describedby'); hideModelNotes(); }
+        }, {signal:context.signal});
+        root.replaceChildren(top, tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote, tooltipLayer);
         selectView('table', false);
         var archiveOpen = false;
+        var expandedTables = new Set();
 
         function chooseModel(event) {
             if (event.target.closest('a')) return;
@@ -683,10 +671,6 @@
             Array.from(metricOptions.children).forEach(function (button) {
                 if (button.dataset.metric !== 'cost') button.textContent = button.dataset.metric === 'input' ? t('Input rate', 'इनपुट दर') : t('Output rate', 'आउटपुट दर');
             });
-            sortSelect.querySelector('option[value="cost:asc"]').hidden = !calculatorEnabled;
-            sortSelect.querySelector('option[value="cost:desc"]').hidden = !calculatorEnabled;
-            sortSelect.value = currentSortKey + ':' + currentSortDirection;
-
             var searchFocused = document.activeElement === search;
             var caret = searchFocused ? search.selectionStart : null;
             var s = state();
@@ -703,6 +687,8 @@
 
             summary.replaceChildren();
             sections.replaceChildren();
+            tooltipLayer.replaceChildren();
+            notePositioners.clear();
 
             var query = search.value.trim().toLowerCase();
             var enabledFamilies = new Set(familyButtons.filter(function (button) { return button.getAttribute('aria-pressed') === 'true'; }).map(function (button) { return button.dataset.family; }));
@@ -779,6 +765,25 @@
                 scroller.tabIndex = 0;
                 scroller.setAttribute('role', 'region');
                 scroller.setAttribute('aria-label', group[1]);
+                scroller.id = 'mp-table-' + (hi ? 'hi' : 'en') + '-' + group[0];
+                scroller.classList.toggle('mp-table-expanded', expandedTables.has(group[0]));
+                if (!isArchive) {
+                    var expandButton = el('button', undefined, 'mp-expand-table'); expandButton.type = 'button';
+                    expandButton.setAttribute('aria-controls', scroller.id);
+                    function syncExpansion() {
+                        var expanded = expandedTables.has(group[0]);
+                        scroller.classList.toggle('mp-table-expanded', expanded);
+                        expandButton.setAttribute('aria-expanded', String(expanded));
+                        expandButton.title = expanded ? t('Collapse table', 'तालिका छोटी करें') : t('Expand full table', 'पूरी तालिका फैलाएँ');
+                        expandButton.setAttribute('aria-label', expandButton.title);
+                        expandButton.replaceChildren(icon(expanded ? 'collapse' : 'expand'));
+                    }
+                    expandButton.addEventListener('click', function () {
+                        if (expandedTables.has(group[0])) expandedTables.delete(group[0]); else expandedTables.add(group[0]);
+                        syncExpansion();
+                    }, {signal:context.signal});
+                    syncExpansion(); h.append(expandButton);
+                }
 
                 var table = el('table');
                 var caption = el('caption', group[1] + ' — ' + currency.value + t(' per 1 million tokens', ' प्रति 10 लाख टोकन'));
@@ -819,10 +824,6 @@
                             } else {
                                 currentSortKey = col.key;
                                 currentSortDirection = 'asc';
-                            }
-                            var optVal = currentSortKey + ':' + currentSortDirection;
-                            if (sortSelect.querySelector('option[value="' + optVal + '"]')) {
-                                sortSelect.value = optVal;
                             }
                             render();
                         }, {signal: context.signal});
@@ -868,7 +869,7 @@
                     nameLine.append(badges);
                     name.append(nameLine);
 
-                    // Visible Conditions and Badges
+                    // Conditions are available on hover and keyboard focus.
                     var conditions = el('div', undefined, 'mp-conditions');
                     var longPrompt = s && model.context_tiers?.some(function (tier) { return contextApplies(tier, s.input); });
                     if (longPrompt) {
@@ -892,7 +893,28 @@
                     if (next) {
                         conditions.append(el('span', money(next.input) + ' / ' + money(next.output) + t(' from ', ' से ') + displayDate(next.effective_from), 'mp-condition-tag'));
                     }
-                    if (conditions.children.length) name.append(conditions);
+                    if (conditions.children.length) {
+                        conditions.classList.add('mp-model-tooltip');
+                        conditions.id = 'mp-notes-' + (hi ? 'hi' : 'en') + '-' + model.id;
+                        conditions.setAttribute('role', 'tooltip');
+                        var noteTrigger = nameLine.querySelector('.mp-model-pick') || nameLine.querySelector('strong');
+                        noteTrigger.setAttribute('aria-describedby', conditions.id);
+                        if (model.status !== 'current') noteTrigger.tabIndex = 0;
+                        conditions.hidden = true;
+                        tooltipLayer.append(conditions);
+                        function showNotes() {
+                            dismissedNoteId = null;
+                            hideModelNotes(); conditions.hidden = false;
+                            var rect = name.getBoundingClientRect();
+                            conditions.style.left = Math.max(12, Math.min(rect.left, global.innerWidth - conditions.offsetWidth - 12)) + 'px';
+                            conditions.style.top = (rect.bottom + conditions.offsetHeight + 8 > global.innerHeight ? Math.max(12, rect.top - conditions.offsetHeight - 8) : rect.bottom + 8) + 'px';
+                        }
+                        notePositioners.set(conditions.id, showNotes);
+                        name.addEventListener('pointerenter', showNotes, {signal:context.signal});
+                        name.addEventListener('pointerleave', function () { conditions.hidden = true; }, {signal:context.signal});
+                        name.addEventListener('focusin', showNotes, {signal:context.signal});
+                        name.addEventListener('focusout', function () { conditions.hidden = true; }, {signal:context.signal});
+                    }
 
                     tr.append(name);
 
@@ -1056,7 +1078,7 @@
         var pending;
         function update() { clearTimeout(pending); pending = setTimeout(render, 120); }
 
-        [calcForm, toolbar, search, sortSelect, filterBar].forEach(function (node) {
+        [calcForm, toolbar, search, filterBar].forEach(function (node) {
             if (node) {
                 node.addEventListener('input', update, {signal: context.signal});
                 node.addEventListener('change', update, {signal: context.signal});

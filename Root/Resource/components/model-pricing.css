@@ -1431,3 +1431,17 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-table-scroll thead th:first-child{min-width:170px}
 .model-pricing .mp-download-footer{padding:.6rem .15rem}
 }
+
+/* Review refinements: compact model rows and accessible table controls. */
+.model-pricing .mp-ui-icon{display:block;width:17px;height:17px;flex:none}
+.model-pricing .mp-tab{display:inline-flex;align-items:center;justify-content:center;gap:.5rem}
+.model-pricing .mp-name-line{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.5rem;width:100%}
+.model-pricing .mp-badges{margin-left:auto;justify-content:flex-end;justify-self:end;flex-wrap:nowrap}
+.model-pricing .mp-model-pick{overflow-wrap:anywhere}
+.model-pricing .mp-expand-table{display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:32px;border:1px solid var(--mp-line);border-radius:6px;margin-left:.25rem;color:var(--mp-muted);background:transparent}
+.model-pricing .mp-expand-table:hover{color:var(--mp-accent);border-color:var(--mp-accent);background:var(--mp-tint)}
+.model-pricing .mp-table-scroll.mp-table-expanded{max-height:none;overflow-y:hidden}
+.model-pricing .mp-model-tooltip{position:fixed;z-index:1000;width:max-content;max-width:min(340px,calc(100vw - 24px));padding:.7rem .85rem;margin:0;border:1px solid var(--mp-line);border-radius:8px;background:var(--mp-card);color:var(--mp-ink);box-shadow:0 5px 20px #0003;text-align:left;pointer-events:none}
+.model-pricing .mp-model-tooltip .mp-condition-tag{font-size:12px;line-height:1.5}
+.model-pricing .mp-tooltip-layer{position:relative;z-index:1000}
+@media(max-width:768px){.model-pricing .mp-name-line{grid-template-columns:minmax(0,1fr);gap:.4rem}.model-pricing .mp-badges{width:100%}.model-pricing .mp-expand-table{width:30px;height:30px}}
