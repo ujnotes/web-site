@@ -142,6 +142,7 @@
                 expand: 'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',
                 collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5',
                 calendar: 'M4 5h16v16H4z M8 3v4 M16 3v4 M4 10h16 M8 14h2 M14 14h2 M8 17h2',
+                search: 'm21 21-4.35-4.35 M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',
                 filter: 'M4 6h16 M7 12h10 M10 18h4',
                 chat: 'M4 4h16v12H9l-5 4z M8 8h8 M8 12h5',
                 document: 'M5 3h9l5 5v13H5z M14 3v5h5 M8 12h8 M8 16h6',
@@ -324,7 +325,12 @@
 
         // 3. Search & Filter Toolbar
         var searchWrapper = el('div', undefined, 'mp-search-wrapper mp-table-header-search');
-        var searchIcon = el('span', '', 'mp-search-icon'); searchIcon.setAttribute('aria-hidden', 'true');
+        var searchToggle = el('button', undefined, 'mp-search-toggle');
+        searchToggle.type = 'button';
+        searchToggle.setAttribute('aria-label', t('Search models, families or providers', 'मॉडल, परिवार या प्रदाता खोजें'));
+        searchToggle.title = searchToggle.getAttribute('aria-label');
+        searchToggle.setAttribute('aria-expanded', 'false');
+        searchToggle.append(icon('search'));
         var search = el('input', undefined, 'mp-search-input');
         search.type = 'search';
         search.placeholder = t('Search models, families, providers…', 'मॉडल, परिवार, प्रदाता खोजें…');
@@ -343,7 +349,20 @@
         search.addEventListener('input', function () {
             searchClear.hidden = !search.value;
         }, {signal: context.signal});
-        searchWrapper.append(searchIcon, search, searchClear);
+        searchToggle.addEventListener('click', function () {
+            var open = !searchWrapper.classList.contains('mp-search-open');
+            searchWrapper.classList.toggle('mp-search-open', open);
+            searchToggle.setAttribute('aria-expanded', String(open));
+            if (open) search.focus();
+        }, {signal: context.signal});
+        search.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && !search.value) {
+                searchWrapper.classList.remove('mp-search-open');
+                searchToggle.setAttribute('aria-expanded', 'false');
+                searchToggle.focus();
+            }
+        }, {signal: context.signal});
+        searchWrapper.append(searchToggle, search, searchClear);
 
         var currentSortKey = 'input';
         var currentSortDirection = 'asc';
@@ -398,6 +417,21 @@
             (name === 'openrouter' ? resellerFieldset : providerFieldset).append(button);
             return button;
         });
+        function addGroupRestore(fieldset, buttons, label) {
+            var restore = el('button', t('Restore', 'पुनर्स्थापित करें'), 'mp-filter-restore');
+            restore.type = 'button';
+            restore.title = t('Restore all ', 'सभी पुनर्स्थापित करें ') + label;
+            restore.setAttribute('aria-label', restore.title);
+            restore.addEventListener('click', function () {
+                buttons.forEach(function (button) { button.setAttribute('aria-pressed', 'true'); });
+                render();
+            }, {signal: context.signal});
+            fieldset.append(restore);
+            return restore;
+        }
+        var providerRestore = addGroupRestore(providerFieldset, providerButtons.filter(function (button) { return button.dataset.provider !== 'openrouter'; }), t('selling providers', 'विक्रेता प्रदाता'));
+        var familyRestore = addGroupRestore(familyFieldset, familyButtons, t('model families', 'मॉडल परिवार'));
+        var resellerRestore = addGroupRestore(resellerFieldset, providerButtons.filter(function (button) { return button.dataset.provider === 'openrouter'; }), t('resellers and routers', 'पुनर्विक्रेता और रूटर'));
         filterBar.append(providerFieldset, familyFieldset, resellerFieldset);
         var filterDetails = el('details', undefined, 'mp-filter-details');
         var filterSummary = el('summary', undefined, 'mp-filter-summary');
@@ -719,6 +753,11 @@
             var query = search.value.trim().toLowerCase();
             var enabledFamilies = new Set(familyButtons.filter(function (button) { return button.getAttribute('aria-pressed') === 'true'; }).map(function (button) { return button.dataset.family; }));
             var enabledProviders = new Set(providerButtons.filter(function (button) { return button.getAttribute('aria-pressed') === 'true'; }).map(function (button) { return button.dataset.provider; }));
+            [[providerRestore, providerButtons.filter(function (button) { return button.dataset.provider !== 'openrouter'; })], [familyRestore, familyButtons], [resellerRestore, providerButtons.filter(function (button) { return button.dataset.provider === 'openrouter'; })]].forEach(function (group) {
+                var inactive = group[1].some(function (button) { return button.getAttribute('aria-pressed') !== 'true'; });
+                group[0].disabled = !inactive;
+                group[0].hidden = !inactive;
+            });
             var filterCount = familyButtons.length - enabledFamilies.size + providerButtons.length - enabledProviders.size;
             filterStatus.textContent = filterCount ? filterCount + t(' excluded', ' बाहर') : t('All providers & families', 'सभी प्रदाता और परिवार');
 

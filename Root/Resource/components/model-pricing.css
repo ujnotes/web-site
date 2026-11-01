@@ -1481,6 +1481,61 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 }
 .model-pricing .mp-common-controls>.mp-toolbar-card{border-radius:12px 12px 0 0}
 
+/* Keep the shared controls quiet until they need attention. */
+.model-pricing .mp-currency-field .mp-select{
+  min-height:38px;
+  padding:.45rem 1.45rem .45rem 0;
+  border:0;
+  border-bottom:1px solid var(--mp-line);
+  border-radius:0;
+  background-color:transparent;
+  box-shadow:none;
+}
+.model-pricing .mp-currency-field .mp-select:hover{border-bottom-color:var(--mp-accent)}
+.model-pricing .mp-currency-field .mp-select:focus{border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
+.model-pricing .mp-filter-group{position:relative}
+.model-pricing .mp-filter-restore{
+  align-self:center;
+  margin-left:auto;
+  padding:.15rem 0;
+  border:0;
+  border-bottom:1px solid currentColor;
+  border-radius:0;
+  background:transparent;
+  color:var(--mp-accent);
+  font-size:10.5px;
+  font-weight:600;
+  line-height:1.35;
+}
+.model-pricing .mp-filter-restore:hover{color:var(--mp-ink)}
+.model-pricing .mp-filter-restore:disabled{display:none}
+.model-pricing .mp-table-scroll thead th:first-child{position:sticky}
+.model-pricing .mp-table-header-search{display:inline-flex;position:absolute;right:.45rem;top:50%;flex:none;align-items:center;margin:0;transform:translateY(-50%);vertical-align:middle}
+.model-pricing .mp-table-header-search .mp-search-toggle{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:30px;
+  padding:0;
+  border:0;
+  border-radius:5px;
+  background:transparent;
+  color:var(--mp-muted);
+  order:3;
+}
+.model-pricing .mp-table-header-search .mp-search-toggle:hover,.model-pricing .mp-table-header-search.mp-search-open .mp-search-toggle{color:var(--mp-accent);background:var(--mp-tint)}
+.model-pricing .mp-table-header-search .mp-search-toggle .mp-ui-icon{width:16px;height:16px}
+.model-pricing .mp-table-header-search .mp-search-input,.model-pricing .mp-table-header-search .mp-search-clear{display:none}
+.model-pricing .mp-table-header-search.mp-search-open{width:min(190px,calc(100% - .9rem));margin:0}
+.model-pricing .mp-table-header-search.mp-search-open .mp-search-input{display:block;order:1;min-width:0;width:100%;height:30px;padding:.25rem 1.8rem .25rem .45rem;border:0;border-bottom:1px solid var(--mp-line);border-radius:0;background:transparent;font-size:11px}
+.model-pricing .mp-table-header-search.mp-search-open .mp-search-input:focus{border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
+.model-pricing .mp-table-header-search.mp-search-open .mp-search-clear{display:inline-flex;right:31px;width:22px;height:22px}
+@media(max-width:768px){
+  .model-pricing .mp-currency-field .mp-select{padding-left:0;padding-right:1.1rem}
+  .model-pricing .mp-table-header-search{flex-basis:auto}
+}
+
 /* Workload presets and plain slider tracks. */
 .model-pricing .mp-preset-btn{flex-direction:row;align-items:center;gap:.75rem}
 .model-pricing .mp-preset-btn>.mp-ui-icon{width:21px;height:21px;color:var(--mp-accent)}
