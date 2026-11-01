@@ -587,7 +587,7 @@
         chartHeader.append(el('h3', t('Graphical Comparison', 'चित्रात्मक तुलना')));
 
         var metric = el('select');
-        [['input', t('Input rate ($/1M)', 'इनपुट दर')], ['output', t('Output rate ($/1M)', 'आउटपुट दर')], ['cost', t('Estimated Total Cost', 'अनुमानित कुल लागत')]].forEach(function (entry) {
+        [['input', t('Input rate ($/1M)', 'इनपुट दर')], ['output', t('Output rate ($/1M)', 'आउटपुट दर')], ['typical', t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण')], ['cost', t('Estimated Total Cost', 'अनुमानित कुल लागत')]].forEach(function (entry) {
             var option = el('option', entry[1]); option.value = entry[0]; metric.append(option);
         });
         metric.hidden = true;
@@ -724,12 +724,12 @@
             dateControl.classList.toggle('mp-date-active', customDate);
             dateButton.title = t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value);
             dateButton.setAttribute('aria-label', t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value) + (customDate ? t(' (active)', ' (सक्रिय)') : ''));
-            chartUnits.textContent = metric.value === 'cost' ? t('Estimated workload cost · ', 'अनुमानित कार्यभार लागत · ') + currency.value : currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर');
+            chartUnits.textContent = metric.value === 'cost' ? t('Estimated workload cost · ', 'अनुमानित कार्यभार लागत · ') + currency.value : metric.value === 'typical' ? t('Typical 3:1 input-to-output mix · ', 'सामान्य 3:1 इनपुट-आउटपुट मिश्रण · ') + currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर') : currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर');
             inLegend.hidden = metric.value === 'output'; outLegend.hidden = metric.value === 'input';
-            inLegend.lastChild.textContent = metric.value === 'cost' ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');
-            outLegend.lastChild.textContent = metric.value === 'cost' ? t('Output share', 'आउटपुट हिस्सा') : t('Output rate', 'आउटपुट दर');
+            inLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');
+            outLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Output share', 'आउटपुट हिस्सा') : t('Output rate', 'आउटपुट दर');
             Array.from(metricOptions.children).forEach(function (button) {
-                if (button.dataset.metric !== 'cost') button.textContent = button.dataset.metric === 'input' ? t('Input rate', 'इनपुट दर') : t('Output rate', 'आउटपुट दर');
+                if (button.dataset.metric !== 'cost') button.textContent = button.dataset.metric === 'input' ? t('Input rate', 'इनपुट दर') : button.dataset.metric === 'output' ? t('Output rate', 'आउटपुट दर') : t('Typical 3:1 mix', 'सामान्य 3:1 मिश्रण');
             });
             var searchFocused = document.activeElement === search;
             var caret = searchFocused ? search.selectionStart : null;
@@ -1067,13 +1067,13 @@
 
             // Graphical Bars
             bars.replaceChildren();
-            var chartModels = filtered.filter(function (m) { return estimates.get(m.id); }).sort(function (a, b) {
-                return compareModels(a, b, metric.value, 'desc', estimates);
-            });
             var chartValue = function (m) {
                 var value = estimates.get(m.id);
-                return metric.value === 'cost' ? value.total : value.price[metric.value];
+                return metric.value === 'cost' ? value.total : metric.value === 'typical' ? (value.price.input * 0.75) + (value.price.output * 0.25) : value.price[metric.value];
             };
+            var chartModels = filtered.filter(function (m) { return estimates.get(m.id); }).sort(function (a, b) {
+                return chartValue(b) - chartValue(a) || a.name.localeCompare(b.name);
+            });
             var maximum = Math.max(0, ...chartModels.map(chartValue));
 
             if (!chartModels.length) {
@@ -1101,6 +1101,9 @@
                 if (metric.value === 'cost') {
                     inputCost = (s.requests * s.input * breakdown.price.input) / 1000000;
                     outputCost = (s.requests * s.output * breakdown.price.output) / 1000000;
+                } else if (metric.value === 'typical') {
+                    inputCost = breakdown.price.input * 0.75;
+                    outputCost = breakdown.price.output * 0.25;
                 } else {
                     inputCost = breakdown.price.input;
                     outputCost = breakdown.price.output;

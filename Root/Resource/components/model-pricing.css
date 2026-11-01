@@ -1088,9 +1088,10 @@ html.dark-mode .model-pricing tbody th {
 }
 
 .model-pricing .mp-metric-toggle {
-  width: max-content;
+  width: min(100%, 430px);
   max-width: 100%;
 }
+.model-pricing .mp-metric-toggle button{min-height:44px;padding:.45rem .9rem;white-space:nowrap}
 
 .model-pricing .mp-chart-legend {
   display: flex;
