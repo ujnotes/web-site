@@ -44,6 +44,7 @@
   font-size: 14px;
   line-height: 1.5;
   min-width: 0;
+  color-scheme: light;
 }
 
 html.dark-mode .model-pricing {
@@ -78,6 +79,12 @@ html.dark-mode .model-pricing {
   --mp-brand-openrouter-bg: #4c1d9544;
 
   color-scheme: dark;
+}
+
+/* Native select popovers follow the active document theme where the browser allows it. */
+.model-pricing select option {
+  background: var(--mp-card);
+  color: var(--mp-ink);
 }
 
 .model-pricing * {
