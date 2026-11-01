@@ -6,6 +6,13 @@ RewriteBase /
 RewriteEngine On
 DirectorySlash Off
 
+# Local component previews should revalidate changed scripts, styles and data.
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} =~ m#^/(resource/(components|data)/|JS/Components\.js$)#i">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </If>
+</IfModule>
+
 # Canonical AJAX payloads. Must run before File/Site catch-alls and before
 # Apache could negotiate a sibling directory named like the slug.
 # Component datasets are static resources, not article AJAX payloads.

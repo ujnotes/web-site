@@ -10,7 +10,7 @@
         if (!scripts.has(path)) {
             scripts.set(path, new Promise(function (resolve, reject) {
                 var script = document.createElement('script');
-                script.src = path;
+                script.src = path + '?v=20261101';
                 script.onload = resolve;
                 script.onerror = function () { script.remove(); scripts.delete(path); reject(new Error('Component could not load')); };
                 document.head.appendChild(script);
@@ -26,9 +26,9 @@
             var name = root.dataset.component;
             var script = root.dataset.componentScript, style = root.dataset.componentStyle;
             if (!localAsset(script, 'js') || !localAsset(style, 'css')) throw new Error('Unknown component assets');
-            if (!Array.from(document.querySelectorAll('link[data-component-style]')).some(function (link) { return link.getAttribute('href') === style; })) {
+            if (!Array.from(document.querySelectorAll('link[data-component-style]')).some(function (link) { return link.getAttribute('href').split('?')[0] === style; })) {
                 var link = document.createElement('link');
-                link.rel = 'stylesheet'; link.href = style; link.dataset.componentStyle = name;
+                link.rel = 'stylesheet'; link.href = style + '?v=20261101'; link.dataset.componentStyle = name;
                 document.head.appendChild(link);
             }
             await loadScript(script);
