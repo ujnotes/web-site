@@ -189,14 +189,14 @@
 
         var currencySelect = el('select', undefined, 'mp-select');
         [
-            ['USD', 'USD — US Dollar ($)'],
-            ['INR', 'INR — Indian Rupee (₹)'],
-            ['EUR', 'EUR — Euro (€)'],
-            ['GBP', 'GBP — British Pound (£)'],
-            ['JPY', 'JPY — Japanese Yen (¥)'],
-            ['NPR', 'NPR — Nepalese Rupee (रू)'],
-            ['CAD', 'CAD — Canadian Dollar ($)'],
-            ['AUD', 'AUD — Australian Dollar ($)']
+            ['USD', '$ USD — US Dollar'],
+            ['INR', '₹ INR — Indian Rupee'],
+            ['EUR', '€ EUR — Euro'],
+            ['GBP', '£ GBP — British Pound'],
+            ['JPY', '¥ JPY — Japanese Yen'],
+            ['NPR', 'रू NPR — Nepalese Rupee'],
+            ['CAD', '$ CAD — Canadian Dollar'],
+            ['AUD', '$ AUD — Australian Dollar']
         ].forEach(function (pair) {
             var opt = el('option', pair[1]); opt.value = pair[0]; currencySelect.append(opt);
         });
