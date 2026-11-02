@@ -1,4 +1,6 @@
 <div id='message'>
+	<?php $alt='Close-up of a blindfolded Lady Justice statue carved in fine-textured limestone, holding balanced scales, viewed from a slightly low three-quarter angle. AI-generated illustration.'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
 		<style>#title-container{min-width:0}#title{white-space:normal}#message>table{display:block;max-width:100%;overflow-x:auto}</style>
 	<h3>What is a law?</h3>
 	<p>
