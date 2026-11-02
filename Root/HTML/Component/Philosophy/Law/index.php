@@ -1,5 +1,5 @@
 <div id='message'>
-	<?php $alt='Close-up of a blindfolded Lady Justice statue carved in fine-textured black stone against a light background, holding naturally proportioned shiny brass scales at a three-quarter angle. AI-generated illustration.'; require('../HTML/Fragment/Component_cover.php') ?>
+	<?php $alt='Close-up of a blindfolded Lady Justice statue carved in pitch-black stone against a light background, holding large polished brass balance scales suspended naturally at a three-quarter angle. AI-generated illustration.'; require('../HTML/Fragment/Component_cover.php') ?>
 	<h2 class='center'><?php echo $desc; ?></h2>
 		<style>#title-container{min-width:0}#title{white-space:normal}#message>table{display:block;max-width:100%;overflow-x:auto}</style>
 	<h3>What is a law?</h3>
