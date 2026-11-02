@@ -201,6 +201,7 @@
         ].forEach(function (pair) {
             var opt = el('option', pair[1]); opt.value = pair[0]; currencySelect.append(opt);
         });
+        currencySelect.setAttribute('aria-label', t('Currency', 'मुद्रा'));
         var currency = currencySelect;
 
         var tierSelect = el('select');
