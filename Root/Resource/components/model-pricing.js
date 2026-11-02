@@ -1048,9 +1048,13 @@
                     if (calculatorEnabled) {
                         var totalCell = el('td', undefined, 'mp-total-cell');
                         if (result) {
+                            var perRequestLabel = money(result.perRequest) + t(' / req', ' / अनुरोध');
+                            totalCell.tabIndex = 0;
+                            totalCell.setAttribute('aria-label', t('Estimated total ', 'अनुमानित कुल ') + money(result.total) + '; ' + t('cost per request ', 'प्रति अनुरोध लागत ') + perRequestLabel);
+                            totalCell.title = t('Cost per request: ', 'प्रति अनुरोध लागत: ') + perRequestLabel;
                             totalCell.append(
                                 el('strong', money(result.total)),
-                                el('small', money(result.perRequest) + t(' / req', ' / अनुरोध'))
+                                el('small', perRequestLabel)
                             );
                         } else {
                             totalCell.textContent = model.status === 'retired'

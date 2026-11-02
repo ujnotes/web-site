@@ -767,8 +767,10 @@ html.dark-mode .model-pricing tbody th {
 }
 
 .model-pricing .mp-total-cell {
+  position: relative;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+  cursor: help;
 }
 
 .model-pricing .mp-total-cell strong {
@@ -779,11 +781,26 @@ html.dark-mode .model-pricing tbody th {
 }
 
 .model-pricing .mp-total-cell small {
-  display: block;
+  position: absolute;
+  z-index: 12;
+  top:calc(100% + 4px);
+  left:0;
+  display:block;
+  width:max-content;
+  padding:.35rem .5rem;
+  border:1px solid var(--mp-line);
+  border-radius:5px;
+  background:var(--mp-card);
+  box-shadow:var(--mp-shadow-md);
   font-size: 10.5px;
   color: var(--mp-muted);
-  margin-top: 0.1rem;
+  margin:0;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-2px);
+  transition:opacity .15s ease,transform .15s ease;
 }
+.model-pricing .mp-total-cell:hover small,.model-pricing .mp-total-cell:focus small{opacity:1;transform:translateY(0)}
 
 .model-pricing .mp-use {
   min-width: 180px;
