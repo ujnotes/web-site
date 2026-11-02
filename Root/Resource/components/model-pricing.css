@@ -1101,6 +1101,9 @@ html.dark-mode .model-pricing tbody th {
   max-width: 100%;
 }
 .model-pricing .mp-metric-toggle button{min-height:44px;padding:.45rem .9rem;white-space:nowrap}
+.model-pricing .mp-chart-controls{display:flex;align-items:center;justify-content:flex-end;gap:.65rem;max-width:100%}
+.model-pricing .mp-chart-mode-toggle{flex:none}
+.model-pricing .mp-chart-mode-toggle button{min-height:36px;padding:.35rem .65rem;white-space:nowrap}
 
 .model-pricing .mp-chart-legend {
   display: flex;
@@ -1137,6 +1140,53 @@ html.dark-mode .model-pricing tbody th {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem 1.5rem;
 }
+
+.model-pricing .mp-bubble-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(165px,1fr));
+  align-items:end;
+  gap:1.25rem 1rem;
+  min-height:300px;
+  padding:.75rem 0;
+}
+.model-pricing .mp-bubble{
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  gap:.55rem;
+  padding:0;
+  color:var(--mp-ink);
+  background:transparent;
+  text-align:center;
+}
+.model-pricing .mp-bubble-disk{
+  display:flex;
+  width:var(--mp-bubble-size);
+  height:var(--mp-bubble-size);
+  max-width:100%;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.2rem;
+  border:1px solid var(--mp-line);
+  border-radius:50%;
+  background:var(--mp-card-subtle);
+  box-shadow:var(--mp-shadow-sm);
+  transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.model-pricing .mp-bubble-disk strong{font-size:13px;font-variant-numeric:tabular-nums}
+.model-pricing .mp-bubble-disk span{max-width:70%;font-size:10px;color:var(--mp-muted);line-height:1.2}
+.model-pricing .mp-bubble-name{max-width:100%;overflow:hidden;font-size:11px;font-weight:600;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
+.model-pricing .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk{
+  border-color:var(--mp-accent);
+  background:conic-gradient(var(--mp-col-input) 0 var(--mp-input-share),var(--mp-col-output) var(--mp-input-share) calc(var(--mp-input-share) + var(--mp-output-share)),var(--mp-card-subtle) 0);
+  box-shadow:var(--mp-shadow-md);
+  transform:translateY(-2px);
+}
+.model-pricing .mp-bubble:hover .mp-bubble-disk span,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk span{color:var(--mp-ink)}
+.model-pricing .mp-bubble[aria-pressed="true"] .mp-bubble-disk{border-color:var(--mp-accent)}
 
 .model-pricing .mp-bar-row {
   position: relative;
@@ -1399,6 +1449,8 @@ html.dark-mode .model-pricing{--mp-bg:#1c2333;--mp-card:#202839;--mp-card-subtle
 .model-pricing .mp-calc-grid,.model-pricing .mp-summary{grid-template-columns:1fr}
 .model-pricing .mp-filter-status{font-size:10px}
 .model-pricing .mp-metric-toggle{flex-wrap:wrap;width:100%}
+.model-pricing .mp-chart-controls{width:100%;flex-direction:column;align-items:stretch}
+.model-pricing .mp-chart-mode-toggle{align-self:flex-end}
 .model-pricing .mp-chart-header{align-items:stretch}
 .model-pricing .mp-calculator,.model-pricing .mp-chart{padding:1rem}
 }

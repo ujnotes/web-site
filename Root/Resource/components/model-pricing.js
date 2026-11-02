@@ -621,7 +621,25 @@
             }, {signal: context.signal});
             metricOptions.append(choice);
         });
-        chartHeader.append(metricOptions);
+        var chartMode = 'bars';
+        var chartModeOptions = el('div', undefined, 'mp-tier-toggle mp-chart-mode-toggle');
+        chartModeOptions.setAttribute('role', 'group');
+        chartModeOptions.setAttribute('aria-label', t('Chart display', 'चार्ट प्रदर्शन'));
+        [['bars', t('Bars', 'बार')], ['circles', t('Circles', 'वृत्त')]].forEach(function (entry) {
+            var choice = el('button', entry[1]);
+            choice.type = 'button';
+            choice.dataset.chartMode = entry[0];
+            choice.setAttribute('aria-pressed', String(entry[0] === chartMode));
+            choice.addEventListener('click', function () {
+                chartMode = entry[0];
+                Array.from(chartModeOptions.children).forEach(function (button) { button.setAttribute('aria-pressed', String(button === choice)); });
+                render();
+            }, {signal: context.signal});
+            chartModeOptions.append(choice);
+        });
+        var chartControls = el('div', undefined, 'mp-chart-controls');
+        chartControls.append(chartModeOptions, metricOptions);
+        chartHeader.append(chartControls);
         chart.append(chartHeader);
         var chartUnits = el('p', '', 'mp-note'); chart.append(chartUnits);
 
@@ -633,7 +651,8 @@
         chartLegend.append(inLegend, outLegend);
 
         var bars = el('div', undefined, 'mp-bars');
-        chart.append(bars, chartLegend);
+        var bubbleGrid = el('div', undefined, 'mp-bubble-grid');
+        chart.append(bars, bubbleGrid, chartLegend);
 
         function syncMetric() {
             Array.from(metricOptions.children).forEach(function (button) {
@@ -719,6 +738,7 @@
         }
         sections.addEventListener('click', chooseModel, {signal: context.signal});
         bars.addEventListener('click', chooseModel, {signal: context.signal});
+        bubbleGrid.addEventListener('click', chooseModel, {signal: context.signal});
 
         function state() {
             var numeric = calculatorEnabled ? [requests, input, output, fx] : [fx];
@@ -1097,6 +1117,9 @@
 
             // Graphical Bars
             bars.replaceChildren();
+            bubbleGrid.replaceChildren();
+            bars.hidden = chartMode !== 'bars';
+            bubbleGrid.hidden = chartMode !== 'circles';
             var chartValue = function (m) {
                 var value = estimates.get(m.id);
                 return metric.value === 'cost' ? value.total : metric.value === 'typical' ? (value.price.input * 0.75) + (value.price.output * 0.25) : value.price[metric.value];
@@ -1107,7 +1130,8 @@
             var maximum = Math.max(0, ...chartModels.map(chartValue));
 
             if (!chartModels.length) {
-                bars.append(el('p', t('No priced models match the current filters and inputs.', 'वर्तमान फ़िल्टर और इनपुट के लिए कीमत वाले मॉडल नहीं मिले।'), 'mp-empty'));
+                var chartEmpty = el('p', t('No priced models match the current filters and inputs.', 'वर्तमान फ़िल्टर और इनपुट के लिए कीमत वाले मॉडल नहीं मिले।'), 'mp-empty');
+                (chartMode === 'bars' ? bars : bubbleGrid).append(chartEmpty);
             }
 
             chartModels.forEach(function (m) {
@@ -1165,6 +1189,21 @@
 
                 button.setAttribute('aria-label', m.name + ' · ' + providerName(m.provider) + '; ' + t('Input: ', 'इनपुट: ') + money(inputCost) + '; ' + t('Output: ', 'आउटपुट: ') + money(outputCost));
                 bars.append(button);
+
+                var bubble = el('button', undefined, 'mp-bubble');
+                bubble.type = 'button';
+                bubble.dataset.modelId = m.id;
+                bubble.setAttribute('aria-pressed', String(calculatorEnabled && m.id === modelSelect.value));
+                bubble.setAttribute('aria-label', button.getAttribute('aria-label') + '; ' + t('Hover or focus to show the input and output split.', 'इनपुट और आउटपुट विभाजन देखने के लिए होवर या फोकस करें।'));
+                var bubbleSize = 62 + (maximum ? 116 * Math.sqrt(value / maximum) : 0);
+                bubble.style.setProperty('--mp-bubble-size', Math.round(bubbleSize) + 'px');
+                bubble.style.setProperty('--mp-input-share', inputPercent + '%');
+                bubble.style.setProperty('--mp-output-share', outputPercent + '%');
+                var disk = el('span', undefined, 'mp-bubble-disk');
+                disk.append(el('strong', money(value)), el('span', t('show split', 'विभाजन दिखाएँ')));
+                var bubbleName = el('span', m.name + ' · ' + providerName(m.provider), 'mp-bubble-name');
+                bubble.append(disk, bubbleName);
+                bubbleGrid.append(bubble);
             });
 
             if (searchFocused && search.isConnected) {
