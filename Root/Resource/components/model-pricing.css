@@ -1630,6 +1630,22 @@ body:has(.model-pricing) #title{min-width:0;white-space:normal;text-wrap:balance
 .model-pricing .mp-calc-model-row.mp-fam-grok .mp-select{color:var(--mp-brand-grok)}
 .model-pricing .mp-calc-model-meta{position:absolute;right:1.7rem;bottom:.6rem;display:flex;align-items:center;justify-content:flex-end;gap:.3rem;pointer-events:none}
 .model-pricing .mp-calc-model-meta .mp-badge{white-space:nowrap}
+.model-pricing .mp-model-picker{position:relative;width:100%;color:var(--mp-ink)}
+.model-pricing .mp-model-picker-summary{display:flex;align-items:center;gap:.75rem;min-height:40px;padding:.45rem 0;cursor:pointer;list-style:none;border-bottom:1px solid var(--mp-line);font-size:13.5px;font-weight:600}
+.model-pricing .mp-model-picker-summary::-webkit-details-marker{display:none}
+.model-pricing .mp-model-picker-summary>.mp-ui-icon{width:17px;height:17px;margin-left:auto;color:var(--mp-muted);transition:transform .15s ease,color .15s ease}
+.model-pricing .mp-model-picker[open] .mp-model-picker-summary>.mp-ui-icon{transform:rotate(180deg);color:var(--mp-accent)}
+.model-pricing .mp-model-picker-summary:focus-visible{outline:0;border-bottom-color:var(--mp-accent);box-shadow:0 2px 0 -1px var(--mp-accent)}
+.model-pricing .mp-model-picker-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.model-pricing .mp-calc-model-row.mp-fam-gemini .mp-model-picker-summary{color:var(--mp-brand-gemini)}
+.model-pricing .mp-calc-model-row.mp-fam-claude .mp-model-picker-summary{color:var(--mp-brand-claude)}
+.model-pricing .mp-calc-model-row.mp-fam-gpt .mp-model-picker-summary{color:var(--mp-brand-gpt)}
+.model-pricing .mp-calc-model-row.mp-fam-grok .mp-model-picker-summary{color:var(--mp-brand-grok)}
+.model-pricing .mp-model-picker-menu{position:absolute;z-index:35;top:calc(100% + 6px);left:0;right:0;max-height:260px;overflow:auto;padding:.35rem;background:var(--mp-card);border:1px solid var(--mp-line);border-radius:8px;box-shadow:var(--mp-shadow-md)}
+.model-pricing .mp-model-picker-option{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:.4rem;width:100%;padding:.55rem .6rem;border:0;border-radius:5px;background:transparent;color:var(--mp-ink);text-align:left}
+.model-pricing .mp-model-picker-option:hover,.model-pricing .mp-model-picker-option[aria-pressed="true"]{background:var(--mp-tint)}
+.model-pricing .mp-model-picker-name{min-width:0;overflow:hidden;font-size:12px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.model-pricing .mp-model-picker-option .mp-badge{white-space:nowrap}
 .model-pricing .mp-calc-model-caret{position:absolute;right:.35rem;bottom:.9rem;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);color:var(--mp-muted);opacity:0;pointer-events:none;transition:opacity .15s ease,color .15s ease}
 .model-pricing .mp-calc-model-row:hover .mp-calc-model-caret,.model-pricing .mp-calc-model-row:focus-within .mp-calc-model-caret{opacity:1;color:var(--mp-accent)}
 .model-pricing .mp-slider-card input[type="number"]{

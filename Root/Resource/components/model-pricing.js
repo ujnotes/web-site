@@ -143,6 +143,7 @@
                 collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5',
                 calendar: 'M4 5h16v16H4z M8 3v4 M16 3v4 M4 10h16 M8 14h2 M14 14h2 M8 17h2',
                 search: 'm21 21-4.35-4.35 M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',
+                chevron: 'm7 10 5 5 5-5',
                 bars: 'M4 20V4 M8 20v-7 M13 20V7 M18 20v-11',
                 circles: 'M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0 M17 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0',
                 filter: 'M4 6h16 M7 12h10 M10 18h4',
@@ -504,23 +505,47 @@
         if (data.workload?.model_id && data.models.some(function (m) { return m.id === data.workload.model_id && m.status === 'current'; })) {
             modelSelect.value = data.workload.model_id;
         }
+        modelSelect.hidden = true;
         modelSelectLabel.append(modelSelect);
-        modelSelectLabel.append(el('span', undefined, 'mp-calc-model-caret'));
-        var modelMeta = el('div', undefined, 'mp-calc-model-meta');
-        modelSelectLabel.append(modelMeta);
+        var modelPicker = el('details', undefined, 'mp-model-picker');
+        var modelPickerSummary = el('summary', undefined, 'mp-model-picker-summary');
+        var modelPickerValue = el('span', undefined, 'mp-model-picker-value');
+        modelPickerSummary.append(modelPickerValue, icon('chevron'));
+        var modelPickerMenu = el('div', undefined, 'mp-model-picker-menu');
+        modelPicker.append(modelPickerSummary, modelPickerMenu);
+        modelSelectLabel.append(modelPicker);
         calcForm.append(modelSelectLabel);
 
         function syncCalculatorModelAppearance() {
             var selectedModel = data.models.find(function (m) { return m.id === modelSelect.value; });
             ['gemini', 'claude', 'gpt', 'grok'].forEach(function (family) { modelSelectLabel.classList.remove('mp-fam-' + family); });
-            modelMeta.replaceChildren();
+            modelPickerMenu.replaceChildren();
             if (!selectedModel) return;
             modelSelectLabel.classList.add('mp-fam-' + selectedModel.family);
-            modelMeta.append(
-                el('span', familyName(selectedModel.family), 'mp-badge mp-badge-family mp-fam-' + selectedModel.family),
-                el('span', providerName(selectedModel.provider), 'mp-badge mp-badge-provider mp-prov-' + selectedModel.provider)
-            );
+            modelPickerValue.textContent = selectedModel.name + ' — ' + providerName(selectedModel.provider) + ' (' + familyName(selectedModel.family) + ')';
+            Array.from(modelSelect.options).forEach(function (option) {
+                var model = data.models.find(function (m) { return m.id === option.value; });
+                if (!model) return;
+                var pick = el('button', undefined, 'mp-model-picker-option mp-fam-' + model.family);
+                pick.type = 'button';
+                pick.dataset.modelId = model.id;
+                pick.setAttribute('aria-pressed', String(model.id === selectedModel.id));
+                pick.append(
+                    el('span', model.name, 'mp-model-picker-name'),
+                    el('span', providerName(model.provider), 'mp-badge mp-badge-provider mp-prov-' + model.provider),
+                    el('span', familyName(model.family), 'mp-badge mp-badge-family mp-fam-' + model.family)
+                );
+                pick.addEventListener('click', function () {
+                    modelSelect.value = model.id;
+                    modelPicker.open = false;
+                    render();
+                    modelPickerSummary.focus();
+                }, {signal: context.signal});
+                modelPickerMenu.append(pick);
+            });
         }
+        document.addEventListener('click', function (event) { if (!modelPicker.contains(event.target)) modelPicker.open = false; }, {signal:context.signal});
+        modelPicker.addEventListener('keydown', function (event) { if (event.key === 'Escape') { modelPicker.open = false; modelPickerSummary.focus(); } }, {signal:context.signal});
 
         var calcGrid = el('div', undefined, 'mp-calc-grid');
 
