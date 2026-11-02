@@ -143,6 +143,8 @@
                 collapse: 'M3 8h5V3 M16 3v5h5 M8 21v-5H3 M21 16h-5v5',
                 calendar: 'M4 5h16v16H4z M8 3v4 M16 3v4 M4 10h16 M8 14h2 M14 14h2 M8 17h2',
                 search: 'm21 21-4.35-4.35 M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',
+                bars: 'M4 20V4 M8 20v-7 M13 20V7 M18 20v-11',
+                circles: 'M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0 M17 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0',
                 filter: 'M4 6h16 M7 12h10 M10 18h4',
                 chat: 'M4 4h16v12H9l-5 4z M8 8h8 M8 12h5',
                 document: 'M5 3h9l5 5v13H5z M14 3v5h5 M8 12h8 M8 16h6',
@@ -167,8 +169,8 @@
         // 1. Header & Title Area
         var top = el('div', undefined, 'mp-heading');
         var heading = el('div', undefined, 'mp-heading-text');
-        var h2 = el('h2', t('Compare rates. Plan your spend.', 'दरें तुलना करें। खर्च की योजना बनाएँ।'));
-        var subtitle = el('p', t('Explore API prices by model and provider, then estimate your own workload.', 'मॉडल और प्रदाता की API दरें देखें, फिर अपने काम की लागत का अनुमान लगाएँ।'));
+        var h2 = el('h2', t('Compare rates. Plan your spend', 'दरें तुलना करें। खर्च की योजना बनाएँ'));
+        var subtitle = el('p', t('Explore API prices by model and provider, then estimate your own workload', 'मॉडल और प्रदाता की API दरें देखें, फिर अपने काम की लागत का अनुमान लगाएँ'));
         heading.append(h2, subtitle);
 
         var download = sourceLink(t('↓ Download data', '↓ डेटा डाउनलोड करें'), url);
@@ -597,7 +599,8 @@
         // 5. Graphical Comparison Chart Section
         var chart = el('section', undefined, 'mp-chart');
         var chartHeader = el('div', undefined, 'mp-chart-header');
-        chartHeader.append(el('h3', t('Graphical Comparison', 'चित्रात्मक तुलना')));
+        var chartTitleGroup = el('div', undefined, 'mp-chart-title-group');
+        chartTitleGroup.append(el('h3', t('Graphical Comparison', 'चित्रात्मक तुलना')));
 
         var metric = el('select');
         [['input', t('Input rate ($/1M)', 'इनपुट दर')], ['output', t('Output rate ($/1M)', 'आउटपुट दर')], ['typical', t('Typical mix', 'सामान्य मिश्रण')], ['cost', t('Est. cost', 'अनुमानित लागत')]].forEach(function (entry) {
@@ -626,9 +629,12 @@
         chartModeOptions.setAttribute('role', 'group');
         chartModeOptions.setAttribute('aria-label', t('Chart display', 'चार्ट प्रदर्शन'));
         [['bars', t('Bars', 'बार')], ['circles', t('Circles', 'वृत्त')]].forEach(function (entry) {
-            var choice = el('button', entry[1]);
+            var choice = el('button');
             choice.type = 'button';
             choice.dataset.chartMode = entry[0];
+            choice.title = entry[1];
+            choice.setAttribute('aria-label', entry[1]);
+            choice.append(icon(entry[0]));
             choice.setAttribute('aria-pressed', String(entry[0] === chartMode));
             choice.addEventListener('click', function () {
                 chartMode = entry[0];
@@ -637,9 +643,10 @@
             }, {signal: context.signal});
             chartModeOptions.append(choice);
         });
+        chartTitleGroup.append(chartModeOptions);
         var chartControls = el('div', undefined, 'mp-chart-controls');
-        chartControls.append(chartModeOptions, metricOptions);
-        chartHeader.append(chartControls);
+        chartControls.append(metricOptions);
+        chartHeader.append(chartTitleGroup, chartControls);
         chart.append(chartHeader);
         var chartUnits = el('p', '', 'mp-note'); chart.append(chartUnits);
 
@@ -1208,7 +1215,7 @@
                 bubble.style.setProperty('--mp-input-share', inputPercent + '%');
                 bubble.style.setProperty('--mp-output-share', outputPercent + '%');
                 var disk = el('span', undefined, 'mp-bubble-disk');
-                disk.append(el('strong', money(value)), el('span', t('show split', 'विभाजन दिखाएँ')));
+                disk.append(el('strong', money(value)));
                 var bubbleName = el('span', m.name + ' · ' + providerName(m.provider), 'mp-bubble-name');
                 bubble.append(disk, bubbleName);
                 bubbleGrid.append(bubble);

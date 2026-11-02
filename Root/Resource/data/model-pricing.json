@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated_on": "2026-10-31",
-  "coverage": "Selected first-party and third-party text-generation API offerings; prices depend on the selling provider and route.",
+  "coverage": "Selected first-party and third-party text-generation API offerings across model families (Gemini, GPT, Claude, Grok) and selling providers/routes (Google, OpenAI, Anthropic, xAI, OpenRouter); prices depend on the selling provider and route.",
   "status_values": [
     "retired",
     "current",
@@ -59,7 +59,8 @@
         "hi": "अधिक मात्रा में जानकारी निकालना, वर्गीकरण और अनुवाद।"
       },
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gemini"
     },
     {
       "id": "gemini-3.8-flash",
@@ -117,7 +118,8 @@
         "hi": "कोडिंग और कई चरणों वाले एजेंट कार्य।"
       },
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gemini"
     },
     {
       "id": "gemini-4-argon",
@@ -175,7 +177,8 @@
         "hi": "कठिन तर्क, वैज्ञानिक समस्याएँ और जटिल कोडिंग।"
       },
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gemini"
     },
     {
       "id": "gpt-6-luna",
@@ -210,7 +213,8 @@
         "hi": "प्राथमिक छँटाई, सीमित कार्य और नियमित स्वचालन।"
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gpt"
     },
     {
       "id": "gpt-6.1-terra",
@@ -245,7 +249,8 @@
         "hi": "दृश्य तर्क, कंप्यूटर का उपयोग और संक्षिप्त लेखन।"
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gpt"
     },
     {
       "id": "gpt-6.1-sol",
@@ -280,7 +285,8 @@
         "hi": "समय और लागत ध्यान में रखकर जटिल कोडिंग और विश्लेषण।"
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gpt"
     },
     {
       "id": "gpt-6.1-sol@openrouter-azure-eu",
@@ -307,7 +313,8 @@
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
       "usage_checked_on": "2026-10-31",
-      "model_id": "gpt-6.1-sol"
+      "model_id": "gpt-6.1-sol",
+      "family": "gpt"
     },
     {
       "id": "gpt-6-astra",
@@ -342,7 +349,8 @@
         "hi": "अस्पष्ट समस्याएँ, गहरा विश्लेषण और कठिन कार्य-परिणाम।"
       },
       "usage_source_url": "https://developers.openai.com/api/docs/guides/model-selection",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gpt"
     },
     {
       "id": "claude-haiku-5-5",
@@ -402,7 +410,8 @@
         "hi": "तेज़ वर्गीकरण, जानकारी निकालना और अनुरोधों की रूटिंग।"
       },
       "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "claude"
     },
     {
       "id": "claude-sonnet-5-5",
@@ -437,7 +446,8 @@
         "hi": "सामान्य कोडिंग और तर्क, जहाँ उत्तर की गति महत्त्वपूर्ण हो।"
       },
       "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "claude"
     },
     {
       "id": "claude-opus-5-5",
@@ -472,7 +482,8 @@
         "hi": "लंबे समय तक चलने वाले कोडिंग एजेंट और ज्ञान-आधारित काम।"
       },
       "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "claude"
     },
     {
       "id": "claude-fable-5-1",
@@ -507,7 +518,8 @@
         "hi": "कठिन तर्क और लंबे लक्ष्य वाले एजेंट कार्य।"
       },
       "usage_source_url": "https://platform.claude.com/docs/en/models/overview",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "claude"
     },
     {
       "id": "grok-4.7",
@@ -567,7 +579,8 @@
         "hi": "कोडिंग, टूल इस्तेमाल करने वाले एजेंट और ज्ञान-आधारित काम।"
       },
       "usage_source_url": "https://docs.x.ai/developers/models/grok-4.7",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "grok"
     },
     {
       "id": "gemini-1.5-flash",
@@ -586,7 +599,8 @@
         "hi": "केवल पुराने काम के संदर्भ के लिए; नए प्रोजेक्ट में समर्थित मॉडल चुनें।"
       },
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gemini"
     },
     {
       "id": "gemini-1.5-pro",
@@ -605,7 +619,8 @@
         "hi": "केवल पुराने काम के संदर्भ के लिए; नए प्रोजेक्ट में समर्थित मॉडल चुनें।"
       },
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/changelog#september-29,-2025",
-      "usage_checked_on": "2026-10-31"
+      "usage_checked_on": "2026-10-31",
+      "family": "gemini"
     }
   ]
 }

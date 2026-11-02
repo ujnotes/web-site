@@ -1108,6 +1108,14 @@ html.dark-mode .model-pricing tbody th {
   margin-bottom: 1.25rem;
 }
 
+.model-pricing .mp-chart-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.model-pricing .mp-chart-title-group h3,
 .model-pricing .mp-chart-header h3 {
   margin: 0;
   font-size: 18px;
@@ -1120,7 +1128,8 @@ html.dark-mode .model-pricing tbody th {
 .model-pricing .mp-metric-toggle button{min-height:44px;padding:.45rem .9rem;white-space:nowrap}
 .model-pricing .mp-chart-controls{display:flex;align-items:center;justify-content:flex-end;gap:.65rem;max-width:100%}
 .model-pricing .mp-chart-mode-toggle{flex:none}
-.model-pricing .mp-chart-mode-toggle button{min-height:36px;padding:.35rem .65rem;white-space:nowrap}
+.model-pricing .mp-chart-mode-toggle button{display:grid;place-items:center;min-width:38px;min-height:36px;padding:.35rem .55rem;white-space:nowrap}
+.model-pricing .mp-chart-mode-toggle .mp-ui-icon{width:17px;height:17px}
 
 .model-pricing .mp-chart-legend {
   display: flex;
@@ -1181,6 +1190,7 @@ html.dark-mode .model-pricing tbody th {
   text-align:center;
 }
 .model-pricing .mp-bubble-disk{
+  position:relative;
   display:flex;
   width:var(--mp-bubble-size);
   height:var(--mp-bubble-size);
@@ -1189,14 +1199,14 @@ html.dark-mode .model-pricing tbody th {
   align-items:center;
   justify-content:center;
   gap:.2rem;
-  border:1px solid var(--mp-line);
+  border:1px solid var(--mp-tint-border);
   border-radius:50%;
-  background:var(--mp-card-subtle);
+  background:radial-gradient(circle at 35% 30%,var(--mp-tint),var(--mp-card-subtle) 72%);
   box-shadow:var(--mp-shadow-sm);
   transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;
 }
-.model-pricing .mp-bubble-disk strong{font-size:13px;font-variant-numeric:tabular-nums}
-.model-pricing .mp-bubble-disk span{max-width:70%;font-size:10px;color:var(--mp-muted);line-height:1.2}
+.model-pricing .mp-bubble-disk::before{content:"";position:absolute;inset:27%;border:1px solid var(--mp-line);border-radius:50%;background:var(--mp-card);box-shadow:inset 0 1px 1px #0001}
+.model-pricing .mp-bubble-disk strong{position:relative;z-index:1;font-size:13px;font-variant-numeric:tabular-nums}
 .model-pricing .mp-bubble-name{max-width:100%;overflow:hidden;font-size:11px;font-weight:600;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
 .model-pricing .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk{
   border-color:var(--mp-accent);
@@ -1204,7 +1214,6 @@ html.dark-mode .model-pricing tbody th {
   box-shadow:var(--mp-shadow-md);
   transform:translateY(-2px);
 }
-.model-pricing .mp-bubble:hover .mp-bubble-disk span,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk span{color:var(--mp-ink)}
 .model-pricing .mp-bubble[aria-pressed="true"] .mp-bubble-disk{border-color:var(--mp-accent)}
 
 .model-pricing .mp-bar-row {
@@ -1469,7 +1478,7 @@ html.dark-mode .model-pricing{--mp-bg:#1c2333;--mp-card:#202839;--mp-card-subtle
 .model-pricing .mp-filter-status{font-size:10px}
 .model-pricing .mp-metric-toggle{flex-wrap:wrap;width:100%}
 .model-pricing .mp-chart-controls{width:100%;flex-direction:column;align-items:stretch}
-.model-pricing .mp-chart-mode-toggle{align-self:flex-end}
+.model-pricing .mp-chart-title-group{display:flex;align-items:center;gap:.75rem;width:100%}
 .model-pricing .mp-chart-header{align-items:stretch}
 .model-pricing .mp-calculator,.model-pricing .mp-chart{padding:1rem}
 }

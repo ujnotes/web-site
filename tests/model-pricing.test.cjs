@@ -40,9 +40,9 @@ test('invalid rates and provenance are rejected', () => {
 });
 
 test('sort columns support both directions and keep unknown prices last', () => {
-    const a = {id:'a',name:'Alpha',provider:'google'};
-    const b = {id:'b',name:'Beta',provider:'anthropic'};
-    const unknown = {id:'unknown',name:'Unknown',provider:'openai'};
+    const a = {id:'a',name:'Alpha',provider:'google',family:'gemini'};
+    const b = {id:'b',name:'Beta',provider:'anthropic',family:'claude'};
+    const unknown = {id:'unknown',name:'Unknown',provider:'openai',family:'gpt'};
     const estimates = new Map([['a',{total:0,price:{input:0,output:2}}],['b',{total:10,price:{input:4,output:1}}]]);
     const sorted = (key, direction) => [unknown,a,b].sort((x,y)=>pricing.compareModels(x,y,key,direction,estimates)).map(m=>m.id);
     assert.deepEqual(sorted('cost','desc'),['b','a','unknown']);
@@ -51,6 +51,25 @@ test('sort columns support both directions and keep unknown prices last', () => 
     assert.deepEqual(sorted('input','desc'),['b','a','unknown']);
     assert.deepEqual(sorted('name','desc'),['unknown','b','a']);
     assert.deepEqual(sorted('provider','asc'),['b','a','unknown']);
+    assert.deepEqual(sorted('family','asc'),['b','a','unknown']);
+    assert.deepEqual(sorted('family','desc'),['unknown','a','b']);
+});
+
+test('model family is required and distinct from selling provider', () => {
+    for (const m of data.models) {
+        assert.ok(typeof m.family === 'string' && m.family.length > 0, `Model ${m.id} missing family`);
+    }
+    const copy = structuredClone(data);
+    delete copy.models[0].family;
+    assert.throws(() => pricing.validate(copy));
+
+    const directSol = model('gpt-6.1-sol');
+    const routedSol = model('gpt-6.1-sol@openrouter-azure-eu');
+    assert.equal(directSol.family, 'gpt');
+    assert.equal(routedSol.family, 'gpt');
+    assert.equal(directSol.provider, 'openai');
+    assert.equal(routedSol.provider, 'openrouter');
+    assert.notEqual(directSol.provider, routedSol.provider);
 });
 
 test('Grok keeps its 20 percent batch discount and inclusive context boundary', () => {
