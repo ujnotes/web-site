@@ -1214,7 +1214,8 @@ html.dark-mode .model-pricing tbody th {
 .model-pricing .mp-bubble-name{max-width:100%;overflow:hidden;color:var(--mp-family-color);font-size:11px;font-weight:600;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
 .model-pricing .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk{
   border-color:var(--mp-family-color);
-  background:conic-gradient(var(--mp-col-input) 0 var(--mp-input-share),var(--mp-col-output) var(--mp-input-share) calc(var(--mp-input-share) + var(--mp-output-share)),var(--mp-card-subtle) 0);
+  background-color:var(--mp-family-fill);
+  background-image:conic-gradient(color-mix(in srgb,var(--mp-col-input) 82%,transparent) 0 var(--mp-input-share),color-mix(in srgb,var(--mp-col-output) 82%,transparent) var(--mp-input-share) calc(var(--mp-input-share) + var(--mp-output-share)),transparent 0);
   box-shadow:var(--mp-shadow-md);
   transform:translateY(-2px);
 }
