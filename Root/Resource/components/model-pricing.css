@@ -1131,6 +1131,8 @@ html.dark-mode .model-pricing tbody th {
   font-size: 12px;
   color: var(--mp-muted);
 }
+.model-pricing .mp-chart-circles .mp-chart-legend{visibility:hidden;opacity:0;transition:opacity .15s ease}
+.model-pricing .mp-chart-circles:has(.mp-bubble:hover) .mp-chart-legend,.model-pricing .mp-chart-circles:has(.mp-bubble:focus-visible) .mp-chart-legend{visibility:visible;opacity:1}
 
 .model-pricing .mp-legend-item {
   display: inline-flex;

@@ -758,7 +758,11 @@
             dateButton.title = t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value);
             dateButton.setAttribute('aria-label', t('Price date: ', 'मूल्य तारीख: ') + displayDate(date.value) + (customDate ? t(' (active)', ' (सक्रिय)') : ''));
             chartUnits.textContent = metric.value === 'cost' ? t('Estimated workload cost · ', 'अनुमानित कार्यभार लागत · ') + currency.value : metric.value === 'typical' ? t('Typical 3:1 input-to-output mix · ', 'सामान्य 3:1 इनपुट-आउटपुट मिश्रण · ') + currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर') : currency.value + t(' per 1 million tokens · shared scale across all models', ' प्रति 10 लाख टोकन · सभी मॉडल एक ही पैमाने पर');
-            inLegend.hidden = metric.value === 'output'; outLegend.hidden = metric.value === 'input';
+            var showsSplit = metric.value === 'cost' || metric.value === 'typical';
+            chartLegend.hidden = !showsSplit;
+            chart.classList.toggle('mp-chart-circles', chartMode === 'circles');
+            inLegend.hidden = !showsSplit;
+            outLegend.hidden = !showsSplit;
             inLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');
             outLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Output share', 'आउटपुट हिस्सा') : t('Output rate', 'आउटपुट दर');
             Array.from(metricOptions.children).forEach(function (button) {
