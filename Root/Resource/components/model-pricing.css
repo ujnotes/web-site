@@ -1215,10 +1215,13 @@ html.dark-mode .model-pricing tbody th {
 .model-pricing .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk{
   border-color:var(--mp-family-color);
   background-color:var(--mp-family-fill);
-  background-image:conic-gradient(color-mix(in srgb,var(--mp-col-input) 82%,transparent) 0 var(--mp-input-share),color-mix(in srgb,var(--mp-col-output) 82%,transparent) var(--mp-input-share) calc(var(--mp-input-share) + var(--mp-output-share)),transparent 0);
   box-shadow:var(--mp-shadow-md);
   transform:translateY(-2px);
 }
+.model-pricing .mp-chart-split .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-split .mp-bubble:focus-visible .mp-bubble-disk{background-image:conic-gradient(from var(--mp-pie-start),color-mix(in srgb,var(--mp-col-input) 82%,transparent) 0 var(--mp-input-share),color-mix(in srgb,var(--mp-col-output) 82%,transparent) var(--mp-input-share) 100%)}
+.model-pricing .mp-chart-single-rate .mp-bubble-disk{background:var(--mp-family-color)}
+.model-pricing .mp-chart-single-rate .mp-bubble-disk strong{color:var(--mp-card);text-shadow:none}
+.model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk strong{color:var(--mp-card);text-shadow:none}
 .model-pricing .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk strong{color:var(--mp-ink);text-shadow:0 1px 1px var(--mp-card)}
 .model-pricing .mp-bubble[aria-pressed="true"] .mp-bubble-disk{border-color:var(--mp-accent)}
 

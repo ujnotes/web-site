@@ -807,6 +807,8 @@
             var showsSplit = metric.value === 'cost' || metric.value === 'typical';
             chartLegend.hidden = !showsSplit;
             chart.classList.toggle('mp-chart-circles', chartMode === 'circles');
+            chart.classList.toggle('mp-chart-split', showsSplit);
+            chart.classList.toggle('mp-chart-single-rate', !showsSplit);
             inLegend.hidden = !showsSplit;
             outLegend.hidden = !showsSplit;
             inLegend.lastChild.textContent = (metric.value === 'cost' || metric.value === 'typical') ? t('Input share', 'इनपुट हिस्सा') : t('Input rate', 'इनपुट दर');
@@ -1255,6 +1257,7 @@
                 bubble.style.setProperty('--mp-bubble-size', Math.round(bubbleSize) + 'px');
                 bubble.style.setProperty('--mp-input-share', inputPercent + '%');
                 bubble.style.setProperty('--mp-output-share', outputPercent + '%');
+                bubble.style.setProperty('--mp-pie-start', (270 - (inputPercent * 1.8)) + 'deg');
                 var disk = el('span', undefined, 'mp-bubble-disk');
                 disk.append(el('strong', money(value)));
                 var bubbleName = el('span', m.name + ' · ' + providerName(m.provider), 'mp-bubble-name');
