@@ -1257,7 +1257,8 @@
                 bubble.style.setProperty('--mp-bubble-size', Math.round(bubbleSize) + 'px');
                 bubble.style.setProperty('--mp-input-share', inputPercent + '%');
                 bubble.style.setProperty('--mp-output-share', outputPercent + '%');
-                bubble.style.setProperty('--mp-pie-start', (270 - (inputPercent * 1.8)) + 'deg');
+                bubble.style.setProperty('--mp-pie-start', '0deg');
+                bubble.style.setProperty('--mp-input-angle', (inputPercent * 3.6) + 'deg');
                 var disk = el('span', undefined, 'mp-bubble-disk');
                 disk.append(el('strong', money(value)));
                 var bubbleName = el('span', m.name + ' · ' + providerName(m.provider), 'mp-bubble-name');

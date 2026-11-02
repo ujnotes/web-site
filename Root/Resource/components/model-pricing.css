@@ -1218,7 +1218,7 @@ html.dark-mode .model-pricing tbody th {
   box-shadow:var(--mp-shadow-md);
   transform:translateY(-2px);
 }
-.model-pricing .mp-chart-split .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-split .mp-bubble:focus-visible .mp-bubble-disk{background-image:conic-gradient(from var(--mp-pie-start),color-mix(in srgb,var(--mp-col-input) 82%,transparent) 0 var(--mp-input-share),color-mix(in srgb,var(--mp-col-output) 82%,transparent) var(--mp-input-share) 100%)}
+.model-pricing .mp-chart-split .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-split .mp-bubble:focus-visible .mp-bubble-disk{background-color:var(--mp-card);background-image:conic-gradient(from var(--mp-pie-start),transparent 0deg 2deg,color-mix(in srgb,var(--mp-col-input) 82%,transparent) 2deg calc(var(--mp-input-angle) - 2deg),transparent calc(var(--mp-input-angle) - 2deg) calc(var(--mp-input-angle) + 2deg),color-mix(in srgb,var(--mp-col-output) 82%,transparent) calc(var(--mp-input-angle) + 2deg) 358deg,transparent 358deg 360deg)}
 .model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk{background:var(--mp-family-color)}
 .model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk strong{color:#fff;text-shadow:none}
 .model-pricing .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk strong{color:var(--mp-ink);text-shadow:0 1px 1px var(--mp-card)}
