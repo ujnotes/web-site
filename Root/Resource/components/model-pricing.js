@@ -781,6 +781,23 @@
                 return haystack.includes(query);
             });
 
+            // The calculator shares the provider and family filters, while table search remains table-only.
+            var calculatorModels = data.models.filter(function (m) {
+                return m.status === 'current' && enabledFamilies.has(m.family) && enabledProviders.has(m.provider);
+            });
+            var selectedModelId = modelSelect.value;
+            var calculatorOptionsChanged = calculatorModels.length !== modelSelect.options.length || calculatorModels.some(function (m, index) { return modelSelect.options[index]?.value !== m.id; });
+            if (calculatorOptionsChanged) {
+                modelSelect.replaceChildren();
+                calculatorModels.forEach(function (m) {
+                    var option = el('option', m.name + ' — ' + providerName(m.provider) + ' (' + familyName(m.family) + ')');
+                    option.value = m.id;
+                    modelSelect.append(option);
+                });
+            }
+            modelSelect.disabled = !calculatorModels.length;
+            if (calculatorModels.length && !calculatorModels.some(function (m) { return m.id === selectedModelId; })) modelSelect.value = calculatorModels[0].id;
+
             var estimates = new Map(filtered.map(function (m) { return [m.id, s ? estimate(m, s) : null]; }));
             var selected = data.models.find(function (m) { return m.id === modelSelect.value; });
             var selectedEstimate = s && selected ? estimate(selected, s) : null;
