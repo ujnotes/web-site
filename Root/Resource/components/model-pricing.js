@@ -1207,6 +1207,7 @@
 
                 var bubble = el('button', undefined, 'mp-bubble');
                 bubble.type = 'button';
+                bubble.classList.add('mp-fam-' + m.family);
                 bubble.dataset.modelId = m.id;
                 bubble.setAttribute('aria-pressed', String(calculatorEnabled && m.id === modelSelect.value));
                 bubble.setAttribute('aria-label', button.getAttribute('aria-label') + '; ' + t('Hover or focus to show the input and output split.', 'इनपुट और आउटपुट विभाजन देखने के लिए होवर या फोकस करें।'));
