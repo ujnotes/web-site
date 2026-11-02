@@ -506,7 +506,21 @@
         }
         modelSelectLabel.append(modelSelect);
         modelSelectLabel.append(el('span', undefined, 'mp-calc-model-caret'));
+        var modelMeta = el('div', undefined, 'mp-calc-model-meta');
+        modelSelectLabel.append(modelMeta);
         calcForm.append(modelSelectLabel);
+
+        function syncCalculatorModelAppearance() {
+            var selectedModel = data.models.find(function (m) { return m.id === modelSelect.value; });
+            ['gemini', 'claude', 'gpt', 'grok'].forEach(function (family) { modelSelectLabel.classList.remove('mp-fam-' + family); });
+            modelMeta.replaceChildren();
+            if (!selectedModel) return;
+            modelSelectLabel.classList.add('mp-fam-' + selectedModel.family);
+            modelMeta.append(
+                el('span', familyName(selectedModel.family), 'mp-badge mp-badge-family mp-fam-' + selectedModel.family),
+                el('span', providerName(selectedModel.provider), 'mp-badge mp-badge-provider mp-prov-' + selectedModel.provider)
+            );
+        }
 
         var calcGrid = el('div', undefined, 'mp-calc-grid');
 
@@ -828,6 +842,7 @@
             }
             modelSelect.disabled = !calculatorModels.length;
             if (calculatorModels.length && !calculatorModels.some(function (m) { return m.id === selectedModelId; })) modelSelect.value = calculatorModels[0].id;
+            syncCalculatorModelAppearance();
 
             var estimates = new Map(filtered.map(function (m) { return [m.id, s ? estimate(m, s) : null]; }));
             var selected = data.models.find(function (m) { return m.id === modelSelect.value; });
