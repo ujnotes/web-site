@@ -1140,8 +1140,8 @@ html.dark-mode .model-pricing tbody th {
   font-size: 12px;
   color: var(--mp-muted);
 }
-.model-pricing .mp-chart-circles .mp-chart-legend{visibility:hidden;opacity:0;transition:opacity .15s ease}
-.model-pricing .mp-chart-circles:has(.mp-bubble:hover) .mp-chart-legend,.model-pricing .mp-chart-circles:has(.mp-bubble:focus-visible) .mp-chart-legend{visibility:visible;opacity:1}
+.model-pricing .mp-chart-circles.mp-chart-single-rate .mp-chart-legend{visibility:hidden;opacity:0}
+.model-pricing .mp-chart-circles.mp-chart-split .mp-chart-legend{visibility:visible;opacity:1}
 
 .model-pricing .mp-legend-item {
   display: inline-flex;
@@ -1210,7 +1210,7 @@ html.dark-mode .model-pricing tbody th {
   transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;
 }
 .model-pricing .mp-bubble-disk::before{display:none}
-.model-pricing .mp-bubble-disk strong{position:relative;z-index:1;color:var(--mp-family-color);font-size:13px;font-variant-numeric:tabular-nums}
+.model-pricing .mp-bubble-disk strong{position:relative;z-index:2;color:var(--mp-family-color);font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;transition:color .2s ease}
 .model-pricing .mp-bubble-name{max-width:100%;overflow:hidden;color:var(--mp-family-color);font-size:11px;font-weight:600;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
 .model-pricing .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk{
   border-color:var(--mp-family-color);
@@ -1218,11 +1218,46 @@ html.dark-mode .model-pricing tbody th {
   box-shadow:var(--mp-shadow-md);
   transform:translateY(-2px);
 }
-.model-pricing .mp-chart-split .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-split .mp-bubble:focus-visible .mp-bubble-disk{background-color:var(--mp-card);background-image:conic-gradient(from var(--mp-pie-start),transparent 0deg 5deg,color-mix(in srgb,var(--mp-col-input) 82%,transparent) 5deg calc(var(--mp-input-angle) - 5deg),transparent calc(var(--mp-input-angle) - 5deg) calc(var(--mp-input-angle) + 5deg),color-mix(in srgb,var(--mp-col-output) 82%,transparent) calc(var(--mp-input-angle) + 5deg) 355deg,transparent 355deg 360deg)}
-.model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk{background:var(--mp-family-color)}
-.model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk strong{color:#fff;text-shadow:none}
-.model-pricing .mp-bubble:hover .mp-bubble-disk strong,.model-pricing .mp-bubble:focus-visible .mp-bubble-disk strong{color:var(--mp-ink);text-shadow:0 1px 1px var(--mp-card)}
-.model-pricing .mp-bubble[aria-pressed="true"] .mp-bubble-disk{border-color:var(--mp-accent)}
+.model-pricing .mp-chart-single-rate .mp-bubble-disk{
+  border-color:var(--mp-family-color);
+  background:var(--mp-card);
+}
+.model-pricing .mp-chart-single-rate .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-single-rate .mp-bubble:focus-visible .mp-bubble-disk{
+  background:var(--mp-family-fill);
+}
+.model-pricing .mp-chart-single-rate .mp-bubble-disk strong{color:var(--mp-family-color)}
+
+.model-pricing .mp-chart-split .mp-bubble-disk{
+  border-color:var(--mp-family-color);
+  background-color:var(--mp-card);
+  background-image:conic-gradient(
+    from 0deg,
+    var(--mp-col-output) 0deg,
+    var(--mp-col-output) calc(var(--mp-output-angle) - 0.4deg),
+    color-mix(in srgb,var(--mp-col-output) 50%,var(--mp-col-input)) calc(var(--mp-output-angle) - 0.4deg) calc(var(--mp-output-angle) + 0.4deg),
+    var(--mp-col-input) calc(var(--mp-output-angle) + 0.4deg) 359.6deg,
+    color-mix(in srgb,var(--mp-col-input) 50%,var(--mp-col-output)) 359.6deg 360deg
+  );
+  box-shadow:none;
+}
+.model-pricing .mp-chart-split .mp-bubble-disk strong{
+  color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.7);
+}
+.model-pricing .mp-chart-split .mp-bubble:hover .mp-bubble-disk,.model-pricing .mp-chart-split .mp-bubble:focus-visible .mp-bubble-disk{
+  border-color:var(--mp-family-color);
+  box-shadow:var(--mp-shadow-md);
+  transform:translateY(-2px);
+}
+.model-pricing .mp-bubble[aria-pressed="true"] .mp-bubble-disk{
+  border-color:var(--mp-accent);
+  box-shadow:0 0 0 1px var(--mp-accent),0 0 16px 2px color-mix(in srgb,var(--mp-accent) 55%,transparent);
+}
+.model-pricing .mp-bubble[aria-pressed="true"]:hover .mp-bubble-disk,
+.model-pricing .mp-bubble[aria-pressed="true"]:focus-visible .mp-bubble-disk{
+  border-color:var(--mp-accent);
+  box-shadow:0 0 0 1px var(--mp-accent),0 0 20px 4px color-mix(in srgb,var(--mp-accent) 65%,transparent),var(--mp-shadow-md);
+}
 
 .model-pricing .mp-bar-row {
   position: relative;

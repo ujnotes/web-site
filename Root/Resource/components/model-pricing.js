@@ -145,7 +145,7 @@
                 search: 'm21 21-4.35-4.35 M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',
                 chevron: 'm7 10 5 5 5-5',
                 bars: 'M4 20V4 M8 20v-7 M13 20V7 M18 20v-11',
-                circles: 'M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0 M17 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0',
+                circles: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z M12 3v9h9',
                 filter: 'M4 6h16 M7 12h10 M10 18h4',
                 chat: 'M4 4h16v12H9l-5 4z M8 8h8 M8 12h5',
                 document: 'M5 3h9l5 5v13H5z M14 3v5h5 M8 12h8 M8 16h6',
@@ -408,7 +408,7 @@
         });
 
         var providerFieldset = el('fieldset', undefined, 'mp-filter-group mp-providers');
-        providerFieldset.append(el('legend', t('Selling provider', 'विक्रेता प्रदाता')));
+        providerFieldset.append(el('legend', t('Direct Provider', 'प्रत्यक्ष प्रदाता')));
         var resellerFieldset = el('fieldset', undefined, 'mp-filter-group mp-resellers');
         resellerFieldset.append(el('legend', t('Reseller / Router', 'पुनर्विक्रेता / रूटर')));
         var allProviders = Array.from(new Set(data.models.map(function (m) { return m.provider; }))).sort();
@@ -444,7 +444,7 @@
             fieldset.append(restore);
             return restore;
         }
-        var providerRestore = addGroupRestore(providerFieldset, providerButtons.filter(function (button) { return button.dataset.provider !== 'openrouter'; }), t('selling providers', 'विक्रेता प्रदाता'));
+        var providerRestore = addGroupRestore(providerFieldset, providerButtons.filter(function (button) { return button.dataset.provider !== 'openrouter'; }), t('direct providers', 'प्रत्यक्ष प्रदाता'));
         var familyRestore = addGroupRestore(familyFieldset, familyButtons, t('model families', 'मॉडल परिवार'));
         var resellerRestore = addGroupRestore(resellerFieldset, providerButtons.filter(function (button) { return button.dataset.provider === 'openrouter'; }), t('resellers and routers', 'पुनर्विक्रेता और रूटर'));
         filterBar.append(providerFieldset, familyFieldset, resellerFieldset);
@@ -663,11 +663,11 @@
             }, {signal: context.signal});
             metricOptions.append(choice);
         });
-        var chartMode = 'bars';
+        var chartMode = 'circles';
         var chartModeOptions = el('div', undefined, 'mp-tier-toggle mp-chart-mode-toggle');
         chartModeOptions.setAttribute('role', 'group');
         chartModeOptions.setAttribute('aria-label', t('Chart display', 'चार्ट प्रदर्शन'));
-        [['bars', t('Bars', 'बार')], ['circles', t('Circles', 'वृत्त')]].forEach(function (entry) {
+        [['circles', t('Circles', 'वृत्त')], ['bars', t('Bars', 'बार')]].forEach(function (entry) {
             var choice = el('button');
             choice.type = 'button';
             choice.dataset.chartMode = entry[0];
@@ -723,11 +723,11 @@
         var calculatorPanel = el('div', undefined, 'mp-view-panel'); calculatorPanel.append(calculator);
         calculatorToggle.hidden = true;
         var views = [
-            {key:'table', label:t('Table', 'तालिका'), panel:tablePanel},
             {key:'chart', label:t('Chart', 'चार्ट'), panel:chartPanel},
+            {key:'table', label:t('Table', 'तालिका'), panel:tablePanel},
             {key:'calculator', label:t('Calculator', 'कैलकुलेटर'), panel:calculatorPanel}
         ];
-        var activeView = 'table';
+        var activeView = 'chart';
         function selectView(key, focusTab) {
             activeView = key;
             views.forEach(function (view) {
@@ -768,8 +768,8 @@
         }, {signal:context.signal});
         root.replaceChildren(top);
         if (disclaimer) root.append(disclaimer);
-        root.append(tabList, commonControls, tablePanel, chartPanel, calculatorPanel, unitNote, tooltipLayer);
-        selectView('table', false);
+        root.append(tabList, commonControls, chartPanel, tablePanel, calculatorPanel, unitNote, tooltipLayer);
+        selectView('chart', false);
         var archiveOpen = false;
         var expandedTables = new Set();
 
@@ -1031,7 +1031,7 @@
 
                     var provLabel = (model.provider === 'openrouter' ? t('via ', 'मार्ग: ') : '') + providerName(model.provider);
                     var provBadge = el('span', provLabel, 'mp-badge mp-badge-provider mp-prov-' + model.provider);
-                    provBadge.title = t('Selling provider: ', 'विक्रेता प्रदाता: ') + providerName(model.provider);
+                    provBadge.title = t('Provider: ', 'प्रदाता: ') + providerName(model.provider);
 
                     badges.append(famBadge, provBadge);
                     nameLine.append(badges);
@@ -1257,8 +1257,9 @@
                 bubble.style.setProperty('--mp-bubble-size', Math.round(bubbleSize) + 'px');
                 bubble.style.setProperty('--mp-input-share', inputPercent + '%');
                 bubble.style.setProperty('--mp-output-share', outputPercent + '%');
-                bubble.style.setProperty('--mp-pie-start', (270 - (inputPercent * 1.8)) + 'deg');
+                bubble.style.setProperty('--mp-pie-start', '0deg');
                 bubble.style.setProperty('--mp-input-angle', (inputPercent * 3.6) + 'deg');
+                bubble.style.setProperty('--mp-output-angle', (outputPercent * 3.6) + 'deg');
                 var disk = el('span', undefined, 'mp-bubble-disk');
                 disk.append(el('strong', money(value)));
                 var bubbleName = el('span', m.name + ' · ' + providerName(m.provider), 'mp-bubble-name');
