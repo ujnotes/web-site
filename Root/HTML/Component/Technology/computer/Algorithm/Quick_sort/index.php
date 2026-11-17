@@ -1,5 +1,7 @@
 <div id='message'>
-		<h3>What is quick sort?</h3>
+		<?php $alt='Small wooden blocks partitioned around a darker pivot, with smaller blocks on the left and larger blocks on the right.'; require('../HTML/Fragment/Component_cover.php') ?>
+	<h2 class='center'><?php echo $desc; ?></h2>
+	<h3>What is quick sort?</h3>
 	<p>
 		<strong>Quick sort</strong>, also called <strong>quicksort</strong>, sorts a collection by choosing a pivot, partitioning the values around it, and then sorting the resulting parts in the same way.
 	</p>
