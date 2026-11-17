@@ -1,0 +1,8 @@
+{
+  "examples": [
+    {"en": "The pivot starts smallest", "hi": "पिवट सबसे छोटा है", "values": [6, 2, 8, 3, 1]},
+    {"en": "The pivot starts largest", "hi": "पिवट सबसे बड़ा है", "values": [7, 3, 1, 5, 8]},
+    {"en": "A swap places the pivot", "hi": "अदला-बदली से पिवट सही जगह आता है", "values": [5, 3, 1, 8, 7]},
+    {"en": "Equal and negative values", "hi": "बराबर और ऋणात्मक मान", "values": [3, -2, 3, 1, -2, 3]}
+  ]
+}

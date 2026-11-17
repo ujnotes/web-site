@@ -480,3 +480,6 @@ resource/data/	model-pricing	json
 resource/components/	model-pricing	js
 resource/components/	model-pricing	css
 philosophy/	law	jpg
+resource/data/	quick-sort	json
+resource/components/	quick-sort	js
+resource/components/	quick-sort	css
