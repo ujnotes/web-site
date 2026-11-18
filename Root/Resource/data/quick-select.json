@@ -1,0 +1,22 @@
+{
+  "examples": [
+    {
+      "en": "Fourth-smallest value",
+      "hi": "चौथा सबसे छोटा मान",
+      "values": [9, 2, 7, 4, 1, 8, 3],
+      "k": 3
+    },
+    {
+      "en": "Find the median",
+      "hi": "मध्यिका ढूँढ़ें",
+      "values": [9, 1, 6, 3, 8, 2, 7, 4, 5],
+      "k": 4
+    },
+    {
+      "en": "Repeated values",
+      "hi": "दोहराए गए मान",
+      "values": [5, 2, 5, 1, 5, 3],
+      "k": 3
+    }
+  ]
+}

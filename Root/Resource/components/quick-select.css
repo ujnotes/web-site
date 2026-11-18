@@ -1,0 +1,103 @@
+.quick-select-tool {
+    --qsel-panel: #fffdf8;
+    --qsel-border: #d7d9df;
+    --qsel-muted: #596579;
+    --qsel-accent: #385b8b;
+    --qsel-on-accent: #fff;
+    --qsel-pivot-bg: #f2dca9;
+    --qsel-pivot: #704b0c;
+    --qsel-scan-bg: #dce9f8;
+    --qsel-scan: #224f85;
+    --qsel-swap-bg: #f4dcd6;
+    --qsel-swap: #7a3026;
+    --qsel-mismatch: #f7e7d8;
+    display: block;
+    min-inline-size: 0;
+    margin-block: 1.25rem;
+    color-scheme: light dark;
+}
+
+html.dark-mode .quick-select-tool {
+    --qsel-panel: #202631;
+    --qsel-border: #4b5668;
+    --qsel-muted: #bac4d3;
+    --qsel-accent: #a6c7f0;
+    --qsel-on-accent: #182334;
+    --qsel-pivot-bg: #57441f;
+    --qsel-pivot: #ffe09a;
+    --qsel-scan-bg: #263e59;
+    --qsel-scan: #bdd9ff;
+    --qsel-swap-bg: #53332f;
+    --qsel-swap: #ffb8a9;
+    --qsel-mismatch: #47352c;
+}
+
+.quick-select-tool [hidden] { display: none !important; }
+.quick-select-tool :is(button, input) {
+    min-block-size: 2.5rem;
+    border: 1px solid var(--qsel-border);
+    border-radius: 0.45rem;
+    padding: 0.45rem 0.7rem;
+    background: var(--qsel-panel);
+    color: inherit;
+    font: inherit;
+}
+.quick-select-tool button { cursor: pointer; }
+.quick-select-tool button:disabled { opacity: 0.48; cursor: default; }
+.quick-select-tool button:hover:not(:disabled) { border-color: var(--qsel-accent); }
+.quick-select-tool :focus-visible { outline: 2px solid var(--qsel-accent); outline-offset: 2px; }
+.quick-select-tool .qsel-primary { background: var(--qsel-accent); color: var(--qsel-on-accent); border-color: var(--qsel-accent); }
+.quick-select-tool .qsel-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; border-block-end: 1px solid var(--qsel-border); }
+.quick-select-tool .qsel-tabs button { border-color: transparent; border-radius: 0.45rem 0.45rem 0 0; }
+.quick-select-tool .qsel-tabs button[aria-selected="true"] { color: var(--qsel-accent); box-shadow: inset 0 -2px var(--qsel-accent); }
+.quick-select-tool .qsel-panel { min-inline-size: 0; padding: clamp(0.75rem, 3vw, 1.5rem); border: 1px solid var(--qsel-border); border-block-start: 0; background: var(--qsel-panel); }
+.quick-select-tool .qsel-example-nav,
+.quick-select-tool .qsel-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 0.45rem; }
+.quick-select-tool .qsel-example-nav { justify-content: space-between; margin-block-end: 0.9rem; }
+.quick-select-tool .qsel-example-name { text-align: center; }
+.quick-select-tool .qsel-arrow { min-inline-size: 2.65rem; font-size: 1.15em; }
+.quick-select-tool .qsel-step-nav { justify-content: space-between; margin-block-start: 0.75rem; }
+.quick-select-tool .qsel-muted { color: var(--qsel-muted); font-size: 0.9em; }
+.quick-select-tool .qsel-explanation,
+.quick-select-tool .qsel-status,
+.quick-select-tool .qsel-feedback { margin-block: 0.75rem; }
+.quick-select-tool .qsel-board-wrap { overflow-x: auto; padding-block: 0.3rem; }
+.quick-select-tool .qsel-board { display: flex; gap: 0.25rem; inline-size: max-content; min-inline-size: 100%; }
+.quick-select-tool .qsel-row { display: flex; gap: 0.15rem; inline-size: max-content; }
+.quick-select-tool .qsel-tile { display: grid; justify-items: stretch; min-inline-size: 2.7rem; text-align: center; }
+.quick-select-tool .qsel-position,
+.quick-select-tool .qsel-mark { color: var(--qsel-muted); font-size: 0.7em; line-height: 1.55; }
+.quick-select-tool .qsel-value { display: block; border: 1px solid var(--qsel-border); border-radius: 0.35rem; padding: 0.35rem 0.45rem; font-size: 1.1em; }
+.quick-select-tool .qsel-value.qsel-pivot { background: var(--qsel-pivot-bg); color: var(--qsel-pivot); border-color: currentColor; }
+.quick-select-tool .qsel-value.qsel-scan { background: var(--qsel-scan-bg); color: var(--qsel-scan); }
+.quick-select-tool .qsel-value.qsel-swap { background: var(--qsel-swap-bg); color: var(--qsel-swap); }
+.quick-select-tool .qsel-selected .qsel-value { box-shadow: inset 0 -2px var(--qsel-accent); }
+.quick-select-tool .qsel-compact { min-inline-size: auto; }
+.quick-select-tool .qsel-compact .qsel-position,
+.quick-select-tool .qsel-compact .qsel-mark { display: none; }
+.quick-select-tool .qsel-compact .qsel-value { border: 0; padding: 0.1rem 0.2rem; font-size: 0.95em; }
+.quick-select-tool .qsel-details { margin-block-start: 0.8rem; }
+.quick-select-tool .qsel-details summary { cursor: pointer; color: var(--qsel-accent); }
+.quick-select-tool .qsel-input { display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 0.35fr) auto; align-items: end; gap: 0.65rem; }
+.quick-select-tool .qsel-input label { display: grid; gap: 0.25rem; color: var(--qsel-muted); }
+.quick-select-tool .qsel-input input { inline-size: 100%; min-inline-size: 0; font-family: ui-monospace, Consolas, monospace; }
+.quick-select-tool .qsel-error { color: var(--qsel-pivot); font-weight: 650; }
+.quick-select-tool .qsel-feedback { font-weight: 650; }
+.quick-select-tool .qsel-table-wrap { max-block-size: 24rem; overflow: auto; margin-block-start: 0.65rem; border: 1px solid var(--qsel-border); border-radius: 0.4rem; }
+.quick-select-tool .qsel-table-wrap table { border-collapse: collapse; inline-size: 100%; min-inline-size: 36rem; font-size: 0.88em; }
+.quick-select-tool .qsel-table-wrap caption { padding: 0.5rem; text-align: start; font-weight: 650; }
+.quick-select-tool .qsel-table-wrap :is(td, th) { padding: 0.35rem 0.45rem; border-block-end: 1px solid var(--qsel-border); vertical-align: top; }
+.quick-select-tool .qsel-table-wrap thead th { position: sticky; inset-block-start: 0; background: var(--qsel-panel); }
+.quick-select-tool .qsel-table-wrap td:last-child { min-inline-size: 13rem; }
+.quick-select-tool .qsel-indices { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.quick-select-tool .qsel-selected-row { background: var(--qsel-scan-bg); }
+.quick-select-tool .qsel-mismatch { background: var(--qsel-mismatch); }
+.quick-select-tool .qsel-practice-nav { margin-block-start: 0.8rem; }
+.quick-select-tool .qsel-action-nav { margin-block-start: 0.45rem; }
+.quick-select-tool .qsel-table-slot { min-inline-size: 0; }
+
+@media (max-width: 42rem) {
+    .quick-select-tool .qsel-input { grid-template-columns: minmax(0, 1fr); }
+    .quick-select-tool .qsel-step-nav { justify-content: flex-start; }
+    .quick-select-tool .qsel-step-nav .qsel-muted { order: -1; flex-basis: 100%; }
+}
