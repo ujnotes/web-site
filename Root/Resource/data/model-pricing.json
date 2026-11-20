@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-31",
+  "updated_on": "2026-11-20",
   "coverage": "Selected first-party and third-party text-generation API offerings across model families (Gemini, GPT, Claude, Grok) and selling providers/routes (Google, OpenAI, Anthropic, xAI, OpenRouter); prices depend on the selling provider and route.",
   "status_values": [
     "retired",
@@ -179,6 +179,128 @@
       "usage_source_url": "https://ai.google.dev/gemini-api/docs/models",
       "usage_checked_on": "2026-10-31",
       "family": "gemini"
+    },
+    {
+      "id": "gpt-6.2-astra",
+      "provider": "openai",
+      "name": "GPT-6.2 Astra",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Long-context rates apply to the full request above 272,000 input tokens.",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 8,
+        "output": 40,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-11-20",
+        "effective_from": "2026-11-17",
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 4,
+        "output": 20,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-11-20",
+        "effective_from": "2026-11-17",
+        "effective_until": null
+      },
+      "scheduled_prices": [],
+      "context_tiers": [
+        {
+          "prompt_tokens_min_exclusive": 272000,
+          "standard": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 16,
+            "output": 60,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+            "checked_on": "2026-11-20",
+            "effective_from": "2026-11-17",
+            "effective_until": null
+          },
+          "batch": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 8,
+            "output": 30,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+            "checked_on": "2026-11-20",
+            "effective_from": "2026-11-17",
+            "effective_until": null
+          }
+        }
+      ],
+      "usage_fit": {
+        "en": "Demanding reasoning, coding and complex projects.",
+        "hi": "कठिन तर्क, कोडिंग और जटिल परियोजनाएँ।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "usage_checked_on": "2026-11-20",
+      "family": "gpt"
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "provider": "openai",
+      "name": "GPT-6.2 Sol",
+      "status": "current",
+      "availability": "See provider access and account restrictions",
+      "scope": "Long-context rates apply to the full request above 272,000 input tokens.",
+      "standard": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 2,
+        "output": 10,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-11-20",
+        "effective_from": "2026-11-17",
+        "effective_until": null
+      },
+      "batch": {
+        "currency": "USD",
+        "unit": "per_1m_tokens",
+        "input": 1,
+        "output": 5,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "checked_on": "2026-11-20",
+        "effective_from": "2026-11-17",
+        "effective_until": null
+      },
+      "scheduled_prices": [],
+      "context_tiers": [
+        {
+          "prompt_tokens_min_exclusive": 272000,
+          "standard": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 4,
+            "output": 15,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+            "checked_on": "2026-11-20",
+            "effective_from": "2026-11-17",
+            "effective_until": null
+          },
+          "batch": {
+            "currency": "USD",
+            "unit": "per_1m_tokens",
+            "input": 2,
+            "output": 7.5,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+            "checked_on": "2026-11-20",
+            "effective_from": "2026-11-17",
+            "effective_until": null
+          }
+        }
+      ],
+      "usage_fit": {
+        "en": "Everyday coding and multistep agent workflows.",
+        "hi": "रोज़मर्रा की कोडिंग और एजेंट के बहु-चरणीय कार्य।"
+      },
+      "usage_source_url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+      "usage_checked_on": "2026-11-20",
+      "family": "gpt"
     },
     {
       "id": "gpt-6-luna",
