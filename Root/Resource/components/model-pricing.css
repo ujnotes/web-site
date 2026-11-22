@@ -1259,6 +1259,106 @@ html.dark-mode .model-pricing tbody th {
   box-shadow:0 0 0 1px var(--mp-accent),0 0 20px 4px color-mix(in srgb,var(--mp-accent) 65%,transparent),var(--mp-shadow-md);
 }
 
+/* Selection mode in circles view */
+.model-pricing .mp-selection-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.18rem 0.5rem 0.18rem 0.35rem;
+  border-radius: 9999px;
+  background: var(--mp-card);
+  border: 1px solid var(--mp-line);
+  box-shadow: var(--mp-shadow-sm);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mp-ink);
+  vertical-align: middle;
+}
+.model-pricing .mp-selection-toolbar[hidden] {
+  display: none !important;
+}
+.model-pricing .mp-selection-eye {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--mp-line);
+  background: var(--mp-bg);
+  color: var(--mp-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.model-pricing .mp-selection-eye:hover,
+.model-pricing .mp-selection-eye:focus-visible {
+  color: var(--mp-ink);
+  border-color: var(--mp-accent);
+}
+.model-pricing .mp-selection-eye[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--mp-accent) 20%, transparent);
+  border-color: var(--mp-accent);
+  color: var(--mp-accent);
+}
+.model-pricing .mp-selection-eye .mp-ui-icon {
+  width: 15px;
+  height: 15px;
+}
+.model-pricing .mp-selection-count {
+  padding: 0 0.2rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--mp-ink);
+  white-space: nowrap;
+}
+.model-pricing .mp-selection-exit {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--mp-muted);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.model-pricing .mp-selection-exit:hover,
+.model-pricing .mp-selection-exit:focus-visible {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.model-pricing .mp-bubble-grid.mp-selection-active .mp-bubble.mp-dimmed {
+  opacity: 0.2;
+  filter: grayscale(0.8);
+  transform: scale(0.93);
+  cursor: pointer;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+.model-pricing .mp-bubble-grid.mp-selection-active .mp-bubble.mp-dimmed:hover,
+.model-pricing .mp-bubble-grid.mp-selection-active .mp-bubble.mp-dimmed:focus-visible {
+  opacity: 0.55;
+  filter: grayscale(0.25);
+  transform: scale(0.98);
+}
+.model-pricing .mp-bubble-grid.mp-selection-active .mp-bubble.mp-selected {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.05);
+  z-index: 2;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+.model-pricing .mp-bubble-grid.mp-selection-active .mp-bubble.mp-selected .mp-bubble-disk {
+  border-color: var(--mp-accent);
+  box-shadow: 0 0 0 2px var(--mp-accent), 0 0 18px 4px color-mix(in srgb, var(--mp-accent) 55%, transparent);
+}
+.model-pricing .mp-bubble-grid.mp-only-selected .mp-bubble.mp-dimmed {
+  display: none !important;
+}
+
 .model-pricing .mp-bar-row {
   position: relative;
   display: block;

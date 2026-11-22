@@ -146,6 +146,7 @@
                 chevron: 'm7 10 5 5 5-5',
                 bars: 'M18 20V10 M12 20V4 M6 20v-6',
                 circles: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z',
+                eye: 'M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z',
                 filter: 'M4 6h16 M7 12h10 M10 18h4',
                 chat: 'M4 4h16v12H9l-5 4z M8 8h8 M8 12h5',
                 document: 'M5 3h9l5 5v13H5z M14 3v5h5 M8 12h8 M8 16h6',
@@ -383,6 +384,47 @@
         var currentSortDirection = 'asc';
         // Filter Bar (Chips)
         var filterBar = el('div', undefined, 'mp-filter-bar');
+        var filterLongPressTimer = null;
+        var filterLongPressFired = false;
+        var filterStartX = 0, filterStartY = 0;
+
+        filterBar.addEventListener('pointerdown', function (event) {
+            var button = event.target.closest('.mp-filter-toggle');
+            if (!button) return;
+            filterLongPressFired = false;
+            filterStartX = event.clientX;
+            filterStartY = event.clientY;
+            clearTimeout(filterLongPressTimer);
+            filterLongPressTimer = setTimeout(function () {
+                filterLongPressFired = true;
+                try { navigator.vibrate?.(40); } catch (_) {}
+                if (button.dataset.family) {
+                    familyButtons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === button)); });
+                    render();
+                } else if (button.dataset.provider) {
+                    providerButtons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === button)); });
+                    render();
+                }
+            }, 500);
+        }, {signal: context.signal});
+
+        filterBar.addEventListener('pointermove', function (event) {
+            if (!filterLongPressTimer) return;
+            var dx = event.clientX - filterStartX;
+            var dy = event.clientY - filterStartY;
+            if (dx * dx + dy * dy > 64) {
+                clearTimeout(filterLongPressTimer);
+                filterLongPressTimer = null;
+            }
+        }, {signal: context.signal});
+
+        ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (type) {
+            filterBar.addEventListener(type, function () {
+                clearTimeout(filterLongPressTimer);
+                filterLongPressTimer = null;
+            }, {signal: context.signal});
+        });
+
         var familyFieldset = el('fieldset', undefined, 'mp-filter-group mp-families');
         familyFieldset.append(el('legend', t('Model family', 'मॉडल परिवार')));
         var allFamilies = Array.from(new Set(data.models.map(function (m) { return m.family; }))).sort();
@@ -391,12 +433,18 @@
             button.type = 'button';
             button.dataset.family = fam;
             button.setAttribute('aria-pressed', 'true');
-            button.title = t('Click to toggle, double-click to isolate', 'टॉगल करने के लिए क्लिक करें, केवल इसे चुनने के लिए डबल-क्लिक करें');
+            button.title = t('Click to toggle, double-click or long-press to isolate', 'टॉगल करने के लिए क्लिक करें, केवल इसे चुनने के लिए डबल-क्लिक या देर तक दबाएं');
             var indicator = el('span', undefined, 'mp-chip-indicator');
             var label = el('span', familyName(fam));
             button.append(indicator, label);
             button.addEventListener('click', function () {
-                button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+                if (filterLongPressFired) { filterLongPressFired = false; return; }
+                var allSelected = familyButtons.every(function (x) { return x.getAttribute('aria-pressed') === 'true'; });
+                if (allSelected) {
+                    familyButtons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === button)); });
+                } else {
+                    button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+                }
                 render();
             }, {signal: context.signal});
             button.addEventListener('dblclick', function () {
@@ -417,12 +465,24 @@
             button.type = 'button';
             button.dataset.provider = name;
             button.setAttribute('aria-pressed', 'true');
-            button.title = t('Click to toggle, double-click to isolate', 'टॉगल करने के लिए क्लिक करें, केवल इसे चुनने के लिए डबल-क्लिक करें');
+            button.title = t('Click to toggle, double-click or long-press to isolate', 'टॉगल करने के लिए क्लिक करें, केवल इसे चुनने के लिए डबल-क्लिक या देर तक दबाएं');
             var indicator = el('span', undefined, 'mp-chip-indicator');
             var label = el('span', providerName(name));
             button.append(indicator, label);
             button.addEventListener('click', function () {
-                button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+                if (filterLongPressFired) { filterLongPressFired = false; return; }
+                var isReseller = button.dataset.provider === 'openrouter';
+                var siblingButtons = providerButtons.filter(function (b) {
+                    return (b.dataset.provider === 'openrouter') === isReseller;
+                });
+                var allSiblings = siblingButtons.every(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+                var allProviders = providerButtons.every(function (b) { return b.getAttribute('aria-pressed') === 'true'; });
+                var initialClick = allProviders || (siblingButtons.length > 1 && allSiblings);
+                if (initialClick) {
+                    providerButtons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === button)); });
+                } else {
+                    button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+                }
                 render();
             }, {signal: context.signal});
             button.addEventListener('dblclick', function () {
@@ -678,11 +738,116 @@
             choice.addEventListener('click', function () {
                 chartMode = entry[0];
                 Array.from(chartModeOptions.children).forEach(function (button) { button.setAttribute('aria-pressed', String(button === choice)); });
+                if (chartMode !== 'circles') exitSelectionMode();
                 render();
             }, {signal: context.signal});
             chartModeOptions.append(choice);
         });
-        chartTitleGroup.append(chartModeOptions);
+
+        var selectionMode = false;
+        var selectedCircleIds = new Set();
+        var onlySelected = false;
+        var circleClickTimer = null;
+
+        var selectionToolbar = el('div', undefined, 'mp-selection-toolbar');
+        selectionToolbar.hidden = true;
+        selectionToolbar.setAttribute('role', 'toolbar');
+        selectionToolbar.setAttribute('aria-label', t('Circle selection', 'वृत्त चयन'));
+
+        var eyeButton = el('button', undefined, 'mp-selection-eye');
+        eyeButton.type = 'button';
+        eyeButton.append(icon('eye'));
+        eyeButton.setAttribute('aria-pressed', 'false');
+        eyeButton.title = t('Show only selected models', 'केवल चुने गए मॉडल दिखाएं');
+        eyeButton.setAttribute('aria-label', eyeButton.title);
+
+        var selectionCount = el('span', '', 'mp-selection-count');
+
+        var exitButton = el('button', '×', 'mp-selection-exit');
+        exitButton.type = 'button';
+        exitButton.title = t('Exit selection (Esc)', 'चयन समाप्त करें (Esc)');
+        exitButton.setAttribute('aria-label', exitButton.title);
+
+        selectionToolbar.append(eyeButton, selectionCount, exitButton);
+        chartTitleGroup.append(chartModeOptions, selectionToolbar);
+
+        function updateSelectionDOM() {
+            if (!selectionMode) return;
+            bubbleGrid.classList.add('mp-selection-active');
+            bubbleGrid.classList.toggle('mp-only-selected', onlySelected);
+            selectionToolbar.hidden = false;
+            var count = selectedCircleIds.size;
+            selectionCount.textContent = count + t(count === 1 ? ' selected' : ' selected', count === 1 ? ' चुना गया' : ' चुने गए');
+            eyeButton.setAttribute('aria-pressed', String(onlySelected));
+            eyeButton.title = onlySelected
+                ? t('Show all models with others dimmed', 'अन्य को धुंधला करके सभी मॉडल दिखाएं')
+                : t('Show only selected models', 'केवल चुने गए मॉडल दिखाएं');
+            eyeButton.setAttribute('aria-label', eyeButton.title);
+
+            Array.from(bubbleGrid.children).forEach(function (bubble) {
+                var mid = bubble.dataset.modelId;
+                if (!mid) return;
+                var isSel = selectedCircleIds.has(mid);
+                bubble.classList.toggle('mp-selected', isSel);
+                bubble.classList.toggle('mp-dimmed', !isSel);
+                bubble.setAttribute('aria-pressed', String(isSel));
+            });
+        }
+
+        function enterSelectionMode(modelId) {
+            selectionMode = true;
+            selectedCircleIds.clear();
+            selectedCircleIds.add(modelId);
+            onlySelected = false;
+            updateSelectionDOM();
+        }
+
+        function toggleCircleSelection(modelId) {
+            if (selectedCircleIds.has(modelId)) {
+                selectedCircleIds.delete(modelId);
+            } else {
+                selectedCircleIds.add(modelId);
+            }
+            if (selectedCircleIds.size === 0) {
+                exitSelectionMode();
+                return;
+            }
+            updateSelectionDOM();
+        }
+
+        function exitSelectionMode() {
+            if (!selectionMode) return;
+            selectionMode = false;
+            selectedCircleIds.clear();
+            onlySelected = false;
+            clearTimeout(circleClickTimer);
+            circleClickTimer = null;
+            bubbleGrid.classList.remove('mp-selection-active', 'mp-only-selected');
+            selectionToolbar.hidden = true;
+            Array.from(bubbleGrid.children).forEach(function (bubble) {
+                bubble.classList.remove('mp-selected', 'mp-dimmed');
+                bubble.setAttribute('aria-pressed', String(calculatorEnabled && bubble.dataset.modelId === modelSelect.value));
+            });
+        }
+
+        function filterFamilyFromCircle(fam) {
+            var isSoleFamily = familyButtons.every(function (b) {
+                return (b.dataset.family === fam) === (b.getAttribute('aria-pressed') === 'true');
+            });
+            if (isSoleFamily) {
+                familyButtons.forEach(function (b) { b.setAttribute('aria-pressed', 'true'); });
+            } else {
+                familyButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.family === fam)); });
+            }
+            render();
+        }
+
+        eyeButton.addEventListener('click', function () {
+            onlySelected = !onlySelected;
+            updateSelectionDOM();
+        }, {signal: context.signal});
+
+        exitButton.addEventListener('click', exitSelectionMode, {signal: context.signal});
         var chartControls = el('div', undefined, 'mp-chart-controls');
         chartControls.append(metricOptions);
         chartHeader.append(chartTitleGroup, chartControls);
@@ -730,6 +895,7 @@
         var activeView = 'chart';
         function selectView(key, focusTab) {
             activeView = key;
+            if (key !== 'chart') exitSelectionMode();
             views.forEach(function (view) {
                 var active = view.key === key;
                 view.panel.hidden = !active;
@@ -764,7 +930,14 @@
             if (focusedNote !== dismissedNoteId && notePositioners.has(focusedNote)) notePositioners.get(focusedNote)();
         }, {capture:true, signal:context.signal});
         root.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') { dismissedNoteId = document.activeElement?.getAttribute('aria-describedby'); hideModelNotes(); }
+            if (event.key === 'Escape') {
+                if (selectionMode) {
+                    exitSelectionMode();
+                    return;
+                }
+                dismissedNoteId = document.activeElement?.getAttribute('aria-describedby');
+                hideModelNotes();
+            }
         }, {signal:context.signal});
         root.replaceChildren(top);
         if (disclaimer) root.append(disclaimer);
@@ -784,7 +957,86 @@
         }
         sections.addEventListener('click', chooseModel, {signal: context.signal});
         bars.addEventListener('click', chooseModel, {signal: context.signal});
-        bubbleGrid.addEventListener('click', chooseModel, {signal: context.signal});
+
+        var longPressTimer = null;
+        var longPressFired = false;
+        var pointerStartX = 0, pointerStartY = 0;
+
+        bubbleGrid.addEventListener('pointerdown', function (event) {
+            var bubble = event.target.closest('.mp-bubble');
+            if (!bubble) return;
+            longPressFired = false;
+            pointerStartX = event.clientX;
+            pointerStartY = event.clientY;
+            clearTimeout(longPressTimer);
+            longPressTimer = setTimeout(function () {
+                longPressFired = true;
+                clearTimeout(circleClickTimer);
+                circleClickTimer = null;
+                var modelId = bubble.dataset.modelId;
+                if (modelId) {
+                    try { navigator.vibrate?.(40); } catch (_) {}
+                    enterSelectionMode(modelId);
+                }
+            }, 500);
+        }, {signal: context.signal});
+
+        bubbleGrid.addEventListener('pointermove', function (event) {
+            if (!longPressTimer) return;
+            var dx = event.clientX - pointerStartX;
+            var dy = event.clientY - pointerStartY;
+            if (dx * dx + dy * dy > 64) {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }
+        }, {signal: context.signal});
+
+        ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (type) {
+            bubbleGrid.addEventListener(type, function () {
+                clearTimeout(longPressTimer);
+                longPressTimer = null;
+            }, {signal: context.signal});
+        });
+
+        bubbleGrid.addEventListener('click', function (event) {
+            if (longPressFired) {
+                longPressFired = false;
+                event.preventDefault();
+                event.stopPropagation();
+                return;
+            }
+            if (event.target.closest('a')) return;
+            var bubble = event.target.closest('.mp-bubble');
+            if (!bubble) {
+                if (selectionMode) exitSelectionMode();
+                return;
+            }
+            var modelId = bubble.dataset.modelId;
+            var model = data.models.find(function (m) { return m.id === modelId; });
+            if (!model) return;
+
+            if (selectionMode) {
+                toggleCircleSelection(modelId);
+            } else {
+                clearTimeout(circleClickTimer);
+                circleClickTimer = setTimeout(function () {
+                    circleClickTimer = null;
+                    filterFamilyFromCircle(model.family);
+                }, 220);
+            }
+        }, {signal: context.signal});
+
+        bubbleGrid.addEventListener('dblclick', function (event) {
+            if (event.target.closest('a')) return;
+            var bubble = event.target.closest('.mp-bubble');
+            if (!bubble) return;
+            var modelId = bubble.dataset.modelId;
+            if (!data.models.some(function (m) { return m.id === modelId; })) return;
+
+            clearTimeout(circleClickTimer);
+            circleClickTimer = null;
+            enterSelectionMode(modelId);
+        }, {signal: context.signal});
 
         function state() {
             var numeric = calculatorEnabled ? [requests, input, output, fx] : [fx];
@@ -1251,8 +1503,17 @@
                 bubble.type = 'button';
                 bubble.classList.add('mp-fam-' + m.family);
                 bubble.dataset.modelId = m.id;
-                bubble.setAttribute('aria-pressed', String(calculatorEnabled && m.id === modelSelect.value));
+                if (selectionMode) {
+                    var isSel = selectedCircleIds.has(m.id);
+                    bubble.classList.add(isSel ? 'mp-selected' : 'mp-dimmed');
+                    bubble.setAttribute('aria-pressed', String(isSel));
+                } else {
+                    bubble.setAttribute('aria-pressed', String(calculatorEnabled && m.id === modelSelect.value));
+                }
                 bubble.setAttribute('aria-label', button.getAttribute('aria-label') + '; ' + t('Hover or focus to show the input and output split.', 'इनपुट और आउटपुट विभाजन देखने के लिए होवर या फोकस करें।'));
+                bubble.title = selectionMode
+                    ? t('Click to toggle selection', 'चयन टॉगल करने के लिए क्लिक करें')
+                    : t('Click to filter family, double-click or long-press to select', 'परिवार फ़िल्टर करने के लिए क्लिक करें, चुनने के लिए डबल-क्लिक या देर तक दबाएं');
                 var bubbleSize = 62 + (maximum ? 116 * Math.sqrt(value / maximum) : 0);
                 bubble.style.setProperty('--mp-bubble-size', Math.round(bubbleSize) + 'px');
                 bubble.style.setProperty('--mp-input-share', inputPercent + '%');
@@ -1266,6 +1527,10 @@
                 bubble.append(disk, bubbleName);
                 bubbleGrid.append(bubble);
             });
+
+            if (selectionMode) {
+                updateSelectionDOM();
+            }
 
             if (searchFocused && search.isConnected) {
                 search.focus();
@@ -1284,6 +1549,13 @@
         });
 
         render();
-        return function () { clearTimeout(pending); fxRequest++; if (fxAbort) fxAbort.abort(); };
+        return function () {
+            clearTimeout(pending);
+            clearTimeout(circleClickTimer);
+            clearTimeout(longPressTimer);
+            clearTimeout(filterLongPressTimer);
+            fxRequest++;
+            if (fxAbort) fxAbort.abort();
+        };
     });
 }(typeof window === 'undefined' ? globalThis : window));
